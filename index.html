@@ -16037,6 +16037,9 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
 
 #pwLegacyAspectTrainer .bridgeScene.day svg{max-width:700px}
 #pwLegacyAspectTrainer .bridgeScene.day .bridgeShape{fill:#000!important;stroke:#000!important}
+
+/* CEVNI 1.47.3 verified recognition plates */
+.cevniPlate{height:116px;display:grid;place-items:center;margin-bottom:10px;background:#031f2d;border-radius:10px}.cevniPlate svg{width:150px;height:96px;max-width:100%}.cevniSignCode{color:#73e4ff;font-weight:950;font-size:var(--pw-type-meta);letter-spacing:.08em}.cevniSignMeaning{display:block;margin-top:4px;font-size:var(--pw-type-card);font-weight:900}.cevniSignNote{margin:6px 0 0;color:#a9c7d1;font-size:var(--pw-type-secondary);line-height:1.35}.cevniAudioStatus{margin:10px 0;padding:10px 12px;border-radius:9px;background:#031f2d;color:#9feaff;font-size:var(--pw-type-secondary)}
 </style>
 
 <style id="stage3TeachingReview1376b">
@@ -25100,7 +25103,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 (function(){window.PW_TYPOGRAPHY_COVERAGE_AUDIT={version:'1.46.51',reference:'Lights & Shapes / Voyage',scope:'HTML learner-facing text'};window.PROJECT_WATCH_BUILD='1.46.55-QA-MICROTEXT-REPAIR';const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.46.55-QA-MICROTEXT-REPAIR';})();
 </script>\n<!-- BUILD 1.46.55-QA-MICROTEXT-REPAIR: Lights & Shapes mock QA repair only. Q9 knowledge visual, Aspect caption neutrality, mandatory sequential answers, final NEXT submits, submit redirects to first missing. -->
 \n<script id="pw-cevni-engine-14700">
-const PW_CEVNI_CONFIG={courseName:'CEVNI — European Inland Waterways',provider:'Project Watch',assessmentName:'Project Watch CEVNI Mock',version:'1.47.2-CEVNI-SOUND-SIGNS'};
+const PW_CEVNI_CONFIG={courseName:'CEVNI — European Inland Waterways',provider:'Project Watch',assessmentName:'Project Watch CEVNI Mock',version:'1.47.3-CEVNI-AUDIO-PLATES'};
 const CEVNI_MODULES=[
  {n:'01',title:'Foundations & Scope',desc:'What CEVNI is, where the harmonised code fits, skipper responsibilities and the need to check local rules.',points:['CEVNI provides core harmonised inland-navigation rules in the UNECE region.','National, regional and local provisions can supplement or differ; identify the competent authority before passage.','Maintain safe navigation, proper preparation and compliance with signs, signals and instructions.']},
  {n:'02',title:'Vessels, Marks & Definitions',desc:'Small craft, vessels, convoys, draught marks and the language used by inland rules.',points:['Learn the defined vessel and formation terms before applying conduct rules.','Recognise that requirements can differ by vessel size, type and operation.','Know why draught, dimensions and displayed marks matter on constrained waterways.']},
@@ -25113,12 +25116,14 @@ const CEVNI_MODULES=[
  {n:'09',title:'Environment, Emergencies & Passage Readiness',desc:'Pollution prevention, waste, distress, incidents and a final inland-waterway passage check.',points:['Prevent pollution and manage waste in accordance with applicable inland rules.','Know the available distress/attention methods and local emergency arrangements.','Before departure: verify waterway notices, restrictions, dimensions, bridge/lock information, radio requirements and local deviations.']}
 ];
 const CEVNI_SIGNS=[
- ['A','PROHIBITORY','Annex 7 A-series','A.1 No entry; A.2 no overtaking; A.5 no berthing; A.6 no anchoring.'],
- ['B','MANDATORY','Annex 7 B-series','B.1–B.4 prescribe the course/direction to be followed on marked sections.'],
- ['C','RESTRICTIVE','Annex 7 C-series','C.1 depth limited; C.2 headroom limited; C.3 width limited; C.4 other restriction—see plate.'],
- ['D','RECOMMENDATORY','Annex 7 D-series','D.1 recommended opening; D.2 keep within indicated area; D.3 recommended direction.'],
- ['E','INFORMATIVE','Annex 7 E-series','Information signs include E.1 entry permitted and other navigation information.'],
- ['ANNEX 8','WATERWAY MARKING','Buoyage & marking','Separate from Annex 7 notice-sign families: fairway limits, banks, danger points, obstacles and radar marking.']
+ {code:'A.1',meaning:'NO ENTRY',note:'General prohibitory sign: red–white–red board.',svg:`<svg viewBox="0 0 180 110" aria-label="A.1 No entry"><rect x="12" y="18" width="156" height="74" rx="2" fill="#fff"/><rect x="12" y="18" width="156" height="23" fill="#d9232e"/><rect x="12" y="69" width="156" height="23" fill="#d9232e"/></svg>`},
+ {code:'A.2',meaning:'NO OVERTAKING',note:'Prohibitory sign: two vessels/arrows with the red diagonal prohibition stroke.',svg:`<svg viewBox="0 0 180 110" aria-label="A.2 No overtaking"><rect x="38" y="8" width="104" height="94" fill="#fff" stroke="#d9232e" stroke-width="8"/><path d="M72 82V30m0 0-9 13m9-13 9 13M108 82V30m0 0-9 13m9-13 9 13" fill="none" stroke="#111" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 92L132 18" stroke="#d9232e" stroke-width="9"/></svg>`},
+ {code:'B.1',meaning:'PROCEED IN DIRECTION SHOWN',note:'Mandatory course/direction sign.',svg:`<svg viewBox="0 0 180 110" aria-label="B.1 Proceed in direction shown"><rect x="38" y="8" width="104" height="94" fill="#fff" stroke="#d9232e" stroke-width="8"/><path d="M90 84V28m0 0-16 18m16-18 16 18" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>`},
+ {code:'B.7',meaning:'GIVE A SOUND SIGNAL',note:'Mandatory sign: black disc on white within a red border.',svg:`<svg viewBox="0 0 180 110" aria-label="B.7 Give a sound signal"><rect x="38" y="8" width="104" height="94" fill="#fff" stroke="#d9232e" stroke-width="8"/><circle cx="90" cy="55" r="25" fill="#111"/></svg>`},
+ {code:'C.1',meaning:'DEPTH OF WATER LIMITED',note:'Restrictive sign; a figure may state the available depth in metres.',svg:`<svg viewBox="0 0 180 110" aria-label="C.1 Depth limited"><rect x="38" y="8" width="104" height="94" fill="#fff" stroke="#d9232e" stroke-width="8"/><text x="90" y="58" text-anchor="middle" font-size="30" font-weight="800" fill="#111">1.65</text><path d="M90 68l-17 22h34z" fill="#111"/></svg>`},
+ {code:'D.1',meaning:'RECOMMENDED OPENING',note:'Yellow recommendatory board used to mark a preferred bridge/weir opening.',svg:`<svg viewBox="0 0 180 110" aria-label="D.1 Recommended opening"><rect x="12" y="18" width="156" height="74" fill="#f5c928"/><rect x="68" y="18" width="44" height="74" fill="#fff"/></svg>`},
+ {code:'E.1',meaning:'ENTRY PERMITTED',note:'General informative sign: green–white–green board.',svg:`<svg viewBox="0 0 180 110" aria-label="E.1 Entry permitted"><rect x="12" y="18" width="156" height="74" fill="#15834b"/><rect x="68" y="18" width="44" height="74" fill="#fff"/></svg>`},
+ {code:'E.2',meaning:'OVERHEAD CABLE CROSSING',note:'Informative sign warning of an overhead cable.',svg:`<svg viewBox="0 0 180 110" aria-label="E.2 Overhead cable"><rect x="38" y="8" width="104" height="94" fill="#1674bd" stroke="#fff" stroke-width="5"/><path d="M101 20L70 61h20L78 92l34-45H92z" fill="#fff"/></svg>`}
 ];
 const CEVNI_SOUNDS=[
  ['One long blast','—','GENERAL • Caution',[4]],
@@ -25167,29 +25172,47 @@ function cevniRenderModules(){let d=cevniDone(),g=document.getElementById('cevni
 function cevniOpenLesson(i){let m=CEVNI_MODULES[i],a=document.getElementById('cevniLessonArea');a.innerHTML=`<div class="cevniLesson"><div class="cevniLessonHead"><div><div class="ver">MODULE ${m.n} • GUIDED LEARNING</div><h2>${m.title}</h2></div><b>${i+1} / 9</b></div><p>${m.desc}</p><div class="cevniLessonPoints">${m.points.map((p,j)=>`<div><b>${String(j+1).padStart(2,'0')}</b><br>${p}</div>`).join('')}</div><div class="cevniControls"><button onclick="cevniMark(${i})">MARK REVIEWED & CONTINUE →</button><button onclick="document.getElementById('cevniLessonArea').innerHTML=''">CLOSE</button></div></div>`;a.scrollIntoView({behavior:'smooth',block:'start'})}
 function cevniMark(i){let d=cevniDone();if(!d.includes(i))d.push(i);cevniSaveDone(d);if(i<8)cevniOpenLesson(i+1);else document.getElementById('cevniLessonArea').innerHTML='<div class="cevniLesson"><h2>Pathway review complete.</h2><p>Continue through Signs, Sound and Practical, then take the 30-question mock.</p></div>'}
 function cevniResetProgress(){if(confirm('Reset CEVNI pathway progress only?')){localStorage.removeItem('pwCevniDone');cevniRenderModules();document.getElementById('cevniLessonArea').innerHTML=''}}
-function cevniRenderSigns(){let g=document.getElementById('cevniSignGrid');if(!g)return;g.innerHTML=CEVNI_SIGNS.map(s=>`<div class="cevniSign cevniVerifiedFamily"><div class="cevniFamilyCode">${s[0]}</div><div class="cevniSignCopy"><small>${s[2]}</small><b>${s[1]}</b><p>${s[3]}</p></div></div>`).join('')}
+function cevniRenderSigns(){let g=document.getElementById('cevniSignGrid');if(!g)return;g.innerHTML=CEVNI_SIGNS.map(s=>`<div class="cevniSign"><div class="cevniPlate">${s.svg}</div><span class="cevniSignCode">ANNEX 7 • ${s.code}</span><span class="cevniSignMeaning">${s.meaning}</span><p class="cevniSignNote">${s.note}</p></div>`).join('')}
 // CEVNI Sound Lab deliberately reuses the proven Project Watch marine-whistle engine.
 // This avoids a second WebAudio implementation and keeps iPad behaviour consistent with the locked Sound module.
 let cevniSoundBusy=false;
-function cevniPatternSeconds(seq){return seq.reduce((a,d)=>a+d,0)+Math.max(0,seq.length-1);}
-function cevniPlay(seq,btn){
-  if(cevniSoundBusy)return;
-  try{
-    getSignalAudio();
-    cevniSoundBusy=true;
-    if(btn){btn.dataset.playing='1';btn.textContent='PLAYING…'}
-    let delay=0;
-    seq.forEach((d,i)=>{hornBlast(d,delay);delay+=d;if(i<seq.length-1)delay+=1;});
-    audioMeterRun(Math.max(.25,delay));
-    setAudioStatus('CEVNI Sound Lab • playing verified Annex 6 training pattern');
-    setTimeout(()=>{cevniSoundBusy=false;if(btn){btn.dataset.playing='0';btn.textContent='▶ PLAY'}},Math.ceil((delay+.2)*1000));
-  }catch(e){
-    cevniSoundBusy=false;
-    if(btn){btn.dataset.playing='0';btn.textContent='▶ PLAY'}
-    alert('Audio could not start. First test the main Project Watch Sound module; CEVNI now uses the same audio engine.');
-  }
+let cevniAudioCtx=null;
+async function cevniAudioReady(){
+ const AC=window.AudioContext||window.webkitAudioContext;
+ if(!AC) throw new Error('Web Audio unavailable');
+ if(!cevniAudioCtx) cevniAudioCtx=new AC();
+ if(cevniAudioCtx.state!=='running') await cevniAudioCtx.resume();
+ return cevniAudioCtx;
 }
-function cevniRenderSounds(){let a=document.getElementById('cevniSoundRows');if(!a)return;a.innerHTML=CEVNI_SOUNDS.map((s,i)=>`<div class="cevniAudioRow"><div><b>${s[0]} • ${s[1]}</b><br><small>${s[2]}</small></div><button onclick="cevniPlay(CEVNI_SOUNDS[${i}][3],this)">▶ PLAY</button></div>`).join('')}
+function cevniHorn(ctx,duration,delay){
+ const t=ctx.currentTime+delay;
+ const master=ctx.createGain(); master.connect(ctx.destination);
+ master.gain.setValueAtTime(0.0001,t);
+ master.gain.exponentialRampToValueAtTime(0.42,t+0.035);
+ master.gain.setValueAtTime(0.42,Math.max(t+0.05,t+duration-0.08));
+ master.gain.exponentialRampToValueAtTime(0.0001,t+duration);
+ [[190,'sawtooth',0.75],[285,'sine',0.24],[380,'triangle',0.13]].forEach(([f,type,gain])=>{
+   const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f;g.gain.value=gain;o.connect(g);g.connect(master);o.start(t);o.stop(t+duration+0.04);
+ });
+}
+async function cevniPlay(seq,btn){
+ if(cevniSoundBusy)return;
+ cevniSoundBusy=true;
+ if(btn)btn.textContent='STARTING…';
+ try{
+   const ctx=await cevniAudioReady();
+   // iPad/Safari unlock pulse inside the original user gesture path.
+   const unlock=ctx.createOscillator(),ug=ctx.createGain();ug.gain.value=0.00001;unlock.connect(ug);ug.connect(ctx.destination);unlock.start();unlock.stop(ctx.currentTime+0.02);
+   let delay=0;
+   if(btn)btn.textContent='PLAYING…';
+   seq.forEach((d,i)=>{cevniHorn(ctx,d,delay);delay+=d;if(i<seq.length-1)delay+=(d<=0.3?0.25:1);});
+   setTimeout(()=>{cevniSoundBusy=false;if(btn)btn.textContent='▶ PLAY'},Math.ceil((delay+0.25)*1000));
+ }catch(e){
+   cevniSoundBusy=false;if(btn)btn.textContent='▶ PLAY';
+   const st=document.getElementById('cevniAudioStatus');if(st)st.textContent='AUDIO ERROR • '+(e&&e.message?e.message:'Could not start Web Audio');
+ }
+}
+function cevniRenderSounds(){let a=document.getElementById('cevniSoundRows');if(!a)return;a.innerHTML=`<div id="cevniAudioStatus" class="cevniAudioStatus">AUDIO ENGINE • Stand-alone iPad/WebKit path. Tap any PLAY button once to unlock and sound the pattern.</div>`+CEVNI_SOUNDS.map((s,i)=>`<div class="cevniAudioRow"><div><b>${s[0]} • ${s[1]}</b><br><small>${s[2]}</small></div><button onclick="cevniPlay(CEVNI_SOUNDS[${i}][3],this)">▶ PLAY</button></div>`).join('')}
 function cevniRenderScenario(i){let s=CEVNI_SCENARIOS[i%CEVNI_SCENARIOS.length],a=document.getElementById('cevniScenarioArea');a.innerHTML=`<div class="cevniScenario"><div class="cevniRiver"></div><div><small>SCENARIO ${i+1} / ${CEVNI_SCENARIOS.length}</small><div class="cevniQ">${s.q}</div><div class="cevniAnswers">${s.a.map((x,j)=>`<button onclick="cevniScenarioAnswer(this,${j===s.c},${i})">${String.fromCharCode(65+j)} • ${x}</button>`).join('')}</div><div id="cevniScenarioDebrief"></div></div></div>`}
 function cevniScenarioAnswer(b,ok,i){b.classList.add(ok?'good':'bad');document.getElementById('cevniScenarioDebrief').innerHTML=`<div class="cevniMockResult"><b>${ok?'CORRECT':'REASSESS'}</b><p>${CEVNI_SCENARIOS[i].e}</p><button onclick="cevniRenderScenario(${(i+1)%CEVNI_SCENARIOS.length})">NEXT SCENARIO →</button></div>`}
 let cvMock=[];let cvMi=0;let cvScore=0;function cevniQuestionBank(){let q=[];for(let r=0;r<2;r++)CEVNI_QBASE.forEach((x,i)=>q.push([x[0]+(r? ' — applied review':''),x[1],x[2]]));return q}
@@ -25197,7 +25220,7 @@ function cevniStartMock(){cvMock=cevniQuestionBank().sort(()=>Math.random()-.5).
 function cevniRenderMock(){let a=document.getElementById('cevniMockArea');if(cvMi>=cvMock.length){let pct=Math.round(cvScore/cvMock.length*100);a.innerHTML=`<div class="cevniMockResult"><h2>${cvScore} / ${cvMock.length} • ${pct}%</h2><p>Independent Project Watch training result. Review weak areas against the CEVNI modules and applicable official/local rules.</p><button onclick="cevniStartMock()">NEW MOCK</button></div>`;return}let q=cvMock[cvMi];a.innerHTML=`<div class="cevniProgress"><b>QUESTION ${cvMi+1} / 30</b><span>SCORE ${cvScore}</span></div><div class="cevniQ">${q[0]}</div><div class="cevniAnswers">${q[1].map((x,j)=>`<button onclick="cevniMockAnswer(this,${j===q[2]})">${String.fromCharCode(65+j)} • ${x}</button>`).join('')}</div>`}
 function cevniMockAnswer(b,ok){if(ok)cvScore++;document.querySelectorAll('#cevniMockArea .cevniAnswers button').forEach(x=>x.disabled=true);b.classList.add(ok?'good':'bad');setTimeout(()=>{cvMi++;cevniRenderMock()},450)}
 function cevniInit(){document.getElementById('cevniCourseTitle').textContent=PW_CEVNI_CONFIG.courseName;document.getElementById('cvCfgCourse').textContent=PW_CEVNI_CONFIG.courseName;document.getElementById('cvCfgProvider').textContent=PW_CEVNI_CONFIG.provider;document.getElementById('cvCfgExam').textContent=PW_CEVNI_CONFIG.assessmentName;cevniRenderModules();cevniRenderSigns();cevniRenderSounds()}
-(function(){let old=window.showModule;if(old)window.showModule=function(name,btn){old(name,btn);if(name==='cevni')setTimeout(cevniInit,0)};window.PROJECT_WATCH_BUILD='1.47.2-CEVNI-SOUND-SIGNS';let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.2-CEVNI-SOUND-SIGNS';})();
+(function(){let old=window.showModule;if(old)window.showModule=function(name,btn){old(name,btn);if(name==='cevni')setTimeout(cevniInit,0)};window.PROJECT_WATCH_BUILD='1.47.3-CEVNI-AUDIO-PLATES';let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.3-CEVNI-AUDIO-PLATES';})();
 </script>
-<!-- BUILD 1.47.2 CEVNI SOUND+SIGNS: reuses proven Project Watch horn engine; Annex 6 sound meanings/timings corrected and expanded; sign families retained as verified index pending full individual plates. -->
+<!-- BUILD 1.47.3 CEVNI AUDIO+PLATES: stand-alone Safari/WebKit audio path; first verified Annex 7 recognition plates replace family placeholders. -->
 </body></html>
