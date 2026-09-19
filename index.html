@@ -17248,7 +17248,7 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
 </div>
 
   <div class="homeFooterBar">
-    <div><small>BUILD</small><b>1.47.1</b></div>
+    <div><small>BUILD</small><b>1.47.2</b></div>
     <div><small>COURSE MODE</small><b>8 STAGES • STRUCTURED PROGRESSION</b></div>
     <div><small>TRAINING VESSEL</small><b id="homeTrainingVesselSummary">WATCH ONE • POWER-DRIVEN</b></div>
   </div>
@@ -25100,7 +25100,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 (function(){window.PW_TYPOGRAPHY_COVERAGE_AUDIT={version:'1.46.51',reference:'Lights & Shapes / Voyage',scope:'HTML learner-facing text'};window.PROJECT_WATCH_BUILD='1.46.55-QA-MICROTEXT-REPAIR';const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.46.55-QA-MICROTEXT-REPAIR';})();
 </script>\n<!-- BUILD 1.46.55-QA-MICROTEXT-REPAIR: Lights & Shapes mock QA repair only. Q9 knowledge visual, Aspect caption neutrality, mandatory sequential answers, final NEXT submits, submit redirects to first missing. -->
 \n<script id="pw-cevni-engine-14700">
-const PW_CEVNI_CONFIG={courseName:'CEVNI — European Inland Waterways',provider:'Project Watch',assessmentName:'Project Watch CEVNI Mock',version:'1.47.1-CEVNI-QA1'};
+const PW_CEVNI_CONFIG={courseName:'CEVNI — European Inland Waterways',provider:'Project Watch',assessmentName:'Project Watch CEVNI Mock',version:'1.47.2-CEVNI-SOUND-SIGNS'};
 const CEVNI_MODULES=[
  {n:'01',title:'Foundations & Scope',desc:'What CEVNI is, where the harmonised code fits, skipper responsibilities and the need to check local rules.',points:['CEVNI provides core harmonised inland-navigation rules in the UNECE region.','National, regional and local provisions can supplement or differ; identify the competent authority before passage.','Maintain safe navigation, proper preparation and compliance with signs, signals and instructions.']},
  {n:'02',title:'Vessels, Marks & Definitions',desc:'Small craft, vessels, convoys, draught marks and the language used by inland rules.',points:['Learn the defined vessel and formation terms before applying conduct rules.','Recognise that requirements can differ by vessel size, type and operation.','Know why draught, dimensions and displayed marks matter on constrained waterways.']},
@@ -25121,7 +25121,21 @@ const CEVNI_SIGNS=[
  ['ANNEX 8','WATERWAY MARKING','Buoyage & marking','Separate from Annex 7 notice-sign families: fairway limits, banks, danger points, obstacles and radar marking.']
 ];
 const CEVNI_SOUNDS=[
- ['One long blast','—','General inland long-blast element / context dependent',[4]],['One long + one short','— •','Turning signal: going to starboard under CEVNI turning-signal provisions',[4,1]],['One long + two short','— • •','Turning signal: going to port under CEVNI turning-signal provisions',[4,1,1]],['Three long','— — —','Crossing after entering the waterway, where the CEVNI harbour/tributary signal applies',[4,4,4]],['Five short','• • • • •','Signal used by a vessel to be overtaken: “I cannot be overtaken” in the CEVNI overtaking context',[1,1,1,1,1]],['Series of very short','••••••','At least six very short blasts; urgent attention/danger pattern in the CEVNI system',[.25,.25,.25,.25,.25,.25]]
+ ['One long blast','—','GENERAL • Caution',[4]],
+ ['One short blast','•','GENERAL • I am altering my course to starboard',[1]],
+ ['Two short blasts','• •','GENERAL • I am altering my course to port',[1,1]],
+ ['Three short blasts','• • •','GENERAL • I am going astern',[1,1,1]],
+ ['Four short blasts','• • • •','GENERAL • I am unable to manoeuvre',[1,1,1,1]],
+ ['Short + long, repeated','• —  • —','GENERAL • Do not approach',[1,4,1,4]],
+ ['Series of very short','••••••','GENERAL • Imminent danger of collision',[.25,.25,.25,.25,.25,.25]],
+ ['Five short blasts','• • • • •','OVERTAKING • Vessel being overtaken: I cannot be overtaken',[1,1,1,1,1]],
+ ['One long + one short','— •','TURNING • I am going to turn to starboard',[4,1]],
+ ['One long + two short','— • •','TURNING • I am going to turn to port',[4,1,1]],
+ ['Three long + one short','— — — •','HARBOUR / TRIBUTARY • Entering or leaving: I am going to starboard',[4,4,4,1]],
+ ['Three long + two short','— — — • •','HARBOUR / TRIBUTARY • Entering or leaving: I am going to port',[4,4,4,1,1]],
+ ['Three long blasts','— — —','HARBOUR / TRIBUTARY • Crossing after entering the waterway',[4,4,4]],
+ ['One long repeated','—   —','REDUCED VISIBILITY • Vessel proceeding alone without radar: repeat at least once a minute',[4,4]],
+ ['One long + four short','— • • • •','REDUCED VISIBILITY • Ferry boat not navigating by radar; repeated at intervals not more than one minute',[4,1,1,1,1]]
 ];
 const CEVNI_SCENARIOS=[
  {q:'You approach an unfamiliar European inland waterway. What should be established before relying on Project Watch teaching?',a:['The applicable national/local navigation rules and competent-authority information','Only the COLREG steering rules','Only your chartplotter route'],c:0,e:'CEVNI is a harmonised basis, but applicable national, regional and local provisions must be checked.'},
@@ -25154,10 +25168,27 @@ function cevniOpenLesson(i){let m=CEVNI_MODULES[i],a=document.getElementById('ce
 function cevniMark(i){let d=cevniDone();if(!d.includes(i))d.push(i);cevniSaveDone(d);if(i<8)cevniOpenLesson(i+1);else document.getElementById('cevniLessonArea').innerHTML='<div class="cevniLesson"><h2>Pathway review complete.</h2><p>Continue through Signs, Sound and Practical, then take the 30-question mock.</p></div>'}
 function cevniResetProgress(){if(confirm('Reset CEVNI pathway progress only?')){localStorage.removeItem('pwCevniDone');cevniRenderModules();document.getElementById('cevniLessonArea').innerHTML=''}}
 function cevniRenderSigns(){let g=document.getElementById('cevniSignGrid');if(!g)return;g.innerHTML=CEVNI_SIGNS.map(s=>`<div class="cevniSign cevniVerifiedFamily"><div class="cevniFamilyCode">${s[0]}</div><div class="cevniSignCopy"><small>${s[2]}</small><b>${s[1]}</b><p>${s[3]}</p></div></div>`).join('')}
-let cvAudioCtx=null;
-async function cevniAudioReady(){const AC=window.AudioContext||window.webkitAudioContext;if(!AC)throw new Error('Web Audio unavailable');if(!cvAudioCtx)cvAudioCtx=new AC();if(cvAudioCtx.state==='suspended')await cvAudioCtx.resume();return cvAudioCtx}
-async function cevniTone(d){const c=await cevniAudioReady();return new Promise(resolve=>{const o=c.createOscillator(),g=c.createGain(),t=c.currentTime;o.type='sine';o.frequency.setValueAtTime(220,t);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.16,t+0.025);g.gain.setValueAtTime(0.16,Math.max(t+0.03,t+d-0.04));g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.02);o.onended=resolve})}
-async function cevniPlay(seq,btn){if(btn&&btn.dataset.playing==='1')return;try{if(btn){btn.dataset.playing='1';btn.textContent='PLAYING…'}await cevniAudioReady();for(let i=0;i<seq.length;i++){await cevniTone(seq[i]);if(i<seq.length-1)await new Promise(r=>setTimeout(r,1000))}}catch(e){alert('Sound Lab could not start audio on this device. Tap PLAY again after checking the iPad volume.')}finally{if(btn){btn.dataset.playing='0';btn.textContent='▶ PLAY'}}}
+// CEVNI Sound Lab deliberately reuses the proven Project Watch marine-whistle engine.
+// This avoids a second WebAudio implementation and keeps iPad behaviour consistent with the locked Sound module.
+let cevniSoundBusy=false;
+function cevniPatternSeconds(seq){return seq.reduce((a,d)=>a+d,0)+Math.max(0,seq.length-1);}
+function cevniPlay(seq,btn){
+  if(cevniSoundBusy)return;
+  try{
+    getSignalAudio();
+    cevniSoundBusy=true;
+    if(btn){btn.dataset.playing='1';btn.textContent='PLAYING…'}
+    let delay=0;
+    seq.forEach((d,i)=>{hornBlast(d,delay);delay+=d;if(i<seq.length-1)delay+=1;});
+    audioMeterRun(Math.max(.25,delay));
+    setAudioStatus('CEVNI Sound Lab • playing verified Annex 6 training pattern');
+    setTimeout(()=>{cevniSoundBusy=false;if(btn){btn.dataset.playing='0';btn.textContent='▶ PLAY'}},Math.ceil((delay+.2)*1000));
+  }catch(e){
+    cevniSoundBusy=false;
+    if(btn){btn.dataset.playing='0';btn.textContent='▶ PLAY'}
+    alert('Audio could not start. First test the main Project Watch Sound module; CEVNI now uses the same audio engine.');
+  }
+}
 function cevniRenderSounds(){let a=document.getElementById('cevniSoundRows');if(!a)return;a.innerHTML=CEVNI_SOUNDS.map((s,i)=>`<div class="cevniAudioRow"><div><b>${s[0]} • ${s[1]}</b><br><small>${s[2]}</small></div><button onclick="cevniPlay(CEVNI_SOUNDS[${i}][3],this)">▶ PLAY</button></div>`).join('')}
 function cevniRenderScenario(i){let s=CEVNI_SCENARIOS[i%CEVNI_SCENARIOS.length],a=document.getElementById('cevniScenarioArea');a.innerHTML=`<div class="cevniScenario"><div class="cevniRiver"></div><div><small>SCENARIO ${i+1} / ${CEVNI_SCENARIOS.length}</small><div class="cevniQ">${s.q}</div><div class="cevniAnswers">${s.a.map((x,j)=>`<button onclick="cevniScenarioAnswer(this,${j===s.c},${i})">${String.fromCharCode(65+j)} • ${x}</button>`).join('')}</div><div id="cevniScenarioDebrief"></div></div></div>`}
 function cevniScenarioAnswer(b,ok,i){b.classList.add(ok?'good':'bad');document.getElementById('cevniScenarioDebrief').innerHTML=`<div class="cevniMockResult"><b>${ok?'CORRECT':'REASSESS'}</b><p>${CEVNI_SCENARIOS[i].e}</p><button onclick="cevniRenderScenario(${(i+1)%CEVNI_SCENARIOS.length})">NEXT SCENARIO →</button></div>`}
@@ -25166,5 +25197,7 @@ function cevniStartMock(){cvMock=cevniQuestionBank().sort(()=>Math.random()-.5).
 function cevniRenderMock(){let a=document.getElementById('cevniMockArea');if(cvMi>=cvMock.length){let pct=Math.round(cvScore/cvMock.length*100);a.innerHTML=`<div class="cevniMockResult"><h2>${cvScore} / ${cvMock.length} • ${pct}%</h2><p>Independent Project Watch training result. Review weak areas against the CEVNI modules and applicable official/local rules.</p><button onclick="cevniStartMock()">NEW MOCK</button></div>`;return}let q=cvMock[cvMi];a.innerHTML=`<div class="cevniProgress"><b>QUESTION ${cvMi+1} / 30</b><span>SCORE ${cvScore}</span></div><div class="cevniQ">${q[0]}</div><div class="cevniAnswers">${q[1].map((x,j)=>`<button onclick="cevniMockAnswer(this,${j===q[2]})">${String.fromCharCode(65+j)} • ${x}</button>`).join('')}</div>`}
 function cevniMockAnswer(b,ok){if(ok)cvScore++;document.querySelectorAll('#cevniMockArea .cevniAnswers button').forEach(x=>x.disabled=true);b.classList.add(ok?'good':'bad');setTimeout(()=>{cvMi++;cevniRenderMock()},450)}
 function cevniInit(){document.getElementById('cevniCourseTitle').textContent=PW_CEVNI_CONFIG.courseName;document.getElementById('cvCfgCourse').textContent=PW_CEVNI_CONFIG.courseName;document.getElementById('cvCfgProvider').textContent=PW_CEVNI_CONFIG.provider;document.getElementById('cvCfgExam').textContent=PW_CEVNI_CONFIG.assessmentName;cevniRenderModules();cevniRenderSigns();cevniRenderSounds()}
-(function(){let old=window.showModule;if(old)window.showModule=function(name,btn){old(name,btn);if(name==='cevni')setTimeout(cevniInit,0)};window.PROJECT_WATCH_BUILD='1.47.1-CEVNI-QA1';let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.1-CEVNI-QA1';})();
-</script>\n<!-- BUILD 1.47.1 CEVNI QA1: iPad Web Audio resume/playback repair; Annex 7 family index corrected; placeholder pictograms removed pending individually verified teaching plates. -->\n</body></html>
+(function(){let old=window.showModule;if(old)window.showModule=function(name,btn){old(name,btn);if(name==='cevni')setTimeout(cevniInit,0)};window.PROJECT_WATCH_BUILD='1.47.2-CEVNI-SOUND-SIGNS';let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.2-CEVNI-SOUND-SIGNS';})();
+</script>
+<!-- BUILD 1.47.2 CEVNI SOUND+SIGNS: reuses proven Project Watch horn engine; Annex 6 sound meanings/timings corrected and expanded; sign families retained as verified index pending full individual plates. -->
+</body></html>
