@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.46.25 • TSS Teaching Plates</title>
+<title>Project Watch 1.46.54 • QA Repair</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -18853,7 +18853,7 @@ const LIGHTS_EXAM_BANK=[
 {cat:"Mine clearance",rule:"Rule 27",critical:true,visual:{"id": "mine", "light": "night", "aspect": "ahead"},q:"Three all-round green lights in this arrangement identify:",a:["Mine-clearance operations", "Trawling", "Pilotage duty", "A vessel constrained by draught"],correct:0,why:"A vessel engaged in mine-clearance operations shows three all-round green lights in the prescribed arrangement."},
 {cat:"Mine clearance",rule:"Rule 27",critical:true,visual:{"id": "mine", "light": "day", "aspect": "ahead"},q:"What important warning is associated with this mine-clearance display?",a:["Do not approach within 1000 m", "Pass only on the green-light side", "The vessel is aground", "The vessel has outlying fishing gear"],correct:0,why:"The Rule 27 mine-clearance display indicates that it is dangerous to approach within 1000 m."},
 {cat:"Constrained by draught",rule:"Rule 28",critical:true,visual:{"id": "cbd", "light": "night", "aspect": "ahead"},q:"Three all-round red lights in a vertical line may identify:",a:["A vessel constrained by her draught", "A vessel not under command", "A vessel aground", "A vessel engaged in fishing"],correct:0,why:"A vessel constrained by her draught may exhibit three all-round red lights in a vertical line in addition to her power-driven lights."},
-{cat:"Constrained by draught",rule:"Rule 28",critical:true,visual:{"id": "cbd", "light": "day", "aspect": "ahead"},q:"Which day shape may a vessel constrained by her draught exhibit?",a:["Cylinder", "Ball", "Diamond", "Cone apex downward"],correct:0,why:"The optional Rule 28 day shape is a cylinder."},
+{cat:"Constrained by draught",rule:"Rule 28",critical:true,visual:null,q:"Which day shape may a vessel constrained by her draught exhibit?",a:["Cylinder", "Ball", "Diamond", "Cone apex downward"],correct:0,why:"The optional Rule 28 day shape is a cylinder."},
 {cat:"Pilot",rule:"Rule 29",critical:true,visual:{"id": "pilot", "light": "night", "aspect": "ahead"},q:"White over red identifies:",a:["Pilot vessel engaged on pilotage duty", "Fishing vessel", "Vessel not under command", "Safe-water mark"],correct:0,why:"A pilot vessel engaged on pilotage duty shows white over red all-round lights."},
 {cat:"Pilot",rule:"Rule 29",critical:false,visual:null,q:"A pilot vessel engaged on pilotage duty and underway additionally shows:",a:["Sidelights and sternlight", "A yellow towing light only", "Two black balls", "Three masthead lights"],correct:0,why:"When underway, the pilot vessel also exhibits sidelights and a sternlight."},
 {cat:"Anchor",rule:"Rule 30",critical:true,visual:{"id": "anchorU50", "light": "night", "aspect": "ahead"},q:"Identify this basic under-50-metre anchored-vessel display.",a:["One all-round white anchor light", "Two all-round red lights", "White over red", "Masthead white and sidelights"],correct:0,why:"A vessel under 50 m at anchor may show one all-round white where it can best be seen."},
@@ -18898,7 +18898,8 @@ function lxGraphic(v){
 function lxVisualHTML(q,review=false){
   if(!q.visual)return `<div class="lxKnowledgeOnly"><div><b>KNOWLEDGE QUESTION</b><span>No picture is required for this item. Apply the COLREG rule and the vessel-display knowledge taught in the module.</span></div></div>`;
   const aspect=(q.visual.light==='day')?'DAYLIGHT':(BV_ASPECTS.find(a=>a[0]===q.visual.aspect)?.[1]||'AHEAD')+' VIEW';
-  return `<div class="${review?'lxReviewVisual':'lxVisual'} ${q.visual.light==='day'?'day':''}">${lxGraphic(q.visual)}</div>${review?'':`<div class="lxVisualHead"><span>${q.visual.light==='day'?'DAY SHAPE':'NAVIGATION LIGHTS'}</span><span>${aspect}</span></div>`}`;
+  const aspectLabel=(q.cat==='Aspect')?'VIEWING ASPECT':aspect;
+  return `<div class="${review?'lxReviewVisual':'lxVisual'} ${q.visual.light==='day'?'day':''}">${lxGraphic(q.visual)}</div>${review?'':`<div class="lxVisualHead"><span>${q.visual.light==='day'?'DAY SHAPE':'NAVIGATION LIGHTS'}</span><span>${aspectLabel}</span></div>`}`;
 }
 function renderLightsExamQuestion(){
   if(!lightsExamSet.length)return;
@@ -18915,11 +18916,21 @@ function renderLightsExamQuestion(){
 }
 function answerLightsExam(i){if(lightsExamSubmitted)return;lightsExamAnswers[lightsExamIndex]=i;renderLightsExamQuestion()}
 function lightsExamPrev(){if(lightsExamIndex>0){lightsExamIndex--;renderLightsExamQuestion()}}
-function lightsExamNext(){if(lightsExamIndex<lightsExamSet.length-1){lightsExamIndex++;renderLightsExamQuestion()}}
+function lightsExamNext(){
+  if(!lightsExamSet.length||lightsExamSubmitted)return;
+  if(lightsExamAnswers[lightsExamIndex]===null){alert('Please answer this question before continuing.');return;}
+  if(lightsExamIndex<lightsExamSet.length-1){lightsExamIndex++;renderLightsExamQuestion();return;}
+  submitLightsFullExam();
+}
 function submitLightsFullExam(){
   if(!lightsExamSet.length||lightsExamSubmitted)return;
   const unanswered=lightsExamAnswers.filter(x=>x===null).length;
-  if(unanswered && !confirm(`${unanswered} question(s) are unanswered. Submit anyway?`))return;
+  if(unanswered){
+    const firstMissing=lightsExamAnswers.findIndex(x=>x===null);
+    lightsExamIndex=firstMissing;renderLightsExamQuestion();
+    alert(`${unanswered} question(s) are unanswered. Project Watch has taken you to the first unanswered question.`);
+    return;
+  }
   lightsExamSubmitted=true;
   const correct=lightsExamSet.filter((q,i)=>lightsExamAnswers[i]===q.correct).length;
   const pct=Math.round(correct/lightsExamSet.length*100);
@@ -24996,7 +25007,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 }
 </style>
 <script id="pw-unified-typography-marker-14650">
-(function(){window.PW_TYPOGRAPHY_ARCHITECTURE={version:'1.46.51',reference:'Lights & Shapes / Voyage',responsive:true};window.PROJECT_WATCH_BUILD='1.46.53-LEGACY-MICROTEXT-EXCEPTIONS';const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.46.53-LEGACY-MICROTEXT-EXCEPTIONS';})();
+(function(){window.PW_TYPOGRAPHY_ARCHITECTURE={version:'1.46.51',reference:'Lights & Shapes / Voyage',responsive:true};window.PROJECT_WATCH_BUILD='1.46.54-QA-REPAIR';const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.46.54-QA-REPAIR';})();
 </script>
 \n<style id="pw-typography-coverage-audit-14651">
 /* 1.46.51 — typography coverage audit. Visual/logic content untouched.
@@ -25057,5 +25068,6 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 /* Deliberate exclusions: SVG/canvas/chart labels, approved embedded artwork and diagram annotations. */
 </style>
 <script id="pw-typography-coverage-marker-14651">
-(function(){window.PW_TYPOGRAPHY_COVERAGE_AUDIT={version:'1.46.51',reference:'Lights & Shapes / Voyage',scope:'HTML learner-facing text'};window.PROJECT_WATCH_BUILD='1.46.53-LEGACY-MICROTEXT-EXCEPTIONS';const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.46.53-LEGACY-MICROTEXT-EXCEPTIONS';})();
-</script>\n</body></html>
+(function(){window.PW_TYPOGRAPHY_COVERAGE_AUDIT={version:'1.46.51',reference:'Lights & Shapes / Voyage',scope:'HTML learner-facing text'};window.PROJECT_WATCH_BUILD='1.46.54-QA-REPAIR';const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.46.54-QA-REPAIR';})();
+</script>\n<!-- BUILD 1.46.54-QA-REPAIR: Lights & Shapes mock QA repair only. Q9 knowledge visual, Aspect caption neutrality, mandatory sequential answers, final NEXT submits, submit redirects to first missing. -->
+</body></html>
