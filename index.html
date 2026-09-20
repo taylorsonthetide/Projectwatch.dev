@@ -25807,18 +25807,18 @@ const CEVNI_UPDATE_AUDIT=[
 {id:'signi',title:'SIGNI context',role:'Application/context layer for inland-waterway signs and marking; not a substitute for CEVNI rule text',status:'REFERENCE'},
 {id:'local',title:'National / regional / local layer',role:'Separate variation layer; never presented as universally identical across Europe',status:'REQUIRED'}
 ];
-const CEVNI_SOURCE_AUDIT={chapters:CEVNI_CHAPTER_AUDIT,annexes:CEVNI_ANNEX_AUDIT,updates:CEVNI_UPDATE_AUDIT};
+const CEVNI_SOURCE_AUDIT_REGISTER={chapters:CEVNI_CHAPTER_AUDIT,annexes:CEVNI_ANNEX_AUDIT,updates:CEVNI_UPDATE_AUDIT};
 function cevniInjectSourceAudit(){
  const host=document.getElementById('cevniPage');if(!host||document.getElementById('cevniSourceAudit'))return;
- const anchor=document.getElementById('cevniMasterSpec')||document.getElementById('cevniCurriculumBlueprint')||host.lastElementChild;
+ const anchor=document.getElementById('cvMasterSpec')||document.getElementById('cvBlueprint')||host.lastElementChild;
  const d=document.createElement('section');d.id='cevniSourceAudit';
  const all=[...CEVNI_CHAPTER_AUDIT,...CEVNI_ANNEX_AUDIT,...CEVNI_UPDATE_AUDIT];
  d.innerHTML=`<div class="cvSAHead"><div><div class="ver">DEFINITIVE SOURCE AUDIT REGISTER • v${CEVNI_SOURCE_AUDIT_VERSION}</div><b>ARTICLE / ANNEX DECOMPOSITION FOUNDATION</b></div><div class="ver">10 CHAPTERS • 10 ANNEXES • 6 UPDATE / VARIATION LAYERS</div></div><div class="cvSARule">SOURCE ITEM → TEACHABLE RECORD → ASSET REQUIREMENT → PRACTICE DEPENDENCY → ASSESSMENT GATE</div><div class="cvSAGrid">${all.map(x=>`<div class="cvSACard"><span class="cvSAStatus">${x.status}</span><br><b>${x.title}</b><small>${x.role}</small></div>`).join('')}</div><div class="cvSAFoot"><b>Audit rule:</b> this register is the inventory, not the finished curriculum count. During article-by-article and annex-by-annex decomposition, a source item creates a new teachable concept whenever the existing 68-group taxonomy does not represent it cleanly. Nothing is forced into an existing concept merely to preserve the current count. Annex titles/items marked QUEUED remain deliberately unlabelled until verified against the authoritative Revision 6 source text.</div>`;
  anchor.insertAdjacentElement('afterend',d);
 }
 const cevniInit_14715=window.cevniInit;window.cevniInit=function(){cevniInit_14715();cevniInjectSourceAudit()};
-window.CEVNI_SOURCE_AUDIT=CEVNI_SOURCE_AUDIT;
-window.cevniSourceAuditManifest=()=>JSON.parse(JSON.stringify(CEVNI_SOURCE_AUDIT));
+window.CEVNI_SOURCE_AUDIT_REGISTER=CEVNI_SOURCE_AUDIT_REGISTER;
+window.cevniSourceAuditManifest=()=>JSON.parse(JSON.stringify(CEVNI_SOURCE_AUDIT_REGISTER));
 window.PROJECT_WATCH_BUILD='1.47.15-CEVNI-SOURCE-AUDIT-REGISTER';
 document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.15-CEVNI-SOURCE-AUDIT-REGISTER';});
 </script>
