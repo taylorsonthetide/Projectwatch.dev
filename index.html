@@ -25606,6 +25606,87 @@ window.PROJECT_WATCH_BUILD='1.47.13-CEVNI-CURRICULUM-BLUEPRINT';
 document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.13-CEVNI-CURRICULUM-BLUEPRINT';});
 </script>
 
+
+<!-- PROJECT WATCH CEVNI 1.47.14 — MASTER SOURCE-TO-LEARNING SPECIFICATION -->
+<style>
+#cevniPage .cvMasterSpec{margin:14px 0;padding:16px;border:1px solid #16566b;border-radius:14px;background:#062b3a}
+#cevniPage .cvMasterHead{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+#cevniPage .cvMasterHead .ver{color:#63d9ff;font-size:13px;letter-spacing:.04em}
+#cevniPage .cvMasterRule{margin:12px 0;padding:11px 13px;border-left:4px solid #39df8f;background:#0a4052;border-radius:8px;font-weight:800}
+#cevniPage .cvAuditGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px}
+#cevniPage .cvAuditCard{padding:10px;border:1px solid #16566b;border-radius:9px;background:#0b4258}
+#cevniPage .cvAuditCard b{display:block;font-size:14px}.cvAuditCard small{display:block;color:#8faeb9;margin-top:4px;line-height:1.3}
+#cevniPage .cvGate{margin-top:12px;color:#b8d2db;font-size:13px;line-height:1.45}
+@media(max-width:900px){#cevniPage .cvAuditGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script>
+/*
+ MASTER SPECIFICATION MATRIX v1.0.0
+ Authority stack: UNECE CEVNI Rev.6 + Corr.1/Corr.2 + Amend.1/Amend.2.
+ This layer defines coverage and dependencies; it does not reproduce proprietary exam/course content.
+*/
+const CEVNI_MASTER_SPEC_VERSION='1.0.0';
+const CEVNI_AUTHORITY_STACK=[
+ {id:'cevni-r6',label:'UNECE CEVNI Revision 6',role:'primary'},
+ {id:'cevni-c1',label:'Revision 6 Corrigendum 1',role:'correction'},
+ {id:'cevni-c2',label:'Revision 6 Corrigendum 2',role:'correction'},
+ {id:'cevni-a1',label:'Revision 6 Amendment 1',role:'amendment'},
+ {id:'cevni-a2',label:'Revision 6 Amendment 2',role:'amendment'},
+ {id:'signi',label:'UNECE SIGNI context',role:'supporting'},
+ {id:'local',label:'National / regional / local provisions',role:'local-layer'}
+];
+const CEVNI_SOURCE_AUDIT=[
+ ...Array.from({length:10},(_,i)=>({id:`ch${i+1}`,type:'chapter',label:`CEVNI Chapter ${i+1}`,status:'in-scope'})),
+ ...Array.from({length:10},(_,i)=>({id:`annex${i+1}`,type:'annex',label:`CEVNI Annex ${i+1}`,status:'in-scope'})),
+ {id:'corr1',type:'update',label:'Corrigendum 1',status:'in-scope'},
+ {id:'corr2',type:'update',label:'Corrigendum 2',status:'in-scope'},
+ {id:'amend1',type:'update',label:'Amendment 1',status:'in-scope'},
+ {id:'amend2',type:'update',label:'Amendment 2',status:'in-scope'},
+ {id:'signi',type:'supporting',label:'SIGNI context',status:'in-scope'},
+ {id:'local',type:'local',label:'National/local variation layer',status:'in-scope'}
+];
+const CEVNI_MODULE_SOURCE_MAP={
+ 'cv-m01':['ch1','amend1','amend2','local'],
+ 'cv-m02':['ch1','ch2','ch3'],
+ 'cv-m03':['ch5','annex7','annex8','corr2','signi','local'],
+ 'cv-m04':['ch3'],
+ 'cv-m05':['ch4','annex6','local'],
+ 'cv-m06':['ch6','local'],
+ 'cv-m07':['ch5','ch6','ch7','annex7','local'],
+ 'cv-m08':['ch1','ch4','ch8','amend1','amend2','local'],
+ 'cv-m09':['ch1','ch8','ch10','local']
+};
+const CEVNI_LEARNING_STAGES=['teach','recognise-rehearse','guided-practice','context-practice','eligible-for-assessment'];
+const CEVNI_MASTER_MATRIX=CEVNI_CURRICULUM_MATRIX.flatMap(m=>m.concepts.map((conceptId,n)=>({
+ id:`spec-${conceptId}`,conceptId,moduleId:m.moduleId,order:n+1,
+ sourceRefs:CEVNI_MODULE_SOURCE_MAP[m.moduleId]||[],
+ requiredStages:[...CEVNI_LEARNING_STAGES],
+ assessmentGate:'blocked-until-teaching-and-practice-complete',
+ originalContentRequired:true,
+ localVariationCheck:(CEVNI_MODULE_SOURCE_MAP[m.moduleId]||[]).includes('local'),
+ status:'mapped-for-source-audit'
+})));
+function cevniMasterSpecHealth(){
+ const errors=[];const conceptIds=Object.keys(CEVNI_CONCEPT_INDEX);const mapped=new Set(CEVNI_MASTER_MATRIX.map(x=>x.conceptId));
+ conceptIds.forEach(id=>{if(!mapped.has(id))errors.push(`Unmapped concept ${id}`)});
+ CEVNI_MASTER_MATRIX.forEach(x=>{if(!x.sourceRefs.length)errors.push(`${x.id} has no source family`);if(x.requiredStages.at(-1)!=='eligible-for-assessment')errors.push(`${x.id} bad learning gate`)});
+ const sourceIds=new Set(CEVNI_SOURCE_AUDIT.map(x=>x.id));
+ CEVNI_MASTER_MATRIX.forEach(x=>x.sourceRefs.forEach(r=>{if(!sourceIds.has(r))errors.push(`${x.id} unknown source ${r}`)}));
+ return {ok:!errors.length,errors,concepts:conceptIds.length,mapped:mapped.size,sources:CEVNI_SOURCE_AUDIT.length};
+}
+window.cevniMasterSpecification=function(){return {version:CEVNI_MASTER_SPEC_VERSION,authority:CEVNI_AUTHORITY_STACK,sourceAudit:CEVNI_SOURCE_AUDIT,moduleSourceMap:CEVNI_MODULE_SOURCE_MAP,learningStages:CEVNI_LEARNING_STAGES,matrix:CEVNI_MASTER_MATRIX,health:cevniMasterSpecHealth()}};
+function cevniInjectMasterSpec(){
+ const bp=document.getElementById('cvBlueprint');if(!bp||document.getElementById('cvMasterSpec'))return;
+ const h=cevniMasterSpecHealth(),d=document.createElement('div');d.id='cvMasterSpec';d.className='cvMasterSpec';
+ d.innerHTML=`<div class="cvMasterHead"><div><div class="ver">MASTER SOURCE → LEARNING MATRIX • v${CEVNI_MASTER_SPEC_VERSION}</div><b>${h.ok?'SOURCE-TO-LEARNING CONTRACT HEALTHY':'MASTER SPEC CHECK REQUIRED'}</b></div><div class="ver">${h.mapped}/${h.concepts} CONCEPTS MAPPED • ${h.sources} SOURCE/UPDATE LAYERS</div></div><div class="cvMasterRule">OFFICIAL SOURCE → TEACH → RECOGNISE / REHEARSE → GUIDED PRACTICE → CONTEXT PRACTICE → ASSESSMENT ELIGIBLE</div><div class="cvAuditGrid">${CEVNI_CURRICULUM_MATRIX.map(m=>`<div class="cvAuditCard"><b>${String(m.order).padStart(2,'0')} • ${m.title}</b><small>${m.concepts.length} concepts mapped<br>${(CEVNI_MODULE_SOURCE_MAP[m.moduleId]||[]).join(' • ')}</small></div>`).join('')}</div><div class="cvGate"><b>Production gate:</b> no assessment record may become production-active unless every tested concept is mapped to an official source family and has earlier teaching plus practice dependencies. National/regional/local rules remain a separate variation layer and are never presented as universally identical across Europe.</div>`;
+ bp.after(d);
+}
+const cevniInit_14713=window.cevniInit;
+window.cevniInit=function(){cevniInit_14713();cevniInjectMasterSpec()};
+window.PROJECT_WATCH_BUILD='1.47.14-CEVNI-MASTER-SPEC-MATRIX';
+document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.14-CEVNI-MASTER-SPEC-MATRIX';});
+</script>
+
 <!-- PW_DEVTOOLS_START : remove this entire marked block for production if desired -->
 <style id="pwDevToolsStyles">
 html.pw-devtools-disabled #cevniDevToggle,html.pw-devtools-disabled #cevniDevBar{display:none!important}
