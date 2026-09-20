@@ -25536,4 +25536,78 @@ window.cevniInit=function(){cevniInit_14710();cevniInjectDataHealth()};
 window.PROJECT_WATCH_BUILD='1.47.11-CEVNI-DATA-ARCHITECTURE';
 document.addEventListener('DOMContentLoaded',()=>{let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.11-CEVNI-DATA-ARCHITECTURE';});
 </script>
+
+<!-- PW_DEVTOOLS_START : remove this entire marked block for production if desired -->
+<style id="pwDevToolsStyles">
+html.pw-devtools-disabled #cevniDevToggle,html.pw-devtools-disabled #cevniDevBar{display:none!important}
+</style>
+<script id="pwDevToolsScript">
+/*
+ PROJECT WATCH DEVELOPMENT HARNESS — v1
+ --------------------------------------
+ ONE production switch controls the complete CEVNI test UI.
+ Set PW_DEVTOOLS_ENABLED=false for a production build, or remove everything
+ between PW_DEVTOOLS_START / PW_DEVTOOLS_END. Course/content code does not
+ depend on this block.
+
+ New assessment components do NOT add logic to the toolbar. They expose their
+ current answer in one of two standard ways:
+   1) preferred: data-pw-correct="true" on the correct answer button, OR
+   2) register one adapter with pwDevRegisterAnswerAdapter().
+ Existing legacy CEVNI buttons are supported by the fallback adapter below.
+*/
+const PW_DEVTOOLS_ENABLED=true;
+const PW_DEV_ANSWER_ADAPTERS=[];
+function pwDevRegisterAnswerAdapter(name,getState){
+ PW_DEV_ANSWER_ADAPTERS.push({name,getState});
+}
+function pwDevVisible(el){return !!(el&&el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden')}
+function pwDevAnswerRoot(){
+ const roots=[...document.querySelectorAll('#cevniPage .cevniAnswers')].filter(pwDevVisible);
+ return roots.length?roots[roots.length-1]:null;
+}
+/* Preferred universal contract for every new question component. */
+pwDevRegisterAnswerAdapter('data-contract',()=>{
+ const root=pwDevAnswerRoot(); if(!root)return null;
+ const buttons=[...root.querySelectorAll('button')];
+ const correct=buttons.findIndex(b=>b.dataset.pwCorrect==='true');
+ return correct>=0?{root,buttons,correct}:null;
+});
+/* Compatibility adapter for existing scaffold questions. No question IDs are hard-coded. */
+pwDevRegisterAnswerAdapter('legacy-inline-contract',()=>{
+ const root=pwDevAnswerRoot(); if(!root)return null;
+ const buttons=[...root.querySelectorAll('button')];
+ const correct=buttons.findIndex(b=>/\btrue\b/.test(b.getAttribute('onclick')||''));
+ return correct>=0?{root,buttons,correct}:null;
+});
+function pwDevCurrentAnswer(){
+ for(const a of PW_DEV_ANSWER_ADAPTERS){try{const x=a.getState();if(x&&x.correct>=0)return x}catch(e){}}
+ return null;
+}
+window.cevniDevReveal=function(){
+ if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
+ document.querySelectorAll('.cevniDevCorrect,.cevniDevWrong').forEach(x=>x.classList.remove('cevniDevCorrect','cevniDevWrong'));
+ document.querySelectorAll('.cevniDevTag').forEach(x=>x.remove());
+ const state=pwDevCurrentAnswer();
+ if(!state){
+  const st=document.getElementById('cevniDevStatus');
+  if(st)st.textContent=(st.textContent||'TEST')+' • ANSWER CONTRACT NOT FOUND';
+  return;
+ }
+ state.buttons.forEach((b,i)=>b.classList.add(i===state.correct?'cevniDevCorrect':'cevniDevWrong'));
+ const tag=document.createElement('div');tag.className='cevniDevTag';
+ const answer=(state.buttons[state.correct]?.textContent||'').replace(/^[A-Z]\s*•\s*/,'');
+ tag.textContent=`TEST ANSWER: ${String.fromCharCode(65+state.correct)} • ${answer}`;
+ state.root.after(tag);
+};
+function pwDevApplyProductionSwitch(){
+ document.documentElement.classList.toggle('pw-devtools-disabled',!PW_DEVTOOLS_ENABLED);
+ const toggle=document.getElementById('cevniDevToggle'),bar=document.getElementById('cevniDevBar');
+ if(!PW_DEVTOOLS_ENABLED){cvDevMode=false;if(toggle)toggle.hidden=true;if(bar)bar.hidden=true}
+}
+document.addEventListener('DOMContentLoaded',pwDevApplyProductionSwitch);
+window.PROJECT_WATCH_BUILD='1.47.12-CEVNI-DEVELOPMENT-HARNESS';
+document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.12-CEVNI-DEVELOPMENT-HARNESS';});
+</script>
+<!-- PW_DEVTOOLS_END -->
 </body></html>
