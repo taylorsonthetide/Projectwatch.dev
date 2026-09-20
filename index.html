@@ -25433,4 +25433,107 @@ function cevniInit(){document.getElementById('cevniCourseTitle').textContent=PW_
 (function(){let old=window.showModule;if(old)window.showModule=function(name,btn){old(name,btn);if(name==='cevni')setTimeout(cevniInit,0)};window.PROJECT_WATCH_BUILD='1.47.10-CEVNI-UNIFORM-SCAFFOLD';let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.10-CEVNI-UNIFORM-SCAFFOLD';})();
 </script>
 <!-- BUILD 1.47.6 CEVNI WAV AUDIO: CEVNI Sound Lab uses embedded pre-rendered WAV horn files via HTMLAudioElement; escaped-newline bleed removed. -->
+
+<!-- PROJECT WATCH CEVNI 1.47.11 — CONTENT/DATA ARCHITECTURE -->
+<style>
+#cevniPage .cvDataHealth{margin-top:14px;padding:14px 16px;border:1px solid #6ee0ff33;border-radius:14px;background:#031f2d}
+#cevniPage .cvDataHealthGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+#cevniPage .cvDataHealthCard{padding:10px;border-radius:10px;background:#07364e;border:1px solid #ffffff18}
+#cevniPage .cvDataHealthCard b{display:block;font-size:18px;color:#fff}.cvDataHealthCard span{font-size:10px;color:#a8bec9;text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:760px){#cevniPage .cvDataHealthGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script>
+/*
+ CEVNI CONTENT CONTRACT — v1
+ ---------------------------
+ All future CEVNI content belongs to a named library and carries a stable ID.
+ UI components render library records; content must not introduce new page structures.
+ Primary legal basis: UNECE CEVNI Revision 6 + Corrigenda 1/2 + adopted Amendments 1/2.
+ Local/national provisions remain a separate applicability layer.
+*/
+const CEVNI_DATA_VERSION='1.0.0';
+const CEVNI_SOURCE_REGISTRY={
+ rev6:{id:'UNECE-CEVNI-REV6',label:'UNECE CEVNI Revision 6',authority:'UNECE',kind:'primary'},
+ corr1:{id:'UNECE-CEVNI-REV6-CORR1',label:'Revision 6 Corrigendum 1',authority:'UNECE',kind:'correction'},
+ corr2:{id:'UNECE-CEVNI-REV6-CORR2',label:'Revision 6 Corrigendum 2',authority:'UNECE',kind:'correction'},
+ amend1:{id:'UNECE-CEVNI-REV6-AMEND1',label:'Revision 6 Amendment 1',authority:'UNECE',kind:'amendment'},
+ amend2:{id:'UNECE-CEVNI-REV6-AMEND2',label:'Revision 6 Amendment 2',authority:'UNECE',kind:'amendment'},
+ local:{id:'LOCAL-APPLICABILITY',label:'National / regional / local provisions',authority:'Competent authority',kind:'local-layer'}
+};
+const CEVNI_LIBRARY_SCHEMA={
+ module:['id','number','title','description','briefingIds','checkIds'],
+ briefing:['id','moduleId','order','title','body','sourceRefs','tags','status'],
+ sign:['id','code','group','meaning','note','art','sourceRefs','tags','status'],
+ sound:['id','name','pattern','meaning','timing','sourceRefs','tags','status'],
+ scenario:['id','moduleIds','title','prompt','answers','correct','explanation','sourceRefs','tags','status'],
+ question:['id','moduleIds','type','prompt','answers','correct','explanation','sourceRefs','tags','status']
+};
+function cvSlug(v){return String(v||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function cvSourceDefault(){return ['rev6']}
+function cvLegacyToLibraries(){
+ const briefings=[];
+ const modules=CEVNI_MODULES.map((m,mi)=>{
+  const moduleId=`cv-m${m.n}`;
+  const briefingIds=m.sections.map((sec,si)=>{
+   const id=`${moduleId}-b${String(si+1).padStart(2,'0')}`;
+   briefings.push({id,moduleId,order:si+1,title:sec[0],body:sec[1],sourceRefs:cvSourceDefault(),tags:[],status:'scaffold'});
+   return id;
+  });
+  return {id:moduleId,number:m.n,title:m.title,description:m.desc,briefingIds,checkIds:[`${moduleId}-check-01`]};
+ });
+ const signs=CEVNI_SIGNS.map((x,i)=>({id:`cv-sign-${cvSlug(x.code||i+1)}`,code:x.code,group:String(x.code||'').split('.')[0],meaning:x.meaning,note:x.note,art:x.svg,sourceRefs:['rev6','corr2'],tags:['annex-7'],status:'verify'}));
+ const sounds=CEVNI_SOUNDS.map((x,i)=>({id:`cv-sound-${String(i+1).padStart(2,'0')}`,name:x[0],pattern:x[1],meaning:x[2],timing:x[3],sourceRefs:cvSourceDefault(),tags:['sound-signal'],status:'verify'}));
+ const scenarios=CEVNI_SCENARIOS.map((x,i)=>({id:`cv-scenario-${String(i+1).padStart(3,'0')}`,moduleIds:[],title:x.label,prompt:x.q,answers:x.a,correct:x.c,explanation:x.e,sourceRefs:cvSourceDefault(),tags:[x.visual],status:'scaffold'}));
+ const questions=CEVNI_QBASE.map((x,i)=>({id:`cv-q-${String(i+1).padStart(3,'0')}`,moduleIds:[],type:'mock',prompt:x[0],answers:x[1],correct:x[2],explanation:'',sourceRefs:cvSourceDefault(),tags:[],status:'scaffold'}));
+ CEVNI_MODULES.forEach((m,mi)=>questions.push({id:`cv-m${m.n}-check-01`,moduleIds:[`cv-m${m.n}`],type:'module-check',prompt:m.check[0],answers:m.check[1],correct:m.check[2],explanation:'',sourceRefs:cvSourceDefault(),tags:['module-check'],status:'scaffold'}));
+ return {modules,briefings,signs,sounds,scenarios,questions};
+}
+const CEVNI_LIBRARIES=cvLegacyToLibraries();
+const CEVNI_LIBRARY_INDEX={};
+Object.entries(CEVNI_LIBRARIES).forEach(([lib,items])=>items.forEach(item=>CEVNI_LIBRARY_INDEX[item.id]={library:lib,item}));
+function cevniGetRecord(id){return CEVNI_LIBRARY_INDEX[id]?.item||null}
+function cevniByModule(moduleId,library){return (CEVNI_LIBRARIES[library]||[]).filter(x=>x.moduleId===moduleId||(x.moduleIds||[]).includes(moduleId))}
+function cevniValidateLibraries(){
+ const errors=[],ids=new Set();
+ Object.entries(CEVNI_LIBRARIES).forEach(([lib,items])=>items.forEach((item,i)=>{
+  if(!item.id)errors.push(`${lib}[${i}] missing id`); else if(ids.has(item.id))errors.push(`duplicate id ${item.id}`); else ids.add(item.id);
+  (CEVNI_LIBRARY_SCHEMA[lib.replace(/s$/,'')]||[]).forEach(k=>{if(!(k in item))errors.push(`${item.id||lib+'['+i+']'} missing ${k}`)});
+  (item.sourceRefs||[]).forEach(r=>{if(!CEVNI_SOURCE_REGISTRY[r])errors.push(`${item.id} unknown source ${r}`)});
+ }));
+ CEVNI_LIBRARIES.modules.forEach(m=>m.briefingIds.forEach(id=>{if(!CEVNI_LIBRARY_INDEX[id])errors.push(`${m.id} missing briefing ${id}`)}));
+ return {ok:errors.length===0,errors,counts:Object.fromEntries(Object.entries(CEVNI_LIBRARIES).map(([k,v])=>[k,v.length]))};
+}
+const CEVNI_DATA_HEALTH=cevniValidateLibraries();
+function cevniShuffleQuestion(prompt,answers,correct){
+ const opts=answers.map((t,i)=>({t,ok:i===correct}));
+ for(let i=opts.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[opts[i],opts[j]]=[opts[j],opts[i]]}
+ return {prompt,answers:opts.map(x=>x.t),correct:opts.findIndex(x=>x.ok)};
+}
+/* Module checks now use the same answer-randomisation contract as the mock. */
+const cevniOpenLesson_14710=window.cevniOpenLesson;
+window.cevniOpenLesson=function(i,step=0){
+ if(!cevniModuleUnlocked(i))return;
+ let m=CEVNI_MODULES[i],a=document.getElementById('cevniLessonArea');if(!a)return;
+ let total=m.sections.length,atCheck=step>=total;
+ if(!atCheck)return cevniOpenLesson_14710(i,step);
+ const q=cevniShuffleQuestion(m.check[0],m.check[1],m.check[2]);
+ a.innerHTML=`<div class="cvLessonShell"><div class="cvLessonTop"><div><div class="ver">MODULE ${m.n} • KNOWLEDGE CHECK</div><h2>${m.title}</h2><p class="cevniLead">Complete the module check after reviewing all ${total} teaching briefings.</p></div><div class="cvLessonCounter">CHECK • ${i+1} / 9</div></div><div class="cvLessonProgress"><i style="width:100%"></i></div><div class="cevniKnowledge cvKnowledgeOnly"><div class="ver">KNOWLEDGE CHECK • REQUIRED BEFORE REVIEW</div><h3>${q.prompt}</h3><div class="cevniAnswers">${q.answers.map((x,j)=>`<button onclick="cevniLessonAnswer(this,${j===q.correct},${i})">${String.fromCharCode(65+j)} • ${x}</button>`).join('')}</div><div id="cevniLessonFeedback"></div></div><div class="cvLessonNav"><button class="cvClose" onclick="cevniCloseLesson()">CLOSE</button><span></span><button class="cvBack" onclick="cevniOpenLesson(${i},${Math.max(0,total-1)})">← PREVIOUS</button></div></div>`;
+ window.scrollTo({top:document.getElementById('cevniLessonArea').getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
+ if(cvDevMode)setTimeout(()=>cevniDevReveal(),30);
+};
+/* Development inventory is generated from the libraries, so future content is automatically testable. */
+window.cevniLibraryManifest=function(){return {version:CEVNI_DATA_VERSION,sources:CEVNI_SOURCE_REGISTRY,schema:CEVNI_LIBRARY_SCHEMA,health:cevniValidateLibraries()}}
+function cevniInjectDataHealth(){
+ const page=document.getElementById('cevniPage'); if(!page||document.getElementById('cvDataHealth'))return;
+ const target=[...page.querySelectorAll('button')].find(b=>/RESET CEVNI PROGRESS/i.test(b.textContent))?.parentElement;
+ if(!target)return;
+ const h=cevniValidateLibraries(),d=document.createElement('div');d.id='cvDataHealth';d.className='cvDataHealth';
+ d.innerHTML=`<div class="ver">CONTENT / DATA ARCHITECTURE • v${CEVNI_DATA_VERSION}</div><b>${h.ok?'LIBRARIES HEALTHY':'LIBRARY CHECK REQUIRED'}</b><div class="cvDataHealthGrid">${Object.entries(h.counts).map(([k,v])=>`<div class="cvDataHealthCard"><b>${v}</b><span>${k}</span></div>`).join('')}</div>`;
+ target.parentElement.appendChild(d);
+}
+const cevniInit_14710=window.cevniInit;
+window.cevniInit=function(){cevniInit_14710();cevniInjectDataHealth()};
+window.PROJECT_WATCH_BUILD='1.47.11-CEVNI-DATA-ARCHITECTURE';
+document.addEventListener('DOMContentLoaded',()=>{let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.11-CEVNI-DATA-ARCHITECTURE';});
+</script>
 </body></html>
