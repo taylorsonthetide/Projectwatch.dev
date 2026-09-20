@@ -25537,6 +25537,75 @@ window.PROJECT_WATCH_BUILD='1.47.11-CEVNI-DATA-ARCHITECTURE';
 document.addEventListener('DOMContentLoaded',()=>{let vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.11-CEVNI-DATA-ARCHITECTURE';});
 </script>
 
+
+
+<!-- PROJECT WATCH CEVNI 1.47.13 — CURRICULUM / COVERAGE BLUEPRINT -->
+<style>
+#cevniPage .cvBlueprint{margin-top:14px;padding:14px 16px;border:1px solid #6ee0ff33;border-radius:14px;background:#031f2d}
+#cevniPage .cvBlueprintHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+#cevniPage .cvBlueprintGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+#cevniPage .cvBlueprintCard{padding:11px;border-radius:10px;background:#07364e;border:1px solid #ffffff18}
+#cevniPage .cvBlueprintCard b{display:block;font-size:13px}.cvBlueprintCard small{display:block;color:#a8bec9;margin-top:4px;line-height:1.35}
+#cevniPage .cvBlueprintRule{margin-top:10px;padding:10px 12px;border-radius:10px;background:#062a3b;border-left:3px solid #41d47f;color:#d9f8e7;font-size:12px;font-weight:800}
+@media(max-width:760px){#cevniPage .cvBlueprintGrid{grid-template-columns:1fr}}
+</style>
+<script>
+/*
+ CEVNI CURRICULUM BLUEPRINT — v1
+ -------------------------------
+ Permanent instructional rule: TEACH -> RECOGNISE/REHEARSE -> PRACTISE -> ASSESS.
+ Assessment records must declare conceptIds. Production assessment is invalid if a
+ concept has no earlier teaching record. This is a coverage contract, not exam copying.
+*/
+const CEVNI_CURRICULUM_VERSION='1.0.0';
+const CEVNI_COURSE_PRINCIPLES={
+ teachBeforeTest:true,
+ originalAssessment:true,
+ officialRulesPrimary:true,
+ localRulesSeparate:true,
+ sourceTraceability:true,
+ productionDevtoolsRemovable:true
+};
+const CEVNI_CURRICULUM_MATRIX=[
+ {moduleId:'cv-m01',order:1,title:'Foundations & Scope',concepts:['cevni-purpose','inland-applicability','competent-authority','local-rules-layer','skipper-responsibility','inland-direction-language'],practice:['orientation','applicability'],assessment:['definitions','scope','applicability']},
+ {moduleId:'cv-m02',order:2,title:'Vessels, Marks & Definitions',concepts:['vessel-classes','small-craft','convoys-tows','vessel-identification','draught-marks','bank-direction','fairway-language'],practice:['identify-vessel-class','interpret-physical-marks'],assessment:['recognition','definitions','limits']},
+ {moduleId:'cv-m03',order:3,title:'Signs, Signals & Fairway Marks',concepts:['prohibitory-signs','mandatory-signs','restrictive-signs','recommendatory-signs','informative-signs','auxiliary-signs','fairway-marks','bridge-weir-signs'],practice:['sign-recognition','signs-in-context','fairway-choice'],assessment:['visual-recognition','context-decisions']},
+ {moduleId:'cv-m04',order:4,title:'Lights & Day Signals',concepts:['vessel-lights','day-signals','special-status','tows-convoys-lights','ferry-signals','stationary-signals','dangerous-goods-signals'],practice:['day-night-recognition','aspect-context'],assessment:['visual-recognition','status-meaning']},
+ {moduleId:'cv-m05',order:5,title:'Sound Signals & Radiotelephony',concepts:['sound-timing','general-sound-signals','manoeuvring-signals','meeting-overtaking-sounds','reduced-visibility-sounds','distress-attention','radiotelephony-principles'],practice:['audio-recognition','signal-selection','radio-context'],assessment:['audio-recognition','meaning','application']},
+ {moduleId:'cv-m06',order:6,title:'Rules of the Road',concepts:['safe-conduct','meeting','crossing','overtaking','narrow-passage','priority','small-craft-responsibility','ferries','blue-board-context','reduced-visibility-conduct'],practice:['encounter-scenarios','passing-decisions','risk-management'],assessment:['rule-application','scenario-decisions']},
+ {moduleId:'cv-m07',order:7,title:'Bridges, Locks, Berthing & Operations',concepts:['bridge-passage','movable-bridge','lock-signals','lock-entry-exit','lock-conduct','berthing-permissions','berthing-prohibitions','anchoring-mooring','wash-speed-effects'],practice:['bridge-scenario','lock-scenario','berthing-scenario'],assessment:['operational-decisions','sign-application']},
+ {moduleId:'cv-m08',order:8,title:'Radar, Inland AIS & Reporting',concepts:['radar-navigation','inland-ais','information-devices','reporting-requirements','traffic-information','electronic-aids-limitations'],practice:['electronic-picture','reporting-scenario'],assessment:['equipment-purpose','reporting','judgement']},
+ {moduleId:'cv-m09',order:9,title:'Environment, Emergencies & Passage Readiness',concepts:['pollution-prevention','waste-disposal','fuel-transfer-safety','incident-response','distress-actions','passage-preparation','documents-readiness','local-rule-check'],practice:['emergency-scenario','passage-readiness','environmental-decisions'],assessment:['integrated-scenarios','readiness','environment']}
+];
+const CEVNI_CONCEPT_INDEX={};
+CEVNI_CURRICULUM_MATRIX.forEach(m=>m.concepts.forEach((id,n)=>CEVNI_CONCEPT_INDEX[id]={id,moduleId:m.moduleId,order:n+1}));
+function cevniCurriculumHealth(){
+ const errors=[];
+ const mids=new Set(CEVNI_LIBRARIES.modules.map(m=>m.id));
+ CEVNI_CURRICULUM_MATRIX.forEach(m=>{if(!mids.has(m.moduleId))errors.push(`Unknown curriculum module ${m.moduleId}`);if(!m.concepts.length)errors.push(`${m.moduleId} has no concepts`)});
+ const conceptIds=Object.keys(CEVNI_CONCEPT_INDEX),unique=new Set(conceptIds);
+ if(unique.size!==conceptIds.length)errors.push('Duplicate concept IDs');
+ /* Future production questions must map to taught concepts. Scaffold records are intentionally exempt. */
+ CEVNI_LIBRARIES.questions.filter(q=>q.status==='production').forEach(q=>{
+   if(!Array.isArray(q.conceptIds)||!q.conceptIds.length)errors.push(`${q.id} production question missing conceptIds`);
+   (q.conceptIds||[]).forEach(c=>{if(!CEVNI_CONCEPT_INDEX[c])errors.push(`${q.id} assesses untaught/unknown concept ${c}`)});
+ });
+ return {ok:!errors.length,errors,modules:CEVNI_CURRICULUM_MATRIX.length,concepts:conceptIds.length};
+}
+window.cevniCurriculumManifest=function(){return {version:CEVNI_CURRICULUM_VERSION,principles:CEVNI_COURSE_PRINCIPLES,matrix:CEVNI_CURRICULUM_MATRIX,health:cevniCurriculumHealth()}};
+function cevniInjectBlueprint(){
+ const page=document.getElementById('cevniPage');if(!page||document.getElementById('cvBlueprint'))return;
+ const health=document.getElementById('cvDataHealth');if(!health)return;
+ const h=cevniCurriculumHealth(),d=document.createElement('div');d.id='cvBlueprint';d.className='cvBlueprint';
+ d.innerHTML=`<div class="cvBlueprintHead"><div><div class="ver">CURRICULUM / COVERAGE BLUEPRINT • v${CEVNI_CURRICULUM_VERSION}</div><b>${h.ok?'TEACH-BEFORE-TEST CONTRACT HEALTHY':'CURRICULUM CHECK REQUIRED'}</b></div><div class="ver">${h.modules} MODULES • ${h.concepts} CORE CONCEPT GROUPS</div></div><div class="cvBlueprintRule">TEACH EVERYTHING FIRST → RECOGNISE / REHEARSE → PRACTISE IN CONTEXT → ONLY THEN ASSESS</div><div class="cvBlueprintGrid">${CEVNI_CURRICULUM_MATRIX.map(m=>`<div class="cvBlueprintCard"><b>${String(m.order).padStart(2,'0')} • ${m.title}</b><small>${m.concepts.length} concept groups • ${m.practice.length} practice families • ${m.assessment.length} assessment families</small></div>`).join('')}</div>`;
+ health.after(d);
+}
+const cevniInit_14712=window.cevniInit;
+window.cevniInit=function(){cevniInit_14712();cevniInjectBlueprint()};
+window.PROJECT_WATCH_BUILD='1.47.13-CEVNI-CURRICULUM-BLUEPRINT';
+document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.13-CEVNI-CURRICULUM-BLUEPRINT';});
+</script>
+
 <!-- PW_DEVTOOLS_START : remove this entire marked block for production if desired -->
 <style id="pwDevToolsStyles">
 html.pw-devtools-disabled #cevniDevToggle,html.pw-devtools-disabled #cevniDevBar{display:none!important}
@@ -25606,8 +25675,8 @@ function pwDevApplyProductionSwitch(){
  if(!PW_DEVTOOLS_ENABLED){cvDevMode=false;if(toggle)toggle.hidden=true;if(bar)bar.hidden=true}
 }
 document.addEventListener('DOMContentLoaded',pwDevApplyProductionSwitch);
-window.PROJECT_WATCH_BUILD='1.47.12-CEVNI-DEVELOPMENT-HARNESS';
-document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.12-CEVNI-DEVELOPMENT-HARNESS';});
+window.PROJECT_WATCH_BUILD='1.47.13-CEVNI-CURRICULUM-BLUEPRINT';
+document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.13-CEVNI-CURRICULUM-BLUEPRINT';});
 </script>
 <!-- PW_DEVTOOLS_END -->
 </body></html>
