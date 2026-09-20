@@ -25760,4 +25760,67 @@ window.PROJECT_WATCH_BUILD='1.47.13-CEVNI-CURRICULUM-BLUEPRINT';
 document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.13-CEVNI-CURRICULUM-BLUEPRINT';});
 </script>
 <!-- PW_DEVTOOLS_END -->
+
+<!-- PROJECT WATCH CEVNI 1.47.15 — DEFINITIVE SOURCE AUDIT REGISTER -->
+<style id="cvSourceAuditStyles">
+#cevniSourceAudit{margin:16px 0 24px;padding:18px;border:1px solid #16566b;border-radius:14px;background:#062b38;color:#eaf7fb}
+#cevniSourceAudit .cvSAHead{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:12px}
+#cevniSourceAudit .ver{color:#59c9ea;font-size:13px;letter-spacing:.03em}#cevniSourceAudit b{font-weight:800}
+#cevniSourceAudit .cvSARule{padding:11px 13px;border-left:4px solid #38db93;background:#0a4052;border-radius:8px;font-weight:800;margin:12px 0}
+#cevniSourceAudit .cvSAGrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+#cevniSourceAudit .cvSACard{background:#0b4760;border:1px solid #17627c;border-radius:10px;padding:10px;min-height:92px}
+#cevniSourceAudit .cvSACard small{display:block;color:#9ebbc6;line-height:1.35;margin-top:5px}.cvSAStatus{color:#6ee7ae;font-size:11px;font-weight:900;letter-spacing:.05em}
+#cevniSourceAudit .cvSAFoot{color:#a9c0c9;font-size:12px;line-height:1.45;margin-top:12px}
+@media(max-width:900px){#cevniSourceAudit .cvSAGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){#cevniSourceAudit .cvSAGrid{grid-template-columns:1fr}}
+</style>
+<script id="cvSourceAuditScript">
+const CEVNI_SOURCE_AUDIT_VERSION='1.0.0';
+const CEVNI_CHAPTER_AUDIT=[
+{id:'ch1',title:'General provisions',role:'Definitions, responsibilities, documents, conduct and competent-authority framework',status:'REGISTERED'},
+{id:'ch2',title:'Marks & draught scales on vessels; tonnage measurement',role:'Vessel identification, marks and draught-scale source layer',status:'REGISTERED'},
+{id:'ch3',title:'Visual signals (marking) on vessels',role:'Lights, day shapes and vessel visual-signal requirements',status:'REGISTERED'},
+{id:'ch4',title:'Sound signals; radiotelephony; navigation devices',role:'Sound, radio, radar/navigation-device and Inland AIS source layer',status:'REGISTERED'},
+{id:'ch5',title:'Waterway signs and marking',role:'Meaning and application of waterway signs and marking',status:'REGISTERED'},
+{id:'ch6',title:'Rules of the road',role:'Meeting, crossing, overtaking, bridges, locks, visibility and navigation conduct',status:'REGISTERED'},
+{id:'ch7',title:'Berthing rules',role:'Berthing, anchoring and operational restrictions',status:'REGISTERED'},
+{id:'ch8',title:'Signalling and reporting requirements',role:'Reporting/signalling duties and operational information',status:'REGISTERED'},
+{id:'ch9',title:'Regional and national special requirements',role:'Variation layer: competent authorities may omit, complement or modify specified provisions',status:'REGISTERED'},
+{id:'ch10',title:'Prevention of pollution of water and disposal of waste',role:'Pollution prevention, waste handling and environmental duties',status:'REGISTERED'}
+];
+const CEVNI_ANNEX_AUDIT=[
+{id:'annex1',title:'Annex 1',role:'Authoritative annex inventory; individual items to be decomposed into teachable records',status:'QUEUED'},
+{id:'annex2',title:'Annex 2',role:'Authoritative annex inventory; individual items to be decomposed into teachable records',status:'QUEUED'},
+{id:'annex3',title:'Annex 3 — visual-signal sketches',role:'Visual reference sketches supporting Chapter 3; regulation text remains authoritative',status:'REGISTERED'},
+{id:'annex4',title:'Annex 4 — vessel lights / signal-light colour',role:'Technical visual-signal reference layer',status:'REGISTERED'},
+{id:'annex5',title:'Annex 5 — intensity / range of signal lights',role:'Technical visibility reference layer',status:'REGISTERED'},
+{id:'annex6',title:'Annex 6 — sound signals',role:'Sound-pattern source inventory for teaching, audio rehearsal and assessment',status:'REGISTERED'},
+{id:'annex7',title:'Annex 7 — waterway signs',role:'Sign-by-sign recognition, meaning, context and action inventory',status:'REGISTERED'},
+{id:'annex8',title:'Annex 8 — fairway / waterway marking',role:'Buoyage, bank marks, fairway limits and marking context',status:'REGISTERED'},
+{id:'annex9',title:'Annex 9',role:'Authoritative annex inventory; individual items to be decomposed into teachable records',status:'QUEUED'},
+{id:'annex10',title:'Annex 10',role:'Authoritative annex inventory; individual items to be decomposed into teachable records',status:'QUEUED'}
+];
+const CEVNI_UPDATE_AUDIT=[
+{id:'corr1',title:'Revision 6 Corrigendum 1',role:'Correction overlay incorporated into the current Revision 6 publication',status:'ACTIVE'},
+{id:'corr2',title:'Revision 6 Corrigendum 2',role:'November 2024 correction overlay, including Annex 7 figure A.10',status:'ACTIVE'},
+{id:'amend1',title:'Revision 6 Amendment 1',role:'Post-publication amendment overlay; every affected record must carry version traceability',status:'ACTIVE'},
+{id:'amend2',title:'Revision 6 Amendment 2',role:'Post-publication amendment overlay; every affected record must carry version traceability',status:'ACTIVE'},
+{id:'signi',title:'SIGNI context',role:'Application/context layer for inland-waterway signs and marking; not a substitute for CEVNI rule text',status:'REFERENCE'},
+{id:'local',title:'National / regional / local layer',role:'Separate variation layer; never presented as universally identical across Europe',status:'REQUIRED'}
+];
+const CEVNI_SOURCE_AUDIT={chapters:CEVNI_CHAPTER_AUDIT,annexes:CEVNI_ANNEX_AUDIT,updates:CEVNI_UPDATE_AUDIT};
+function cevniInjectSourceAudit(){
+ const host=document.getElementById('cevniPage');if(!host||document.getElementById('cevniSourceAudit'))return;
+ const anchor=document.getElementById('cevniMasterSpec')||document.getElementById('cevniCurriculumBlueprint')||host.lastElementChild;
+ const d=document.createElement('section');d.id='cevniSourceAudit';
+ const all=[...CEVNI_CHAPTER_AUDIT,...CEVNI_ANNEX_AUDIT,...CEVNI_UPDATE_AUDIT];
+ d.innerHTML=`<div class="cvSAHead"><div><div class="ver">DEFINITIVE SOURCE AUDIT REGISTER • v${CEVNI_SOURCE_AUDIT_VERSION}</div><b>ARTICLE / ANNEX DECOMPOSITION FOUNDATION</b></div><div class="ver">10 CHAPTERS • 10 ANNEXES • 6 UPDATE / VARIATION LAYERS</div></div><div class="cvSARule">SOURCE ITEM → TEACHABLE RECORD → ASSET REQUIREMENT → PRACTICE DEPENDENCY → ASSESSMENT GATE</div><div class="cvSAGrid">${all.map(x=>`<div class="cvSACard"><span class="cvSAStatus">${x.status}</span><br><b>${x.title}</b><small>${x.role}</small></div>`).join('')}</div><div class="cvSAFoot"><b>Audit rule:</b> this register is the inventory, not the finished curriculum count. During article-by-article and annex-by-annex decomposition, a source item creates a new teachable concept whenever the existing 68-group taxonomy does not represent it cleanly. Nothing is forced into an existing concept merely to preserve the current count. Annex titles/items marked QUEUED remain deliberately unlabelled until verified against the authoritative Revision 6 source text.</div>`;
+ anchor.insertAdjacentElement('afterend',d);
+}
+const cevniInit_14715=window.cevniInit;window.cevniInit=function(){cevniInit_14715();cevniInjectSourceAudit()};
+window.CEVNI_SOURCE_AUDIT=CEVNI_SOURCE_AUDIT;
+window.cevniSourceAuditManifest=()=>JSON.parse(JSON.stringify(CEVNI_SOURCE_AUDIT));
+window.PROJECT_WATCH_BUILD='1.47.15-CEVNI-SOURCE-AUDIT-REGISTER';
+document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.15-CEVNI-SOURCE-AUDIT-REGISTER';});
+</script>
+
 </body></html>
