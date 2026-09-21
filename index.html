@@ -26870,4 +26870,60 @@ window.PW1580_VISUAL_CAMERA={build:'1.58.1',cameraContract:{operational:'forward
 </script>
 <!-- PW1580_HELM_VIEW_MASTER_SCENES_END -->
 
+
+<!-- PW1590_EVIDENCE_INTEGRATION_START -->
+<style>
+#pw1590BuildStamp{position:sticky;top:0;z-index:10000;background:linear-gradient(90deg,#063246,#0b7188,#063246);border-bottom:2px solid #79e8ff;color:#f5feff;padding:8px 14px;text-align:center;font:900 12px/1.25 system-ui;letter-spacing:.06em;box-shadow:0 4px 16px #00182088}
+.pw1590Evidence{margin:14px 0;padding:14px;border:1px solid #2a8299;border-radius:14px;background:#062f3f;color:#cceaf2}.pw1590Evidence h3{margin:0 0 7px;color:#fff}.pw1590EvidenceGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:10px}.pw1590Metric{background:#073b4e;border:1px solid #1f6d82;border-radius:10px;padding:10px}.pw1590Metric b{display:block;color:#8feeff;font-size:18px}.pw1590Metric span{font-size:10px;font-weight:800;color:#b9dce5;letter-spacing:.04em}.pw1590Gate{display:inline-block;margin:7px 5px 0 0;padding:5px 8px;border-radius:999px;font:800 10px system-ui}.pw1590Pass{background:#0b684f;color:#caffed}.pw1590Hold{background:#725c1b;color:#ffe7a0}.pw1590AssetTag{display:inline-block;margin-top:7px;padding:4px 7px;border-radius:999px;background:#0b5268;color:#d7f8ff;font:800 9px system-ui}.pw1590AssetTag.hold{background:#6b551b;color:#ffe9a8}.pw1590AssetTag.reject{background:#6a2d35;color:#ffd8dd}#pw1580MasterPanel{display:none!important}@media(max-width:850px){.pw1590EvidenceGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script>
+(function(){
+'use strict';
+const BUILD='BUILD 1.59.0-CEVNI-EVIDENCE-LIBRARY-INTEGRATION';
+const EVIDENCE={
+ 'sign-A1':{assetId:'PW-OFFICIAL-NL-A1-0116',kind:'sign',family:'Annex 7',meaning:'No entry',rights:'PUBLIC DOMAIN',regulatory:'SEMANTIC VERIFIED / REV6 PLATE HOLD',production:'REFERENCE',answerBearing:false},
+ 'sign-A4':{assetId:'PW-OFFICIAL-NL-A4-0117',kind:'sign',family:'Annex 7',meaning:'No passing / overtaking family',rights:'PUBLIC DOMAIN',regulatory:'SEMANTIC VERIFIED / REV6 PLATE HOLD',production:'REFERENCE',answerBearing:false},
+ 'sign-A5':{assetId:'PW-OFFICIAL-NL-A5-0132',kind:'sign',family:'Annex 7',meaning:'No berthing on sign side',rights:'PUBLIC DOMAIN',regulatory:'SEMANTIC VERIFIED / REV6 PLATE HOLD',production:'REFERENCE',answerBearing:false},
+ 'sign-A5.1':{assetId:'PW-OFFICIAL-NL-A5.1-PENDING',kind:'sign',family:'Annex 7',meaning:'No berthing within indicated distance',rights:'FILE AUDIT PENDING',regulatory:'VARIANT HOLD',production:'HOLD',answerBearing:false},
+ 'sign-A6':{assetId:'PW-OFFICIAL-NL-A6-0134',kind:'sign',family:'Annex 7',meaning:'No anchoring / trailing anchors, cables or chains',rights:'PUBLIC DOMAIN',regulatory:'SEMANTIC VERIFIED / REV6 PLATE HOLD',production:'REFERENCE',answerBearing:false},
+ 'sign-A7':{assetId:'PW-OFFICIAL-NL-A7-0135',kind:'sign',family:'Annex 7',meaning:'No making fast on sign side',rights:'PUBLIC DOMAIN',regulatory:'SEMANTIC VERIFIED / REV6 PLATE HOLD',production:'REFERENCE',answerBearing:false},
+ 'sign-B11b':{assetId:'PW-OFFICIAL-NL-B11B-0163',kind:'sign',family:'Annex 7',meaning:'Radiotelephone communications requirement family',rights:'PUBLIC DOMAIN',regulatory:'IDENTITY VERIFIED / CURRENT PLATE HOLD',production:'REFERENCE',answerBearing:false},
+ 'photo-lock-gambsheim':{assetId:'PW-PHOTO-RHINE-LOCK-0057',kind:'photo',family:'Structure context',rights:'CC BY-SA 3.0 OR GFDL',regulatory:'CONTEXT ONLY',production:'COURSE APPROVED — STRUCTURE CONTEXT',answerBearing:false},
+ 'photo-lock-iffezheim':{assetId:'PW-PHOTO-RHINE-LOCK-0059',kind:'photo',family:'Structure context',rights:'PUBLIC DOMAIN',regulatory:'CONTEXT ONLY',production:'COURSE APPROVED — STRUCTURE CONTEXT',answerBearing:false},
+ 'photo-lock-fessenheim':{assetId:'PW-PHOTO-FR-LOCK-0045',kind:'photo',family:'Structure context',rights:'PUBLIC DOMAIN',regulatory:'CONTEXT ONLY',production:'COURSE APPROVED — STRUCTURE CONTEXT',answerBearing:false},
+ 'photo-lock-lanaye':{assetId:'PW-PHOTO-BE-LANAYE-0080',kind:'photo',family:'Structure context',rights:'CC BY-SA 4.0',regulatory:'CONTEXT ONLY',production:'COURSE APPROVED — STRUCTURE CONTEXT',answerBearing:false},
+ 'photo-bifurcation-nl':{assetId:'PW-PHOTO-NL-BIFURC-0125',kind:'photo',family:'Annex 8 mark',rights:'CC BY-SA 4.0',regulatory:'STRONG CANDIDATE / SUBTYPE MAP PENDING',production:'HOLD',answerBearing:false},
+ 'photo-blueboard-inactive':{assetId:'PW-PHOTO-RHINE-BLUEBOARD-0190',kind:'photo',family:'Blue board hardware',rights:'CC BY-SA 3.0',regulatory:'INACTIVE STATE ONLY',production:'LIMITED CONTEXT',answerBearing:false},
+ 'photo-navlights-de':{assetId:'PW-PHOTO-DE-NAVLIGHTS-0156',kind:'photo',family:'Vessel lights',rights:'CC BY-SA 3.0',regulatory:'VISIBLE-ASPECT MAP PENDING',production:'HOLD',answerBearing:false}
+};
+const POLICY={version:'1.0.0',sourceOfTruth:'Project Watch Visual Evidence Library',resolverRule:'scenario/lesson references asset ID; visual layer may change without changing regulatory logic',gates:{G1:'CURRENT LAW',G2:'EXACT ARTWORK',G3:'LICENCE',G4:'PROVENANCE',G5:'VISIBILITY',G6:'COURSE USE',G7:'FILE RESOLUTION',G8:'LIGHT TECHNICAL COMPLIANCE',G9:'AMENDMENT COMPLETENESS'},productionRule:'answer-bearing visual requires every relevant gate PASS',developmentAnswers:'A-FIRST'};
+function get(ref){return EVIDENCE[ref]||null}
+function canAnswer(ref){const a=get(ref);return !!(a&&a.answerBearing&&a.production==='PRODUCTION ASSET')}
+function resolve(ref,layer){const a=get(ref);if(!a)return {ok:false,ref,reason:'UNKNOWN ASSET REFERENCE'};if(layer==='assessment'&&!canAnswer(ref))return {ok:false,ref,asset:a,reason:'ANSWER-BEARING GATES NOT CLOSED'};return {ok:true,ref,asset:a,layer:layer||'teaching'} }
+function legacySign(code){try{const map={A1:'A1',A4:'A4',A5:'A5',A6:'A6',A7:'A7',B11:'B11'};const k=map[code];if(k&&window.CEVNI_SIGNS&&CEVNI_SIGNS[k])return CEVNI_SIGNS[k].svg}catch(e){}return ''}
+function attachAssetTags(root){
+ root.querySelectorAll('#pw1540Content article').forEach(card=>{if(card.querySelector('.pw1590AssetTag'))return;const t=(card.textContent||'').toUpperCase();let ref=null;for(const code of ['A.1','A.4','A.5.1','A.5','A.6','A.7','B.11']){if(t.includes(code)){ref='sign-'+code.replace('.','');if(code==='A.5.1')ref='sign-A5.1';if(code==='B.11')ref='sign-B11b';break}}if(!ref)return;const a=get(ref);if(!a)return;const tag=document.createElement('span');tag.className='pw1590AssetTag '+(a.production==='HOLD'?'hold':'');tag.textContent=a.assetId+' • '+a.production;card.appendChild(tag)})
+}
+function evidencePanel(){const root=document.getElementById('pw1540SignSchool')||document.getElementById('cevniLibraryHardening')||document.getElementById('cevniPage');if(!root||document.getElementById('pw1590EvidencePanel'))return;const p=document.createElement('section');p.id='pw1590EvidencePanel';p.className='pw1590Evidence';p.innerHTML=`<h3>VISUAL EVIDENCE LIBRARY • INTEGRATED ASSET CONTRACT</h3><div>Lessons, recognition, scenarios and assessment can now reference permanent asset IDs instead of owning artwork. Qualified context photographs remain metadata-only until their production files are packaged; unresolved regulatory plates cannot become answer-bearing visuals.</div><div class="pw1590EvidenceGrid"><div class="pw1590Metric"><b>${Object.keys(EVIDENCE).length}</b><span>INTEGRATED ASSET RECORDS</span></div><div class="pw1590Metric"><b>9</b><span>PRODUCTION GATES</span></div><div class="pw1590Metric"><b>0</b><span>UNVERIFIED ANSWER-BEARING PROMOTIONS</span></div><div class="pw1590Metric"><b>A-FIRST</b><span>DEVELOPMENT PROOFING</span></div></div><span class="pw1590Gate pw1590Pass">ASSET RESOLVER ACTIVE</span><span class="pw1590Gate pw1590Pass">PROGRESSION UNTOUCHED</span><span class="pw1590Gate pw1590Hold">G9 CURRENT-LAW FREEZE OPEN</span><span class="pw1590Gate pw1590Hold">REV6 EXACT PLATES OPEN</span>`;root.insertBefore(p,root.firstElementChild)}
+function unifyRoute(){
+ const sec=document.getElementById('pw1540SignSchool');if(sec){const k=sec.querySelector('.pw1540Kicker');if(k)k.textContent='CEVNI • UNIFIED SIGNS & MARKS SCHOOL • EVIDENCE-BACKED';const h=sec.querySelector('h2');if(h)h.textContent='Signs & Marks — one authoritative recognition school'}
+ document.querySelectorAll('#cevniLibraryHardening .cv1510Tabs button[data-tab="marks"]').forEach(b=>{b.textContent='MARKS DATA AUDIT';b.title='Development/source audit only — learner route is Signs & Marks'})
+}
+function enforceBuild(){
+ const page=document.getElementById('cevniPage');if(page)page.dataset.pwBuild='1.59.0';
+ document.querySelectorAll('#cevniPage .pwBuild,#cevniPage .build').forEach(n=>{if(/BUILD 1\./i.test(n.textContent||''))n.textContent=BUILD});
+ ['pw1580BuildStamp','pw1570BuildStamp','pw1560DeployStamp'].forEach(id=>{const n=document.getElementById(id);if(n)n.remove()});
+ let s=document.getElementById('pw1590BuildStamp');if(!s&&page){s=document.createElement('div');s.id='pw1590BuildStamp';page.prepend(s)}if(s)s.textContent='PROJECT WATCH • BUILD 1.59.0 • EVIDENCE LIBRARY INTEGRATION • UNIFIED ASSET RESOLVER';
+}
+function boundedRun(){try{enforceBuild();unifyRoute();evidencePanel();attachAssetTags(document)}catch(e){console.error('PW 1.59.0 evidence integration',e)}}
+window.PW_VISUAL_EVIDENCE_LIBRARY=EVIDENCE;
+window.PW_VISUAL_ASSET_POLICY=POLICY;
+window.PW_ASSET_RESOLVER={get,resolve,canUseAsAnswer:canAnswer,legacySign};
+window.PW1590_INTEGRATION={build:'1.59.0',baseline:'1.58.1',progressionTouched:false,testModeTouched:false,colregTouched:false,externalPhotosEmbedded:false,assetResolverActive:true,unifiedSignsMarks:true,developmentAnswers:'A-first'};
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(boundedRun,450),{once:true});else setTimeout(boundedRun,450);
+setTimeout(boundedRun,1800);setTimeout(boundedRun,3600);
+})();
+</script>
+<!-- PW1590_EVIDENCE_INTEGRATION_END -->
+
 </body></html>
