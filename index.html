@@ -26244,4 +26244,83 @@ function cevni1482ContextAnswer(btn,i){if(cv1482ContextSolved)return;const q=CEV
 const cv1482Prev21=window.cevni14721Render;window.cevni14721Render=function(){const h=document.getElementById('cv14721Host');if(h&&typeof cv14721Index!=='undefined'&&cv14721Index>=CEVNI_14721_REHEARSAL.length){if(window.cv1482SetStage)cv1482SetStage(0,'rehearsal');h.innerHTML=`<div class="cv102Done"><div class="ver">ARTICLE 1.02 • REHEARSAL COMPLETE</div><h3>Responsibility rehearsal complete</h3><p>The core authority, convoy, presence, fitness and moored-vessel responsibility rules have been rehearsed. No score has been recorded.</p><span class="cv102Badge">NEXT • OPERATIONAL CONTEXT PRACTICE</span><div class="cv102Actions"><button class="secondary" onclick="cv14721Index=0;cevni14721Render()">REHEARSE AGAIN</button><button class="primary" onclick="cevni1482ContextHub()">START CONTEXT PRACTICE →</button></div></div>`;return;}return cv1482Prev21?cv1482Prev21():undefined;};
 </script>
 <!-- PW1482_END -->
+
+<!-- PW1483_START : detachable development harness regression repair -->
+<script id="cv1483DevHarnessRepair">
+(function(){
+'use strict';
+window.PROJECT_WATCH_BUILD='1.48.3-CEVNI-DEV-HARNESS-REGRESSION-REPAIR';
+
+function cleanReveal(){
+ document.querySelectorAll('.cevniDevCorrect,.cevniDevWrong').forEach(x=>x.classList.remove('cevniDevCorrect','cevniDevWrong'));
+ document.querySelectorAll('.cevniDevTag').forEach(x=>x.remove());
+}
+function statusText(){
+ const all=(typeof cevniDevItems==='function')?cevniDevItems():[];
+ if(!all.length)return 'TEST MODE • NO REGISTERED TEST ITEMS';
+ cvDevIndex=((cvDevIndex%all.length)+all.length)%all.length;
+ return `${cvDevIndex+1}/${all.length} • ${all[cvDevIndex].label}`;
+}
+
+/* Test reset is intentionally isolated from learner/course progress.
+   RESET CEVNI PROGRESS remains the only control that clears progression. */
+window.cevniDevReset=function(){
+ if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
+ cleanReveal();
+ cvDevIndex=0;cvScore=0;cvMock=[];
+ if(typeof cvMi!=='undefined')cvMi=0;
+ const st=document.getElementById('cevniDevStatus');if(st)st.textContent='TEST HARNESS RESET';
+ if(typeof cevniDevGo==='function')cevniDevGo();
+};
+window.cevniDevPrev=function(){
+ if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
+ cleanReveal();cvDevIndex--;cevniDevGo();
+};
+window.cevniDevNext=function(){
+ if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
+ cleanReveal();cvDevIndex++;cevniDevGo();
+};
+
+/* Keep the universal answer contract from 1.47.12, but make non-question
+   screens explicit rather than looking like a broken contract. */
+window.cevniDevReveal=function(){
+ if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
+ cleanReveal();
+ const state=(typeof pwDevCurrentAnswer==='function')?pwDevCurrentAnswer():null;
+ const st=document.getElementById('cevniDevStatus');
+ if(!state){if(st)st.textContent=statusText()+' • NO ACTIVE ANSWER ON THIS SCREEN';return;}
+ state.buttons.forEach((b,i)=>b.classList.add(i===state.correct?'cevniDevCorrect':'cevniDevWrong'));
+ const tag=document.createElement('div');tag.className='cevniDevTag';
+ const answer=(state.buttons[state.correct]?.textContent||'').replace(/^[A-Z]\s*•\s*/,'');
+ tag.textContent=`TEST ANSWER: ${String.fromCharCode(65+state.correct)} • ${answer}`;
+ state.root.after(tag);
+ if(st)st.textContent=statusText();
+};
+
+/* Exit removes only development decoration/state. Course progress is untouched. */
+window.cevniDevToggle=function(){
+ if(!PW_DEVTOOLS_ENABLED)return;
+ cvDevMode=!cvDevMode;
+ const b=document.getElementById('cevniDevToggle'),bar=document.getElementById('cevniDevBar');
+ if(b){b.classList.toggle('on',cvDevMode);b.textContent=cvDevMode?'🧪 TEST MODE ON':'🧪 TEST MODE';}
+ if(bar)bar.hidden=!cvDevMode;
+ cleanReveal();
+ if(cvDevMode){if(typeof cevniRenderModules==='function')cevniRenderModules();cvDevIndex=0;cevniDevGo();}
+ else {if(typeof cevniRenderModules==='function')cevniRenderModules();}
+};
+
+/* Small detachable harness health contract for future regression checks. */
+window.pwDevHarnessHealth=function(){
+ const ids=['cevniDevToggle','cevniDevBar','cevniDevStatus'];
+ return {ok:ids.every(id=>!!document.getElementById(id))&&['cevniDevPrev','cevniDevReveal','cevniDevNext','cevniDevReset','cevniDevToggle'].every(n=>typeof window[n]==='function'),controls:['BACK','SHOW ANSWER','NEXT','RESET TEST','EXIT'],progressIsolation:true};
+};
+function label(){
+ const txt='BUILD 1.48.3-CEVNI-DEV-HARNESS-REGRESSION-REPAIR';
+ document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build').forEach(x=>{if(/CEVNI|1\.48\./i.test(x.textContent||''))x.textContent=txt});
+ const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent=txt;
+}
+label();setTimeout(label,250);
+})();
+</script>
+<!-- PW1483_END -->
 </body></html>
