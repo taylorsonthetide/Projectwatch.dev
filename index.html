@@ -26696,4 +26696,42 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </script>
 <!-- PW1540_ANNEX7_SIGN_SCHOOL_END -->
 
+
+<!-- PW1550_UNIFIED_SIGN_LIBRARY_START -->
+<style>
+#pw1540SignSchool .pw1550Coverage{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}.pw1550Cov{background:#07394a;border:1px solid #17647c;border-radius:12px;padding:12px}.pw1550Cov b{font-size:22px;display:block;color:#effcff}.pw1550Cov span{font-size:12px;color:#8ed8eb}.pw1550Verified{box-shadow:inset 0 0 0 1px #1b8d69}.pw1550Queue{box-shadow:inset 0 0 0 1px #82691e}.pw1550Note{margin:12px 0;padding:12px;border:1px dashed #92761e;border-radius:10px;background:#082f3e;color:#d9edf4}.pw1550Note b{color:#9eeeff}@media(max-width:900px){#pw1540SignSchool .pw1550Coverage{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script>
+(()=>{
+const BUILD='BUILD 1.55.0-CEVNI-UNIFIED-ANNEX7-LIBRARY';
+function normalize(code){return code.replace(/[a-f]$/,'').replace(/\.1$/,'');}
+function findLegacy(r){try{if(!window.PW1490_SIGNS)return null;return PW1490_SIGNS.find(x=>x.code===r.code)||PW1490_SIGNS.find(x=>x.code===normalize(r.code));}catch(e){return null}}
+function verifiedArt(r){const legacy=findLegacy(r);try{if(legacy&&legacy.art!==null&&window.CEVNI_SIGNS&&CEVNI_SIGNS[legacy.art])return `<div class="cv1490Sign">${CEVNI_SIGNS[legacy.art].svg}</div>`}catch(e){}return ''}
+window.pw1550SignArt=function(r){return verifiedArt(r)||`<div class="pw1540CodePlate ${r.family}">${r.code}</div>`};
+function patch(){
+ const lib=window.PW_CEVNI_ANNEX7_SIGN_LIBRARY;if(!lib)return;
+ const R=lib.records;let verified=0;R.forEach(r=>{if(verifiedArt(r)){r.art='verified';verified++}else if(r.art==='verified')r.art='source-only'});
+ lib.version='1.55.0';lib.visualAssetPolicy='ONE CENTRAL SIGN RECORD; verified legacy SVG reused; exact artwork pending remains explicit';lib.verifiedArtworkCount=verified;lib.pendingArtworkCount=R.length-verified;
+ // Make the original Visual School Signs button open the expanded unified school, avoiding two competing sign experiences.
+ const oldOpen=window.cv1490Open;window.cv1490Open=function(tab='signs'){if(tab==='signs'&&window.pw1540Open){pw1540Open();return}return oldOpen?oldOpen(tab):null};
+ document.querySelectorAll('#cevniVisualSchool .cv1490Tabs button[data-tab="signs"]').forEach(b=>b.setAttribute('onclick','pw1540Open()'));
+ // Replace 1.54 artwork renderer with central verified-asset lookup.
+ try{const oldRender=window.pw1540Render;window.pw1540Render=function(f){oldRender(f);setTimeout(()=>{
+   const cards=[...document.querySelectorAll('#pw1540Grid .pw1540Card')];const list=f==='ALL'?R:R.filter(x=>x.family===f);
+   cards.forEach((c,i)=>{const r=list[i];if(!r)return;const a=c.querySelector('.pw1540Art');if(a)a.innerHTML=pw1550SignArt(r);const st=c.querySelector('.pw1540Status');if(st){const ok=!!verifiedArt(r);st.textContent=ok?'VERIFIED CENTRAL ASSET':'SOURCE VERIFIED • EXACT ARTWORK QUEUED';st.classList.toggle('pw1540Pending',!ok);c.classList.toggle('pw1550Verified',ok);c.classList.toggle('pw1550Queue',!ok)}});
+ },0)};}catch(e){}
+ const school=document.getElementById('pw1540SignSchool');if(school){const head=school.querySelector('.pw1540Head');if(head&&!document.getElementById('pw1550Coverage')){const d=document.createElement('div');d.id='pw1550Coverage';d.innerHTML=`<div class="pw1550Coverage"><div class="pw1550Cov"><b>${R.length}</b><span>ANNEX 7 RECORDS REGISTERED</span></div><div class="pw1550Cov"><b>${verified}</b><span>EXISTING VERIFIED GRAPHICS REUSED</span></div><div class="pw1550Cov"><b>${R.length-verified}</b><span>EXACT ARTWORK QUEUED</span></div><div class="pw1550Cov"><b>1</b><span>CENTRAL SIGN LIBRARY</span></div></div><div class="pw1550Note"><b>Unified library:</b> the original Project Watch sign graphics have not been replaced. They are now the verified artwork assets underneath this expanded Annex 7 register. Every new sign joins this same library; no second competing sign library is being created.</div>`;head.after(d)}}
+ // Keep old visual school from rendering its short sign list if reached indirectly.
+ try{const oldRender1490=window.cv1490Render;window.cv1490Render=function(tab='signs'){if(tab==='signs'&&window.pw1540Open){pw1540Open();return}return oldRender1490(tab)}}catch(e){}
+ // Build label only.
+ document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build').forEach(x=>{if(/BUILD 1\.(5[0-4]|4[0-9])/.test(x.textContent||''))x.textContent=BUILD});
+ const h=document.querySelector('#cevniPage');if(h)h.dataset.pwBuild='1.55.0';
+ setTimeout(()=>window.pw1540Render&&window.pw1540Render('ALL'),20);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(patch,1600));else setTimeout(patch,1600);
+window.PW1550_UNIFIED_SIGN_LIBRARY={build:'1.55.0',sourceBasis:['CEVNI Rev.6 Annex 7','SIGNI'],policy:'source record and exact artwork status remain separate; original verified SVG assets are reused'};
+})();
+</script>
+<!-- PW1550_UNIFIED_SIGN_LIBRARY_END -->
+
 </body></html>
