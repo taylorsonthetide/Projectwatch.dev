@@ -26734,4 +26734,60 @@ window.PW1550_UNIFIED_SIGN_LIBRARY={build:'1.55.0',sourceBasis:['CEVNI Rev.6 Ann
 </script>
 <!-- PW1550_UNIFIED_SIGN_LIBRARY_END -->
 
+
+<!-- PW1560_DEPLOYMENT_UNIFICATION_START -->
+<style>
+#pw1560DeployStamp{position:sticky;top:0;z-index:9997;background:#123f52;border-bottom:2px solid #35d6ff;color:#dffaff;padding:7px 14px;font:800 12px/1.25 system-ui;letter-spacing:.05em;text-align:center}
+#pw1540SignSchool .pw1560MasterNote{margin:12px 0;padding:12px 14px;border:1px solid #2388a7;border-radius:10px;background:#07384a;color:#dff7ff}
+#pw1540SignSchool .pw1560MasterNote b{color:#7fe8ff}
+#cevniDeepSchool .cv1520Compose{position:relative}
+#cevniDeepSchool .cv1520Compose::before{content:'DEVELOPMENT WIREFRAME — NOT FINAL LEARNER ARTWORK';position:absolute;z-index:30;left:14px;top:14px;background:#8b6512;color:#fff3bf;border:1px solid #d9ad3c;border-radius:999px;padding:6px 10px;font:900 11px/1 system-ui;letter-spacing:.04em}
+#cevniDeepSchool .cv1520Scene{filter:saturate(.82)}
+</style>
+<script>
+(function(){
+var PW1560_BUILD='BUILD 1.56.0-CEVNI-DEPLOYMENT-UNIFICATION';
+function pw1560SetBuild(){
+  var nodes=document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build');
+  nodes.forEach(function(x){ if(/BUILD 1\./i.test(x.textContent||'')) x.textContent=PW1560_BUILD; });
+  var page=document.getElementById('cevniPage'); if(page) page.dataset.pwBuild='1.56.0';
+  var stamp=document.getElementById('pw1560DeployStamp');
+  if(!stamp && page){ stamp=document.createElement('div'); stamp.id='pw1560DeployStamp'; stamp.textContent='PROJECT WATCH • 1.56.0 DEPLOYMENT CHECK • UNIFIED ANNEX 7 LIBRARY'; page.insertBefore(stamp,page.firstChild); }
+}
+function pw1560UnifySigns(){
+  var school=document.getElementById('pw1540SignSchool'); if(!school) return;
+  var head=school.querySelector('.pw1540Head');
+  if(head && !school.querySelector('.pw1560MasterNote')){
+    var n=document.createElement('div'); n.className='pw1560MasterNote';
+    n.innerHTML='<b>MASTER ANNEX 7 SIGN SCHOOL</b> — this is now the single learner-facing signs route. Existing verified Project Watch graphics are reused here; source-verified records without exact artwork remain visibly queued.';
+    head.parentNode.insertBefore(n,head.nextSibling);
+  }
+  if(window.PW_CEVNI_ANNEX7_SIGN_LIBRARY){
+    window.PW_CEVNI_ANNEX7_SIGN_LIBRARY.version='1.56.0';
+    window.PW_CEVNI_ANNEX7_SIGN_LIBRARY.route='MASTER-ANNEX7';
+  }
+  // Any Visual School button that previously opened the short sign list now opens the master school.
+  document.querySelectorAll('#cevniVisualSchool button').forEach(function(b){
+    if(/ANNEX 7|SIGNS/i.test(b.textContent||'')){ b.onclick=function(){ if(window.pw1540Open) window.pw1540Open(); }; }
+  });
+}
+function pw1560MarkWireframes(){
+  var deep=document.getElementById('cevniDeepSchool'); if(!deep) return;
+  var existing=deep.querySelector('.pw1560WireframeNotice'); if(existing) return;
+  var target=deep.querySelector('.cv1500Head,.cv1500Shell,.cv1500Tabs');
+  var n=document.createElement('div'); n.className='pw1560WireframeNotice';
+  n.style.cssText='margin:10px 0;padding:12px 14px;border:1px dashed #c4952d;border-radius:10px;background:#3a2d0d;color:#ffe7a5;font-weight:700';
+  n.innerHTML='VISUAL STATUS: the composed bridge / lock / weir / fairway scenes below are engineering wireframes used to prove library composition. They are not approved final learner artwork and are scheduled for replacement by the visual-asset renderer.';
+  if(target && target.parentNode) target.parentNode.insertBefore(n,target.nextSibling); else deep.insertBefore(n,deep.firstChild);
+}
+function pw1560Run(){ pw1560SetBuild(); pw1560UnifySigns(); pw1560MarkWireframes(); }
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){setTimeout(pw1560Run,50);setTimeout(pw1560Run,1900);});
+else {setTimeout(pw1560Run,50);setTimeout(pw1560Run,1900);}
+// Reassert after legacy delayed labels finish.
+setTimeout(pw1560SetBuild,2600);
+window.PW1560_DEPLOYMENT={build:'1.56.0',purpose:'unmistakable deployment + single Annex 7 route + wireframe status marking'};
+})();
+</script>
+<!-- PW1560_DEPLOYMENT_UNIFICATION_END -->
+
 </body></html>
