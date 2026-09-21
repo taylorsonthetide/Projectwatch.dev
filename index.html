@@ -26323,4 +26323,61 @@ label();setTimeout(label,250);
 })();
 </script>
 <!-- PW1483_END -->
+
+
+<!-- PW1484_START : development full-reset contract repair -->
+<script id="cv1484DevFullResetRepair">
+(function(){
+'use strict';
+window.PROJECT_WATCH_BUILD='1.48.4-CEVNI-DEV-FULL-RESET-REPAIR';
+
+function cv1484ResetExerciseState(){
+  // Development navigation / scoring state.
+  if(typeof cvDevIndex!=='undefined') cvDevIndex=0;
+  if(typeof cvScore!=='undefined') cvScore=0;
+  if(typeof cvMock!=='undefined') cvMock=[];
+  if(typeof cvMi!=='undefined') cvMi=0;
+  // Custom coached-practice cursors. These are deliberately transient and
+  // are reset through the dev harness only; no completion logic lives here.
+  if(typeof cv14718Index!=='undefined') cv14718Index=0;
+  if(typeof cv14719Index!=='undefined') cv14719Index=0;
+  if(typeof cv14721Index!=='undefined') cv14721Index=0;
+  if(typeof cv1482ContextIndex!=='undefined') cv1482ContextIndex=0;
+  if(typeof cv1482ContextSolved!=='undefined') cv1482ContextSolved=false;
+}
+function cv1484ResetCourseThroughContract(){
+  // Clear the authoritative CEVNI progression record and its legacy render
+  // mirror together. The course map remains a renderer, never the authority.
+  localStorage.removeItem('pwCevniProgressV2');
+  localStorage.removeItem('pwCevniDone');
+  if(typeof cevniRenderModules==='function') cevniRenderModules();
+  if(typeof cevniCloseLesson==='function') cevniCloseLesson();
+}
+window.cevniDevReset=function(){
+  if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
+  if(typeof cleanReveal==='function') cleanReveal();
+  else {
+    document.querySelectorAll('.cevniDevCorrect,.cevniDevWrong').forEach(x=>x.classList.remove('cevniDevCorrect','cevniDevWrong'));
+    document.querySelectorAll('.cevniDevTag').forEach(x=>x.remove());
+  }
+  cv1484ResetExerciseState();
+  cv1484ResetCourseThroughContract();
+  const st=document.getElementById('cevniDevStatus');
+  if(st)st.textContent='TEST RESET • CEVNI COURSE RETURNED TO CLEAN STATE';
+  // Keep Test Mode itself active, but return its cursor to the first registered item.
+  setTimeout(()=>{ if(typeof cevniDevGo==='function') cevniDevGo(); },0);
+};
+window.pwDevHarnessHealth=function(){
+  const ids=['cevniDevToggle','cevniDevBar','cevniDevStatus'];
+  return {ok:ids.every(id=>!!document.getElementById(id))&&['cevniDevPrev','cevniDevReveal','cevniDevNext','cevniDevReset','cevniDevToggle'].every(n=>typeof window[n]==='function'),controls:['BACK','SHOW ANSWER','NEXT','RESET TEST','EXIT'],resetScope:'development + CEVNI progression',progressContract:'pwCevniProgressV2'};
+};
+function cv1484Label(){
+ const txt='BUILD 1.48.4-CEVNI-DEV-FULL-RESET-REPAIR';
+ document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build').forEach(x=>{if(/CEVNI|1\.48\./i.test(x.textContent||''))x.textContent=txt});
+ const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent=txt;
+}
+cv1484Label();setTimeout(cv1484Label,250);
+})();
+</script>
+<!-- PW1484_END -->
 </body></html>
