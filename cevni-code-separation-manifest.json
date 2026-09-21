@@ -1,0 +1,95 @@
+{
+  "build": "1.61.0",
+  "baseline": "1.60.0",
+  "strategy": "exact externalization of large CEVNI/evidence script blocks; no logic rewrite",
+  "externalized_script_count": 11,
+  "scripts": [
+    {
+      "original_script_number": 39,
+      "id": "pw-cevni-engine-14700",
+      "file": "js/cevni/39-pw-cevni-engine-14700.js",
+      "chars": 2480691,
+      "sha256": "87f43a5b59b260611bc4f3a41c4e4fbad7c20460d1e86ce813bdf3416d8f9b74"
+    },
+    {
+      "original_script_number": 45,
+      "id": "cvChapter1Script",
+      "file": "js/cevni/45-cvchapter1script.js",
+      "chars": 14155,
+      "sha256": "c2e2186cb582d791f88bf2fbcf0cc314c552971103c63ca8132451f11b7966d4"
+    },
+    {
+      "original_script_number": 46,
+      "id": "pw-cevni-14717-article101",
+      "file": "js/cevni/46-pw-cevni-14717-article101.js",
+      "chars": 14472,
+      "sha256": "92589f41cff78a09df87b2ac60e7906e121228f8ab457a2693adee4101f5762e"
+    },
+    {
+      "original_script_number": 48,
+      "id": "pw-cevni-14719-context-practice",
+      "file": "js/cevni/48-pw-cevni-14719-context-practice.js",
+      "chars": 10034,
+      "sha256": "14ac51999969643f138a31a9bc4f9d8eb8abd49400b9c09155a9e4365fe0f3f6"
+    },
+    {
+      "original_script_number": 50,
+      "id": "pw-cevni-14721-article102-rehearsal",
+      "file": "js/cevni/50-pw-cevni-14721-article102-rehearsal.js",
+      "chars": 13262,
+      "sha256": "ddd876015a7fc931436495824a51500c76826be1a9e12d02fc071ce4e58483e6"
+    },
+    {
+      "original_script_number": 51,
+      "id": "legacy-layer-51",
+      "file": "js/cevni/51-legacy-layer-51.js",
+      "chars": 42501,
+      "sha256": "ab3ed03d9aaa0212c6f3d63938fe761d5509a2e8346f49d1fbe8549638c50bcd"
+    },
+    {
+      "original_script_number": 57,
+      "id": "legacy-layer-57",
+      "file": "js/cevni/57-legacy-layer-57.js",
+      "chars": 12685,
+      "sha256": "9ee3a64cd2c86a790554ea6cdea1b5427bdf40040520f7b9cd537385dd47916f"
+    },
+    {
+      "original_script_number": 58,
+      "id": "legacy-layer-58",
+      "file": "js/cevni/58-legacy-layer-58.js",
+      "chars": 19319,
+      "sha256": "e721f1b6b0b518a677706a69ffd82ff49ddf208b402e7005225cb0563c16eec2"
+    },
+    {
+      "original_script_number": 59,
+      "id": "legacy-layer-59",
+      "file": "js/cevni/59-legacy-layer-59.js",
+      "chars": 15933,
+      "sha256": "7fec487dc2a3137ea5d72c1db8ca552ef26a04ecc252e349d6255bbcf048ce74"
+    },
+    {
+      "original_script_number": 60,
+      "id": "legacy-layer-60",
+      "file": "js/cevni/60-legacy-layer-60.js",
+      "chars": 12553,
+      "sha256": "5529b99b8e6741d2479fbfcf3f3dac5517d16e8b8c291aa9fa979ebab22e95b5"
+    },
+    {
+      "original_script_number": 62,
+      "id": "legacy-layer-62",
+      "file": "js/cevni/62-legacy-layer-62.js",
+      "chars": 12208,
+      "sha256": "62a702d647a6d38c8d7c3e1971433425413bc1d38b7b420fb4754aab1227bc95"
+    }
+  ],
+  "original_index_bytes": 5248825,
+  "new_index_bytes": 2600655,
+  "reduction_percent": 50.5,
+  "embedded_base64_remaining": 0,
+  "notes": [
+    "Script bodies are byte-preserved in external files.",
+    "Their DOM execution positions and order are preserved by synchronous classic script tags.",
+    "No progression/Test Mode/rendering logic was intentionally rewritten.",
+    "This is the safe prerequisite to later canonical-data extraction and deletion of superseded historical layers."
+  ]
+}
