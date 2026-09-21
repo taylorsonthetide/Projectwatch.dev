@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.46.55 • QA Microtext Repair</title>
+<title>Project Watch 1.59.1 • Deployment Visibility Repair</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -26925,5 +26925,31 @@ setTimeout(boundedRun,1800);setTimeout(boundedRun,3600);
 })();
 </script>
 <!-- PW1590_EVIDENCE_INTEGRATION_END -->
+
+
+<!-- PW1591_DEPLOYMENT_VISIBILITY_REPAIR_START -->
+<style>
+#pw1591DeployProof{position:fixed;right:10px;bottom:10px;z-index:2147483647;background:#082f3f;border:2px solid #70e6ff;border-radius:10px;color:#fff;padding:7px 10px;font:900 10px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;box-shadow:0 5px 18px #0008;letter-spacing:.04em;pointer-events:none}
+</style>
+<script>
+(function(){
+'use strict';
+const BUILD='1.59.1';
+function prove(){
+ try{
+  document.title='Project Watch '+BUILD+' • Deployment Visibility Repair';
+  document.querySelectorAll('.ver').forEach(function(n){n.textContent='BUILD '+BUILD});
+  var n=document.getElementById('pw1591DeployProof');
+  if(!n){n=document.createElement('div');n.id='pw1591DeployProof';document.body.appendChild(n)}
+  n.textContent='LIVE BUILD '+BUILD+' • 21 SEP 2026';
+  var p=document.getElementById('cevniPage');if(p)p.dataset.pwBuild=BUILD;
+ }catch(e){console.error('PW 1.59.1 deploy proof',e)}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',prove,{once:true});else prove();
+setTimeout(prove,500);setTimeout(prove,2200);setTimeout(prove,4200);
+window.PW1591_DEPLOYMENT_PROOF={build:BUILD,baseline:'1.59.0',courseLogicTouched:false,progressionTouched:false,testModeTouched:false};
+})();
+</script>
+<!-- PW1591_DEPLOYMENT_VISIBILITY_REPAIR_END -->
 
 </body></html>
