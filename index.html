@@ -17290,7 +17290,7 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
 </div>
 
   <div class="homeFooterBar">
-    <div><small>BUILD</small><b>1.47.2</b></div>
+    <div><small>BUILD</small><b>1.62.0</b></div>
     <div><small>COURSE MODE</small><b>8 STAGES • STRUCTURED PROGRESSION</b></div>
     <div><small>TRAINING VESSEL</small><b id="homeTrainingVesselSummary">WATCH ONE • POWER-DRIVEN</b></div>
   </div>
@@ -26238,7 +26238,7 @@ setTimeout(boundedRun,1800);setTimeout(boundedRun,3600);
 </script>
 <!-- PW1590_EVIDENCE_INTEGRATION_END -->
 
-<!-- PW1610_CEVNI_CODE_SEPARATION_START -->
+<!-- PW1620_VISUAL_EVIDENCE_INTEGRATION_START -->
 <style>
 #pw1560DeployStamp,#pw1570BuildStamp,#pw1580BuildStamp,#pw1590BuildStamp,#pw1590EvidencePanel{display:none!important}
 #cevniLibraryHardening .pw1590AssetTag{display:none!important}
@@ -26246,10 +26246,10 @@ setTimeout(boundedRun,1800);setTimeout(boundedRun,3600);
 <script>
 (function(){
 'use strict';
-const BUILD='1.61.0';
+const BUILD='1.62.0';
 function ownBuildIdentity(){
  try{
-  document.title='Project Watch '+BUILD+' • CEVNI Code Separation';
+  document.title='Project Watch '+BUILD+' • Visual Evidence Integration';
   document.querySelectorAll('.ver').forEach(n=>n.textContent='BUILD '+BUILD);
   const vb=document.getElementById('pwVisibleBuild'); if(vb)vb.textContent='BUILD '+BUILD;
   const page=document.getElementById('cevniPage'); if(page)page.dataset.pwBuild=BUILD;
@@ -26267,9 +26267,10 @@ function run(){consolidateLearnerUI();ownBuildIdentity()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
 /* Older retained layers finish bounded startup work by 3.6s. One final identity assertion follows them; no recurring observer/timer is introduced. */
 setTimeout(ownBuildIdentity,3900);
-window.PW1610_CEVNI_CODE_SEPARATION={build:BUILD,baseline:'1.59.2',progressionTouched:false,testModeTouched:false,colregTouched:false,evidenceResolverRetained:true,obsolete1591ExecutionRemoved:true,literalMarkupEscapesRemoved:true};
+window.PW1620_VISUAL_EVIDENCE_INTEGRATION={build:BUILD,baseline:'1.59.2',progressionTouched:false,testModeTouched:false,colregTouched:false,evidenceResolverRetained:true,obsolete1591ExecutionRemoved:true,literalMarkupEscapesRemoved:true};
 })();
 </script>
-<!-- PW1610_CEVNI_CODE_SEPARATION_END -->
+<!-- PW1620_VISUAL_EVIDENCE_INTEGRATION_END -->
 
+<script src="js/cevni/63-visual-evidence-integration.js"></script>
 </body></html>
