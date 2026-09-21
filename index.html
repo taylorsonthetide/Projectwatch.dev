@@ -26952,4 +26952,42 @@ window.PW1591_DEPLOYMENT_PROOF={build:BUILD,baseline:'1.59.0',courseLogicTouched
 </script>
 <!-- PW1591_DEPLOYMENT_VISIBILITY_REPAIR_END -->
 
+
+<!-- PW1592_CONSOLIDATION_START -->
+<style>
+#pw1570BuildStamp,#pw1580BuildStamp,#pw1590BuildStamp,#pw1591DeployProof,#pw1590EvidencePanel{display:none!important}
+#cevniLibraryHardening .pw1590AssetTag{display:none!important}
+</style>
+<script>
+(function(){
+'use strict';
+const BUILD='1.59.2';
+function removeLiteralEscapes(){
+ try{
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),kill=[];
+  while(w.nextNode()){const n=w.currentNode,t=n.nodeValue||'';if(/^(\s*\\n\s*){2,}$/.test(t))kill.push(n)}
+  kill.forEach(n=>n.remove());
+ }catch(e){console.error('PW1592 escape cleanup',e)}
+}
+function consolidate(){
+ try{
+  document.title='Project Watch '+BUILD+' • CEVNI Consolidation';
+  const page=document.getElementById('cevniPage');if(page)page.dataset.pwBuild=BUILD;
+  document.querySelectorAll('.ver').forEach(n=>n.textContent='BUILD '+BUILD);
+  document.querySelectorAll('#cevniPage .pwBuild,#cevniPage .build').forEach(n=>{if(/BUILD 1\./i.test(n.textContent||''))n.textContent='BUILD '+BUILD});
+  ['pw1560DeployStamp','pw1570BuildStamp','pw1580BuildStamp','pw1590BuildStamp','pw1591DeployProof'].forEach(id=>{const n=document.getElementById(id);if(n)n.remove()});
+  const ep=document.getElementById('pw1590EvidencePanel');if(ep)ep.remove();
+  const ss=document.getElementById('pw1540SignSchool');
+  if(ss){const k=ss.querySelector('.pw1540Kicker');if(k)k.textContent='CEVNI • SIGNS & MARKS';const h=ss.querySelector('h2');if(h)h.textContent='Signs & Marks'}
+  document.querySelectorAll('button').forEach(b=>{const t=(b.textContent||'').trim().toUpperCase();if(t==='MARKS DATA AUDIT'||t==='SOURCE AUDIT')b.style.display='none'});
+  removeLiteralEscapes();
+ }catch(e){console.error('PW 1.59.2 consolidation',e)}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>setTimeout(consolidate,500),{once:true});else setTimeout(consolidate,100);
+setTimeout(consolidate,1800);setTimeout(consolidate,3800);
+window.PW1592_CONSOLIDATION={build:BUILD,baseline:'1.59.1',purpose:'learner-facing consolidation',progressionTouched:false,testModeTouched:false,colregTouched:false,evidenceResolverRetained:true,legacyLayersDeleted:false,legacyLayersSuppressed:true};
+})();
+</script>
+<!-- PW1592_CONSOLIDATION_END -->
+
 </body></html>
