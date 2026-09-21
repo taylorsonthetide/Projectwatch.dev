@@ -26186,4 +26186,62 @@ const oldShow=window.cevniShow;window.cevniShow=function(k,b){let r=oldShow?oldS
 cv1481RepairFromLegacy();cv1481SetBuild();setTimeout(cv1481SetBuild,200);
 })();
 </script>
+
+<!-- PW1482_START — UNIFIED PROGRESSION CONTRACT + ARTICLE 1.02 CONTEXT -->
+<style id="cv1482Style">
+#cevniPage .cv1482Gate{margin-top:14px;padding:16px;border:1px dashed #42d89a;border-radius:12px;background:#07382e55}
+#cevniPage .cv1482Gate h3{margin:0 0 8px}#cevniPage .cv1482Status{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+#cevniPage .cv1482Status div{padding:10px;border-radius:9px;background:#062633;border:1px solid #ffffff15}#cevniPage .cv1482Status .done{border-color:#42d89a;background:#07382e}
+@media(max-width:700px){#cevniPage .cv1482Status{grid-template-columns:1fr 1fr}}
+</style>
+<script id="cv1482Progression">
+(function(){
+window.PROJECT_WATCH_BUILD='1.48.2-CEVNI-UNIFIED-PROGRESSION-CONTRACT';
+const CV1482_KEY='pwCevniProgressV2';
+function state(){try{return JSON.parse(localStorage.getItem(CV1482_KEY)||'{}')}catch(e){return {}}}
+function write(x){localStorage.setItem(CV1482_KEY,JSON.stringify(x));}
+function setStage(mi,stage){const x=state();x[mi]=x[mi]||{};x[mi][stage]=true;write(x);cv1482Evaluate(mi);}
+function requirements(mi){
+ if(mi===0)return ['teaching','rehearsal','context'];
+ if(mi===1)return ['teaching','rehearsal','context'];
+ return ['module'];
+}
+function cv1482Evaluate(mi){const x=state();x[mi]=x[mi]||{};const req=requirements(mi);if(req.every(k=>!!x[mi][k]))x[mi].module=true;write(x);cv1482Sync();return !!x[mi].module;}
+function cv1482Sync(){const x=state(),done=[];for(let i=0;i<9;i++){if(x[i]&&x[i].module)done.push(i)}localStorage.setItem('pwCevniDone',JSON.stringify(done));if(typeof cevniRenderModules==='function')cevniRenderModules();}
+window.cv1482SetStage=setStage;window.cv1482Evaluate=cv1482Evaluate;window.cv1482State=state;
+// Reset must clear both the legacy display key and the authoritative progression record.
+const priorReset=window.cevniResetProgress;window.cevniResetProgress=function(){if(confirm('Reset CEVNI pathway progress only?')){localStorage.removeItem('pwCevniDone');localStorage.removeItem(CV1482_KEY);if(typeof cevniRenderModules==='function')cevniRenderModules();if(typeof cevniCloseLesson==='function')cevniCloseLesson();}};
+// Normal legacy module completion uses the same central record.
+const priorMark=window.cevniMark;window.cevniMark=function(i){const x=state();x[i]=x[i]||{};x[i].module=true;write(x);cv1482Sync();return priorMark?priorMark(i):undefined};
+// Module 02 Article 1.01: reaching its teaching gate records teaching.
+const prevOpen=window.cevniOpenLesson;window.cevniOpenLesson=function(i,step=0){const r=prevOpen(i,step);if(i===0&&step>=CEVNI_MODULES[0].sections.length)setStage(0,'teaching');if(i===1&&step>=CEVNI_MODULES[1].sections.length)setStage(1,'teaching');return r};
+// Wrap Article 1.01 completion stages.
+const p18=window.cevni14718Render;if(p18)window.cevni14718Render=function(){const r=p18();if(typeof cv14718Index!=='undefined'&&cv14718Index>=CEVNI_14718_RECOGNITION.length)setStage(1,'rehearsal');return r};
+const p19=window.cevni14719Render;if(p19)window.cevni14719Render=function(){const r=p19();if(typeof cv14719Index!=='undefined'&&cv14719Index>=CEVNI_14719_CONTEXT.length)setStage(1,'context');return r};
+// Wrap Article 1.02 rehearsal completion.
+const p21=window.cevni14721Render;if(p21)window.cevni14721Render=function(){const r=p21();if(typeof cv14721Index!=='undefined'&&cv14721Index>=CEVNI_14721_REHEARSAL.length)setStage(0,'rehearsal');return r};
+// Start cleanly from legacy completions for modules 3-9 only; custom Modules 1-2 must earn declared dependencies.
+try{const legacy=JSON.parse(localStorage.getItem('pwCevniDone')||'[]'),x=state();legacy.forEach(i=>{if(i>=2){x[i]=x[i]||{};x[i].module=true}});write(x)}catch(e){}
+cv1482Sync();
+function buildLabel(){document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build').forEach(x=>{if(/CEVNI|1\.48\./i.test(x.textContent||''))x.textContent='BUILD 1.48.2-CEVNI-UNIFIED-PROGRESSION-CONTRACT'});const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.48.2-CEVNI-UNIFIED-PROGRESSION-CONTRACT';}
+buildLabel();setTimeout(buildLabel,250);
+})();
+</script>
+<script id="cv1482Article102Context">
+const CEVNI_1482_CONTEXT=[
+{title:'Lock approach — authority and fitness',situation:'You are approaching a busy lock. The nominated boatmaster is severely fatigued and another qualified person is available on board.',prompt:'What is the correct operational decision?',choices:['Continue because nomination overrides fatigue','Transfer effective charge to a qualified, fit person before continuing','Let an unqualified crew member take charge temporarily'],correct:1,why:'Article 1.02 requires a qualified boatmaster whose faculties are not impaired by fatigue or intoxication. Operational responsibility must be carried by someone fit to exercise it.'},
+{title:'Pushed convoy — who leads?',situation:'A powered pusher is rigidly connected behind two barges and provides the main propulsion. The formation is approaching a restricted reach.',prompt:'Who is the default convoy boatmaster under the CEVNI framework?',choices:['The boatmaster of the pusher providing the main propulsion','The boatmaster of the forward barge','Whichever boatmaster first sees the restriction'],correct:0,why:'For a pushed convoy, the harmonised rule points to the boatmaster of the pusher providing the main propulsion, subject to any applicable local variation.'},
+{title:'Towed convoy — retained duty',situation:'A convoy boatmaster orders a towed vessel to maintain position. Its own boatmaster then sees an immediate local hazard affecting that vessel.',prompt:'What should happen?',choices:['Do nothing until a new convoy order arrives','Take the steps required by the circumstances while remaining within the convoy authority structure','Leave the convoy immediately without communication'],correct:1,why:'Convoy authority does not remove the other boatmasters’ responsibility to take steps required by circumstances for proper handling of their own vessels.'},
+{title:'Floating equipment in operation',situation:'A dredger is working in the fairway. Its nominated boatmaster proposes supervising from the bank by radio.',prompt:'Is that sufficient for the Article 1.02 presence requirement?',choices:['Yes, if radio coverage is good','No; the boatmaster is required on board while the floating equipment is operating','Yes, provided another vessel is nearby'],correct:1,why:'The boatmaster of floating equipment must be on board whenever the equipment is in operation.'},
+{title:'Moored vessel — boatmaster absent',situation:'A vessel is secured alongside overnight. The boatmaster has left, but a person is assigned the required watch and surveillance duty.',prompt:'Who carries the immediate compliance responsibility described by Article 1.02?',choices:['Nobody until the boatmaster returns','The person responsible for watch and surveillance','The harbour master automatically'],correct:1,why:'Where the boatmaster is absent from a moored vessel or assembly, Article 1.02 points first to the person responsible for watch and surveillance under Article 7.08.'},
+{title:'Special-risk stretch',situation:'A qualified boatmaster reaches a waterway stretch for which the competent authority requires specific additional authorization.',prompt:'What is the correct action?',choices:['Proceed because the general qualification is enough everywhere','Ensure the required specific authorization is held before navigating the stretch','Proceed only at reduced speed'],correct:1,why:'A general qualification does not displace a competent authority’s specific authorization requirement for identified higher-risk stretches.'}
+];
+let cv1482ContextIndex=0,cv1482ContextSolved=false;
+function cevni1482ContextHub(){const a=document.getElementById('cevniLessonArea');if(!a)return;cv1482ContextIndex=0;cv1482ContextSolved=false;a.innerHTML=`<section class="cv102Practice"><div class="cv102PracticeTop"><div><div class="ver">MODULE 01 • ARTICLE 1.02</div><h2>Operational Context Practice</h2><p class="cevniLead">Apply boatmaster authority and responsibility inside realistic inland-waterway operations. This is coached practice: retries are allowed and no score is recorded.</p></div><div class="cv102PracticeStage">STAGE 3 OF 4</div></div><div class="cv1482Status"><div class="done"><b>TEACH ✓</b></div><div class="done"><b>REHEARSAL ✓</b></div><div class="done"><b>CONTEXT • CURRENT</b></div><div><b>MODULE GATE</b></div></div><div id="cv1482ContextHost"></div><div class="cv102Actions"><button class="secondary" onclick="cevni14721PracticeHub()">← RESPONSIBILITY REHEARSAL</button><button class="secondary" onclick="cevniCloseLesson()">CLOSE</button></div></section>`;cevni1482ContextRender();}
+function cevni1482ContextRender(){const h=document.getElementById('cv1482ContextHost');if(!h)return;if(cv1482ContextIndex>=CEVNI_1482_CONTEXT.length){if(window.cv1482SetStage)cv1482SetStage(0,'context');h.innerHTML=`<div class="cv1482Gate"><div class="ver">ARTICLE 1.02 • DEPENDENCIES COMPLETE</div><h3>Module 01 learning pathway complete</h3><p>Teaching, responsibility rehearsal and operational context practice are complete. The common progression contract has now recorded Module 01 as complete and unlocked the next module.</p><div class="cvContextRule">ONE SCAFFOLD • ONE COMPLETION CONTRACT • NEXT MODULE UNLOCKS FROM THE SAME PERSISTENT STATE</div><div class="cv102Actions"><button class="secondary" onclick="cv1482ContextIndex=0;cevni1482ContextRender()">PRACTISE AGAIN</button><button class="primary" onclick="cevniCloseLesson()">RETURN TO COURSE MAP →</button></div></div>`;return;}const q=CEVNI_1482_CONTEXT[cv1482ContextIndex];cv1482ContextSolved=false;h.innerHTML=`<article class="cv102Q"><div class="ver">OPERATIONAL CONTEXT ${cv1482ContextIndex+1} / ${CEVNI_1482_CONTEXT.length}</div><h3>${q.title}</h3><div class="cv102Situation">${q.situation}</div><div class="cv102Prompt">${q.prompt}</div><div class="cv102Choices">${q.choices.map((x,i)=>`<button data-pw-correct="${i===q.correct?'true':'false'}" onclick="cevni1482ContextAnswer(this,${i})">${x}</button>`).join('')}</div><div id="cv1482ContextFeedback"></div></article>`;}
+function cevni1482ContextAnswer(btn,i){if(cv1482ContextSolved)return;const q=CEVNI_1482_CONTEXT[cv1482ContextIndex],fb=document.getElementById('cv1482ContextFeedback');if(i===q.correct){cv1482ContextSolved=true;btn.classList.add('good');fb.innerHTML=`<div class="cv102Feedback"><b>CORRECT — APPLY THE RESPONSIBILITY RULE</b><br>${q.why}<div class="cv102Actions"><button class="primary" onclick="cv1482ContextIndex++;cevni1482ContextRender()">NEXT →</button></div></div>`;}else{btn.classList.add('bad');fb.innerHTML=`<div class="cv102Feedback"><b>NOT QUITE — TRY AGAIN</b><br>Identify who Article 1.02 requires to hold authority, remain present or remain fit for the operation described. Practice allows another attempt.</div>`;setTimeout(()=>btn.classList.remove('bad'),700);}}
+// Replace the old rehearsal-complete dead end with the declared next dependency.
+const cv1482Prev21=window.cevni14721Render;window.cevni14721Render=function(){const h=document.getElementById('cv14721Host');if(h&&typeof cv14721Index!=='undefined'&&cv14721Index>=CEVNI_14721_REHEARSAL.length){if(window.cv1482SetStage)cv1482SetStage(0,'rehearsal');h.innerHTML=`<div class="cv102Done"><div class="ver">ARTICLE 1.02 • REHEARSAL COMPLETE</div><h3>Responsibility rehearsal complete</h3><p>The core authority, convoy, presence, fitness and moored-vessel responsibility rules have been rehearsed. No score has been recorded.</p><span class="cv102Badge">NEXT • OPERATIONAL CONTEXT PRACTICE</span><div class="cv102Actions"><button class="secondary" onclick="cv14721Index=0;cevni14721Render()">REHEARSE AGAIN</button><button class="primary" onclick="cevni1482ContextHub()">START CONTEXT PRACTICE →</button></div></div>`;return;}return cv1482Prev21?cv1482Prev21():undefined;};
+</script>
+<!-- PW1482_END -->
 </body></html>
