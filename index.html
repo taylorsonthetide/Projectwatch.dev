@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.62.20 • CEVNI Curriculum</title>
+<title>Project Watch 1.62.21 • CEVNI Curriculum</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -26484,7 +26484,7 @@ window.PW_CEVNI_SEQUENCE_LIBRARY={version:'1.0.0',courseId:'pw-cevni',modules:[
  {id:'cv-m04',order:4,title:'Lights & Visual Signals',flow:['learn','see','check','apply','review','complete']},
  {id:'cv-m05',order:5,title:'Sound Signals & Radiotelephony',flow:['learn','hear-see','check','apply','review','complete']},
  {id:'cv-m06',order:6,title:'Rules of the Road',flow:['learn','see','practice','check','apply','review','complete']},
- {id:'cv-m07',order:7,title:'Bridges, Locks, Berthing & Special Operations',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m07',order:7,title:'Bridges, Locks, Berthing & Special Operations',flow:['learn','see','practice','check','apply','review','complete']},
  {id:'cv-m08',order:8,title:'Navigation Systems, Reporting & Information',flow:['learn','see','check','apply','review','complete']},
  {id:'cv-m09',order:9,title:'Safety, Environment & Passage Readiness',flow:['learn','see','check','apply','review','complete']}
  ],finalAssessment:{id:'cv-final-mock',title:'Final Mock Exam',isModule:false,after:'cv-m09'}};
@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.20';
+const PROJECT_WATCH_BUILD='1.62.21';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.20: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.21: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.20 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.21 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.62.20 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.62.21 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.62.20 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.62.21 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -27056,7 +27056,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 </script>
 
 
-<!-- PROJECT WATCH 1.62.20 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
+<!-- PROJECT WATCH 1.62.21 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
 <style id="pw16216-module5-style">
 #cevniPage .pw165Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw165Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27087,7 +27087,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 <script id="pw16216-module5">
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 
 const TEACH=[
  ['SOUND LANGUAGE — TIMING FIRST','Annex 6 defines a short blast as about 1 second and a long blast as about 4 seconds. The normal interval between successive blasts is about 1 second. A series of very short blasts is at least six blasts, each about a quarter-second, with roughly quarter-second silences.','Hear duration as part of the meaning: short, long and very-short are different signal elements.'],
@@ -27258,7 +27258,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 </script>
 
 
-<!-- PROJECT WATCH 1.62.20 — MODULE 06 RULES OF THE ROAD -->
+<!-- PROJECT WATCH 1.62.21 — MODULE 06 RULES OF THE ROAD -->
 <style id="pw16220-module6-style">
 #cevniPage .pw166Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw166Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27295,7 +27295,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 <script id="pw16220-module6">
 (function(){
 'use strict';
-const BUILD='1.62.20';
+const BUILD='1.62.21';
 
 const TEACH=[
  ['THE ENCOUNTER TYPE COMES FIRST','Chapter 6 distinguishes meeting, overtaking and crossing. Meeting is opposite or nearly opposite courses; overtaking is approach from more than 22.5° abaft the other vessel’s beam; crossing is an encounter that is neither meeting nor overtaking.','Classify the encounter before applying a manoeuvring rule.'],
@@ -27415,6 +27415,129 @@ function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[5]){CEVNI_MODULES[5]
 const oldInit=window.cevniInit;window.cevniInit=function(){names();const r=oldInit?oldInit():undefined;names();sync();return r};
 sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
 window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:PRACTICE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,progression:'learn-see-practice-check-apply-review-complete',testModeJump:true,audioTouched:false,authority:['CEVNI Revision 6 + Corr.1/Corr.2','Chapter 6','Chapter 9 local/national layer']};
+})();
+</script>
+
+
+<!-- PROJECT WATCH 1.62.21 — MODULE 07 -->
+<style id="pw16221-module7-style">
+#cevniPage .pw167Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
+#cevniPage .pw167Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+#cevniPage .pw167Top h2{margin:5px 0 7px;font-size:30px}.pw167Top p{margin:0;color:#c3d9e2;line-height:1.5}
+#cevniPage .pw167Badge{padding:9px 12px;border-radius:10px;background:#073b50;color:#8feaff;font-weight:900}
+#cevniPage .pw167Route{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:14px 0}
+#cevniPage .pw167Route span{padding:9px 5px;border-radius:8px;background:#062633;color:#8fb0bc;font-size:10px;font-weight:900;text-align:center}
+#cevniPage .pw167Route span.on{background:#0b5b49;color:#caffdf}
+#cevniPage .pw167Card{margin-top:14px;padding:17px;border-radius:14px;background:#031f2d;border:1px solid #ffffff18}
+#cevniPage .pw167Card h3{margin:5px 0 9px;font-size:23px}.pw167Card p{line-height:1.55;color:#c9dce4}
+#cevniPage .pw167Rule{padding:10px 12px;border-left:4px solid #58d8ff;background:#073245;border-radius:8px;color:#d9f7ff;margin-top:12px;line-height:1.45}
+#cevniPage .pw167Warn{padding:10px 12px;border-left:4px solid #f0b844;background:#3a2c12;border-radius:8px;color:#ffe8ae;margin-top:12px;line-height:1.45}
+#cevniPage .pw167Progress{height:7px;background:#021b26;border-radius:10px;overflow:hidden;margin:14px 0}.pw167Progress i{display:block;height:100%;background:#3bd68a}
+#cevniPage .pw167Actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.pw167Actions button{width:auto}
+#cevniPage .pw167Choices{display:grid;gap:8px;margin-top:12px}.pw167Choices button{text-align:left}
+#cevniPage .pw167Choices button.good{background:#176a4b!important}.pw167Choices button.bad{background:#7c3030!important}
+#cevniPage .pw167Feedback{margin-top:12px;padding:12px;border-radius:10px;background:#07382e;display:none}
+#cevniPage .pw167Feedback.show{display:block}
+#cevniPage .pw167Visual{height:245px;margin-top:12px;border-radius:14px;position:relative;overflow:hidden;background:#17687c;border:1px solid #ffffff20}
+#cevniPage .pw167Bank{position:absolute;left:0;right:0;height:42px;background:#536b4c}.pw167Bank.top{top:0}.pw167Bank.bottom{bottom:0}
+#cevniPage .pw167Bridge{position:absolute;left:10%;right:10%;top:78px;height:34px;background:#687782;border:4px solid #293944;border-radius:4px}
+#cevniPage .pw167Pier{position:absolute;top:105px;width:35px;height:140px;background:#687782}.pw167Pier.l{left:25%}.pw167Pier.r{right:25%}
+#cevniPage .pw167LockWall{position:absolute;top:0;bottom:0;width:18%;background:#67747a}.pw167LockWall.l{left:0}.pw167LockWall.r{right:0}
+#cevniPage .pw167Gate{position:absolute;left:18%;right:18%;height:10px;background:#313d42}.pw167Gate.t{top:48px}.pw167Gate.b{bottom:48px}
+#cevniPage .pw167Boat{position:absolute;width:34px;height:62px;border-radius:45% 45% 25% 25%;background:#61d6ff;border:3px solid #0a2632;box-shadow:0 3px 8px #0008;left:48%;top:145px}
+#cevniPage .pw167Light{position:absolute;width:18px;height:18px;border-radius:50%;border:2px solid #ddd;background:#d33;box-shadow:0 0 9px #000}.pw167Light.a{left:46%;top:54px}.pw167Light.b{left:50%;top:54px}
+#cevniPage .pw167Sign{position:absolute;padding:5px 8px;background:#fff;color:#111;border:3px solid #d33;font-weight:1000;border-radius:4px}
+#cevniPage .pw167Label{position:absolute;background:#032433dd;color:#fff;padding:5px 8px;border-radius:6px;font-size:12px;font-weight:900}
+#cevniPage .pw167Dev{margin:12px 0;padding:10px;border:1px dashed #f0b844;border-radius:10px;background:#3a2c1266}
+#cevniPage .pw167Complete{border-color:#42d89a;background:#07382e55}
+@media(max-width:760px){#cevniPage .pw167Route{grid-template-columns:repeat(3,1fr)}}
+</style>
+<script id="pw16221-module7">
+(function(){
+'use strict'; const BUILD='1.62.21';
+const TEACH=[
+['BRIDGE AND WEIR OPENINGS','At bridge or weir openings that are too narrow for simultaneous passage, the applicable narrow-passage rules govern. CEVNI signs can restrict the usable part of an opening.','A.10 means navigation is prohibited outside the marked area; D.2 recommends keeping within the marked area.'],
+['BRIDGE PASSAGE IS A LOCAL-RULE HOTSPOT','CEVNI Chapter 9 expressly allows competent authorities to prescribe special rules for passage under bridges.','Never assume the harmonized bridge procedure is the complete local rule.'],
+['APPROACHING A LOCK','Reduce speed when approaching a lock basin. Where B.5 is displayed and you cannot or do not wish to enter immediately, stop short of it. If equipped for the nautical-information radio network, listen on the channel allotted to the lock.','Approach slowly, establish the lock status and obey lock staff.'],
+['ORDER OF LOCKING','Passage is normally in order of arrival. Small craft cannot demand a separate locking and, when locking with other vessels, enter only after those vessels and only when invited by lock staff.','Small craft wait for the invitation and enter after larger traffic when sharing the lock.'],
+['LOCK BASIN DISCIPLINE','Overtaking in or near locks, especially lock basins, is prohibited. Anchors are fully raised unless actually in use. Enter at a speed that avoids contact with gates, protective devices and other craft.','A lock approach is controlled water, not an overtaking opportunity.'],
+['INSIDE THE LOCK','Keep within marked limits. During filling or emptying, and until permitted to leave, vessels are made fast and lines are handled to prevent impacts. Fendering is required; mechanical propulsion is not used from making fast until permission to leave.','Control the vessel with suitable lines and fenders while water level changes.'],
+['LOCK ENTRY SIGNALS','Two red lights vertically mean no entry — lock out of service. One red, or two reds side-by-side, means no entry — lock closed. A red/green preparation aspect means no entry yet. One or two green lights mean entry permitted.','Green permits entry; preparation is still no entry.'],
+['LOCK EXIT SIGNALS','One or two red lights mean no exit. One or two green lights mean exit permitted. In the absence of prescribed lights or boards, do not enter or leave except by express order of lock staff.','No signal is not permission.'],
+['LOCK STAFF AND PRIORITY','Lock staff may issue instructions to ensure safe and orderly navigation, rapid passage or full lock use; vessels comply. CEVNI also specifies priority categories that other traffic must facilitate.','Operational instructions from lock staff govern the immediate lock movement.'],
+['BERTHING, ANCHORING AND MAKING FAST','CEVNI Chapter 7 governs berthing. Annex 7 signs include A.5/A.5.1 no-berthing restrictions, A.6 no anchoring or trailing anchors/cables/chains, and A.7 no making fast to the bank.','Read the bank-side restriction before stopping, anchoring or making fast.'],
+['SPECIAL OPERATIONS','CEVNI contains special operating provisions for ferries, floating equipment at work, grounded/sunken vessels and craft with limited ability to manoeuvre. These situations can have special markings, passing rules and local variations.','Identify the special operation before applying ordinary traffic assumptions.'],
+['LOCAL REQUIREMENTS','Chapter 9 permits local or national special rules for bridges, weirs, locks, entering/leaving locks and certain special operations.','Project Watch teaches the CEVNI base; the competent authority remains part of passage planning.']
+];
+const SEE=[
+{t:'Bridge opening — restricted usable span',k:'bridge',p:'The opening is constrained by bridge structure and may be further controlled by CEVNI signs.',r:'Use only the authorized/recommended portion indicated by the applicable signs and obey any local bridge procedure.'},
+{t:'Lock approach — red means wait',k:'lockred',p:'The lock entry signal is red.',r:'Do not enter. Reduce speed, hold as directed and await the permitted entry aspect or lock-staff instruction.'},
+{t:'Lock preparation aspect',k:'lockprep',p:'The displayed aspect indicates that the lock is being prepared for opening.',r:'Prepare, but do not enter yet. CEVNI treats the preparation aspect as no entry.'},
+{t:'Lock entry — green',k:'lockgreen',p:'The entry signal is green.',r:'Entry is permitted, subject to lock-staff instructions and safe controlled speed.'},
+{t:'Inside the lock',k:'inside',p:'Your vessel is made fast while the chamber fills or empties.',r:'Remain within limits, use fenders and tend the lines; propulsion remains unused from making fast until permission to leave.'},
+{t:'Bank-side restriction',k:'berth',p:'A prohibition sign applies on this side of the waterway.',r:'Do not berth, anchor or make fast where the corresponding CEVNI prohibition applies.'}
+];
+const PRACTICE=[
+{q:'A lock shows one red light. What does it mean?',a:['No entry — lock closed','Entry permitted','Exit permitted'],c:0,w:'A single red entry light means no entry: lock closed.'},
+{q:'The lock shows the preparation aspect. May you enter?',a:['No — prepare, but wait for permission','Yes, immediately','Only if you are a small craft'],c:0,w:'The preparation aspect still means no entry.'},
+{q:'You are a small craft sharing a locking with larger vessels. When do you normally enter?',a:['After the other vessels and when invited by lock staff','First, to keep clear of prop wash','Whenever you arrived first'],c:0,w:'Small craft enter after the other vessels when sharing a lock and only when invited.'},
+{q:'Can you overtake another vessel in a lock basin?',a:['No','Yes, on starboard only','Yes, below 5 knots'],c:0,w:'Overtaking in or near locks, especially lock basins, is prohibited.'},
+{q:'Once made fast in a lock, when may mechanical propulsion be used again under the base rule?',a:['When permitted to leave','As soon as the gates close','Whenever the line goes slack'],c:0,w:'Mechanical propulsion is prohibited from making fast until permission to leave.'},
+{q:'There are no lock lights or boards. What is the base CEVNI rule?',a:['Do not enter or leave except by express order of lock staff','Proceed cautiously','Small craft may enter'],c:0,w:'Absence of signals is not permission.'}
+];
+const CHECK=[
+{q:'What should a vessel do when approaching a lock basin?',a:['Reduce speed','Increase speed to minimise delay','Sound continuously'],c:0,w:'CEVNI requires reduced speed on approach.'},
+{q:'What does a single green lock-entry light mean?',a:['Entry permitted','Lock out of service','No entry, preparing'],c:0,w:'One or two green entry lights permit entry.'},
+{q:'Two red lights one above the other at lock entry mean what?',a:['No entry — lock out of service','Entry permitted for small craft','No exit only'],c:0,w:'The vertical pair of reds is the out-of-service indication.'},
+{q:'During filling/emptying, what must happen to the vessel?',a:['It remains made fast and the lines are tended to prevent impacts','It remains under propulsion against the wall','It drifts free in the chamber'],c:0,w:'CEVNI requires the vessel to be made fast and lines handled appropriately.'},
+{q:'What does A.10 at a bridge/weir opening control?',a:['Navigation is prohibited outside the area between the boards','Maximum vessel speed','Mandatory anchoring'],c:0,w:'A.10 confines navigation to the marked part of the opening.'},
+{q:'Can competent authorities prescribe special bridge and lock rules?',a:['Yes','No, CEVNI is identical everywhere','Only for commercial vessels'],c:0,w:'Chapter 9 expressly permits specified regional/national variations.'},
+{q:'What is the correct response to lock-staff instructions that supplement the base locking procedure?',a:['Comply with them','Ignore them if you arrived first','Follow them only at night'],c:0,w:'CEVNI requires vessels in locks and lock basins to comply with lock-staff instructions.'},
+{q:'What does an A.7 bank-side sign prohibit?',a:['Making fast to the bank on that side','Passing under bridges','Use of VHF'],c:0,w:'A.7 prohibits making fast to the bank on the side where it is placed.'}
+];
+const APPLY=[
+{t:'Approaching a busy lock',s:'You are in a small pleasure craft. Larger commercial traffic is waiting and the lock has not invited you in.',q:'What should you do?',a:['Wait; enter only when invited and after the other vessels when sharing the lock','Enter first because you are more manoeuvrable','Overtake the queue inside the basin'],c:0,w:'The small-craft locking rule and overtaking prohibition both point to waiting.'},
+{t:'Lock being prepared',s:'You can see the preparation aspect but the chamber looks empty.',q:'What is the correct decision?',a:['Remain outside until entry is permitted','Enter because the chamber is visibly clear','Enter if no vessel is exiting'],c:0,w:'Preparation remains a no-entry aspect.'},
+{t:'Water level changing',s:'You are made fast in the chamber and the level is changing.',q:'What is the correct handling?',a:['Tend the mooring lines and fenders; do not use propulsion until permitted to leave','Lock the lines solid and leave them unattended','Use engine power continuously against the wall'],c:0,w:'The vessel must be safely made fast with lines handled to prevent contact; propulsion is prohibited after making fast.'},
+{t:'Bridge opening',s:'A bridge opening carries A.10 boards defining the usable passage.',q:'Where may you navigate?',a:['Only within the area between the boards','Anywhere under the bridge with sufficient headroom','Outside the boards if no traffic is visible'],c:0,w:'A.10 prohibits navigation outside the marked area.'},
+{t:'No local signal',s:'You reach a lock where the prescribed entry lights and boards are absent and nobody has instructed you to enter.',q:'What do you do?',a:['Remain outside until expressly ordered by lock staff','Enter slowly','Sound and enter'],c:0,w:'CEVNI prohibits entry or exit in that circumstance without express lock-staff order.'},
+{t:'Local bridge rule',s:'The competent authority publishes a special bridge-passage rule differing from the harmonized base in an area where Chapter 9 permits variation.',q:'Which procedure governs your passage?',a:['The applicable local rule','Ignore it and use the generic rule','Use COLREGS instead'],c:0,w:'The CEVNI framework expressly accommodates those competent-authority provisions.'}
+];
+const REVIEW=[
+{q:'What is the normal order of passage through a lock basin?',a:['Order of arrival, subject to specified priorities and lock-staff control','Small craft first','Fastest vessel first'],c:0,w:'Arrival order is the base rule, with CEVNI priorities and operational instructions layered on top.'},
+{q:'What must anchors normally be doing in locks and lock basins?',a:['Fully raised unless in use','Trailing just below the surface','Ready to drag along the bottom'],c:0,w:'CEVNI requires anchors fully raised unless they are actually being used.'},
+{q:'When a lock-entry signal changes from preparation to green, what changes?',a:['Entry becomes permitted','The lock becomes out of service','Only exit becomes permitted'],c:0,w:'Green is the entry-permitted aspect.'},
+{q:'Which statement about fenders in a lock is correct?',a:['Fendering devices are required','Fenders are prohibited','Only passenger vessels require fenders'],c:0,w:'CEVNI requires fendering devices; loose fenders must be floating.'},
+{q:'What does Chapter 9 mean for bridge/lock passage planning?',a:['Check competent-authority local requirements as well as the CEVNI base','No local rules can modify the procedure','Local rules apply only to ferries'],c:0,w:'Specified bridge, weir and lock provisions may have regional/national special rules.'},
+{q:'What is the safest interpretation of an absent lock signal?',a:['No entry/exit without express lock-staff order','Permission to proceed','Permission for small craft only'],c:0,w:'No prescribed signal is not a green light.'}
+];
+let stage='intro',idx=0,answered=false,currentQ=null;
+function sync(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD+' • CEVNI Curriculum';}
+function area(){return document.getElementById('cevniLessonArea')}
+function route(a){return `<div class="pw167Route">${['LEARN','SEE','PRACTICE','CHECK','APPLY','REVIEW'].map(x=>`<span class="${x===a?'on':''}">${x}${x===a?' • CURRENT':''}</span>`).join('')}</div>`}
+function dev(){return(typeof cvDevMode!=='undefined'&&cvDevMode)?`<div class="pw167Dev"><b>TEST MODE • MODULE 7 JUMP</b><div class="pw167Actions">${['learn','see','practice','check','apply','review'].map(x=>`<button data-pw167-jump="${x}">${x.toUpperCase()}</button>`).join('')}</div></div>`:''}
+function shell(l,b,badge){const a=area();if(!a)return;a.innerHTML=`<section class="pw167Shell"><div class="pw167Top"><div><div class="ver">MODULE 07 • ${l}</div><h2>Bridges, Locks, Berthing & Special Operations</h2><p>Read the structure, obey the signal, control the vessel and apply the local operating layer.</p></div><div class="pw167Badge">${badge||l}</div></div>${dev()}${b}</section>`;a.scrollIntoView({behavior:'smooth',block:'start'});}
+function shuf(x){let o=x.a.map((t,i)=>({t,ok:i===x.c}));for(let i=o.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[o[i],o[j]]=[o[j],o[i]]}return{q:x.q,a:o.map(v=>v.t),c:o.findIndex(v=>v.ok),w:x.w}}
+function visual(k){let x='<div class="pw167Visual">';
+if(k==='bridge')x+='<i class="pw167Bank top"></i><i class="pw167Bridge"></i><i class="pw167Pier l"></i><i class="pw167Pier r"></i><i class="pw167Boat"></i><b class="pw167Label" style="left:42%;top:118px">AUTHORIZED OPENING</b>';
+else if(k==='lockred'||k==='lockprep'||k==='lockgreen'){let c=k==='lockgreen'?'#3c5':k==='lockprep'?'#d33':'#d33';x+='<i class="pw167LockWall l"></i><i class="pw167LockWall r"></i><i class="pw167Gate t"></i><i class="pw167Gate b"></i><i class="pw167Boat"></i><i class="pw167Light a" style="background:'+c+'"></i>'+(k==='lockprep'?'<i class="pw167Light b" style="background:#3c5"></i>':'')+'<b class="pw167Label" style="left:40%;top:85px">'+(k==='lockgreen'?'ENTRY PERMITTED':k==='lockprep'?'PREPARE • NO ENTRY':'NO ENTRY')+'</b>';}
+else if(k==='inside')x+='<i class="pw167LockWall l"></i><i class="pw167LockWall r"></i><i class="pw167Gate t"></i><i class="pw167Gate b"></i><i class="pw167Boat" style="top:92px"></i><b class="pw167Label" style="left:22%;top:115px">TEND LINES • FENDERS • NO PROPULSION</b>';
+else x+='<i class="pw167Bank bottom"></i><i class="pw167Boat" style="left:55%;top:75px"></i><b class="pw167Sign" style="left:18%;top:155px">A.5 / A.6 / A.7</b><b class="pw167Label" style="left:34%;top:160px">CHECK THE BANK-SIDE RESTRICTION</b>';
+return x+'</div>'}
+function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw167Card"><h3>Structures create controlled navigation.</h3><p>This module teaches the CEVNI base for bridge/weir openings, lock approach and signals, locking discipline, berthing restrictions and special operations, with an explicit Chapter 9 local-rule layer.</p><div class="pw167Warn"><b>Local-rule gate:</b> bridges and locks are specifically listed among the provisions competent authorities may vary.</div></div><div class="pw167Actions"><button data-pw167-action="map">COURSE MAP</button><button data-pw167-action="teach" data-index="0">BEGIN MODULE 7 →</button></div>`,'START HERE • 7/9')}
+function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see(0);return}let x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="pw167Progress"><i style="width:${(i+1)/TEACH.length*100}%"></i></div><div class="pw167Card"><div class="ver">VERIFIED BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw167Rule">${x[2]}</div></div><div class="pw167Actions">${i?`<button data-pw167-action="teach" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw167-action="teach" data-index="${i+1}">${i===TEACH.length-1?'SEE IT →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`)}
+function see(i){stage='see';idx=i;if(i>=SEE.length){question('practice',0);return}let x=SEE[i];shell('SEE THE OPERATION',`${route('SEE')}<div class="pw167Progress"><i style="width:${(i+1)/SEE.length*100}%"></i></div><div class="pw167Card"><div class="ver">OPERATION ${i+1} / ${SEE.length}</div><h3>${x.t}</h3><p>${x.p}</p>${visual(x.k)}<div class="pw167Rule">${x.r}</div></div><div class="pw167Actions">${i?`<button data-pw167-action="see" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw167-action="see" data-index="${i+1}">${i===SEE.length-1?'PRACTICE IT →':'NEXT →'}</button></div>`,`SEE ${i+1} / ${SEE.length}`)}
+function question(kind,i){let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw167Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw167Choices">${currentQ.a.map((z,j)=>`<button data-pw167-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw167Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
+function answer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw167Card')?.querySelector('.pw167Feedback');if(!f)return;let arr=stage==='practice'?PRACTICE:stage==='review'?REVIEW:CHECK;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw167Feedback show';f.innerHTML=`<b>✓ Correct.</b> ${currentQ.w}<div class="pw167Actions"><button data-pw167-next="${stage}" data-index="${idx+1}">${idx===arr.length-1?(stage==='practice'?'CHECK →':stage==='check'?'APPLY →':'COMPLETE MODULE 7 →'):'NEXT →'}</button></div>`}else{b.classList.add('bad');f.className='pw167Feedback show';f.innerHTML='<b>Not quite — try again.</b> Read the structure, signal and operating restriction again.';setTimeout(()=>b.classList.remove('bad'),650)}}
+function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw167Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw167Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw167Choices">${currentQ.a.map((z,j)=>`<button data-pw167-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw167Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
+function applyAnswer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw167Card')?.querySelector('.pw167Feedback');if(!f)return;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw167Feedback show';f.innerHTML=`<b>✓ Correct operational decision.</b> ${currentQ.w}<div class="pw167Actions"><button data-pw167-next="apply" data-index="${idx+1}">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`}else{b.classList.add('bad');f.className='pw167Feedback show';f.innerHTML='<b>Not quite — reassess the signal, instruction and restriction.</b>';setTimeout(()=>b.classList.remove('bad'),650)}}
+function complete(){try{if(window.cv1482SetStage)cv1482SetStage(6,'module');else if(window.cevniMark)cevniMark(6)}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw167Card pw167Complete"><div class="ver">MODULE 07 • COMPLETE</div><h3>Module 7 complete — Module 8 unlocked</h3><p>You have completed bridge and lock passage, lock signals and discipline, berthing restrictions, special operations and the local-rule layer.</p><div class="pw167Rule">LEARN ✓ • SEE ✓ • PRACTICE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw167Actions"><button data-pw167-action="continue8">CONTINUE TO MODULE 8 →</button><button data-pw167-action="map">RETURN TO COURSE MAP</button></div></div>`,'MODULE COMPLETE');try{cevniRenderModules()}catch(e){}}
+function jump(x){if(!(typeof cvDevMode!=='undefined'&&cvDevMode))return;if(x==='learn')teach(0);else if(x==='see')see(0);else if(['practice','check','review'].includes(x))question(x,0);else if(x==='apply')apply(0)}
+document.addEventListener('click',e=>{let b=e.target.closest('[data-pw167-choice],[data-pw167-apply],[data-pw167-next],[data-pw167-action],[data-pw167-jump]');if(!b)return;if(b.hasAttribute('data-pw167-choice'))return answer(+b.dataset.pw167Choice,b);if(b.hasAttribute('data-pw167-apply'))return applyAnswer(+b.dataset.pw167Apply,b);if(b.hasAttribute('data-pw167-next')){let n=b.dataset.pw167Next,i=+b.dataset.index;if(n==='apply')apply(i);else question(n,i);return}if(b.hasAttribute('data-pw167-jump'))return jump(b.dataset.pw167Jump);let a=b.dataset.pw167Action,i=+(b.dataset.index||0);if(a==='map'){try{cevniCloseLesson()}catch(e){}}else if(a==='teach')teach(i);else if(a==='see')see(i);else if(a==='continue8'){try{cevniCloseLesson();cevniRenderModules()}catch(e){}setTimeout(()=>{try{cevniOpenLesson(7,0)}catch(e){}},80)}});
+const prev=window.cevniOpenLesson;window.cevniOpenLesson=function(i,s=0){if(i===6){if((typeof cvDevMode!=='undefined'&&cvDevMode)||!window.cevniModuleUnlocked||cevniModuleUnlocked(6)){intro();return}return}return prev(i,s)};
+function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[6]){CEVNI_MODULES[6].title='Bridges, Locks, Berthing & Special Operations';CEVNI_MODULES[6].desc='Operate safely at bridges, locks and berths; interpret control signals and special-operation restrictions.'}}catch(e){}}
+const oi=window.cevniInit;window.cevniInit=function(){names();let r=oi?oi():undefined;names();sync();return r};sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
+window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:PRACTICE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,testModeJump:true,audioTouched:false};
 })();
 </script>
 
