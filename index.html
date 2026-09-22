@@ -26625,7 +26625,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.10';
+const BUILD='1.62.11';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26727,7 +26727,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.10';
+const BUILD='1.62.11';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26761,4 +26761,61 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-</body></html>
+\n<!-- PROJECT WATCH 1.62.11 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+<script id="pw16211-module2-resume">
+(function(){
+'use strict';
+const BUILD='1.62.11';
+window.PROJECT_WATCH_BUILD=BUILD;
+let identityIndex=0;
+const IDENTITY=[
+ ['CHAPTER 2 — WHY VESSEL MARKS MATTER','Before reading traffic rules, you need to know what vessel or formation you are dealing with and how the craft is identified. Chapter 2 provides the physical identification and draught-marking layer; detailed navigation lights and day signals are taught separately in Module 4.'],
+ ['ARTICLE 2.01 — IDENTIFICATION OF VESSELS','For vessels other than small craft and seagoing vessels, CEVNI prescribes core identification information including the vessel name, home port or place of registry and the applicable European or official vessel identification number. Cargo and passenger vessels also carry specified capacity information where applicable.'],
+ ['ARTICLE 2.02 — IDENTIFICATION OF SMALL CRAFT','Small craft use their prescribed official registration marks. Where such marks are not prescribed, CEVNI provides an identification fallback based on the craft name or equivalent identifier and the owner information. National or regional provisions may vary details for certain very small craft.'],
+ ['ARTICLE 2.03 — TONNAGE MEASUREMENT','An inland-waterway cargo vessel, other than small craft, is required to have its tonnage capacity measured. Treat this as vessel identity/capacity information, not as a navigation signal.'],
+ ['ARTICLE 2.04 — MAXIMUM DRAUGHT MARKS','Vessels other than small craft carry marks showing the maximum draught level. For seagoing vessels, the summer fresh-water line serves in place of those draught marks.'],
+ ['ARTICLE 2.04 / ANNEX 2 — DRAUGHT SCALES','A vessel capable of drawing 1 metre or more, other than small craft, is provided with draught scales. Annex 2 describes the scale presentation. The operational lesson is to distinguish the permitted/marked draught information from an estimate based only on appearance.'],
+ ['IDENTITY IS NOT STATUS','A name, registration number or draught scale identifies or describes the vessel. It does not by itself tell you the vessel’s current navigational status. Current status is read from the applicable lights, day marks and operational context taught later.']
+];
+function syncBuild(){
+ window.PROJECT_WATCH_BUILD=BUILD;
+ const vb=document.getElementById('pwVisibleBuild'); if(vb)vb.textContent='BUILD '+BUILD;
+ document.title='Project Watch '+BUILD+' • CEVNI Curriculum';
+ document.querySelectorAll('.homeFooterBar div:first-child b').forEach(x=>x.textContent=BUILD);
+}
+function renderIdentity(){
+ const a=document.getElementById('cevniLessonArea'); if(!a)return;
+ if(identityIndex>=IDENTITY.length){
+   try{if(window.cv1482SetStage)cv1482SetStage(1,'identity');}catch(e){}
+   if(window.pw1629ShowReview){pw1629ShowReview();return;}
+ }
+ const x=IDENTITY[identityIndex];
+ const pct=Math.round(((identityIndex+1)/IDENTITY.length)*100);
+ a.innerHTML=`<section class="pw1628Intro"><div class="pw1628Top"><div><div class="ver">MODULE 02 • IDENTITY & MARKINGS</div><h2>Vessels, Identity & Markings</h2><p>Continue from the completed vessel-definitions component into the Chapter 2 identity and draught-marking layer.</p></div><div class="pw1628Badge">BRIEFING ${identityIndex+1} / ${IDENTITY.length}</div></div><div class="cvLessonProgress"><i style="width:${pct}%"></i></div><div class="pw1628Source" style="margin-top:18px"><div class="ver">TEACHING BRIEFING ${String(identityIndex+1).padStart(2,'0')}</div><h3>${x[0]}</h3><p>${x[1]}</p></div><div class="pw1628Actions"><button class="secondary" onclick="pw16211CourseMap()">COURSE MAP</button>${identityIndex>0?'<button class="secondary" onclick="pw16211PrevIdentity()">← PREVIOUS</button>':''}<button class="primary" onclick="pw16211NextIdentity()">${identityIndex===IDENTITY.length-1?'MODULE 2 REVIEW →':'NEXT BRIEFING →'}</button></div></section>`;
+ a.scrollIntoView({behavior:'smooth',block:'start'});
+}
+window.pw1629ContinueIdentity=function(){identityIndex=0;renderIdentity();};
+window.pw16211NextIdentity=function(){identityIndex++;renderIdentity();};
+window.pw16211PrevIdentity=function(){identityIndex=Math.max(0,identityIndex-1);renderIdentity();};
+window.pw16211CourseMap=function(){if(window.cevniCloseLesson)cevniCloseLesson();};
+function cleanGate(){
+ const a=document.getElementById('cevniLessonArea');if(!a)return;
+ const h=[...a.querySelectorAll('h2,h3')].find(x=>(x.textContent||'').includes('Vessel definitions complete'));
+ if(!h)return;
+ const gate=h.closest('.cvContextGate,.pw1628Complete')||h.parentElement;
+ if(!gate)return;
+ [...gate.querySelectorAll('button')].forEach(b=>{
+   if(!b.closest('.pw1628Actions') && /PRACTISE AGAIN|RECOGNITION/i.test(b.textContent||'')) b.style.display='none';
+ });
+}
+function unifyName(){
+ document.querySelectorAll('#cevniPage h2,#cevniPage h3,#cevniPage .cvModuleCard,#cevniPage .cevniModuleCard').forEach(el=>{
+  if(el.childElementCount===0 && /Vessels, Marks & Definitions/.test(el.textContent||'')) el.textContent=(el.textContent||'').replace('Vessels, Marks & Definitions','Vessels, Identity & Markings');
+ });
+}
+const obs=new MutationObserver(()=>{syncBuild();cleanGate();unifyName();});
+document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});});
+setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
+window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
+})();
+</script>\n</body></html>
