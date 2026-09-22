@@ -26534,9 +26534,9 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.11';
+const PROJECT_WATCH_BUILD='1.62.12';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
-window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-resume-identity-handoff',sequence:16211};
+window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
 /* One curriculum spine: display labels are resolved from the approved sequence library. */
 function syncCurriculumTitles(){
@@ -26619,13 +26619,14 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 #cevniPage .pw1628Outcomes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:14px 0}.pw1628Outcomes div{padding:12px;border-radius:10px;background:#073649;border-left:3px solid #53dca0;color:#d8edf4;line-height:1.4}
 #cevniPage .pw1628Source{margin:14px 0;padding:12px;border-radius:10px;background:#082b39;color:#b9d5df;line-height:1.45}.pw1628Source b{color:#77e6ff}
 #cevniPage .pw1628Actions{display:flex;gap:9px;flex-wrap:wrap}.pw1628Actions button{width:auto}
+#cevniPage [data-pw-review-answer]{touch-action:manipulation;cursor:pointer}#cevniPage [data-pw-review-answer].pwReviewCorrect{background:#0b7657!important;border-color:#64e6ad!important;color:#fff!important}#cevniPage [data-pw-review-answer].pwReviewWrong{background:#7a2d36!important;border-color:#ff8d9a!important;color:#fff!important}#cevniPage [data-pw-review-answer]:disabled{opacity:1!important}
 #cevniPage .pw1628Complete{padding:18px;border:1px solid #49d99a66;border-radius:14px;background:#083f3f;margin-top:14px}
 @media(max-width:760px){#cevniPage .pw1628Route{grid-template-columns:1fr 1fr}.pw1628Outcomes{grid-template-columns:1fr}}
 </style>
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.11';
+const BUILD='1.62.12';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26701,10 +26702,32 @@ window.pw1629RenderReview=function(){
    try{cevniRenderModules()}catch(e){};a.scrollIntoView({behavior:'smooth',block:'start'});return;
  }
  const x=REVIEW[pw1629ReviewIndex];
- a.innerHTML=`<section class="pw1628Intro"><div class="pw1628Top"><div><div class="ver">MODULE 02 • MODULE REVIEW</div><h2>Check before completion</h2><p>${pw1629ReviewIndex+1} of ${REVIEW.length}</p></div><div class="pw1628Badge">REVIEW</div></div><h3>${x.q}</h3><div class="pw1628Actions" style="display:grid">${x.a.map((v,i)=>`<button data-pw-correct="${i===x.c?'true':'false'}" onclick="pw1629Answer(${i})">${v}</button>`).join('')}</div><div id="pw1629Feedback" style="margin-top:12px"></div></section>`;
+ a.innerHTML=`<section class="pw1628Intro"><div class="pw1628Top"><div><div class="ver">MODULE 02 • MODULE REVIEW</div><h2>Check before completion</h2><p>${pw1629ReviewIndex+1} of ${REVIEW.length}</p></div><div class="pw1628Badge">REVIEW</div></div><h3>${x.q}</h3><div class="pw1628Actions" style="display:grid">${x.a.map((v,i)=>`<button type="button" data-pw-review-answer="${i}" data-pw-correct="${i===x.c?'true':'false'}">${v}</button>`).join('')}</div><div id="pw1629Feedback" style="margin-top:12px"></div></section>`;
  a.scrollIntoView({behavior:'smooth',block:'start'});
 };
-window.pw1629Answer=function(i){const x=REVIEW[pw1629ReviewIndex],f=document.getElementById('pw1629Feedback');if(!f)return;if(i===x.c){pw1629ReviewCorrect++;f.innerHTML=`<div class="cvContextRule"><b>✓ Correct.</b> ${x.w}<br><button class="primary" style="width:auto;margin-top:10px" onclick="pw1629ReviewIndex++;pw1629RenderReview()">${pw1629ReviewIndex===REVIEW.length-1?'COMPLETE MODULE 2 →':'NEXT →'}</button></div>`;}else{f.innerHTML=`<div class="cvContextRule"><b>Not quite.</b> ${x.w}<br><small>This is coached module review; try again.</small></div>`;}};
+window.pw1629Answer=function(i){
+ const x=REVIEW[pw1629ReviewIndex],f=document.getElementById('pw1629Feedback');if(!f)return;
+ const area=document.getElementById('cevniLessonArea');
+ const buttons=area?[...area.querySelectorAll('[data-pw-review-answer]')]:[];
+ const chosen=buttons.find(b=>Number(b.dataset.pwReviewAnswer)===Number(i));
+ if(i===x.c){
+  buttons.forEach(b=>{b.disabled=true;b.classList.remove('pwReviewWrong');});
+  if(chosen)chosen.classList.add('pwReviewCorrect');
+  pw1629ReviewCorrect++;
+  f.innerHTML=`<div class="cvContextRule"><b>✓ Correct.</b> ${x.w}<br><button type="button" class="primary" data-pw-review-next="1" style="width:auto;margin-top:10px">${pw1629ReviewIndex===REVIEW.length-1?'COMPLETE MODULE 2 →':'NEXT →'}</button></div>`;
+ }else{
+  if(chosen){chosen.classList.add('pwReviewWrong');chosen.disabled=true;}
+  f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
+ }
+};
+/* 1.62.12: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+function pw16212ReviewTap(e){
+ const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
+ if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
+ const next=e.target.closest&&e.target.closest('[data-pw-review-next]');
+ if(next){e.preventDefault();pw1629ReviewIndex++;window.pw1629RenderReview();}
+}
+document.addEventListener('click',pw16212ReviewTap,false);
 /* When the learner reaches the end of the appended Chapter 2 briefings, route to one module review instead of the old Article 1.01 completion contract. */
 const pw1629Open=window.cevniOpenLesson;
 window.cevniOpenLesson=function(i,step=0){
@@ -26727,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.11';
+const BUILD='1.62.12';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26761,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.11 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.12 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.11';
+const BUILD='1.62.12';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
