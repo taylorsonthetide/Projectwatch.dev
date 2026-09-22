@@ -26534,9 +26534,9 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.9';
+const PROJECT_WATCH_BUILD='1.62.10';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
-window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-progression-integration-repair',sequence:1629};
+window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-handoff-repair',sequence:16210};
 
 /* One curriculum spine: display labels are resolved from the approved sequence library. */
 function syncCurriculumTitles(){
@@ -26625,7 +26625,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.9';
+const BUILD='1.62.10';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26719,6 +26719,45 @@ function identity(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElemen
 const prevInit=window.cevniInit;window.cevniInit=function(){install();if(prevInit)prevInit();try{cevniRenderModules()}catch(e){}identity();};
 identity();document.addEventListener('DOMContentLoaded',()=>{install();identity();setTimeout(()=>{try{cevniRenderModules()}catch(e){}},80)});
 window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','check','apply','module-review','complete'],chapter2Briefings:CH2.length,visualProductionDeferred:true};
+})();
+</script>
+
+
+<!-- PROJECT WATCH 1.62.10 — MODULE 02 ARTICLE 1.01 HANDOFF REPAIR -->
+<script id="pw16210-module2-handoff">
+(function(){
+'use strict';
+const BUILD='1.62.10';
+window.PROJECT_WATCH_BUILD=BUILD;
+function syncBuild(){
+ const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
+ document.title='Project Watch '+BUILD+' • CEVNI Curriculum';
+ document.querySelectorAll('.homeFooterBar div:first-child b').forEach(x=>x.textContent=BUILD);
+}
+function repairArticle101Gate(){
+ const area=document.getElementById('cevniLessonArea'); if(!area) return;
+ const heads=[...area.querySelectorAll('h2,h3')];
+ const h=heads.find(x=>(x.textContent||'').trim()==='Teaching pathway complete');
+ if(!h) return;
+ let gate=h.parentElement;
+ while(gate && gate!==area && !(gate.classList.contains('cvContextGate') || gate.classList.contains('cv1482Gate') || /DEPENDENCIES COMPLETE/i.test(gate.textContent||''))) gate=gate.parentElement;
+ if(!gate || gate===area) gate=h.parentElement;
+ if(gate.dataset.pw16210==='1') return;
+ gate.dataset.pw16210='1';
+ if(window.cv1482SetStage) window.cv1482SetStage(1,'context');
+ const ver=gate.querySelector('.ver'); if(ver) ver.textContent='MODULE 02 • COMPONENT COMPLETE';
+ h.textContent='Vessel definitions complete — continue Module 2';
+ const paras=[...gate.querySelectorAll('p')];
+ if(paras[0]) paras[0].innerHTML='You have completed the definitions, recognition rehearsal and operational context component. <b>Module 2 is not complete yet.</b> Continue into vessel identity, registration and draught markings before the module review.';
+ const rule=gate.querySelector('.cvContextRule'); if(rule) rule.textContent='LEARN ✓ • CHECK ✓ • APPLY ✓ • NEXT: IDENTITY & MARKINGS';
+ let actions=gate.querySelector('.pw1628Actions');
+ if(!actions){actions=document.createElement('div');actions.className='pw1628Actions';gate.appendChild(actions);}
+ actions.innerHTML='<button class="secondary" onclick="if(typeof cv14719Index!==\'undefined\'){cv14719Index=0;} if(window.cevni14719Render)cevni14719Render()">PRACTISE AGAIN</button><button class="primary" onclick="pw1629ContinueIdentity()">CONTINUE MODULE 2 →</button><button class="secondary" onclick="cevniCloseLesson()">COURSE MAP</button>';
+}
+const obs=new MutationObserver(()=>{repairArticle101Gate();syncBuild();});
+document.addEventListener('DOMContentLoaded',()=>{syncBuild();repairArticle101Gate();const a=document.getElementById('cevniLessonArea');if(a)obs.observe(a,{childList:true,subtree:true});});
+setTimeout(()=>{syncBuild();repairArticle101Gate();const a=document.getElementById('cevniLessonArea');if(a)obs.observe(a,{childList:true,subtree:true});},100);
+window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
