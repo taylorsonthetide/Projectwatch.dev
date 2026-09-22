@@ -25745,7 +25745,7 @@ function write(x){localStorage.setItem(CV1482_KEY,JSON.stringify(x));}
 function setStage(mi,stage){const x=state();x[mi]=x[mi]||{};x[mi][stage]=true;write(x);cv1482Evaluate(mi);}
 function requirements(mi){
  if(mi===0)return ['teaching','rehearsal','context'];
- if(mi===1)return ['teaching','rehearsal','context'];
+ if(mi===1)return ['teaching','rehearsal','context','identity','review'];
  return ['module'];
 }
 function cv1482Evaluate(mi){const x=state();x[mi]=x[mi]||{};const req=requirements(mi);if(req.every(k=>!!x[mi][k]))x[mi].module=true;write(x);cv1482Sync();return !!x[mi].module;}
@@ -26608,7 +26608,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </script>
 
 
-<!-- PROJECT WATCH 1.62.8 — MODULE 02 VESSELS, IDENTITY & MARKINGS -->
+<!-- PROJECT WATCH 1.62.9 — MODULE 02 PROGRESSION INTEGRATION REPAIR -->
 <style id="pw1628-css">
 #cevniPage .pw1628Intro{margin:18px 0;padding:20px;border:1px solid #68ddff55;border-radius:16px;background:#062f43}
 #cevniPage .pw1628Top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
@@ -26625,7 +26625,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.8';
+const BUILD='1.62.9';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26651,7 +26651,7 @@ const CH2=[
 function install(){
  if(!window.CEVNI_MODULES||!CEVNI_MODULES[1])return;
  const m=CEVNI_MODULES[1];m.title='Vessels, Identity & Markings';m.desc='Learn the CEVNI vessel/formation definitions, identification marks and draught-marking system before interpreting vessel status or applying rules of the road.';
- if(!m.__pw1628){m.sections=(m.sections||[]).concat(CH2);m.__pw1628=true;}
+ if(!m.__pw1628){m.__pw1628BaseCount=(m.sections||[]).length;m.sections=(m.sections||[]).concat(CH2);m.__pw1628=true;}
  try{if(window.CEVNI_CURRICULUM_MATRIX?.[1]){CEVNI_CURRICULUM_MATRIX[1].title=m.title;CEVNI_CURRICULUM_MATRIX[1].concepts=['vessel-classes','small-craft','convoys-tows','vessel-identification','draught-marks'];}}
  catch(e){}
 }
@@ -26667,24 +26667,58 @@ window.pw1628BeginModule2=function(){bypass=true;window.cevniOpenLesson(1,0)};
 window.cevniOpenLesson=function(i,step=0){
  if(i===1&&step===0&&!bypass){intro();return;}bypass=false;return priorOpen(i,step);
 };
-/* Turn the existing Article 1.01 context endpoint into the Module 2 completion gate. */
+/* 1.62.9: Article 1.01 is a component gate, never the Module 2 completion gate. */
 const p19=window.cevni14719Render;
 if(typeof p19==='function')window.cevni14719Render=function(){
  const r=p19();
  try{
   if(typeof cv14719Index!=='undefined'&&window.CEVNI_14719_CONTEXT&&cv14719Index>=CEVNI_14719_CONTEXT.length){
    if(window.cv1482SetStage)cv1482SetStage(1,'context');
-   const host=document.getElementById('cv14719Practice')||document.getElementById('cv14719Context')||document.querySelector('#cevniLessonArea .cvContextGate')?.parentElement;
    const gate=document.querySelector('#cevniLessonArea .cvContextGate');
-   if(gate){gate.classList.add('pw1628Complete');gate.innerHTML=`<div class="ver">MODULE 02 • DEPENDENCIES COMPLETE</div><h3>Module 2 complete — Module 3 unlocked</h3><p>You have completed the vessel-definition, identity/marking and operational recognition pathway. Progress has been saved and Waterway Signs, Marks & Buoyage is now available.</p><div class="cvContextRule">LEARN ✓ • SEE ✓ • CHECK ✓ • APPLY ✓ • MODULE COMPLETE ✓</div><div class="pw1628Actions"><button class="secondary" onclick="cv14719Index=0;cevni14719Render()">PRACTISE AGAIN</button><button class="primary" onclick="pw1628ContinueModule3()">CONTINUE TO MODULE 3 →</button><button class="secondary" onclick="cevniCloseLesson()">COURSE MAP</button></div>`;}
+   if(gate){gate.classList.add('pw1628Complete');gate.innerHTML=`<div class="ver">MODULE 02 • COMPONENT COMPLETE</div><h3>Vessel definitions complete — continue Module 2</h3><p>You have completed the definitions, recognition rehearsal and operational context component. Module 2 is <b>not complete yet</b>. Continue into vessel identity, registration and draught markings before the module review.</p><div class="cvContextRule">LEARN ✓ • CHECK ✓ • APPLY ✓ • NEXT: IDENTITY & MARKINGS</div><div class="pw1628Actions"><button class="secondary" onclick="cv14719Index=0;cevni14719Render()">PRACTISE AGAIN</button><button class="primary" onclick="pw1629ContinueIdentity()">CONTINUE MODULE 2 →</button><button class="secondary" onclick="cevniCloseLesson()">COURSE MAP</button></div>`;}
   }
  }catch(e){}return r;
+};
+window.pw1629ContinueIdentity=function(){
+ const m=window.CEVNI_MODULES&&CEVNI_MODULES[1];
+ const step=m&&Number.isInteger(m.__pw1628BaseCount)?m.__pw1628BaseCount:Math.max(0,(m?.sections?.length||CH2.length)-CH2.length);
+ bypass=true;window.cevniOpenLesson(1,step);
+};
+const REVIEW=[
+ {q:'What is the main purpose of the Chapter 2 identification markings taught here?',a:['To identify or describe the vessel','To show current give-way status','To replace navigation lights'],c:0,w:'Identity markings tell you which vessel/craft you are dealing with; current navigational status comes from the applicable signals and context.'},
+ {q:'For a small craft, what should you look for first when identifying it?',a:['Its prescribed official registration mark, where one is prescribed','A maximum-draught mark in every case','A blue cone'],c:0,w:'Small craft use the prescribed official registration marks; CEVNI provides fallback identification where such marks are not prescribed.'},
+ {q:'What do maximum-draught marks indicate?',a:['The marked maximum draught level','The vessel’s current speed','The side on which to overtake'],c:0,w:'They mark the maximum draught level; they are not manoeuvring or traffic signals.'},
+ {q:'A vessel capable of drawing 1 metre or more, other than small craft, is associated with what additional Chapter 2 feature?',a:['Draught scales','A compulsory blue cone','A fixed overtaking signal'],c:0,w:'CEVNI provides draught scales for these vessels, with presentation described in Annex 2.'},
+ {q:'Where will Project Watch teach the detailed navigation light and day-signal patterns?',a:['Module 4 — Lights & Visual Signals','Module 2 only','The final mock only'],c:0,w:'Module 2 separates physical identity/draught markings from detailed operational visual signals, which belong in Module 4.'}
+];
+let pw1629ReviewIndex=0,pw1629ReviewCorrect=0;
+window.pw1629ShowReview=function(){pw1629ReviewIndex=0;pw1629ReviewCorrect=0;pw1629RenderReview();};
+window.pw1629RenderReview=function(){
+ const a=document.getElementById('cevniLessonArea');if(!a)return;
+ if(pw1629ReviewIndex>=REVIEW.length){
+   if(window.cv1482SetStage){cv1482SetStage(1,'identity');cv1482SetStage(1,'review');}
+   a.innerHTML=`<section class="pw1628Intro"><div class="pw1628Top"><div><div class="ver">MODULE 02 • REVIEW COMPLETE</div><h2>Module 2 complete — Module 3 unlocked</h2><p>You have completed vessel definitions, identity and markings, recognition rehearsal, operational context and the Module 2 review. Your progress has been saved.</p></div><div class="pw1628Badge">STAGE 5 OF 5 • MODULE COMPLETE</div></div><div class="cvContextRule">LEARN ✓ • SEE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw1628Actions"><button class="primary" onclick="pw1628ContinueModule3()">CONTINUE TO MODULE 3 →</button><button class="secondary" onclick="cevniCloseLesson()">RETURN TO COURSE MAP</button></div></section>`;
+   try{cevniRenderModules()}catch(e){};a.scrollIntoView({behavior:'smooth',block:'start'});return;
+ }
+ const x=REVIEW[pw1629ReviewIndex];
+ a.innerHTML=`<section class="pw1628Intro"><div class="pw1628Top"><div><div class="ver">MODULE 02 • MODULE REVIEW</div><h2>Check before completion</h2><p>${pw1629ReviewIndex+1} of ${REVIEW.length}</p></div><div class="pw1628Badge">REVIEW</div></div><h3>${x.q}</h3><div class="pw1628Actions" style="display:grid">${x.a.map((v,i)=>`<button data-pw-correct="${i===x.c?'true':'false'}" onclick="pw1629Answer(${i})">${v}</button>`).join('')}</div><div id="pw1629Feedback" style="margin-top:12px"></div></section>`;
+ a.scrollIntoView({behavior:'smooth',block:'start'});
+};
+window.pw1629Answer=function(i){const x=REVIEW[pw1629ReviewIndex],f=document.getElementById('pw1629Feedback');if(!f)return;if(i===x.c){pw1629ReviewCorrect++;f.innerHTML=`<div class="cvContextRule"><b>✓ Correct.</b> ${x.w}<br><button class="primary" style="width:auto;margin-top:10px" onclick="pw1629ReviewIndex++;pw1629RenderReview()">${pw1629ReviewIndex===REVIEW.length-1?'COMPLETE MODULE 2 →':'NEXT →'}</button></div>`;}else{f.innerHTML=`<div class="cvContextRule"><b>Not quite.</b> ${x.w}<br><small>This is coached module review; try again.</small></div>`;}};
+/* When the learner reaches the end of the appended Chapter 2 briefings, route to one module review instead of the old Article 1.01 completion contract. */
+const pw1629Open=window.cevniOpenLesson;
+window.cevniOpenLesson=function(i,step=0){
+ if(i===1&&window.CEVNI_MODULES?.[1]&&step>=CEVNI_MODULES[1].sections.length){
+   if(window.cv1482SetStage){cv1482SetStage(1,'teaching');cv1482SetStage(1,'identity');}
+   pw1629ShowReview();return;
+ }
+ return pw1629Open(i,step);
 };
 window.pw1628ContinueModule3=function(){try{cevniCloseLesson();cevniRenderModules();}catch(e){}setTimeout(()=>{const g=document.getElementById('cevniModuleGrid');if(g)g.scrollIntoView({behavior:'smooth',block:'center'});},80)};
 function identity(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD+' • CEVNI Curriculum';}
 const prevInit=window.cevniInit;window.cevniInit=function(){install();if(prevInit)prevInit();try{cevniRenderModules()}catch(e){}identity();};
 identity();document.addEventListener('DOMContentLoaded',()=>{install();identity();setTimeout(()=>{try{cevniRenderModules()}catch(e){}},80)});
-window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','check','apply','complete'],chapter2Briefings:CH2.length,visualProductionDeferred:true};
+window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','check','apply','module-review','complete'],chapter2Briefings:CH2.length,visualProductionDeferred:true};
 })();
 </script>
 
