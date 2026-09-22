@@ -1,0 +1,36 @@
+{
+  "build": "1.63.14",
+  "sourceBaseline": "1.63.13 locked known-good",
+  "permanentRecords": 391,
+  "activeRecords": 352,
+  "newRecords": 34,
+  "newFourChoiceAssessmentGrade": 34,
+  "activeFourChoiceRecords": 50,
+  "activeByModule": {
+    "1": 11,
+    "2": 23,
+    "3": 32,
+    "4": 41,
+    "5": 45,
+    "6": 56,
+    "7": 53,
+    "8": 45,
+    "9": 46
+  },
+  "learnerCheckExpansion": {
+    "M5": "+8",
+    "M6": "+10",
+    "M7": "+7"
+  },
+  "otherTargetedMockReadyAdditions": 9,
+  "questionTruthChangesToExistingRecords": 0,
+  "retiredExistingRecords": 0,
+  "audioOrHornEdited": false,
+  "visualAssetsEdited": false,
+  "notes": [
+    "Modules 5-7 learner CHECK stages are deliberately strengthened.",
+    "Other additions are assessment-grade bank records for coverage/future mock use without unnecessarily lengthening every learner module.",
+    "Visual-dependent exam readiness remains a separate visual-library phase.",
+    "Local/national special requirements remain explicitly signposted."
+  ]
+}
