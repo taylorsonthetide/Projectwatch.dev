@@ -26246,7 +26246,7 @@ setTimeout(boundedRun,1800);setTimeout(boundedRun,3600);
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.0';
+const BUILD='1.62.1';
 function ownBuildIdentity(){
  try{
   document.title='Project Watch '+BUILD+' • Visual Evidence Integration';
@@ -26273,4 +26273,34 @@ window.PW1620_VISUAL_EVIDENCE_INTEGRATION={build:BUILD,baseline:'1.59.2',progres
 <!-- PW1620_VISUAL_EVIDENCE_INTEGRATION_END -->
 
 <script src="js/cevni/63-visual-evidence-integration.js"></script>
+
+<script>
+/* Project Watch 1.62.1 — CEVNI shared navigation viewport repair.
+   Index-only patch: no support assets, course data, progression, Test Mode,
+   COLREG logic, visual-evidence records or audio are changed. */
+(function(){
+'use strict';
+const BUILD='1.62.1';
+function sectionFor(key){
+  return document.getElementById('cevni'+key.charAt(0).toUpperCase()+key.slice(1));
+}
+function install(){
+  if(window.PW1621_NAV_REPAIR&&window.PW1621_NAV_REPAIR.installed)return;
+  const original=window.cevniShow;
+  if(typeof original!=='function'){setTimeout(install,120);return;}
+  window.cevniShow=function(key,button){
+    const result=original.apply(this,arguments);
+    const target=sectionFor(key);
+    if(target){
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        try{target.scrollIntoView({block:'start',behavior:'auto'});}catch(e){target.scrollIntoView(true);}
+      }));
+    }
+    return result;
+  };
+  window.PW1621_NAV_REPAIR={installed:true,build:BUILD,indexOnly:true,sharedCevniNavigation:true,progressionTouched:false,testModeTouched:false,colregTouched:false,evidenceTouched:false};
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
+})();
+</script>
 </body></html>
