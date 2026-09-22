@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.63.12 • CEVNI Curriculum</title>
+<title>Project Watch 1.63.13 • CEVNI Curriculum</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.63.12';
+const PROJECT_WATCH_BUILD='1.63.13';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.63.12: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.63.13: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.63.12 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.63.13 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.63.12 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.63.13 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.63.12 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.63.13 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -27056,7 +27056,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 </script>
 
 
-<!-- PROJECT WATCH 1.63.12 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
+<!-- PROJECT WATCH 1.63.13 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
 <style id="pw16216-module5-style">
 #cevniPage .pw165Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw165Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27087,7 +27087,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 <script id="pw16216-module5">
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 
 const TEACH=[
  ['SOUND LANGUAGE — TIMING FIRST','Annex 6 defines a short blast as about 1 second and a long blast as about 4 seconds. The normal interval between successive blasts is about 1 second. A series of very short blasts is at least six blasts, each about a quarter-second, with roughly quarter-second silences.','Hear duration as part of the meaning: short, long and very-short are different signal elements.'],
@@ -27259,7 +27259,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 </script>
 
 
-<!-- PROJECT WATCH 1.63.12 — MODULE 06 RULES OF THE ROAD -->
+<!-- PROJECT WATCH 1.63.13 — MODULE 06 RULES OF THE ROAD -->
 <style id="pw16220-module6-style">
 #cevniPage .pw166Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw166Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27296,7 +27296,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 <script id="pw16220-module6">
 (function(){
 'use strict';
-const BUILD='1.63.12';
+const BUILD='1.63.13';
 
 const TEACH=[
  ['THE ENCOUNTER TYPE COMES FIRST','Chapter 6 distinguishes meeting, overtaking and crossing. Meeting is opposite or nearly opposite courses; overtaking is approach from more than 22.5° abaft the other vessel’s beam; crossing is an encounter that is neither meeting nor overtaking.','Classify the encounter before applying a manoeuvring rule.'],
@@ -27423,7 +27423,7 @@ window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.63.12 — MODULE 07 -->
+<!-- PROJECT WATCH 1.63.13 — MODULE 07 -->
 <style id="pw16221-module7-style">
 #cevniPage .pw167Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw167Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27458,7 +27458,7 @@ window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16221-module7">
 (function(){
-'use strict'; const BUILD='1.63.12';
+'use strict'; const BUILD='1.63.13';
 const TEACH=[
 ['BRIDGE AND WEIR OPENINGS','At bridge or weir openings that are too narrow for simultaneous passage, the applicable narrow-passage rules govern. CEVNI signs can restrict the usable part of an opening.','A.10 means navigation is prohibited outside the marked area; D.2 recommends keeping within the marked area.'],
 ['BRIDGE PASSAGE IS A LOCAL-RULE HOTSPOT','CEVNI Chapter 9 expressly allows competent authorities to prescribe special rules for passage under bridges.','Never assume the harmonized bridge procedure is the complete local rule.'],
@@ -27481,7 +27481,7 @@ const SEE=[
 {t:'Inside the lock',k:'inside',p:'Your vessel is made fast while the chamber fills or empties.',r:'Remain within limits, use fenders and tend the lines; propulsion remains unused from making fast until permission to leave.'},
 {t:'Bank-side restriction',k:'berth',p:'A prohibition sign applies on this side of the waterway.',r:'Do not berth, anchor or make fast where the corresponding CEVNI prohibition applies.'}
 ];
-const PRACTICE=[
+let PRACTICE=[
 {q:'A lock shows one red light. What does it mean?',a:['No entry — lock closed','Entry permitted','Exit permitted'],c:0,w:'A single red entry light means no entry: lock closed.'},
 {q:'The lock shows the preparation aspect. May you enter?',a:['No — prepare, but wait for permission','Yes, immediately','Only if you are a small craft'],c:0,w:'The preparation aspect still means no entry.'},
 {q:'You are a small craft sharing a locking with larger vessels. When do you normally enter?',a:['After the other vessels and when invited by lock staff','First, to keep clear of prop wash','Whenever you arrived first'],c:0,w:'Small craft enter after the other vessels when sharing a lock and only when invited.'},
@@ -27489,7 +27489,7 @@ const PRACTICE=[
 {q:'Once made fast in a lock, when may mechanical propulsion be used again under the base rule?',a:['When permitted to leave','As soon as the gates close','Whenever the line goes slack'],c:0,w:'Mechanical propulsion is prohibited from making fast until permission to leave.'},
 {q:'There are no lock lights or boards. What is the base CEVNI rule?',a:['Do not enter or leave except by express order of lock staff','Proceed cautiously','Small craft may enter'],c:0,w:'Absence of signals is not permission.'}
 ];
-const CHECK=[
+let CHECK=[
 {q:'What should a vessel do when approaching a lock basin?',a:['Reduce speed','Increase speed to minimise delay','Sound continuously'],c:0,w:'CEVNI requires reduced speed on approach.'},
 {q:'What does a single green lock-entry light mean?',a:['Entry permitted','Lock out of service','No entry, preparing'],c:0,w:'One or two green entry lights permit entry.'},
 {q:'Two red lights one above the other at lock entry mean what?',a:['No entry — lock out of service','Entry permitted for small craft','No exit only'],c:0,w:'The vertical pair of reds is the out-of-service indication.'},
@@ -27499,7 +27499,7 @@ const CHECK=[
 {q:'What is the correct response to lock-staff instructions that supplement the base locking procedure?',a:['Comply with them','Ignore them if you arrived first','Follow them only at night'],c:0,w:'CEVNI requires vessels in locks and lock basins to comply with lock-staff instructions.'},
 {q:'What does an A.7 bank-side sign prohibit?',a:['Making fast to the bank on that side','Passing under bridges','Use of VHF'],c:0,w:'A.7 prohibits making fast to the bank on the side where it is placed.'}
 ];
-const APPLY=[
+let APPLY=[
 {t:'Approaching a busy lock',s:'You are in a small pleasure craft. Larger commercial traffic is waiting and the lock has not invited you in.',q:'What should you do?',a:['Wait; enter only when invited and after the other vessels when sharing the lock','Enter first because you are more manoeuvrable','Overtake the queue inside the basin'],c:0,w:'The small-craft locking rule and overtaking prohibition both point to waiting.'},
 {t:'Lock being prepared',s:'You can see the preparation aspect but the chamber looks empty.',q:'What is the correct decision?',a:['Remain outside until entry is permitted','Enter because the chamber is visibly clear','Enter if no vessel is exiting'],c:0,w:'Preparation remains a no-entry aspect.'},
 {t:'Water level changing',s:'You are made fast in the chamber and the level is changing.',q:'What is the correct handling?',a:['Tend the mooring lines and fenders; do not use propulsion until permitted to leave','Lock the lines solid and leave them unattended','Use engine power continuously against the wall'],c:0,w:'The vessel must be safely made fast with lines handled to prevent contact; propulsion is prohibited after making fast.'},
@@ -27507,7 +27507,7 @@ const APPLY=[
 {t:'No local signal',s:'You reach a lock where the prescribed entry lights and boards are absent and nobody has instructed you to enter.',q:'What do you do?',a:['Remain outside until expressly ordered by lock staff','Enter slowly','Sound and enter'],c:0,w:'CEVNI prohibits entry or exit in that circumstance without express lock-staff order.'},
 {t:'Local bridge rule',s:'The competent authority publishes a special bridge-passage rule differing from the harmonized base in an area where Chapter 9 permits variation.',q:'Which procedure governs your passage?',a:['The applicable local rule','Ignore it and use the generic rule','Use COLREGS instead'],c:0,w:'The CEVNI framework expressly accommodates those competent-authority provisions.'}
 ];
-const REVIEW=[
+let REVIEW=[
 {q:'What is the normal order of passage through a lock basin?',a:['Order of arrival, subject to specified priorities and lock-staff control','Small craft first','Fastest vessel first'],c:0,w:'Arrival order is the base rule, with CEVNI priorities and operational instructions layered on top.'},
 {q:'What must anchors normally be doing in locks and lock basins?',a:['Fully raised unless in use','Trailing just below the surface','Ready to drag along the bottom'],c:0,w:'CEVNI requires anchors fully raised unless they are actually being used.'},
 {q:'When a lock-entry signal changes from preparation to green, what changes?',a:['Entry becomes permitted','The lock becomes out of service','Only exit becomes permitted'],c:0,w:'Green is the entry-permitted aspect.'},
@@ -27531,9 +27531,9 @@ return x+'</div>'}
 function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw167Card"><h3>Structures create controlled navigation.</h3><p>This module teaches the CEVNI base for bridge/weir openings, lock approach and signals, locking discipline, berthing restrictions and special operations, with an explicit Chapter 9 local-rule layer.</p><div class="pw167Warn"><b>Local-rule gate:</b> bridges and locks are specifically listed among the provisions competent authorities may vary.</div></div><div class="pw167Actions"><button data-pw167-action="map">COURSE MAP</button><button data-pw167-action="teach" data-index="0">BEGIN MODULE 7 →</button></div>`,'START HERE • 7/9')}
 function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see(0);return}let x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="pw167Progress"><i style="width:${(i+1)/TEACH.length*100}%"></i></div><div class="pw167Card"><div class="ver">VERIFIED BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw167Rule">${x[2]}</div></div><div class="pw167Actions">${i?`<button data-pw167-action="teach" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw167-action="teach" data-index="${i+1}">${i===TEACH.length-1?'SEE IT →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`)}
 function see(i){stage='see';idx=i;if(i>=SEE.length){question('practice',0);return}let x=SEE[i];shell('SEE THE OPERATION',`${route('SEE')}<div class="pw167Progress"><i style="width:${(i+1)/SEE.length*100}%"></i></div><div class="pw167Card"><div class="ver">OPERATION ${i+1} / ${SEE.length}</div><h3>${x.t}</h3><p>${x.p}</p>${visual(x.k)}<div class="pw167Rule">${x.r}</div></div><div class="pw167Actions">${i?`<button data-pw167-action="see" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw167-action="see" data-index="${i+1}">${i===SEE.length-1?'PRACTICE IT →':'NEXT →'}</button></div>`,`SEE ${i+1} / ${SEE.length}`)}
-function question(kind,i){let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw167Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw167Choices">${currentQ.a.map((z,j)=>`<button data-pw167-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw167Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
+function question(kind,i){if(kind==='practice'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module7Practice?.()||[];if(c.length)PRACTICE=c}else if(kind==='check'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module7Check?.()||[];if(c.length)CHECK=c}else if(kind==='review'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module7Review?.()||[];if(c.length)REVIEW=c}let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=window.PW_ANSWER_RANDOMISER?.shuffle(arr[i],'m7-'+kind)||shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw167Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw167Choices">${currentQ.a.map((z,j)=>`<button data-pw167-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw167Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
 function answer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw167Card')?.querySelector('.pw167Feedback');if(!f)return;let arr=stage==='practice'?PRACTICE:stage==='review'?REVIEW:CHECK;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw167Feedback show';f.innerHTML=`<b>✓ Correct.</b> ${currentQ.w}<div class="pw167Actions"><button data-pw167-next="${stage}" data-index="${idx+1}">${idx===arr.length-1?(stage==='practice'?'CHECK →':stage==='check'?'APPLY →':'COMPLETE MODULE 7 →'):'NEXT →'}</button></div>`}else{b.classList.add('bad');f.className='pw167Feedback show';f.innerHTML='<b>Not quite — try again.</b> Read the structure, signal and operating restriction again.';setTimeout(()=>b.classList.remove('bad'),650)}}
-function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw167Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw167Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw167Choices">${currentQ.a.map((z,j)=>`<button data-pw167-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw167Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
+function apply(i){stage='apply';idx=i;answered=false;let c=window.PW_CEVNI_QUESTION_SOURCE?.module7Apply?.()||[];if(c.length)APPLY=c;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=window.PW_ANSWER_RANDOMISER?.shuffle({q:x.q,a:x.a,c:x.c,w:x.w},'m7-apply')||shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw167Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw167Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw167Choices">${currentQ.a.map((z,j)=>`<button data-pw167-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw167Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
 function applyAnswer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw167Card')?.querySelector('.pw167Feedback');if(!f)return;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw167Feedback show';f.innerHTML=`<b>✓ Correct operational decision.</b> ${currentQ.w}<div class="pw167Actions"><button data-pw167-next="apply" data-index="${idx+1}">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`}else{b.classList.add('bad');f.className='pw167Feedback show';f.innerHTML='<b>Not quite — reassess the signal, instruction and restriction.</b>';setTimeout(()=>b.classList.remove('bad'),650)}}
 function complete(){try{if(window.cv1482SetStage)cv1482SetStage(6,'module');else if(window.cevniMark)cevniMark(6)}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw167Card pw167Complete"><div class="ver">MODULE 07 • COMPLETE</div><h3>Module 7 complete — Module 8 unlocked</h3><p>You have completed bridge and lock passage, lock signals and discipline, berthing restrictions, special operations and the local-rule layer.</p><div class="pw167Rule">LEARN ✓ • SEE ✓ • PRACTICE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw167Actions"><button data-pw167-action="continue8">CONTINUE TO MODULE 8 →</button><button data-pw167-action="map">RETURN TO COURSE MAP</button></div></div>`,'MODULE COMPLETE');try{cevniRenderModules()}catch(e){}}
 function jump(x){if(!(typeof cvDevMode!=='undefined'&&cvDevMode))return;if(x==='learn')teach(0);else if(x==='see')see(0);else if(['practice','check','review'].includes(x))question(x,0);else if(x==='apply')apply(0)}
@@ -27546,7 +27546,7 @@ window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.63.12 — MODULE 08 -->
+<!-- PROJECT WATCH 1.63.13 — MODULE 08 -->
 <style id="pw16222-module8-style">
 #cevniPage .pw168Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw168Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27579,7 +27579,7 @@ window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16222-module8">
 (function(){
-'use strict'; const BUILD='1.63.12';
+'use strict'; const BUILD='1.63.13';
 const TEACH=[
 ['NAVIGATION INFORMATION IS A SYSTEM','CEVNI combines the boatmaster’s observation with radiotelephony, radar where used, Inland AIS, electronic chart information and competent-authority traffic information. No single display removes the duty to navigate safely.','Use electronic information to support — not replace — the complete traffic picture.'],
 ['RADIOTELEPHONY NETWORKS','The CEVNI framework distinguishes ship-to-ship, nautical-information and ship-to-port-authority communications. Motorized vessels other than small craft are subject to equipment and monitoring requirements; local competent-authority requirements remain important.','Know which network carries the information you need and maintain the required listening watch.'],
@@ -27602,7 +27602,7 @@ const SEE=[
 {t:'Radar navigation in reduced visibility',k:'radar',p:'Radar and radio together establish the encounter picture when visual information is restricted.',r:'Radar navigation invokes specific qualification, equipment, radio-contact and passing requirements.'},
 {t:'Local information layer',k:'local',p:'The competent authority publishes channel, reporting, AIS or navigation-device requirements for the waterway.',r:'The local requirement is part of the passage plan, not optional background reading.'}
 ];
-const PRACTICE=[
+let PRACTICE=[
 {q:'Before entering a blind section while equipped with radiotelephone, where does CEVNI require the report?',a:['On the ship-to-ship channel','Only by AIS text message','On any leisure channel'],c:0,w:'Article 4.05 requires a ship-to-ship report before blind sections, narrow channels, bridge openings and designated sections.'},
 {q:'What does sign B.11 indicate?',a:['The competent authority requires radiotelephone communications','AIS must be switched off','Radar use is prohibited'],c:0,w:'B.11 indicates a radiotelephony requirement.'},
 {q:'Which is part of the Inland AIS data set?',a:['Navigational status','Engine oil pressure','Galley water level'],c:0,w:'Navigational status is one of the operational AIS fields.'},
@@ -27610,7 +27610,7 @@ const PRACTICE=[
 {q:'You are in a designated reporting sector and your covered voyage data change. What do you do?',a:['Notify the competent authority immediately','Wait until the next lock','Update it at the end of the day'],c:0,w:'Article 8.02 requires immediate notification of changes to covered data.'},
 {q:'Your journey is interrupted for more than two hours in a reporting sector. What is required?',a:['Report the beginning and end of the interruption','No further report is required','Switch off all navigation equipment'],c:0,w:'The interruption itself becomes reportable.'}
 ];
-const CHECK=[
+let CHECK=[
 {q:'Which statement best describes AIS?',a:['A traffic-information aid whose data must be accurate; it does not replace safe navigation','A collision-avoidance system that always determines right of way','A replacement for radiotelephony'],c:0,w:'CEVNI regulates AIS as navigation/traffic information equipment, not as a substitute for the boatmaster’s duties.'},
 {q:'What should happen to Inland AIS entered data when relevant vessel information changes?',a:['It is updated to correspond with the actual vessel/convoy','It stays as originally programmed','Only shore authorities may alter it'],c:0,w:'The boatmaster has explicit update duties for specified fields.'},
 {q:'Which group is specifically included in the harmonized reporting categories?',a:['Vessels transporting more than 20 containers','Every rowing boat','Every pleasure craft regardless of local requirement'],c:0,w:'More than 20 containers is one of the listed Article 8.02 categories.'},
@@ -27620,7 +27620,7 @@ const CHECK=[
 {q:'Can local competent authorities vary AIS/radar/radio requirements?',a:['Yes, within the CEVNI regional/national framework','No','Only at sea'],c:0,w:'Chapter 9 contains explicit provisions for local/national requirements.'},
 {q:'What is the best response to conflicting electronic and observed information?',a:['Treat the conflict as a warning and resolve it before relying on the picture','Trust AIS automatically','Trust the largest screen'],c:0,w:'Navigation information must be cross-checked; a conflict is not permission to assume one source is correct.'}
 ];
-const APPLY=[
+let APPLY=[
 {t:'Blind bend ahead',s:'Your vessel carries working radiotelephone equipment and you are approaching a blind section.',q:'What is the correct information action?',a:['Make the required ship-to-ship report before entering','Wait until another vessel calls you','Use AIS only'],c:0,w:'The CEVNI radiotelephony rule requires the report before entry.'},
 {t:'AIS status is stale',s:'Your AIS still shows “moored” after you have got under way.',q:'What should you do?',a:['Update the navigational status immediately','Leave it until the destination','Switch AIS off to hide the error'],c:0,w:'Navigational status is one of the fields the boatmaster must update when it changes.'},
 {t:'Reporting-sector delay',s:'You stop inside a mandatory reporting sector and the interruption will exceed two hours.',q:'What is required?',a:['Report the beginning and end of the interruption','Nothing until departure','Only change your AIS destination'],c:0,w:'Article 8.02 specifically makes an interruption over two hours reportable.'},
@@ -27628,7 +27628,7 @@ const APPLY=[
 {t:'Small craft with AIS',s:'A small craft has elected to operate AIS but the ship-to-ship radio receiver is not working.',q:'Is that configuration compliant with the harmonized CEVNI AIS provision?',a:['No — working radio receiving ship-to-ship is also required','Yes — AIS replaces radio','Yes, if visibility is good'],c:0,w:'Article 4.07 expressly couples small-craft AIS use with working ship-to-ship radio reception.'},
 {t:'Local authority notice',s:'The waterway authority publishes an AIS/reporting requirement for the sector that differs from the generic training example.',q:'What should the passage plan use?',a:['The applicable current local requirement within the CEVNI framework','Ignore it and use only the generic lesson','Use maritime COLREG reporting instead'],c:0,w:'The regional/national layer is part of CEVNI implementation.'}
 ];
-const REVIEW=[
+let REVIEW=[
 {q:'Which three service categories are central to CEVNI inland radiotelephony?',a:['Ship-to-ship, nautical information, ship-to-port-authority','Mayday, marina, entertainment','AIS, radar, GNSS'],c:0,w:'Those are the operational radiotelephony networks identified in Article 4.05.'},
 {q:'What is the purpose of keeping AIS static/voyage data accurate?',a:['So the transmitted traffic picture corresponds to the actual vessel or convoy','To improve radar range','To replace the boatmaster’s lookout'],c:0,w:'Accuracy of the transmitted vessel/convoy data is an explicit CEVNI requirement.'},
 {q:'When must a qualifying vessel report for a designated reporting sector?',a:['Before entering, and then report entry/departure as required','Only after leaving','Only if another vessel asks'],c:0,w:'Article 8.02 establishes advance reporting plus entry/departure reporting.'},
@@ -27653,9 +27653,9 @@ return h+'</div>'}
 function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw168Card"><h3>Navigation information must agree with reality.</h3><p>This module brings together CEVNI radiotelephony, radar, Inland AIS, electronic navigation information and Article 8.02 reporting requirements.</p><div class="pw168Warn"><b>Current-rule gate:</b> CEVNI Revision 6 is the base, with corrigenda and adopted amendments checked during this build. Competent-authority requirements remain part of the operational answer.</div></div><div class="pw168Actions"><button data-pw168-action="map">COURSE MAP</button><button data-pw168-action="teach" data-index="0">BEGIN MODULE 8 →</button></div>`,'START HERE • 8/9')}
 function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see(0);return}let x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="pw168Progress"><i style="width:${(i+1)/TEACH.length*100}%"></i></div><div class="pw168Card"><div class="ver">VERIFIED BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw168Rule">${x[2]}</div></div><div class="pw168Actions">${i?`<button data-pw168-action="teach" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw168-action="teach" data-index="${i+1}">${i===TEACH.length-1?'SEE IT →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`)}
 function see(i){stage='see';idx=i;if(i>=SEE.length){question('practice',0);return}let x=SEE[i];shell('SEE THE INFORMATION',`${route('SEE')}<div class="pw168Progress"><i style="width:${(i+1)/SEE.length*100}%"></i></div><div class="pw168Card"><div class="ver">INFORMATION PICTURE ${i+1} / ${SEE.length}</div><h3>${x.t}</h3><p>${x.p}</p>${visual(x.k)}<div class="pw168Rule">${x.r}</div></div><div class="pw168Actions">${i?`<button data-pw168-action="see" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw168-action="see" data-index="${i+1}">${i===SEE.length-1?'PRACTICE IT →':'NEXT →'}</button></div>`,`SEE ${i+1} / ${SEE.length}`)}
-function question(kind,i){let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw168Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw168Choices">${currentQ.a.map((z,j)=>`<button data-pw168-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw168Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
+function question(kind,i){if(kind==='practice'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module8Practice?.()||[];if(c.length)PRACTICE=c}else if(kind==='check'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module8Check?.()||[];if(c.length)CHECK=c}else if(kind==='review'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module8Review?.()||[];if(c.length)REVIEW=c}let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=window.PW_ANSWER_RANDOMISER?.shuffle(arr[i],'m8-'+kind)||shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw168Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw168Choices">${currentQ.a.map((z,j)=>`<button data-pw168-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw168Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
 function answer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw168Card')?.querySelector('.pw168Feedback');if(!f)return;let arr=stage==='practice'?PRACTICE:stage==='review'?REVIEW:CHECK;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw168Feedback show';f.innerHTML=`<b>✓ Correct.</b> ${currentQ.w}<div class="pw168Actions"><button data-pw168-next="${stage}" data-index="${idx+1}">${idx===arr.length-1?(stage==='practice'?'CHECK →':stage==='check'?'APPLY →':'COMPLETE MODULE 8 →'):'NEXT →'}</button></div>`}else{b.classList.add('bad');f.className='pw168Feedback show';f.innerHTML='<b>Not quite — try again.</b> Recheck the equipment, information and reporting duty.';setTimeout(()=>b.classList.remove('bad'),650)}}
-function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw168Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw168Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw168Choices">${currentQ.a.map((z,j)=>`<button data-pw168-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw168Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
+function apply(i){stage='apply';idx=i;answered=false;let c=window.PW_CEVNI_QUESTION_SOURCE?.module8Apply?.()||[];if(c.length)APPLY=c;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=window.PW_ANSWER_RANDOMISER?.shuffle({q:x.q,a:x.a,c:x.c,w:x.w},'m8-apply')||shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw168Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw168Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw168Choices">${currentQ.a.map((z,j)=>`<button data-pw168-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw168Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
 function applyAnswer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw168Card')?.querySelector('.pw168Feedback');if(!f)return;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw168Feedback show';f.innerHTML=`<b>✓ Correct operational decision.</b> ${currentQ.w}<div class="pw168Actions"><button data-pw168-next="apply" data-index="${idx+1}">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`}else{b.classList.add('bad');f.className='pw168Feedback show';f.innerHTML='<b>Not quite — reassess the information source, reporting trigger and local requirement.</b>';setTimeout(()=>b.classList.remove('bad'),650)}}
 function complete(){try{if(window.cv1482SetStage)cv1482SetStage(7,'module');else if(window.cevniMark)cevniMark(7)}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw168Card pw168Complete"><div class="ver">MODULE 08 • COMPLETE</div><h3>Module 8 complete — Module 9 unlocked</h3><p>You have completed inland radiotelephony information flow, radar-navigation principles, Inland AIS data discipline, electronic navigation information, mandatory reporting and the local-rule layer.</p><div class="pw168Rule">LEARN ✓ • SEE ✓ • PRACTICE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw168Actions"><button data-pw168-action="continue9">CONTINUE TO MODULE 9 →</button><button data-pw168-action="map">RETURN TO COURSE MAP</button></div></div>`,'MODULE COMPLETE');try{cevniRenderModules()}catch(e){}}
 function jump(x){if(!(typeof cvDevMode!=='undefined'&&cvDevMode))return;if(x==='learn')teach(0);else if(x==='see')see(0);else if(['practice','check','review'].includes(x))question(x,0);else if(x==='apply')apply(0)}
@@ -27668,7 +27668,7 @@ window.PW16222_MODULE8={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.63.12 — MODULE 09 -->
+<!-- PROJECT WATCH 1.63.13 — MODULE 09 -->
 <style id="pw16223-module9-style">
 #cevniPage .pw169Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw169Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27699,7 +27699,7 @@ window.PW16222_MODULE8={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16223-module9">
 (function(){
-'use strict'; const BUILD='1.63.12';
+'use strict'; const BUILD='1.63.13';
 const TEACH=[
 ['PASSAGE READINESS STARTS WITH A SAFE VESSEL','CEVNI requires vessels to be constructed, rigged, crewed and operated so that those on board and navigation are safe. Loading must not exceed maximum draught, impair stability or create an unacceptable loss of view.','Before departure, confirm the vessel, people, load and visibility are fit for the intended waterway.'],
 ['DOCUMENTS AND LOCAL RULES','CEVNI Article 1.10 sets the onboard-document framework, while applicable international, regional and national rules can require additional papers. Chapter 9 expressly allows competent authorities to add requirements.','Passage readiness includes the documents and permissions actually required for your vessel and route — not a generic one-size-fits-all list.'],
@@ -27722,7 +27722,7 @@ const SEE=[
 {t:'Waste storage aboard',k:'waste',p:'Operational waste is being retained until proper reception.',r:'Collect separately in suitable receptacles, keep leakage detectable and do not burn waste on board.'},
 {t:'Fuel transfer readiness',k:'bunker',p:'Fuel transfer is about to start.',r:'Secure, confirm capacity and filling plan, maintain direct communication and supervision, and complete the required checklist where applicable.'}
 ];
-const PRACTICE=[
+let PRACTICE=[
 {q:'Your planned load would put the vessel beyond its maximum draught marks. What is the correct decision?',a:['Do not depart until the loading condition is compliant','Proceed slowly','Proceed if visibility is good'],c:0,w:'CEVNI Article 1.07 prohibits loading beyond the maximum draught marks.'},
 {q:'An accident on your vessel endangers a person. What is the boatmaster’s primary CEVNI duty?',a:['Use every means available to save them','Protect the timetable first','Wait for the authority before acting'],c:0,w:'Article 1.16 puts saving endangered persons first.'},
 {q:'You ground near the fairway and approaching vessels may be endangered. What should you do?',a:['Inform the authority and warn approaching traffic in good time','Only update AIS','Leave the vessel immediately'],c:0,w:'Article 1.17 combines authority notification with warning approaching traffic where necessary.'},
@@ -27730,7 +27730,7 @@ const PRACTICE=[
 {q:'A prohibited waste spill occurs. What information should the authority receive?',a:['Position, quantity, nature of waste and measures taken','Only vessel name','Only destination'],c:0,w:'Article 10.04 calls for useful spill facts, not a vague notification.'},
 {q:'During bunkering, safe direct communication between the responsible people is lost. What should happen?',a:['Interrupt the filling operation','Continue at half rate','Continue if the tank is nearly full'],c:0,w:'CEVNI bunkering provisions require safe direct communication and interruption if it is no longer guaranteed.'}
 ];
-const CHECK=[
+let CHECK=[
 {q:'What does CEVNI require of the vessel’s loading condition?',a:['It must respect maximum draught and not endanger stability or required view','Only total weight matters','The load may obscure the view if radar is fitted in every case'],c:0,w:'Article 1.07 addresses draught, view and stability.'},
 {q:'Which statement about onboard documents is correct?',a:['The applicable list depends on CEVNI plus other relevant regional/national/international requirements','Every small pleasure craft carries exactly the same commercial-vessel documents','Documents are optional if carried electronically on a phone'],c:0,w:'Article 1.10 and Chapter 9 make the applicable regulatory layer important.'},
 {q:'A nearby vessel has an accident endangering persons. Your assistance duty is limited by what?',a:['The safety of your own vessel','Whether the casualty is commercially operated','Whether the voyage is delayed'],c:0,w:'Immediate assistance is required insofar as consistent with the safety of your own vessel.'},
@@ -27740,7 +27740,7 @@ const CHECK=[
 {q:'What is part of bunkering vigilance?',a:['Supervision of the filling operation','Leaving the filling point unattended','Estimating tank capacity after transfer starts'],c:0,w:'Article 10.07 requires supervision and pre-transfer controls.'},
 {q:'Who sets additional local requirements that may affect passage readiness?',a:['The competent authority','Only the vessel manufacturer','Only another boatmaster'],c:0,w:'CEVNI provides for regional and national special requirements through competent authorities.'}
 ];
-const APPLY=[
+let APPLY=[
 {t:'Departure with obstructed view',s:'Deck cargo has been positioned so that the boatmaster’s direct view ahead no longer meets the applicable requirement.',q:'What is the safe CEVNI decision?',a:['Correct the loading/view problem before departure','Depart and rely on AIS','Depart only in daylight'],c:0,w:'Passage readiness fails if the loading condition breaches Article 1.07.'},
 {t:'Casualty alongside',s:'Another vessel has suffered an accident and people are in danger. You can assist without placing your own vessel in danger.',q:'What should you do?',a:['Give immediate assistance','Continue because only authorities may assist','Wait until formally requested'],c:0,w:'Article 1.16 creates an immediate assistance duty in this situation.'},
 {t:'Grounding in a bend',s:'Your vessel grounds near the fairway where traffic cannot see the obstruction early.',q:'What combination is required?',a:['Notify the competent authority and warn approaching traffic','Only display deck lights','Only call your destination marina'],c:0,w:'Article 1.17 requires notification and, where necessary, timely warning to approaching traffic.'},
@@ -27748,7 +27748,7 @@ const APPLY=[
 {t:'Waste bin decision',s:'Used oily rags and ordinary household refuse have accumulated onboard.',q:'What is the correct management approach?',a:['Keep waste categories appropriately separated and deliver through the proper reception route','Burn them onboard','Put both into the bilge'],c:0,w:'CEVNI requires separate collection and prohibits burning waste onboard.'},
 {t:'Bunkering communications fail',s:'Fuel is flowing and the direct communication method between the receiving vessel and supplier fails.',q:'What should happen?',a:['Interrupt filling immediately','Continue if no spill is visible','Increase flow to finish sooner'],c:0,w:'Loss of safe direct communication is an explicit stop condition in the bunkering procedure.'}
 ];
-const REVIEW=[
+let REVIEW=[
 {q:'What three loading issues does Article 1.07 directly address?',a:['Maximum draught, view and stability','Radio, AIS and radar','Waste, fuel and cargo documents'],c:0,w:'These are central departure-readiness limits in Article 1.07.'},
 {q:'What is the core duty when an accident endangers persons aboard?',a:['Use every means available to save them','Protect property before people','Wait for shore assistance'],c:0,w:'Article 1.16 is explicit on the duty to save endangered persons.'},
 {q:'What must a grounded vessel near the fairway consider beyond informing the authority?',a:['Warning approaching traffic in sufficient time','Turning off navigation lights','Discharging ballast automatically'],c:0,w:'Article 1.17 adds the warning duty where necessary.'},
@@ -27774,9 +27774,9 @@ return h+'</div>'}
 function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw169Card"><h3>The final teaching module is the departure-and-emergency gate.</h3><p>Module 9 integrates CEVNI general safety duties, accident/grounding response, Chapter 10 pollution prevention and bunkering vigilance into practical passage readiness.</p><div class="pw169Warn"><b>Scope:</b> CEVNI Revision 6 with Corrigenda 1 and 2 is the verified base used for this build. Vessel type, technical rules and competent-authority requirements can change the exact equipment/document obligation.</div></div><div class="pw169Actions"><button data-pw169-action="map">COURSE MAP</button><button data-pw169-action="teach" data-index="0">BEGIN MODULE 9 →</button></div>`,'FINAL TEACHING MODULE • 9/9')}
 function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see(0);return}let x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="pw169Progress"><i style="width:${(i+1)/TEACH.length*100}%"></i></div><div class="pw169Card"><div class="ver">VERIFIED BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw169Rule">${x[2]}</div></div><div class="pw169Actions">${i?`<button data-pw169-action="teach" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw169-action="teach" data-index="${i+1}">${i===TEACH.length-1?'SEE IT →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`)}
 function see(i){stage='see';idx=i;if(i>=SEE.length){question('practice',0);return}let x=SEE[i];shell('SEE THE SITUATION',`${route('SEE')}<div class="pw169Progress"><i style="width:${(i+1)/SEE.length*100}%"></i></div><div class="pw169Card"><div class="ver">SAFETY PICTURE ${i+1} / ${SEE.length}</div><h3>${x.t}</h3><p>${x.p}</p>${visual(x.k)}<div class="pw169Rule">${x.r}</div></div><div class="pw169Actions">${i?`<button data-pw169-action="see" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw169-action="see" data-index="${i+1}">${i===SEE.length-1?'PRACTICE IT →':'NEXT →'}</button></div>`,`SEE ${i+1} / ${SEE.length}`)}
-function question(kind,i){let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw169Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw169Choices">${currentQ.a.map((z,j)=>`<button data-pw169-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw169Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
+function question(kind,i){if(kind==='practice'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module9Practice?.()||[];if(c.length)PRACTICE=c}else if(kind==='check'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module9Check?.()||[];if(c.length)CHECK=c}else if(kind==='review'){let c=window.PW_CEVNI_QUESTION_SOURCE?.module9Review?.()||[];if(c.length)REVIEW=c}let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=window.PW_ANSWER_RANDOMISER?.shuffle(arr[i],'m9-'+kind)||shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw169Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw169Choices">${currentQ.a.map((z,j)=>`<button data-pw169-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw169Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
 function answer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw169Card')?.querySelector('.pw169Feedback');if(!f)return;let arr=stage==='practice'?PRACTICE:stage==='review'?REVIEW:CHECK;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw169Feedback show';f.innerHTML=`<b>✓ Correct.</b> ${currentQ.w}<div class="pw169Actions"><button data-pw169-next="${stage}" data-index="${idx+1}">${idx===arr.length-1?(stage==='practice'?'CHECK →':stage==='check'?'APPLY →':'COMPLETE MODULE 9 →'):'NEXT →'}</button></div>`}else{b.classList.add('bad');f.className='pw169Feedback show';f.innerHTML='<b>Not quite — try again.</b> Recheck the safety duty, pollution control or readiness trigger.';setTimeout(()=>b.classList.remove('bad'),650)}}
-function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw169Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw169Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw169Choices">${currentQ.a.map((z,j)=>`<button data-pw169-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw169Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
+function apply(i){stage='apply';idx=i;answered=false;let c=window.PW_CEVNI_QUESTION_SOURCE?.module9Apply?.()||[];if(c.length)APPLY=c;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=window.PW_ANSWER_RANDOMISER?.shuffle({q:x.q,a:x.a,c:x.c,w:x.w},'m9-apply')||shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw169Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw169Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw169Choices">${currentQ.a.map((z,j)=>`<button data-pw169-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw169Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
 function applyAnswer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw169Card')?.querySelector('.pw169Feedback');if(!f)return;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw169Feedback show';f.innerHTML=`<b>✓ Correct operational decision.</b> ${currentQ.w}<div class="pw169Actions"><button data-pw169-next="apply" data-index="${idx+1}">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`}else{b.classList.add('bad');f.className='pw169Feedback show';f.innerHTML='<b>Not quite — reassess the immediate safety duty, notification requirement and pollution control.</b>';setTimeout(()=>b.classList.remove('bad'),650)}}
 function complete(){try{if(window.cv1482SetStage)cv1482SetStage(8,'module');else if(window.cevniMark)cevniMark(8)}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw169Card pw169Complete"><div class="ver">MODULE 09 • COMPLETE</div><h3>Module 9 complete — all teaching modules complete</h3><p>You have completed vessel and passage readiness, accident and grounding response, pollution prevention, waste control and bunkering vigilance.</p><div class="pw169Rule">LEARN ✓ • SEE ✓ • PRACTICE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw169Warn"><b>Next phase:</b> return to the course map. The FINAL MOCK remains a separate assessment phase and is not Module 10.</div><div class="pw169Actions"><button data-pw169-action="map">RETURN TO COURSE MAP →</button></div></div>`,'TEACHING COMPLETE');try{cevniRenderModules()}catch(e){}}
 function jump(x){if(!(typeof cvDevMode!=='undefined'&&cvDevMode))return;if(x==='learn')teach(0);else if(x==='see')see(0);else if(['practice','check','review'].includes(x))question(x,0);else if(x==='apply')apply(0)}
@@ -27793,12 +27793,12 @@ window.PW16223_MODULE9={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 (function(){
   'use strict';
   window.PW_CEVNI_BANK_READY = (async function(){
-    const url = new URL('project-watch-cevni-question-bank-1.63.12.json?v=1.63.12', document.baseURI);
+    const url = new URL('project-watch-cevni-question-bank-1.63.13.json?v=1.63.13', document.baseURI);
     const response = await fetch(url.href, {cache:'no-store'});
     if(!response.ok) throw new Error('Question bank request failed: HTTP '+response.status);
     const data = await response.json();
     if(!Array.isArray(data)) throw new Error('Question bank JSON is not an array.');
-    if(data.length !== 279) throw new Error('Question bank record count is '+data.length+'; expected 279.');
+    if(data.length !== 357) throw new Error('Question bank record count is '+data.length+'; expected 357.');
     const bad = data.findIndex(function(q){
       return !q || typeof q!=='object' || !q.id || !Array.isArray(q.choices) ||
              !Number.isInteger(q.correctIndex) || q.correctIndex<0 || q.correctIndex>=q.choices.length;
@@ -27822,16 +27822,16 @@ window.PW16223_MODULE9={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw1632-master-test">
 (function(){
-'use strict';const BUILD='1.63.12';let pos=0,open=false,revealed=false,chosen=null;
+'use strict';const BUILD='1.63.13';let pos=0,open=false,revealed=false,chosen=null;
 function bank(){return(window.PW_QUESTION_BANK||[]).filter(x=>x.status==='active'&&x.module>=1&&x.module<=9).sort((a,b)=>a.module-b.module||a.order-b.order)}
 function root(){let r=document.getElementById('pw1632Test');if(!r){r=document.createElement('section');r.id='pw1632Test';r.innerHTML='<div id="pw1632Inner"></div>';document.body.appendChild(r)}return r}
-function render(){let B=bank(),r=root();r.classList.toggle('open',open);if(!open)return;if(!B.length){document.getElementById('pw1632Inner').innerHTML='<h2>Question library not loaded</h2><p>Upload project-watch-cevni-question-bank-1.63.12.json beside index.html.</p>';return}
+function render(){let B=bank(),r=root();r.classList.toggle('open',open);if(!open)return;if(!B.length){document.getElementById('pw1632Inner').innerHTML='<h2>Question library not loaded</h2><p>Upload project-watch-cevni-question-bank-1.63.13.json beside index.html.</p>';return}
 pos=Math.max(0,Math.min(pos,B.length-1));let x=B[pos],pct=((pos+1)/B.length*100).toFixed(2);
 document.getElementById('pw1632Inner').innerHTML=`<div id="pw1632Head"><div><h2>🧪 TEST MODE • COMPLETE CEVNI QUESTION BANK</h2><div class="pw1632Meta">QA only • no learner progress writes • Build ${BUILD}</div></div><div><b>MODULE ${x.module}</b><br><span class="pw1632Meta">${x.id} • ${pos+1} / ${B.length}</span></div></div><div id="pw1632Bar"><i style="width:${pct}%"></i></div><div id="pw1632Card"><div class="pw1632Meta">${x.stage}</div><h3>${x.question}</h3><div id="pw1632Answers">${x.choices.map((a,i)=>`<button data-pw1632-a="${i}" class="${revealed?(i===x.correctIndex?'correct':(chosen===i?'wrong':'')):''}">${String.fromCharCode(65+i)} • ${a}${revealed&&i===x.correctIndex?' ✓ CORRECT':''}</button>`).join('')}</div>${revealed?`<div id="pw1632Why"><b>Correct answer:</b> ${x.choices[x.correctIndex]}${x.explanation?`<br><br><b>Explanation:</b> ${x.explanation}`:''}</div>`:''}<div id="pw1632Controls"><button id="pw1632Reset">↺ RESET TO MODULE 1</button><button data-pw1632-prev ${pos===0?'disabled':''}>← PREVIOUS</button><button data-pw1632-next>${pos===B.length-1?'END OF MODULE 9':'NEXT QUESTION →'}</button><button data-pw1632-close>CLOSE TEST MODE</button></div></div>`}
 function start(){pos=0;revealed=false;chosen=null;open=true;
 let r=root();r.classList.add('open');document.getElementById('pw1632Inner').innerHTML='<h2>Loading CEVNI question library…</h2><p>Please wait a moment.</p>';
 Promise.resolve(window.PW_CEVNI_BANK_READY).then(function(){render()}).catch(function(err){
-document.getElementById('pw1632Inner').innerHTML='<h2>Question library failed to load</h2><p>'+String(err&&err.message||err)+'</p><p>Expected file: <b>project-watch-cevni-question-bank-1.63.12.json</b> beside index.html.</p>';
+document.getElementById('pw1632Inner').innerHTML='<h2>Question library failed to load</h2><p>'+String(err&&err.message||err)+'</p><p>Expected file: <b>project-watch-cevni-question-bank-1.63.13.json</b> beside index.html.</p>';
 });}
 document.addEventListener('click',e=>{let b=e.target.closest('[data-pw1632-a],[data-pw1632-prev],[data-pw1632-next],[data-pw1632-close],#pw1632Reset');if(!b)return;if(b.id==='pw1632Reset')return start();if(b.hasAttribute('data-pw1632-a')){chosen=+b.dataset.pw1632A;revealed=true;return render()}if(b.hasAttribute('data-pw1632-prev')){if(pos)pos--;revealed=false;chosen=null;return render()}if(b.hasAttribute('data-pw1632-next')){let B=bank();if(pos<B.length-1)pos++;revealed=false;chosen=null;return render()}if(b.hasAttribute('data-pw1632-close')){open=false;return render()}});
 function wire(){[...document.querySelectorAll('button,a')].forEach(b=>{if(b.closest('#pw1632Test'))return;if((b.textContent||'').trim().toUpperCase().includes('TEST MODE')&&!b.dataset.pw1632){b.dataset.pw1632='1';b.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();start()},true)}})}
@@ -27865,9 +27865,21 @@ window.PW_CEVNI_QUESTION_SOURCE={
  module6Practice:()=>active(6,'PRACTICE').filter(q=>/^PW-CEVNI-M06-PRACTICE-/.test(q.id)).map(qa),
  module6Check:()=>active(6,'CHECK').filter(q=>/^PW-CEVNI-M06-CHECK-/.test(q.id)).map(qa),
  module6Apply:()=>active(6,'APPLY').filter(q=>/^PW-CEVNI-M06-APPLY-/.test(q.id)).map(apply),
- module6Review:()=>active(6,'REVIEW').filter(q=>/^PW-CEVNI-M06-REVIEW-/.test(q.id)).map(qa)
+ module6Review:()=>active(6,'REVIEW').filter(q=>/^PW-CEVNI-M06-REVIEW-/.test(q.id)).map(qa),
+ module7Practice:()=>active(7,'PRACTICE').filter(q=>/^PW-CEVNI-M07-PRACTICE-/.test(q.id)).map(qa),
+ module7Check:()=>active(7,'CHECK').filter(q=>/^PW-CEVNI-M07-CHECK-/.test(q.id)).map(qa),
+ module7Apply:()=>active(7,'APPLY').filter(q=>/^PW-CEVNI-M07-APPLY-/.test(q.id)).map(apply),
+ module7Review:()=>active(7,'REVIEW').filter(q=>/^PW-CEVNI-M07-REVIEW-/.test(q.id)).map(qa),
+ module8Practice:()=>active(8,'PRACTICE').filter(q=>/^PW-CEVNI-M08-PRACTICE-/.test(q.id)).map(qa),
+ module8Check:()=>active(8,'CHECK').filter(q=>/^PW-CEVNI-M08-CHECK-/.test(q.id)).map(qa),
+ module8Apply:()=>active(8,'APPLY').filter(q=>/^PW-CEVNI-M08-APPLY-/.test(q.id)).map(apply),
+ module8Review:()=>active(8,'REVIEW').filter(q=>/^PW-CEVNI-M08-REVIEW-/.test(q.id)).map(qa),
+ module9Practice:()=>active(9,'PRACTICE').filter(q=>/^PW-CEVNI-M09-PRACTICE-/.test(q.id)).map(qa),
+ module9Check:()=>active(9,'CHECK').filter(q=>/^PW-CEVNI-M09-CHECK-/.test(q.id)).map(qa),
+ module9Apply:()=>active(9,'APPLY').filter(q=>/^PW-CEVNI-M09-APPLY-/.test(q.id)).map(apply),
+ module9Review:()=>active(9,'REVIEW').filter(q=>/^PW-CEVNI-M09-REVIEW-/.test(q.id)).map(qa)
 };
-window.PW1639_ARCH={centralBank:'project-watch-cevni-question-bank-1.63.12.json',modulesIntegrated:[1,2,3,4,5,6],balancedAnswerRandomisation:[1,2,3,4,5,6],legacyPracticeCentralised:true,audioTouched:false};
+window.PW1639_ARCH={centralBank:'project-watch-cevni-question-bank-1.63.13.json',modulesIntegrated:[1,2,3,4,5,6,7,8,9],balancedAnswerRandomisation:[1,2,3,4,5,6,7,8,9],legacyPracticeCentralised:true,audioTouched:false};
 })();
 </script>
 
