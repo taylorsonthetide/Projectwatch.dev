@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.16';
+const PROJECT_WATCH_BUILD='1.62.17';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.16';
+const BUILD='1.62.17';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.16: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.17: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.16';
+const BUILD='1.62.17';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.16 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.17 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.16';
+const BUILD='1.62.17';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.62.16 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.62.17 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.62.16';
+const BUILD='1.62.17';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.62.16 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.62.17 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.16';
+const BUILD='1.62.17';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -27056,7 +27056,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 </script>
 
 
-<!-- PROJECT WATCH 1.62.16 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
+<!-- PROJECT WATCH 1.62.17 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
 <style id="pw16216-module5-style">
 #cevniPage .pw165Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw165Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27087,7 +27087,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 <script id="pw16216-module5">
 (function(){
 'use strict';
-const BUILD='1.62.16';
+const BUILD='1.62.17';
 
 const TEACH=[
  ['SOUND LANGUAGE — TIMING FIRST','Annex 6 defines a short blast as about 1 second and a long blast as about 4 seconds. The normal interval between successive blasts is about 1 second. A series of very short blasts is at least six blasts, each about a quarter-second, with roughly quarter-second silences.','Hear duration as part of the meaning: short, long and very-short are different signal elements.'],
@@ -27183,11 +27183,13 @@ function quiz(kind,i){
  if(i>=arr.length){if(kind==='review'){complete();return}else{apply(0);return}}
  currentQ=shuffleQ(arr[i]);
  const active=kind==='review'?'REVIEW':'CHECK';
- shell(kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(active)}<div class="pw165Card"><div class="ver">${active} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw165Choices">${currentQ.a.map((z,j)=>`<button data-pw165-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div id="pw165Fb" class="pw165Feedback"></div></div>`,`${active} ${i+1} / ${arr.length}`);
+ shell(kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(active)}<div class="pw165Card"><div class="ver">${active} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw165Choices">${currentQ.a.map((z,j)=>`<button data-pw165-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw165Feedback"></div></div>`,`${active} ${i+1} / ${arr.length}`);
 }
 function answer(j,btn){
  if(answered||!currentQ)return;
- const fb=document.getElementById('pw165Fb');
+ const card=btn.closest('.pw165Card');
+ const fb=card ? card.querySelector('.pw165Feedback') : null;
+ if(!fb)return;
  if(j===currentQ.c){
   answered=true;btn.classList.add('good');fb.className='pw165Feedback show';
   const arr=stage==='review'?REVIEW:CHECK;
@@ -27202,11 +27204,13 @@ function apply(i){
  if(i>=APPLY.length){quiz('review',0);return}
  currentQ=shuffleQ({q:APPLY[i].q,a:APPLY[i].a,c:APPLY[i].c,w:APPLY[i].w});
  const x=APPLY[i];
- shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw165Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw165Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw165Choices">${currentQ.a.map((z,j)=>`<button data-pw165-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div id="pw165Fb" class="pw165Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`);
+ shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw165Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw165Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw165Choices">${currentQ.a.map((z,j)=>`<button data-pw165-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw165Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`);
 }
 function applyAnswer(j,btn){
  if(answered||!currentQ)return;
- const fb=document.getElementById('pw165Fb');
+ const card=btn.closest('.pw165Card');
+ const fb=card ? card.querySelector('.pw165Feedback') : null;
+ if(!fb)return;
  if(j===currentQ.c){
   answered=true;btn.classList.add('good');fb.className='pw165Feedback show';
   fb.innerHTML=`<b>✓ Correct operational reading.</b> ${currentQ.w}<div class="pw165Actions"><button onclick="pw165Apply(${idx+1})">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`;
@@ -27241,7 +27245,7 @@ window.cevniInit=function(){names();const r=oldInit?oldInit():undefined;names();
 sync();names();
 document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});
 setTimeout(()=>{sync();names()},800);
-window.PW16216_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,audioEngine:'existing CEVNI Sound Lab preserved',authority:['CEVNI Revision 6 + Corr.1/Corr.2','Chapter 4','Annex 6','Chapter 9 local/national layer']};
+window.PW16217_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,audioEngine:'existing CEVNI Sound Lab preserved',authority:['CEVNI Revision 6 + Corr.1/Corr.2','Chapter 4','Annex 6','Chapter 9 local/national layer']};
 })();
 </script>
 
