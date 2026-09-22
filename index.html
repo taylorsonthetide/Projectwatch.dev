@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.62.23 • CEVNI Curriculum</title>
+<title>Project Watch 1.62.25 • CEVNI Curriculum</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.23';
+const PROJECT_WATCH_BUILD='1.62.25';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.23: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.25: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.23 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.25 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.62.23 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.62.25 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.62.23 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.62.25 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -27056,7 +27056,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 </script>
 
 
-<!-- PROJECT WATCH 1.62.23 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
+<!-- PROJECT WATCH 1.62.25 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
 <style id="pw16216-module5-style">
 #cevniPage .pw165Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw165Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27087,7 +27087,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 <script id="pw16216-module5">
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 
 const TEACH=[
  ['SOUND LANGUAGE — TIMING FIRST','Annex 6 defines a short blast as about 1 second and a long blast as about 4 seconds. The normal interval between successive blasts is about 1 second. A series of very short blasts is at least six blasts, each about a quarter-second, with roughly quarter-second silences.','Hear duration as part of the meaning: short, long and very-short are different signal elements.'],
@@ -27258,7 +27258,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 </script>
 
 
-<!-- PROJECT WATCH 1.62.23 — MODULE 06 RULES OF THE ROAD -->
+<!-- PROJECT WATCH 1.62.25 — MODULE 06 RULES OF THE ROAD -->
 <style id="pw16220-module6-style">
 #cevniPage .pw166Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw166Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27295,7 +27295,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 <script id="pw16220-module6">
 (function(){
 'use strict';
-const BUILD='1.62.23';
+const BUILD='1.62.25';
 
 const TEACH=[
  ['THE ENCOUNTER TYPE COMES FIRST','Chapter 6 distinguishes meeting, overtaking and crossing. Meeting is opposite or nearly opposite courses; overtaking is approach from more than 22.5° abaft the other vessel’s beam; crossing is an encounter that is neither meeting nor overtaking.','Classify the encounter before applying a manoeuvring rule.'],
@@ -27345,7 +27345,7 @@ const CHECK=[
 const APPLY=[
  {t:'Busy crossing',s:'You are in a motorized small craft. A large commercial vessel is crossing your intended track. Continuing would require the commercial vessel to alter.',q:'What is the correct operational decision?',a:['Keep clear and leave the commercial vessel room to hold course and manoeuvre','Continue because it is on your port side','Demand priority by VHF'],c:0,w:'The small-craft responsibility to vessels other than small craft applies; you may not require the commercial vessel to give way.'},
  {t:'Sail becomes motor-sail',s:'A small sailing craft starts its engine while still carrying sail and approaches another small sailing craft.',q:'For the relevant CEVNI category rules, what changed?',a:['It is now treated as motorized','Nothing; visible sails always make it a sailing vessel','It gains priority over all small craft'],c:0,w:'Using sail and mechanical propulsion at the same time makes it a motorized vessel for the definition.'},
- {t:'Constricted reach',s:'You are closing a slower vessel from astern, but a bend and opposing traffic mean the fairway is not unquestionably wide enough.',q:'What should you do?',a:['Remain behind until overtaking can be made safely','Begin overtaking and rely on the other vessel to slow','Pass on starboard because width no longer matters'],c:0,w:'The general principle prohibits overtaking unless simultaneous passage is unquestionably possible.'},
+ {t:'Constricted reach',s:'You are closing a slower vessel from astern, but a bend and opposing traffic mean the fairway is not unquestionably wide enough.',q:'The fairway is not unquestionably wide enough for simultaneous passage. What should you do before overtaking?',a:['Remain behind until overtaking can be made safely','Begin overtaking and rely on the other vessel to slow','Pass on starboard because width no longer matters'],c:0,w:'The general principle prohibits overtaking unless simultaneous passage is unquestionably possible.'},
  {t:'Upstream meeting',s:'You are proceeding upstream and meet a downstream vessel where the normal upstream/downstream procedure applies.',q:'What is your starting obligation?',a:['Give way to the downstream vessel, considering local circumstances and traffic','Require the downstream vessel to stop','Always cross its bow to reach the left bank'],c:0,w:'Under the normal rule the upstream vessel gives way to the downstream vessel.'},
  {t:'Leaving harbour',s:'You intend to leave a harbour and cross the waterway, but approaching traffic would have to brake sharply.',q:'What should happen first?',a:['Wait until the manoeuvre can be made without forcing abrupt course or speed changes','Sound and cross immediately','Cross because harbour traffic has automatic priority'],c:0,w:'Article 6.16 begins with the safe-entry/exit/crossing obligation.'},
  {t:'Reduced visibility',s:'Visibility has deteriorated severely. You are tempted to continue using only the ordinary visual encounter rules.',q:'What is the correct approach?',a:['Apply the specific Chapter 6 reduced-visibility regime and applicable local requirements','Use the daylight crossing rules unchanged','Ignore radio because sound signals replace it'],c:0,w:'Reduced visibility has dedicated Chapter 6 operating provisions including radar/radio and safe-speed requirements.'}
@@ -27419,7 +27419,7 @@ window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.62.23 — MODULE 07 -->
+<!-- PROJECT WATCH 1.62.25 — MODULE 07 -->
 <style id="pw16221-module7-style">
 #cevniPage .pw167Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw167Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27454,7 +27454,7 @@ window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16221-module7">
 (function(){
-'use strict'; const BUILD='1.62.23';
+'use strict'; const BUILD='1.62.25';
 const TEACH=[
 ['BRIDGE AND WEIR OPENINGS','At bridge or weir openings that are too narrow for simultaneous passage, the applicable narrow-passage rules govern. CEVNI signs can restrict the usable part of an opening.','A.10 means navigation is prohibited outside the marked area; D.2 recommends keeping within the marked area.'],
 ['BRIDGE PASSAGE IS A LOCAL-RULE HOTSPOT','CEVNI Chapter 9 expressly allows competent authorities to prescribe special rules for passage under bridges.','Never assume the harmonized bridge procedure is the complete local rule.'],
@@ -27496,11 +27496,11 @@ const CHECK=[
 {q:'What does an A.7 bank-side sign prohibit?',a:['Making fast to the bank on that side','Passing under bridges','Use of VHF'],c:0,w:'A.7 prohibits making fast to the bank on the side where it is placed.'}
 ];
 const APPLY=[
-{t:'Approaching a busy lock',s:'You are in a small pleasure craft. Larger commercial traffic is waiting and the lock has not invited you in.',q:'What should you do?',a:['Wait; enter only when invited and after the other vessels when sharing the lock','Enter first because you are more manoeuvrable','Overtake the queue inside the basin'],c:0,w:'The small-craft locking rule and overtaking prohibition both point to waiting.'},
-{t:'Lock being prepared',s:'You can see the preparation aspect but the chamber looks empty.',q:'What is the correct decision?',a:['Remain outside until entry is permitted','Enter because the chamber is visibly clear','Enter if no vessel is exiting'],c:0,w:'Preparation remains a no-entry aspect.'},
+{t:'Approaching a busy lock',s:'You are in a small pleasure craft. Larger commercial traffic is waiting and the lock has not invited you in.',q:'At a busy lock, what should a small pleasure craft do before entering?',a:['Wait; enter only when invited and after the other vessels when sharing the lock','Enter first because you are more manoeuvrable','Overtake the queue inside the basin'],c:0,w:'The small-craft locking rule and overtaking prohibition both point to waiting.'},
+{t:'Lock being prepared',s:'You can see the preparation aspect but the chamber looks empty.',q:'A lock shows the preparation aspect but entry has not been permitted. What is the correct decision?',a:['Remain outside until entry is permitted','Enter because the chamber is visibly clear','Enter if no vessel is exiting'],c:0,w:'Preparation remains a no-entry aspect.'},
 {t:'Water level changing',s:'You are made fast in the chamber and the level is changing.',q:'What is the correct handling?',a:['Tend the mooring lines and fenders; do not use propulsion until permitted to leave','Lock the lines solid and leave them unattended','Use engine power continuously against the wall'],c:0,w:'The vessel must be safely made fast with lines handled to prevent contact; propulsion is prohibited after making fast.'},
 {t:'Bridge opening',s:'A bridge opening carries A.10 boards defining the usable passage.',q:'Where may you navigate?',a:['Only within the area between the boards','Anywhere under the bridge with sufficient headroom','Outside the boards if no traffic is visible'],c:0,w:'A.10 prohibits navigation outside the marked area.'},
-{t:'No local signal',s:'You reach a lock where the prescribed entry lights and boards are absent and nobody has instructed you to enter.',q:'What do you do?',a:['Remain outside until expressly ordered by lock staff','Enter slowly','Sound and enter'],c:0,w:'CEVNI prohibits entry or exit in that circumstance without express lock-staff order.'},
+{t:'No local signal',s:'You reach a lock where the prescribed entry lights and boards are absent and nobody has instructed you to enter.',q:'At a lock with no prescribed entry signal displayed and no instruction to enter, what do you do?',a:['Remain outside until expressly ordered by lock staff','Enter slowly','Sound and enter'],c:0,w:'CEVNI prohibits entry or exit in that circumstance without express lock-staff order.'},
 {t:'Local bridge rule',s:'The competent authority publishes a special bridge-passage rule differing from the harmonized base in an area where Chapter 9 permits variation.',q:'Which procedure governs your passage?',a:['The applicable local rule','Ignore it and use the generic rule','Use COLREGS instead'],c:0,w:'The CEVNI framework expressly accommodates those competent-authority provisions.'}
 ];
 const REVIEW=[
@@ -27542,7 +27542,7 @@ window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.62.23 — MODULE 08 -->
+<!-- PROJECT WATCH 1.62.25 — MODULE 08 -->
 <style id="pw16222-module8-style">
 #cevniPage .pw168Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw168Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27575,7 +27575,7 @@ window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16222-module8">
 (function(){
-'use strict'; const BUILD='1.62.23';
+'use strict'; const BUILD='1.62.25';
 const TEACH=[
 ['NAVIGATION INFORMATION IS A SYSTEM','CEVNI combines the boatmaster’s observation with radiotelephony, radar where used, Inland AIS, electronic chart information and competent-authority traffic information. No single display removes the duty to navigate safely.','Use electronic information to support — not replace — the complete traffic picture.'],
 ['RADIOTELEPHONY NETWORKS','The CEVNI framework distinguishes ship-to-ship, nautical-information and ship-to-port-authority communications. Motorized vessels other than small craft are subject to equipment and monitoring requirements; local competent-authority requirements remain important.','Know which network carries the information you need and maintain the required listening watch.'],
@@ -27600,7 +27600,7 @@ const SEE=[
 ];
 const PRACTICE=[
 {q:'Before entering a blind section while equipped with radiotelephone, where does CEVNI require the report?',a:['On the ship-to-ship channel','Only by AIS text message','On any leisure channel'],c:0,w:'Article 4.05 requires a ship-to-ship report before blind sections, narrow channels, bridge openings and designated sections.'},
-{q:'What does sign B.11 indicate?',a:['The competent authority requires radiotelephone communications','AIS must be switched off','Radar use is prohibited'],c:0,w:'B.11 indicates a radiotelephony requirement.'},
+{q:'When B.11 is displayed on the waterway, what communication requirement does it impose?',a:['The competent authority requires radiotelephone communications','AIS must be switched off','Radar use is prohibited'],c:0,w:'B.11 indicates a radiotelephony requirement.'},
 {q:'Which is part of the Inland AIS data set?',a:['Navigational status','Engine oil pressure','Galley water level'],c:0,w:'Navigational status is one of the operational AIS fields.'},
 {q:'A small craft voluntarily uses AIS. What accompanying equipment does the harmonized rule require?',a:['Working radiotelephone receiving the ship-to-ship channel','A second AIS transponder','A satellite telephone'],c:0,w:'Small craft using AIS must also have working radiotelephone equipment operating in receiving mode on ship-to-ship.'},
 {q:'You are in a designated reporting sector and your covered voyage data change. What do you do?',a:['Notify the competent authority immediately','Wait until the next lock','Update it at the end of the day'],c:0,w:'Article 8.02 requires immediate notification of changes to covered data.'},
@@ -27618,8 +27618,8 @@ const CHECK=[
 ];
 const APPLY=[
 {t:'Blind bend ahead',s:'Your vessel carries working radiotelephone equipment and you are approaching a blind section.',q:'What is the correct information action?',a:['Make the required ship-to-ship report before entering','Wait until another vessel calls you','Use AIS only'],c:0,w:'The CEVNI radiotelephony rule requires the report before entry.'},
-{t:'AIS status is stale',s:'Your AIS still shows “moored” after you have got under way.',q:'What should you do?',a:['Update the navigational status immediately','Leave it until the destination','Switch AIS off to hide the error'],c:0,w:'Navigational status is one of the fields the boatmaster must update when it changes.'},
-{t:'Reporting-sector delay',s:'You stop inside a mandatory reporting sector and the interruption will exceed two hours.',q:'What is required?',a:['Report the beginning and end of the interruption','Nothing until departure','Only change your AIS destination'],c:0,w:'Article 8.02 specifically makes an interruption over two hours reportable.'},
+{t:'AIS status is stale',s:'Your AIS still shows “moored” after you have got under way.',q:'Your AIS still shows “moored” after getting under way. What should you do?',a:['Update the navigational status immediately','Leave it until the destination','Switch AIS off to hide the error'],c:0,w:'Navigational status is one of the fields the boatmaster must update when it changes.'},
+{t:'Reporting-sector delay',s:'You stop inside a mandatory reporting sector and the interruption will exceed two hours.',q:'A stop inside a mandatory reporting sector will exceed two hours. What reporting action is required?',a:['Report the beginning and end of the interruption','Nothing until departure','Only change your AIS destination'],c:0,w:'Article 8.02 specifically makes an interruption over two hours reportable.'},
 {t:'Radar contact in poor visibility',s:'An oncoming vessel appears on radar in a situation governed by the radar-navigation provisions.',q:'What information process should follow?',a:['Use the prescribed radiotelephone contact and agree the passing procedure','Assume AIS gives you priority','Continue without contact because radar is sufficient'],c:0,w:'CEVNI radar navigation combines the radar picture with radiotelephone communication.'},
 {t:'Small craft with AIS',s:'A small craft has elected to operate AIS but the ship-to-ship radio receiver is not working.',q:'Is that configuration compliant with the harmonized CEVNI AIS provision?',a:['No — working radio receiving ship-to-ship is also required','Yes — AIS replaces radio','Yes, if visibility is good'],c:0,w:'Article 4.07 expressly couples small-craft AIS use with working ship-to-ship radio reception.'},
 {t:'Local authority notice',s:'The waterway authority publishes an AIS/reporting requirement for the sector that differs from the generic training example.',q:'What should the passage plan use?',a:['The applicable current local requirement within the CEVNI framework','Ignore it and use only the generic lesson','Use maritime COLREG reporting instead'],c:0,w:'The regional/national layer is part of CEVNI implementation.'}
@@ -27664,7 +27664,7 @@ window.PW16222_MODULE8={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.62.23 — MODULE 09 -->
+<!-- PROJECT WATCH 1.62.25 — MODULE 09 -->
 <style id="pw16223-module9-style">
 #cevniPage .pw169Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw169Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27695,7 +27695,7 @@ window.PW16222_MODULE8={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16223-module9">
 (function(){
-'use strict'; const BUILD='1.62.23';
+'use strict'; const BUILD='1.62.25';
 const TEACH=[
 ['PASSAGE READINESS STARTS WITH A SAFE VESSEL','CEVNI requires vessels to be constructed, rigged, crewed and operated so that those on board and navigation are safe. Loading must not exceed maximum draught, impair stability or create an unacceptable loss of view.','Before departure, confirm the vessel, people, load and visibility are fit for the intended waterway.'],
 ['DOCUMENTS AND LOCAL RULES','CEVNI Article 1.10 sets the onboard-document framework, while applicable international, regional and national rules can require additional papers. Chapter 9 expressly allows competent authorities to add requirements.','Passage readiness includes the documents and permissions actually required for your vessel and route — not a generic one-size-fits-all list.'],
@@ -27738,7 +27738,7 @@ const CHECK=[
 ];
 const APPLY=[
 {t:'Departure with obstructed view',s:'Deck cargo has been positioned so that the boatmaster’s direct view ahead no longer meets the applicable requirement.',q:'What is the safe CEVNI decision?',a:['Correct the loading/view problem before departure','Depart and rely on AIS','Depart only in daylight'],c:0,w:'Passage readiness fails if the loading condition breaches Article 1.07.'},
-{t:'Casualty alongside',s:'Another vessel has suffered an accident and people are in danger. You can assist without placing your own vessel in danger.',q:'What should you do?',a:['Give immediate assistance','Continue because only authorities may assist','Wait until formally requested'],c:0,w:'Article 1.16 creates an immediate assistance duty in this situation.'},
+{t:'Casualty alongside',s:'Another vessel has suffered an accident and people are in danger. You can assist without placing your own vessel in danger.',q:'People on another vessel are in danger and you can assist without endangering your own vessel. What should you do?',a:['Give immediate assistance','Continue because only authorities may assist','Wait until formally requested'],c:0,w:'Article 1.16 creates an immediate assistance duty in this situation.'},
 {t:'Grounding in a bend',s:'Your vessel grounds near the fairway where traffic cannot see the obstruction early.',q:'What combination is required?',a:['Notify the competent authority and warn approaching traffic','Only display deck lights','Only call your destination marina'],c:0,w:'Article 1.17 requires notification and, where necessary, timely warning to approaching traffic.'},
 {t:'Engine-room oil spill',s:'Oil is escaping and there is a threat it may enter the waterway.',q:'What is the correct response?',a:['Contain/stop it if safe and notify the nearest competent authority without delay with spill details','Wash it into the water before it spreads onboard','Wait to see whether it reaches the water'],c:0,w:'Chapter 10 requires prevention plus immediate notification of accidental or threatened prohibited discharge.'},
 {t:'Waste bin decision',s:'Used oily rags and ordinary household refuse have accumulated onboard.',q:'What is the correct management approach?',a:['Keep waste categories appropriately separated and deliver through the proper reception route','Burn them onboard','Put both into the bilge'],c:0,w:'CEVNI requires separate collection and prohibits burning waste onboard.'},
@@ -27781,6 +27781,120 @@ const prev=window.cevniOpenLesson;window.cevniOpenLesson=function(i,s=0){if(i===
 function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[8]){CEVNI_MODULES[8].title='Safety, Environment & Passage Readiness';CEVNI_MODULES[8].desc='Prepare the vessel and passage, protect people and the waterway, and respond correctly when normal navigation breaks down.'}}catch(e){}}
 const oi=window.cevniInit;window.cevniInit=function(){names();let r=oi?oi():undefined;names();sync();return r};sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
 window.PW16223_MODULE9={build:BUILD,teach:TEACH.length,see:SEE.length,practice:PRACTICE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,testModeJump:true,audioTouched:false};
+})();
+</script>
+
+
+<script id="pw16224-system-audit-manifest">
+window.PW16224_SYSTEM_AUDIT={
+  build:'1.62.25',
+  baseline:'1.62.23',
+  scope:'CEVNI modules 1-9 integration hardening',
+  modules:9,
+  finalMockSeparate:true,
+  questionWordingHardened:true,
+  answerTruthChanged:false,
+  progressionContractChanged:false,
+  audioEngineChanged:false,
+  hornChanged:false,
+  imageryBeautificationDeferred:true
+};
+</script>
+
+
+<!-- PROJECT WATCH 1.62.25 — SEQUENTIAL TEST MODE -->
+<style id="pw16225-testmode-style">
+#pw16225Panel{position:fixed;right:18px;bottom:18px;z-index:99999;width:min(430px,calc(100vw - 36px));max-height:82vh;overflow:auto;background:#041f2c;border:2px solid #f0b844;border-radius:16px;padding:14px;box-shadow:0 12px 36px #0009;color:#eaf8ff;display:none}
+#pw16225Panel.open{display:block}
+#pw16225Panel h3{margin:0 0 5px}.pw16225Small{font-size:12px;color:#9fc1cd}.pw16225Q{margin-top:11px;padding:12px;background:#072d3d;border-radius:10px;line-height:1.4}
+.pw16225A{display:grid;gap:7px;margin-top:9px}.pw16225A button{text-align:left;width:100%}
+.pw16225A button.correct{background:#176a4b!important;border-color:#63e6a6!important}
+.pw16225A button.wrong{background:#633!important}
+.pw16225Controls{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.pw16225Controls button{width:auto}
+#pw16225Reset{background:#a36b0d!important}
+</style>
+<script id="pw16225-sequential-testmode">
+(function(){
+'use strict';
+const BUILD='1.62.25';
+let items=[],pos=0,revealed=false,open=false;
+
+function collect(){
+  items=[];
+  // Collect assessment-style objects from the live source text. This is a QA navigator,
+  // not learner progression, so it never writes module completion.
+  const scripts=[...document.scripts].map(x=>x.textContent||'').join('\n');
+  const rx=/\{q:'((?:\\'|[^'])*)',a:\[([^\]]*)\],c:(\d+),w:'((?:\\'|[^'])*)'\}/g;
+  let m,n=0;
+  while((m=rx.exec(scripts))){
+    const answers=[...m[2].matchAll(/'((?:\\'|[^'])*)'/g)].map(x=>x[1].replace(/\\'/g,"'"));
+    const c=+m[3];
+    if(answers.length && c<answers.length){
+      items.push({q:m[1].replace(/\\'/g,"'"),a:answers,c,w:m[4].replace(/\\'/g,"'"),n:++n});
+    }
+  }
+  // Some older modules use double-quoted/object variants. Harvest those from known global banks when exposed.
+  const seen=new Set(items.map(x=>x.q+'|'+x.a.join('|')));
+  function walk(v,depth=0){
+    if(!v||depth>4)return;
+    if(Array.isArray(v)){v.forEach(x=>walk(x,depth+1));return}
+    if(typeof v==='object'){
+      if(typeof v.q==='string' && Array.isArray(v.a) && Number.isInteger(v.c) && v.c>=0 && v.c<v.a.length){
+        let key=v.q+'|'+v.a.join('|');
+        if(!seen.has(key)){seen.add(key);items.push({q:v.q,a:v.a.slice(),c:v.c,w:v.w||v.why||v.feedback||'',n:items.length+1})}
+      }
+      Object.keys(v).forEach(k=>{if(!/window|document|parent|top|self/i.test(k))try{walk(v[k],depth+1)}catch(e){}})
+    }
+  }
+  ['CEVNI_QUESTIONS','CEVNI_MODULES','CEVNI_DATA','PW_CEVNI','cevniData'].forEach(k=>{try{walk(window[k])}catch(e){}});
+  return items.length;
+}
+function panel(){
+ let p=document.getElementById('pw16225Panel');
+ if(!p){p=document.createElement('aside');p.id='pw16225Panel';document.body.appendChild(p)}
+ return p;
+}
+function render(){
+ let p=panel(); p.classList.toggle('open',open); if(!open)return;
+ if(!items.length)collect();
+ if(!items.length){p.innerHTML='<h3>TEST MODE</h3><p>No assessment objects found.</p>';return}
+ pos=Math.max(0,Math.min(pos,items.length-1)); let x=items[pos];
+ p.innerHTML=`<h3>🧪 TEST MODE • FULL QUESTION WALK</h3>
+ <div class="pw16225Small">QA ONLY • does not alter learner progress • Build ${BUILD}</div>
+ <div class="pw16225Small">Question ${pos+1} of ${items.length}</div>
+ <div class="pw16225Q"><b>${x.q}</b></div>
+ <div class="pw16225A">${x.a.map((a,i)=>`<button data-pw16225-answer="${i}" class="${revealed?(i===x.c?'correct':''):''}">${String.fromCharCode(65+i)} • ${a}${revealed&&i===x.c?' ✓':''}</button>`).join('')}</div>
+ ${revealed&&x.w?`<div class="pw16225Q"><b>Answer note:</b> ${x.w}</div>`:''}
+ <div class="pw16225Controls">
+ <button id="pw16225Reset">↺ RESET TO QUESTION 1</button>
+ <button data-pw16225-prev ${pos===0?'disabled':''}>← PREVIOUS</button>
+ <button data-pw16225-next>${pos===items.length-1?'END OF BANK':'NEXT →'}</button>
+ <button data-pw16225-close>CLOSE TEST MODE</button>
+ </div>`;
+}
+function start(reset=true){collect();open=true;if(reset)pos=0;revealed=false;render()}
+function toggle(){open?close():start(false)}
+function close(){open=false;render()}
+document.addEventListener('click',function(e){
+ let t=e.target;
+ if(t.id==='pw16225Reset'){pos=0;revealed=false;render();return}
+ if(t.closest('[data-pw16225-answer]')){let b=t.closest('[data-pw16225-answer]');revealed=true;let i=+b.dataset.pw16225Answer;if(i!==items[pos].c)b.classList.add('wrong');render();return}
+ if(t.closest('[data-pw16225-next]')){if(pos<items.length-1)pos++;revealed=false;render();return}
+ if(t.closest('[data-pw16225-prev]')){if(pos>0)pos--;revealed=false;render();return}
+ if(t.closest('[data-pw16225-close]')){close();return}
+});
+function wireExisting(){
+ [...document.querySelectorAll('button,a')].forEach(el=>{
+   if((el.textContent||'').trim().toUpperCase().includes('TEST MODE') && !el.dataset.pw16225Wired){
+     el.dataset.pw16225Wired='1';
+     el.addEventListener('click',function(ev){ev.preventDefault();ev.stopImmediatePropagation();start(true)},true);
+   }
+ });
+}
+const mo=new MutationObserver(wireExisting);mo.observe(document.documentElement,{childList:true,subtree:true});
+document.addEventListener('DOMContentLoaded',wireExisting);setTimeout(wireExisting,100);setTimeout(wireExisting,700);
+window.PW_TEST_MODE={start:()=>start(true),resume:()=>start(false),reset:()=>{pos=0;revealed=false;render()},next:()=>{if(pos<items.length-1)pos++;revealed=false;render()},close,collect,count:()=>items.length};
+window.PW16225_TEST_MODE={build:BUILD,sequential:true,resetToFirst:true,revealCorrect:true,nonPersistent:true};
 })();
 </script>
 
