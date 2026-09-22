@@ -1,0 +1,3382 @@
+[
+  {
+    "id": "PW-CEVNI-M01-Q001",
+    "course": "CEVNI",
+    "module": 1,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "Which statement is safest before entering an unfamiliar CEVNI waterway?",
+    "choices": [
+      "Check the applicable local rules and competent-authority information",
+      "Assume CEVNI removes every local rule",
+      "Use COLREGs only"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M01-Q002",
+    "course": "CEVNI",
+    "module": 1,
+    "stage": "APPLY",
+    "order": 2,
+    "question": "You approach an unfamiliar European inland waterway. What should be established before relying on Project Watch teaching?",
+    "choices": [
+      "The applicable national/local navigation rules and competent-authority information",
+      "Only the COLREG steering rules",
+      "Only your chartplotter route"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI is a harmonised basis, but applicable national, regional and local provisions must be checked.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_scenario"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M01-Q003",
+    "course": "CEVNI",
+    "module": 1,
+    "stage": "MOCK_SOURCE",
+    "order": 3,
+    "question": "CEVNI primarily provides what?",
+    "choices": [
+      "Core harmonised rules for inland-waterway traffic",
+      "A global ocean racing code",
+      "A chart datum standard"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M01-Q004",
+    "course": "CEVNI",
+    "module": 1,
+    "stage": "MOCK_SOURCE",
+    "order": 4,
+    "question": "Which statement about local rules is correct?",
+    "choices": [
+      "CEVNI removes all local rules",
+      "Applicable national/regional/local provisions still need checking",
+      "Local rules matter only to commercial vessels"
+    ],
+    "correctIndex": 1,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M02-Q001",
+    "course": "CEVNI",
+    "module": 2,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "Why are vessel dimensions especially important inland?",
+    "choices": [
+      "They can determine whether depth, width and headroom restrictions can be met",
+      "They replace the need for a lookout",
+      "They determine AIS right of way"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M02-Q002",
+    "course": "CEVNI",
+    "module": 2,
+    "stage": "ASSESSMENT",
+    "order": 2,
+    "question": "What is the main purpose of the Chapter 2 identification markings taught here?",
+    "choices": [
+      "To identify or describe the vessel",
+      "To show current give-way status",
+      "To replace navigation lights"
+    ],
+    "correctIndex": 0,
+    "explanation": "Identity markings tell you which vessel/craft you are dealing with; current navigational status comes from the applicable signals and context.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M02-Q003",
+    "course": "CEVNI",
+    "module": 2,
+    "stage": "ASSESSMENT",
+    "order": 3,
+    "question": "For a small craft, what should you look for first when identifying it?",
+    "choices": [
+      "Its prescribed official registration mark, where one is prescribed",
+      "A maximum-draught mark in every case",
+      "A blue cone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Small craft use the prescribed official registration marks; CEVNI provides fallback identification where such marks are not prescribed.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M02-Q004",
+    "course": "CEVNI",
+    "module": 2,
+    "stage": "ASSESSMENT",
+    "order": 4,
+    "question": "What do maximum-draught marks indicate?",
+    "choices": [
+      "The marked maximum draught level",
+      "The vessel’s current speed",
+      "The side on which to overtake"
+    ],
+    "correctIndex": 0,
+    "explanation": "They mark the maximum draught level; they are not manoeuvring or traffic signals.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M02-Q005",
+    "course": "CEVNI",
+    "module": 2,
+    "stage": "ASSESSMENT",
+    "order": 5,
+    "question": "A vessel capable of drawing 1 metre or more, other than small craft, is associated with what additional Chapter 2 feature?",
+    "choices": [
+      "Draught scales",
+      "A compulsory blue cone",
+      "A fixed overtaking signal"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI provides draught scales for these vessels, with presentation described in Annex 2.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M02-Q006",
+    "course": "CEVNI",
+    "module": 2,
+    "stage": "ASSESSMENT",
+    "order": 6,
+    "question": "Where will Project Watch teach the detailed navigation light and day-signal patterns?",
+    "choices": [
+      "Module 4 — Lights & Visual Signals",
+      "Module 2 only",
+      "The final mock only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Module 2 separates physical identity/draught markings from detailed operational visual signals, which belong in Module 4.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q001",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "What does Annex 7 group B contain?",
+    "choices": [
+      "Mandatory signs",
+      "Prohibitory signs",
+      "Informative signs"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q002",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "APPLY",
+    "order": 2,
+    "question": "A mandatory waterway sign conflicts with your preferred route. What is the correct training principle?",
+    "choices": [
+      "Ignore it if AIS shows no traffic",
+      "Comply with the sign and assess the local navigation situation",
+      "Follow the route because your vessel is small"
+    ],
+    "correctIndex": 1,
+    "explanation": "A mandatory sign prescribes an action or direction. It is not merely a route suggestion.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_scenario"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q003",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 3,
+    "question": "Annex 7 group A contains which signs?",
+    "choices": [
+      "Prohibitory",
+      "Informative",
+      "Recommendatory"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q004",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 4,
+    "question": "Annex 7 group B contains which signs?",
+    "choices": [
+      "Restrictive",
+      "Mandatory",
+      "Auxiliary only"
+    ],
+    "correctIndex": 1,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q005",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 5,
+    "question": "Annex 7 group C contains which signs?",
+    "choices": [
+      "Restrictive",
+      "Prohibitory",
+      "Informative"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q006",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 6,
+    "question": "Annex 7 group D contains which signs?",
+    "choices": [
+      "Recommendatory",
+      "Mandatory",
+      "Distress"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q007",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 7,
+    "question": "Annex 7 group E contains which signs?",
+    "choices": [
+      "Informative",
+      "Prohibitory",
+      "Sound"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q008",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 8,
+    "question": "A.1 means:",
+    "choices": [
+      "No entry",
+      "No anchoring",
+      "No turning"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q009",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 9,
+    "question": "A.2 means:",
+    "choices": [
+      "No overtaking",
+      "No berthing",
+      "No wash"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q010",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 10,
+    "question": "B.1 requires a vessel to:",
+    "choices": [
+      "Proceed in the direction shown",
+      "Stop immediately",
+      "Sound one long blast"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q011",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 11,
+    "question": "B.7 requires a vessel to:",
+    "choices": [
+      "Give a sound signal",
+      "Call on VHF",
+      "Display a blue board"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q012",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 12,
+    "question": "C.1 warns that:",
+    "choices": [
+      "Depth of water is limited",
+      "Headroom is limited",
+      "Width is limited"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q013",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 13,
+    "question": "D.1 identifies:",
+    "choices": [
+      "A recommended opening",
+      "A prohibited opening",
+      "A ferry crossing"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q014",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 14,
+    "question": "E.1 means:",
+    "choices": [
+      "Entry permitted",
+      "No entry",
+      "Berthing prohibited"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q015",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 15,
+    "question": "E.2 identifies:",
+    "choices": [
+      "An overhead cable crossing",
+      "A weir",
+      "A ferry"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q016",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 16,
+    "question": "Waterway marking can indicate:",
+    "choices": [
+      "Fairway limits and hazards",
+      "Only marina entrances",
+      "Only borders"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q017",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "MOCK_SOURCE",
+    "order": 17,
+    "question": "A recommendatory sign should be:",
+    "choices": [
+      "Taken into account as navigation guidance",
+      "Treated as distress",
+      "Ignored by pleasure craft"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q018",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 18,
+    "question": "Which Annex 7 family contains prohibitory signs?",
+    "choices": [
+      "A",
+      "B",
+      "E"
+    ],
+    "correctIndex": 0,
+    "explanation": "A is the prohibitory family.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q019",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 19,
+    "question": "A C.2 sign gives what kind of restriction?",
+    "choices": [
+      "Headroom",
+      "Speed",
+      "Overtaking"
+    ],
+    "correctIndex": 0,
+    "explanation": "C.2 is limited headroom.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q020",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 20,
+    "question": "What does D.1 identify?",
+    "choices": [
+      "A recommended opening",
+      "A compulsory radio channel",
+      "A no-entry section"
+    ],
+    "correctIndex": 0,
+    "explanation": "D.1 marks a recommended opening.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q021",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 21,
+    "question": "Which annex separately covers buoyage and waterway marking?",
+    "choices": [
+      "Annex 8",
+      "Annex 6",
+      "Annex 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Annex 8 is the waterway buoyage/marking annex.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q022",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 22,
+    "question": "If an auxiliary panel is fitted with a main sign, what should you do?",
+    "choices": [
+      "Read it as part of the complete instruction",
+      "Ignore it unless at night",
+      "Treat it as optional decoration"
+    ],
+    "correctIndex": 0,
+    "explanation": "Auxiliary panels supplement or clarify the main sign.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q023",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 23,
+    "question": "What is the quickest first clue to the nature of an Annex 7 sign?",
+    "choices": [
+      "Its A–E family",
+      "The vessel name",
+      "The nearest buoy number"
+    ],
+    "correctIndex": 0,
+    "explanation": "The A–E family identifies prohibition, obligation, restriction, recommendation or information.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q024",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 24,
+    "question": "Which pair are physical restrictions?",
+    "choices": [
+      "C.1 depth and C.2 headroom",
+      "A.1 entry and A.2 overtaking",
+      "D.1 opening and E.1 entry permitted"
+    ],
+    "correctIndex": 0,
+    "explanation": "C.1 and C.2 are restrictive signs for depth and headroom.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q025",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 25,
+    "question": "What is the difference between D.1 and A.1 at bridge openings?",
+    "choices": [
+      "D.1 recommends an opening; A.1 prohibits entry",
+      "Both prohibit entry",
+      "Both merely provide information"
+    ],
+    "correctIndex": 0,
+    "explanation": "The families have different regulatory meanings.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q026",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 26,
+    "question": "Where do fairway limits, obstructions and similar waterway marking belong in this module?",
+    "choices": [
+      "Annex 8",
+      "Annex 2",
+      "Annex 6"
+    ],
+    "correctIndex": 0,
+    "explanation": "Annex 8 covers buoyage and marking of waterways.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M03-Q027",
+    "course": "CEVNI",
+    "module": 3,
+    "stage": "ASSESSMENT",
+    "order": 27,
+    "question": "What must be considered alongside the harmonised CEVNI signs?",
+    "choices": [
+      "Applicable competent-authority and local provisions",
+      "Only COLREG Rule 5",
+      "Nothing else anywhere in Europe"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI is harmonised, while national/regional/local provisions can still apply.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q001",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "What is the correct recognition method?",
+    "choices": [
+      "Combine the visual signal with vessel/aspect/operation context",
+      "Guess from colour alone",
+      "Let AIS replace visual recognition"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q002",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 2,
+    "question": "From directly ahead, which core lights identify a normal motorized vessel proceeding alone?",
+    "choices": [
+      "White masthead plus red and green sidelights",
+      "White stern light only",
+      "Two blue all-round lights"
+    ],
+    "correctIndex": 0,
+    "explanation": "The ahead sector can show the masthead and both sidelights; the stern light covers the after sector.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q003",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 3,
+    "question": "A vessel is under sail but is also using its engine. What day shape does CEVNI prescribe?",
+    "choices": [
+      "Black cone, point downwards",
+      "Black ball",
+      "Yellow bicone"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.12(3) prescribes a black cone with the point downwards.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q004",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 4,
+    "question": "What does a lead motorized vessel of a towed convoy use instead of a white stern light?",
+    "choices": [
+      "A yellow stern light",
+      "A blue stern light",
+      "No stern light"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.09(1) specifies a yellow stern light for the towing/auxiliary vessel.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q005",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 5,
+    "question": "Which night pattern is distinctive at the head of a pushed convoy?",
+    "choices": [
+      "Three masthead lights in a triangle",
+      "Two red lights vertically",
+      "One green all-round light"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.10 uses three masthead lights arranged as an equilateral triangle with a horizontal base.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q006",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 6,
+    "question": "Two blue all-round lights / two blue cones correspond to which CEVNI 3.14 category?",
+    "choices": [
+      "Specified health-hazard substances",
+      "Every passenger vessel",
+      "A vessel at anchor"
+    ],
+    "correctIndex": 0,
+    "explanation": "The two-mark category is tied to specified health-hazard substances under the ADN references in 3.14.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q007",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 7,
+    "question": "For a ferry not moving independently, what is the vertical night pair?",
+    "choices": [
+      "Green above white",
+      "White above green",
+      "Red above white"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.16(1) specifies bright green above bright white, both all-round.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q008",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 8,
+    "question": "What is the normal basic night marking for a stationary vessel?",
+    "choices": [
+      "An ordinary white all-round light",
+      "A yellow flashing light",
+      "Red over green"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.20 prescribes an ordinary white all-round light, with a permitted alternative bow/stern arrangement.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q009",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 9,
+    "question": "On floating equipment at work, what colour marks the side where the fairway is clear?",
+    "choices": [
+      "Green",
+      "Red only",
+      "Blue"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.25 marks the clear side with two green lights at night or two green bicones by day.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q010",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 10,
+    "question": "What vertical all-round-light pattern marks a vessel whose ability to manoeuvre is limited by work or underwater operations?",
+    "choices": [
+      "Red-white-red",
+      "Green-white-green",
+      "White-red-white"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.34 prescribes red-white-red vertically, with ball-bicone-ball by day.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q011",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 11,
+    "question": "What is the basic trawler fishing signal by night?",
+    "choices": [
+      "Green over white",
+      "Red over green",
+      "White over yellow"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.35 prescribes green over white all-round lights for a trawler.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q012",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 12,
+    "question": "Which is a CEVNI visual distress signal?",
+    "choices": [
+      "A red hand flare",
+      "A single green all-round light",
+      "A yellow cylinder"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI 3.30 includes red hand/parachute flares among the visual distress signals.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q013",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 13,
+    "question": "What does CEVNI define as an all-round light?",
+    "choices": [
+      "A light visible throughout 360°",
+      "A light visible for 225°",
+      "A light visible only from astern"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 3.01 defines an all-round light as projecting throughout a horizontal arc of 360°.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q014",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 14,
+    "question": "What is the masthead-light horizontal arc?",
+    "choices": [
+      "225°",
+      "135°",
+      "112°30′"
+    ],
+    "correctIndex": 0,
+    "explanation": "The masthead light is 225°, from ahead to 22°30′ abaft the beam on each side.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q015",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 15,
+    "question": "Which marking is additional rather than a replacement for normal vessel marking?",
+    "choices": [
+      "CEVNI 3.14 blue dangerous-substance marking",
+      "The normal stern light",
+      "The basic sidelights"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 3.14 explicitly adds its blue light/cone marking to the marking prescribed elsewhere.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q016",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 16,
+    "question": "Which vessel/formation uses the triangular three-masthead-light pattern?",
+    "choices": [
+      "A pushed convoy",
+      "A normal sailing vessel",
+      "A stationary small craft"
+    ],
+    "correctIndex": 0,
+    "explanation": "The head of a pushed convoy carries the three-light triangular arrangement under 3.10.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M04-Q017",
+    "course": "CEVNI",
+    "module": 4,
+    "stage": "ASSESSMENT",
+    "order": 17,
+    "question": "Why must Project Watch keep a local-rules layer with these visuals?",
+    "choices": [
+      "Chapter 9 permits specified regional/national variations",
+      "Because CEVNI has no visual rules",
+      "Because Annex 3 overrides the regulation text"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI is harmonized, but Chapter 9 allows competent-authority variations to specified Chapter 3 provisions.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q001",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "What do three short blasts mean?",
+    "choices": [
+      "I am going astern",
+      "I am altering to port",
+      "Caution"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q002",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 2,
+    "question": "A short blast lasts approximately:",
+    "choices": [
+      "1 second",
+      "4 seconds",
+      "10 seconds"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q003",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 3,
+    "question": "A long blast lasts approximately:",
+    "choices": [
+      "Quarter second",
+      "4 seconds",
+      "12 seconds"
+    ],
+    "correctIndex": 1,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q004",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 4,
+    "question": "A very short blast in the danger series lasts about:",
+    "choices": [
+      "Quarter second",
+      "One second",
+      "Four seconds"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q005",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 5,
+    "question": "One long blast means:",
+    "choices": [
+      "Caution",
+      "Altering to starboard",
+      "Going astern"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q006",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 6,
+    "question": "One short blast means:",
+    "choices": [
+      "Altering course to starboard",
+      "Altering course to port",
+      "Unable to manoeuvre"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q007",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 7,
+    "question": "Two short blasts mean:",
+    "choices": [
+      "Altering course to port",
+      "Going astern",
+      "Caution"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q008",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 8,
+    "question": "Three short blasts mean:",
+    "choices": [
+      "Going astern",
+      "Turning to starboard",
+      "Do not approach"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q009",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 9,
+    "question": "Four short blasts mean:",
+    "choices": [
+      "Unable to manoeuvre",
+      "Entry permitted",
+      "Overtaking requested"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q010",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 10,
+    "question": "A series of at least six very short blasts warns of:",
+    "choices": [
+      "Imminent danger of collision",
+      "A lock opening",
+      "A recommended route"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q011",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "MOCK_SOURCE",
+    "order": 11,
+    "question": "Radiotelephony provisions are:",
+    "choices": [
+      "Part of the CEVNI framework",
+      "Not used inland",
+      "Only a weather service"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q012",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 12,
+    "question": "About how long is a CEVNI short blast?",
+    "choices": [
+      "About 1 second",
+      "About 4 seconds",
+      "About 10 seconds"
+    ],
+    "correctIndex": 0,
+    "explanation": "Annex 6 defines a short blast as about one second.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q013",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 13,
+    "question": "What does one long blast mean in the Annex 6 general signals?",
+    "choices": [
+      "Caution",
+      "Going astern",
+      "Unable to manoeuvre"
+    ],
+    "correctIndex": 0,
+    "explanation": "One long blast is the general caution signal.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q014",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 14,
+    "question": "What does three short blasts mean?",
+    "choices": [
+      "Going astern",
+      "Turning to port",
+      "Do not approach"
+    ],
+    "correctIndex": 0,
+    "explanation": "Three short blasts mean “I am going astern”.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q015",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 15,
+    "question": "Which pattern means “I cannot be overtaken”?",
+    "choices": [
+      "Five short blasts",
+      "Four short blasts",
+      "Two long and two short"
+    ],
+    "correctIndex": 0,
+    "explanation": "Five short blasts are sounded by the vessel to be overtaken when it cannot be overtaken.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q016",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 16,
+    "question": "Which pattern requests overtaking on the port side?",
+    "choices": [
+      "Two long followed by two short",
+      "Two long followed by one short",
+      "One long followed by two short"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two long + two short requests overtaking on the port side.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q017",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 17,
+    "question": "What does one long followed by two short mean in the turning signals?",
+    "choices": [
+      "Turning to port",
+      "Turning to starboard",
+      "Going to cross"
+    ],
+    "correctIndex": 0,
+    "explanation": "One long + two short is the turning-to-port signal.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q018",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 18,
+    "question": "A vessel proceeding alone in reduced visibility and not navigating by radar gives what?",
+    "choices": [
+      "One long blast at intervals of not more than one minute",
+      "Five short blasts every five minutes",
+      "Three long blasts continuously"
+    ],
+    "correctIndex": 0,
+    "explanation": "That is the Annex 6 non-radar reduced-visibility signal for a vessel proceeding alone.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q019",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 19,
+    "question": "What does sign B.11 indicate?",
+    "choices": [
+      "Radiotelephone communications are required by the competent authority",
+      "Sound signals are prohibited",
+      "AIS must be switched off"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 4.05 links B.11 to required radiotelephone communications.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q020",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 20,
+    "question": "How is a “series of very short blasts” constructed?",
+    "choices": [
+      "At least six blasts of about ¼ second with roughly ¼-second silences",
+      "Exactly five one-second blasts",
+      "Two four-second blasts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Annex 6 specifies at least six very-short blasts, each about a quarter-second, separated by similar silences.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q021",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 21,
+    "question": "Which general signal means “unable to manoeuvre”?",
+    "choices": [
+      "Four short blasts",
+      "Three short blasts",
+      "One long blast"
+    ],
+    "correctIndex": 0,
+    "explanation": "Four short blasts mean unable to manoeuvre.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q022",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 22,
+    "question": "Which pattern is the CEVNI imminent-danger-of-collision signal?",
+    "choices": [
+      "A series of at least six very short blasts",
+      "Five short blasts",
+      "Repeated long blasts"
+    ],
+    "correctIndex": 0,
+    "explanation": "The series of very short blasts communicates imminent danger of collision.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q023",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 23,
+    "question": "In a convoy, who normally needs to give the prescribed sound signals?",
+    "choices": [
+      "The vessel carrying the boatmaster",
+      "Every vessel simultaneously",
+      "Only the last vessel"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 4.01 provides that the vessel carrying the boatmaster gives the prescribed signal.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M05-Q024",
+    "course": "CEVNI",
+    "module": 5,
+    "stage": "ASSESSMENT",
+    "order": 24,
+    "question": "What is the correct relationship between radiotelephony and the navigation rules?",
+    "choices": [
+      "Radio supports the traffic picture but does not replace lookout, sound signals or the rules",
+      "Radio replaces sound signals whenever fitted",
+      "Radio removes the need to comply with local reporting requirements"
+    ],
+    "correctIndex": 0,
+    "explanation": "Radiotelephony is an operational communication tool within the wider CEVNI navigation framework.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q001",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "How should Inland AIS be treated?",
+    "choices": [
+      "As an aid, not a replacement for lookout",
+      "As a right-of-way display",
+      "As proof of another vessel’s intentions"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q002",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "MOCK_SOURCE",
+    "order": 2,
+    "question": "Inland AIS should be treated as:",
+    "choices": [
+      "An aid to navigation, not a replacement for lookout",
+      "A right-of-way display",
+      "A guarantee of intentions"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q003",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 3,
+    "question": "You identify another vessel more than 22.5° abaft its beam and are coming up on it. What encounter is this?",
+    "choices": [
+      "Overtaking",
+      "Meeting",
+      "Crossing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chapter 6 defines that geometry as overtaking.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q004",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 4,
+    "question": "Two ordinary vessels are crossing with collision risk and the other vessel is on your starboard side. What is the general rule?",
+    "choices": [
+      "Give way and, if circumstances permit, avoid crossing ahead",
+      "Maintain course because you are on its port side",
+      "Turn to port across its bow"
+    ],
+    "correctIndex": 0,
+    "explanation": "The vessel having the other to starboard gives way under the general crossing rule.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q005",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 5,
+    "question": "A motorized small craft is crossing a small sailing craft with collision risk. Which normally gives way?",
+    "choices": [
+      "The motorized small craft",
+      "The sailing small craft",
+      "Whichever is travelling more slowly"
+    ],
+    "correctIndex": 0,
+    "explanation": "Between those small-craft categories, motorized small craft give way to small sailing craft.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q006",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 6,
+    "question": "A sailing vessel is also using its engine. For CEVNI vessel-category purposes here, how is it treated?",
+    "choices": [
+      "As a motorized vessel",
+      "As a sailing vessel only",
+      "As a vessel with automatic priority"
+    ],
+    "correctIndex": 0,
+    "explanation": "A vessel under sail while using its own mechanical propulsion is considered motorized.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q007",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 7,
+    "question": "You want to overtake but the fairway is not unquestionably wide enough for simultaneous passage. What should you do?",
+    "choices": [
+      "Do not begin the overtaking manoeuvre",
+      "Overtake only on starboard",
+      "Sound first and overtake regardless"
+    ],
+    "correctIndex": 0,
+    "explanation": "Meeting or overtaking is permitted only where the fairway is unquestionably wide enough.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q008",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 8,
+    "question": "You are about to leave a berth. Your departure would force passing traffic into an abrupt speed change. What is the correct decision?",
+    "choices": [
+      "Wait until the manoeuvre can be made safely",
+      "Depart because vessels under way must always give way",
+      "Depart if you sound a signal"
+    ],
+    "correctIndex": 0,
+    "explanation": "Departure is governed by the safe-manoeuvre principle; signalling does not create priority.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q009",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 9,
+    "question": "An upstream and downstream vessel are meeting under the normal inland rule. Which normally gives way?",
+    "choices": [
+      "The upstream vessel",
+      "The downstream vessel",
+      "The larger vessel regardless of direction"
+    ],
+    "correctIndex": 0,
+    "explanation": "The upstream vessel gives way to the downstream vessel, with due regard to local circumstances and traffic.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q010",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 10,
+    "question": "A local competent-authority rule validly varies an identified Chapter 6 provision. Which rule do you use on that waterway?",
+    "choices": [
+      "The applicable local provision",
+      "The harmonized text regardless of local law",
+      "The COLREG rule regardless of inland regulation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chapter 9 permits specified regional or national deviations; the applicable local provision governs there.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q011",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 11,
+    "question": "Which description is CEVNI “crossing”?",
+    "choices": [
+      "An encounter that is neither meeting nor overtaking",
+      "Any encounter within a narrow channel",
+      "Only two sailing vessels approaching"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 6.01 defines crossing by excluding meeting and overtaking geometry.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q012",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 12,
+    "question": "What must be true before meeting or overtaking is permitted?",
+    "choices": [
+      "The fairway is unquestionably wide enough for simultaneous passage",
+      "Both vessels are travelling at the same speed",
+      "The overtaking vessel is less than 20 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 6.03 makes adequate fairway width a general condition.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q013",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 13,
+    "question": "Under the normal meeting rule with collision risk, vessels generally do what?",
+    "choices": [
+      "Veer to starboard to pass port-to-port",
+      "Both veer to port",
+      "The faster vessel always stops"
+    ],
+    "correctIndex": 0,
+    "explanation": "That is the normal Article 6.04 meeting rule, before applicable exceptions/local provisions.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q014",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 14,
+    "question": "When small craft meet vessels other than small craft, what is the small craft’s general responsibility?",
+    "choices": [
+      "Leave enough room for the other vessel to hold course and manoeuvre",
+      "Require the larger vessel to give way",
+      "Always stop in the fairway"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 6.02 places that responsibility on small craft.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q015",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 15,
+    "question": "With two sailing vessels crossing and wind on different sides, which gives way?",
+    "choices": [
+      "The vessel with wind on the port side",
+      "The vessel with wind on the starboard side",
+      "The leeward vessel in every case"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sailing-vessel crossing rule requires the port-wind vessel to give way.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q016",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 16,
+    "question": "Who bears responsibility for safely executing an overtaking manoeuvre?",
+    "choices": [
+      "The overtaking vessel",
+      "The vessel being overtaken alone",
+      "The nearest downstream vessel"
+    ],
+    "correctIndex": 0,
+    "explanation": "The overtaking vessel must ensure the manoeuvre can be carried out without danger.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q017",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 17,
+    "question": "Does sounding a manoeuvring signal by itself create a right to turn, depart or cross?",
+    "choices": [
+      "No — the manoeuvre must first be safe under the applicable rule",
+      "Yes — once the signal is sounded",
+      "Yes, but only for small craft"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sound signals communicate manoeuvre intentions/procedure; they do not remove the underlying safety obligation.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q018",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 18,
+    "question": "Why is a local-rule check part of Module 6?",
+    "choices": [
+      "Chapter 9 allows competent authorities to vary specified Chapter 6 provisions",
+      "All Chapter 6 rules are optional",
+      "CEVNI applies only at sea"
+    ],
+    "correctIndex": 0,
+    "explanation": "The harmonized base expressly includes a regional/national implementation layer.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q019",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 19,
+    "question": "A vessel approaches another from more than 22.5° abaft its beam. Which Chapter 6 encounter is it?",
+    "choices": [
+      "Overtaking",
+      "Crossing",
+      "Meeting"
+    ],
+    "correctIndex": 0,
+    "explanation": "That relative bearing is the overtaking definition.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q020",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 20,
+    "question": "Two motorized small craft meet with collision risk. What is the normal action?",
+    "choices": [
+      "Each veers to starboard to pass port-to-port",
+      "Each veers to port",
+      "Both stop immediately"
+    ],
+    "correctIndex": 0,
+    "explanation": "The small-craft meeting rule uses starboard alteration for port-to-port passing.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q021",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 21,
+    "question": "Two sailing vessels have the wind on the same side and are crossing with collision risk. Which gives way?",
+    "choices": [
+      "The windward vessel",
+      "The leeward vessel",
+      "The vessel on starboard tack regardless"
+    ],
+    "correctIndex": 0,
+    "explanation": "With wind on the same side, the windward vessel gives way to the leeward vessel.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q022",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 22,
+    "question": "What is the first safety test before overtaking?",
+    "choices": [
+      "Whether the fairway is unquestionably wide enough for simultaneous passage",
+      "Whether the other vessel has AIS",
+      "Whether your vessel is faster by at least 2 knots"
+    ],
+    "correctIndex": 0,
+    "explanation": "Adequate fairway width and the complete local traffic situation are fundamental.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q023",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 23,
+    "question": "Can a small craft require a non-small-craft vessel to give way under the general small-craft rule?",
+    "choices": [
+      "No",
+      "Yes, whenever approaching from starboard",
+      "Yes, whenever under 20 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "Small craft must leave such vessels enough room to hold course and manoeuvre.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M06-Q024",
+    "course": "CEVNI",
+    "module": 6,
+    "stage": "ASSESSMENT",
+    "order": 24,
+    "question": "What should a boatmaster do when a valid local rule differs from a CEVNI harmonized provision that Chapter 9 permits to be varied?",
+    "choices": [
+      "Follow the applicable local provision",
+      "Ignore the local provision",
+      "Choose whichever rule is easier"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI expressly provides for specified regional and national variations.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q001",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "Before entering a lock approach, what should you do?",
+    "choices": [
+      "Check local instructions and traffic arrangements",
+      "Assume seagoing rules are enough",
+      "Ignore signs if your craft is small"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q002",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "MOCK_SOURCE",
+    "order": 2,
+    "question": "Before entering a lock approach you should:",
+    "choices": [
+      "Check local instructions and traffic arrangements",
+      "Assume seagoing rules are sufficient",
+      "Ignore signs if under 20 m"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q003",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 3,
+    "question": "A lock shows one red light. What does it mean?",
+    "choices": [
+      "No entry — lock closed",
+      "Entry permitted",
+      "Exit permitted"
+    ],
+    "correctIndex": 0,
+    "explanation": "A single red entry light means no entry: lock closed.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q004",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 4,
+    "question": "The lock shows the preparation aspect. May you enter?",
+    "choices": [
+      "No — prepare, but wait for permission",
+      "Yes, immediately",
+      "Only if you are a small craft"
+    ],
+    "correctIndex": 0,
+    "explanation": "The preparation aspect still means no entry.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q005",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 5,
+    "question": "You are a small craft sharing a locking with larger vessels. When do you normally enter?",
+    "choices": [
+      "After the other vessels and when invited by lock staff",
+      "First, to keep clear of prop wash",
+      "Whenever you arrived first"
+    ],
+    "correctIndex": 0,
+    "explanation": "Small craft enter after the other vessels when sharing a lock and only when invited.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q006",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 6,
+    "question": "Can you overtake another vessel in a lock basin?",
+    "choices": [
+      "No",
+      "Yes, on starboard only",
+      "Yes, below 5 knots"
+    ],
+    "correctIndex": 0,
+    "explanation": "Overtaking in or near locks, especially lock basins, is prohibited.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q007",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 7,
+    "question": "Once made fast in a lock, when may mechanical propulsion be used again under the base rule?",
+    "choices": [
+      "When permitted to leave",
+      "As soon as the gates close",
+      "Whenever the line goes slack"
+    ],
+    "correctIndex": 0,
+    "explanation": "Mechanical propulsion is prohibited from making fast until permission to leave.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q008",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 8,
+    "question": "There are no lock lights or boards. What is the base CEVNI rule?",
+    "choices": [
+      "Do not enter or leave except by express order of lock staff",
+      "Proceed cautiously",
+      "Small craft may enter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Absence of signals is not permission.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q009",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 9,
+    "question": "What should a vessel do when approaching a lock basin?",
+    "choices": [
+      "Reduce speed",
+      "Increase speed to minimise delay",
+      "Sound continuously"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI requires reduced speed on approach.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q010",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 10,
+    "question": "What does a single green lock-entry light mean?",
+    "choices": [
+      "Entry permitted",
+      "Lock out of service",
+      "No entry, preparing"
+    ],
+    "correctIndex": 0,
+    "explanation": "One or two green entry lights permit entry.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q011",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 11,
+    "question": "Two red lights one above the other at lock entry mean what?",
+    "choices": [
+      "No entry — lock out of service",
+      "Entry permitted for small craft",
+      "No exit only"
+    ],
+    "correctIndex": 0,
+    "explanation": "The vertical pair of reds is the out-of-service indication.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q012",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 12,
+    "question": "During filling/emptying, what must happen to the vessel?",
+    "choices": [
+      "It remains made fast and the lines are tended to prevent impacts",
+      "It remains under propulsion against the wall",
+      "It drifts free in the chamber"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI requires the vessel to be made fast and lines handled appropriately.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q013",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 13,
+    "question": "What does A.10 at a bridge/weir opening control?",
+    "choices": [
+      "Navigation is prohibited outside the area between the boards",
+      "Maximum vessel speed",
+      "Mandatory anchoring"
+    ],
+    "correctIndex": 0,
+    "explanation": "A.10 confines navigation to the marked part of the opening.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q014",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 14,
+    "question": "Can competent authorities prescribe special bridge and lock rules?",
+    "choices": [
+      "Yes",
+      "No, CEVNI is identical everywhere",
+      "Only for commercial vessels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chapter 9 expressly permits specified regional/national variations.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q015",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 15,
+    "question": "What is the correct response to lock-staff instructions that supplement the base locking procedure?",
+    "choices": [
+      "Comply with them",
+      "Ignore them if you arrived first",
+      "Follow them only at night"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI requires vessels in locks and lock basins to comply with lock-staff instructions.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q016",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 16,
+    "question": "What does an A.7 bank-side sign prohibit?",
+    "choices": [
+      "Making fast to the bank on that side",
+      "Passing under bridges",
+      "Use of VHF"
+    ],
+    "correctIndex": 0,
+    "explanation": "A.7 prohibits making fast to the bank on the side where it is placed.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q017",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 17,
+    "question": "What is the normal order of passage through a lock basin?",
+    "choices": [
+      "Order of arrival, subject to specified priorities and lock-staff control",
+      "Small craft first",
+      "Fastest vessel first"
+    ],
+    "correctIndex": 0,
+    "explanation": "Arrival order is the base rule, with CEVNI priorities and operational instructions layered on top.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q018",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 18,
+    "question": "What must anchors normally be doing in locks and lock basins?",
+    "choices": [
+      "Fully raised unless in use",
+      "Trailing just below the surface",
+      "Ready to drag along the bottom"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI requires anchors fully raised unless they are actually being used.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q019",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 19,
+    "question": "When a lock-entry signal changes from preparation to green, what changes?",
+    "choices": [
+      "Entry becomes permitted",
+      "The lock becomes out of service",
+      "Only exit becomes permitted"
+    ],
+    "correctIndex": 0,
+    "explanation": "Green is the entry-permitted aspect.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q020",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 20,
+    "question": "Which statement about fenders in a lock is correct?",
+    "choices": [
+      "Fendering devices are required",
+      "Fenders are prohibited",
+      "Only passenger vessels require fenders"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI requires fendering devices; loose fenders must be floating.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q021",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 21,
+    "question": "What does Chapter 9 mean for bridge/lock passage planning?",
+    "choices": [
+      "Check competent-authority local requirements as well as the CEVNI base",
+      "No local rules can modify the procedure",
+      "Local rules apply only to ferries"
+    ],
+    "correctIndex": 0,
+    "explanation": "Specified bridge, weir and lock provisions may have regional/national special rules.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M07-Q022",
+    "course": "CEVNI",
+    "module": 7,
+    "stage": "ASSESSMENT",
+    "order": 22,
+    "question": "What is the safest interpretation of an absent lock signal?",
+    "choices": [
+      "No entry/exit without express lock-staff order",
+      "Permission to proceed",
+      "Permission for small craft only"
+    ],
+    "correctIndex": 0,
+    "explanation": "No prescribed signal is not a green light.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q001",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "If AIS and the visual picture disagree, what is the best principle?",
+    "choices": [
+      "Verify using all available means and maintain lookout",
+      "Trust AIS automatically",
+      "Ignore the visual picture"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q002",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "APPLY",
+    "order": 2,
+    "question": "You are approaching a lock with uncertain VHF/reporting arrangements. Best action?",
+    "choices": [
+      "Proceed into the approach and work it out later",
+      "Sound five short blasts automatically",
+      "Check the applicable lock instructions, radio channel and local procedure before committing"
+    ],
+    "correctIndex": 2,
+    "explanation": "Constrained infrastructure requires early preparation and compliance with local operating instructions.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_scenario"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q003",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "APPLY",
+    "order": 3,
+    "question": "AIS information and the visual situation do not agree. What is the correct principle?",
+    "choices": [
+      "Treat AIS as definitive",
+      "Maintain lookout and verify using all available means",
+      "Continue at the same speed because AIS is mandatory"
+    ],
+    "correctIndex": 1,
+    "explanation": "Inland AIS is an aid to navigation, not a replacement for lookout or judgement.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_scenario"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q004",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 4,
+    "question": "Before entering a blind section while equipped with radiotelephone, where does CEVNI require the report?",
+    "choices": [
+      "On the ship-to-ship channel",
+      "Only by AIS text message",
+      "On any leisure channel"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 4.05 requires a ship-to-ship report before blind sections, narrow channels, bridge openings and designated sections.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q005",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 5,
+    "question": "What does sign B.11 indicate?",
+    "choices": [
+      "The competent authority requires radiotelephone communications",
+      "AIS must be switched off",
+      "Radar use is prohibited"
+    ],
+    "correctIndex": 0,
+    "explanation": "B.11 indicates a radiotelephony requirement.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q006",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 6,
+    "question": "Which is part of the Inland AIS data set?",
+    "choices": [
+      "Navigational status",
+      "Engine oil pressure",
+      "Galley water level"
+    ],
+    "correctIndex": 0,
+    "explanation": "Navigational status is one of the operational AIS fields.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q007",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 7,
+    "question": "A small craft voluntarily uses AIS. What accompanying equipment does the harmonized rule require?",
+    "choices": [
+      "Working radiotelephone receiving the ship-to-ship channel",
+      "A second AIS transponder",
+      "A satellite telephone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Small craft using AIS must also have working radiotelephone equipment operating in receiving mode on ship-to-ship.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q008",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 8,
+    "question": "You are in a designated reporting sector and your covered voyage data change. What do you do?",
+    "choices": [
+      "Notify the competent authority immediately",
+      "Wait until the next lock",
+      "Update it at the end of the day"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 8.02 requires immediate notification of changes to covered data.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q009",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 9,
+    "question": "Your journey is interrupted for more than two hours in a reporting sector. What is required?",
+    "choices": [
+      "Report the beginning and end of the interruption",
+      "No further report is required",
+      "Switch off all navigation equipment"
+    ],
+    "correctIndex": 0,
+    "explanation": "The interruption itself becomes reportable.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q010",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 10,
+    "question": "Which statement best describes AIS?",
+    "choices": [
+      "A traffic-information aid whose data must be accurate; it does not replace safe navigation",
+      "A collision-avoidance system that always determines right of way",
+      "A replacement for radiotelephony"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI regulates AIS as navigation/traffic information equipment, not as a substitute for the boatmaster’s duties.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q011",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 11,
+    "question": "What should happen to Inland AIS entered data when relevant vessel information changes?",
+    "choices": [
+      "It is updated to correspond with the actual vessel/convoy",
+      "It stays as originally programmed",
+      "Only shore authorities may alter it"
+    ],
+    "correctIndex": 0,
+    "explanation": "The boatmaster has explicit update duties for specified fields.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q012",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 12,
+    "question": "Which group is specifically included in the harmonized reporting categories?",
+    "choices": [
+      "Vessels transporting more than 20 containers",
+      "Every rowing boat",
+      "Every pleasure craft regardless of local requirement"
+    ],
+    "correctIndex": 0,
+    "explanation": "More than 20 containers is one of the listed Article 8.02 categories.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q013",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 13,
+    "question": "What may be requested as part of an Article 8.02 report?",
+    "choices": [
+      "Draught",
+      "Propeller paint colour",
+      "Fuel brand"
+    ],
+    "correctIndex": 0,
+    "explanation": "Draught is included on special request.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q014",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 14,
+    "question": "What must a boatmaster report about movement through a reporting sector?",
+    "choices": [
+      "Entry and departure",
+      "Only entry",
+      "Only departure"
+    ],
+    "correctIndex": 0,
+    "explanation": "The boatmaster reports when entering and when leaving the sector.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q015",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 15,
+    "question": "When navigating by radar, what additional communication principle appears in CEVNI?",
+    "choices": [
+      "Use radiotelephony to identify traffic and agree passing procedure as required",
+      "Radio is unnecessary because radar sees traffic",
+      "Only AIS messages may be used"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 6.32 combines radar observation with radiotelephone contact and passing agreement.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q016",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 16,
+    "question": "Can local competent authorities vary AIS/radar/radio requirements?",
+    "choices": [
+      "Yes, within the CEVNI regional/national framework",
+      "No",
+      "Only at sea"
+    ],
+    "correctIndex": 0,
+    "explanation": "Chapter 9 contains explicit provisions for local/national requirements.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q017",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 17,
+    "question": "What is the best response to conflicting electronic and observed information?",
+    "choices": [
+      "Treat the conflict as a warning and resolve it before relying on the picture",
+      "Trust AIS automatically",
+      "Trust the largest screen"
+    ],
+    "correctIndex": 0,
+    "explanation": "Navigation information must be cross-checked; a conflict is not permission to assume one source is correct.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q018",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 18,
+    "question": "Which three service categories are central to CEVNI inland radiotelephony?",
+    "choices": [
+      "Ship-to-ship, nautical information, ship-to-port-authority",
+      "Mayday, marina, entertainment",
+      "AIS, radar, GNSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "Those are the operational radiotelephony networks identified in Article 4.05.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q019",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 19,
+    "question": "What is the purpose of keeping AIS static/voyage data accurate?",
+    "choices": [
+      "So the transmitted traffic picture corresponds to the actual vessel or convoy",
+      "To improve radar range",
+      "To replace the boatmaster’s lookout"
+    ],
+    "correctIndex": 0,
+    "explanation": "Accuracy of the transmitted vessel/convoy data is an explicit CEVNI requirement.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q020",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 20,
+    "question": "When must a qualifying vessel report for a designated reporting sector?",
+    "choices": [
+      "Before entering, and then report entry/departure as required",
+      "Only after leaving",
+      "Only if another vessel asks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 8.02 establishes advance reporting plus entry/departure reporting.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q021",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 21,
+    "question": "What happens if covered report data change during the sector transit?",
+    "choices": [
+      "Notify the competent authority immediately",
+      "Wait until the next voyage",
+      "Only change the paper log"
+    ],
+    "correctIndex": 0,
+    "explanation": "Changes are reportable immediately.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q022",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 22,
+    "question": "What does CEVNI radar navigation require beyond simply owning radar?",
+    "choices": [
+      "Compliant equipment, applicable qualification and operating procedure",
+      "Nothing else",
+      "Only a chartplotter"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 4.06 and the radar-navigation rules regulate equipment, qualification and operation.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M08-Q023",
+    "course": "CEVNI",
+    "module": 8,
+    "stage": "ASSESSMENT",
+    "order": 23,
+    "question": "What is the correct planning assumption about local radio/AIS/reporting rules?",
+    "choices": [
+      "Verify the competent authority’s current requirements for the waterway",
+      "Assume every UNECE waterway is operationally identical",
+      "Ignore them for pleasure craft in all cases"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI provides a harmonized base with regional and national implementation layers.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q001",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "CHECK",
+    "order": 1,
+    "question": "Which statement about pollution and waste is correct?",
+    "choices": [
+      "It is within the CEVNI framework",
+      "It is only a sea-going issue",
+      "It is unrelated to inland navigation"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_module_check"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q002",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "MOCK_SOURCE",
+    "order": 2,
+    "question": "Pollution and waste provisions are:",
+    "choices": [
+      "Within the scope of CEVNI",
+      "Outside inland navigation rules",
+      "Only relevant at sea"
+    ],
+    "correctIndex": 0,
+    "explanation": "",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "legacy_qbase"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q003",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 3,
+    "question": "Your planned load would put the vessel beyond its maximum draught marks. What is the correct decision?",
+    "choices": [
+      "Do not depart until the loading condition is compliant",
+      "Proceed slowly",
+      "Proceed if visibility is good"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI Article 1.07 prohibits loading beyond the maximum draught marks.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q004",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 4,
+    "question": "An accident on your vessel endangers a person. What is the boatmaster’s primary CEVNI duty?",
+    "choices": [
+      "Use every means available to save them",
+      "Protect the timetable first",
+      "Wait for the authority before acting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 1.16 puts saving endangered persons first.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q005",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 5,
+    "question": "You ground near the fairway and approaching vessels may be endangered. What should you do?",
+    "choices": [
+      "Inform the authority and warn approaching traffic in good time",
+      "Only update AIS",
+      "Leave the vessel immediately"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 1.17 combines authority notification with warning approaching traffic where necessary.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q006",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 6,
+    "question": "Oily bilge waste is ready for disposal. What is the normal Chapter 10 approach?",
+    "choices": [
+      "Retain/collect it correctly and use the appropriate reception facility",
+      "Pump it overboard at low speed",
+      "Mix it with household waste"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI prohibits routine oily discharge and provides for proper collection/reception.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q007",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 7,
+    "question": "A prohibited waste spill occurs. What information should the authority receive?",
+    "choices": [
+      "Position, quantity, nature of waste and measures taken",
+      "Only vessel name",
+      "Only destination"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 10.04 calls for useful spill facts, not a vague notification.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q008",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 8,
+    "question": "During bunkering, safe direct communication between the responsible people is lost. What should happen?",
+    "choices": [
+      "Interrupt the filling operation",
+      "Continue at half rate",
+      "Continue if the tank is nearly full"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI bunkering provisions require safe direct communication and interruption if it is no longer guaranteed.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q009",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 9,
+    "question": "What does CEVNI require of the vessel’s loading condition?",
+    "choices": [
+      "It must respect maximum draught and not endanger stability or required view",
+      "Only total weight matters",
+      "The load may obscure the view if radar is fitted in every case"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 1.07 addresses draught, view and stability.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q010",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 10,
+    "question": "Which statement about onboard documents is correct?",
+    "choices": [
+      "The applicable list depends on CEVNI plus other relevant regional/national/international requirements",
+      "Every small pleasure craft carries exactly the same commercial-vessel documents",
+      "Documents are optional if carried electronically on a phone"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 1.10 and Chapter 9 make the applicable regulatory layer important.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q011",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 11,
+    "question": "A nearby vessel has an accident endangering persons. Your assistance duty is limited by what?",
+    "choices": [
+      "The safety of your own vessel",
+      "Whether the casualty is commercially operated",
+      "Whether the voyage is delayed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Immediate assistance is required insofar as consistent with the safety of your own vessel.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q012",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 12,
+    "question": "Which action is prohibited by Chapter 10?",
+    "choices": [
+      "Burning waste on board",
+      "Separating waste categories",
+      "Delivering oily waste to a reception facility"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 10.05 expressly prohibits burning waste on board.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q013",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 13,
+    "question": "What is the correct response to a threatened prohibited discharge?",
+    "choices": [
+      "Notify the nearest competent authority without delay and act to control the risk",
+      "Wait until pollution reaches the bank",
+      "Record it only after arrival"
+    ],
+    "correctIndex": 0,
+    "explanation": "The reporting duty applies to an accidental discharge or the threat of one.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q014",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 14,
+    "question": "What is the basic waste-management principle aboard?",
+    "choices": [
+      "Separate and contain waste appropriately",
+      "Mix categories to save space",
+      "Discharge biodegradable waste automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI requires care to minimise waste and avoid mixing categories, with separate collection rules.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q015",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 15,
+    "question": "What is part of bunkering vigilance?",
+    "choices": [
+      "Supervision of the filling operation",
+      "Leaving the filling point unattended",
+      "Estimating tank capacity after transfer starts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 10.07 requires supervision and pre-transfer controls.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q016",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 16,
+    "question": "Who sets additional local requirements that may affect passage readiness?",
+    "choices": [
+      "The competent authority",
+      "Only the vessel manufacturer",
+      "Only another boatmaster"
+    ],
+    "correctIndex": 0,
+    "explanation": "CEVNI provides for regional and national special requirements through competent authorities.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q017",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 17,
+    "question": "What three loading issues does Article 1.07 directly address?",
+    "choices": [
+      "Maximum draught, view and stability",
+      "Radio, AIS and radar",
+      "Waste, fuel and cargo documents"
+    ],
+    "correctIndex": 0,
+    "explanation": "These are central departure-readiness limits in Article 1.07.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q018",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 18,
+    "question": "What is the core duty when an accident endangers persons aboard?",
+    "choices": [
+      "Use every means available to save them",
+      "Protect property before people",
+      "Wait for shore assistance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 1.16 is explicit on the duty to save endangered persons.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q019",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 19,
+    "question": "What must a grounded vessel near the fairway consider beyond informing the authority?",
+    "choices": [
+      "Warning approaching traffic in sufficient time",
+      "Turning off navigation lights",
+      "Discharging ballast automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 1.17 adds the warning duty where necessary.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q020",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 20,
+    "question": "What does Chapter 10 say about oily/greasy operational waste?",
+    "choices": [
+      "Routine discharge into the waterway is prohibited",
+      "It may always be discharged in daylight",
+      "It may be mixed with domestic refuse and discharged"
+    ],
+    "correctIndex": 0,
+    "explanation": "Article 10.04 prohibits the discharge/dumping of specified waste categories.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q021",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 21,
+    "question": "What is required when prohibited waste is accidentally discharged or threatens to discharge?",
+    "choices": [
+      "Prompt notification with position, quantity, nature and measures taken",
+      "A report only if another vessel complains",
+      "No action until the next reception station"
+    ],
+    "correctIndex": 0,
+    "explanation": "Immediate useful notification is part of the pollution response.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  },
+  {
+    "id": "PW-CEVNI-M09-Q022",
+    "course": "CEVNI",
+    "module": 9,
+    "stage": "ASSESSMENT",
+    "order": 22,
+    "question": "Which statement best describes passage readiness?",
+    "choices": [
+      "Vessel, people, documents, route/local rules, equipment and emergency/environment controls are all ready for the actual passage",
+      "A charged chartplotter is sufficient",
+      "It is complete once the engine starts"
+    ],
+    "correctIndex": 0,
+    "explanation": "Module 9 integrates the CEVNI safety, environmental and regulatory readiness layers.",
+    "status": "active",
+    "revision": 1,
+    "origins": [
+      "modern"
+    ]
+  }
+]
