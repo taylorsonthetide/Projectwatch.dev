@@ -27798,7 +27798,7 @@ window.PW16223_MODULE9={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
     if(!response.ok) throw new Error('Question bank request failed: HTTP '+response.status);
     const data = await response.json();
     if(!Array.isArray(data)) throw new Error('Question bank JSON is not an array.');
-    if(data.length !== 357) throw new Error('Question bank record count is '+data.length+'; expected 357.');
+    if(data.length !== 391) throw new Error('Question bank record count is '+data.length+'; expected 391.');
     const bad = data.findIndex(function(q){
       return !q || typeof q!=='object' || !q.id || !Array.isArray(q.choices) ||
              !Number.isInteger(q.correctIndex) || q.correctIndex<0 || q.correctIndex>=q.choices.length;
