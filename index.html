@@ -26458,4 +26458,70 @@ window.PW1625_VISUAL_CURRICULUM={build:BUILD,indexOnly:true,lessons:LESSON_LIBRA
 </script>
 <!-- PW1625_COMPLETE_VISUAL_CURRICULUM_END -->
 
+
+<!-- PROJECT WATCH 1.62.6 — CURRICULUM SPINE + MODULE 01 WELCOME INTEGRATION -->
+<style id="pw1626-css">
+#cevniPage .pw1626Welcome{margin:18px 0;padding:20px;border:1px solid #68ddff55;border-radius:16px;background:#062f43}
+#cevniPage .pw1626WelcomeTop{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+#cevniPage .pw1626Welcome h2{margin:4px 0 8px;font-size:28px}#cevniPage .pw1626Welcome p{color:#c7dce5;line-height:1.55}
+#cevniPage .pw1626Badge{padding:8px 11px;border-radius:10px;background:#0b5b69;color:#9ff4ff;font-size:11px;font-weight:900;letter-spacing:.05em}
+#cevniPage .pw1626Journey{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:16px 0}
+#cevniPage .pw1626Journey div{padding:11px;border-radius:10px;background:#0a4054;border:1px solid #ffffff18;text-align:center}#cevniPage .pw1626Journey b{display:block;color:#82eaff;font-size:12px}#cevniPage .pw1626Journey small{display:block;color:#c6dce4;margin-top:4px;line-height:1.35}
+#cevniPage .pw1626Outcomes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:14px 0}#cevniPage .pw1626Outcomes div{padding:12px;border-radius:10px;background:#073649;border-left:3px solid #53dca0;color:#d8edf4;line-height:1.4}
+#cevniPage .pw1626Source{margin:14px 0;padding:12px;border-radius:10px;background:#082a37;border:1px solid #ffffff18;color:#bcd2db;line-height:1.5}#cevniPage .pw1626Source b{color:#7fe9ff}
+#cevniPage .pw1626Actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}#cevniPage .pw1626Actions button{padding:11px 14px;border-radius:9px;border:1px solid #5bdcff66;background:#0b5068;color:#fff;font-weight:900;cursor:pointer}#cevniPage .pw1626Actions .primary{background:#0b674d;border-color:#53dfa0}
+@media(max-width:760px){#cevniPage .pw1626Journey{grid-template-columns:1fr 1fr}#cevniPage .pw1626Outcomes{grid-template-columns:1fr}}
+</style>
+<script id="pw1626-module1">
+(function(){
+'use strict';
+const BUILD='1.62.6';
+/* Permanent curriculum spine. Content engines/libraries keep stable IDs; this library owns order only. */
+window.PW_CEVNI_SEQUENCE_LIBRARY={version:'1.0.0',courseId:'pw-cevni',modules:[
+ {id:'cv-m01',order:1,title:'Welcome to CEVNI',flow:['introduction','learn','see','check','apply','review','complete']},
+ {id:'cv-m02',order:2,title:'Vessels, Identity & Markings',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m03',order:3,title:'Waterway Signs, Marks & Buoyage',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m04',order:4,title:'Lights & Visual Signals',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m05',order:5,title:'Sound Signals & Radiotelephony',flow:['learn','hear-see','check','apply','review','complete']},
+ {id:'cv-m06',order:6,title:'Rules of the Road',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m07',order:7,title:'Bridges, Locks, Berthing & Special Operations',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m08',order:8,title:'Navigation Systems, Reporting & Information',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m09',order:9,title:'Safety, Environment & Passage Readiness',flow:['learn','see','check','apply','review','complete']}
+ ],finalAssessment:{id:'cv-final-mock',title:'Final Mock Exam',isModule:false,after:'cv-m09'}};
+window.PW_CEVNI_MODULE1_SPEC={
+ id:'cv-m01',title:'Welcome to CEVNI',sourceLayer:['UNECE CEVNI Revision 6','Corrigenda 1 & 2','Amendments 1 & 2','applicable national/regional/local provisions'],
+ outcomes:[
+  'Explain what CEVNI is and why a harmonised inland-waterway code exists.',
+  'Understand that CEVNI is the common regulatory basis, while applicable national, regional and local provisions still matter.',
+  'Recognise the role of the competent authority and the need to check current waterway instructions before passage.',
+  'Understand the boatmaster responsibility framework before detailed navigation rules are introduced.',
+  'Use inland-waterway language and read the complete navigation picture rather than relying on one isolated cue.',
+  'Follow the Project Watch method: learn the rule, recognise it, practise it in context, then assess it.'
+ ]
+};
+/* Change curriculum labels only. Existing teaching, article libraries, rehearsal engines and progression IDs remain intact. */
+try{
+ if(window.CEVNI_MODULES&&CEVNI_MODULES[0]){CEVNI_MODULES[0].title='Welcome to CEVNI';CEVNI_MODULES[0].desc='Start here: understand the CEVNI framework, the local-rule layer, competent-authority information and boatmaster responsibility before detailed inland navigation.';}
+ if(window.CEVNI_CURRICULUM_MATRIX&&CEVNI_CURRICULUM_MATRIX[0])CEVNI_CURRICULUM_MATRIX[0].title='Welcome to CEVNI';
+ if(window.CEVNI_LIBRARIES&&CEVNI_LIBRARIES.modules&&CEVNI_LIBRARIES.modules[0]){CEVNI_LIBRARIES.modules[0].title='Welcome to CEVNI';CEVNI_LIBRARIES.modules[0].description=CEVNI_MODULES[0].desc;}
+}catch(e){}
+let bypass=false;
+const previousOpen=window.cevniOpenLesson;
+function welcome(){
+ const a=document.getElementById('cevniLessonArea');if(!a)return;
+ const o=PW_CEVNI_MODULE1_SPEC.outcomes;
+ a.innerHTML=`<section class="pw1626Welcome"><div class="pw1626WelcomeTop"><div><div class="ver">MODULE 01 • INTRODUCTION</div><h2>Welcome to CEVNI</h2><p>Before memorising signs, lights or manoeuvring rules, build the inland-waterway framework they belong to. This opening module establishes what CEVNI is, where local requirements fit and who carries responsibility aboard.</p></div><div class="pw1626Badge">START HERE • 1 / 9</div></div><div class="pw1626Journey"><div><b>01 • INTRODUCE</b><small>What CEVNI is</small></div><div><b>02 • LEARN</b><small>Framework & responsibility</small></div><div><b>03 • RECOGNISE</b><small>Terms and authority</small></div><div><b>04 • APPLY</b><small>Operational context</small></div><div><b>05 • PROVE</b><small>Module review</small></div></div><div class="ver">BY THE END OF MODULE 1 YOU SHOULD BE ABLE TO:</div><div class="pw1626Outcomes">${o.map((x,i)=>`<div><b>${String(i+1).padStart(2,'0')}</b> • ${x}</div>`).join('')}</div><div class="pw1626Source"><b>REGULATORY BASIS</b><br>Project Watch teaches from UNECE CEVNI Revision 6 with the published correction/amendment layer tracked separately. CEVNI supplies the harmonised core framework; the rules and instructions applicable to the actual country, region and waterway must still be checked.</div><div class="pw1626Actions"><button class="primary" onclick="pw1626BeginModule1()">BEGIN MODULE 1 →</button><button onclick="cevniCloseLesson()">CLOSE</button></div></section>`;
+ a.scrollIntoView({behavior:'smooth',block:'start'});
+}
+window.pw1626BeginModule1=function(){bypass=true;window.cevniOpenLesson(0,0)};
+window.cevniOpenLesson=function(i,step=0){
+ if(i===0&&step===0&&!bypass){welcome();return;}
+ bypass=false;return previousOpen(i,step);
+};
+const prevInit=window.cevniInit;
+window.cevniInit=function(){if(prevInit)prevInit();try{cevniRenderModules()}catch(e){}};
+function label(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+BUILD;document.querySelectorAll('.homeFooterBar div:first-child b').forEach(x=>x.textContent=BUILD);}
+label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=>{try{cevniRenderModules()}catch(e){}},80)});
+})();
+</script>
 </body></html>
