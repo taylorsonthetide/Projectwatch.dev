@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.59.4 • CEVNI Audited Consolidation</title>
+<title>Project Watch 1.62.20 • CEVNI Curriculum</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -26483,7 +26483,7 @@ window.PW_CEVNI_SEQUENCE_LIBRARY={version:'1.0.0',courseId:'pw-cevni',modules:[
  {id:'cv-m03',order:3,title:'Waterway Signs, Marks & Buoyage',flow:['learn','see','check','apply','review','complete']},
  {id:'cv-m04',order:4,title:'Lights & Visual Signals',flow:['learn','see','check','apply','review','complete']},
  {id:'cv-m05',order:5,title:'Sound Signals & Radiotelephony',flow:['learn','hear-see','check','apply','review','complete']},
- {id:'cv-m06',order:6,title:'Rules of the Road',flow:['learn','see','check','apply','review','complete']},
+ {id:'cv-m06',order:6,title:'Rules of the Road',flow:['learn','see','practice','check','apply','review','complete']},
  {id:'cv-m07',order:7,title:'Bridges, Locks, Berthing & Special Operations',flow:['learn','see','check','apply','review','complete']},
  {id:'cv-m08',order:8,title:'Navigation Systems, Reporting & Information',flow:['learn','see','check','apply','review','complete']},
  {id:'cv-m09',order:9,title:'Safety, Environment & Passage Readiness',flow:['learn','see','check','apply','review','complete']}
@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.19';
+const PROJECT_WATCH_BUILD='1.62.20';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.19';
+const BUILD='1.62.20';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.19: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.20: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.19';
+const BUILD='1.62.20';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.19 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.20 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.19';
+const BUILD='1.62.20';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.62.19 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.62.20 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.62.19';
+const BUILD='1.62.20';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.62.19 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.62.20 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.19';
+const BUILD='1.62.20';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -27056,7 +27056,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 </script>
 
 
-<!-- PROJECT WATCH 1.62.19 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
+<!-- PROJECT WATCH 1.62.20 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
 <style id="pw16216-module5-style">
 #cevniPage .pw165Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw165Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27087,7 +27087,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 <script id="pw16216-module5">
 (function(){
 'use strict';
-const BUILD='1.62.19';
+const BUILD='1.62.20';
 
 const TEACH=[
  ['SOUND LANGUAGE — TIMING FIRST','Annex 6 defines a short blast as about 1 second and a long blast as about 4 seconds. The normal interval between successive blasts is about 1 second. A series of very short blasts is at least six blasts, each about a quarter-second, with roughly quarter-second silences.','Hear duration as part of the meaning: short, long and very-short are different signal elements.'],
@@ -27254,6 +27254,167 @@ sync();names();
 document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});
 setTimeout(()=>{sync();names()},800);
 window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,audioEngine:'existing CEVNI Sound Lab preserved',authority:['CEVNI Revision 6 + Corr.1/Corr.2','Chapter 4','Annex 6','Chapter 9 local/national layer']};
+})();
+</script>
+
+
+<!-- PROJECT WATCH 1.62.20 — MODULE 06 RULES OF THE ROAD -->
+<style id="pw16220-module6-style">
+#cevniPage .pw166Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
+#cevniPage .pw166Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+#cevniPage .pw166Top h2{margin:5px 0 7px;font-size:30px}.pw166Top p{margin:0;color:#c3d9e2;line-height:1.5}
+#cevniPage .pw166Badge{white-space:nowrap;padding:9px 12px;border-radius:10px;background:#073b50;color:#8feaff;font-weight:900}
+#cevniPage .pw166Route{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:14px 0}
+#cevniPage .pw166Route span{padding:9px 5px;border-radius:8px;background:#062633;color:#8fb0bc;font-size:10px;font-weight:900;text-align:center}
+#cevniPage .pw166Route span.on{background:#0b5b49;color:#caffdf}
+#cevniPage .pw166Card{margin-top:14px;padding:17px;border-radius:14px;background:#031f2d;border:1px solid #ffffff18}
+#cevniPage .pw166Card h3{margin:5px 0 9px;font-size:23px}.pw166Card p{line-height:1.55;color:#c9dce4}
+#cevniPage .pw166Rule{padding:10px 12px;border-left:4px solid #58d8ff;background:#073245;border-radius:8px;color:#d9f7ff;margin-top:12px;line-height:1.45}
+#cevniPage .pw166Warn{padding:10px 12px;border-left:4px solid #f0b844;background:#3a2c12;border-radius:8px;color:#ffe8ae;margin-top:12px;line-height:1.45}
+#cevniPage .pw166Progress{height:7px;background:#021b26;border-radius:10px;overflow:hidden;margin:14px 0}
+#cevniPage .pw166Progress i{display:block;height:100%;background:#3bd68a}
+#cevniPage .pw166Actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.pw166Actions button{width:auto}
+#cevniPage .pw166Choices{display:grid;gap:8px;margin-top:12px}.pw166Choices button{text-align:left}
+#cevniPage .pw166Choices button.good{background:#176a4b!important}.pw166Choices button.bad{background:#7c3030!important}
+#cevniPage .pw166Feedback{margin-top:12px;padding:12px;border-radius:10px;background:#07382e;display:none}
+#cevniPage .pw166Feedback.show{display:block}
+#cevniPage .pw166Scene{position:relative;height:250px;margin-top:12px;border-radius:14px;overflow:hidden;background:linear-gradient(#113e4e 0 18%,#17687c 18% 100%);border:1px solid #ffffff20}
+#cevniPage .pw166BankL,#cevniPage .pw166BankR{position:absolute;top:18%;bottom:0;width:16%;background:#526849}
+#cevniPage .pw166BankL{left:0}.pw166BankR{right:0}
+#cevniPage .pw166Fairway{position:absolute;left:18%;right:18%;top:18%;bottom:0;border-left:2px dashed #d5f6ff55;border-right:2px dashed #d5f6ff55}
+#cevniPage .pw166Boat{position:absolute;width:34px;height:62px;border-radius:45% 45% 25% 25%;background:#f5f7f8;border:3px solid #0a2632;box-shadow:0 3px 8px #0008}
+#cevniPage .pw166Boat:after{content:"";position:absolute;left:11px;top:18px;width:8px;height:22px;background:#1b5368;border-radius:3px}
+#cevniPage .pw166Boat.you{background:#61d6ff}.pw166Boat.other{background:#ffd36b}.pw166Boat.sail{background:#f7f7f7}
+#cevniPage .pw166Arrow{position:absolute;font-weight:1000;color:#fff;font-size:28px;text-shadow:0 2px 5px #000}
+#cevniPage .pw166Legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;color:#bcd4dd;font-size:12px}
+#cevniPage .pw166Legend b{color:#fff}
+#cevniPage .pw166Dev{margin:12px 0;padding:10px;border:1px dashed #f0b844;border-radius:10px;background:#3a2c1266}
+#cevniPage .pw166Complete{border-color:#42d89a;background:#07382e55}
+@media(max-width:760px){#cevniPage .pw166Route{grid-template-columns:repeat(3,1fr)}#cevniPage .pw166Scene{height:220px}}
+</style>
+<script id="pw16220-module6">
+(function(){
+'use strict';
+const BUILD='1.62.20';
+
+const TEACH=[
+ ['THE ENCOUNTER TYPE COMES FIRST','Chapter 6 distinguishes meeting, overtaking and crossing. Meeting is opposite or nearly opposite courses; overtaking is approach from more than 22.5° abaft the other vessel’s beam; crossing is an encounter that is neither meeting nor overtaking.','Classify the encounter before applying a manoeuvring rule.'],
+ ['GENERAL COLLISION-RISK PRINCIPLES','Meeting or overtaking is permitted only when the fairway is unquestionably wide enough for simultaneous passage, taking local circumstances and other traffic into account. A vessel already on a course that avoids collision must not create a new danger by an unnecessary course or speed change.','Safe water and the developing traffic picture govern whether the manoeuvre can proceed.'],
+ ['CROSSING','Where two vessels are crossing with risk of collision, the vessel that has the other vessel to starboard gives way and, if circumstances permit, avoids crossing ahead. Specific Chapter 6 situations can override this general rule.','Do not apply the basic crossing rule before checking whether a special rule applies.'],
+ ['SMALL CRAFT RESPONSIBILITIES','Small craft in relation to vessels other than small craft must leave enough room for the other vessel to hold course and manoeuvre and may not require it to give way. Between small craft of different categories, motorized small craft give way to other small craft; craft neither motorized nor under sail give way to small craft under sail.','Small-craft status changes the ordinary hierarchy.'],
+ ['SAILING VESSELS','For crossing sailing vessels: with wind on different sides, the vessel with wind on the port side gives way; with wind on the same side, the windward vessel gives way to the leeward vessel. A vessel under sail while also using mechanical propulsion is treated as motorized.','Project Watch must distinguish sailing from motor-sailing.'],
+ ['MEETING — NORMAL RULES','When two vessels meet with risk of collision, the normal rule is to veer to starboard and pass port-to-port. In upstream/downstream traffic, the upstream vessel gives way to the downstream vessel with due regard to local circumstances and traffic.','Direction of navigation matters on inland waterways.'],
+ ['NARROW FAIRWAYS & RESTRICTIONS','Chapter 6 contains specific rules for narrow fairways and places where meeting or overtaking is restricted or prohibited by waterway signs. A manoeuvre is never justified merely because the general rule would otherwise allow it.','Read the waterway, signs and available width before committing.'],
+ ['OVERTAKING','The overtaking vessel normally passes to port, although starboard overtaking is permitted when it can be done without collision danger. The overtaking vessel remains responsible for making the manoeuvre safely; if cooperation is required, the Chapter 6 signalling procedure applies.','No overtaking unless the fairway and traffic situation unquestionably permit it.'],
+ ['TURNING, DEPARTURE & CROSSING THE WATERWAY','A vessel may turn, leave an anchorage or berth, or enter/leave a harbour or tributary only after making certain the manoeuvre can be completed safely without forcing other vessels into abrupt course or speed changes.','The manoeuvring vessel must first establish that the move is safe.'],
+ ['REDUCED VISIBILITY','Chapter 6 adds specific conduct for reduced visibility, including safe speed, radar/radiotelephone requirements and passing procedure. Reduced visibility is not simply the normal visual rules with less sight distance.','Treat reduced visibility as its own operating regime.'],
+ ['SPECIAL PRIORITIES & LOCAL RULES','Special markings can create specific priorities, and Chapter 9 permits competent authorities to vary identified Chapter 6 provisions. The harmonized CEVNI rule is the base, not a substitute for the applicable local navigation regulation.','Passage planning must include the competent authority’s local rules.']
+];
+
+const SEE=[
+ {t:'Crossing — vessel on your starboard side',kind:'cross',p:'You are the blue vessel. The yellow vessel is crossing from starboard.',r:'Under the general crossing rule, you give way and, if circumstances permit, avoid crossing ahead.'},
+ {t:'Meeting — normal geometry',kind:'meet',p:'Two vessels approach on opposite or nearly opposite courses.',r:'With collision risk, the normal meeting geometry is starboard alteration for port-to-port passing, subject to the inland upstream/downstream and local-rule layers.'},
+ {t:'Overtaking — approach from abaft the beam',kind:'overtake',p:'Blue is coming up from behind yellow.',r:'Treat it as overtaking when the approach is from more than 22.5° abaft the vessel being overtaken’s beam.'},
+ {t:'Small motor craft and sailing craft',kind:'sail',p:'A motorized small craft and a small sailing craft are crossing.',r:'The motorized small craft gives way to the sailing small craft, subject to the marked-fairway boundary rule and other applicable provisions.'},
+ {t:'Marked fairway boundary',kind:'boundary',p:'Yellow is navigating close to the marked fairway boundary on its starboard side.',r:'For the applicable small-craft/sailing crossing rules, the vessel following that starboard-side boundary continues; the other gives way.'},
+ {t:'Harbour / tributary manoeuvre',kind:'harbour',p:'Blue intends to leave a side waterway and enter/cross the main waterway.',r:'The manoeuvre starts only after establishing it can be made safely without forcing abrupt changes by other traffic.'}
+];
+
+const PRACTICE=[
+ {q:'You identify another vessel more than 22.5° abaft its beam and are coming up on it. What encounter is this?',a:['Overtaking','Meeting','Crossing'],c:0,w:'Chapter 6 defines that geometry as overtaking.'},
+ {q:'Two ordinary vessels are crossing with collision risk and the other vessel is on your starboard side. What is the general rule?',a:['Give way and, if circumstances permit, avoid crossing ahead','Maintain course because you are on its port side','Turn to port across its bow'],c:0,w:'The vessel having the other to starboard gives way under the general crossing rule.'},
+ {q:'A motorized small craft is crossing a small sailing craft with collision risk. Which normally gives way?',a:['The motorized small craft','The sailing small craft','Whichever is travelling more slowly'],c:0,w:'Between those small-craft categories, motorized small craft give way to small sailing craft.'},
+ {q:'A sailing vessel is also using its engine. For CEVNI vessel-category purposes here, how is it treated?',a:['As a motorized vessel','As a sailing vessel only','As a vessel with automatic priority'],c:0,w:'A vessel under sail while using its own mechanical propulsion is considered motorized.'},
+ {q:'You want to overtake but the fairway is not unquestionably wide enough for simultaneous passage. What should you do?',a:['Do not begin the overtaking manoeuvre','Overtake only on starboard','Sound first and overtake regardless'],c:0,w:'Meeting or overtaking is permitted only where the fairway is unquestionably wide enough.'},
+ {q:'You are about to leave a berth. Your departure would force passing traffic into an abrupt speed change. What is the correct decision?',a:['Wait until the manoeuvre can be made safely','Depart because vessels under way must always give way','Depart if you sound a signal'],c:0,w:'Departure is governed by the safe-manoeuvre principle; signalling does not create priority.'},
+ {q:'An upstream and downstream vessel are meeting under the normal inland rule. Which normally gives way?',a:['The upstream vessel','The downstream vessel','The larger vessel regardless of direction'],c:0,w:'The upstream vessel gives way to the downstream vessel, with due regard to local circumstances and traffic.'},
+ {q:'A local competent-authority rule validly varies an identified Chapter 6 provision. Which rule do you use on that waterway?',a:['The applicable local provision','The harmonized text regardless of local law','The COLREG rule regardless of inland regulation'],c:0,w:'Chapter 9 permits specified regional or national deviations; the applicable local provision governs there.'}
+];
+
+const CHECK=[
+ {q:'Which description is CEVNI “crossing”?',a:['An encounter that is neither meeting nor overtaking','Any encounter within a narrow channel','Only two sailing vessels approaching'],c:0,w:'Article 6.01 defines crossing by excluding meeting and overtaking geometry.'},
+ {q:'What must be true before meeting or overtaking is permitted?',a:['The fairway is unquestionably wide enough for simultaneous passage','Both vessels are travelling at the same speed','The overtaking vessel is less than 20 m'],c:0,w:'Article 6.03 makes adequate fairway width a general condition.'},
+ {q:'Under the normal meeting rule with collision risk, vessels generally do what?',a:['Veer to starboard to pass port-to-port','Both veer to port','The faster vessel always stops'],c:0,w:'That is the normal Article 6.04 meeting rule, before applicable exceptions/local provisions.'},
+ {q:'When small craft meet vessels other than small craft, what is the small craft’s general responsibility?',a:['Leave enough room for the other vessel to hold course and manoeuvre','Require the larger vessel to give way','Always stop in the fairway'],c:0,w:'Article 6.02 places that responsibility on small craft.'},
+ {q:'With two sailing vessels crossing and wind on different sides, which gives way?',a:['The vessel with wind on the port side','The vessel with wind on the starboard side','The leeward vessel in every case'],c:0,w:'The sailing-vessel crossing rule requires the port-wind vessel to give way.'},
+ {q:'Who bears responsibility for safely executing an overtaking manoeuvre?',a:['The overtaking vessel','The vessel being overtaken alone','The nearest downstream vessel'],c:0,w:'The overtaking vessel must ensure the manoeuvre can be carried out without danger.'},
+ {q:'Does sounding a manoeuvring signal by itself create a right to turn, depart or cross?',a:['No — the manoeuvre must first be safe under the applicable rule','Yes — once the signal is sounded','Yes, but only for small craft'],c:0,w:'Sound signals communicate manoeuvre intentions/procedure; they do not remove the underlying safety obligation.'},
+ {q:'Why is a local-rule check part of Module 6?',a:['Chapter 9 allows competent authorities to vary specified Chapter 6 provisions','All Chapter 6 rules are optional','CEVNI applies only at sea'],c:0,w:'The harmonized base expressly includes a regional/national implementation layer.'}
+];
+
+const APPLY=[
+ {t:'Busy crossing',s:'You are in a motorized small craft. A large commercial vessel is crossing your intended track. Continuing would require the commercial vessel to alter.',q:'What is the correct operational decision?',a:['Keep clear and leave the commercial vessel room to hold course and manoeuvre','Continue because it is on your port side','Demand priority by VHF'],c:0,w:'The small-craft responsibility to vessels other than small craft applies; you may not require the commercial vessel to give way.'},
+ {t:'Sail becomes motor-sail',s:'A small sailing craft starts its engine while still carrying sail and approaches another small sailing craft.',q:'For the relevant CEVNI category rules, what changed?',a:['It is now treated as motorized','Nothing; visible sails always make it a sailing vessel','It gains priority over all small craft'],c:0,w:'Using sail and mechanical propulsion at the same time makes it a motorized vessel for the definition.'},
+ {t:'Constricted reach',s:'You are closing a slower vessel from astern, but a bend and opposing traffic mean the fairway is not unquestionably wide enough.',q:'What should you do?',a:['Remain behind until overtaking can be made safely','Begin overtaking and rely on the other vessel to slow','Pass on starboard because width no longer matters'],c:0,w:'The general principle prohibits overtaking unless simultaneous passage is unquestionably possible.'},
+ {t:'Upstream meeting',s:'You are proceeding upstream and meet a downstream vessel where the normal upstream/downstream procedure applies.',q:'What is your starting obligation?',a:['Give way to the downstream vessel, considering local circumstances and traffic','Require the downstream vessel to stop','Always cross its bow to reach the left bank'],c:0,w:'Under the normal rule the upstream vessel gives way to the downstream vessel.'},
+ {t:'Leaving harbour',s:'You intend to leave a harbour and cross the waterway, but approaching traffic would have to brake sharply.',q:'What should happen first?',a:['Wait until the manoeuvre can be made without forcing abrupt course or speed changes','Sound and cross immediately','Cross because harbour traffic has automatic priority'],c:0,w:'Article 6.16 begins with the safe-entry/exit/crossing obligation.'},
+ {t:'Reduced visibility',s:'Visibility has deteriorated severely. You are tempted to continue using only the ordinary visual encounter rules.',q:'What is the correct approach?',a:['Apply the specific Chapter 6 reduced-visibility regime and applicable local requirements','Use the daylight crossing rules unchanged','Ignore radio because sound signals replace it'],c:0,w:'Reduced visibility has dedicated Chapter 6 operating provisions including radar/radio and safe-speed requirements.'}
+];
+
+const REVIEW=[
+ {q:'A vessel approaches another from more than 22.5° abaft its beam. Which Chapter 6 encounter is it?',a:['Overtaking','Crossing','Meeting'],c:0,w:'That relative bearing is the overtaking definition.'},
+ {q:'Two motorized small craft meet with collision risk. What is the normal action?',a:['Each veers to starboard to pass port-to-port','Each veers to port','Both stop immediately'],c:0,w:'The small-craft meeting rule uses starboard alteration for port-to-port passing.'},
+ {q:'Two sailing vessels have the wind on the same side and are crossing with collision risk. Which gives way?',a:['The windward vessel','The leeward vessel','The vessel on starboard tack regardless'],c:0,w:'With wind on the same side, the windward vessel gives way to the leeward vessel.'},
+ {q:'What is the first safety test before overtaking?',a:['Whether the fairway is unquestionably wide enough for simultaneous passage','Whether the other vessel has AIS','Whether your vessel is faster by at least 2 knots'],c:0,w:'Adequate fairway width and the complete local traffic situation are fundamental.'},
+ {q:'Can a small craft require a non-small-craft vessel to give way under the general small-craft rule?',a:['No','Yes, whenever approaching from starboard','Yes, whenever under 20 m'],c:0,w:'Small craft must leave such vessels enough room to hold course and manoeuvre.'},
+ {q:'What should a boatmaster do when a valid local rule differs from a CEVNI harmonized provision that Chapter 9 permits to be varied?',a:['Follow the applicable local provision','Ignore the local provision','Choose whichever rule is easier'],c:0,w:'CEVNI expressly provides for specified regional and national variations.'}
+];
+
+let stage='intro',idx=0,answered=false,currentQ=null;
+
+function sync(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD+' • CEVNI Curriculum';}
+function area(){return document.getElementById('cevniLessonArea')}
+function route(active){return `<div class="pw166Route">${['LEARN','SEE','PRACTICE','CHECK','APPLY','REVIEW'].map(x=>`<span class="${x===active?'on':''}">${x}${x===active?' • CURRENT':''}</span>`).join('')}</div>`}
+function dev(){return (typeof cvDevMode!=='undefined'&&cvDevMode)?`<div class="pw166Dev"><b>TEST MODE • MODULE 6 JUMP</b><div class="pw166Actions"><button data-pw166-jump="learn">LEARN</button><button data-pw166-jump="see">SEE</button><button data-pw166-jump="practice">PRACTICE</button><button data-pw166-jump="check">CHECK</button><button data-pw166-jump="apply">APPLY</button><button data-pw166-jump="review">REVIEW</button></div></div>`:''}
+function shell(label,body,badge){const a=area();if(!a)return;a.innerHTML=`<section class="pw166Shell"><div class="pw166Top"><div><div class="ver">MODULE 06 • ${label}</div><h2>Rules of the Road</h2><p>Classify the encounter, read the waterway, decide responsibility and make the safe inland-waterway decision.</p></div><div class="pw166Badge">${badge||label}</div></div>${dev()}${body}</section>`;a.scrollIntoView({behavior:'smooth',block:'start'});}
+function shuffleQ(x){const o=x.a.map((t,i)=>({t,ok:i===x.c}));for(let i=o.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[o[i],o[j]]=[o[j],o[i]]}return {q:x.q,a:o.map(v=>v.t),c:o.findIndex(v=>v.ok),w:x.w};}
+function scene(kind){
+ let boats='',arrows='';
+ if(kind==='cross'){boats='<i class="pw166Boat you" style="left:42%;top:67%;transform:rotate(0deg)"></i><i class="pw166Boat other" style="left:66%;top:43%;transform:rotate(-90deg)"></i>';arrows='<b class="pw166Arrow" style="left:47%;top:42%">↑</b><b class="pw166Arrow" style="left:51%;top:48%">←</b>';}
+ if(kind==='meet'){boats='<i class="pw166Boat you" style="left:39%;top:67%"></i><i class="pw166Boat other" style="left:55%;top:27%;transform:rotate(180deg)"></i>';arrows='<b class="pw166Arrow" style="left:44%;top:47%">↑</b><b class="pw166Arrow" style="left:60%;top:48%">↓</b>';}
+ if(kind==='overtake'){boats='<i class="pw166Boat you" style="left:43%;top:68%"></i><i class="pw166Boat other" style="left:48%;top:34%"></i>';arrows='<b class="pw166Arrow" style="left:39%;top:45%">↑</b>';}
+ if(kind==='sail'){boats='<i class="pw166Boat you" style="left:42%;top:67%;transform:rotate(0deg)"></i><i class="pw166Boat other sail" style="left:66%;top:43%;transform:rotate(-90deg)"></i>';arrows='<b class="pw166Arrow" style="left:47%;top:42%">↑</b><b class="pw166Arrow" style="left:51%;top:48%">←</b>';}
+ if(kind==='boundary'){boats='<i class="pw166Boat you" style="left:46%;top:64%;transform:rotate(-35deg)"></i><i class="pw166Boat other" style="left:69%;top:38%"></i>';arrows='<b class="pw166Arrow" style="left:72%;top:22%">↑</b>';}
+ if(kind==='harbour'){boats='<i class="pw166Boat you" style="left:10%;top:55%;transform:rotate(90deg)"></i><i class="pw166Boat other" style="left:55%;top:35%;transform:rotate(180deg)"></i>';arrows='<b class="pw166Arrow" style="left:28%;top:55%">→</b><b class="pw166Arrow" style="left:60%;top:57%">↓</b>';}
+ return `<div class="pw166Scene"><i class="pw166BankL"></i><i class="pw166BankR"></i><i class="pw166Fairway"></i>${boats}${arrows}</div><div class="pw166Legend"><span><b>BLUE</b> = your vessel</span><span><b>YELLOW</b> = other vessel</span><span>Training geometry — not chart scale</span></div>`;
+}
+function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw166Card"><h3>Rules are applied to a traffic picture — not memorised in isolation.</h3><p>Module 6 uses the CEVNI Revision 6 Chapter 6 framework: encounter classification, meeting, crossing, overtaking, small-craft and sailing responsibilities, restricted manoeuvres, reduced visibility and the Chapter 9 local-rule layer.</p><div class="pw166Rule"><b>Module route:</b> LEARN → SEE → PRACTICE → CHECK → APPLY → REVIEW → COMPLETE.</div><div class="pw166Warn"><b>Local-rule gate:</b> competent authorities may vary specified Chapter 6 provisions. Project Watch teaches the harmonized base and flags the local layer rather than pretending one rule fits every waterway.</div></div><div class="pw166Actions"><button data-pw166-action="map">COURSE MAP</button><button data-pw166-action="teach" data-index="0">BEGIN MODULE 6 →</button></div>`,'START HERE • 6/9');}
+function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see(0);return}const x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="pw166Progress"><i style="width:${Math.round((i+1)/TEACH.length*100)}%"></i></div><div class="pw166Card"><div class="ver">VERIFIED BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw166Rule">${x[2]}</div></div><div class="pw166Actions">${i?`<button data-pw166-action="teach" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw166-action="teach" data-index="${i+1}">${i===TEACH.length-1?'SEE THE TRAFFIC →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`);}
+function see(i){stage='see';idx=i;if(i>=SEE.length){practice(0);return}const x=SEE[i];shell('SEE THE RULE',`${route('SEE')}<div class="pw166Progress"><i style="width:${Math.round((i+1)/SEE.length*100)}%"></i></div><div class="pw166Card"><div class="ver">TRAFFIC PICTURE ${i+1} / ${SEE.length}</div><h3>${x.t}</h3><p>${x.p}</p>${scene(x.kind)}<div class="pw166Rule">${x.r}</div></div><div class="pw166Actions">${i?`<button data-pw166-action="see" data-index="${i-1}">← PREVIOUS</button>`:`<button data-pw166-action="teach" data-index="${TEACH.length-1}">← LEARN</button>`}<button data-pw166-action="see" data-index="${i+1}">${i===SEE.length-1?'PRACTICE IT →':'NEXT PICTURE →'}</button></div>`,`SEE ${i+1} / ${SEE.length}`);}
+function question(kind,i){
+ const map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;
+ if(i>=arr.length){if(kind==='practice'){quiz('check',0);return}if(kind==='check'){apply(0);return}complete();return}
+ currentQ=shuffleQ(arr[i]);const active=kind.toUpperCase(),label=kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK';
+ shell(label,`${route(active)}<div class="pw166Card"><div class="ver">${active} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw166Choices">${currentQ.a.map((z,j)=>`<button data-pw166-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw166Feedback"></div></div>`,`${active} ${i+1} / ${arr.length}`);
+}
+function practice(i){question('practice',i)} function quiz(kind,i){question(kind,i)}
+function answer(j,btn){
+ if(answered||!currentQ)return;const card=btn.closest('.pw166Card'),fb=card&&card.querySelector('.pw166Feedback');if(!fb)return;
+ const arr=stage==='practice'?PRACTICE:stage==='review'?REVIEW:CHECK;
+ if(j===currentQ.c){answered=true;btn.classList.add('good');fb.className='pw166Feedback show';let next=stage==='practice'?'practice':stage==='review'?'review':'check';let end=idx===arr.length-1;let txt=end?(stage==='practice'?'CHECK UNDERSTANDING →':stage==='check'?'APPLY IT →':'COMPLETE MODULE 6 →'):'NEXT →';fb.innerHTML=`<b>✓ Correct.</b> ${currentQ.w}<div class="pw166Actions"><button data-pw166-next="${next}" data-index="${idx+1}">${txt}</button></div>`;}
+ else{btn.classList.add('bad');fb.className='pw166Feedback show';fb.innerHTML='<b>Not quite — try again.</b> Reclassify the encounter and identify the rule that actually governs this traffic picture.';setTimeout(()=>btn.classList.remove('bad'),650);}
+}
+function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){quiz('review',0);return}const x=APPLY[i];currentQ=shuffleQ({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw166Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw166Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw166Choices">${currentQ.a.map((z,j)=>`<button data-pw166-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw166Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`);}
+function applyAnswer(j,btn){if(answered||!currentQ)return;const card=btn.closest('.pw166Card'),fb=card&&card.querySelector('.pw166Feedback');if(!fb)return;if(j===currentQ.c){answered=true;btn.classList.add('good');fb.className='pw166Feedback show';fb.innerHTML=`<b>✓ Correct operational decision.</b> ${currentQ.w}<div class="pw166Actions"><button data-pw166-next="apply" data-index="${idx+1}">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`;}else{btn.classList.add('bad');fb.className='pw166Feedback show';fb.innerHTML='<b>Not quite — reassess the encounter type, responsibility, available water and local-rule layer.</b>';setTimeout(()=>btn.classList.remove('bad'),650);}}
+function complete(){try{if(window.cv1482SetStage)cv1482SetStage(5,'module');else if(window.cevniMark)cevniMark(5);}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw166Card pw166Complete"><div class="ver">MODULE 06 • COMPLETE</div><h3>Module 6 complete — Module 7 unlocked</h3><p>You have completed Chapter 6 encounter classification, meeting, crossing, overtaking, small-craft and sailing responsibilities, operational manoeuvres, reduced-visibility conduct and the local-rule layer.</p><div class="pw166Rule">LEARN ✓ • SEE ✓ • PRACTICE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw166Actions"><button data-pw166-action="continue7">CONTINUE TO MODULE 7 →</button><button data-pw166-action="map">RETURN TO COURSE MAP</button></div></div>`,'MODULE COMPLETE');try{cevniRenderModules()}catch(e){}}
+function jump(x){if(!(typeof cvDevMode!=='undefined'&&cvDevMode))return;if(x==='learn')teach(0);else if(x==='see')see(0);else if(x==='practice')practice(0);else if(x==='check')quiz('check',0);else if(x==='apply')apply(0);else if(x==='review')quiz('review',0);}
+document.addEventListener('click',function(e){
+ const b=e.target.closest('[data-pw166-choice],[data-pw166-apply],[data-pw166-next],[data-pw166-action],[data-pw166-jump]');if(!b)return;
+ if(b.hasAttribute('data-pw166-choice')){answer(Number(b.dataset.pw166Choice),b);return}
+ if(b.hasAttribute('data-pw166-apply')){applyAnswer(Number(b.dataset.pw166Apply),b);return}
+ if(b.hasAttribute('data-pw166-next')){const n=b.dataset.pw166Next,i=Number(b.dataset.index);if(n==='practice')practice(i);else if(n==='check')quiz('check',i);else if(n==='review')quiz('review',i);else if(n==='apply')apply(i);return}
+ if(b.hasAttribute('data-pw166-jump')){jump(b.dataset.pw166Jump);return}
+ const a=b.dataset.pw166Action,i=Number(b.dataset.index||0);
+ if(a==='map'){try{cevniCloseLesson()}catch(e){}}
+ else if(a==='teach')teach(i);else if(a==='see')see(i);
+ else if(a==='continue7'){try{cevniCloseLesson();cevniRenderModules()}catch(e){}setTimeout(()=>{try{cevniOpenLesson(6,0)}catch(e){}},80)}
+});
+const prevOpen=window.cevniOpenLesson;
+window.cevniOpenLesson=function(i,step=0){if(i===5){if((typeof cvDevMode!=='undefined'&&cvDevMode)||!window.cevniModuleUnlocked||cevniModuleUnlocked(5)){intro();return}return;}return prevOpen(i,step);};
+function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[5]){CEVNI_MODULES[5].title='Rules of the Road';CEVNI_MODULES[5].desc='Classify encounters and apply CEVNI meeting, crossing, overtaking and manoeuvring rules in context.';}}catch(e){}}
+const oldInit=window.cevniInit;window.cevniInit=function(){names();const r=oldInit?oldInit():undefined;names();sync();return r};
+sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
+window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:PRACTICE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,progression:'learn-see-practice-check-apply-review-complete',testModeJump:true,audioTouched:false,authority:['CEVNI Revision 6 + Corr.1/Corr.2','Chapter 6','Chapter 9 local/national layer']};
 })();
 </script>
 
