@@ -26524,4 +26524,86 @@ function label(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElementBy
 label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=>{try{cevniRenderModules()}catch(e){}},80)});
 })();
 </script>
+
+<!-- PROJECT WATCH 1.62.7 — CENTRAL VERSION CONTROL + MODULE COMPLETION STATE REPAIR -->
+<style id="pw1627-css">
+#cevniPage .pw1627Complete{border:1px solid #49d99a66;background:#083f3f;padding:18px;border-radius:14px;margin-top:12px}
+#cevniPage .pw1627Complete h3{margin:5px 0 8px;font-size:24px}
+#cevniPage .pw1627CompleteTag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#0b694f;color:#eafff5;font-weight:900;letter-spacing:.04em}
+</style>
+<script id="pw1627-core">
+(function(){
+'use strict';
+const PROJECT_WATCH_BUILD='1.62.7';
+window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
+window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'central-version-control-module1-completion',sequence:1627};
+
+/* One curriculum spine: display labels are resolved from the approved sequence library. */
+function syncCurriculumTitles(){
+ try{
+  const seq=window.PW_CEVNI_SEQUENCE_LIBRARY?.modules||[];
+  if(window.CEVNI_MODULES&&seq.length===9){
+   seq.forEach((x,i)=>{if(CEVNI_MODULES[i])CEVNI_MODULES[i].title=x.title;});
+  }
+  if(window.CEVNI_CURRICULUM_MATRIX&&seq.length===9){seq.forEach((x,i)=>{if(CEVNI_CURRICULUM_MATRIX[i])CEVNI_CURRICULUM_MATRIX[i].title=x.title;});}
+  if(window.CEVNI_LIBRARIES?.modules&&seq.length===9){seq.forEach((x,i)=>{if(CEVNI_LIBRARIES.modules[i])CEVNI_LIBRARIES.modules[i].title=x.title;});}
+ }catch(e){}
+}
+
+/* Every learner-facing build label comes from one authoritative value. Historical comments/metadata may remain in source only. */
+function syncVisibleBuild(root=document){
+ try{
+  document.title='Project Watch '+PROJECT_WATCH_BUILD+' • CEVNI Curriculum';
+  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  const nodes=[]; while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(n=>{
+   if(!n.parentElement||['SCRIPT','STYLE','TEXTAREA'].includes(n.parentElement.tagName))return;
+   if(/BUILD\s+1\.\d+\.\d+(?:[-A-Z0-9.]*)?/i.test(n.nodeValue||''))n.nodeValue=n.nodeValue.replace(/BUILD\s+1\.\d+\.\d+(?:[-A-Z0-9.]*)?/gi,'BUILD '+PROJECT_WATCH_BUILD);
+  });
+  const vb=document.getElementById('pwVisibleBuild'); if(vb)vb.textContent='BUILD '+PROJECT_WATCH_BUILD;
+ }catch(e){}
+}
+
+let buildSyncQueued=false;
+function queueBuildSync(){if(buildSyncQueued)return;buildSyncQueued=true;requestAnimationFrame(()=>{buildSyncQueued=false;syncVisibleBuild();});}
+const observer=new MutationObserver(queueBuildSync);
+function startVersionControl(){syncCurriculumTitles();try{if(typeof cevniRenderModules==='function')cevniRenderModules();}catch(e){}syncVisibleBuild();observer.observe(document.body,{subtree:true,childList:true,characterData:true});}
+
+/* Repair Module 1's final presentation: the progression contract already completes correctly; UI must show Stage 4/4 and the next module. */
+const previousContextRender=window.cevni1482ContextRender;
+if(typeof previousContextRender==='function'){
+ window.cevni1482ContextRender=function(){
+  previousContextRender();
+  try{
+   const area=document.getElementById('cevniLessonArea'); if(!area)return;
+   if(area.querySelector('.cv1482Gate')){
+    const stage=area.querySelector('.cv102PracticeStage'); if(stage)stage.textContent='STAGE 4 OF 4 • MODULE COMPLETE';
+    const status=area.querySelector('.cv1482Status');
+    if(status)status.innerHTML='<div class="done"><b>TEACH ✓</b></div><div class="done"><b>REHEARSAL ✓</b></div><div class="done"><b>CONTEXT ✓</b></div><div class="done"><b>MODULE COMPLETE ✓</b></div>';
+    const gate=area.querySelector('.cv1482Gate');
+    if(gate){
+     gate.classList.add('pw1627Complete');
+     const h=gate.querySelector('h3'); if(h)h.textContent='Module 1 complete — Module 2 unlocked';
+     const p=gate.querySelector('p'); if(p)p.textContent='You have completed the Module 1 learning pathway. Your progress has been saved and the next module is now available.';
+     const actions=gate.querySelector('.cv102Actions');
+     if(actions)actions.innerHTML='<button class="secondary" onclick="cv1482ContextIndex=0;cevni1482ContextRender()">PRACTISE AGAIN</button><button class="primary" onclick="pw1627ContinueModule2()">CONTINUE TO MODULE 2 →</button><button class="secondary" onclick="cevniCloseLesson()">COURSE MAP</button>';
+    }
+   }
+  }catch(e){}
+  queueBuildSync();
+ };
+}
+window.pw1627ContinueModule2=function(){
+ try{if(typeof cevniCloseLesson==='function')cevniCloseLesson(); if(typeof cevniRenderModules==='function')cevniRenderModules();}catch(e){}
+ setTimeout(()=>{
+  const grid=document.getElementById('cevniModuleGrid'); if(!grid)return;
+  const candidates=[...grid.querySelectorAll('button,[role="button"],.cvStageCard,.cvModuleCard,div')];
+  const target=candidates.find(el=>/Vessels,\s*Identity\s*&\s*Markings/i.test(el.textContent||'')&&typeof el.click==='function');
+  if(target){target.click();}else{grid.scrollIntoView({behavior:'smooth',block:'center'});}
+ },80);
+};
+
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',startVersionControl,{once:true});else startVersionControl();
+})();
+</script>
 </body></html>
