@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.12';
+const PROJECT_WATCH_BUILD='1.62.13';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.12';
+const BUILD='1.62.13';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.12: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.13: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.12';
+const BUILD='1.62.13';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.12 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.13 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.12';
+const BUILD='1.62.13';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26840,5 +26840,72 @@ const obs=new MutationObserver(()=>{syncBuild();cleanGate();unifyName();});
 document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});});
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
+})();
+</script>\n\n<!-- PROJECT WATCH 1.62.13 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+<style id="pw16213-module3-style">
+#cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
+#cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
+#cevniPage .pw163Badge{white-space:nowrap;padding:9px 12px;border-radius:10px;background:#073b50;color:#8feaff;font-weight:900}
+#cevniPage .pw163Route{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:14px 0}#cevniPage .pw163Route span{padding:9px;border-radius:8px;background:#062633;color:#8fb0bc;font-size:11px;font-weight:900;text-align:center}#cevniPage .pw163Route span.on{background:#0b5b49;color:#caffdf}#cevniPage .pw163Card{margin-top:14px;padding:17px;border-radius:14px;background:#031f2d;border:1px solid #ffffff18}#cevniPage .pw163Card h3{margin:5px 0 9px;font-size:23px}#cevniPage .pw163Card p{line-height:1.55;color:#c9dce4}#cevniPage .pw163Rule{padding:10px 12px;border-left:4px solid #58d8ff;background:#073245;border-radius:8px;color:#d9f7ff;margin-top:12px}
+#cevniPage .pw163Grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}#cevniPage .pw163Sign{padding:14px;border-radius:12px;background:#07364a;border:1px solid #ffffff1c}#cevniPage .pw163Sign b{display:block;font-size:17px}#cevniPage .pw163Code{display:inline-grid;place-items:center;min-width:58px;height:42px;padding:0 10px;margin-bottom:8px;border:2px solid #79def5;border-radius:7px;background:#fff;color:#092633;font-weight:950}#cevniPage .pw163Sign small{display:block;color:#a9c7d1;line-height:1.4}
+#cevniPage .pw163Choices{display:grid;gap:8px;margin-top:12px}#cevniPage .pw163Choices button{text-align:left}#cevniPage .pw163Choices button.good{background:#176a4b!important}#cevniPage .pw163Choices button.bad{background:#7c3030!important}#cevniPage .pw163Feedback{margin-top:12px;padding:12px;border-radius:10px;background:#07382e;display:none}#cevniPage .pw163Feedback.show{display:block}#cevniPage .pw163Actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}#cevniPage .pw163Actions button{width:auto}#cevniPage .pw163Complete{border-color:#42d89a;background:#07382e55}
+@media(max-width:760px){#cevniPage .pw163Grid{grid-template-columns:1fr}#cevniPage .pw163Route{grid-template-columns:1fr 1fr}.pw163Top{display:block}.pw163Badge{display:inline-block;margin-top:10px}}
+</style>
+<script id="pw16213-module3">
+(function(){
+'use strict';
+const BUILD='1.62.13';
+const TEACH=[
+ ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
+ ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
+ ['B — MANDATORY SIGNS','Mandatory signs require an action. Examples include B.1 proceed in the direction shown, B.5 stop as prescribed, B.6 do not exceed the indicated speed and B.7 give a sound signal.','Read the required action and comply with it.'],
+ ['C — RESTRICTIVE SIGNS','Restrictive signs describe a physical or navigational limit. C.1 concerns depth, C.2 headroom and C.3 width; figures may show the limit in metres.','Compare the stated limit with your vessel before committing.'],
+ ['D — RECOMMENDATORY SIGNS','Recommendatory signs identify the preferred route or area. D.1 marks a recommended opening and D.2 recommends keeping within the indicated bridge or weir area.','Recommended does not mean visually decorative — it guides the safer/preferred navigation choice.'],
+ ['E — INFORMATIVE SIGNS','Informative signs provide useful navigation information. Examples include E.1 entry permitted, E.2 overhead cable crossing, E.3 weir and the berthing/anchoring/turning information families.','Information changes the traffic picture even when it is not itself a prohibition or command.'],
+ ['ANNEX 8 — FAIRWAY & WATERWAY MARKING','Annex 8 covers buoyage and marking of waterways, including marks for fairway limits, obstructions, bifurcations and changes of fairway from one bank to the other. Keep a sufficient distance from marks and buoys where required to avoid grounding or striking an obstacle.','Do not confuse an Annex 7 instruction board with an Annex 8 fairway/obstruction mark.'],
+ ['AUXILIARY PANELS & LOCAL APPLICATION','A main sign may be supplemented by a distance panel, directional pointer, luminous arrow or explanatory plate. CEVNI is the harmonised basis, but competent-authority and local provisions still matter on the waterway you are actually using.','Read the whole installation — main sign plus any auxiliary information — and check local requirements.']
+];
+const SEE=[
+ ['A.1','PROHIBITORY','No entry','Do not enter the marked opening or section.'],['B.1','MANDATORY','Proceed in direction shown','The arrow gives the required direction.'],['C.1','RESTRICTIVE','Depth limited','Compare available depth with vessel draught and safety margin.'],['C.2','RESTRICTIVE','Headroom limited','Compare the indicated clearance with air draught and conditions.'],['C.3','RESTRICTIVE','Width limited','Confirm the usable passage suits the vessel/formation.'],['D.1','RECOMMENDATORY','Recommended opening','Prefer the indicated opening, subject to the full situation.'],['E.1','INFORMATIVE','Entry permitted','The marked entry is permitted.'],['E.2','INFORMATIVE','Overhead cable crossing','Account for the overhead hazard and clearance.']
+];
+const CHECK=[
+ {q:'Which Annex 7 family contains prohibitory signs?',a:['A','B','E'],c:0,w:'A is the prohibitory family.'},
+ {q:'A C.2 sign gives what kind of restriction?',a:['Headroom','Speed','Overtaking'],c:0,w:'C.2 is limited headroom.'},
+ {q:'What does D.1 identify?',a:['A recommended opening','A compulsory radio channel','A no-entry section'],c:0,w:'D.1 marks a recommended opening.'},
+ {q:'Which annex separately covers buoyage and waterway marking?',a:['Annex 8','Annex 6','Annex 2'],c:0,w:'Annex 8 is the waterway buoyage/marking annex.'},
+ {q:'If an auxiliary panel is fitted with a main sign, what should you do?',a:['Read it as part of the complete instruction','Ignore it unless at night','Treat it as optional decoration'],c:0,w:'Auxiliary panels supplement or clarify the main sign.'}
+];
+const APPLY=[
+ {t:'Bridge approach',s:'The left opening carries A.1 and the centre opening carries D.1.',q:'Which interpretation is correct?',a:['Left is prohibited; centre is the recommended opening','Both openings mean the same thing','D.1 prohibits the centre opening'],c:0,w:'A.1 prohibits entry; D.1 identifies the recommended opening.'},
+ {t:'Restricted headroom',s:'A bridge opening displays C.2 with a clearance figure.',q:'What is the correct decision process?',a:['Compare the stated headroom with your vessel air draught and conditions','Treat it as a speed limit','Use the opening regardless because C signs are only advice'],c:0,w:'C.2 is a physical headroom restriction and must be assessed before committing.'},
+ {t:'Shallow reach',s:'A C.1 depth restriction is displayed ahead.',q:'What matters most before proceeding?',a:['Available depth versus vessel draught and an appropriate margin','The vessel name','Whether another craft is overtaking'],c:0,w:'C.1 concerns limited water depth.'},
+ {t:'Fairway obstruction',s:'Annex 8 marking shows an obstruction and a clear navigable side.',q:'What should guide your route?',a:['The marked clear side while maintaining a proper lookout','The closest bank regardless of marks','Ignore the marks if the chart is open'],c:0,w:'Annex 8 marking is there to identify the fairway/obstruction picture on the water.'}
+];
+const REVIEW=[
+ {q:'What is the quickest first clue to the nature of an Annex 7 sign?',a:['Its A–E family','The vessel name','The nearest buoy number'],c:0,w:'The A–E family identifies prohibition, obligation, restriction, recommendation or information.'},
+ {q:'Which pair are physical restrictions?',a:['C.1 depth and C.2 headroom','A.1 entry and A.2 overtaking','D.1 opening and E.1 entry permitted'],c:0,w:'C.1 and C.2 are restrictive signs for depth and headroom.'},
+ {q:'What is the difference between D.1 and A.1 at bridge openings?',a:['D.1 recommends an opening; A.1 prohibits entry','Both prohibit entry','Both merely provide information'],c:0,w:'The families have different regulatory meanings.'},
+ {q:'Where do fairway limits, obstructions and similar waterway marking belong in this module?',a:['Annex 8','Annex 2','Annex 6'],c:0,w:'Annex 8 covers buoyage and marking of waterways.'},
+ {q:'What must be considered alongside the harmonised CEVNI signs?',a:['Applicable competent-authority and local provisions','Only COLREG Rule 5','Nothing else anywhere in Europe'],c:0,w:'CEVNI is harmonised, while national/regional/local provisions can still apply.'}
+];
+let stage='intro',idx=0,answered=false;
+function sync(){window.PROJECT_WATCH_BUILD=BUILD;const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD+' • CEVNI Curriculum';}
+function area(){return document.getElementById('cevniLessonArea')}
+function route(active){const r=['LEARN','SEE','CHECK','APPLY','REVIEW'];return `<div class="pw163Route">${r.map(x=>`<span class="${x===active?'on':''}">${x}${x===active?' • CURRENT':''}</span>`).join('')}</div>`}
+function shell(label,body,badge){const a=area();if(!a)return;a.innerHTML=`<section class="pw163Shell"><div class="pw163Top"><div><div class="ver">MODULE 03 • ${label}</div><h2>Waterway Signs, Marks & Buoyage</h2><p>Read the waterway instruction, understand the fairway marking and make the correct operational decision.</p></div><div class="pw163Badge">${badge||label}</div></div>${body}</section>`;a.scrollIntoView({behavior:'smooth',block:'start'});}
+function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw163Card"><h3>Learn it → See it → Check it → Apply it.</h3><p>This module brings the existing Annex 7 sign library, Annex 8 fairway-marking concepts and operational visual lessons into one learner pathway. You will learn the sign families first, recognise verified examples, check understanding, then apply the markings in waterway situations.</p><div class="pw163Rule"><b>Source basis:</b> UNECE CEVNI Revision 6, Annex 7 and Annex 8, with current correction/amendment layers and local-applicability awareness.</div></div><div class="pw163Actions"><button class="secondary" onclick="cevniCloseLesson()">COURSE MAP</button><button class="primary" onclick="pw163Teach(0)">BEGIN MODULE 3 →</button></div>`,'START HERE • 3/9');}
+function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see();return}const x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="cvLessonProgress"><i style="width:${Math.round((i+1)/TEACH.length*100)}%"></i></div><div class="pw163Card"><div class="ver">TEACHING BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw163Rule">${x[2]}</div></div><div class="pw163Actions">${i?'<button class="secondary" onclick="pw163Teach('+(i-1)+')">← PREVIOUS</button>':''}<button class="primary" onclick="pw163Teach(${i+1})">${i===TEACH.length-1?'SEE THE SIGNS →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`);}
+function see(){stage='see';shell('VISUAL RECOGNITION',`${route('SEE')}<div class="pw163Card"><div class="ver">VERIFIED RECOGNITION SET • ANNEX 7</div><h3>Read the code, family and operational meaning together.</h3><div class="pw163Grid">${SEE.map(x=>`<div class="pw163Sign"><span class="pw163Code">${x[0]}</span><b>${x[1]} • ${x[2]}</b><small>${x[3]}</small></div>`).join('')}</div><div class="pw163Rule">Production artwork remains governed by the verified visual-asset gate. These labels teach the regulatory identity without inventing pictograms.</div></div><div class="pw163Actions"><button class="secondary" onclick="pw163Teach(${TEACH.length-1})">← LEARN</button><button class="primary" onclick="pw163Quiz('check',0)">CHECK UNDERSTANDING →</button></div>`,'SEE • 8 VERIFIED EXAMPLES');}
+function quiz(kind,i){stage=kind;idx=i;answered=false;const arr=kind==='review'?REVIEW:CHECK;if(i>=arr.length){if(kind==='review'){complete();return}else{apply(0);return}}const x=arr[i],active=kind==='review'?'REVIEW':'CHECK';shell(kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(active)}<div class="pw163Card"><div class="ver">${active} ${i+1} / ${arr.length}</div><h3>${x.q}</h3><div class="pw163Choices">${x.a.map((z,j)=>`<button data-pw163-choice="${j}" data-pw-correct="${j===x.c?'true':'false'}" onclick="pw163Answer('${kind}',${i},${j},this)">${z}</button>`).join('')}</div><div id="pw163Fb" class="pw163Feedback"></div></div>` ,`${active} ${i+1} / ${arr.length}`);}
+window.pw163Answer=function(kind,i,j,btn){if(answered)return;const arr=kind==='review'?REVIEW:CHECK,x=arr[i],fb=document.getElementById('pw163Fb');if(j===x.c){answered=true;btn.classList.add('good');fb.className='pw163Feedback show';fb.innerHTML=`<b>✓ Correct.</b> ${x.w}<div class="pw163Actions"><button class="primary" onclick="pw163Quiz('${kind}',${i+1})">${i===arr.length-1?(kind==='review'?'COMPLETE MODULE 3 →':'APPLY IT →'):'NEXT →'}</button></div>`;}else{btn.classList.add('bad');fb.className='pw163Feedback show';fb.innerHTML='<b>Not quite — try again.</b> Re-read the sign family or operational meaning before choosing.';setTimeout(()=>btn.classList.remove('bad'),650);}};
+function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){quiz('review',0);return}const x=APPLY[i];shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw163Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw163Rule"><b>Decision:</b> ${x.q}</div><div class="pw163Choices">${x.a.map((z,j)=>`<button data-pw-correct="${j===x.c?'true':'false'}" onclick="pw163ApplyAnswer(${i},${j},this)">${z}</button>`).join('')}</div><div id="pw163Fb" class="pw163Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`);}
+window.pw163ApplyAnswer=function(i,j,btn){if(answered)return;const x=APPLY[i],fb=document.getElementById('pw163Fb');if(j===x.c){answered=true;btn.classList.add('good');fb.className='pw163Feedback show';fb.innerHTML=`<b>✓ Correct operational reading.</b> ${x.w}<div class="pw163Actions"><button class="primary" onclick="pw163Apply(${i+1})">${i===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`;}else{btn.classList.add('bad');fb.className='pw163Feedback show';fb.innerHTML='<b>Not quite — reassess the sign or marking.</b> Practice allows another attempt.';setTimeout(()=>btn.classList.remove('bad'),650);}};
+function complete(){try{if(window.cv1482SetStage)cv1482SetStage(2,'module');else if(window.cevniMark)cevniMark(2);}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw163Card pw163Complete"><div class="ver">MODULE 03 • COMPLETE</div><h3>Module 3 complete — Module 4 unlocked</h3><p>You have completed the Annex 7 sign-family teaching, verified recognition set, Annex 8 fairway-marking concepts, knowledge checks, operational application and module review. Your progress has been saved.</p><div class="pw163Rule">LEARN ✓ • SEE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw163Actions"><button class="primary" onclick="pw163Continue4()">CONTINUE TO MODULE 4 →</button><button class="secondary" onclick="cevniCloseLesson()">RETURN TO COURSE MAP</button></div></div>`,'MODULE COMPLETE');try{cevniRenderModules()}catch(e){}}
+window.pw163Teach=teach;window.pw163Quiz=quiz;window.pw163Apply=apply;window.pw163Continue4=function(){try{cevniCloseLesson();cevniRenderModules()}catch(e){}setTimeout(()=>{try{cevniOpenLesson(3,0)}catch(e){}},80)};
+const prevOpen=window.cevniOpenLesson;window.cevniOpenLesson=function(i,step=0){if(i===2){if(!window.cevniModuleUnlocked||cevniModuleUnlocked(2)){intro();return}return;}return prevOpen(i,step)};
+function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[2]){CEVNI_MODULES[2].title='Waterway Signs, Marks & Buoyage';CEVNI_MODULES[2].desc='Read Annex 7 waterway signs, Annex 8 fairway marking and buoyage, then apply them in operational situations.';}}catch(e){}document.querySelectorAll('#cevniPage *').forEach(el=>{if(el.childElementCount===0&&/Signs, Signals & Fairway Marks/.test(el.textContent||''))el.textContent=(el.textContent||'').replace('Signs, Signals & Fairway Marks','Waterway Signs, Marks & Buoyage');});}
+const oldInit=window.cevniInit;window.cevniInit=function(){names();const r=oldInit?oldInit():undefined;names();sync();return r};
+sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
+window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n</body></html>
