@@ -1,0 +1,357 @@
+{
+  "library": "Project Watch CEVNI Exam Intelligence Library",
+  "version": "1.0",
+  "purpose": "Research/reference pool for designing original Project Watch mock questions.",
+  "copyrightRule": "Do not reproduce RYA test wording or artwork. Use source only to identify assessed concepts; write original questions and verified Project Watch visuals.",
+  "examFormatEvidence": {
+    "paper": "30 multiple-choice questions; pass mark 22/30",
+    "online": "two sections of 15; pass mark 11/15 in each",
+    "UNECE_design_guidance": "Four answer choices, one definitive correct answer, significant rules-of-road coverage, contextual visuals."
+  },
+  "sourceRefs": [
+    {
+      "name": "RYA Paper A",
+      "url": "https://www.rya.org.uk/media/rsfkduhq/7e1_cevni_test_paper_a.pdf"
+    },
+    {
+      "name": "RYA Recognition Guidelines",
+      "url": "https://www.rya.org.uk/media/tocl4goz/544_rya_recognition_guidance_notes.pdf"
+    },
+    {
+      "name": "UNECE CEVNI assessment catalogue",
+      "url": "https://unece.org/sites/default/files/datastore/fileadmin/DAM/trans/doc/2019/sc3/EG_CEVNI-2019-17.pdf"
+    }
+  ],
+  "records": [
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-001",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 1,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured prohibitory/restriction sign and select the action it requires.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-002",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 2,
+      "status": "research_reference",
+      "projectWatchPrompt": "Identify the meaning of the pictured inland-waterway sign relating to ferry/mooring/waterway status.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-003",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 3,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the displayed navigation lights and decide whether passage is permitted.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-004",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 4,
+      "status": "research_reference",
+      "projectWatchPrompt": "Use the pictured fairway/channel sign to determine the required side or channel movement.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-005",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 5,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured buoyage/area mark and identify what activity or navigation status it indicates.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-006",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 6,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the displayed lights governing passage or restricted-height/two-way traffic.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-007",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 7,
+      "status": "research_reference",
+      "projectWatchPrompt": "Identify the operational instruction conveyed by the pictured mandatory/warning sign.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-008",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 8,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured berthing-prohibition sign, including the distance/direction information.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-009",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 9,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured bridge/passage shapes and decide whether the opening is recommended for one-way or two-way traffic.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-010",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 10,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured passage markers and determine whether they recommend or require keeping within the indicated space.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-011",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 11,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured flashing/navigation lights and select the required vessel action.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-012",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 12,
+      "status": "research_reference",
+      "projectWatchPrompt": "Identify which side of a fixed obstruction the pictured mark indicates.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-013",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 13,
+      "status": "research_reference",
+      "projectWatchPrompt": "Use the pictured bank/fairway mark to determine the channel's position relative to the bank.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-014",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 14,
+      "status": "research_reference",
+      "projectWatchPrompt": "When proceeding downstream, determine on which side the pictured buoy should be left.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-015",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 15,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured buoy/mark as an obstruction, restricted-depth or bifurcation indication.",
+      "correctAnswer": null,
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-016",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 16,
+      "status": "research_reference",
+      "projectWatchPrompt": "A vessel at work displays the pictured day shape. Determine the side on which it should be passed.",
+      "correctAnswer": "Depends on the depicted Annex 3 shape; retain source visual reference for verified reconstruction.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-017",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 17,
+      "status": "research_reference",
+      "projectWatchPrompt": "Interpret the pictured blue cone/day shape and determine the vessel status or safe passing side.",
+      "correctAnswer": "Depends on the depicted Annex 3 shape; retain source visual reference for verified reconstruction.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-018",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 18,
+      "status": "research_reference",
+      "projectWatchPrompt": "Identify the vessel/formation represented by the pictured night-light configuration.",
+      "correctAnswer": "Depends on the depicted light arrangement; rebuild from verified CEVNI Annex 3 asset.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-019",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 19,
+      "status": "research_reference",
+      "projectWatchPrompt": "While being overtaken, identify the meaning of the pictured day marking on the overtaking vessel.",
+      "correctAnswer": "Motorized vessel leading a towed convoy.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-020",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 20,
+      "status": "research_reference",
+      "projectWatchPrompt": "Two motorized small craft meet head-on with collision risk. What is the normal action?",
+      "correctAnswer": "Both alter to starboard and pass port-to-port.",
+      "visualRequired": false,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-021",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 21,
+      "status": "research_reference",
+      "projectWatchPrompt": "An upstream vessel shows the blue-board passing indication on its starboard side. What passing arrangement is being requested?",
+      "correctAnswer": "It is leaving the passage for the oncoming vessel to pass on its starboard side (starboard-to-starboard encounter).",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-022",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 22,
+      "status": "research_reference",
+      "projectWatchPrompt": "What does the CEVNI yellow bi-cone day marking identify?",
+      "correctAnswer": "A high-speed vessel.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-023",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 23,
+      "status": "research_reference",
+      "projectWatchPrompt": "From the pictured restricted-manoeuvrability/work display, determine the vessel's status and the safe side of passage.",
+      "correctAnswer": "Depends on the depicted red/green/white light geometry; retain source visual reference for exact passing side.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-024",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 24,
+      "status": "research_reference",
+      "projectWatchPrompt": "Identify the type/status of ferry represented by the pictured night-light configuration.",
+      "correctAnswer": "Depends on the depicted ferry-light arrangement; rebuild from verified CEVNI Annex 3 asset.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-025",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 25,
+      "status": "research_reference",
+      "projectWatchPrompt": "Travelling downstream in poor visibility, interpret the pictured vessel/signal and determine the intended passing arrangement.",
+      "correctAnswer": "Depends on the depicted visual/signal combination; retain source visual reference for verification.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-026",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 26,
+      "status": "research_reference",
+      "projectWatchPrompt": "What manoeuvre is indicated by three long blasts in the harbour/tributary signal family?",
+      "correctAnswer": "The vessel is leaving a harbour/tributary and intends to cross the waterway.",
+      "visualRequired": false,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-027",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 27,
+      "status": "research_reference",
+      "projectWatchPrompt": "What does one long blast followed by one short blast indicate?",
+      "correctAnswer": "Turning to starboard.",
+      "visualRequired": false,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-028",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 28,
+      "status": "research_reference",
+      "projectWatchPrompt": "What does a sequence of three short blasts indicate?",
+      "correctAnswer": "The vessel is going astern / using astern propulsion.",
+      "visualRequired": false,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-029",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 29,
+      "status": "research_reference",
+      "projectWatchPrompt": "Which prescribed sound signal communicates caution?",
+      "correctAnswer": "One long blast.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    },
+    {
+      "id": "PW-CEVNI-EXAM-INTEL-RYA-A-030",
+      "source": "RYA CEVNI Test for ICC (Inland), Paper A",
+      "sourceQuestion": 30,
+      "status": "research_reference",
+      "projectWatchPrompt": "Identify the prescribed sound signal used to indicate distress from the illustrated alternatives.",
+      "correctAnswer": "Retain source visual/audio-pattern reference; verify against the applicable CEVNI distress provision before activation.",
+      "visualRequired": true,
+      "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
+      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+    }
+  ]
+}
