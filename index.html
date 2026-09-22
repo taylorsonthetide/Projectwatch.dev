@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.62.22 • CEVNI Curriculum</title>
+<title>Project Watch 1.62.23 • CEVNI Curriculum</title>
 <style>
 :root{
   --bg:#02141d;--panel:#07364e;--panel2:#052a3c;--blue:#168bcf;
@@ -26486,7 +26486,7 @@ window.PW_CEVNI_SEQUENCE_LIBRARY={version:'1.0.0',courseId:'pw-cevni',modules:[
  {id:'cv-m06',order:6,title:'Rules of the Road',flow:['learn','see','practice','check','apply','review','complete']},
  {id:'cv-m07',order:7,title:'Bridges, Locks, Berthing & Special Operations',flow:['learn','see','practice','check','apply','review','complete']},
  {id:'cv-m08',order:8,title:'Navigation Systems, Reporting & Information',flow:['learn','see','practice','check','apply','review','complete']},
- {id:'cv-m09',order:9,title:'Safety, Environment & Passage Readiness',flow:['learn','see','check','apply','review','complete']}
+ {id:'cv-m09',order:9,title:'Safety, Environment & Passage Readiness',flow:['learn','see','practice','check','apply','review','complete']}
  ],finalAssessment:{id:'cv-final-mock',title:'Final Mock Exam',isModule:false,after:'cv-m09'}};
 window.PW_CEVNI_MODULE1_SPEC={
  id:'cv-m01',title:'Welcome to CEVNI',sourceLayer:['UNECE CEVNI Revision 6','Corrigenda 1 & 2','Amendments 1 & 2','applicable national/regional/local provisions'],
@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.22';
+const PROJECT_WATCH_BUILD='1.62.23';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.22: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.23: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.22 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.23 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.62.22 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.62.23 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.62.22 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.62.23 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -27056,7 +27056,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 </script>
 
 
-<!-- PROJECT WATCH 1.62.22 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
+<!-- PROJECT WATCH 1.62.23 — MODULE 05 SOUND SIGNALS & RADIOTELEPHONY -->
 <style id="pw16216-module5-style">
 #cevniPage .pw165Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw165Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27087,7 +27087,7 @@ window.PW16214_MODULE4={build:BUILD,teach:TEACH.length,visuals:VIS.length,check:
 <script id="pw16216-module5">
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 
 const TEACH=[
  ['SOUND LANGUAGE — TIMING FIRST','Annex 6 defines a short blast as about 1 second and a long blast as about 4 seconds. The normal interval between successive blasts is about 1 second. A series of very short blasts is at least six blasts, each about a quarter-second, with roughly quarter-second silences.','Hear duration as part of the meaning: short, long and very-short are different signal elements.'],
@@ -27258,7 +27258,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 </script>
 
 
-<!-- PROJECT WATCH 1.62.22 — MODULE 06 RULES OF THE ROAD -->
+<!-- PROJECT WATCH 1.62.23 — MODULE 06 RULES OF THE ROAD -->
 <style id="pw16220-module6-style">
 #cevniPage .pw166Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw166Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27295,7 +27295,7 @@ window.PW16218_MODULE5={build:BUILD,teach:TEACH.length,signals:SIGNALS.length,ch
 <script id="pw16220-module6">
 (function(){
 'use strict';
-const BUILD='1.62.22';
+const BUILD='1.62.23';
 
 const TEACH=[
  ['THE ENCOUNTER TYPE COMES FIRST','Chapter 6 distinguishes meeting, overtaking and crossing. Meeting is opposite or nearly opposite courses; overtaking is approach from more than 22.5° abaft the other vessel’s beam; crossing is an encounter that is neither meeting nor overtaking.','Classify the encounter before applying a manoeuvring rule.'],
@@ -27419,7 +27419,7 @@ window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.62.22 — MODULE 07 -->
+<!-- PROJECT WATCH 1.62.23 — MODULE 07 -->
 <style id="pw16221-module7-style">
 #cevniPage .pw167Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw167Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27454,7 +27454,7 @@ window.PW16220_MODULE6={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16221-module7">
 (function(){
-'use strict'; const BUILD='1.62.22';
+'use strict'; const BUILD='1.62.23';
 const TEACH=[
 ['BRIDGE AND WEIR OPENINGS','At bridge or weir openings that are too narrow for simultaneous passage, the applicable narrow-passage rules govern. CEVNI signs can restrict the usable part of an opening.','A.10 means navigation is prohibited outside the marked area; D.2 recommends keeping within the marked area.'],
 ['BRIDGE PASSAGE IS A LOCAL-RULE HOTSPOT','CEVNI Chapter 9 expressly allows competent authorities to prescribe special rules for passage under bridges.','Never assume the harmonized bridge procedure is the complete local rule.'],
@@ -27542,7 +27542,7 @@ window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </script>
 
 
-<!-- PROJECT WATCH 1.62.22 — MODULE 08 -->
+<!-- PROJECT WATCH 1.62.23 — MODULE 08 -->
 <style id="pw16222-module8-style">
 #cevniPage .pw168Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw168Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -27575,7 +27575,7 @@ window.PW16221_MODULE7={build:BUILD,teach:TEACH.length,see:SEE.length,practice:P
 </style>
 <script id="pw16222-module8">
 (function(){
-'use strict'; const BUILD='1.62.22';
+'use strict'; const BUILD='1.62.23';
 const TEACH=[
 ['NAVIGATION INFORMATION IS A SYSTEM','CEVNI combines the boatmaster’s observation with radiotelephony, radar where used, Inland AIS, electronic chart information and competent-authority traffic information. No single display removes the duty to navigate safely.','Use electronic information to support — not replace — the complete traffic picture.'],
 ['RADIOTELEPHONY NETWORKS','The CEVNI framework distinguishes ship-to-ship, nautical-information and ship-to-port-authority communications. Motorized vessels other than small craft are subject to equipment and monitoring requirements; local competent-authority requirements remain important.','Know which network carries the information you need and maintain the required listening watch.'],
@@ -27660,6 +27660,127 @@ const prev=window.cevniOpenLesson;window.cevniOpenLesson=function(i,s=0){if(i===
 function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[7]){CEVNI_MODULES[7].title='Navigation Systems, Reporting & Information';CEVNI_MODULES[7].desc='Use inland radio, radar, AIS, electronic navigation information and reporting procedures to maintain the traffic picture.'}}catch(e){}}
 const oi=window.cevniInit;window.cevniInit=function(){names();let r=oi?oi():undefined;names();sync();return r};sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
 window.PW16222_MODULE8={build:BUILD,teach:TEACH.length,see:SEE.length,practice:PRACTICE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,testModeJump:true,audioTouched:false};
+})();
+</script>
+
+
+<!-- PROJECT WATCH 1.62.23 — MODULE 09 -->
+<style id="pw16223-module9-style">
+#cevniPage .pw169Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
+#cevniPage .pw169Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
+#cevniPage .pw169Top h2{margin:5px 0 7px;font-size:30px}.pw169Top p{margin:0;color:#c3d9e2;line-height:1.5}
+#cevniPage .pw169Badge{padding:9px 12px;border-radius:10px;background:#073b50;color:#8feaff;font-weight:900}
+#cevniPage .pw169Route{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:14px 0}
+#cevniPage .pw169Route span{padding:9px 5px;border-radius:8px;background:#062633;color:#8fb0bc;font-size:10px;font-weight:900;text-align:center}
+#cevniPage .pw169Route span.on{background:#0b5b49;color:#caffdf}
+#cevniPage .pw169Card{margin-top:14px;padding:17px;border-radius:14px;background:#031f2d;border:1px solid #ffffff18}
+#cevniPage .pw169Card h3{margin:5px 0 9px;font-size:23px}.pw169Card p{line-height:1.55;color:#c9dce4}
+#cevniPage .pw169Rule{padding:10px 12px;border-left:4px solid #58d8ff;background:#073245;border-radius:8px;color:#d9f7ff;margin-top:12px;line-height:1.45}
+#cevniPage .pw169Warn{padding:10px 12px;border-left:4px solid #f0b844;background:#3a2c12;border-radius:8px;color:#ffe8ae;margin-top:12px;line-height:1.45}
+#cevniPage .pw169Progress{height:7px;background:#021b26;border-radius:10px;overflow:hidden;margin:14px 0}.pw169Progress i{display:block;height:100%;background:#3bd68a}
+#cevniPage .pw169Actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.pw169Actions button{width:auto}
+#cevniPage .pw169Choices{display:grid;gap:8px;margin-top:12px}.pw169Choices button{text-align:left}
+#cevniPage .pw169Choices button.good{background:#176a4b!important}.pw169Choices button.bad{background:#7c3030!important}
+#cevniPage .pw169Feedback{margin-top:12px;padding:12px;border-radius:10px;background:#07382e;display:none}
+#cevniPage .pw169Feedback.show{display:block}
+#cevniPage .pw169Panel{margin-top:12px;min-height:220px;border-radius:14px;background:#071c27;border:1px solid #ffffff20;padding:18px;position:relative;overflow:hidden}
+#cevniPage .pw169Grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+#cevniPage .pw169Grid span{padding:13px 9px;border-radius:9px;background:#0a3a4e;text-align:center;font-size:12px;font-weight:800;color:#d9f7ff}
+#cevniPage .pw169Water{height:150px;margin-top:10px;border-radius:12px;background:#176c82;position:relative;overflow:hidden}
+#cevniPage .pw169Boat{position:absolute;left:48%;top:50px;width:22px;height:45px;border-radius:50% 50% 25% 25%;background:#61d6ff;border:2px solid #fff}
+#cevniPage .pw169Spill{position:absolute;left:54%;top:85px;width:80px;height:28px;border-radius:50%;background:#342f28;opacity:.9}
+#cevniPage .pw169Dev{margin:12px 0;padding:10px;border:1px dashed #f0b844;border-radius:10px;background:#3a2c1266}
+#cevniPage .pw169Complete{border-color:#42d89a;background:#07382e55}
+@media(max-width:760px){#cevniPage .pw169Route,#cevniPage .pw169Grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+<script id="pw16223-module9">
+(function(){
+'use strict'; const BUILD='1.62.23';
+const TEACH=[
+['PASSAGE READINESS STARTS WITH A SAFE VESSEL','CEVNI requires vessels to be constructed, rigged, crewed and operated so that those on board and navigation are safe. Loading must not exceed maximum draught, impair stability or create an unacceptable loss of view.','Before departure, confirm the vessel, people, load and visibility are fit for the intended waterway.'],
+['DOCUMENTS AND LOCAL RULES','CEVNI Article 1.10 sets the onboard-document framework, while applicable international, regional and national rules can require additional papers. Chapter 9 expressly allows competent authorities to add requirements.','Passage readiness includes the documents and permissions actually required for your vessel and route — not a generic one-size-fits-all list.'],
+['LIFE-SAVING READINESS','Individual life-saving equipment specified for the vessel must be available in the required numbers. CEVNI also contains life-jacket requirements for specified higher-risk operations, with details and exemptions depending on vessel type and applicable rules.','Know where the equipment is, who needs it and when the applicable rule requires it to be worn.'],
+['ACCIDENT — SAVE PEOPLE FIRST','If an accident endangers persons on board, the boatmaster must use every means available to save them. A nearby boatmaster must give immediate assistance where people are endangered or the fairway is threatened, so far as consistent with the safety of their own vessel.','Protect life without creating a second casualty.'],
+['GROUNDING, SINKING AND FAIRWAY DANGER','A grounded or sunken vessel triggers duties to inform the nearest competent authority and, where necessary, warn approaching traffic in time. An accident in a lock must be reported immediately to the lock service.','Control the immediate danger, inform the authority and warn traffic early enough to act.'],
+['POLLUTION — GENERAL DUTY OF CARE','Chapter 10 requires care to avoid polluting the waterway, minimise waste generated on board and avoid mixing waste categories as far as possible.','Pollution prevention is an operating discipline, not only an emergency response.'],
+['NO ROUTINE DISCHARGE OF OILY / SPECIAL WASTE','CEVNI prohibits throwing, discharging or allowing oily or greasy operational waste, slops, household refuse, sludge, other special waste, cargo portions or cargo-related waste into the waterway, except where a specific applicable water-protection rule permits an exception.','Contain it and use the appropriate reception route.'],
+['ACCIDENTAL SPILL — REPORT WITHOUT DELAY','If prohibited waste is accidentally discharged, or a discharge is threatened, the boatmaster must notify the nearest competent authority without delay and, as far as possible, nearby vessels, giving the position, quantity and nature of the waste and measures taken.','Stop or contain the source if safe, then make the required notification with useful facts.'],
+['COLLECT WASTE CORRECTLY ON BOARD','Operational waste is collected separately in suitable receptacles and bilge water in the engine-room bilges. CEVNI prohibits burning waste on board and restricts practices that make bilge-water treatment more difficult.','Separate, contain, inspect for leakage and deliver waste correctly.'],
+['USED OIL AND RECEPTION FACILITIES','For vessels to which the used-oil-log requirement applies, oily/greasy operational waste is delivered to reception facilities at appropriate intervals and the receipt is recorded. Small-craft and local-rule treatment must be checked for the waterway concerned.','Keep the disposal trail required for your vessel category and route.'],
+['BUNKERING — CONTROL BEFORE FLOW','CEVNI Article 10.07 requires vigilance during fuel or lubricating-oil bunkering: secure the vessel, stay within tank capacity, supervise the operation, prevent spills and use the prescribed pre-transfer agreement/checklist where applicable.','No transfer starts until vessel, quantity, communication and supervision are under control.'],
+['FINAL PASSAGE-READINESS LOOP','Before sailing, combine vessel condition, crew/passenger readiness, required documents, waterway/local requirements, communications/navigation equipment, pollution controls and an emergency plan.','The final check asks one question: can this vessel make this passage safely and lawfully now?']
+];
+const SEE=[
+{t:'Departure readiness board',k:'ready',p:'The boatmaster is preparing to leave the berth.',r:'Check vessel/crew, load and view, required papers, route/local requirements, navigation/communication equipment and emergency/pollution readiness before departure.'},
+{t:'Person in danger',k:'rescue',p:'An accident has placed a person at immediate risk.',r:'Use every available means to save persons; assistance to another casualty remains subject to the safety of your own vessel.'},
+{t:'Grounded near the fairway',k:'ground',p:'The vessel is aground where approaching traffic may be affected.',r:'Inform the nearest competent authority as soon as possible and warn approaching traffic where necessary.'},
+{t:'Oil or waste discharge',k:'spill',p:'A prohibited discharge has occurred or is threatened.',r:'Contain or stop it if safe, notify the nearest competent authority without delay and give useful details; warn nearby vessels as far as possible.'},
+{t:'Waste storage aboard',k:'waste',p:'Operational waste is being retained until proper reception.',r:'Collect separately in suitable receptacles, keep leakage detectable and do not burn waste on board.'},
+{t:'Fuel transfer readiness',k:'bunker',p:'Fuel transfer is about to start.',r:'Secure, confirm capacity and filling plan, maintain direct communication and supervision, and complete the required checklist where applicable.'}
+];
+const PRACTICE=[
+{q:'Your planned load would put the vessel beyond its maximum draught marks. What is the correct decision?',a:['Do not depart until the loading condition is compliant','Proceed slowly','Proceed if visibility is good'],c:0,w:'CEVNI Article 1.07 prohibits loading beyond the maximum draught marks.'},
+{q:'An accident on your vessel endangers a person. What is the boatmaster’s primary CEVNI duty?',a:['Use every means available to save them','Protect the timetable first','Wait for the authority before acting'],c:0,w:'Article 1.16 puts saving endangered persons first.'},
+{q:'You ground near the fairway and approaching vessels may be endangered. What should you do?',a:['Inform the authority and warn approaching traffic in good time','Only update AIS','Leave the vessel immediately'],c:0,w:'Article 1.17 combines authority notification with warning approaching traffic where necessary.'},
+{q:'Oily bilge waste is ready for disposal. What is the normal Chapter 10 approach?',a:['Retain/collect it correctly and use the appropriate reception facility','Pump it overboard at low speed','Mix it with household waste'],c:0,w:'CEVNI prohibits routine oily discharge and provides for proper collection/reception.'},
+{q:'A prohibited waste spill occurs. What information should the authority receive?',a:['Position, quantity, nature of waste and measures taken','Only vessel name','Only destination'],c:0,w:'Article 10.04 calls for useful spill facts, not a vague notification.'},
+{q:'During bunkering, safe direct communication between the responsible people is lost. What should happen?',a:['Interrupt the filling operation','Continue at half rate','Continue if the tank is nearly full'],c:0,w:'CEVNI bunkering provisions require safe direct communication and interruption if it is no longer guaranteed.'}
+];
+const CHECK=[
+{q:'What does CEVNI require of the vessel’s loading condition?',a:['It must respect maximum draught and not endanger stability or required view','Only total weight matters','The load may obscure the view if radar is fitted in every case'],c:0,w:'Article 1.07 addresses draught, view and stability.'},
+{q:'Which statement about onboard documents is correct?',a:['The applicable list depends on CEVNI plus other relevant regional/national/international requirements','Every small pleasure craft carries exactly the same commercial-vessel documents','Documents are optional if carried electronically on a phone'],c:0,w:'Article 1.10 and Chapter 9 make the applicable regulatory layer important.'},
+{q:'A nearby vessel has an accident endangering persons. Your assistance duty is limited by what?',a:['The safety of your own vessel','Whether the casualty is commercially operated','Whether the voyage is delayed'],c:0,w:'Immediate assistance is required insofar as consistent with the safety of your own vessel.'},
+{q:'Which action is prohibited by Chapter 10?',a:['Burning waste on board','Separating waste categories','Delivering oily waste to a reception facility'],c:0,w:'Article 10.05 expressly prohibits burning waste on board.'},
+{q:'What is the correct response to a threatened prohibited discharge?',a:['Notify the nearest competent authority without delay and act to control the risk','Wait until pollution reaches the bank','Record it only after arrival'],c:0,w:'The reporting duty applies to an accidental discharge or the threat of one.'},
+{q:'What is the basic waste-management principle aboard?',a:['Separate and contain waste appropriately','Mix categories to save space','Discharge biodegradable waste automatically'],c:0,w:'CEVNI requires care to minimise waste and avoid mixing categories, with separate collection rules.'},
+{q:'What is part of bunkering vigilance?',a:['Supervision of the filling operation','Leaving the filling point unattended','Estimating tank capacity after transfer starts'],c:0,w:'Article 10.07 requires supervision and pre-transfer controls.'},
+{q:'Who sets additional local requirements that may affect passage readiness?',a:['The competent authority','Only the vessel manufacturer','Only another boatmaster'],c:0,w:'CEVNI provides for regional and national special requirements through competent authorities.'}
+];
+const APPLY=[
+{t:'Departure with obstructed view',s:'Deck cargo has been positioned so that the boatmaster’s direct view ahead no longer meets the applicable requirement.',q:'What is the safe CEVNI decision?',a:['Correct the loading/view problem before departure','Depart and rely on AIS','Depart only in daylight'],c:0,w:'Passage readiness fails if the loading condition breaches Article 1.07.'},
+{t:'Casualty alongside',s:'Another vessel has suffered an accident and people are in danger. You can assist without placing your own vessel in danger.',q:'What should you do?',a:['Give immediate assistance','Continue because only authorities may assist','Wait until formally requested'],c:0,w:'Article 1.16 creates an immediate assistance duty in this situation.'},
+{t:'Grounding in a bend',s:'Your vessel grounds near the fairway where traffic cannot see the obstruction early.',q:'What combination is required?',a:['Notify the competent authority and warn approaching traffic','Only display deck lights','Only call your destination marina'],c:0,w:'Article 1.17 requires notification and, where necessary, timely warning to approaching traffic.'},
+{t:'Engine-room oil spill',s:'Oil is escaping and there is a threat it may enter the waterway.',q:'What is the correct response?',a:['Contain/stop it if safe and notify the nearest competent authority without delay with spill details','Wash it into the water before it spreads onboard','Wait to see whether it reaches the water'],c:0,w:'Chapter 10 requires prevention plus immediate notification of accidental or threatened prohibited discharge.'},
+{t:'Waste bin decision',s:'Used oily rags and ordinary household refuse have accumulated onboard.',q:'What is the correct management approach?',a:['Keep waste categories appropriately separated and deliver through the proper reception route','Burn them onboard','Put both into the bilge'],c:0,w:'CEVNI requires separate collection and prohibits burning waste onboard.'},
+{t:'Bunkering communications fail',s:'Fuel is flowing and the direct communication method between the receiving vessel and supplier fails.',q:'What should happen?',a:['Interrupt filling immediately','Continue if no spill is visible','Increase flow to finish sooner'],c:0,w:'Loss of safe direct communication is an explicit stop condition in the bunkering procedure.'}
+];
+const REVIEW=[
+{q:'What three loading issues does Article 1.07 directly address?',a:['Maximum draught, view and stability','Radio, AIS and radar','Waste, fuel and cargo documents'],c:0,w:'These are central departure-readiness limits in Article 1.07.'},
+{q:'What is the core duty when an accident endangers persons aboard?',a:['Use every means available to save them','Protect property before people','Wait for shore assistance'],c:0,w:'Article 1.16 is explicit on the duty to save endangered persons.'},
+{q:'What must a grounded vessel near the fairway consider beyond informing the authority?',a:['Warning approaching traffic in sufficient time','Turning off navigation lights','Discharging ballast automatically'],c:0,w:'Article 1.17 adds the warning duty where necessary.'},
+{q:'What does Chapter 10 say about oily/greasy operational waste?',a:['Routine discharge into the waterway is prohibited','It may always be discharged in daylight','It may be mixed with domestic refuse and discharged'],c:0,w:'Article 10.04 prohibits the discharge/dumping of specified waste categories.'},
+{q:'What is required when prohibited waste is accidentally discharged or threatens to discharge?',a:['Prompt notification with position, quantity, nature and measures taken','A report only if another vessel complains','No action until the next reception station'],c:0,w:'Immediate useful notification is part of the pollution response.'},
+{q:'Which statement best describes passage readiness?',a:['Vessel, people, documents, route/local rules, equipment and emergency/environment controls are all ready for the actual passage','A charged chartplotter is sufficient','It is complete once the engine starts'],c:0,w:'Module 9 integrates the CEVNI safety, environmental and regulatory readiness layers.'}
+];
+let stage='intro',idx=0,answered=false,currentQ=null;
+function sync(){window.PROJECT_WATCH_BUILD=BUILD;let v=document.getElementById('pwVisibleBuild');if(v)v.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD+' • CEVNI Curriculum'}
+function area(){return document.getElementById('cevniLessonArea')}
+function route(a){return `<div class="pw169Route">${['LEARN','SEE','PRACTICE','CHECK','APPLY','REVIEW'].map(x=>`<span class="${x===a?'on':''}">${x}${x===a?' • CURRENT':''}</span>`).join('')}</div>`}
+function dev(){return(typeof cvDevMode!=='undefined'&&cvDevMode)?`<div class="pw169Dev"><b>TEST MODE • MODULE 9 JUMP</b><div class="pw169Actions">${['learn','see','practice','check','apply','review'].map(x=>`<button data-pw169-jump="${x}">${x.toUpperCase()}</button>`).join('')}</div></div>`:''}
+function shell(l,b,badge){let a=area();if(!a)return;a.innerHTML=`<section class="pw169Shell"><div class="pw169Top"><div><div class="ver">MODULE 09 • ${l}</div><h2>Safety, Environment & Passage Readiness</h2><p>Make the vessel ready, protect people and the waterway, and know what to do when the passage stops being normal.</p></div><div class="pw169Badge">${badge||l}</div></div>${dev()}${b}</section>`;a.scrollIntoView({behavior:'smooth',block:'start'})}
+function shuf(x){let o=x.a.map((t,i)=>({t,ok:i===x.c}));for(let i=o.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[o[i],o[j]]=[o[j],o[i]]}return{q:x.q,a:o.map(v=>v.t),c:o.findIndex(v=>v.ok),w:x.w}}
+function visual(k){let h='<div class="pw169Panel">';
+if(k==='ready'){h+='<h3>PASSAGE READINESS</h3><div class="pw169Grid"><span>VESSEL / LOAD</span><span>CREW / PEOPLE</span><span>DOCUMENTS</span><span>ROUTE / LOCAL RULES</span><span>NAV / COMMS</span><span>EMERGENCY / POLLUTION</span></div>'}
+else if(k==='rescue'){h+='<h3>ACCIDENT • PERSONS AT RISK</h3><div class="pw169Grid"><span>CONTROL OWN VESSEL</span><span>SAVE PERSONS</span><span>ASSIST IF SAFE</span></div><div class="pw169Warn">LIFE FIRST • DO NOT CREATE A SECOND CASUALTY</div>'}
+else if(k==='ground'){h+='<h3>GROUNDING NEAR FAIRWAY</h3><div class="pw169Grid"><span>ASSESS DANGER</span><span>INFORM AUTHORITY</span><span>WARN TRAFFIC</span></div>'}
+else if(k==='spill'){h+='<h3>ACCIDENTAL / THREATENED DISCHARGE</h3><div class="pw169Water"><i class="pw169Boat"></i><i class="pw169Spill"></i></div><div class="pw169Warn">CONTAIN IF SAFE • NOTIFY WITHOUT DELAY • GIVE POSITION / QUANTITY / NATURE / ACTIONS</div>'}
+else if(k==='waste'){h+='<h3>ONBOARD WASTE CONTROL</h3><div class="pw169Grid"><span>OILY / GREASY</span><span>HOUSEHOLD</span><span>SPECIAL WASTE</span><span>BILGE WATER</span><span>RECEPTION ROUTE</span><span>NO BURNING</span></div>'}
+else h+='<h3>BUNKERING CONTROL</h3><div class="pw169Grid"><span>SECURE VESSEL</span><span>CAPACITY / RATE</span><span>DIRECT COMMS</span><span>SUPERVISION</span><span>SPILL PREVENTION</span><span>CHECKLIST IF APPLICABLE</span></div>';
+return h+'</div>'}
+function intro(){stage='intro';shell('INTRODUCTION',`${route('LEARN')}<div class="pw169Card"><h3>The final teaching module is the departure-and-emergency gate.</h3><p>Module 9 integrates CEVNI general safety duties, accident/grounding response, Chapter 10 pollution prevention and bunkering vigilance into practical passage readiness.</p><div class="pw169Warn"><b>Scope:</b> CEVNI Revision 6 with Corrigenda 1 and 2 is the verified base used for this build. Vessel type, technical rules and competent-authority requirements can change the exact equipment/document obligation.</div></div><div class="pw169Actions"><button data-pw169-action="map">COURSE MAP</button><button data-pw169-action="teach" data-index="0">BEGIN MODULE 9 →</button></div>`,'FINAL TEACHING MODULE • 9/9')}
+function teach(i){stage='learn';idx=i;if(i>=TEACH.length){see(0);return}let x=TEACH[i];shell('GUIDED LEARNING',`${route('LEARN')}<div class="pw169Progress"><i style="width:${(i+1)/TEACH.length*100}%"></i></div><div class="pw169Card"><div class="ver">VERIFIED BRIEFING ${i+1} / ${TEACH.length}</div><h3>${x[0]}</h3><p>${x[1]}</p><div class="pw169Rule">${x[2]}</div></div><div class="pw169Actions">${i?`<button data-pw169-action="teach" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw169-action="teach" data-index="${i+1}">${i===TEACH.length-1?'SEE IT →':'NEXT BRIEFING →'}</button></div>`,`BRIEFING ${i+1} / ${TEACH.length}`)}
+function see(i){stage='see';idx=i;if(i>=SEE.length){question('practice',0);return}let x=SEE[i];shell('SEE THE SITUATION',`${route('SEE')}<div class="pw169Progress"><i style="width:${(i+1)/SEE.length*100}%"></i></div><div class="pw169Card"><div class="ver">SAFETY PICTURE ${i+1} / ${SEE.length}</div><h3>${x.t}</h3><p>${x.p}</p>${visual(x.k)}<div class="pw169Rule">${x.r}</div></div><div class="pw169Actions">${i?`<button data-pw169-action="see" data-index="${i-1}">← PREVIOUS</button>`:''}<button data-pw169-action="see" data-index="${i+1}">${i===SEE.length-1?'PRACTICE IT →':'NEXT →'}</button></div>`,`SEE ${i+1} / ${SEE.length}`)}
+function question(kind,i){let map={practice:PRACTICE,check:CHECK,review:REVIEW},arr=map[kind];stage=kind;idx=i;answered=false;if(i>=arr.length){if(kind==='practice')question('check',0);else if(kind==='check')apply(0);else complete();return}currentQ=shuf(arr[i]);let a=kind.toUpperCase();shell(kind==='practice'?'COACHED PRACTICE':kind==='review'?'MODULE REVIEW':'KNOWLEDGE CHECK',`${route(a)}<div class="pw169Card"><div class="ver">${a} ${i+1} / ${arr.length}</div><h3>${currentQ.q}</h3><div class="pw169Choices">${currentQ.a.map((z,j)=>`<button data-pw169-choice="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw169Feedback"></div></div>`,`${a} ${i+1} / ${arr.length}`)}
+function answer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw169Card')?.querySelector('.pw169Feedback');if(!f)return;let arr=stage==='practice'?PRACTICE:stage==='review'?REVIEW:CHECK;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw169Feedback show';f.innerHTML=`<b>✓ Correct.</b> ${currentQ.w}<div class="pw169Actions"><button data-pw169-next="${stage}" data-index="${idx+1}">${idx===arr.length-1?(stage==='practice'?'CHECK →':stage==='check'?'APPLY →':'COMPLETE MODULE 9 →'):'NEXT →'}</button></div>`}else{b.classList.add('bad');f.className='pw169Feedback show';f.innerHTML='<b>Not quite — try again.</b> Recheck the safety duty, pollution control or readiness trigger.';setTimeout(()=>b.classList.remove('bad'),650)}}
+function apply(i){stage='apply';idx=i;answered=false;if(i>=APPLY.length){question('review',0);return}let x=APPLY[i];currentQ=shuf({q:x.q,a:x.a,c:x.c,w:x.w});shell('OPERATIONAL APPLICATION',`${route('APPLY')}<div class="pw169Card"><div class="ver">SITUATION ${i+1} / ${APPLY.length}</div><h3>${x.t}</h3><p>${x.s}</p><div class="pw169Rule"><b>Decision:</b> ${currentQ.q}</div><div class="pw169Choices">${currentQ.a.map((z,j)=>`<button data-pw169-apply="${j}">${String.fromCharCode(65+j)} • ${z}</button>`).join('')}</div><div class="pw169Feedback"></div></div>`,`APPLY ${i+1} / ${APPLY.length}`)}
+function applyAnswer(j,b){if(answered||!currentQ)return;let f=b.closest('.pw169Card')?.querySelector('.pw169Feedback');if(!f)return;if(j===currentQ.c){answered=true;b.classList.add('good');f.className='pw169Feedback show';f.innerHTML=`<b>✓ Correct operational decision.</b> ${currentQ.w}<div class="pw169Actions"><button data-pw169-next="apply" data-index="${idx+1}">${idx===APPLY.length-1?'MODULE REVIEW →':'NEXT SITUATION →'}</button></div>`}else{b.classList.add('bad');f.className='pw169Feedback show';f.innerHTML='<b>Not quite — reassess the immediate safety duty, notification requirement and pollution control.</b>';setTimeout(()=>b.classList.remove('bad'),650)}}
+function complete(){try{if(window.cv1482SetStage)cv1482SetStage(8,'module');else if(window.cevniMark)cevniMark(8)}catch(e){}shell('MODULE REVIEW COMPLETE',`${route('REVIEW')}<div class="pw169Card pw169Complete"><div class="ver">MODULE 09 • COMPLETE</div><h3>Module 9 complete — all teaching modules complete</h3><p>You have completed vessel and passage readiness, accident and grounding response, pollution prevention, waste control and bunkering vigilance.</p><div class="pw169Rule">LEARN ✓ • SEE ✓ • PRACTICE ✓ • CHECK ✓ • APPLY ✓ • MODULE REVIEW ✓</div><div class="pw169Warn"><b>Next phase:</b> return to the course map. The FINAL MOCK remains a separate assessment phase and is not Module 10.</div><div class="pw169Actions"><button data-pw169-action="map">RETURN TO COURSE MAP →</button></div></div>`,'TEACHING COMPLETE');try{cevniRenderModules()}catch(e){}}
+function jump(x){if(!(typeof cvDevMode!=='undefined'&&cvDevMode))return;if(x==='learn')teach(0);else if(x==='see')see(0);else if(['practice','check','review'].includes(x))question(x,0);else if(x==='apply')apply(0)}
+document.addEventListener('click',e=>{let b=e.target.closest('[data-pw169-choice],[data-pw169-apply],[data-pw169-next],[data-pw169-action],[data-pw169-jump]');if(!b)return;if(b.hasAttribute('data-pw169-choice'))return answer(+b.dataset.pw169Choice,b);if(b.hasAttribute('data-pw169-apply'))return applyAnswer(+b.dataset.pw169Apply,b);if(b.hasAttribute('data-pw169-next')){let n=b.dataset.pw169Next,i=+b.dataset.index;if(n==='apply')apply(i);else question(n,i);return}if(b.hasAttribute('data-pw169-jump'))return jump(b.dataset.pw169Jump);let a=b.dataset.pw169Action,i=+(b.dataset.index||0);if(a==='map'){try{cevniCloseLesson()}catch(e){}}else if(a==='teach')teach(i);else if(a==='see')see(i)});
+const prev=window.cevniOpenLesson;window.cevniOpenLesson=function(i,s=0){if(i===8){if((typeof cvDevMode!=='undefined'&&cvDevMode)||!window.cevniModuleUnlocked||cevniModuleUnlocked(8)){intro();return}return}return prev(i,s)};
+function names(){try{if(window.CEVNI_MODULES&&CEVNI_MODULES[8]){CEVNI_MODULES[8].title='Safety, Environment & Passage Readiness';CEVNI_MODULES[8].desc='Prepare the vessel and passage, protect people and the waterway, and respond correctly when normal navigation breaks down.'}}catch(e){}}
+const oi=window.cevniInit;window.cevniInit=function(){names();let r=oi?oi():undefined;names();sync();return r};sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();setTimeout(()=>{sync();names();try{cevniRenderModules()}catch(e){}},100)});setTimeout(()=>{sync();names()},800);
+window.PW16223_MODULE9={build:BUILD,teach:TEACH.length,see:SEE.length,practice:PRACTICE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,testModeJump:true,audioTouched:false};
 })();
 </script>
 
