@@ -26534,7 +26534,7 @@ label();document.addEventListener('DOMContentLoaded',()=>{label();setTimeout(()=
 <script id="pw1627-core">
 (function(){
 'use strict';
-const PROJECT_WATCH_BUILD='1.62.14';
+const PROJECT_WATCH_BUILD='1.62.15';
 window.PROJECT_WATCH_BUILD=PROJECT_WATCH_BUILD;
 window.PW_BUILD_ID={version:PROJECT_WATCH_BUILD,release:'module2-review-interaction-repair',sequence:16212};
 
@@ -26626,7 +26626,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script id="pw1628-module2">
 (function(){
 'use strict';
-const BUILD='1.62.14';
+const BUILD='1.62.15';
 window.PROJECT_WATCH_BUILD=BUILD;
 window.PW_CEVNI_MODULE2_SPEC={
  id:'cv-m02',title:'Vessels, Identity & Markings',
@@ -26720,7 +26720,7 @@ window.pw1629Answer=function(i){
   f.innerHTML=`<div class="cvContextRule"><b>✕ Not quite.</b> ${x.w}<br><small>This is coached module review; choose another answer.</small></div>`;
  }
 };
-/* 1.62.14: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
+/* 1.62.15: use delegated listeners so Module 2 review works reliably on iPad and does not depend on inline onclick handlers. */
 function pw16212ReviewTap(e){
  const answer=e.target.closest&&e.target.closest('[data-pw-review-answer]');
  if(answer){e.preventDefault();if(!answer.disabled)window.pw1629Answer(Number(answer.dataset.pwReviewAnswer));return;}
@@ -26750,7 +26750,7 @@ window.PW1628_MODULE2={build:BUILD,contentOrder:['introduction','learn','see','c
 <script id="pw16210-module2-handoff">
 (function(){
 'use strict';
-const BUILD='1.62.14';
+const BUILD='1.62.15';
 window.PROJECT_WATCH_BUILD=BUILD;
 function syncBuild(){
  const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+BUILD;
@@ -26784,11 +26784,11 @@ window.PW16210_HANDOFF={build:BUILD,repair:repairArticle101Gate};
 })();
 </script>
 
-\n<!-- PROJECT WATCH 1.62.14 — MODULE 02 RESUME / IDENTITY HANDOFF -->
+\n<!-- PROJECT WATCH 1.62.15 — MODULE 02 RESUME / IDENTITY HANDOFF -->
 <script id="pw16211-module2-resume">
 (function(){
 'use strict';
-const BUILD='1.62.14';
+const BUILD='1.62.15';
 window.PROJECT_WATCH_BUILD=BUILD;
 let identityIndex=0;
 const IDENTITY=[
@@ -26841,7 +26841,7 @@ document.addEventListener('DOMContentLoaded',()=>{syncBuild();cleanGate();unifyN
 setTimeout(()=>{syncBuild();cleanGate();unifyName();const p=document.getElementById('cevniPage');if(p)obs.observe(p,{childList:true,subtree:true});},100);
 window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 })();
-</script>\n\n<!-- PROJECT WATCH 1.62.14 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
+</script>\n\n<!-- PROJECT WATCH 1.62.15 — MODULE 03 WATERWAY SIGNS, MARKS & BUOYAGE -->
 <style id="pw16213-module3-style">
 #cevniPage .pw163Shell{margin:18px 0;padding:20px;border:1px solid #58d8ff55;border-radius:18px;background:#052b3b}
 #cevniPage .pw163Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}#cevniPage .pw163Top h2{margin:5px 0 7px;font-size:30px}#cevniPage .pw163Top p{margin:0;color:#c3d9e2;line-height:1.5}
@@ -26854,7 +26854,7 @@ window.PW16211_MODULE2_RESUME={build:BUILD,identityBriefings:IDENTITY.length};
 <script id="pw16213-module3">
 (function(){
 'use strict';
-const BUILD='1.62.14';
+const BUILD='1.62.15';
 const TEACH=[
  ['ANNEX 7 — READ THE FAMILY FIRST','CEVNI groups the main waterway signs into five families: A prohibitory, B mandatory, C restrictive, D recommendatory and E informative. Auxiliary panels can add distance, direction or explanatory information.','The family tells you the kind of instruction before the individual symbol tells you the detail.'],
  ['A — PROHIBITORY SIGNS','Prohibitory signs tell you what must not be done. Core examples already in the verified library include A.1 No entry and A.2 No overtaking. Other prohibitions cover passing, berthing, anchoring, making fast, turning and damaging wash.','A prohibition is a rule, not advice.'],
@@ -26909,7 +26909,7 @@ sync();names();document.addEventListener('DOMContentLoaded',()=>{sync();names();
 window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHECK.length,apply:APPLY.length,review:REVIEW.length,sourceBasis:['CEVNI Rev.6 Annex 7','CEVNI Rev.6 Annex 8','current correction/amendment layers']};
 })();
 </script>\n
-<!-- PROJECT WATCH 1.62.14 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
+<!-- PROJECT WATCH 1.62.15 — MODULE 04 VERIFIED LIGHTS & VISUAL SIGNALS -->
 <style>
 #cevniPage .pw164Shell{margin:16px 0;padding:18px;border:1px solid #1b6178;border-radius:16px;background:#073143}
 #cevniPage .pw164Top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap}
@@ -26944,7 +26944,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 #cevniPage .pw164Light{position:absolute;width:15px;height:15px;border-radius:50%;box-shadow:0 0 13px currentColor,0 0 24px currentColor}
 #cevniPage .pw164Light.white{background:#fff;color:#fff}.pw164Light.red{background:#ff4545;color:#ff4545}.pw164Light.green{background:#36e67a;color:#36e67a}.pw164Light.yellow{background:#ffd44d;color:#ffd44d}.pw164Light.blue{background:#4ba7ff;color:#4ba7ff}
 #cevniPage .pw164Shape{position:absolute;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
-#cevniPage .pw164Cone{width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:25px solid #111}
+#cevniPage .pw164Cone{width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:25px solid #050505;filter:drop-shadow(0 0 1px #fff) drop-shadow(0 0 5px #fff)}
 #cevniPage .pw164Ball{width:24px;height:24px;border-radius:50%;background:#111}
 #cevniPage .pw164Bicone{width:28px;height:34px;background:#e3bd28;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
 #cevniPage .pw164Cylinder{width:19px;height:34px;background:#e7c92c;border-top:5px solid #111;border-bottom:5px solid #fff;box-shadow:inset 0 -10px #111}
@@ -26959,7 +26959,7 @@ window.PW16213_MODULE3={build:BUILD,teach:TEACH.length,see:SEE.length,check:CHEC
 <script>
 (function(){
 'use strict';
-const BUILD='1.62.14';
+const BUILD='1.62.15';
 const TEACH=[
  ['Read the whole light picture','A light is not identified by colour alone. Read colour, number, vertical/horizontal arrangement, whether it is all-round or sector-limited, the vessel or formation, and the viewing aspect.','CEVNI 3.01 defines masthead 225°, sidelights 112°30′ each, stern light 135°, and all-round light 360°.'],
  ['Motorized vessel proceeding alone','The core night marking is a forward white masthead light, red and green sidelights, and a white stern light. Vessels over 110 m carry a second masthead light aft and at least 3 m higher than the forward one.','CEVNI 3.08. Small craft and ferry-boats have separate provisions.'],
@@ -26971,6 +26971,9 @@ const TEACH=[
  ['Ferry-boats','A ferry not moving independently shows an all-round bright green light above an all-round bright white light by night and a green ball by day. A ferry moving independently adds the required sidelights and stern light.','CEVNI 3.16. Competent authorities may prescribe another marking under Chapter 9.'],
  ['Stationary vessels','The normal stationary-vessel night signal is an all-round ordinary white light (with permitted alternative bow/stern arrangement). A vessel stationary offshore also carries a black ball by day, subject to the stated exceptions.','CEVNI 3.20. Stationary pushed convoys, small craft and special vessels have specific provisions.'],
  ['Work sites and blocked/clear sides','Floating equipment at work uses green marking on the side where the fairway is clear. Chapter 3.25 also provides complementary blocked-side and wash-protection markings; Annex 7 E.1/A.1 boards may replace specified day markings.','CEVNI 3.25. Never infer the safe side from vessel orientation alone; read the displayed side marking.'],
+ ['Limited ability to manoeuvre','A vessel whose ability to give way is limited by work or underwater operations carries red-white-red all-round lights vertically by night and ball-bicone-ball vertically by day. If the operation obstructs one side, two red lights/black balls mark the obstructed side and two green lights/black bicones mark the clear side.','CEVNI 3.34. This is an additional marking; floating equipment stationary at work is covered separately by 3.25.'],
+ ['Fishing vessels','A trawler carries green over white all-round lights by night and two black cones point-to-point by day. Other fishing vessels use red over white; if gear extends more than 150 m, an additional white light by night and black cone point-up by day indicate the direction of the gear.','CEVNI 3.35. Read the fishing status and any extended gear before deciding how to pass.'],
+ ['Distress and other special markings','Chapter 3 also contains special markings for supervisory/fire/rescue craft, vessels working while under way, wash protection, distress, restricted access, smoking/fire prohibition, lateral-berthing prohibition, diving, minesweeping and pilotage. These belong to the Chapter 3 recognition family even when they are less common in normal leisure passages.','CEVNI 3.27–3.38. Distress examples include a light or object waved in a circle, red flares, SOS by light and slow repeated raising/lowering of outstretched arms.'],
  ['Regional/national layer','CEVNI is the harmonized base, but Chapter 9 allows competent-authority variations to parts of Chapter 3, including some day markings, heights, ferry marking and dangerous-goods colours in specified cases.','Always check the applicable national/regional/local rules for the waterway being navigated.']
 ];
 
@@ -26993,7 +26996,10 @@ const CHECK=[
  {q:'Two blue all-round lights / two blue cones correspond to which CEVNI 3.14 category?',a:['Specified health-hazard substances','Every passenger vessel','A vessel at anchor'],c:0,w:'The two-mark category is tied to specified health-hazard substances under the ADN references in 3.14.'},
  {q:'For a ferry not moving independently, what is the vertical night pair?',a:['Green above white','White above green','Red above white'],c:0,w:'CEVNI 3.16(1) specifies bright green above bright white, both all-round.'},
  {q:'What is the normal basic night marking for a stationary vessel?',a:['An ordinary white all-round light','A yellow flashing light','Red over green'],c:0,w:'CEVNI 3.20 prescribes an ordinary white all-round light, with a permitted alternative bow/stern arrangement.'},
- {q:'On floating equipment at work, what colour marks the side where the fairway is clear?',a:['Green','Red only','Blue'],c:0,w:'CEVNI 3.25 marks the clear side with two green lights at night or two green bicones by day.'}
+ {q:'On floating equipment at work, what colour marks the side where the fairway is clear?',a:['Green','Red only','Blue'],c:0,w:'CEVNI 3.25 marks the clear side with two green lights at night or two green bicones by day.'},
+ {q:'What vertical all-round-light pattern marks a vessel whose ability to manoeuvre is limited by work or underwater operations?',a:['Red-white-red','Green-white-green','White-red-white'],c:0,w:'CEVNI 3.34 prescribes red-white-red vertically, with ball-bicone-ball by day.'},
+ {q:'What is the basic trawler fishing signal by night?',a:['Green over white','Red over green','White over yellow'],c:0,w:'CEVNI 3.35 prescribes green over white all-round lights for a trawler.'},
+ {q:'Which is a CEVNI visual distress signal?',a:['A red hand flare','A single green all-round light','A yellow cylinder'],c:0,w:'CEVNI 3.30 includes red hand/parachute flares among the visual distress signals.'}
 ];
 
 const APPLY=[
@@ -27001,6 +27007,7 @@ const APPLY=[
  {t:'Motor-sailing in daylight',s:'A sailing vessel is also using mechanical propulsion and displays a black cone point-down.',q:'What is the operational lesson?',a:['Treat the display as the prescribed motor-sailing day marking and read the vessel’s full status/context','Assume it is anchored','Ignore the cone because sails are set'],c:0,w:'The cone is specifically prescribed when sail and mechanical propulsion are used together.'},
  {t:'Tow at night',s:'Ahead you identify the lead motorized vessel of a towed convoy with two white masthead lights vertically.',q:'What should you do next?',a:['Read the complete convoy and its extent before making a passing/crossing decision','Treat it as a single small craft','Use only the colour of the nearest light'],c:0,w:'Convoy marking communicates a formation; the whole tow matters to the navigation decision.'},
  {t:'Work site',s:'A working vessel shows the prescribed pair of green markings on one side.',q:'What does that side communicate?',a:['The fairway is clear on that side','No entry on that side','Dangerous cargo only'],c:0,w:'Under 3.25 the green pair marks the side on which the fairway is clear.'},
+ {t:'Restricted manoeuvrability',s:'A working vessel shows red-white-red vertically and also shows two red lights on one side and two green lights on the other.',q:'Which side is indicated as clear for passage?',a:['The side showing the two green lights','The side showing the two red lights','Either side'],c:0,w:'Under CEVNI 3.34, two green lights mark the clear side; two red lights mark the obstruction side.'},
  {t:'Local rules check',s:'Your CEVNI base knowledge is correct, but you are entering a jurisdiction with published Chapter 9 variations.',q:'Which standard should govern the passage?',a:['CEVNI base plus the applicable competent-authority/local variation','The app diagram alone','COLREGs alone regardless of inland rules'],c:0,w:'Chapter 9 explicitly permits specified regional/national variations.'}
 ];
 
