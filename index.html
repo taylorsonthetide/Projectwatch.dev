@@ -16565,27 +16565,6 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
 @media(max-width:520px){#cevniPage .cvStageRail,#cevniPage .cvLibraryBar{grid-template-columns:1fr 1fr}#cevniPage .cvLessonNav{grid-template-columns:1fr 1fr}#cevniPage .cvLessonNav .cvClose{grid-column:1/-1;width:100%}#cevniPage .cvLessonNav button{width:100%}}
 </style>
 
-<style id="pw16331ApprovedM02Masters">
-#cevniPage .pwM02Viewport{
-  height:auto !important;
-  min-height:0 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  overflow:hidden !important;
-  background:#021c27 !important;
-}
-#cevniPage .pwM02Viewport img{
-  display:block !important;
-  width:100% !important;
-  height:auto !important;
-  max-width:100% !important;
-  max-height:none !important;
-  object-fit:contain !important;
-  object-position:center center !important;
-  transform:none !important;
-}
-</style>
 
 </head>
 <body>
@@ -26519,9 +26498,39 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </script>
 <!-- PW16321_MODULE02_VISUAL_CROP_LAB_END -->
 
+
+<style id="pw16332M02BoundedContainRenderer">
+#cevniPage .pwM02Viewport{
+  position:relative !important;
+  height:320px !important;
+  min-height:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+  touch-action:auto !important;
+  background:#021821 !important;
+}
+#cevniPage .pwM02Viewport img{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  max-height:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  transform:none !important;
+  user-select:none !important;
+  -webkit-user-drag:none !important;
+}
+@media(max-width:700px){
+  #cevniPage .pwM02Viewport{height:280px !important;}
+}
+</style>
+
 <script id="pw16329RecoveryIdentity">
 (function(){
- const B='1.63.31';
+ const B='1.63.32';
  function setBuild(){
    window.PROJECT_WATCH_BUILD=B;
    const vb=document.getElementById('pwVisibleBuild'); if(vb) vb.textContent='BUILD '+B;
