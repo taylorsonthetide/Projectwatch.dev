@@ -26507,8 +26507,8 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <!-- PW16321_MODULE02_VISUAL_CROP_LAB_START -->
 <style id="pw16326M02VisualCss">
 #cevniPage .pwM02Visual{position:relative;margin:0 0 18px;border:1px solid #ffffff20;border-radius:15px;overflow:hidden;background:#061f2b;box-shadow:0 10px 28px #0004}
-#cevniPage .pwM02Viewport{position:relative;height:320px;overflow:hidden;touch-action:none;background:#021821}
-#cevniPage .pwM02Visual img{display:block;width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+#cevniPage .pwM02Viewport{position:relative;height:auto;overflow:hidden;touch-action:auto;background:#021821}
+#cevniPage .pwM02Visual img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;object-position:center center;transform:none;user-select:none;-webkit-user-drag:none}
 #cevniPage .pwM02Cap{display:flex;justify-content:space-between;gap:12px;padding:10px 13px;background:#082b39;border-top:1px solid #ffffff14}
 #cevniPage .pwM02Cap b{font-size:12px;letter-spacing:.055em;color:#eafaff}
 #cevniPage .pwM02Cap span{font-size:11px;color:#79dff6;font-weight:900}
@@ -26519,7 +26519,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 #cevniPage .pwM02Hint{font-size:10px;color:#a9c5cc;font-weight:700}
 #cevniPage .pwM02Viewport.editing{outline:2px solid #45d7ef;outline-offset:-2px}
 #cevniPage .pwM02Viewport.editing:after{content:"DRAG IMAGE TO FRAME • RELEASE TO STORE";position:absolute;left:50%;top:12px;transform:translateX(-50%);padding:6px 9px;border-radius:7px;background:#00151ddd;color:#fff;font-size:10px;font-weight:900;letter-spacing:.04em;pointer-events:none}
-@media(max-width:700px){#cevniPage .pwM02Viewport{height:280px}#cevniPage .pwM02Cap{flex-direction:column;align-items:flex-start}}
+@media(max-width:700px){#cevniPage .pwM02Viewport{height:auto}#cevniPage .pwM02Cap{flex-direction:column;align-items:flex-start}}
 </style><script id="pw16326M02VisualJs">
 (function(){
 'use strict';
@@ -26536,18 +26536,12 @@ function add(step){
  const img=document.createElement('img');img.src=a.url;img.alt=a.title;img.loading='eager';img.decoding='async';
  const cr=document.createElement('div');cr.className='pwM02Credit';cr.textContent=a.creator+' • '+a.license;
  const cap=document.createElement('figcaption');cap.className='pwM02Cap';cap.innerHTML='<b>'+a.title+'</b><span>'+a.id+'</span>';
- const bar=document.createElement('div');bar.className='pwM02Crop.v2';bar.innerHTML='<button type="button" class="toggle">✥ FRAME IMAGE</button><button type="button" class="reset">RESET</button><span class="pwM02Hint">Test Mode: frame it with your finger; screenshot the ID + X/Y when happy.</span><span class="pwM02Read"></span>';
- const read=bar.querySelector('.pwM02Read'),tog=bar.querySelector('.toggle');
- function apply(){img.style.objectPosition=c.x.toFixed(1)+'% '+c.y.toFixed(1)+'%';read.textContent='X '+c.x.toFixed(1)+' • Y '+c.y.toFixed(1);}apply();
- vp.append(img,cr);fig.append(vp,cap,bar);
+ img.setAttribute('data-pw-m02-visual','1');
+ img.style.objectPosition='center center';
+ vp.setAttribute('data-pw-m02-frame','1');
+ vp.append(img,cr);fig.append(vp,cap);
  const top=card.querySelector('.cvLessonTop,.cvPracticeTop,.pw1628Top');
  if(top&&top.nextSibling)card.insertBefore(fig,top.nextSibling);else card.insertBefore(fig,card.firstChild);
- let editing=false,last=null;
- tog.onclick=()=>{editing=!editing;vp.classList.toggle('editing',editing);tog.textContent=editing?'✓ FINISH FRAMING':'✥ FRAME IMAGE';};
- bar.querySelector('.reset').onclick=()=>{c={x:50,y:50};const d=load();d[a.id]=c;save(d);apply();};
- vp.addEventListener('pointerdown',e=>{if(!editing)return;last={x:e.clientX,y:e.clientY};vp.setPointerCapture(e.pointerId);e.preventDefault();});
- vp.addEventListener('pointermove',e=>{if(!editing||!last)return;const r=vp.getBoundingClientRect();c.x=Math.max(0,Math.min(100,c.x-(e.clientX-last.x)/r.width*100));c.y=Math.max(0,Math.min(100,c.y-(e.clientY-last.y)/r.height*100));last={x:e.clientX,y:e.clientY};apply();e.preventDefault();});
- vp.addEventListener('pointerup',()=>{if(!editing||!last)return;last=null;const d=load();d[a.id]=c;save(d);apply();});
 }
 const prev=window.cevniOpenLesson;window.cevniOpenLesson=function(i,step=0){const r=prev(i,step);if(i===1)setTimeout(()=>add(step),20);return r;};
 function build(){const B='1.63.26';window.PROJECT_WATCH_BUILD=B;const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+B;document.title='Project Watch '+B;}
@@ -26559,105 +26553,16 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 
 
 
-<style id="pw16326M02CropGeometry">
-/* Module 2 only: proportional image, hard-clipped viewport, Crop Lab movement restored. */
+<style id="pw16328M02NativeGeometry">
 #cevniPage [data-pw-m02-frame="1"]{
   overflow:hidden !important;
   position:relative !important;
   background:#021923 !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-  isolation:isolate !important;
-}
-#cevniPage img[data-pw-m02-visual="1"]{
   display:block !important;
-  width:100% !important;
-  height:100% !important;
-  object-fit:contain !important;
-  /* object-position deliberately NOT overridden here:
-     Crop Lab remains authoritative for X/Y framing. */
-  max-width:100% !important;
-  max-height:62vh !important;
-}
-@media (max-width:900px){
-  #cevniPage img[data-pw-m02-visual="1"]{max-height:52vh !important;}
-}
-</style>
-<script id="pw16326M02CropGeometryGuard">
-(function(){
-  function findVisual(){
-    var root=document.querySelector('#cevniPage');
-    if(!root) return;
-    var nodes=[].slice.call(root.querySelectorAll('*'));
-    var idNode=nodes.find(function(n){
-      return /^PW-CEVNI-VIS-M02-\d{3}$/.test((n.textContent||'').trim());
-    });
-    if(!idNode) return;
-    var box=idNode.parentElement, img=null, hops=0;
-    while(box && hops<8){
-      img=box.querySelector && box.querySelector('img');
-      if(img) break;
-      box=box.parentElement; hops++;
-    }
-    if(!img || !box) return;
-
-    img.setAttribute('data-pw-m02-visual','1');
-
-    // Use the image's immediate visual holder as the clipping frame.
-    var frame=img.parentElement;
-    if(frame){
-      frame.setAttribute('data-pw-m02-frame','1');
-      frame.style.setProperty('overflow','hidden','important');
-      frame.style.setProperty('position','relative','important');
-      frame.style.setProperty('isolation','isolate','important');
-      frame.style.setProperty('height','auto','important');
-      frame.style.setProperty('min-height','0','important');
-      frame.style.setProperty('aspect-ratio','auto','important');
-    }
-
-    // Preserve aspect ratio and allow Crop Lab to own object-position.
-    img.style.setProperty('width','100%','important');
-    img.style.setProperty('height','auto','important');
-    img.style.setProperty('object-fit','contain','important');
-    img.style.setProperty('max-width','100%','important');
-    img.style.setProperty('max-height','62vh','important');
-    img.style.removeProperty('object-position');
-  }
-
-  var mo=new MutationObserver(function(){requestAnimationFrame(findVisual);});
-  mo.observe(document.documentElement,{subtree:true,childList:true,attributes:true,attributeFilter:['src','class','style']});
-  document.addEventListener('click',function(){setTimeout(findVisual,0);setTimeout(findVisual,100)},true);
-  window.addEventListener('resize',findVisual);
-  setTimeout(findVisual,0); setTimeout(findVisual,250);
-})();
-</script>
-
-
-<!-- PW16327_MODULE02_FINAL_VISUAL_STANDARD_START -->
-<style id="pw16327M02FinalVisualStandard">
-/*
-  MODULE 2 FINAL VISUAL STANDARD
-  - artwork dictates the frame
-  - no cover crop
-  - no stretching
-  - no forced fixed-height viewport
-  - individual approved master artwork shown at native aspect ratio
-  - Module 1 and all non-Module-2 systems remain untouched
-*/
-#cevniPage .pwM02Visual{
-  overflow:hidden !important;
-}
-#cevniPage .pwM02Viewport{
   height:auto !important;
   min-height:0 !important;
   aspect-ratio:auto !important;
-  overflow:hidden !important;
-  display:block !important;
-  background:#021821 !important;
-  touch-action:auto !important;
 }
-#cevniPage .pwM02Visual img,
 #cevniPage img[data-pw-m02-visual="1"]{
   display:block !important;
   width:100% !important;
@@ -26667,73 +26572,38 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   object-fit:contain !important;
   object-position:center center !important;
   transform:none !important;
-  user-select:none;
-  -webkit-user-drag:none;
-}
-#cevniPage .pwM02Crop\.v2{
-  display:none !important;
-}
-#cevniPage .pwM02Viewport.editing{
-  outline:none !important;
-}
-#cevniPage .pwM02Viewport.editing:after{
-  display:none !important;
-}
-@media(max-width:900px){
-  #cevniPage .pwM02Viewport{height:auto !important}
-  #cevniPage .pwM02Visual img,
-  #cevniPage img[data-pw-m02-visual="1"]{height:auto !important;max-height:none !important}
 }
 </style>
-<script id="pw16327M02FinalVisualStandardJs">
+<script id="pw16328M02NativeGeometryGuard">
 (function(){
-  'use strict';
   function enforce(){
-    var root=document.getElementById('cevniPage');
-    if(!root)return;
+    var root=document.getElementById('cevniPage'); if(!root)return;
     root.querySelectorAll('.pwM02Visual').forEach(function(fig){
-      var vp=fig.querySelector('.pwM02Viewport');
-      var img=fig.querySelector('img');
+      var vp=fig.querySelector('.pwM02Viewport'), img=fig.querySelector('img');
       if(!vp||!img)return;
-      vp.style.setProperty('height','auto','important');
-      vp.style.setProperty('min-height','0','important');
-      vp.style.setProperty('aspect-ratio','auto','important');
-      vp.style.setProperty('overflow','hidden','important');
-      img.style.setProperty('width','100%','important');
-      img.style.setProperty('height','auto','important');
-      img.style.setProperty('max-width','100%','important');
-      img.style.setProperty('max-height','none','important');
-      img.style.setProperty('object-fit','contain','important');
-      img.style.setProperty('object-position','center center','important');
-      img.style.setProperty('transform','none','important');
-      var bar=fig.querySelector('.pwM02Crop\\.v2');
-      if(bar)bar.style.setProperty('display','none','important');
+      vp.setAttribute('data-pw-m02-frame','1');
+      img.setAttribute('data-pw-m02-visual','1');
+      vp.style.cssText += ';height:auto!important;min-height:0!important;aspect-ratio:auto!important;overflow:hidden!important;touch-action:auto!important;';
+      img.style.cssText += ';width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;object-fit:contain!important;object-position:center center!important;transform:none!important;';
     });
   }
-  var oldOpen=window.cevniOpenLesson;
-  if(typeof oldOpen==='function'){
-    window.cevniOpenLesson=function(i,step){
-      var r=oldOpen.apply(this,arguments);
-      if(i===1){setTimeout(enforce,25);setTimeout(enforce,120);}
-      return r;
-    };
-  }
-  var mo=new MutationObserver(function(){requestAnimationFrame(enforce);});
-  mo.observe(document.documentElement,{subtree:true,childList:true});
-  function build(){
-    var B='1.63.27';
-    window.PROJECT_WATCH_BUILD=B;
-    var vb=document.getElementById('pwVisibleBuild');
-    if(vb)vb.textContent='BUILD '+B;
-    document.title='Project Watch '+B;
-    enforce();
-  }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',function(){setTimeout(build,7100)},{once:true});
-  }else setTimeout(build,7100);
-  setTimeout(build,7600);
+  var old=window.cevniOpenLesson;
+  if(typeof old==='function')window.cevniOpenLesson=function(i,step){var r=old.apply(this,arguments);if(i===1){setTimeout(enforce,10);setTimeout(enforce,100);}return r;};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(enforce,100)},{once:true}); else setTimeout(enforce,0);
 })();
 </script>
-<!-- PW16327_MODULE02_FINAL_VISUAL_STANDARD_END -->
+
+
+<script id="pw16328BuildIdentity">
+(function(){
+ function setBuild(){
+  var B='1.63.28'; window.PROJECT_WATCH_BUILD=B;
+  var vb=document.getElementById('pwVisibleBuild'); if(vb)vb.textContent='BUILD '+B;
+  document.title='Project Watch '+B;
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(setBuild,7200)},{once:true});else setTimeout(setBuild,7200);
+ setTimeout(setBuild,7800);
+})();
+</script>
 
 </body></html>
