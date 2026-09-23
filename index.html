@@ -26359,58 +26359,38 @@ window.PW1622_GUIDED_VISUAL_PRACTICE={build:BUILD,indexOnly:true,evidenceRecords
 <!-- PW1622_GUIDED_VISUAL_PRACTICE_END -->
 
 
-<!-- BUILD 1.63.15 — CEVNI MODULE 01 VISUAL POLISH -->
-<style id="pw-cevni-16315-m01-visual-css">
-#cevniPage .pwM01Visual{margin:0 0 18px;border:1px solid #ffffff20;border-radius:15px;overflow:hidden;background:#061f2b;box-shadow:0 10px 28px #00000022}
-#cevniPage .pwM01Visual svg{display:block;width:100%;height:auto;max-height:310px}
-#cevniPage .pwM01VisualCap{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 13px;background:#082b39;border-top:1px solid #ffffff14}
-#cevniPage .pwM01VisualCap b{font-size:12px;letter-spacing:.06em;color:#dff7ff}
-#cevniPage .pwM01VisualCap span{font-size:11px;color:#79dff6;font-weight:900}
-#cevniPage .pwM01Visual .sea{fill:#0a5267}.pwM01Visual .bank{fill:#193f36}.pwM01Visual .land{fill:#27523f}
-#cevniPage .pwM01Visual .route{fill:none;stroke:#7be6ff;stroke-width:4;stroke-dasharray:12 9}
-#cevniPage .pwM01Visual .vessel{fill:#e8f3f5;stroke:#0a2631;stroke-width:3}
-#cevniPage .pwM01Visual .accent{fill:#ffb21a}.pwM01Visual .cyan{fill:#6ee7ff}.pwM01Visual .green{fill:#66e3a4}.pwM01Visual .red{fill:#ff786e}
-#cevniPage .pwM01Visual .line{stroke:#a7dbe7;stroke-width:3;fill:none}.pwM01Visual .thin{stroke:#6e9eaa;stroke-width:2;fill:none}
-#cevniPage .pwM01Visual text{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#eaf9fc;font-weight:800}
-#cevniPage .pwM01Visual .small{font-size:13px;fill:#a8ccd5;font-weight:700}.pwM01Visual .label{font-size:15px}.pwM01Visual .big{font-size:22px}
-@media(max-width:620px){#cevniPage .pwM01VisualCap{align-items:flex-start;flex-direction:column}.pwM01Visual .small{font-size:11px}.pwM01Visual .label{font-size:13px}}
-</style>
-<script id="pw-cevni-16315-m01-visual-js">
+
+<!-- PW16315A_VISUAL_ROLLBACK_BUILD_ID_REPAIR_START -->
+<script id="pw16315aBuildIdentity">
 (function(){
- const V=[
-  ['INLAND FRAMEWORK',`<svg viewBox="0 0 900 300" role="img" aria-label="Inland waterway framework"><rect width="900" height="300" fill="#052431"/><path class="land" d="M0 0h900v72H0zM0 238h900v62H0z"/><path class="sea" d="M0 72h900v166H0z"/><path class="route" d="M70 164 C250 105 430 210 825 136"/><path class="vessel" d="M420 132l92 0 28 22-28 22h-92l-18-22z"/><rect x="448" y="112" width="38" height="22" class="vessel"/><circle cx="115" cy="105" r="25" class="cyan"/><rect x="107" y="130" width="16" height="48" class="cyan"/><rect x="690" y="72" width="12" height="98" class="accent"/><rect x="662" y="86" width="68" height="42" rx="5" fill="#fff"/><text x="450" y="250" class="big" text-anchor="middle">CEVNI • INLAND WATERWAYS</text><text x="450" y="276" class="small" text-anchor="middle">VESSELS • SIGNS • SIGNALS • STRUCTURES • LOCAL INFORMATION</text></svg>`],
-  ['INLAND ≠ OPEN SEA',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><path class="land" d="M0 0h180l70 70 45 160-80 70H0zM900 0H720l-70 70-45 160 80 70h215z"/><path class="sea" d="M250 0h400l-45 230 80 70H215l80-70z"/><path class="line" d="M390 0v300M510 0v300" opacity=".25"/><path class="vessel" d="M408 170h84l25 20-25 20h-84l-20-20z"/><rect x="433" y="151" width="34" height="21" class="vessel"/><rect x="284" y="72" width="72" height="42" rx="5" fill="#fff"/><rect x="328" y="114" width="10" height="48" class="accent"/><path class="thin" d="M650 75h85v75M650 75v75h85"/><text x="450" y="45" class="big" text-anchor="middle">CONSTRAINED WATER CHANGES THE PICTURE</text><text x="450" y="272" class="small" text-anchor="middle">FAIRWAY • BANKS • BRIDGES • LOCKS • COMMERCIAL TRAFFIC</text></svg>`],
-  ['LOCAL LAYER',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><rect x="85" y="50" width="730" height="55" rx="12" fill="#0b5265"/><rect x="145" y="125" width="610" height="55" rx="12" fill="#116074"/><rect x="205" y="200" width="490" height="55" rx="12" fill="#16738a"/><text x="450" y="84" class="label" text-anchor="middle">CEVNI • HARMONISED FRAMEWORK</text><text x="450" y="159" class="label" text-anchor="middle">NATIONAL / REGIONAL PROVISIONS</text><text x="450" y="234" class="label" text-anchor="middle">LOCAL RULES • NOTICES • TEMPORARY DIRECTIONS</text><path class="line" d="M450 105v20M450 180v20"/></svg>`],
-  ['COMPETENT AUTHORITY',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><circle cx="450" cy="145" r="72" fill="#0d6075"/><text x="450" y="137" class="label" text-anchor="middle">COMPETENT</text><text x="450" y="160" class="label" text-anchor="middle">AUTHORITY</text><g><rect x="75" y="55" width="180" height="60" rx="10" fill="#0a4051"/><text x="165" y="90" class="small" text-anchor="middle">TRAFFIC MOVEMENTS</text><rect x="645" y="55" width="180" height="60" rx="10" fill="#0a4051"/><text x="735" y="90" class="small" text-anchor="middle">LOCKS / BRIDGES</text><rect x="75" y="205" width="180" height="60" rx="10" fill="#0a4051"/><text x="165" y="240" class="small" text-anchor="middle">REPORTING</text><rect x="645" y="205" width="180" height="60" rx="10" fill="#0a4051"/><text x="735" y="240" class="small" text-anchor="middle">RESTRICTIONS</text></g><path class="thin" d="M255 85L385 125M645 85L515 125M255 235L385 165M645 235L515 165"/></svg>`],
-  ['NOTICES BEFORE DEPARTURE',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><rect x="110" y="42" width="680" height="216" rx="16" fill="#082f3e" stroke="#2a7182" stroke-width="3"/><text x="145" y="82" class="big">BEFORE CASTING OFF</text><g class="small"><circle cx="158" cy="120" r="11" class="green"/><text x="185" y="125">NAVIGATION NOTICES</text><circle cx="158" cy="155" r="11" class="green"/><text x="185" y="160">CLOSURES / RESTRICTIONS / WORKS</text><circle cx="158" cy="190" r="11" class="green"/><text x="185" y="195">LOCK & BRIDGE INFORMATION</text><circle cx="158" cy="225" r="11" class="green"/><text x="185" y="230">TEMPORARY DIRECTIONS</text></g><path class="route" d="M570 120c70 10 95 55 145 100"/><path class="vessel" d="M650 198h58l18 13-18 13h-58l-14-13z"/></svg>`],
-  ['READ THE WHOLE WATERWAY',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><path class="sea" d="M0 65h900v180H0z"/><path class="land" d="M0 0h900v65H0zM0 245h900v55H0z"/><path class="vessel" d="M405 155h90l28 20-28 20h-90l-20-20z"/><g><circle cx="120" cy="115" r="28" fill="#fff"/><rect x="113" y="143" width="14" height="45" class="accent"/><circle cx="245" cy="95" r="14" class="cyan"/><path class="line" d="M245 109v58"/><rect x="665" y="90" width="90" height="48" rx="6" fill="#fff"/><path class="line" d="M710 138v58"/><path class="thin" d="M790 165q35-35 70 0M800 177q25-24 50 0"/></g><text x="450" y="40" class="big" text-anchor="middle">ONE NAVIGATION PICTURE</text><text x="450" y="276" class="small" text-anchor="middle">SIGNS • MARKS • LIGHTS • RADIO • TRAFFIC • PHYSICAL RESTRICTIONS</text></svg>`],
-  ['EARLY DECISIONS',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><path class="sea" d="M0 55h900v200H0z"/><path class="land" d="M0 0h900v55H0zM0 255h900v45H0z"/><path class="route" d="M85 185C260 185 345 140 510 140S700 170 830 105"/><path class="vessel" d="M190 162h76l22 17-22 17h-76l-16-17z"/><rect x="610" y="55" width="20" height="200" fill="#718b90"/><rect x="760" y="55" width="20" height="200" fill="#718b90"/><path d="M630 95h130" stroke="#718b90" stroke-width="20"/><circle cx="475" cy="140" r="22" class="accent"/><text x="475" y="146" text-anchor="middle" fill="#052431">!</text><text x="450" y="35" class="big" text-anchor="middle">SEE THE NEXT CONSTRAINT EARLY</text><text x="450" y="282" class="small" text-anchor="middle">SLOW • WAIT • REPOSITION — BEFORE OPTIONS DISAPPEAR</text></svg>`],
-  ['PROJECT WATCH METHOD',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><g><circle cx="125" cy="145" r="62" fill="#0c5265"/><circle cx="342" cy="145" r="62" fill="#0e6071"/><circle cx="559" cy="145" r="62" fill="#10717d"/><circle cx="776" cy="145" r="62" fill="#157c72"/></g><g class="label" text-anchor="middle"><text x="125" y="151">LEARN</text><text x="342" y="151">RECOGNISE</text><text x="559" y="151">CONTEXT</text><text x="776" y="151">APPLY</text></g><path class="line" d="M187 145h93M404 145h93M621 145h93"/><text x="450" y="50" class="big" text-anchor="middle">PROJECT WATCH METHOD</text><text x="450" y="260" class="small" text-anchor="middle">THE ASSESSMENT CONFIRMS KNOWLEDGE — IT DOESN'T INTRODUCE IT</text></svg>`],
-  ['BOATMASTER RESPONSIBILITY',`<svg viewBox="0 0 900 300"><rect width="900" height="300" fill="#052431"/><circle cx="450" cy="80" r="52" fill="#0d6075"/><text x="450" y="76" class="label" text-anchor="middle">BOATMASTER</text><text x="450" y="96" class="small" text-anchor="middle">AUTHORITY</text><path class="line" d="M450 132v36M450 168H190M450 168h260M190 168v28M450 168v28M710 168v28"/><rect x="80" y="196" width="220" height="62" rx="10" fill="#0a4051"/><rect x="340" y="196" width="220" height="62" rx="10" fill="#0a4051"/><rect x="600" y="196" width="220" height="62" rx="10" fill="#0a4051"/><text x="190" y="222" class="small" text-anchor="middle">VESSEL / FORMATION</text><text x="190" y="243" class="small" text-anchor="middle">COMPLIANCE</text><text x="450" y="222" class="small" text-anchor="middle">PRESENCE / FITNESS</text><text x="450" y="243" class="small" text-anchor="middle">FOR DUTY</text><text x="710" y="222" class="small" text-anchor="middle">OTHER BOATMASTERS</text><text x="710" y="243" class="small" text-anchor="middle">RETAIN DUTIES</text></svg>`]
- ];
- function visualFor(step){
-   if(step<8)return V[step];
-   return V[8];
- }
- function install(step){
-   const card=document.querySelector('#cevniLessonArea .cvBriefingCard');
-   if(!card || card.querySelector('.pwM01Visual'))return;
-   const v=visualFor(step); if(!v)return;
-   const wrap=document.createElement('div');wrap.className='pwM01Visual';
-   wrap.innerHTML=v[1]+`<div class="pwM01VisualCap"><b>${v[0]}</b><span>MODULE 01 • VISUAL BRIEFING</span></div>`;
-   card.insertBefore(wrap,card.firstChild);
- }
- const previous=window.cevniOpenLesson;
- window.cevniOpenLesson=function(i,step=0){
-   const r=previous(i,step);
-   if(i===0 && step<CEVNI_MODULES[0].sections.length)setTimeout(()=>install(step),0);
-   return r;
- };
- document.addEventListener('DOMContentLoaded',()=>{
-   window.PROJECT_WATCH_BUILD='1.63.15-CEVNI-M01-VISUAL-POLISH';
-   const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.63.15-CEVNI-M01-VISUAL-POLISH';
- });
+'use strict';
+const BUILD='1.63.15a';
+function assertBuild(){
+  window.PROJECT_WATCH_BUILD=BUILD;
+  const vb=document.getElementById('pwVisibleBuild');
+  if(vb)vb.textContent='BUILD '+BUILD;
+  const page=document.getElementById('cevniPage');
+  if(page)page.dataset.pwBuild=BUILD;
+  document.title='Project Watch '+BUILD;
+}
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',()=>setTimeout(assertBuild,4250),{once:true});
+}else{
+  setTimeout(assertBuild,4250);
+}
+setTimeout(assertBuild,5000);
+window.PW16315A_REPAIR={
+  build:BUILD,
+  failedM01SchematicVisualsRemoved:true,
+  learnerContentTouched:false,
+  progressionTouched:false,
+  testModeTouched:false,
+  colregTouched:false,
+  audioTouched:false,
+  legacyAssetsTouched:false
+};
 })();
 </script>
+<!-- PW16315A_VISUAL_ROLLBACK_BUILD_ID_REPAIR_END -->
 
 </body></html>
