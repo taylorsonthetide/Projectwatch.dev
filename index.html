@@ -26633,4 +26633,107 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 
+
+<!-- PW16327_MODULE02_FINAL_VISUAL_STANDARD_START -->
+<style id="pw16327M02FinalVisualStandard">
+/*
+  MODULE 2 FINAL VISUAL STANDARD
+  - artwork dictates the frame
+  - no cover crop
+  - no stretching
+  - no forced fixed-height viewport
+  - individual approved master artwork shown at native aspect ratio
+  - Module 1 and all non-Module-2 systems remain untouched
+*/
+#cevniPage .pwM02Visual{
+  overflow:hidden !important;
+}
+#cevniPage .pwM02Viewport{
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  overflow:hidden !important;
+  display:block !important;
+  background:#021821 !important;
+  touch-action:auto !important;
+}
+#cevniPage .pwM02Visual img,
+#cevniPage img[data-pw-m02-visual="1"]{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:100% !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  transform:none !important;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+#cevniPage .pwM02Crop\.v2{
+  display:none !important;
+}
+#cevniPage .pwM02Viewport.editing{
+  outline:none !important;
+}
+#cevniPage .pwM02Viewport.editing:after{
+  display:none !important;
+}
+@media(max-width:900px){
+  #cevniPage .pwM02Viewport{height:auto !important}
+  #cevniPage .pwM02Visual img,
+  #cevniPage img[data-pw-m02-visual="1"]{height:auto !important;max-height:none !important}
+}
+</style>
+<script id="pw16327M02FinalVisualStandardJs">
+(function(){
+  'use strict';
+  function enforce(){
+    var root=document.getElementById('cevniPage');
+    if(!root)return;
+    root.querySelectorAll('.pwM02Visual').forEach(function(fig){
+      var vp=fig.querySelector('.pwM02Viewport');
+      var img=fig.querySelector('img');
+      if(!vp||!img)return;
+      vp.style.setProperty('height','auto','important');
+      vp.style.setProperty('min-height','0','important');
+      vp.style.setProperty('aspect-ratio','auto','important');
+      vp.style.setProperty('overflow','hidden','important');
+      img.style.setProperty('width','100%','important');
+      img.style.setProperty('height','auto','important');
+      img.style.setProperty('max-width','100%','important');
+      img.style.setProperty('max-height','none','important');
+      img.style.setProperty('object-fit','contain','important');
+      img.style.setProperty('object-position','center center','important');
+      img.style.setProperty('transform','none','important');
+      var bar=fig.querySelector('.pwM02Crop\\.v2');
+      if(bar)bar.style.setProperty('display','none','important');
+    });
+  }
+  var oldOpen=window.cevniOpenLesson;
+  if(typeof oldOpen==='function'){
+    window.cevniOpenLesson=function(i,step){
+      var r=oldOpen.apply(this,arguments);
+      if(i===1){setTimeout(enforce,25);setTimeout(enforce,120);}
+      return r;
+    };
+  }
+  var mo=new MutationObserver(function(){requestAnimationFrame(enforce);});
+  mo.observe(document.documentElement,{subtree:true,childList:true});
+  function build(){
+    var B='1.63.27';
+    window.PROJECT_WATCH_BUILD=B;
+    var vb=document.getElementById('pwVisibleBuild');
+    if(vb)vb.textContent='BUILD '+B;
+    document.title='Project Watch '+B;
+    enforce();
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',function(){setTimeout(build,7100)},{once:true});
+  }else setTimeout(build,7100);
+  setTimeout(build,7600);
+})();
+</script>
+<!-- PW16327_MODULE02_FINAL_VISUAL_STANDARD_END -->
+
 </body></html>
