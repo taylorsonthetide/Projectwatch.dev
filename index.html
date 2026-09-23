@@ -26542,4 +26542,59 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 
+
+<!-- PW16333_MODULE02_SOURCE_BADGE_AUDIT_START -->
+<script id="pw16333M02SourceBadgeAudit">
+(function(){
+'use strict';
+
+const SOURCE_MAP = [
+  'SOURCE • CEVNI REV.6 • ARTICLE 1.01 — DEFINITIONS',
+  'SOURCE • CEVNI REV.6 • ARTICLE 1.01 — SMALL CRAFT',
+  'SOURCE • CEVNI REV.6 • ARTICLE 1.01 — VESSEL DIMENSIONS',
+  'SOURCE • CEVNI REV.6 • ARTICLE 1.01 + LOCAL CLEARANCE INFORMATION',
+  'SOURCE • CEVNI REV.6 • ARTICLE 1.01 + LOCAL WATER-LEVEL / DEPTH INFORMATION',
+  'SOURCE • CEVNI REV.6 • ARTICLES 2.01, 2.02 & 2.04 • ANNEX 2',
+  'SOURCE • CEVNI REV.6 • CHAPTER 3 • ANNEX 3',
+  'SOURCE • CEVNI REV.6 • ARTICLE 1.01 — CONVOYS & FORMATIONS'
+];
+
+function repairSource(step){
+  const area=document.getElementById('cevniLessonArea');
+  if(!area) return;
+  const wanted=SOURCE_MAP[Math.max(0,Math.min(7,Number(step)||0))];
+  const nodes=[...area.querySelectorAll('span,div,p')].filter(el=>{
+    const t=(el.textContent||'').trim();
+    return /^SOURCE\s*•/i.test(t) && el.children.length===0;
+  });
+  nodes.forEach(el=>{el.textContent=wanted;});
+}
+
+const previous=window.cevniOpenLesson;
+window.cevniOpenLesson=function(i,step=0){
+  const r=previous(i,step);
+  if(i===1){
+    setTimeout(()=>repairSource(step),40);
+    setTimeout(()=>repairSource(step),140);
+  }
+  return r;
+};
+
+const B='1.63.33';
+function setBuild(){
+  window.PROJECT_WATCH_BUILD=B;
+  const vb=document.getElementById('pwVisibleBuild');
+  if(vb) vb.textContent='BUILD '+B;
+  document.title='Project Watch '+B;
+}
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',()=>setTimeout(setBuild,8200),{once:true});
+}else{
+  setTimeout(setBuild,8200);
+}
+setTimeout(setBuild,8800);
+})();
+</script>
+<!-- PW16333_MODULE02_SOURCE_BADGE_AUDIT_END -->
+
 </body></html>
