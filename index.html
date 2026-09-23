@@ -26394,9 +26394,9 @@ window.PW16315A_REPAIR={
 <!-- PW16315A_VISUAL_ROLLBACK_BUILD_ID_REPAIR_END -->
 
 
-<!-- PW16316_MODULE01_PHOTOGRAPHIC_VISUALS_START -->
 
-<style id="pw16316M01PhotoCss">
+<!-- PW16317_MODULE01_REFINED_PHOTO_PACK_START -->
+<style id="pw16317M01PhotoCss">
 #cevniPage .pwM01Photo{position:relative;margin:0 0 18px;border:1px solid #ffffff20;border-radius:15px;overflow:hidden;background:#061f2b;box-shadow:0 10px 28px #0004}
 #cevniPage .pwM01Photo img{display:block;width:100%;height:320px;object-fit:cover;object-position:center}
 #cevniPage .pwM01Photo:after{content:"";position:absolute;left:0;right:0;bottom:42px;height:48%;background:linear-gradient(transparent,#021821b8);pointer-events:none}
@@ -26405,25 +26405,22 @@ window.PW16315A_REPAIR={
 #cevniPage .pwM01PhotoCap span{font-size:11px;color:#79dff6;font-weight:900}
 #cevniPage .pwM01PhotoCredit{position:absolute;z-index:3;right:10px;bottom:52px;padding:5px 8px;border-radius:6px;background:#00151dcc;color:#d5e7eb;font-size:9px;font-weight:700}
 @media(max-width:700px){#cevniPage .pwM01Photo img{height:280px}.pwM01PhotoCap{align-items:flex-start;flex-direction:column}}
-</style>
-
-<script id="pw16316M01PhotoJs">
+</style><script id="pw16317M01PhotoJs">
 (function(){
 'use strict';
-const LIB=[{"id": "PW-CEVNI-VIS-PHOTO-001", "title": "Commercial inland vessel below Bamberg Lock", "file": "pw-cevni-photo-001-levana-bamberg.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/GMS_Levana_Bamberg-20200727-RM-105659.jpg?width=1600", "source": "Wikimedia Commons — GMS Levana Bamberg-20200727-RM-105659.jpg", "creator": "Reinhold Möller (Ermell)", "license": "CC BY-SA 4.0", "depicts": ["inland waterway vessel", "Rhine–Main–Danube Canal", "Bamberg lock approach", "commercial navigation context"], "modules": [1], "concepts": ["cevni-purpose", "inland-applicability", "skipper-responsibility"], "use": ["context", "teaching"], "assessment_ready": false}, {"id": "PW-CEVNI-VIS-PHOTO-002", "title": "Barge emerging downstream from Marckolsheim Lock", "file": "pw-cevni-photo-002-marckolsheim-downstream.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Marckolsheim_Lock_escaping_barge_travelling_downstream.JPG?width=1600", "source": "Wikimedia Commons — Marckolsheim Lock escaping barge travelling downstream.JPG", "creator": "Charles01", "license": "CC BY-SA 3.0", "depicts": ["commercial barge", "Rhine lock", "downstream movement", "engineered inland waterway", "hydropower/lock infrastructure"], "modules": [1, 7], "concepts": ["inland-applicability", "local-rules-layer", "early-decisions"], "use": ["context", "teaching"], "assessment_ready": false}, {"id": "PW-CEVNI-VIS-PHOTO-003", "title": "Commercial barge on the Rhine at Bonn", "file": "pw-cevni-photo-003-justin-rhine.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Justin_NL_on_Rhine.jpg?width=1600", "source": "Wikimedia Commons — Justin NL on Rhine.jpg", "creator": "Spielvogel", "license": "CC BY-SA 4.0", "depicts": ["Rhine", "commercial barge", "urban inland navigation", "bridge environment"], "modules": [1], "concepts": ["cevni-purpose", "read-whole-waterway"], "use": ["context", "teaching"], "assessment_ready": false}, {"id": "PW-CEVNI-VIS-PHOTO-004", "title": "Navigation lock channel and bridge at Birsfelden", "file": "pw-cevni-photo-004-birsfelden-lock-bridge.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Schleusen-Br%C3%BCcke_%C3%BCber_den_Rhein_Schiffkanal%2C_Birsfelden_BL_20170905-jag9889.jpg?width=1600", "source": "Wikimedia Commons — Schleusen-Brücke über den Rhein Schiffkanal, Birsfelden...", "creator": "Jag9889", "license": "Wikimedia Commons licensed file", "depicts": ["Rhine navigation lock channel", "bridge", "inland navigation infrastructure"], "modules": [1, 7], "concepts": ["competent-authority", "local-rules-layer", "early-decisions"], "use": ["context", "teaching"], "assessment_ready": false}];
-const MAP=[0, 1, 3, 3, 1, 2, 1, 0];
+const LIB=[{"id": "PW-CEVNI-VIS-PHOTO-001", "title": "Commercial inland vessel below Bamberg Lock", "file": "pw-cevni-photo-001-levana-bamberg.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/GMS_Levana_Bamberg-20200727-RM-105659.jpg?width=1600", "source": "Wikimedia Commons — GMS Levana Bamberg-20200727-RM-105659.jpg", "creator": "Reinhold Möller (Ermell)", "license": "CC BY-SA 4.0", "depicts": ["commercial inland vessel", "Bamberg lock approach", "engineered inland waterway"], "concepts": ["cevni-purpose"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-002", "title": "Barge emerging downstream from Marckolsheim Lock", "file": "pw-cevni-photo-002-marckolsheim-downstream.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Marckolsheim_Lock_escaping_barge_travelling_downstream.JPG?width=1600", "source": "Wikimedia Commons — Marckolsheim Lock escaping barge travelling downstream.JPG", "creator": "Charles01", "license": "CC BY-SA 3.0", "depicts": ["commercial barge", "Rhine lock", "downstream movement"], "concepts": ["inland-applicability"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-003", "title": "Commercial barge on the Rhine at Bonn", "file": "pw-cevni-photo-003-justin-rhine.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Justin_NL_on_Rhine.jpg?width=1600", "source": "Wikimedia Commons — Justin NL on Rhine.jpg", "creator": "Wikimedia Commons contributor", "license": "Commons licensed file", "depicts": ["Rhine", "commercial barge", "urban inland navigation", "bridge environment"], "concepts": ["read-whole-waterway"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-005", "title": "Waterway sign at Mittenwalde lock and weir", "file": "pw-cevni-photo-005-mittenwalde-waterway-sign.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Schleuse_Mittenwalde_Nottekanal_Schifffahrtszeichen.jpg?width=1600", "source": "Wikimedia Commons — Schleuse Mittenwalde Nottekanal Schifffahrtszeichen.jpg", "creator": "V. Boldychev", "license": "Commons licensed file", "depicts": ["lock", "weir", "waterway junction", "navigation sign indicating joining Galluner Canal ahead left"], "concepts": ["local-rules-layer"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-006", "title": "German waterway traffic-control centre", "file": "pw-cevni-photo-006-travemuende-traffic-centre.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Verkehrszentrale_Travemuende-DSC_0533w.jpg?width=1600", "source": "Wikimedia Commons — Verkehrszentrale Travemuende-DSC 0533w.jpg", "creator": "Peter Haas", "license": "Commons licensed file; attribution required", "depicts": ["waterway/shipping administration", "traffic-control centre", "competent-authority infrastructure"], "concepts": ["competent-authority"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-007", "title": "Navigation information board at Bamberg Lock 99", "file": "pw-cevni-photo-007-bamberg-lock-information.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bamberg_Bughof_Schleuse_99_007.JPG?width=1600", "source": "Wikimedia Commons — Bamberg Bughof Schleuse 99 007.JPG", "creator": "Janericloebe", "license": "Commons licensed photograph", "depicts": ["lock information board", "waterway information", "pre-passage information context"], "concepts": ["notices-before-departure"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-008", "title": "Inland vessel entering Strullendorf Lock", "file": "pw-cevni-photo-008-mirela-strullendorf-lock.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/GMS_Mirela-20190523-RM-173820.jpg?width=1600", "source": "Wikimedia Commons — GMS Mirela-20190523-RM-173820.jpg", "creator": "Reinhold Möller (Ermell)", "license": "Commons licensed file", "depicts": ["inland vessel GMS Mirela", "Main-Danube Canal", "lock entry", "constrained manoeuvring"], "concepts": ["early-decisions"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}, {"id": "PW-CEVNI-VIS-PHOTO-009", "title": "Commercial barge underway on the Rhine", "file": "pw-cevni-photo-009-rhine-barge-kamp-bornhofen.jpg", "remote": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rhine_Barge_near_Kamp-Bornhofen.jpg?width=1600", "source": "Wikimedia Commons — Rhine Barge near Kamp-Bornhofen.jpg", "creator": "Partonez", "license": "Commons licensed file", "depicts": ["commercial barge", "Rhine", "real inland-navigation context"], "concepts": ["project-watch-method"], "use": ["context", "teaching"], "family": "01 Photography", "modules": [1], "assessment_ready": false, "revision": "1.0"}];
+const BYID=Object.fromEntries(LIB.map(a=>[a.id,a]));
+const MAP=["PW-CEVNI-VIS-PHOTO-001", "PW-CEVNI-VIS-PHOTO-002", "PW-CEVNI-VIS-PHOTO-005", "PW-CEVNI-VIS-PHOTO-006", "PW-CEVNI-VIS-PHOTO-007", "PW-CEVNI-VIS-PHOTO-003", "PW-CEVNI-VIS-PHOTO-008", "PW-CEVNI-VIS-PHOTO-009"];
 window.PW_CEVNI_VISUAL_LIBRARY=window.PW_CEVNI_VISUAL_LIBRARY||{};
 LIB.forEach(a=>window.PW_CEVNI_VISUAL_LIBRARY[a.id]=a);
-function assetFor(step){return LIB[step<MAP.length?MAP[step]:0];}
 function install(step){
  const card=document.querySelector('#cevniLessonArea .cvBriefingCard');
  if(!card||card.querySelector('.pwM01Photo'))return;
- const a=assetFor(step); if(!a)return;
+ const a=BYID[MAP[step]||MAP[0]]; if(!a)return;
  const el=document.createElement('figure');el.className='pwM01Photo';el.dataset.visualId=a.id;
  const img=document.createElement('img');img.src=a.remote;img.alt=a.title;img.loading='eager';img.decoding='async';
  const credit=document.createElement('div');credit.className='pwM01PhotoCredit';credit.textContent=a.creator+' • '+a.license;
- const cap=document.createElement('figcaption');cap.className='pwM01PhotoCap';
- cap.innerHTML='<b>'+a.title.toUpperCase()+'</b><span>'+a.id+'</span>';
+ const cap=document.createElement('figcaption');cap.className='pwM01PhotoCap';cap.innerHTML='<b>'+a.title.toUpperCase()+'</b><span>'+a.id+'</span>';
  el.append(img,credit,cap);card.insertBefore(el,card.firstChild);
 }
 const previous=window.cevniOpenLesson;
@@ -26433,7 +26430,7 @@ window.cevniOpenLesson=function(i,step=0){
  return r;
 };
 function assertBuild(){
- const B='1.63.16';window.PROJECT_WATCH_BUILD=B;
+ const B='1.63.17';window.PROJECT_WATCH_BUILD=B;
  const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD '+B;
  document.title='Project Watch '+B;
 }
@@ -26442,5 +26439,5 @@ else setTimeout(assertBuild,4250);
 setTimeout(assertBuild,5000);
 })();
 </script>
-<!-- PW16316_MODULE01_PHOTOGRAPHIC_VISUALS_END -->
+<!-- PW16317_MODULE01_REFINED_PHOTO_PACK_END -->
 </body></html>
