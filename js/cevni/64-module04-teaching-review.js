@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-const BUILD='1.66.0-M04-TEACHING-REVIEW';
+const BUILD='1.66.1-M04-NEXT-CRASH-FIX';
 if(typeof CEVNI_MODULES==='undefined'||!CEVNI_MODULES[3])return;
 const m=CEVNI_MODULES[3];
 m.desc='Read a complete CEVNI vessel display by aspect, operation and formation. Learn the day and night signals before assessment.';
