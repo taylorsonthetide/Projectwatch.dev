@@ -1,0 +1,47 @@
+{
+  "library": "Project Watch CEVNI Master Visual Library",
+  "branch": "cevni-master-library",
+  "authority": "CEVNI Sixth Revised Edition with Corrigenda 1 and 2",
+  "live_baseline": "1.63.33",
+  "integration_status": "NOT_INTEGRATED",
+  "review_gate": "HUMAN_APPROVAL_REQUIRED",
+  "annex7": {
+    "title": "Signs and Signals",
+    "families": [
+      "A Prohibitory",
+      "B Mandatory",
+      "C Restrictive",
+      "D Recommendatory",
+      "E Informative",
+      "Auxiliary signs"
+    ],
+    "catalogue_status": "SOURCE_IDENTITIES_EXTRACTED",
+    "artwork_status": "SOURCE_EXTRACTIONS_IN_PREPARATION",
+    "variant_policy": "INDIVIDUAL_ASSET_WHERE_SOURCE_DISTINGUISHES_VARIANT"
+  },
+  "annex8": {
+    "title": "Buoyage and Marking of the Waterways",
+    "families": [
+      "Fairway limits",
+      "Bank marks",
+      "Danger and obstacle marks",
+      "Passage around obstacles",
+      "Radar marks",
+      "Lakes and broad waterways",
+      "Prohibited/restricted zones",
+      "Miscellaneous buoys",
+      "Harbour entrances"
+    ],
+    "catalogue_status": "SOURCE_IDENTITIES_EXTRACTED",
+    "artwork_status": "INDIVIDUAL_EXTRACTION_IN_PROGRESS",
+    "variant_policy": "INDIVIDUAL_ASSET_WHERE_SOURCE_DISTINGUISHES_VARIANT"
+  },
+  "statuses": [
+    "SOURCE_VERIFIED",
+    "SOURCE_EXTRACT_REVIEW_REQUIRED",
+    "HUMAN_APPROVED",
+    "LOCKED",
+    "REJECTED",
+    "HOLD"
+  ]
+}
