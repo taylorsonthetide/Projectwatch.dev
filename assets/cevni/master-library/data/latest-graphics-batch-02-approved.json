@@ -1,0 +1,31 @@
+{
+  "version": "latest-graphics-batch-02",
+  "authority": "CEVNI Rev.6 Annex 8 figs.14-16; Corr.1/Corr.2 and Amendments 1/2 checked before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-6-A": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-6-B": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-1-F1": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-1-F": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-2-F1": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-2-F": {
+      "status": "approved",
+      "note": ""
+    }
+  }
+}
