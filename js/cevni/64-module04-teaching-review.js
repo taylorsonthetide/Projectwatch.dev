@@ -27,7 +27,7 @@ function art(x){
  if(!x)return '';
  const body=x.shape==='cone'?'<polygon points="50,90 17,18 83,18" fill="#101820" stroke="#fff" stroke-width="2"/>':
  '<path d="M8 96h84" stroke="#87b5cc" stroke-width="2"/>'+x.lights.map(v=>'<circle cx="'+v[1]+'" cy="'+v[2]+'" r="7" fill="'+colour[v[0]]+'" stroke="#fff" stroke-width="1.2"/>').join('');
- return '<figure class="pw166Art"><div class="pw166Name">'+x.name+'</div><svg viewBox="0 0 100 104" role="img" aria-label="'+x.name+'">'+body+'</svg><figcaption>'+x.note+'</figcaption></figure>';
+ return '<figure class="pw166Art"><div class="pw166Name">'+x.name+'</div><svg viewBox="0 0 100 104" role="img" aria-label="'+x.name+'">'+body+'</svg><figcaption>'+x.note+' <small>Teaching schematic; exact Annex 3 plate check pending.</small></figcaption></figure>';
 }
 const style=document.createElement('style');style.textContent='#cevniPage .pw166Art{margin:12px 0 0;padding:12px;background:#031923;border:1px solid #3795b4;border-radius:12px;text-align:center}#cevniPage .pw166Art svg{display:block;width:100%;height:150px;max-width:320px;margin:auto}#cevniPage .pw166Name{font-size:13px;font-weight:900;color:#b5efff}#cevniPage .pw166Art figcaption{font-size:12px;color:#c8dce4}';document.head.appendChild(style);
 const prior=window.cevniOpenLesson;
@@ -41,6 +41,7 @@ window.cevniOpenLesson=function(i,step=0){
  return result;
 };
 function identity(){window.PROJECT_WATCH_BUILD=BUILD;const v=document.getElementById('pwVisibleBuild');if(v)v.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',identity,{once:true});else identity();
+function start(){const a=document.getElementById('cevniLessonArea');if(a)new MutationObserver(()=>setTimeout(identity,0)).observe(a,{childList:true,subtree:true});identity()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 window.PW1660_M04={build:BUILD,source:'CEVNI Rev.6 Chapter 3 / Annex 3',phase:'teaching-review',questionBankIntegrated:false,visualsAssessmentReady:false,module3Changed:false};
 })();
