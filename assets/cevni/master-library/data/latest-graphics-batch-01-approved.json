@@ -1,0 +1,47 @@
+{
+  "version": "latest-graphics-batch-01",
+  "authority": "CEVNI Rev.6 + Corr.1/Corr.2; checked against Amendments 1/2 before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-4-A": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-4-B": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-5-A": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-5-B": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-4-C": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-4-D": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-5-C": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-5-D": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-4-F": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-5-F": {
+      "status": "approved",
+      "note": ""
+    }
+  }
+}
