@@ -1,0 +1,53 @@
+{
+  "role": "approved teaching art",
+  "assets": [
+    {
+      "code": "A.1",
+      "meaning": "NO ENTRY",
+      "note": "General prohibitory sign: red–white–red board.",
+      "asset": "assets/cevni/module03/annex7-a-1.svg"
+    },
+    {
+      "code": "A.2",
+      "meaning": "NO OVERTAKING",
+      "note": "Prohibitory sign: two vessels/arrows with the red diagonal prohibition stroke.",
+      "asset": "assets/cevni/module03/annex7-a-2.svg"
+    },
+    {
+      "code": "B.1",
+      "meaning": "PROCEED IN DIRECTION SHOWN",
+      "note": "Mandatory course/direction sign.",
+      "asset": "assets/cevni/module03/annex7-b-1.svg"
+    },
+    {
+      "code": "B.7",
+      "meaning": "GIVE A SOUND SIGNAL",
+      "note": "Mandatory sign: black disc on white within a red border.",
+      "asset": "assets/cevni/module03/annex7-b-7.svg"
+    },
+    {
+      "code": "C.1",
+      "meaning": "DEPTH OF WATER LIMITED",
+      "note": "Restrictive sign; a figure may state the available depth in metres.",
+      "asset": "assets/cevni/module03/annex7-c-1.svg"
+    },
+    {
+      "code": "D.1",
+      "meaning": "RECOMMENDED OPENING",
+      "note": "Yellow recommendatory board used to mark a preferred bridge/weir opening.",
+      "asset": "assets/cevni/module03/annex7-d-1.svg"
+    },
+    {
+      "code": "E.1",
+      "meaning": "ENTRY PERMITTED",
+      "note": "General informative sign: green–white–green board.",
+      "asset": "assets/cevni/module03/annex7-e-1.svg"
+    },
+    {
+      "code": "E.2",
+      "meaning": "OVERHEAD CABLE CROSSING",
+      "note": "Informative sign warning of an overhead cable.",
+      "asset": "assets/cevni/module03/annex7-e-2.svg"
+    }
+  ]
+}
