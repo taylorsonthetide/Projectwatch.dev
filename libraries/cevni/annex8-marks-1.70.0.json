@@ -1,0 +1,55 @@
+{
+  "role": "approved teaching art",
+  "assets": [
+    {
+      "id": "PW-CEVNI-ANNEX8-1-A",
+      "label": "Right-hand fairway limit",
+      "asset": "assets/cevni/module03/annex8-1-a.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-2-A",
+      "label": "Left-hand fairway limit",
+      "asset": "assets/cevni/module03/annex8-2-a.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-3-A",
+      "label": "Bifurcation of fairway",
+      "asset": "assets/cevni/module03/annex8-3-a.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-4-C",
+      "label": "Cross-over — right bank",
+      "asset": "assets/cevni/module03/annex8-4-c.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-5-C",
+      "label": "Cross-over — left bank",
+      "asset": "assets/cevni/module03/annex8-5-c.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-N-CARDINAL",
+      "label": "North cardinal",
+      "asset": "assets/cevni/module03/annex8-n-cardinal.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-E-CARDINAL",
+      "label": "East cardinal",
+      "asset": "assets/cevni/module03/annex8-e-cardinal.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-S-CARDINAL",
+      "label": "South cardinal",
+      "asset": "assets/cevni/module03/annex8-s-cardinal.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-W-CARDINAL",
+      "label": "West cardinal",
+      "asset": "assets/cevni/module03/annex8-w-cardinal.svg"
+    },
+    {
+      "id": "PW-CEVNI-ANNEX8-8-D",
+      "label": "Isolated danger",
+      "asset": "assets/cevni/module03/annex8-8-d.svg"
+    }
+  ]
+}
