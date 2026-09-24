@@ -1,0 +1,23 @@
+{
+  "version": "latest-graphics-batch-11-final-examples",
+  "authority": "CEVNI Rev.6 Annex 8 figs.7,17,17 ter,17 quinquies; Corr.1/Corr.2 and Amendments 1/2 checked before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-FIG7": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-FIG17": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-FIG17TER": {
+      "status": "hold",
+      "note": "Is that a boat in the centre?"
+    },
+    "PW-CEVNI-ANNEX8-FIG17QUINQUIES": {
+      "status": "hold",
+      "note": "is that a boat in the centre "
+    }
+  }
+}
