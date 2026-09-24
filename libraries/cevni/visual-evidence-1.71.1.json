@@ -1,0 +1,71 @@
+{
+  "role": "context photography with attribution",
+  "assets": [
+    {
+      "id": "PW-PHOTO-RHINE-LOCK-0058",
+      "title": "Iffezheim Lock — upstream side",
+      "place": "Germany • Rhine",
+      "file": "Upstream side Iffezheim Lock.jpg",
+      "creator": "Llez",
+      "license": "CC BY-SA 3.0",
+      "status": "COURSE APPROVED • STRUCTURE CONTEXT",
+      "use": "Read the scale, approach geometry and physical lock environment. Do not infer entry permission or signal meaning from the photograph.",
+      "source": "https://commons.wikimedia.org/wiki/File:Upstream_side_Iffezheim_Lock.jpg"
+    },
+    {
+      "id": "PW-PHOTO-RHINE-LOCK-0059",
+      "title": "Iffezheim Lock — upstream view",
+      "place": "Germany • Rhine",
+      "file": "Lock Iffezheim Upriver View.jpg",
+      "creator": "Ingolfson",
+      "license": "Public domain",
+      "status": "COURSE APPROVED • STRUCTURE CONTEXT",
+      "use": "Compare chamber layout and approach orientation. The scene is context, not an answer-bearing signal plate.",
+      "source": "https://commons.wikimedia.org/wiki/File:Lock_Iffezheim_Upriver_View.jpg"
+    },
+    {
+      "id": "PW-PHOTO-RHINE-LOCK-0242",
+      "title": "Iffezheim Lock — downstream side",
+      "place": "Germany • Rhine",
+      "file": "Lock Iffezheim Downriver Side.jpg",
+      "creator": "Ingolfson",
+      "license": "Public domain",
+      "status": "COURSE APPROVED • STRUCTURE CONTEXT",
+      "use": "Use the paired upstream/downstream views to build a real-world mental model of the installation.",
+      "source": "https://commons.wikimedia.org/wiki/File:Lock_Iffezheim_Downriver_Side.jpg"
+    },
+    {
+      "id": "PW-PHOTO-FR-LOCK-0045",
+      "title": "Fessenheim Lock",
+      "place": "France • Grand Canal d'Alsace",
+      "file": "Fessenheim, Écluse.jpg",
+      "creator": "Rauenstein",
+      "license": "Public domain",
+      "status": "COURSE APPROVED • STRUCTURE CONTEXT",
+      "use": "Recognise a continental lock as an operating environment before interpreting separate signs and signals.",
+      "source": "https://commons.wikimedia.org/wiki/File:Fessenheim,_Écluse.jpg"
+    },
+    {
+      "id": "PW-PHOTO-BE-LANAYE-0080",
+      "title": "Lanaye Locks — downstream view",
+      "place": "Belgium • Meuse",
+      "file": "20190721 314 lanaye.jpg",
+      "creator": "Jean Housen",
+      "license": "CC BY-SA 4.0",
+      "status": "COURSE APPROVED • STRUCTURE CONTEXT",
+      "use": "Study chamber scale, multiple openings and the wider lock complex. Do not infer a traffic-light state from incidental detail.",
+      "source": "https://commons.wikimedia.org/wiki/File:20190721_314_lanaye.jpg"
+    },
+    {
+      "id": "PW-PHOTO-MD-LOCK-0060",
+      "title": "GMS Mirela entering Strullendorf lock",
+      "place": "Germany • Main–Danube Canal",
+      "file": "GMS Mirela-20190523-RM-173820.jpg",
+      "creator": "Reinhold Möller",
+      "license": "CC BY-SA 4.0",
+      "status": "COURSE APPROVED • LOCK-ENTRY CONTEXT",
+      "use": "Observe the relationship between an inland vessel and the lock environment. Vessel movement is not used as proof of signal permission.",
+      "source": "https://commons.wikimedia.org/wiki/File:GMS_Mirela-20190523-RM-173820.jpg"
+    }
+  ]
+}
