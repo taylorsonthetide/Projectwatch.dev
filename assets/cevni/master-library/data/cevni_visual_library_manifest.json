@@ -1,0 +1,16 @@
+{
+  "library": "Project Watch CEVNI Master Visual Library",
+  "version": "0.2-working",
+  "authority": "CEVNI Sixth Revised Edition with Corrigenda 1 and 2",
+  "live_baseline": "1.63.33",
+  "integration_status": "NOT_INTEGRATED",
+  "review_gate": "HUMAN_APPROVAL_REQUIRED",
+  "asset_policy": "One stable identity per source-distinguished regulatory sign/mark/variant; official source artwork only.",
+  "families": {
+    "annex7": ["A Prohibitory","B Mandatory","C Restrictive","D Recommendatory","E Informative","Auxiliary signs"],
+    "annex8": ["Fairway limits","Bank marks","Danger and obstacle marks","Passage around obstacles","Radar marks","Lakes and broad waterways","Prohibited/restricted zones","Miscellaneous buoys","Harbour entrances"]
+  },
+  "workflow": ["SOURCE_VERIFIED","SOURCE_EXTRACT_REVIEW_REQUIRED","HUMAN_APPROVED","LOCKED"],
+  "entries": [],
+  "note": "Entries are deliberately empty until individual source variants and artwork are paired and checked; review UI must not present incomplete records as approved."
+}
