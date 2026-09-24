@@ -1,0 +1,15 @@
+{
+  "version": "latest-graphics-batch-10a-corrections",
+  "authority": "CEVNI Rev.6 Annex 8 p.152 light-rhythm examples; Corr.1/Corr.2 and Amendments 1/2 checked before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-LIGHT-CONT-SCINT": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-GROUP-SCINT": {
+      "status": "approved",
+      "note": ""
+    }
+  }
+}
