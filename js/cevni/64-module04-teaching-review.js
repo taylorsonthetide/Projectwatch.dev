@@ -17,7 +17,6 @@ m.sections=[
 const patterns={
  1:{name:'Ahead aspect · ordinary motorized vessel',lights:[['W',50,25],['R',24,77],['G',76,77]],note:'Stern light lies outside this viewing sector.'},
  2:{name:'Day shape · sail plus machinery',shape:'cone',note:'Black cone with point downwards.'},
- 3:{name:'Formation comparison',lights:[['W',25,22],['W',25,56],['Y',25,88],['W',72,20],['W',57,54],['W',87,54]],note:'Left: tow leader; right: pushed-convoy head. Separate displays, shown side by side.'},
  4:{name:'Additional blue marking',lights:[['B',50,30],['B',50,70]],note:'Two additional blue signals; ordinary vessel marking also applies.'},
  5:{name:'Ferry not moving independently',lights:[['G',50,28],['W',50,72]],note:'Green above white; both all-round.'},
  6:{name:'Work-limited manoeuvrability',lights:[['R',50,18],['W',50,48],['R',50,78],['G',82,42],['G',82,75],['R',18,42],['R',18,75]],note:'Central red–white–red; green clear side and red obstruction side, where prescribed.'},
