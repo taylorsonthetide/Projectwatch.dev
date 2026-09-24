@@ -1,0 +1,41 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Watch CEVNI Latest Graphics — Approval Batch 01</title>
+<style>
+body{margin:0;background:#07151c;color:#eef9fc;font-family:system-ui,-apple-system,sans-serif}header{position:sticky;top:0;z-index:5;background:#0b2632;padding:16px;border-bottom:1px solid #28505e}h1{font-size:22px;margin:0}.sub{color:#b8d5de;margin:5px 0 10px}.bar{display:flex;gap:8px;flex-wrap:wrap}button{border:0;border-radius:8px;padding:9px 11px;font-weight:800;cursor:pointer}.bar button{background:#183b48;color:#fff}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;padding:16px}.card{background:#0e222b;border:2px solid #244854;border-radius:14px;overflow:hidden}.card[data-status=approved]{border-color:#4ac78a}.card[data-status=rejected]{border-color:#e96c6c}.card[data-status=hold]{border-color:#e8bd59}.art{height:300px;background:#fff;display:grid;place-items:center;padding:10px}.art svg{width:100%;height:100%}.body{padding:13px}.code{font-size:22px;color:#79e0ff;font-weight:900}.body h3{margin:4px 0 7px;font-size:16px}.body p,.body small{color:#b8d5de}.buttons{display:flex;gap:6px;margin-top:10px}.approve{background:#4ac78a}.reject{background:#e96c6c}.hold{background:#e8bd59}textarea{box-sizing:border-box;width:100%;margin-top:9px;min-height:50px;background:#07151c;color:#fff;border:1px solid #315b68;border-radius:8px;padding:8px}.hidden{display:none}#results{display:none;margin:16px;background:#fff;color:#111;padding:12px;border-radius:10px;white-space:pre-wrap;overflow:auto}
+</style></head><body>
+<header><h1>PROJECT WATCH · CEVNI LATEST GRAPHICS · APPROVAL BATCH 01</h1>
+<div class="sub">Fresh clean reconstructions · Rev.6 + Corr.1/Corr.2 checked · old CEVNI v5 artwork excluded · Project Watch 1.63.33 untouched</div>
+<div class="bar"><button onclick="filter('all')">ALL 10</button><button onclick="filter('unreviewed')">UNREVIEWED</button><button onclick="filter('approved')">APPROVED</button><button onclick="filter('rejected')">REJECTED</button><button onclick="filter('hold')">HOLD</button><button onclick="showResults()">SHOW / COPY RESULTS</button></div></header>
+<main id="cards"></main><pre id="results"></pre>
+<script>
+const items=[
+['4.A','Channel near right bank — with light','rightBank',1,'Red/white square board; rhythmic red light'],
+['4.B','Channel near right bank — without light','rightBank',0,'Red/white square board'],
+['5.A','Channel near left bank — with light','leftBank',1,'Green/white diamond board; rhythmic green light'],
+['5.B','Channel near left bank — without light','leftBank',0,'Green/white diamond board'],
+['4.C','Cross-over — right bank — with light','crossRight',1,'Yellow square with central vertical black stripe; yellow light'],
+['4.D','Cross-over — right bank — without light','crossRight',0,'Yellow square with central vertical black stripe'],
+['5.C','Cross-over — left bank — with light','crossLeft',1,'Yellow diamond with central vertical black stripe; yellow light'],
+['5.D','Cross-over — left bank — without light','crossLeft',0,'Yellow diamond with central vertical black stripe'],
+['4.F','Fixed danger/obstacle — right-hand side','fixedRight',0,'Red post; red cone topmark point down'],
+['5.F','Fixed danger/obstacle — left-hand side','fixedLeft',0,'Green post; green cone topmark point up']
+];
+const KEY='pwCevniLatestGraphicsBatch01';let db=JSON.parse(localStorage.getItem(KEY)||'{}');
+function svg(type,light){
+let L=light?'<circle cx="160" cy="37" r="13" fill="'+(type==='rightBank'?'#d71920':type==='leftBank'?'#079447':'#ffd21c')+'" stroke="#111" stroke-width="3"/><rect x="156" y="50" width="8" height="18" fill="#333"/>':'';
+let pole='<rect x="154" y="196" width="12" height="78" fill="#555"/><path d="M125 274h70" stroke="#555" stroke-width="8"/>';
+if(type==='rightBank')return '<svg viewBox="0 0 320 300">'+L+'<rect x="95" y="70" width="130" height="130" fill="#d71920" stroke="#111" stroke-width="4"/><rect x="95" y="101" width="130" height="22" fill="#fff"/><rect x="95" y="147" width="130" height="22" fill="#fff"/>'+pole+'</svg>';
+if(type==='leftBank')return '<svg viewBox="0 0 320 300">'+L+'<g transform="rotate(45 160 135)"><rect x="98" y="73" width="124" height="124" fill="#fff" stroke="#111" stroke-width="4"/><path d="M98 73h124v62H98z" fill="#079447"/></g>'+pole+'</svg>';
+if(type==='crossRight')return '<svg viewBox="0 0 320 300">'+L+'<rect x="95" y="70" width="130" height="130" fill="#ffd21c" stroke="#111" stroke-width="4"/><rect x="145" y="70" width="30" height="130" fill="#111"/>'+pole+'</svg>';
+if(type==='crossLeft')return '<svg viewBox="0 0 320 300">'+L+'<g transform="rotate(45 160 135)"><rect x="98" y="73" width="124" height="124" fill="#ffd21c" stroke="#111" stroke-width="4"/><polygon points="145,73 175,73 175,197 145,197" fill="#111"/></g>'+pole+'</svg>';
+if(type==='fixedRight')return '<svg viewBox="0 0 320 300"><polygon points="120,58 200,58 160,118" fill="#d71920" stroke="#111" stroke-width="4"/><rect x="146" y="118" width="28" height="145" fill="#d71920" stroke="#111" stroke-width="4"/><path d="M115 268h90" stroke="#555" stroke-width="8"/></svg>';
+return '<svg viewBox="0 0 320 300"><polygon points="160,55 120,115 200,115" fill="#079447" stroke="#111" stroke-width="4"/><rect x="146" y="115" width="28" height="148" fill="#079447" stroke="#111" stroke-width="4"/><path d="M115 268h90" stroke="#555" stroke-width="8"/></svg>';
+}
+function render(){cards.innerHTML=items.map((x,i)=>{let id='PW-CEVNI-ANNEX8-'+x[0].replace('.','-'),r=db[id]||{status:'unreviewed',note:''};return '<article class="card" data-id="'+id+'" data-status="'+r.status+'"><div class="art">'+svg(x[2],x[3])+'</div><div class="body"><div class="code">'+x[0]+'</div><h3>'+x[1]+'</h3><p>'+x[4]+'</p><small>'+id+' · NEW CURRENT-STANDARD RECONSTRUCTION · human approval required</small><div class="buttons"><button class="approve" onclick="setState(this,\'approved\')">✓ APPROVE</button><button class="reject" onclick="setState(this,\'rejected\')">✕ REJECT</button><button class="hold" onclick="setState(this,\'hold\')">? HOLD</button></div><textarea placeholder="Optional note" oninput="saveNote(this)">'+(r.note||'')+'</textarea></div></article>'}).join('')}
+function setState(b,s){let c=b.closest('.card');c.dataset.status=s;let id=c.dataset.id;db[id]=db[id]||{};db[id].status=s;db[id].note=c.querySelector('textarea').value;localStorage.setItem(KEY,JSON.stringify(db))}
+function saveNote(t){let c=t.closest('.card'),id=c.dataset.id;db[id]=db[id]||{status:c.dataset.status};db[id].note=t.value;localStorage.setItem(KEY,JSON.stringify(db))}
+function filter(s){document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',s!=='all'&&c.dataset.status!==s))}
+async function showResults(){let out={version:'latest-graphics-batch-01',authority:'CEVNI Rev.6 + Corr.1/Corr.2; checked against Amendments 1/2 before promotion',old_v5_artwork:'EXCLUDED',review:db};let txt=JSON.stringify(out,null,2),p=document.getElementById('results');p.textContent=txt;p.style.display='block';p.scrollIntoView({behavior:'smooth'});try{await navigator.clipboard.writeText(txt);alert('Results copied to clipboard. If clipboard permission was blocked, the full JSON is shown below.')}catch(e){alert('Results shown below. Select and copy the JSON.')}}
+render();
+</script></body></html>
