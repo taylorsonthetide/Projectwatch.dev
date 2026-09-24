@@ -1,0 +1,39 @@
+{
+  "version": "latest-graphics-batch-08",
+  "authority": "CEVNI Rev.6 Annex 8 IV bis figs.17 bis and 17 quater; Corr.1/Corr.2 and Amendments 1/2 checked before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-IVBIS-A-NIGHT-OBSTRUCTED": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-A-DAY-OBSTRUCTED": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-A-NIGHT-CLEAR": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-A-DAY-CLEAR": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-B-NIGHT-OBSTRUCTED": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-B-DAY-OBSTRUCTED": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-B-NIGHT-CLEAR": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-IVBIS-B-DAY-CLEAR": {
+      "status": "approved",
+      "note": ""
+    }
+  }
+}
