@@ -1,0 +1,282 @@
+{
+  "signs": [
+    [
+      "A.1",
+      "No entry",
+      "Prohibitory",
+      "General prohibition on entry."
+    ],
+    [
+      "A.1.1",
+      "Section closed except non-motorized small craft",
+      "Prohibitory",
+      "Closed section with the stated small-craft exception."
+    ],
+    [
+      "A.2",
+      "No overtaking",
+      "Prohibitory",
+      "Overtaking is prohibited."
+    ],
+    [
+      "A.3",
+      "No overtaking of convoys by convoys",
+      "Prohibitory",
+      "Convoy-specific overtaking prohibition."
+    ],
+    [
+      "A.4",
+      "No passing or overtaking",
+      "Prohibitory",
+      "Passing and overtaking are prohibited."
+    ],
+    [
+      "A.5",
+      "No berthing",
+      "Prohibitory",
+      "No anchoring or making fast on the indicated side."
+    ],
+    [
+      "A.6",
+      "No anchoring / trailing anchors, cables or chains",
+      "Prohibitory",
+      "Do not anchor or trail anchors, cables or chains on the indicated side."
+    ],
+    [
+      "A.7",
+      "No making fast to the bank",
+      "Prohibitory",
+      "Making fast to the bank is prohibited on the indicated side."
+    ],
+    [
+      "A.8",
+      "No turning",
+      "Prohibitory",
+      "Turning is prohibited."
+    ],
+    [
+      "A.9",
+      "Do not create damaging wash",
+      "Prohibitory",
+      "Avoid wash likely to cause damage."
+    ],
+    [
+      "B.1",
+      "Proceed in direction shown",
+      "Mandatory",
+      "Follow the indicated direction."
+    ],
+    [
+      "B.2",
+      "Move to indicated side of fairway",
+      "Mandatory",
+      "Move to the port- or starboard-side of the fairway as shown."
+    ],
+    [
+      "B.3",
+      "Keep to indicated side of fairway",
+      "Mandatory",
+      "Keep to the indicated side of the fairway."
+    ],
+    [
+      "B.4",
+      "Cross fairway to indicated side",
+      "Mandatory",
+      "Cross the fairway toward the side shown."
+    ],
+    [
+      "B.5",
+      "Stop",
+      "Mandatory",
+      "Stop as prescribed by the applicable regulations."
+    ],
+    [
+      "B.6",
+      "Speed limit",
+      "Mandatory",
+      "Do not exceed the speed shown in km/h."
+    ],
+    [
+      "B.7",
+      "Give a sound signal",
+      "Mandatory",
+      "Give the indicated sound signal."
+    ],
+    [
+      "B.8",
+      "Keep a particularly sharp lookout",
+      "Mandatory",
+      "Heightened lookout is required."
+    ],
+    [
+      "B.9",
+      "Do not enter/cross main waterway until safe",
+      "Mandatory",
+      "Do not force vessels on the main waterway to alter course or speed."
+    ],
+    [
+      "B.10",
+      "Main-waterway vessels may need to facilitate exit",
+      "Mandatory",
+      "Main-waterway traffic may need to alter course/speed to permit vessels to leave harbour/tributary waters."
+    ],
+    [
+      "B.11",
+      "Establish radiotelephone link",
+      "Mandatory",
+      "Enter into the required radio link/channel."
+    ],
+    [
+      "C.1",
+      "Depth limited",
+      "Restrictive",
+      "Available depth is restricted; use the displayed value where fitted."
+    ],
+    [
+      "C.2",
+      "Headroom limited",
+      "Restrictive",
+      "Available headroom is restricted; compare the displayed value with the vessel."
+    ],
+    [
+      "C.3",
+      "Width limited",
+      "Restrictive",
+      "Passage/channel width is restricted."
+    ],
+    [
+      "C.4",
+      "Navigation restrictions — see plate",
+      "Restrictive",
+      "Read the accompanying information plate for the restriction."
+    ],
+    [
+      "C.5",
+      "Channel offset from bank",
+      "Restrictive",
+      "Keep the stated distance from the indicated bank."
+    ],
+    [
+      "D.1",
+      "Recommended opening",
+      "Recommendatory",
+      "Identifies a recommended opening; variants distinguish both directions or one direction only."
+    ],
+    [
+      "D.2",
+      "Keep within indicated area",
+      "Recommendatory",
+      "Recommended area within bridge/weir openings."
+    ],
+    [
+      "D.3",
+      "Recommended direction",
+      "Recommendatory",
+      "Proceed in the indicated recommended direction."
+    ],
+    [
+      "E.1",
+      "Entry permitted",
+      "Informative",
+      "General indication that entry is permitted."
+    ],
+    [
+      "E.2",
+      "Overhead cable crossing",
+      "Informative",
+      "Warns/informs of an overhead cable crossing."
+    ],
+    [
+      "E.3",
+      "Weir",
+      "Informative",
+      "Identifies a weir."
+    ],
+    [
+      "E.4",
+      "Ferry",
+      "Informative",
+      "Identifies a ferry crossing; variants distinguish ferry operation."
+    ],
+    [
+      "E.5",
+      "Berthing permitted",
+      "Informative",
+      "Berthing is permitted on the indicated side, subject to the applicable provision."
+    ]
+  ],
+  "displays": [
+    [
+      "3.08(1)",
+      "Motorized vessel proceeding alone",
+      "night-basic",
+      "Masthead light, sidelights and stern light form the basic underway motor-vessel picture."
+    ],
+    [
+      "3.08(2)",
+      "Motorized vessel over 110 m",
+      "night-two",
+      "A second masthead light is compulsory for vessels more than 110 m long."
+    ],
+    [
+      "3.09",
+      "Towed convoy / towing vessel",
+      "night-tow",
+      "Towing arrangements use additional prescribed marking; identify the convoy before deciding what individual lights mean."
+    ],
+    [
+      "3.10",
+      "Pushed convoy",
+      "night-push",
+      "The leading vessel shows three masthead lights arranged as a triangle; the convoy has prescribed side and stern marking."
+    ],
+    [
+      "3.11",
+      "Side-by-side formation",
+      "night-side",
+      "Treat the formation as a combined visual picture rather than reading one hull in isolation."
+    ],
+    [
+      "3.12",
+      "Sailing vessel",
+      "night-sail",
+      "Sailing-vessel marking is a distinct underway display."
+    ],
+    [
+      "3.12(3)",
+      "Sail plus mechanical propulsion",
+      "shape-cone",
+      "A vessel under sail while also using mechanical propulsion carries the prescribed additional day marking."
+    ],
+    [
+      "3.13",
+      "Motorized small craft",
+      "night-small",
+      "Small craft have specific permitted lighting arrangements; identify craft class before applying the display."
+    ],
+    [
+      "3.13(5)",
+      "Small sailing craft",
+      "night-sail",
+      "Small sailing craft have specific permitted light arrangements."
+    ],
+    [
+      "3.14(1)",
+      "Dangerous substances — level 1",
+      "blue1",
+      "Additional marking: one blue light by night / one blue cone point down by day, subject to ADN and applicable rules."
+    ],
+    [
+      "3.14(2)",
+      "Dangerous substances — level 2",
+      "blue2",
+      "Additional marking: two blue lights / two blue cones point down."
+    ],
+    [
+      "3.14(3)",
+      "Dangerous substances — level 3",
+      "blue3",
+      "Additional marking: three blue lights / three blue cones point down."
+    ]
+  ]
+}
