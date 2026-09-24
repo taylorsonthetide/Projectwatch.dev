@@ -8,7 +8,8 @@
     "liveModule4": "8 generic briefings and one text check; bank not connected",
     "visualLibrary": "No dedicated Module 4 CEVNI vessel-display assets in repository; COLREG displays are excluded",
     "duplicatePolicy": "Reuse taught concepts across stages only with distinct recall/recognition/application prompts",
-    "approvalGate": "Exact current Annex 3 plate comparison, aspect, day/night, geometry, colour and source attribution before answer-bearing use"
+    "approvalGate": "For visual recognition: exact current Annex 3 plate comparison, aspect, geometry, colour and source attribution before answer-bearing use.",
+    "visualPolicy": "Every current prompt contains the answer cues in text. Artwork is needed only after a deliberate visual-recognition rewrite; teaching diagrams may still clarify a distinct pattern without decorating every question."
   },
   "records": [
     {
@@ -16,369 +17,410 @@
       "stage": "CHECK",
       "prompt": "When identifying a vessel at night, what is the safest way to read its lights?",
       "answer": "Combine the visual signal with vessel/aspect/operation context",
-      "visual": "none",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "none"
     },
     {
       "id": "PW-CEVNI-M04-Q002",
       "stage": "ASSESSMENT",
       "prompt": "From directly ahead, which core lights identify a normal motorized vessel proceeding alone?",
       "answer": "White masthead plus red and green sidelights",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q003",
       "stage": "ASSESSMENT",
       "prompt": "A vessel is under sail but is also using its engine. What day shape does CEVNI prescribe?",
       "answer": "Black cone, point downwards",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q004",
       "stage": "ASSESSMENT",
       "prompt": "What does a lead motorized vessel of a towed convoy use instead of a white stern light?",
       "answer": "A yellow stern light",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q005",
       "stage": "ASSESSMENT",
       "prompt": "Which night pattern is distinctive at the head of a pushed convoy?",
       "answer": "Three masthead lights in a triangle",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q006",
       "stage": "ASSESSMENT",
       "prompt": "Two blue all-round lights / two blue cones correspond to which CEVNI 3.14 category?",
       "answer": "Specified health-hazard substances",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q007",
       "stage": "ASSESSMENT",
       "prompt": "For a ferry not moving independently, what is the vertical night pair?",
       "answer": "Green above white",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q008",
       "stage": "ASSESSMENT",
       "prompt": "What is the normal basic night marking for a stationary vessel?",
       "answer": "An ordinary white all-round light",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q009",
       "stage": "ASSESSMENT",
       "prompt": "Floating equipment is working in the waterway. Which colour marks the side on which the fairway is clear?",
       "answer": "Green",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q010",
       "stage": "ASSESSMENT",
       "prompt": "What vertical all-round-light pattern marks a vessel whose ability to manoeuvre is limited by work or underwater operations?",
       "answer": "Red-white-red",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q011",
       "stage": "ASSESSMENT",
       "prompt": "What is the basic trawler fishing signal by night?",
       "answer": "Green over white",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q012",
       "stage": "ASSESSMENT",
       "prompt": "Which is a CEVNI visual distress signal?",
       "answer": "A red hand flare",
-      "visual": "distress-example",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "example useful; use only if it depicts prescribed distress signal"
     },
     {
       "id": "PW-CEVNI-M04-Q013",
       "stage": "ASSESSMENT",
       "prompt": "When CEVNI calls a light “all-round”, what does that mean?",
       "answer": "A light visible throughout 360°",
-      "visual": "diagram-helpful",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "teaching diagram useful; current text question stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q014",
       "stage": "ASSESSMENT",
       "prompt": "Through what horizontal arc is a masthead light visible?",
       "answer": "225°",
-      "visual": "diagram-helpful",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "teaching diagram useful; current text question stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q015",
       "stage": "ASSESSMENT",
       "prompt": "Which marking is additional rather than a replacement for normal vessel marking?",
       "answer": "CEVNI 3.14 blue dangerous-substance marking",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q016",
       "stage": "ASSESSMENT",
       "prompt": "Which vessel/formation uses the triangular three-masthead-light pattern?",
       "answer": "A pushed convoy",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-Q017",
       "stage": "ASSESSMENT",
       "prompt": "Why must you still check local requirements after learning the standard CEVNI light and shape patterns?",
       "answer": "Chapter 9 permits specified regional/national variations",
-      "visual": "none",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "none"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-001",
       "stage": "CHECK",
       "prompt": "From directly ahead, which core lights identify a normal motorized vessel proceeding alone?",
       "answer": "White masthead plus red and green sidelights",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-002",
       "stage": "CHECK",
       "prompt": "A vessel is under sail but is also using its engine. What day shape does CEVNI prescribe?",
       "answer": "Black cone, point downwards",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-003",
       "stage": "CHECK",
       "prompt": "What does a lead motorized vessel of a towed convoy use instead of a white stern light?",
       "answer": "A yellow stern light",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-004",
       "stage": "CHECK",
       "prompt": "Which night pattern is distinctive at the head of a pushed convoy?",
       "answer": "Three masthead lights in a triangle",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-005",
       "stage": "CHECK",
       "prompt": "Two blue all-round lights / two blue cones correspond to which CEVNI 3.14 category?",
       "answer": "Specified health-hazard substances",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-006",
       "stage": "CHECK",
       "prompt": "For a ferry not moving independently, what is the vertical night pair?",
       "answer": "Green above white",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-007",
       "stage": "CHECK",
       "prompt": "What is the normal basic night marking for a stationary vessel?",
       "answer": "An ordinary white all-round light",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-008",
       "stage": "CHECK",
       "prompt": "On floating equipment at work, what colour marks the side where the fairway is clear?",
       "answer": "Green",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-009",
       "stage": "CHECK",
       "prompt": "What vertical all-round-light pattern marks a vessel whose ability to manoeuvre is limited by work or underwater operations?",
       "answer": "Red-white-red",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-010",
       "stage": "CHECK",
       "prompt": "What is the basic trawler fishing signal by night?",
       "answer": "Green over white",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-CHECK-011",
       "stage": "CHECK",
       "prompt": "Which is a CEVNI visual distress signal?",
       "answer": "A red hand flare",
-      "visual": "distress-example",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "example useful; use only if it depicts prescribed distress signal"
     },
     {
       "id": "PW-CEVNI-M04-APPLY-001",
       "stage": "APPLY",
       "prompt": "Which light should you not expect to be visible from this ahead aspect?",
       "answer": "The stern light",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-APPLY-002",
       "stage": "APPLY",
       "prompt": "What is the operational lesson?",
       "answer": "Treat the display as the prescribed motor-sailing day marking and read the vessel’s full status/context",
-      "visual": "context-helpful",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "context artwork optional; current scenario stands alone"
     },
     {
       "id": "PW-CEVNI-M04-APPLY-003",
       "stage": "APPLY",
       "prompt": "What should you do next?",
       "answer": "Read the complete convoy and its extent before making a passing/crossing decision",
-      "visual": "context-helpful",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "context artwork optional; current scenario stands alone"
     },
     {
       "id": "PW-CEVNI-M04-APPLY-004",
       "stage": "APPLY",
       "prompt": "What does that side communicate?",
       "answer": "The fairway is clear on that side",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-APPLY-005",
       "stage": "APPLY",
       "prompt": "Which side is indicated as clear for passage?",
       "answer": "The side showing the two green lights",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-APPLY-006",
       "stage": "APPLY",
       "prompt": "Which standard should govern the passage?",
       "answer": "CEVNI base plus the applicable competent-authority/local variation",
-      "visual": "none",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "none"
     },
     {
       "id": "PW-CEVNI-M04-REVIEW-001",
       "stage": "REVIEW",
       "prompt": "What does CEVNI define as an all-round light?",
       "answer": "A light visible throughout 360°",
-      "visual": "diagram-helpful",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "teaching diagram useful; current text question stands alone"
     },
     {
       "id": "PW-CEVNI-M04-REVIEW-002",
       "stage": "REVIEW",
       "prompt": "What is the masthead-light horizontal arc?",
       "answer": "225°",
-      "visual": "diagram-helpful",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "teaching diagram useful; current text question stands alone"
     },
     {
       "id": "PW-CEVNI-M04-REVIEW-003",
       "stage": "REVIEW",
       "prompt": "Which marking is additional rather than a replacement for normal vessel marking?",
       "answer": "CEVNI 3.14 blue dangerous-substance marking",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-REVIEW-004",
       "stage": "REVIEW",
       "prompt": "Which vessel/formation uses the triangular three-masthead-light pattern?",
       "answer": "A pushed convoy",
-      "visual": "verified-display-required",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-REVIEW-005",
       "stage": "REVIEW",
       "prompt": "Why must Project Watch keep a local-rules layer with these visuals?",
       "answer": "Chapter 9 permits specified regional/national variations",
-      "visual": "none",
       "basis": "CEVNI Chapter 3 / Annex 3",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "none"
     },
     {
       "id": "PW-CEVNI-M04-ASSESSMENT-201",
       "stage": "ASSESSMENT",
       "prompt": "You are passing floating equipment at work. Which displayed side must not be used for passage?",
       "answer": "The side displaying the prescribed red prohibition signal",
-      "visual": "verified-display-required",
       "basis": "CEVNI Article 6.22 bis; Article 3.25",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "use verified display only when the prompt is rewritten to ask visual recognition; current text prompt stands alone"
     },
     {
       "id": "PW-CEVNI-M04-ASSESSMENT-202",
       "stage": "ASSESSMENT",
       "prompt": "A vessel shows the prescribed distress visual signal. What should another boatmaster treat it as?",
       "answer": "A vessel requiring assistance or indicating distress",
-      "visual": "distress-example",
       "basis": "CEVNI Article 4.04 / visual signals",
-      "liveIn1651": false
+      "liveIn1651": false,
+      "currentPromptSelfContained": true,
+      "visualUse": "example useful; use only if it depicts prescribed distress signal"
     }
   ],
   "requirements": [
@@ -388,6 +430,47 @@
     "Separate floating equipment Article 3.25 from Article 3.34 work-limited manoeuvrability.",
     "Check hazardous-substance marking against Article 3.14 and applicable ADN references.",
     "Keep the Final Mock separate from nine modules.",
-    "Do not activate a visual question with pending artwork."
+    "Do not activate a visual question with pending artwork.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights.",
+    "Do not mark text-only questions as requiring artwork merely because the subject is lights."
   ]
 }
