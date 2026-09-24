@@ -1,0 +1,15 @@
+{
+  "version": "latest-graphics-batch-11a-final-two",
+  "authority": "CEVNI Rev.6 Annex 8 figs.17 ter and 17 quinquies; Corr.1/Corr.2 and Amendments 1/2 checked before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-FIG17TER": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-FIG17QUINQUIES": {
+      "status": "approved",
+      "note": ""
+    }
+  }
+}
