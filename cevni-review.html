@@ -1,0 +1,6 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Project Watch CEVNI Review</title><style>body{margin:0;background:#07151c;color:#eef9fc;font:16px system-ui;padding:32px}#s{max-width:760px;margin:auto}</style></head><body><div id="s">Loading CEVNI review…</div><script>
+fetch('https://raw.githubusercontent.com/taylorsonthetide/Projectwatch.dev/cevni-master-library/assets/cevni/master-library/review/standalone.html?rev=021')
+.then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.text()})
+.then(h=>{document.open();document.write(h);document.close()})
+.catch(e=>{document.getElementById('s').textContent='Unable to load review: '+e.message})
+</script></body></html>
