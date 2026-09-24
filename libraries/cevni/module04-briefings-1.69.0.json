@@ -1,0 +1,76 @@
+{
+  "build": "1.69.0-M04-LIBRARY-PREVIEW",
+  "module": 4,
+  "source": "CEVNI Rev.6 Chapter 3",
+  "desc": "Read a complete CEVNI vessel display by aspect, operation and formation. Learn the day and night signals before assessment.",
+  "sections": [
+    [
+      "READ THE WHOLE DISPLAY",
+      "Begin with viewing aspect, vessel type and operation. Describe every visible light or shape, its colour, number and position before assigning a meaning. A single colour can belong to more than one vessel."
+    ],
+    [
+      "LIGHT SECTORS AND ASPECT",
+      "An all-round light covers 360°. A masthead light covers 225° forward; sidelights each cover 112.5° and the stern light covers 135° aft. A hidden light cannot be used as evidence from your aspect."
+    ],
+    [
+      "MOTORIZED VESSEL PROCEEDING ALONE",
+      "Article 3.08: learn the masthead, sidelights and stern-light arrangement as a complete vessel display. From directly ahead, the white masthead and the red and green sidelights may be visible; the stern light is not."
+    ],
+    [
+      "SMALL CRAFT HAVE THEIR OWN RULE",
+      "Article 3.13 contains alternatives for small craft. First identify whether the craft qualifies and how it is propelled. Do not blindly apply the full-size motor-vessel pattern to every boat."
+    ],
+    [
+      "SAIL AND MOTOR-SAILING",
+      "Article 3.12: connect night marking to propulsion and aspect. A vessel using sail and mechanical propulsion at the same time carries a black cone point downwards by day. Sails alone do not establish that the engine is stopped."
+    ],
+    [
+      "LEADING AND TOWED VESSELS",
+      "Article 3.09: the towing leader and the towed units form one convoy. The leader has the prescribed vertical masthead pair and yellow stern light in place of the usual white one; read the tow’s full length and arrangement."
+    ],
+    [
+      "PUSHED CONVOYS",
+      "Article 3.10: the head of a pushed convoy has three masthead lights forming an equilateral triangle with a horizontal base. Identify the complete rigid formation before choosing a passing action."
+    ],
+    [
+      "SIDE-BY-SIDE FORMATIONS",
+      "Article 3.11 has its own arrangement for vessels coupled side by side. Do not classify a moored raft, a pushed convoy or an ordinary tow as this formation merely because vessels appear close together."
+    ],
+    [
+      "DANGEROUS-SUBSTANCE MARKING",
+      "Article 3.14 adds blue lights by night or downward blue cones by day to the ordinary marking. One, two and three signals are different categories; two relate to specified health-hazard substances under ADN."
+    ],
+    [
+      "FERRIES AND PASSENGER MARKS",
+      "Article 3.16: a ferry not moving independently shows a bright green light above a bright white light, both all-round, by night; its day marking is a green ball. A ferry moving independently also has the prescribed sidelights and stern light. Article 3.15 separately covers the yellow bicone of qualifying passenger vessels."
+    ],
+    [
+      "STATIONARY VESSELS",
+      "Article 3.20: identify a vessel at rest from its prescribed white light or permitted arrangement. Size, berth position and local provisions can affect the detail. Do not assume that every solitary white light is an underway vessel."
+    ],
+    [
+      "FLOATING EQUIPMENT AT WORK",
+      "Article 3.25: two green lights (or day bicones) identify the side where the fairway is clear. The obstructed side may carry the prescribed red signal. A distinct red-over-white arrangement is used where protection from wash is required: do not treat it as a normal clear-side indication."
+    ],
+    [
+      "ABILITY TO MANOEUVRE LIMITED BY WORK",
+      "Article 3.34: a vessel whose ability to manoeuvre is limited by work or underwater operations uses red–white–red all-round lights vertically and ball–bicone–ball by day. When passage sides are marked, two green indicate the clear side and two red the obstruction side."
+    ],
+    [
+      "FISHING OPERATIONS",
+      "Article 3.35: a trawler shows green above white all-round lights; fishing other than trawling uses red above white. The trawler day shape is two black cones point to point. Identify the actual operation and full marking."
+    ],
+    [
+      "DISTRESS AND DIVING",
+      "Article 3.30 includes a red hand or parachute flare among visual distress signals. Article 3.36 has additional marking for underwater diving. Treat these as operational status, and distinguish distress from ordinary navigation lights."
+    ],
+    [
+      "GREEN OVER WHITE: FERRY OR TRAWLER?",
+      "The same two colours in the same vertical order can be part of two different CEVNI displays. A non-self-propelled ferry is identified with ferry context and a green ball by day. A trawler is engaged in fishing and uses two black cones point to point by day. Never identify either from the pair alone."
+    ],
+    [
+      "LOCAL VARIATIONS AND FINAL READ",
+      "Chapter 9 allows specified regional or national departures. Before navigating, check the competent authority’s current provisions. Combine the full display with aspect, vessel, operation, fairway situation and local rule."
+    ]
+  ]
+}
