@@ -1,0 +1,166 @@
+{
+  "build": "1.69.0-M04-LIBRARY-PREVIEW",
+  "module": 4,
+  "role": "teaching schematics only; not answer-bearing Annex 3 plates",
+  "steps": {
+    "2": {
+      "name": "Directly ahead · ordinary motorized vessel",
+      "note": "The stern light is outside this viewing sector.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-03-1.svg",
+          "alt": "Directly ahead · ordinary motorized vessel",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "4": {
+      "name": "Day marking · sail plus machinery",
+      "note": "Black cone, point downwards.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-05-1.svg",
+          "alt": "Day marking · sail plus machinery",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "5": {
+      "name": "Tow leader · viewing aspect",
+      "note": "Article 3.09: separate forward and astern views of the towing leader.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-06-1.svg",
+          "alt": "Forward view: two white masthead lights, one above the other",
+          "label": "From ahead · two white masthead lights"
+        },
+        {
+          "src": "assets/cevni/module04/m04-step-06-2.svg",
+          "alt": "Aft view: yellow stern light",
+          "label": "From astern · yellow stern light"
+        }
+      ],
+      "footer": "Teaching schematics; other prescribed lights depend on aspect."
+    },
+    "6": {
+      "name": "Head of a pushed convoy",
+      "note": "Three masthead lights: one above two forming a horizontal base.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-07-1.svg",
+          "alt": "Head of a pushed convoy",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "8": {
+      "name": "Additional blue marking · two-signal category",
+      "note": "Two additional blue all-round lights; ordinary vessel marking still applies.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-09-1.svg",
+          "alt": "Additional blue marking · two-signal category",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "9": {
+      "name": "Ferry not moving independently",
+      "note": "Bright green above bright white, both all-round. Day marking: green ball.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-10-1.svg",
+          "alt": "Ferry not moving independently",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "10": {
+      "name": "Stationary vessel · basic night cue",
+      "note": "Ordinary all-round white; article-specific alternatives must be considered.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-11-1.svg",
+          "alt": "Stationary vessel · basic night cue",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "11": {
+      "name": "Floating equipment · fairway sides",
+      "note": "Clear side: two green. Obstructed side: prescribed red signal. Schematic shows the basic arrangement.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-12-1.svg",
+          "alt": "Floating equipment · fairway sides",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "12": {
+      "name": "Work-limited ability to manoeuvre",
+      "note": "Red–white–red status; green and red sides where applicable.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-13-1.svg",
+          "alt": "Work-limited ability to manoeuvre",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "13": {
+      "name": "Trawler · night marking",
+      "note": "Green above white; additional marking and aspect can matter.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-14-1.svg",
+          "alt": "Trawler · night marking",
+          "label": ""
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    },
+    "14": {
+      "name": "Distress and diving · distinct signals",
+      "note": "Red flare: distress signal (3.30). Rigid Code Flag A: diving vessel marking (3.36).",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-15-1.svg",
+          "alt": "Red hand flare representing a distress signal",
+          "label": "Distress · red flare"
+        },
+        {
+          "src": "assets/cevni/module04/m04-step-15-2.svg",
+          "alt": "Blue and white International Code Flag A marking a diving vessel",
+          "label": "Diving · Code Flag A"
+        }
+      ],
+      "footer": "Signal sketches; the flag is displayed on the vessel in addition to its other marking."
+    },
+    "15": {
+      "name": "Day-shape contrast · ferry and trawler",
+      "note": "Ferry: green ball. Trawler: two black cones point to point. At night both can show green over white.",
+      "items": [
+        {
+          "src": "assets/cevni/module04/m04-step-16-1.svg",
+          "alt": "Ferry green ball",
+          "label": "Ferry · green ball"
+        },
+        {
+          "src": "assets/cevni/module04/m04-step-16-2.svg",
+          "alt": "Trawler two black cones point to point",
+          "label": "Trawler · point-to-point cones"
+        }
+      ],
+      "footer": "Teaching schematic; exact Annex 3 plate check pending."
+    }
+  }
+}
