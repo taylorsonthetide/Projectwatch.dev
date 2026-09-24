@@ -1,0 +1,83 @@
+{
+  "version": "latest-graphics-batch-10-final",
+  "authority": "CEVNI Rev.6 Annex 8 pp.151-176; Corr.1/Corr.2 and Amendments 1/2 checked before promotion",
+  "old_v5_artwork": "EXCLUDED",
+  "review": {
+    "PW-CEVNI-ANNEX8-LIGHT-SINGLE-OCCULTING": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-GROUP-OCCULTING": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-ISOPHASE": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-SINGLE-FLASHING": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-GROUP-FLASHING": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-COMPOSITE-GROUP": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-CONT-SCINT": {
+      "status": "rejected",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-LIGHT-GROUP-SCINT": {
+      "status": "rejected",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-WEATHER-CAUTION": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-WEATHER-DANGER": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-RESTRICTED-PENNON": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-RESTRICTED-FAIRWAY-RIGHT": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-RESTRICTED-FAIRWAY-LEFT": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-MISC-WHITE-BUOY": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-HARBOUR-PORT-DAY": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-HARBOUR-STARBOARD-DAY": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-HARBOUR-PORT-NIGHT": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-HARBOUR-STARBOARD-NIGHT": {
+      "status": "approved",
+      "note": ""
+    },
+    "PW-CEVNI-ANNEX8-FIG25": {
+      "status": "approved",
+      "note": ""
+    }
+  }
+}
