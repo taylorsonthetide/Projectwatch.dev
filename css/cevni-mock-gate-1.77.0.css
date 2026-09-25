@@ -1,1 +1,20 @@
 #cevniPage .pwMockGate{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:22px 0;padding:22px 26px;border:1px solid #6fb8ce77;border-radius:16px;background:linear-gradient(125deg,#10394b,#092a38)}#cevniPage .pwMockGate.ready{border-color:#6adaaa;background:linear-gradient(125deg,#164b45,#09373e)}#cevniPage .pwMockGate h3{font-size:24px;margin:6px 0}#cevniPage .pwMockGate p{margin:5px 0 12px;line-height:1.45}#cevniPage .pwMockGate span,#cevniPage .pwMockGate small{color:#9bdceb;font-weight:800;letter-spacing:.08em}#cevniPage .pwMockGate.ready small{color:#83e7b1}#cevniPage .pwMockGate button{background:#b9f1ff;color:#072b3a;border:0;border-radius:9px;padding:15px 20px;min-width:200px;min-height:52px;font-weight:800;cursor:pointer}#cevniPage .pwMockGate button:disabled{opacity:.45;cursor:not-allowed}@media(max-width:670px){#cevniPage .pwMockGate{display:block}#cevniPage .pwMockGate button{margin-top:17px;width:100%}}
+
+/* Build 1.77.2: learner-facing cleanup of completed CEVNI development displays.
+   Keep the underlying audit records and photo attribution available. */
+#cevniPage #cvDataHealth,
+#cevniPage #cvBlueprint,
+#cevniPage #cvMasterSpec,
+#cevniPage #cevniSourceAudit,
+#cevniPage #cevniChapter1Audit,
+#cevniPage #cevni14717Panel,
+#cevniPage #cevni14720Panel,
+#cevniPage .cvLibraryBar,
+#cevniPage #pwEvidenceSchool .pwEvStatus,
+#cevniPage #pwEvidenceSchool .pwEvId,
+#cevniPage #pwEvidenceSchool .pwEvHero .ver,
+#cevniPage #pwEvidenceSchool .pwEvRule,
+#cevniPage #pwEvidenceSchool .pwEvFoot,
+#cevniPage #pw1622VisualPractice .pw1622PhotoTag {
+  display: none !important;
+}

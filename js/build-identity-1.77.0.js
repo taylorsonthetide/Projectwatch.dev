@@ -1,7 +1,7 @@
 /* One public build identity. Older lesson scripts retain their historical version metadata. */
 (function () {
   'use strict';
-  const version = '1.77.0';
+  const version = '1.77.2';
   const label = 'BUILD ' + version;
   const title = 'Project Watch ' + version;
   window.PW_BUILD_IDENTITY = Object.freeze({version, label});
