@@ -1,0 +1,213 @@
+{
+  "module": 7,
+  "visuals": [
+    {
+      "id": "PW-M07-ANCHOR",
+      "url": "assets/cevni/module07/anchor.svg?v=1.74.2",
+      "title": "Anchor",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BERTH-BAND",
+      "url": "assets/cevni/module07/berth-band.svg?v=1.74.2",
+      "title": "Berth Band",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BERTH-BREADTH",
+      "url": "assets/cevni/module07/berth-breadth.svg?v=1.74.2",
+      "title": "Berth Breadth",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BERTH-RESTRICTION",
+      "url": "assets/cevni/module07/berth-restriction.svg?v=1.74.2",
+      "title": "Berth Restriction",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BERTH-SITE",
+      "url": "assets/cevni/module07/berth-site.svg?v=1.74.2",
+      "title": "Berth Site",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BERTH-WIDTH",
+      "url": "assets/cevni/module07/berth-width.svg?v=1.74.2",
+      "title": "Berth Width",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BRIDGE-APPROACH",
+      "url": "assets/cevni/module07/bridge-approach.svg?v=1.74.2",
+      "title": "Bridge Approach",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BRIDGE-BERTH",
+      "url": "assets/cevni/module07/bridge-berth.svg?v=1.74.2",
+      "title": "Bridge Berth",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-BRIDGE-SIGNALS",
+      "url": "assets/cevni/module07/bridge-signals.svg?v=1.74.2",
+      "title": "Bridge Signals",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-CLEARANCE",
+      "url": "assets/cevni/module07/clearance.svg?v=1.74.2",
+      "title": "Clearance",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-DANGEROUS-DISTANCE",
+      "url": "assets/cevni/module07/dangerous-distance.svg?v=1.74.2",
+      "title": "Dangerous Distance",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-FIXED-OPENING",
+      "url": "assets/cevni/module07/fixed-opening.svg?v=1.74.2",
+      "title": "Fixed Opening",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-LOCK-APPROACH",
+      "url": "assets/cevni/module07/lock-approach.svg?v=1.74.2",
+      "title": "Lock Approach",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-LOCK-CHAMBER",
+      "url": "assets/cevni/module07/lock-chamber.svg?v=1.74.2",
+      "title": "Lock Chamber",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-LOCK-EXIT",
+      "url": "assets/cevni/module07/lock-exit.svg?v=1.74.2",
+      "title": "Lock Exit",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-LOCK-PRIORITY",
+      "url": "assets/cevni/module07/lock-priority.svg?v=1.74.2",
+      "title": "Lock Priority",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-LOCK-QUEUE",
+      "url": "assets/cevni/module07/lock-queue.svg?v=1.74.2",
+      "title": "Lock Queue",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-LOCK-SIGNALS",
+      "url": "assets/cevni/module07/lock-signals.svg?v=1.74.2",
+      "title": "Lock Signals",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-MOOR",
+      "url": "assets/cevni/module07/moor.svg?v=1.74.2",
+      "title": "Moor",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-MOVABLE-BRIDGE",
+      "url": "assets/cevni/module07/movable-bridge.svg?v=1.74.2",
+      "title": "Movable Bridge",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-SHORE-POWER",
+      "url": "assets/cevni/module07/shore-power.svg?v=1.74.2",
+      "title": "Shore Power",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-WATCH",
+      "url": "assets/cevni/module07/watch.svg?v=1.74.2",
+      "title": "Watch",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M07-WEIR",
+      "url": "assets/cevni/module07/weir.svg?v=1.74.2",
+      "title": "Weir",
+      "source": "CEVNI Rev.6 articles 6.24\u20136.29 and Chapter 7",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    }
+  ],
+  "version": "1.74.2"
+}
