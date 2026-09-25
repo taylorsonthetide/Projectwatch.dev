@@ -1,0 +1,904 @@
+{
+  "module": 9,
+  "version": "1.76.0",
+  "passMark": 19,
+  "assessmentTotal": 24,
+  "questions": [
+    {
+      "id": "PW-CEVNI-M09-R01",
+      "stage": "rehearsal",
+      "prompt": "What general duty applies when a developing situation endangers others?",
+      "answers": [
+        "Exercise care and act to avoid immediate danger",
+        "Maintain the original timetable at all costs",
+        "Wait for an app to choose"
+      ],
+      "correct": 0,
+      "explanation": "Articles 1.04–1.05 cover vigilance and special circumstances.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05"
+      ],
+      "visualId": "PW-M09-VIGILANCE"
+    },
+    {
+      "id": "PW-CEVNI-M09-R02",
+      "stage": "rehearsal",
+      "prompt": "A heavy item falls from your vessel into the fairway. What must you do?",
+      "answers": [
+        "Tell the nearest competent authority promptly and identify its position",
+        "Assume it will sink harmlessly",
+        "Hide the incident until returning home"
+      ],
+      "correct": 0,
+      "explanation": "A lost object that may obstruct navigation is reportable.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.12"
+      ],
+      "visualId": "PW-M09-LOST-OBJECT"
+    },
+    {
+      "id": "PW-CEVNI-M09-R03",
+      "stage": "rehearsal",
+      "prompt": "You displace a buoy while manoeuvring. Who must be informed?",
+      "answers": [
+        "The nearest competent authority",
+        "Only a neighbouring pleasure craft",
+        "Only the crew who saw it"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.13 addresses damaged waterway marks.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.13"
+      ],
+      "visualId": "PW-M09-DAMAGED-MARK"
+    },
+    {
+      "id": "PW-CEVNI-M09-R04",
+      "stage": "rehearsal",
+      "prompt": "Your vessel damages a lock structure. What is the immediate reporting duty?",
+      "answers": [
+        "Inform the nearest competent authority at once",
+        "Leave without a report if the vessel floats",
+        "Tell only the next marina"
+      ],
+      "correct": 0,
+      "explanation": "Damage to permanent structures is Article 1.14.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.14"
+      ],
+      "visualId": "PW-M09-DAMAGED-MARK"
+    },
+    {
+      "id": "PW-CEVNI-M09-R05",
+      "stage": "rehearsal",
+      "prompt": "What should a boatmaster do first for persons endangered aboard in an accident?",
+      "answers": [
+        "Use every available means to save them",
+        "Protect the timetable",
+        "Complete a waste log before helping"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.16 puts rescue of persons first.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16"
+      ],
+      "visualId": "PW-M09-ASSIST"
+    },
+    {
+      "id": "PW-CEVNI-M09-R06",
+      "stage": "rehearsal",
+      "prompt": "When may a nearby vessel give assistance without endangering itself?",
+      "answers": [
+        "Immediately, as far as consistent with its own safety",
+        "Never unless formally contracted",
+        "Only after its next scheduled stop"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.16 covers nearby assistance.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16"
+      ],
+      "visualId": "PW-M09-ASSIST"
+    },
+    {
+      "id": "PW-CEVNI-M09-R07",
+      "stage": "rehearsal",
+      "prompt": "A vessel grounds near the fairway. What reporting step applies?",
+      "answers": [
+        "Inform the nearest competent authority as soon as possible",
+        "Only report if a photo is taken",
+        "Wait until a new tide"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 requires notice.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visualId": "PW-M09-GROUNDING"
+    },
+    {
+      "id": "PW-CEVNI-M09-R08",
+      "stage": "rehearsal",
+      "prompt": "What should a grounded vessel endangering the fairway do for approaching traffic?",
+      "answers": [
+        "Warn it in time to take appropriate action",
+        "Switch off all navigation lights and stay silent",
+        "Wait for others to discover it"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 requires warning when needed.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visualId": "PW-M09-GROUNDING"
+    },
+    {
+      "id": "PW-CEVNI-M09-R09",
+      "stage": "rehearsal",
+      "prompt": "What is the general response to an obstruction caused by your grounded vessel?",
+      "answers": [
+        "Endeavour to clear the fairway as soon as possible",
+        "Keep the fairway blocked for convenience",
+        "Tow blindly without warning"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.18 addresses clearing obstructions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.18"
+      ],
+      "visualId": "PW-M09-CLEAR-FAIRWAY"
+    },
+    {
+      "id": "PW-CEVNI-M09-R10",
+      "stage": "rehearsal",
+      "prompt": "Which sound signal can be used by a vessel in distress needing assistance?",
+      "answers": [
+        "Repeated long blasts or a bell",
+        "One ordinary short blast only",
+        "Silence in every case"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.04 provides distress signals.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visualId": "PW-M09-DISTRESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-R11",
+      "stage": "rehearsal",
+      "prompt": "Which rules apply alongside CEVNI Chapter 10 for waste?",
+      "answers": [
+        "The water-protection rules for the particular waterway",
+        "Only the rules of the vessel’s home port",
+        "No local rules at all"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.02 retains the waterway-specific layer.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.02"
+      ],
+      "visualId": "PW-M09-LOCAL-WASTE"
+    },
+    {
+      "id": "PW-CEVNI-M09-R12",
+      "stage": "rehearsal",
+      "prompt": "What does the general Chapter 10 waste duty require?",
+      "answers": [
+        "Avoid pollution, minimize waste and limit mixing categories",
+        "Mix all waste to save space",
+        "Pump waste away when no one is watching"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.03 is a general vigilance duty.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.03"
+      ],
+      "visualId": "PW-M09-WASTE-SEPARATE"
+    },
+    {
+      "id": "PW-CEVNI-M09-R13",
+      "stage": "rehearsal",
+      "prompt": "May oily waste or household refuse normally be dumped into the waterway?",
+      "answers": [
+        "No; Article 10.04 prohibits it",
+        "Yes if it is dark",
+        "Yes from a small craft whenever convenient"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04 prohibits discharging listed waste.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04"
+      ],
+      "visualId": "PW-M09-NO-DISCHARGE"
+    },
+    {
+      "id": "PW-CEVNI-M09-R14",
+      "stage": "rehearsal",
+      "prompt": "An accidental oily discharge occurs. What authority contact is required?",
+      "answers": [
+        "Notify the nearest competent authority without delay",
+        "Wait until the next annual service",
+        "Only send a private message to crew"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04(3) requires notice.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04(3)"
+      ],
+      "visualId": "PW-M09-SPILL-CALL"
+    },
+    {
+      "id": "PW-CEVNI-M09-R15",
+      "stage": "rehearsal",
+      "prompt": "How should applicable waste be kept aboard?",
+      "answers": [
+        "Separately in suitable receptacles where leaks can be detected",
+        "Loose in the engine room",
+        "All mixed with drinking water"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.05 covers collection and storage.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05"
+      ],
+      "visualId": "PW-M09-WASTE-STOW"
+    },
+    {
+      "id": "PW-CEVNI-M09-R16",
+      "stage": "rehearsal",
+      "prompt": "Can waste be burned aboard as its routine disposal method?",
+      "answers": [
+        "No; Article 10.05 prohibits burning waste aboard",
+        "Yes while moving",
+        "Yes if the boat is small"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.05(2) prohibits burning waste on board.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05(2)"
+      ],
+      "visualId": "PW-M09-WASTE-FIRE"
+    },
+    {
+      "id": "PW-CEVNI-M09-R17",
+      "stage": "rehearsal",
+      "prompt": "Does the used-oil-log carriage duty automatically include small craft?",
+      "answers": [
+        "No; Article 10.06 excludes small craft from that duty",
+        "Yes, without exception",
+        "Only when carrying no engine"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.06 expressly excludes small craft from its log requirement.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06(1)"
+      ],
+      "visualId": "PW-M09-OIL-LOG"
+    },
+    {
+      "id": "PW-CEVNI-M09-R18",
+      "stage": "rehearsal",
+      "prompt": "During a fuel transfer, which operating practice matters?",
+      "answers": [
+        "Supervise the transfer and guard against spills",
+        "Leave the nozzle unattended",
+        "Allow hoses to strain against the vessel"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.07 imposes vigilance during filling.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.07"
+      ],
+      "visualId": "PW-M09-BUNKERING"
+    },
+    {
+      "id": "PW-CEVNI-M09-C01",
+      "stage": "context",
+      "prompt": "A bucket of paint falls into the channel and could endanger traffic. What is your next action?",
+      "answers": [
+        "Mark the location mentally and promptly notify the authority with the position",
+        "Ignore it because it floated away",
+        "Wait until the following week"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.12 covers lost objects creating danger.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.12"
+      ],
+      "visualId": "PW-M09-LOST-OBJECT"
+    },
+    {
+      "id": "PW-CEVNI-M09-C02",
+      "stage": "context",
+      "prompt": "Your bow strikes a bridge pier without visible collapse. What should you do?",
+      "answers": [
+        "Notify the nearest competent authority at once",
+        "Assume a small dent needs no report",
+        "Only tell the insurance company later"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.14 addresses damage to permanent structures.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.14"
+      ],
+      "visualId": "PW-M09-DAMAGED-MARK"
+    },
+    {
+      "id": "PW-CEVNI-M09-C03",
+      "stage": "context",
+      "prompt": "Another boat has people in danger nearby. What is your duty?",
+      "answers": [
+        "Give immediate assistance if consistent with the safety of your own vessel",
+        "Avoid helping until a fee is agreed",
+        "Continue without assessing the danger"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.16 balances aid and own-vessel safety.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16"
+      ],
+      "visualId": "PW-M09-ASSIST"
+    },
+    {
+      "id": "PW-CEVNI-M09-C04",
+      "stage": "context",
+      "prompt": "Your boat grounds where another craft could collide with it. What must accompany the authority notification?",
+      "answers": [
+        "Warn approaching traffic early when needed",
+        "Keep position secret",
+        "Wait until dusk to display anything"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 adds warning of traffic.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visualId": "PW-M09-GROUNDING"
+    },
+    {
+      "id": "PW-CEVNI-M09-C05",
+      "stage": "context",
+      "prompt": "A floating object from your vessel partly blocks the fairway. What is your responsibility?",
+      "answers": [
+        "Endeavour to have the fairway cleared promptly and keep traffic safe",
+        "Let it drift until someone else removes it",
+        "Push it into an unseen bend"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.18 concerns clearing the obstruction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.18"
+      ],
+      "visualId": "PW-M09-CLEAR-FAIRWAY"
+    },
+    {
+      "id": "PW-CEVNI-M09-C06",
+      "stage": "context",
+      "prompt": "Your crew need urgent help after an accident. What sound indication is available?",
+      "answers": [
+        "The Article 4.04 distress signal of repeated long blasts or a bell",
+        "A single manoeuvring short blast as the only option",
+        "No sound signal under CEVNI"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.04 supplies the distress signal.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visualId": "PW-M09-DISTRESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-C07",
+      "stage": "context",
+      "prompt": "A waste facility at your destination has different local disposal instructions. Which rule applies?",
+      "answers": [
+        "Follow the applicable local water-protection requirements as well as CEVNI",
+        "Ignore the local instructions",
+        "Dump waste to avoid a facility stop"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.02 keeps local requirements in force.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.02"
+      ],
+      "visualId": "PW-M09-LOCAL-WASTE"
+    },
+    {
+      "id": "PW-CEVNI-M09-C08",
+      "stage": "context",
+      "prompt": "During maintenance, used oil might reach the bilge. What should be done?",
+      "answers": [
+        "Prevent pollution and keep waste in the appropriate collection path",
+        "Wash it overboard",
+        "Mix it deliberately with household refuse"
+      ],
+      "correct": 0,
+      "explanation": "Articles 10.03–10.05 require prevention and collection.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.03–10.05"
+      ],
+      "visualId": "PW-M09-WASTE-STOW"
+    },
+    {
+      "id": "PW-CEVNI-M09-C09",
+      "stage": "context",
+      "prompt": "Diesel escapes into the water during bunkering. What do you report?",
+      "answers": [
+        "Position, quantity, nature and measures taken, without delay",
+        "Only the boat’s paint colour",
+        "Nothing if the leak stops"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04(3) specifies notification details.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04(3)"
+      ],
+      "visualId": "PW-M09-SPILL-CALL"
+    },
+    {
+      "id": "PW-CEVNI-M09-C10",
+      "stage": "context",
+      "prompt": "A bag of household rubbish builds up aboard. Where should it go?",
+      "answers": [
+        "A designated reception facility",
+        "Into the waterway after dark",
+        "Burned on deck"
+      ],
+      "correct": 0,
+      "explanation": "Articles 10.04 and 10.06 direct proper disposal.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04; 10.06"
+      ],
+      "visualId": "PW-M09-RECEPTION"
+    },
+    {
+      "id": "PW-CEVNI-M09-C11",
+      "stage": "context",
+      "prompt": "Someone proposes using a mobile deck tank to hold used oil. Is that permitted by Article 10.05?",
+      "answers": [
+        "No; that collection method is prohibited",
+        "Yes, whenever it is tied down",
+        "Only if marked with AIS"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.05(2) bars mobile deck tanks for used oil.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05(2)"
+      ],
+      "visualId": "PW-M09-WASTE-FIRE"
+    },
+    {
+      "id": "PW-CEVNI-M09-C12",
+      "stage": "context",
+      "prompt": "Your small craft has no Article 10.06 used-oil log. Does that permit oil discharge?",
+      "answers": [
+        "No; the log exception does not override the discharge prohibition",
+        "Yes, any amount is allowed",
+        "Only if visibility is poor"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04 still prohibits discharge.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06; 10.04"
+      ],
+      "visualId": "PW-M09-OIL-LOG"
+    },
+    {
+      "id": "PW-CEVNI-M09-C13",
+      "stage": "context",
+      "prompt": "A transfer hose is under strain as fuel begins flowing. What should happen?",
+      "answers": [
+        "Secure the receiving vessel and address the hose strain before continuing",
+        "Increase the flow rate",
+        "Leave the operation unattended"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.07 calls for secure positioning during transfer.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.07"
+      ],
+      "visualId": "PW-M09-BUNKERING"
+    },
+    {
+      "id": "PW-CEVNI-M09-C14",
+      "stage": "context",
+      "prompt": "A passage plan lacks current local restrictions and a safe fallback for engine failure. What should happen before departure?",
+      "answers": [
+        "Check those conditions and identify a safe response",
+        "Proceed and discover them at the bridge",
+        "Rely on the last year’s timetable"
+      ],
+      "correct": 0,
+      "explanation": "Vigilance and special-circumstance decisions require current information.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05"
+      ],
+      "visualId": "PW-M09-READINESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-A01",
+      "stage": "assessment",
+      "prompt": "What is the governing response when ordinary navigation would create immediate danger?",
+      "answers": [
+        "Take the measures best suited to avoid that danger",
+        "Follow the timetable regardless",
+        "Wait for a chart application to decide"
+      ],
+      "correct": 0,
+      "explanation": "Articles 1.04–1.05 govern vigilance and special circumstances.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05"
+      ],
+      "visualId": "PW-M09-VIGILANCE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A02",
+      "stage": "assessment",
+      "prompt": "What must be reported when an object lost from a vessel may obstruct navigation?",
+      "answers": [
+        "Its loss and position to the nearest competent authority",
+        "Only the item’s replacement cost",
+        "Nothing until it is recovered"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.12 covers dangerous lost objects.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.12"
+      ],
+      "visualId": "PW-M09-LOST-OBJECT"
+    },
+    {
+      "id": "PW-CEVNI-M09-A03",
+      "stage": "assessment",
+      "prompt": "What is required after damaging a permanent lock or bridge structure?",
+      "answers": [
+        "Notify the nearest competent authority at once",
+        "Depart without mention",
+        "Only tell the next boat"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.14 covers damage to permanent structures.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.14"
+      ],
+      "visualId": "PW-M09-DAMAGED-MARK"
+    },
+    {
+      "id": "PW-CEVNI-M09-A04",
+      "stage": "assessment",
+      "prompt": "A vessel spills a substance creating navigational danger. What notice is due?",
+      "answers": [
+        "Prompt notice to the nearest competent authority with nature and location",
+        "No notice if it disperses",
+        "Only a private note to passengers"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.15 covers hazardous spills.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.15"
+      ],
+      "visualId": "PW-M09-HAZARD-SPILL"
+    },
+    {
+      "id": "PW-CEVNI-M09-A05",
+      "stage": "assessment",
+      "prompt": "Whose safety constrains a nearby vessel’s duty to help after an accident?",
+      "answers": [
+        "The safety of its own vessel",
+        "Only its fuel budget",
+        "Only its timetable"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.16 requires immediate help consistent with own safety.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16"
+      ],
+      "visualId": "PW-M09-ASSIST"
+    },
+    {
+      "id": "PW-CEVNI-M09-A06",
+      "stage": "assessment",
+      "prompt": "What must a grounded vessel’s boatmaster arrange promptly?",
+      "answers": [
+        "Notice to the nearest competent authority",
+        "A social-media post instead",
+        "Only a maintenance quotation"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 requires authority notice.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visualId": "PW-M09-GROUNDING"
+    },
+    {
+      "id": "PW-CEVNI-M09-A07",
+      "stage": "assessment",
+      "prompt": "When grounding near the fairway threatens traffic, what else is required?",
+      "answers": [
+        "Warning to approaching craft in time to respond",
+        "Only a private crew briefing",
+        "Silence until towage arrives"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 provides for warnings.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visualId": "PW-M09-GROUNDING"
+    },
+    {
+      "id": "PW-CEVNI-M09-A08",
+      "stage": "assessment",
+      "prompt": "What must be endeavoured when your grounded craft blocks the fairway?",
+      "answers": [
+        "Clear the obstruction as soon as possible",
+        "Leave it indefinitely",
+        "Mark a detour without warning anyone"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.18 addresses fairway clearance.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.18"
+      ],
+      "visualId": "PW-M09-CLEAR-FAIRWAY"
+    },
+    {
+      "id": "PW-CEVNI-M09-A09",
+      "stage": "assessment",
+      "prompt": "Which Article covers distress signals including repeated long blasts?",
+      "answers": [
+        "Article 4.04",
+        "Article 7.05",
+        "Article 10.06"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.04 covers sound distress.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visualId": "PW-M09-DISTRESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-A10",
+      "stage": "assessment",
+      "prompt": "Do local water-protection rules still apply alongside Chapter 10?",
+      "answers": [
+        "Yes, for the particular waterway",
+        "No, they are all replaced",
+        "Only on tidal waters"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.02 retains applicable local provisions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.02"
+      ],
+      "visualId": "PW-M09-LOCAL-WASTE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A11",
+      "stage": "assessment",
+      "prompt": "What should be done with categories of vessel-generated waste under the general duty?",
+      "answers": [
+        "Avoid unnecessary mixing and reduce waste",
+        "Mix deliberately with fuel",
+        "Release them overboard"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.03 requires care to limit waste and mixing.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.03"
+      ],
+      "visualId": "PW-M09-WASTE-SEPARATE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A12",
+      "stage": "assessment",
+      "prompt": "Which discharge is prohibited by Article 10.04?",
+      "answers": [
+        "Oily waste into the waterway",
+        "Clean rainwater falling into the river",
+        "A navigational radio report"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04 lists oily and greasy operating waste.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04"
+      ],
+      "visualId": "PW-M09-NO-DISCHARGE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A13",
+      "stage": "assessment",
+      "prompt": "Does Article 10.04 also address household refuse and sludge?",
+      "answers": [
+        "Yes, their discharge is prohibited",
+        "No, those may always be dumped",
+        "Only from cargo vessels"
+      ],
+      "correct": 0,
+      "explanation": "The article lists refuse and sludge too.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04"
+      ],
+      "visualId": "PW-M09-NO-DISCHARGE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A14",
+      "stage": "assessment",
+      "prompt": "What is the first formal response to an accidental discharge or threat under Article 10.04?",
+      "answers": [
+        "Notify the nearest competent authority without delay",
+        "Wait for the next reception appointment",
+        "Ignore it when out of sight"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04(3) sets the notice duty.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04(3)"
+      ],
+      "visualId": "PW-M09-SPILL-CALL"
+    },
+    {
+      "id": "PW-CEVNI-M09-A15",
+      "stage": "assessment",
+      "prompt": "What details should the spill report include as precisely as possible?",
+      "answers": [
+        "Position, quantity, nature and measures taken",
+        "Only the vessel’s home marina",
+        "Only the skipper’s age"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04(3) identifies these details.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04(3)"
+      ],
+      "visualId": "PW-M09-SPILL-CALL"
+    },
+    {
+      "id": "PW-CEVNI-M09-A16",
+      "stage": "assessment",
+      "prompt": "What does Article 10.05 require for suitable onboard waste receptacles?",
+      "answers": [
+        "Keep categories separately and detect leakage promptly",
+        "Leave waste loose on deck",
+        "Mix bilge water with drinking water"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.05 requires separate collection and leak detection.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05"
+      ],
+      "visualId": "PW-M09-WASTE-STOW"
+    },
+    {
+      "id": "PW-CEVNI-M09-A17",
+      "stage": "assessment",
+      "prompt": "Is burning vessel-generated waste aboard permitted under Article 10.05?",
+      "answers": [
+        "No",
+        "Yes without restriction",
+        "Only while inside a lock"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.05(2) prohibits burning waste on board.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05(2)"
+      ],
+      "visualId": "PW-M09-WASTE-FIRE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A18",
+      "stage": "assessment",
+      "prompt": "Where should household refuse be deposited under Article 10.06?",
+      "answers": [
+        "At a specially designated reception facility",
+        "In open water after dark",
+        "In the bilge"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.06 addresses reception for refuse and sludge.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06"
+      ],
+      "visualId": "PW-M09-RECEPTION"
+    },
+    {
+      "id": "PW-CEVNI-M09-A19",
+      "stage": "assessment",
+      "prompt": "Which class is expressly excluded from the Article 10.06 used-oil-log carriage requirement?",
+      "answers": [
+        "Small craft",
+        "Every combustion-engine vessel",
+        "All pushed convoys regardless of status"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.06(1) excludes small craft.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06(1)"
+      ],
+      "visualId": "PW-M09-OIL-LOG"
+    },
+    {
+      "id": "PW-CEVNI-M09-A20",
+      "stage": "assessment",
+      "prompt": "Does that log exemption permit small craft to put used oil in the river?",
+      "answers": [
+        "No, the discharge prohibition remains",
+        "Yes, because no log is aboard",
+        "Only during lock passage"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.04 remains applicable.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06; 10.04"
+      ],
+      "visualId": "PW-M09-OIL-LOG"
+    },
+    {
+      "id": "PW-CEVNI-M09-A21",
+      "stage": "assessment",
+      "prompt": "During fuel filling, what should be true of the receiving vessel and operation?",
+      "answers": [
+        "It is secure, the transfer controlled and continuously supervised",
+        "It drifts against a strained hose",
+        "The supervisor has left"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.07 requires vigilance.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.07"
+      ],
+      "visualId": "PW-M09-BUNKERING"
+    },
+    {
+      "id": "PW-CEVNI-M09-A22",
+      "stage": "assessment",
+      "prompt": "What is the appropriate route for cargo-related waste?",
+      "answers": [
+        "Handle it under Article 10.08 and applicable local rules",
+        "Dump it with ordinary wash water",
+        "Ignore it if the hold appears empty"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.08 addresses cargo waste.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.08"
+      ],
+      "visualId": "PW-M09-CARGO-WASTE"
+    },
+    {
+      "id": "PW-CEVNI-M09-A23",
+      "stage": "assessment",
+      "prompt": "Before departure, what should a boatmaster check beyond vessel dimensions?",
+      "answers": [
+        "Current local restrictions, communications and safe fallback options",
+        "Only the vessel’s name",
+        "Only last summer’s weather"
+      ],
+      "correct": 0,
+      "explanation": "Current information supports the Article 1.04–1.05 vigilance duty.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05"
+      ],
+      "visualId": "PW-M09-READINESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-A24",
+      "stage": "assessment",
+      "prompt": "If an engine failure creates a new fairway obstruction, which sequence fits CEVNI duties?",
+      "answers": [
+        "Protect people, warn traffic, notify authority and work to clear the obstruction",
+        "Stay silent and continue drifting",
+        "Wait until after the voyage to assess"
+      ],
+      "correct": 0,
+      "explanation": "Articles 1.16–1.18 guide the response.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16–1.18"
+      ],
+      "visualId": "PW-M09-FALLBACK"
+    }
+  ]
+}

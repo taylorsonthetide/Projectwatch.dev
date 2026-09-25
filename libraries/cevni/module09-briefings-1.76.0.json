@@ -1,0 +1,187 @@
+{
+  "module": 9,
+  "version": "1.76.0",
+  "authority": "UNECE CEVNI Rev.6, Corr.1–2",
+  "briefings": [
+    {
+      "id": "PW-CEVNI-M09-B01",
+      "title": "VIGILANCE IS CONTINUOUS",
+      "body": "Article 1.04 requires care to avoid danger to persons and damage to vessels, waterways and their surroundings. In special circumstances, Article 1.05 calls for the measures best suited to avoid immediate danger.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05"
+      ],
+      "visualId": "PW-M09-VIGILANCE"
+    },
+    {
+      "id": "PW-CEVNI-M09-B02",
+      "title": "OBSTACLES LOST OVERBOARD",
+      "body": "If an object lost from a vessel may obstruct or endanger navigation, promptly inform the nearest competent authority and give its location as accurately as possible.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.12"
+      ],
+      "visualId": "PW-M09-LOST-OBJECT"
+    },
+    {
+      "id": "PW-CEVNI-M09-B03",
+      "title": "DAMAGED MARKS AND STRUCTURES",
+      "body": "Inform the nearest competent authority when a waterway mark is damaged or displaced, or when your vessel damages a permanent structure such as a bridge or lock.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.13–1.14"
+      ],
+      "visualId": "PW-M09-DAMAGED-MARK"
+    },
+    {
+      "id": "PW-CEVNI-M09-B04",
+      "title": "SPILLS THAT ENDANGER NAVIGATION",
+      "body": "Objects or substances likely to obstruct or endanger navigation must not enter the waterway. Report an accidental release or its risk promptly with the nature and location of the hazard.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.15"
+      ],
+      "visualId": "PW-M09-HAZARD-SPILL"
+    },
+    {
+      "id": "PW-CEVNI-M09-B05",
+      "title": "SAVE PEOPLE FIRST",
+      "body": "If an accident endangers people aboard, the boatmaster uses every available means to save them. A nearby boatmaster gives immediate assistance where consistent with the safety of their own vessel.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16"
+      ],
+      "visualId": "PW-M09-ASSIST"
+    },
+    {
+      "id": "PW-CEVNI-M09-B06",
+      "title": "GROUNDING: INFORM AND WARN",
+      "body": "A grounded or sunken vessel requires prompt notice to the competent authority. If it endangers the fairway, warn approaching traffic in time and follow the marking and instructions that apply.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visualId": "PW-M09-GROUNDING"
+    },
+    {
+      "id": "PW-CEVNI-M09-B07",
+      "title": "CLEAR THE OBSTRUCTION",
+      "body": "If a grounded vessel or lost object obstructs, or threatens to obstruct, the fairway, endeavour to clear the fairway as soon as possible, without creating further danger.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.18"
+      ],
+      "visualId": "PW-M09-CLEAR-FAIRWAY"
+    },
+    {
+      "id": "PW-CEVNI-M09-B08",
+      "title": "DISTRESS SIGNALS",
+      "body": "A vessel needing assistance may use the Article 4.04 distress sound signals, including repeated long blasts or ringing a bell, alongside the relevant visual signals. Distinguish distress from ordinary manoeuvring signals.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visualId": "PW-M09-DISTRESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-B09",
+      "title": "LOCAL WATER-PROTECTION RULES",
+      "body": "Chapter 10 applies together with the water-protection and waste rules in force for the particular waterway. Check local reception facilities and restrictions before setting off.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.02"
+      ],
+      "visualId": "PW-M09-LOCAL-WASTE"
+    },
+    {
+      "id": "PW-CEVNI-M09-B10",
+      "title": "PREVENT WASTE AND MIXING",
+      "body": "The boatmaster and people aboard use every care to avoid polluting, reduce waste and avoid mixing waste categories as far as possible. Prevention starts before handling oil, refuse or bilge water.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.03"
+      ],
+      "visualId": "PW-M09-WASTE-SEPARATE"
+    },
+    {
+      "id": "PW-CEVNI-M09-B11",
+      "title": "DO NOT DUMP INTO THE WATERWAY",
+      "body": "Article 10.04 prohibits throwing, discharging or allowing oily waste, slops, refuse, sludge, special waste or cargo-related waste into the waterway, subject only to compatible local water-protection provisions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04"
+      ],
+      "visualId": "PW-M09-NO-DISCHARGE"
+    },
+    {
+      "id": "PW-CEVNI-M09-B12",
+      "title": "REPORT AN ACCIDENTAL DISCHARGE",
+      "body": "If prohibited waste is released, or there is a threat of release, notify the nearest competent authority without delay and, as far as possible, nearby vessels. State the position, quantity, nature and measures taken.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.04(3)"
+      ],
+      "visualId": "PW-M09-SPILL-CALL"
+    },
+    {
+      "id": "PW-CEVNI-M09-B13",
+      "title": "KEEP WASTE SEPARATE ON BOARD",
+      "body": "Collect applicable waste separately in suitable receptacles; bilge water is collected in engine-room bilges. Store receptacles where leaks can be detected and repaired promptly.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05"
+      ],
+      "visualId": "PW-M09-WASTE-STOW"
+    },
+    {
+      "id": "PW-CEVNI-M09-B14",
+      "title": "PROHIBITED WASTE HANDLING",
+      "body": "Article 10.05 prohibits burning waste on board and using mobile deck tanks to collect used oil. It also restricts oil-dissolving or emulsifying cleaners in engine-room bilges.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.05(2)"
+      ],
+      "visualId": "PW-M09-WASTE-FIRE"
+    },
+    {
+      "id": "PW-CEVNI-M09-B15",
+      "title": "RECEPTION FACILITIES",
+      "body": "Deliver oily and greasy operating waste, slops and other special waste to reception facilities as prescribed. Household refuse and sludge go to specially designated facilities. Retain the applicable deposit evidence.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06"
+      ],
+      "visualId": "PW-M09-RECEPTION"
+    },
+    {
+      "id": "PW-CEVNI-M09-B16",
+      "title": "USED-OIL LOG SCOPE",
+      "body": "The Article 10.06 used-oil log applies to specified combustion-engine vessels, excluding small craft. The small-craft exception to that log does not create an exception to the no-discharge rule.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.06(1); 10.04"
+      ],
+      "visualId": "PW-M09-OIL-LOG"
+    },
+    {
+      "id": "PW-CEVNI-M09-B17",
+      "title": "SUPERVISE FUEL TRANSFER",
+      "body": "Article 10.07 requires vigilance during filling with fuel or lubricating oil, including secure positioning, a manageable quantity and continuous supervision. Detailed facility and checklist rules apply where the article specifies.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.07"
+      ],
+      "visualId": "PW-M09-BUNKERING"
+    },
+    {
+      "id": "PW-CEVNI-M09-B18",
+      "title": "CARGO-RELATED WASTE",
+      "body": "Cargo residues and related waste are handled under the applicable Article 10.08 and waterway rules. A leisure craft should still keep its own refuse and oily waste out of the waterway.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.08; 10.04"
+      ],
+      "visualId": "PW-M09-CARGO-WASTE"
+    },
+    {
+      "id": "PW-CEVNI-M09-B19",
+      "title": "PASSAGE READINESS",
+      "body": "Before departure, combine the relevant local navigation and water-protection rules with the vessel’s dimensions, current restrictions, communication arrangements, safe stopping options and waste disposal plan.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05; 10.02"
+      ],
+      "visualId": "PW-M09-READINESS"
+    },
+    {
+      "id": "PW-CEVNI-M09-B20",
+      "title": "WHEN THE PLAN FAILS",
+      "body": "For a breakdown or new hazard, protect people, avoid obstructing traffic, warn and notify as the relevant CEVNI articles require, and use a safe fallback. Reassess the passage before continuing.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05; 1.12–1.18"
+      ],
+      "visualId": "PW-M09-FALLBACK"
+    }
+  ]
+}

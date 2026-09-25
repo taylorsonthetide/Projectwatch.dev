@@ -1,0 +1,186 @@
+{
+  "module": 9,
+  "version": "1.76.0",
+  "visuals": [
+    {
+      "id": "PW-M09-ASSIST",
+      "url": "assets/cevni/module09/assist.svg",
+      "title": "Assist",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-BUNKERING",
+      "url": "assets/cevni/module09/bunkering.svg",
+      "title": "Bunkering",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-CARGO-WASTE",
+      "url": "assets/cevni/module09/cargo-waste.svg",
+      "title": "Cargo Waste",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-CLEAR-FAIRWAY",
+      "url": "assets/cevni/module09/clear-fairway.svg",
+      "title": "Clear Fairway",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-DAMAGED-MARK",
+      "url": "assets/cevni/module09/damaged-mark.svg",
+      "title": "Damaged Mark",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-DISTRESS",
+      "url": "assets/cevni/module09/distress.svg",
+      "title": "Distress",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-FALLBACK",
+      "url": "assets/cevni/module09/fallback.svg",
+      "title": "Fallback",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-GROUNDING",
+      "url": "assets/cevni/module09/grounding.svg",
+      "title": "Grounding",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-HAZARD-SPILL",
+      "url": "assets/cevni/module09/hazard-spill.svg",
+      "title": "Hazard Spill",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-LOCAL-WASTE",
+      "url": "assets/cevni/module09/local-waste.svg",
+      "title": "Local Waste",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-LOST-OBJECT",
+      "url": "assets/cevni/module09/lost-object.svg",
+      "title": "Lost Object",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-NO-DISCHARGE",
+      "url": "assets/cevni/module09/no-discharge.svg",
+      "title": "No Discharge",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-OIL-LOG",
+      "url": "assets/cevni/module09/oil-log.svg",
+      "title": "Oil Log",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-READINESS",
+      "url": "assets/cevni/module09/readiness.svg",
+      "title": "Readiness",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-RECEPTION",
+      "url": "assets/cevni/module09/reception.svg",
+      "title": "Reception",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-SPILL-CALL",
+      "url": "assets/cevni/module09/spill-call.svg",
+      "title": "Spill Call",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-VIGILANCE",
+      "url": "assets/cevni/module09/vigilance.svg",
+      "title": "Vigilance",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-WASTE-FIRE",
+      "url": "assets/cevni/module09/waste-fire.svg",
+      "title": "Waste Fire",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-WASTE-SEPARATE",
+      "url": "assets/cevni/module09/waste-separate.svg",
+      "title": "Waste Separate",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M09-WASTE-STOW",
+      "url": "assets/cevni/module09/waste-stow.svg",
+      "title": "Waste Stow",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    }
+  ]
+}
