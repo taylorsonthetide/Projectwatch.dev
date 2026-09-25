@@ -27,7 +27,7 @@ function render(){
  if(!q){complete();return}
  if(!state.options[q.id])state.options[q.id]=pwShuffle(q.answers.map((value,i)=>({value,ok:i===q.correct})));
  const options=state.options[q.id];state.answered=false;
- area.innerHTML=`<div class="cvLessonShell m05Shell"><div class="cvLessonTop"><div><div class="ver">MODULE 05 • ${escape(state.stage.toUpperCase())}</div><h2>Sound Signals &amp; Radiotelephony</h2><p class="cevniLead">${state.stage==='assessment'?'First answer counts. Pass at least 10 of 12.':'Listen, choose, then read the coaching.'}</p></div><div class="cvLessonCounter">${state.index+1} / ${items.length}</div></div><div class="cvLessonProgress"><i style="width:${Math.round((state.index+1)/items.length*100)}%"></i></div><article class="cvBriefingCard m05Question">${visual(q.visualId)}<h3>${escape(q.prompt)}</h3>${Number.isInteger(q.audioIndex)?'<button type="button" class="m05Play">▶ PLAY SIGNAL</button>':''}<div class="cevniAnswers">${options.map((o,i)=>`<button type="button" data-index="${i}">${String.fromCharCode(65+i)} • ${escape(o.value)}</button>`).join('')}</div><div class="m05Feedback" role="status" aria-live="polite"></div><small class="m05Source">${escape((q.sourceRefs||[]).join(' • '))}</small></article><div class="cvLessonNav"><button class="cvClose" type="button">CLOSE</button><span></span><span>${state.stage==='assessment'?'FIRST ANSWER COUNTS':'RETRIES AND COACHING'}</span></div></div>`;
+ area.innerHTML=`<div class="cvLessonShell m05Shell"><div class="cvLessonTop"><div><div class="ver">MODULE 05 • ${escape(state.stage.toUpperCase())}</div><h2>Sound Signals &amp; Radiotelephony</h2><p class="cevniLead">${state.stage==='assessment'?'Choose once, then move to the next question. Pass at least 10 of 12.':'Listen, choose, then read the coaching.'}</p></div><div class="cvLessonCounter">${state.index+1} / ${items.length}</div></div><div class="cvLessonProgress"><i style="width:${Math.round((state.index+1)/items.length*100)}%"></i></div><article class="cvBriefingCard m05Question"><h3>${escape(q.prompt)}</h3>${Number.isInteger(q.audioIndex)?'<button type="button" class="m05Play">▶ PLAY SIGNAL</button>':''}<div class="cevniAnswers">${options.map((o,i)=>`<button type="button" data-index="${i}">${String.fromCharCode(65+i)} • ${escape(o.value)}</button>`).join('')}</div><div class="m05Feedback" role="status" aria-live="polite"></div><small class="m05Source">${escape((q.sourceRefs||[]).join(' • '))}</small></article><div class="cvLessonNav"><button class="cvClose" type="button">CLOSE</button><span></span><span>${state.stage==='assessment'?'ONE ANSWER • RESULTS AT END':'RETRIES AND COACHING'}</span></div></div>`;
  area.querySelector('.cvClose').onclick=cevniCloseLesson;
  area.querySelector('.m05Play')?.addEventListener('click',e=>cevniPlayIndex(q.audioIndex,e.currentTarget));
  area.querySelectorAll('.cevniAnswers button').forEach(b=>b.onclick=()=>answer(q,options,Number(b.dataset.index)));
@@ -37,15 +37,23 @@ function answer(q,options,index){
  if(state.answered)return;
  const ok=options[index].ok, assessed=state.stage==='assessment',area=document.getElementById('cevniLessonArea');
  const fb=area.querySelector('.m05Feedback');
- if(!ok&&!assessed){
+ if(assessed){
+  state.answered=true;
+  if(ok)state.score++;
+  area.querySelectorAll('.cevniAnswers button').forEach((b,i)=>{b.disabled=true;if(i===index)b.classList.add('selected')});
+  fb.innerHTML=`Answer recorded.<br><button type="button" class="m05Next">${state.index+1===counts.assessment?'VIEW RESULTS →':'NEXT QUESTION →'}</button>`;
+  fb.querySelector('.m05Next').onclick=()=>{state.index++;render()};
+  return;
+ }
+ if(!ok){
   const chosen=area.querySelectorAll('.cevniAnswers button')[index];
   chosen.classList.add('bad');chosen.disabled=true;
   fb.textContent='Not quite. Try another answer.';
   return;
  }
- state.answered=true;if(assessed&&ok)state.score++;
+ state.answered=true;
  area.querySelectorAll('.cevniAnswers button').forEach((b,i)=>{b.disabled=true;if(i===index)b.classList.add(ok?'good':'bad')});
- fb.innerHTML=`<strong>${ok?'Correct.':'First answer recorded.'}</strong>${ok?' '+escape(q.explanation):''}<br><button type="button" class="m05Next">${state.index+1===counts[state.stage]?'NEXT STAGE →':'NEXT QUESTION →'}</button>`;
+ fb.innerHTML=`<strong>Correct.</strong> ${escape(q.explanation)}${visual(q.visualId)}<br><button type="button" class="m05Next">${state.index+1===counts[state.stage]?'NEXT STAGE →':'NEXT QUESTION →'}</button>`;
  fb.querySelector('.m05Next').onclick=()=>{state.index++;render()};
 }
 function complete(){

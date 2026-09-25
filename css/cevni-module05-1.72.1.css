@@ -2,3 +2,4 @@
 
 #cevniLessonArea .m05Shell .cevniAnswers button.bad,#cevniLessonArea .m05Shell .cevniAnswers button.bad:disabled{background:#8e3737!important;border-color:#e46d6d!important;color:#fff!important;opacity:1!important}
 #cevniLessonArea .m05Shell .cevniAnswers button.good,#cevniLessonArea .m05Shell .cevniAnswers button.good:disabled{background:#176a4b!important;border-color:#53b88b!important;color:#fff!important;opacity:1!important}
+#cevniLessonArea .m05Shell .cevniAnswers button.selected,#cevniLessonArea .m05Shell .cevniAnswers button.selected:disabled{background:#23648b!important;border-color:#76b9df!important;color:#fff!important;opacity:1!important}
