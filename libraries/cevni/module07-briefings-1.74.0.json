@@ -1,0 +1,175 @@
+{
+  "module": 7,
+  "authority": "UNECE CEVNI Revision 6 with Corrigenda 1–2",
+  "authorityUrl": "https://unece.org/sites/default/files/2024-11/2109540_E_pdf_web%2BCorr1-2_0.pdf",
+  "briefings": [
+    {
+      "title": "BEFORE A CONTROLLED OPENING",
+      "body": "Identify the usable opening, traffic direction, available depth and headroom before entering a bridge or weir approach. Where simultaneous passage is not clearly possible, the narrow-fairway procedure applies. Read the posted restriction and current local direction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.24"
+      ],
+      "visualId": "PW-M07-BRIDGE-APPROACH"
+    },
+    {
+      "title": "FIXED-BRIDGE OPENINGS",
+      "body": "A red light or A.1 marking prohibits the marked opening. D.1 variants identify recommended openings and may distinguish two-way from one-way use. An unmarked opening is at the vessel’s own risk; check the actual signs and traffic before committing.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25; annex 7"
+      ],
+      "visualId": "PW-M07-FIXED-OPENING"
+    },
+    {
+      "title": "AIR DRAUGHT AND CABLES",
+      "body": "Compare the vessel’s full air draught, including aerials or raised equipment, with the clearance available at the actual water level. Check overhead cables and local notices. A bridge opening that looks broad may still be too low.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.24–6.25; annex 7 E.2"
+      ],
+      "visualId": "PW-M07-CLEARANCE"
+    },
+    {
+      "title": "MOVABLE BRIDGE APPROACH",
+      "body": "Slow down on approach. Follow bridge staff instructions and announce the intended passage by the specified means. If you cannot pass and B.5 is displayed, stop short of it. Overtaking near a movable bridge is prohibited unless staff issue special instructions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-MOVABLE-BRIDGE"
+    },
+    {
+      "title": "READ THE WHOLE BRIDGE SIGNAL",
+      "body": "Red prohibits passage; red with green means the bridge is being prepared but passage is still prohibited; green permits passage. Two red lights vertically mean opening suspended. Yellow alongside the specified red marking can allow only reduced-height vessels, subject to the displayed direction condition.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-BRIDGE-SIGNALS"
+    },
+    {
+      "title": "WEIR OPENINGS",
+      "body": "A red signal or A.1 board closes an opening. For an ordinary weir opening, passage is allowed only when both sides are marked E.1. An overhead bridge can provide the stated D.1 alternative. Never infer permission merely from visible water.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.27"
+      ],
+      "visualId": "PW-M07-WEIR"
+    },
+    {
+      "title": "LOCK BASIN APPROACH",
+      "body": "Reduce speed at the lock basin. If you cannot enter at once and B.5 is posted, stop short of it. A vessel equipped for nautical-information radio must listen on the lock channel while in the basin or lock. Identify a safe waiting position.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28(1)–(2)"
+      ],
+      "visualId": "PW-M07-LOCK-APPROACH"
+    },
+    {
+      "title": "QUEUE AND SMALL-CRAFT ORDER",
+      "body": "The default locking order is arrival in the basin, subject to special priorities and staff instructions. Small craft cannot demand separate locking; they enter only when invited and, when locked with other vessels, after those vessels. Overtaking in or near locks is prohibited.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.28(3)–(4), 6.29"
+      ],
+      "visualId": "PW-M07-LOCK-QUEUE"
+    },
+    {
+      "title": "INSIDE THE CHAMBER",
+      "body": "Keep anchors fully raised unless in use in the basin. Prepare fenders and controllable lines, protect crew from changing levels and obey staff instructions, which may supplement or depart from the general procedure.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visualId": "PW-M07-LOCK-CHAMBER"
+    },
+    {
+      "title": "LOCK ENTRY LIGHTS",
+      "body": "Two red lights vertically mean no entry and out of service. A single red, or two reds side by side, means closed. Red with green means being prepared but still no entry. A single green, or two greens side by side, permits entry. Read the complete display.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis(1)"
+      ],
+      "visualId": "PW-M07-LOCK-SIGNALS"
+    },
+    {
+      "title": "LOCK EXIT LIGHTS",
+      "body": "One or two red lights mean no exit; one or two greens permit exit. Where neither lights nor substitute boards are present, do not enter or leave without an express order from lock staff.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis(2)–(4)"
+      ],
+      "visualId": "PW-M07-LOCK-EXIT"
+    },
+    {
+      "title": "PRIORITY AT LOCKS",
+      "body": "Certain marked authority and priority vessels have priority over ordinary arrival order. Facilitate their passage as far as possible and follow lock staff directions. Your small craft does not gain priority because it can manoeuvre quickly.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.29"
+      ],
+      "visualId": "PW-M07-LOCK-PRIORITY"
+    },
+    {
+      "title": "POSITION A BERTH SAFELY",
+      "body": "Choose a berth near the bank as draught and local conditions allow, without obstructing navigation. Secure a stationary vessel against wind, level change, suction and wash so it cannot move into traffic.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.01"
+      ],
+      "visualId": "PW-M07-BERTH-SITE"
+    },
+    {
+      "title": "BERTHING IS NOT ALWAYS ALLOWED",
+      "body": "Article 7.02 prohibits berthing in marked or restricted stretches and at particular hazards, including under bridges, near narrow fairways, harbour mouths, ferry routes and lock basins unless authorized. A convenient wall is not permission.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.02"
+      ],
+      "visualId": "PW-M07-BERTH-RESTRICTION"
+    },
+    {
+      "title": "ANCHOR OR SPUD ONLY WHERE ALLOWED",
+      "body": "A.6 can prohibit anchoring on its bank; E.6 identifies a permitted sector under the applicable rule. Authorities may extend restrictions to telescopic piles, with E.6.1 identifying a permitted spud sector. Check the exact side and local provisions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.03"
+      ],
+      "visualId": "PW-M07-ANCHOR"
+    },
+    {
+      "title": "MAKE FAST TO PROPER POINTS",
+      "body": "A.7 prohibits making fast on its side; E.7 can identify a permitted sector under the rule. Do not make fast or warp from trees, railings, marker stones, handrails and similar structures. Use suitable permitted fittings.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.04"
+      ],
+      "visualId": "PW-M07-MOOR"
+    },
+    {
+      "title": "READ THE BERTHING AREA LIMIT",
+      "body": "E.5 marks the permitted side; E.5.1 and E.5.2 define a breadth or band measured from the sign; E.5.3 limits the number abreast. Check the actual dimension and whether your hull lies within the marked area.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.05; annex 7"
+      ],
+      "visualId": "PW-M07-BERTH-WIDTH"
+    },
+    {
+      "title": "VESSEL TYPE AND SHORE POWER",
+      "body": "E.5.4–E.5.15 can reserve a berth for specified vessel types. B.12 requires shore-power connection for vessels in the marked berthing area, with the stated sign-panel and quiet zero-emission supply exceptions. Read local instructions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.06; annex 7"
+      ],
+      "visualId": "PW-M07-SHORE-POWER"
+    },
+    {
+      "title": "DANGEROUS-CARGO SEPARATION",
+      "body": "Article 7.07 sets 10 m, 50 m and 100 m minimum berthing separation where the respective Article 3.14 paragraph 1, 2 or 3 markings apply, subject to stated exceptions and competent-authority decisions. Identify the marking before selecting a nearby berth.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.07"
+      ],
+      "visualId": "PW-M07-DANGEROUS-DISTANCE"
+    },
+    {
+      "title": "WATCH A STATIONARY VESSEL",
+      "body": "A vessel lying in the fairway requires a continuous effective watch. Marked dangerous-cargo vessels and some other categories also have specific watch duties; other berthed craft require appropriate surveillance unless local conditions or authorities provide otherwise.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.08"
+      ],
+      "visualId": "PW-M07-WATCH"
+    },
+    {
+      "title": "DECISION BEFORE COMMITMENT",
+      "body": "Bring the signals, dimensions, traffic order and local authority instructions together. If permission or clearance is uncertain, wait at a safe point before the structure or berth and resolve it there.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.24–6.29; 7.01–7.08"
+      ],
+      "visualId": "PW-M07-BRIDGE-APPROACH"
+    }
+  ]
+}

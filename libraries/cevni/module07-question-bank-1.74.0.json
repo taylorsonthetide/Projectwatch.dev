@@ -1,0 +1,903 @@
+{
+  "module": 7,
+  "passMark": 19,
+  "assessmentTotal": 24,
+  "questions": [
+    {
+      "id": "PW-CEVNI-M07-R01",
+      "stage": "rehearsal",
+      "prompt": "At a bridge opening too narrow for simultaneous passage, which procedure matters?",
+      "answers": [
+        "The narrow-fairway meeting procedure",
+        "An automatic right to go first",
+        "Overtaking to clear the approach"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.24 refers to the narrow-fairway rules unless width allows simultaneous passage.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.24"
+      ],
+      "visualId": "PW-M07-BRIDGE-APPROACH"
+    },
+    {
+      "id": "PW-CEVNI-M07-R02",
+      "stage": "rehearsal",
+      "prompt": "A fixed bridge opening shows a red prohibition signal. What does that mean?",
+      "answers": [
+        "Do not use that opening",
+        "Pass if headroom is adequate",
+        "It is only a recommendation"
+      ],
+      "correct": 0,
+      "explanation": "Red or A.1 marks the prohibited opening.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25"
+      ],
+      "visualId": "PW-M07-FIXED-OPENING"
+    },
+    {
+      "id": "PW-CEVNI-M07-R03",
+      "stage": "rehearsal",
+      "prompt": "What must be compared with actual bridge clearance?",
+      "answers": [
+        "The vessel’s full air draught at the current water level",
+        "Only its beam",
+        "Only its water draught"
+      ],
+      "correct": 0,
+      "explanation": "Raised equipment and changing water level affect available headroom.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.24–6.25"
+      ],
+      "visualId": "PW-M07-CLEARANCE"
+    },
+    {
+      "id": "PW-CEVNI-M07-R04",
+      "stage": "rehearsal",
+      "prompt": "What should you do on approach to a movable bridge?",
+      "answers": [
+        "Reduce speed and obey bridge staff instructions",
+        "Maintain cruising speed until the span moves",
+        "Overtake waiting traffic unless a horn sounds"
+      ],
+      "correct": 0,
+      "explanation": "The approach and passage are controlled by Article 6.26.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-MOVABLE-BRIDGE"
+    },
+    {
+      "id": "PW-CEVNI-M07-R05",
+      "stage": "rehearsal",
+      "prompt": "A movable bridge shows red and green together. Is passage open?",
+      "answers": [
+        "No; opening is being prepared",
+        "Yes; green always cancels red",
+        "Yes for small craft only"
+      ],
+      "correct": 0,
+      "explanation": "The combined signal is still a no-passage state.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-BRIDGE-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-R06",
+      "stage": "rehearsal",
+      "prompt": "At an ordinary weir opening, what marking normally permits passage?",
+      "answers": [
+        "E.1 on both sides of the opening",
+        "One red light on either side",
+        "The absence of any sign"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.27 specifies E.1 on both sides, with an overhead-bridge alternative.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.27"
+      ],
+      "visualId": "PW-M07-WEIR"
+    },
+    {
+      "id": "PW-CEVNI-M07-R07",
+      "stage": "rehearsal",
+      "prompt": "When B.5 is displayed in a lock basin and you cannot enter immediately, where do you stop?",
+      "answers": [
+        "Short of the B.5 board",
+        "Alongside the gates",
+        "Inside the chamber if space looks available"
+      ],
+      "correct": 0,
+      "explanation": "Reduce speed and stop before the marked limit.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28(1)"
+      ],
+      "visualId": "PW-M07-LOCK-APPROACH"
+    },
+    {
+      "id": "PW-CEVNI-M07-R08",
+      "stage": "rehearsal",
+      "prompt": "When locked with larger vessels, when may a small craft enter?",
+      "answers": [
+        "Only on invitation and after the other vessels",
+        "First, because it is manoeuvrable",
+        "Whenever the signal first changes"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.28 specifies invitation and order for small craft.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28(3)"
+      ],
+      "visualId": "PW-M07-LOCK-QUEUE"
+    },
+    {
+      "id": "PW-CEVNI-M07-R09",
+      "stage": "rehearsal",
+      "prompt": "Two red lock-entry lights one above the other mean what?",
+      "answers": [
+        "No entry; lock out of service",
+        "Prepare for immediate entry",
+        "Exit permitted"
+      ],
+      "correct": 0,
+      "explanation": "The vertical pair is the out-of-service entry state.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis"
+      ],
+      "visualId": "PW-M07-LOCK-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-R10",
+      "stage": "rehearsal",
+      "prompt": "One or two green lights at the lock exit indicate what?",
+      "answers": [
+        "Exit permitted",
+        "Lock out of service",
+        "Wait for the next cycle"
+      ],
+      "correct": 0,
+      "explanation": "Green is the exit permission display.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis(2)"
+      ],
+      "visualId": "PW-M07-LOCK-EXIT"
+    },
+    {
+      "id": "PW-CEVNI-M07-R11",
+      "stage": "rehearsal",
+      "prompt": "Why can lock passage depart from simple order of arrival?",
+      "answers": [
+        "Special priority markings and lock staff instructions",
+        "A smaller boat always goes first",
+        "AIS targets are sorted by speed"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.29 states special priorities and staff can direct passage.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.28–6.29"
+      ],
+      "visualId": "PW-M07-LOCK-PRIORITY"
+    },
+    {
+      "id": "PW-CEVNI-M07-R12",
+      "stage": "rehearsal",
+      "prompt": "Where should a berth be chosen under the general rule?",
+      "answers": [
+        "Near the bank without obstructing navigation",
+        "At the middle of the fairway",
+        "Anywhere a mooring line reaches"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.01 links bank proximity to draught and unobstructed traffic.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.01"
+      ],
+      "visualId": "PW-M07-BERTH-SITE"
+    },
+    {
+      "id": "PW-CEVNI-M07-R13",
+      "stage": "rehearsal",
+      "prompt": "May a vessel berth under a bridge because the wall is convenient?",
+      "answers": [
+        "No; that is among the prohibited locations",
+        "Yes unless a red light is showing",
+        "Yes for an overnight stop only"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.02 prohibits berthing under bridges.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.02"
+      ],
+      "visualId": "PW-M07-BERTH-RESTRICTION"
+    },
+    {
+      "id": "PW-CEVNI-M07-R14",
+      "stage": "rehearsal",
+      "prompt": "What does A.6 indicate on the side where it is placed?",
+      "answers": [
+        "Anchoring is prohibited",
+        "Berthing is required",
+        "Shore power is available"
+      ],
+      "correct": 0,
+      "explanation": "The anchoring restriction applies to the indicated side.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.03"
+      ],
+      "visualId": "PW-M07-ANCHOR"
+    },
+    {
+      "id": "PW-CEVNI-M07-R15",
+      "stage": "rehearsal",
+      "prompt": "May a handrail or tree be used to make fast?",
+      "answers": [
+        "No; use suitable permitted fittings",
+        "Yes if protected with a line sleeve",
+        "Yes whenever a berth is signed E.5"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.04 forbids making fast or warping from such objects.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.04"
+      ],
+      "visualId": "PW-M07-MOOR"
+    },
+    {
+      "id": "PW-CEVNI-M07-R16",
+      "stage": "rehearsal",
+      "prompt": "What does the breadth on E.5.1 measure?",
+      "answers": [
+        "The permitted berthing width from the sign",
+        "The vessel’s air draught",
+        "The maximum lock length"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.05 measures the marked width from the sign.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.05"
+      ],
+      "visualId": "PW-M07-BERTH-WIDTH"
+    },
+    {
+      "id": "PW-CEVNI-M07-R17",
+      "stage": "rehearsal",
+      "prompt": "What does B.12 generally require at the marked berth?",
+      "answers": [
+        "Connection to onshore power",
+        "A distress signal",
+        "An anchor watch only"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.06 sets the onshore-power requirement with specified exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.06"
+      ],
+      "visualId": "PW-M07-SHORE-POWER"
+    },
+    {
+      "id": "PW-CEVNI-M07-R18",
+      "stage": "rehearsal",
+      "prompt": "A stationary vessel lying in the fairway needs what?",
+      "answers": [
+        "A continuous effective watch",
+        "No surveillance if moored",
+        "Only an AIS transmission"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.08 requires a watch in the fairway.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.08"
+      ],
+      "visualId": "PW-M07-WATCH"
+    },
+    {
+      "id": "PW-CEVNI-M07-C01",
+      "stage": "context",
+      "prompt": "The bridge mouth looks clear but two-way passing width is uncertain. What do you establish first?",
+      "answers": [
+        "The applicable narrow-fairway arrangement and safe waiting point",
+        "That your engine is faster than the oncoming boat",
+        "That the other skipper can reverse"
+      ],
+      "correct": 0,
+      "explanation": "Do not create a meeting where width is uncertain.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.24"
+      ],
+      "visualId": "PW-M07-BRIDGE-APPROACH"
+    },
+    {
+      "id": "PW-CEVNI-M07-C02",
+      "stage": "context",
+      "prompt": "One fixed opening is red and another has a recommended-opening sign. Where do you plan passage?",
+      "answers": [
+        "Assess the recommended usable opening and its direction",
+        "Use the red-marked opening if shortest",
+        "Pass between the bridge piers outside all openings"
+      ],
+      "correct": 0,
+      "explanation": "The red opening is prohibited; D.1 indicates a recommended route subject to direction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25"
+      ],
+      "visualId": "PW-M07-FIXED-OPENING"
+    },
+    {
+      "id": "PW-CEVNI-M07-C03",
+      "stage": "context",
+      "prompt": "Your aerial raises the boat above the clearance shown for the current water level. What now?",
+      "answers": [
+        "Do not commit until full clearance is established",
+        "Lower the engine speed to make the boat shorter",
+        "Use the same opening because the hull fits"
+      ],
+      "correct": 0,
+      "explanation": "Air draught includes equipment above the hull.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.24–6.25"
+      ],
+      "visualId": "PW-M07-CLEARANCE"
+    },
+    {
+      "id": "PW-CEVNI-M07-C04",
+      "stage": "context",
+      "prompt": "Bridge lights change from red to red with green as the span begins moving. What do you do?",
+      "answers": [
+        "Remain clear; entry is still prohibited",
+        "Accelerate through before it opens fully",
+        "Follow another vessel without checking"
+      ],
+      "correct": 0,
+      "explanation": "Red with green means preparation, not permission.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-BRIDGE-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-C05",
+      "stage": "context",
+      "prompt": "A weir opening has no E.1 boards on both sides and no overhead-bridge authorization. What is the decision?",
+      "answers": [
+        "Do not use that opening",
+        "Enter if the water appears deep",
+        "Use the next unmarked opening"
+      ],
+      "correct": 0,
+      "explanation": "The normal weir permission requires E.1 on each side.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.27"
+      ],
+      "visualId": "PW-M07-WEIR"
+    },
+    {
+      "id": "PW-CEVNI-M07-C06",
+      "stage": "context",
+      "prompt": "You arrive at the lock basin behind a commercial vessel in your small craft. What is your plan?",
+      "answers": [
+        "Wait for invitation and enter after it if locking together",
+        "Overtake inside the basin",
+        "Demand a separate lockage"
+      ],
+      "correct": 0,
+      "explanation": "The small-craft and overtaking rules govern the queue.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visualId": "PW-M07-LOCK-QUEUE"
+    },
+    {
+      "id": "PW-CEVNI-M07-C07",
+      "stage": "context",
+      "prompt": "One red and one green lock-entry light are showing together. What do you do?",
+      "answers": [
+        "Wait outside; the lock is being prepared",
+        "Enter because one light is green",
+        "Follow a vessel already leaving"
+      ],
+      "correct": 0,
+      "explanation": "The mixed entry display is still no entry.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis"
+      ],
+      "visualId": "PW-M07-LOCK-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-C08",
+      "stage": "context",
+      "prompt": "The lock-entry signals are dark and there is no substitute board or instruction. May you enter?",
+      "answers": [
+        "No; obtain an express order from lock staff",
+        "Yes if the gate is open",
+        "Yes if no vessel is visible"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.28 bis prohibits entry without lights/boards except by express staff order.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis"
+      ],
+      "visualId": "PW-M07-LOCK-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-C09",
+      "stage": "context",
+      "prompt": "A marked priority vessel approaches the lock after you. What should you do?",
+      "answers": [
+        "Facilitate its priority passage and follow staff directions",
+        "Insist on arriving first",
+        "Enter before its bow reaches the basin"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.29 provides specified priority over arrival order.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.29"
+      ],
+      "visualId": "PW-M07-LOCK-PRIORITY"
+    },
+    {
+      "id": "PW-CEVNI-M07-C10",
+      "stage": "context",
+      "prompt": "Your intended berth would reduce the fairway to a narrow squeeze. What is appropriate?",
+      "answers": [
+        "Choose another lawful berth that leaves navigation clear",
+        "Berth and ask traffic to pass around",
+        "Deploy a fender so the protrusion is safe"
+      ],
+      "correct": 0,
+      "explanation": "General and location-specific berthing rules protect the fairway.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 7.01–7.02"
+      ],
+      "visualId": "PW-M07-BERTH-SITE"
+    },
+    {
+      "id": "PW-CEVNI-M07-C11",
+      "stage": "context",
+      "prompt": "The bank bears A.7 and a handy tree stands nearby. How should you secure?",
+      "answers": [
+        "Do not make fast there; seek a permitted fitting and sector",
+        "Use the tree because the prohibition concerns anchors",
+        "Use the handrail and set an anchor"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.04 forbids the signed side and unsuitable structures.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.04"
+      ],
+      "visualId": "PW-M07-MOOR"
+    },
+    {
+      "id": "PW-CEVNI-M07-C12",
+      "stage": "context",
+      "prompt": "E.5.2 shows a permitted band between two distances from the sign. Where may you berth?",
+      "answers": [
+        "Within the marked band on that side",
+        "Anywhere along the riverbank",
+        "Only at the centreline of the fairway"
+      ],
+      "correct": 0,
+      "explanation": "The two measured distances bound the berth.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.05"
+      ],
+      "visualId": "PW-M07-BERTH-WIDTH"
+    },
+    {
+      "id": "PW-CEVNI-M07-C13",
+      "stage": "context",
+      "prompt": "A berth has B.12 and your vessel uses ordinary generator power. What is the default expectation?",
+      "answers": [
+        "Use onshore power unless a stated exception applies",
+        "Run the generator because you are small craft",
+        "Ignore B.12 if a shore cable is inconvenient"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.06 requires shore-power connection at B.12, subject to exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.06"
+      ],
+      "visualId": "PW-M07-SHORE-POWER"
+    },
+    {
+      "id": "PW-CEVNI-M07-C14",
+      "stage": "context",
+      "prompt": "A vessel marked under Article 3.14 paragraph 2 is berthed nearby. Which minimum separation normally applies?",
+      "answers": [
+        "50 m",
+        "10 m",
+        "100 m"
+      ],
+      "correct": 0,
+      "explanation": "The paragraph 2 marking maps to 50 m, subject to stated exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.07"
+      ],
+      "visualId": "PW-M07-DANGEROUS-DISTANCE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A01",
+      "stage": "assessment",
+      "prompt": "Which rule applies at a bridge opening that is not clearly wide enough for simultaneous passage?",
+      "answers": [
+        "The narrow-fairway meeting procedure",
+        "Automatic priority for the smaller vessel",
+        "Overtaking permission for the faster vessel"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.24 applies Article 6.07 unless width is sufficient.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.24"
+      ],
+      "visualId": "PW-M07-BRIDGE-APPROACH"
+    },
+    {
+      "id": "PW-CEVNI-M07-A02",
+      "stage": "assessment",
+      "prompt": "What does a red signal at a fixed-bridge opening indicate?",
+      "answers": [
+        "That opening is prohibited for navigation",
+        "That it is the recommended opening",
+        "That only small craft may enter"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.25 provides the red/A.1 closure marking.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25"
+      ],
+      "visualId": "PW-M07-FIXED-OPENING"
+    },
+    {
+      "id": "PW-CEVNI-M07-A03",
+      "stage": "assessment",
+      "prompt": "What does the D.1 family indicate at a fixed bridge?",
+      "answers": [
+        "A recommended opening, with its direction governed by the variant",
+        "A compulsory mooring point",
+        "A closed lock chamber"
+      ],
+      "correct": 0,
+      "explanation": "The specific D.1 variant and associated marking determine direction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25; annex 7"
+      ],
+      "visualId": "PW-M07-FIXED-OPENING"
+    },
+    {
+      "id": "PW-CEVNI-M07-A04",
+      "stage": "assessment",
+      "prompt": "What must be included when checking headroom?",
+      "answers": [
+        "Full air draught, equipment and actual water level",
+        "Water draught only",
+        "Beam and propeller diameter only"
+      ],
+      "correct": 0,
+      "explanation": "Clearance is measured against the vessel’s actual vertical profile.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.24–6.25"
+      ],
+      "visualId": "PW-M07-CLEARANCE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A05",
+      "stage": "assessment",
+      "prompt": "What should a boatmaster do on approach to a movable bridge?",
+      "answers": [
+        "Reduce speed and comply with bridge staff directions",
+        "Overtake the queue to reach the span",
+        "Ignore B.5 if passage is delayed"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.26 governs the approach.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-MOVABLE-BRIDGE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A06",
+      "stage": "assessment",
+      "prompt": "A movable bridge shows red and green together. What is the passage state?",
+      "answers": [
+        "Still prohibited while opening is prepared",
+        "Open for passage in both directions",
+        "Open only for vessels under 20 m"
+      ],
+      "correct": 0,
+      "explanation": "The mixed display is preparation, not permission.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-BRIDGE-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-A07",
+      "stage": "assessment",
+      "prompt": "What do two red lights vertically at a movable bridge mean?",
+      "answers": [
+        "Opening for navigation is suspended",
+        "Bridge is ready for immediate passage",
+        "Only downstream traffic may pass"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.26 distinguishes vertical red from the normal closed state.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visualId": "PW-M07-BRIDGE-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-A08",
+      "stage": "assessment",
+      "prompt": "What ordinarily authorizes passage through a weir opening?",
+      "answers": [
+        "E.1 marking on both sides of the opening",
+        "A single red light",
+        "A sound signal alone"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.27 provides the E.1 rule and overhead-bridge exception.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.27"
+      ],
+      "visualId": "PW-M07-WEIR"
+    },
+    {
+      "id": "PW-CEVNI-M07-A09",
+      "stage": "assessment",
+      "prompt": "Where must a vessel stop if it cannot enter a lock immediately and B.5 is displayed?",
+      "answers": [
+        "Short of the B.5 board",
+        "Immediately against the gate",
+        "Inside the chamber alongside another vessel"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.28 specifies the approach limit.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visualId": "PW-M07-LOCK-APPROACH"
+    },
+    {
+      "id": "PW-CEVNI-M07-A10",
+      "stage": "assessment",
+      "prompt": "May a small craft demand separate locking as a right?",
+      "answers": [
+        "No",
+        "Yes whenever it arrived first",
+        "Yes if its engine is running"
+      ],
+      "correct": 0,
+      "explanation": "The small-craft provisions prohibit a demand for separate locking.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visualId": "PW-M07-LOCK-QUEUE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A11",
+      "stage": "assessment",
+      "prompt": "When locked with other vessels, when does a small craft enter?",
+      "answers": [
+        "When invited, after those vessels",
+        "Before them, to use the free corner",
+        "As soon as any signal appears"
+      ],
+      "correct": 0,
+      "explanation": "Invitation and entry order are explicit.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visualId": "PW-M07-LOCK-QUEUE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A12",
+      "stage": "assessment",
+      "prompt": "What is the rule on overtaking in or near a lock?",
+      "answers": [
+        "It is prohibited",
+        "It is required for smaller vessels",
+        "It is permitted if both vessels sound one blast"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.28 prohibits overtaking in or near locks.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visualId": "PW-M07-LOCK-QUEUE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A13",
+      "stage": "assessment",
+      "prompt": "Two red lock-entry lights one above another indicate what?",
+      "answers": [
+        "No entry; lock out of service",
+        "Lock being prepared for opening",
+        "Entry permitted for small craft"
+      ],
+      "correct": 0,
+      "explanation": "The vertically aligned red pair marks out of service.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis"
+      ],
+      "visualId": "PW-M07-LOCK-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-A14",
+      "stage": "assessment",
+      "prompt": "What do one or two green lock-exit lights mean?",
+      "answers": [
+        "Exit permitted",
+        "Entry prohibited but exit not addressed",
+        "Lock out of service"
+      ],
+      "correct": 0,
+      "explanation": "Green permits exit under the exit-signal rule.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis"
+      ],
+      "visualId": "PW-M07-LOCK-EXIT"
+    },
+    {
+      "id": "PW-CEVNI-M07-A15",
+      "stage": "assessment",
+      "prompt": "With no lock lights or substitute boards, when may you enter?",
+      "answers": [
+        "Only on express order from lock staff",
+        "Whenever the gate appears open",
+        "When the basin is empty"
+      ],
+      "correct": 0,
+      "explanation": "No light/board means no entry absent express staff order.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28 bis"
+      ],
+      "visualId": "PW-M07-LOCK-SIGNALS"
+    },
+    {
+      "id": "PW-CEVNI-M07-A16",
+      "stage": "assessment",
+      "prompt": "Which situation can override simple arrival order at a lock?",
+      "answers": [
+        "A vessel carrying the specified priority marking",
+        "A vessel with the newest chart display",
+        "Any small craft with a short waiting time"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.29 identifies marked priority vessels.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.29"
+      ],
+      "visualId": "PW-M07-LOCK-PRIORITY"
+    },
+    {
+      "id": "PW-CEVNI-M07-A17",
+      "stage": "assessment",
+      "prompt": "How should a stationary vessel be positioned under the general berthing rule?",
+      "answers": [
+        "Near the bank as conditions permit without obstructing navigation",
+        "Across the fairway for better current control",
+        "Under the nearest bridge by default"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.01 balances bank proximity and unobstructed navigation.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.01"
+      ],
+      "visualId": "PW-M07-BERTH-SITE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A18",
+      "stage": "assessment",
+      "prompt": "Is berthing under a bridge ordinarily permitted under Article 7.02?",
+      "answers": [
+        "No",
+        "Yes if the bridge has green lights",
+        "Yes if the water is deep enough"
+      ],
+      "correct": 0,
+      "explanation": "Under-bridge berthing is among the prohibited locations.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.02"
+      ],
+      "visualId": "PW-M07-BERTH-RESTRICTION"
+    },
+    {
+      "id": "PW-CEVNI-M07-A19",
+      "stage": "assessment",
+      "prompt": "Which sign prohibits anchoring on its side?",
+      "answers": [
+        "A.6",
+        "E.6",
+        "E.5"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.03 gives A.6 the anchoring prohibition.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.03"
+      ],
+      "visualId": "PW-M07-ANCHOR"
+    },
+    {
+      "id": "PW-CEVNI-M07-A20",
+      "stage": "assessment",
+      "prompt": "What may be used for making fast under Article 7.04?",
+      "answers": [
+        "A suitable permitted fitting in an allowed sector",
+        "A handrail or tree",
+        "Any bank marker stone"
+      ],
+      "correct": 0,
+      "explanation": "Trees, railings and markers are prohibited as securing points.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.04"
+      ],
+      "visualId": "PW-M07-MOOR"
+    },
+    {
+      "id": "PW-CEVNI-M07-A21",
+      "stage": "assessment",
+      "prompt": "What does a dimension on E.5.1 define?",
+      "answers": [
+        "Permitted berthing width measured from the sign",
+        "Bridge headroom",
+        "Minimum distance from dangerous cargo"
+      ],
+      "correct": 0,
+      "explanation": "The E.5.1 width is measured from the sign.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.05"
+      ],
+      "visualId": "PW-M07-BERTH-WIDTH"
+    },
+    {
+      "id": "PW-CEVNI-M07-A22",
+      "stage": "assessment",
+      "prompt": "What does B.12 require at a berthing area, subject to stated exceptions?",
+      "answers": [
+        "Connection to an onshore power supply",
+        "A continuous sound signal",
+        "A compulsory anchor watch for every craft"
+      ],
+      "correct": 0,
+      "explanation": "The onshore-power requirement is in Article 7.06.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.06"
+      ],
+      "visualId": "PW-M07-SHORE-POWER"
+    },
+    {
+      "id": "PW-CEVNI-M07-A23",
+      "stage": "assessment",
+      "prompt": "What is the normal minimum separation for an Article 3.14 paragraph 3 marked vessel when berthed?",
+      "answers": [
+        "100 m",
+        "50 m",
+        "10 m"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.07 sets the paragraph 3 distance at 100 m, with stated exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.07"
+      ],
+      "visualId": "PW-M07-DANGEROUS-DISTANCE"
+    },
+    {
+      "id": "PW-CEVNI-M07-A24",
+      "stage": "assessment",
+      "prompt": "What watch is required aboard a vessel lying in the fairway?",
+      "answers": [
+        "A continuous efficient watch",
+        "No watch if lines are secure",
+        "Only an unattended AIS receiver"
+      ],
+      "correct": 0,
+      "explanation": "Article 7.08 requires an efficient continuous watch.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 7.08"
+      ],
+      "visualId": "PW-M07-WATCH"
+    }
+  ]
+}
