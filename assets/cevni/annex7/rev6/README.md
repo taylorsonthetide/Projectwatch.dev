@@ -21,3 +21,7 @@ Seventeen individual source plates from printed pp. 130–134 were added for B.1
 ## Family C and D expansion in build 1.82.0
 
 Nine C-family plates from printed p. 135 cover C.1a–b, C.2a–b, C.3a–b, C.4 and C.5a–b. The eight lettered forms have distinct cards; generic C.1, C.2, C.3 and C.5 stay text-only headings. Figures on C.1b, C.2b, C.3b and C.5a–b are source examples of variable quantities. Four further D-family plates from pp. 136–137 cover D.2a–b and D.3a–b. The D.2 pair is shown as one source figure for each method of marking an opening.
+
+## Family E expansion in build 1.83.0
+
+Fifty-six individual E-family plate files from printed pp. 137–148 now cover E.1a–d, E.3, E.4a–b, E.5–E.5.15, E.6–E.27.1 (with the source's coded subvariants). E.2 was included in the earlier batch. E.1 remains an umbrella teaching entry with a source-aligned board; its four exact presentations have distinct files and cards. Figures and channel numerals in the source examples are variable operational values.
