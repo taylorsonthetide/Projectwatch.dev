@@ -1,0 +1,21 @@
+/* Keep approved plates within their teaching frames at phone and tablet widths. */
+#pw1540SignSchool .pw1540Grid,#pw1540SignSchool .pw1570MarkGrid{min-width:0}
+#pw1540SignSchool .pw1540Card,#pw1540SignSchool .pw1570MarkCard{min-width:0;overflow-wrap:anywhere}
+#pw1540SignSchool .pw1540Art,#pw1540SignSchool .pw1570MarkArt{box-sizing:border-box;height:160px;padding:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#eaf3f5}
+#pw1540SignSchool .pw1540Art img,#pw1540SignSchool .pw1570MarkArt img,#pw1540SignSchool .pw1540Art svg{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain}
+#pw1540SignSchool .pw1540Art .cv1490Sign{width:100%;height:100%;display:grid;place-items:center}
+#pw1540SignSchool .pw1540Art .cv1490Sign svg{width:100%;height:100%;max-width:100%;max-height:100%}
+#pw1540SignSchool .pw1540CodePlate{box-sizing:border-box;max-width:100%;min-width:0;padding:10px 14px;font-size:clamp(17px,3vw,27px)}
+#pw1540SignSchool .pw1540Quiz .pw1540Art{max-width:420px;height:220px}
+#pw1540SignSchool .pw1570MarkGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){#pw1540SignSchool .pw1570MarkGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){#pw1540SignSchool .pw1570MarkGrid{grid-template-columns:1fr}}
+
+/* The Module 3 Annex 7 review is a separate renderer from the catalogue. */
+#cevniPage .pw165Grid{min-width:0}
+#cevniPage .pw165Card{min-width:0;overflow:hidden;overflow-wrap:anywhere}
+#cevniPage .pw165Art{box-sizing:border-box!important;position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:170px!important;max-height:170px!important;min-width:0!important;padding:10px!important;overflow:hidden!important;contain:paint;background:#eaf3f5!important}
+#cevniPage .pw165Art img,#cevniPage .pw165Art svg{display:block!important;position:static!important;flex:none!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;min-width:0!important;object-fit:contain!important}
+#cevniPage .pw165Art .cv1490Sign{box-sizing:border-box;width:100%!important;height:100%!important;display:grid;place-items:center;overflow:hidden}
+#cevniPage .pw165Art .pw165SourceOnly{box-sizing:border-box;max-width:100%;font-size:clamp(16px,3vw,24px)}
+@media(max-width:700px){#cevniPage .pw165Art{height:150px!important;max-height:150px!important}}
