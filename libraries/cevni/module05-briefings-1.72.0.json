@@ -1,0 +1,124 @@
+{
+  "module": 5,
+  "source": "UNECE CEVNI Rev.6 + Corr.1/2; Amend.1/2 checked for applicability",
+  "briefings": [
+    {
+      "title": "HEAR THE LENGTH FIRST",
+      "body": "A short blast lasts about one second; a long blast about four seconds. Successive blasts normally have about a one-second interval. A series of very short blasts has at least six quarter-second blasts with quarter-second silences. Listen before you read the pattern.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visualId": "PW-M05-TIMING"
+    },
+    {
+      "title": "WHO GIVES THE SOUND",
+      "body": "The prescribed sound signal for a convoy is given by the vessel carrying the boatmaster. A motorized vessel normally uses a mechanical sound device; a small craft or non-motorized vessel without one can use a suitable horn. Motorized sound signals are generally accompanied by synchronized all-round yellow light, subject to the stated exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.01"
+      ],
+      "visualId": "PW-M05-EQUIPMENT"
+    },
+    {
+      "title": "WHEN A SOUND MAY BE USED",
+      "body": "Use the Annex 6 signals in their prescribed situations. Small craft proceeding alone, or in a formation made only of small craft, may use the general signals when necessary. A different sound must not be confused with a prescribed signal; never invent a navigation message.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.02",
+        "CEVNI Rev.6 art. 4.03"
+      ],
+      "visualId": "PW-M05-TIMING"
+    },
+    {
+      "title": "GENERAL MANOEUVRING",
+      "body": "One long blast is the general caution signal. One short means altering course to starboard; two short means altering to port; three short means going astern; four short means unable to manoeuvre. The action and the number must stay together.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visualId": "PW-M05-GENERAL"
+    },
+    {
+      "title": "STAY CLEAR OR ACT NOW",
+      "body": "A repeated short-then-long pattern says do not approach. At least six very short blasts warn of imminent danger of collision. A vessel in distress seeking assistance may ring a bell or sound repeated long blasts. These three warnings have different meanings.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6",
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visualId": "PW-M05-DANGER"
+    },
+    {
+      "title": "OVERTAKING REQUEST",
+      "body": "Where a sound request is required, two long and two short asks to pass on the other vessel’s port side; two long and one short asks to pass on its starboard side. Five short from the vessel being overtaken means it cannot be overtaken. Apply the full Article 6.10 procedure before moving.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.10; annex 6"
+      ],
+      "visualId": "PW-M05-OVERTAKE"
+    },
+    {
+      "title": "TURNING SIGNALS",
+      "body": "One long then one short indicates a turn to starboard; one long then two short indicates a turn to port. The leading long blast distinguishes a turn signal from the ordinary short-blast course alteration.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.13; annex 6",
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visualId": "PW-M05-GENERAL"
+    },
+    {
+      "title": "HARBOUR AND TRIBUTARY",
+      "body": "On entering or leaving a harbour or tributary, three long then one short announces starboard, and three long then two short announces port. When leaving and intending to cross the waterway, three long announces the crossing; the turn signal may follow if necessary.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.16; annex 6"
+      ],
+      "visualId": "PW-M05-HARBOUR"
+    },
+    {
+      "title": "REDUCED VISIBILITY WITHOUT RADAR",
+      "body": "A vessel proceeding alone without radar while making for safety gives one long blast at intervals no greater than one minute. A ferry without radar instead gives one long and four short at intervals no greater than one minute. These patterns only make sense with the vessel and visibility context.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.33; annex 6",
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visualId": "PW-M05-VISIBILITY"
+    },
+    {
+      "title": "RADAR SOUND CROSS-REFERENCE",
+      "body": "Annex 6 also includes the three-tone signal for certain radar-navigation situations in reduced visibility. Recognise that this is not the ordinary non-radar long-blast signal; the detailed radar procedure belongs in Module 8.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visualId": "PW-M05-VISIBILITY"
+    },
+    {
+      "title": "RADIO SERVICE AND LISTENING WATCH",
+      "body": "Article 4.05 distinguishes ship-to-ship, nautical information and port-authority networks. For motorized vessels other than small craft it sets equipment and simultaneous listening-watch requirements. A working radio does not cancel the lookout, sound signal or rule obligations.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05"
+      ],
+      "visualId": "PW-M05-RADIO"
+    },
+    {
+      "title": "BEFORE THE BLIND SECTION",
+      "body": "A vessel equipped with radiotelephony reports on the ship-to-ship channel before blind sections, narrow channels and bridge openings, as well as authority-designated sections. Check the current local channel and procedure early; identify your vessel and location clearly.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05"
+      ],
+      "visualId": "PW-M05-RADIO"
+    },
+    {
+      "title": "B.11a AND B.11b",
+      "body": "B.11a requires a radiotelephone link; B.11b specifies the channel shown on the board. They are related mandatory signs, not one interchangeable picture. The exact official plates must be verified before visual recognition is assessed.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05",
+        "CEVNI Rev.6 annex 7, B.11a/B.11b"
+      ],
+      "visualId": "PW-M05-RADIO"
+    },
+    {
+      "title": "LISTEN, THEN DECIDE",
+      "body": "In Sound Lab, first identify blast duration and spacing without reading the label. Then decide whether the operating situation calls for manoeuvring, overtaking, reduced visibility, danger, distress or radio reporting. Apply local variations where the competent authority prescribes them.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6",
+        "CEVNI Rev.6 chapter 9: applicable regional/national provisions"
+      ],
+      "visualId": "PW-M05-TIMING"
+    }
+  ]
+}
