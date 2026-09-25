@@ -1,0 +1,168 @@
+{
+  "module": 8,
+  "version": "1.75.0",
+  "visuals": [
+    {
+      "id": "PW-M08-AIS-DATA",
+      "url": "assets/cevni/module08/ais-data.svg",
+      "title": "Ais Data",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-AIS-SMALL",
+      "url": "assets/cevni/module08/ais-small.svg",
+      "title": "Ais Small",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-AIS-UPDATE",
+      "url": "assets/cevni/module08/ais-update.svg",
+      "title": "Ais Update",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-BLIND-BEND",
+      "url": "assets/cevni/module08/blind-bend.svg",
+      "title": "Blind Bend",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-DECISION",
+      "url": "assets/cevni/module08/decision.svg",
+      "title": "Decision",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-DOWNSTREAM",
+      "url": "assets/cevni/module08/downstream.svg",
+      "title": "Downstream",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-FOG-BERTH",
+      "url": "assets/cevni/module08/fog-berth.svg",
+      "title": "Fog Berth",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-FOG-SPEED",
+      "url": "assets/cevni/module08/fog-speed.svg",
+      "title": "Fog Speed",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-NO-RADAR",
+      "url": "assets/cevni/module08/no-radar.svg",
+      "title": "No Radar",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-OVERVIEW",
+      "url": "assets/cevni/module08/overview.svg",
+      "title": "Overview",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-RADAR-CALL",
+      "url": "assets/cevni/module08/radar-call.svg",
+      "title": "Radar Call",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-RADAR-FIT",
+      "url": "assets/cevni/module08/radar-fit.svg",
+      "title": "Radar Fit",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-RADAR-TARGET",
+      "url": "assets/cevni/module08/radar-target.svg",
+      "title": "Radar Target",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-RADAR-TRAINING",
+      "url": "assets/cevni/module08/radar-training.svg",
+      "title": "Radar Training",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-RADIO-NET",
+      "url": "assets/cevni/module08/radio-net.svg",
+      "title": "Radio Net",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-REPORT-LOG",
+      "url": "assets/cevni/module08/report-log.svg",
+      "title": "Report Log",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-REPORT-POINT",
+      "url": "assets/cevni/module08/report-point.svg",
+      "title": "Report Point",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    },
+    {
+      "id": "PW-M08-SMALL-CRAFT",
+      "url": "assets/cevni/module08/small-craft.svg",
+      "title": "Small Craft",
+      "source": "UNECE CEVNI Rev.6 with Corr.1\u20132",
+      "role": "scenario",
+      "assessmentReady": true,
+      "officialSignArtwork": false
+    }
+  ]
+}

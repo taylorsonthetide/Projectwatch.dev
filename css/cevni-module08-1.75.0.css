@@ -1,0 +1,12 @@
+.m08Visual{margin:18px 0 22px;max-width:680px}
+.m08Visual img{display:block;width:100%;height:auto;border-radius:14px}
+.m08Visual figcaption,.m08Source{display:block;margin-top:8px;color:#91afbd;font-size:.8rem}
+.m08Question .cevniAnswers{display:grid;gap:10px;margin-top:16px}
+.m08Feedback{margin-top:16px;line-height:1.5}
+.m08Feedback button{margin-top:12px;border:1px solid #287c90;border-radius:9px;padding:11px 16px;background:#e4f5f5;color:#123d50;cursor:pointer;font-weight:700}
+.m08Shell .cvLessonNav{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.m08Shell .cvLessonNav button{cursor:pointer}
+#cevniLessonArea .m08Shell .cevniAnswers button.bad,#cevniLessonArea .m08Shell .cevniAnswers button.bad:disabled{background:#8e3737!important;border-color:#e46d6d!important;color:#fff!important;opacity:1!important}
+#cevniLessonArea .m08Shell .cevniAnswers button.good,#cevniLessonArea .m08Shell .cevniAnswers button.good:disabled{background:#176a4b!important;border-color:#53b88b!important;color:#fff!important;opacity:1!important}
+#cevniLessonArea .m08Shell .cevniAnswers button.selected,#cevniLessonArea .m08Shell .cevniAnswers button.selected:disabled{background:#23648b!important;border-color:#76b9df!important;color:#fff!important;opacity:1!important}
+@media(max-width:650px){.m08Shell .cvLessonNav{align-items:stretch}}

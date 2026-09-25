@@ -1,0 +1,169 @@
+{
+  "module": 8,
+  "version": "1.75.0",
+  "authority": "UNECE CEVNI Rev.6 with Corr.1 and Corr.2",
+  "briefings": [
+    {
+      "id": "PW-CEVNI-M08-B01",
+      "title": "EQUIPMENT IS NOT A LOOKOUT",
+      "body": "Radar, Inland AIS and a chart display provide different kinds of information. Keep a proper lookout and check what the screen represents against the waterway and traffic.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06; 4.07"
+      ],
+      "visualId": "PW-M08-OVERVIEW"
+    },
+    {
+      "id": "PW-CEVNI-M08-B02",
+      "title": "NAVIGATING BY RADAR",
+      "body": "Article 4.06 sets equipment and authorization conditions for navigating by radar: suitable approved radar or Inland ECDIS in navigation mode with radar overlay, a working rate-of-turn indicator where required, and a person with the specific authorization aboard.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visualId": "PW-M08-RADAR-FIT"
+    },
+    {
+      "id": "PW-CEVNI-M08-B03",
+      "title": "RADAR TRAINING EXCEPTION",
+      "body": "The authorized-person condition has a training exception for use of radar in good visibility by day or night. It does not turn a training use into unrestricted radar navigation in poor visibility.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visualId": "PW-M08-RADAR-TRAINING"
+    },
+    {
+      "id": "PW-CEVNI-M08-B04",
+      "title": "SMALL CRAFT USING RADAR",
+      "body": "A small craft navigating by radar needs a properly working ship-to-ship radiotelephone installation. The usual three-tone device exception for small craft does not remove the radio requirement.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visualId": "PW-M08-SMALL-CRAFT"
+    },
+    {
+      "id": "PW-CEVNI-M08-B05",
+      "title": "FOLLOW A RADAR TARGET",
+      "body": "Radar provides a direct target return. Article 4.06 says that when radar and Inland AIS simultaneously track a target, radar information should be considered the only reliable source for that target. Resolve a discrepancy before a close-quarters decision.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06(5)"
+      ],
+      "visualId": "PW-M08-RADAR-TARGET"
+    },
+    {
+      "id": "PW-CEVNI-M08-B06",
+      "title": "WHAT INLAND AIS BROADCASTS",
+      "body": "Inland AIS shares vessel identity and voyage-related information such as position, speed, course and navigation status. It is a useful traffic picture, but an AIS contact may not describe every vessel or obstruction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.07"
+      ],
+      "visualId": "PW-M08-AIS-DATA"
+    },
+    {
+      "id": "PW-CEVNI-M08-B07",
+      "title": "KEEP AIS DATA CURRENT",
+      "body": "When AIS is required and operated, the entered data must match the vessel or convoy. Changes to dimensions, convoy type, navigation status or antenna reference point require prompt attention under Article 4.07.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.07"
+      ],
+      "visualId": "PW-M08-AIS-UPDATE"
+    },
+    {
+      "id": "PW-CEVNI-M08-B08",
+      "title": "SMALL CRAFT AIS",
+      "body": "The Article 4.07 carriage requirement has exceptions for small craft, except specified police vessels equipped with radar. If a small craft uses AIS, check the equipment and radio provisions that apply; do not treat absence of an AIS target as proof of clear water.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.07"
+      ],
+      "visualId": "PW-M08-AIS-SMALL"
+    },
+    {
+      "id": "PW-CEVNI-M08-B09",
+      "title": "RADIO NETWORKS",
+      "body": "Know the locally allocated ship-to-ship, nautical-information and authority channels. Article 4.05 governs the required radiotelephone installation, readiness and use; check local requirements before entering a controlled sector.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05"
+      ],
+      "visualId": "PW-M08-RADIO-NET"
+    },
+    {
+      "id": "PW-CEVNI-M08-B10",
+      "title": "REPORTING AT A BLIND SECTION",
+      "body": "An equipped vessel reports on the ship-to-ship channel before a blind section, narrow channel, bridge opening or other locally designated section. Make the call early enough to inform approaching traffic.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05"
+      ],
+      "visualId": "PW-M08-BLIND-BEND"
+    },
+    {
+      "id": "PW-CEVNI-M08-B11",
+      "title": "SAFE SPEED IN REDUCED VISIBILITY",
+      "body": "Article 6.30 requires a speed suited to reduced visibility, traffic movements and local circumstances, with necessary radiotelephone information. A small craft under way in reduced visibility also keeps a listening watch on the required channel.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.30"
+      ],
+      "visualId": "PW-M08-FOG-SPEED"
+    },
+    {
+      "id": "PW-CEVNI-M08-B12",
+      "title": "STOP CLEAR OF THE FAIRWAY",
+      "body": "If stopping because of reduced visibility, keep clear of the fairway as far as possible. Article 6.33 directs vessels not navigating by radar to the nearest safe berthing or anchoring area.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.30; 6.33"
+      ],
+      "visualId": "PW-M08-FOG-BERTH"
+    },
+    {
+      "id": "PW-CEVNI-M08-B13",
+      "title": "RADAR PASSING COORDINATION",
+      "body": "An upstream vessel navigating by radar contacts oncoming traffic when it sees it or approaches a sector with unseen traffic. Give the vessel category, name, direction and position and agree on a passing procedure.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.32"
+      ],
+      "visualId": "PW-M08-RADAR-CALL"
+    },
+    {
+      "id": "PW-CEVNI-M08-B14",
+      "title": "DOWNSTREAM DANGER",
+      "body": "A downstream vessel navigating by radar must call a target presenting danger if no contact has been established, warn of the danger and agree a passing procedure. If radio contact fails, the specific Article 6.32 precautions apply.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.32"
+      ],
+      "visualId": "PW-M08-DOWNSTREAM"
+    },
+    {
+      "id": "PW-CEVNI-M08-B15",
+      "title": "A VESSEL WITHOUT RADAR IN FOG",
+      "body": "A vessel not navigating by radar in reduced visibility makes for the nearest safe berth or anchorage under Article 6.33. During that passage it follows the article’s lookout, sound-signal and radio provisions as applicable.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.33"
+      ],
+      "visualId": "PW-M08-NO-RADAR"
+    },
+    {
+      "id": "PW-CEVNI-M08-B16",
+      "title": "FORMAL REPORTING POINTS",
+      "body": "Article 8.02 sets reporting duties for specified vessel categories before designated sectors, traffic control posts, centres or locks, on the indicated channel. Sign B.11 can mark a radio requirement; local authorities can specify additional vessels.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 8.02"
+      ],
+      "visualId": "PW-M08-REPORT-POINT"
+    },
+    {
+      "id": "PW-CEVNI-M08-B17",
+      "title": "REPORT CHANGES AND SECTOR PASSAGE",
+      "body": "For a vessel subject to Article 8.02, give required details and report entry and exit. Report a journey interruption exceeding two hours and changed reportable data as required. Consult the local authority instructions for the precise channel and sector.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 8.02"
+      ],
+      "visualId": "PW-M08-REPORT-LOG"
+    },
+    {
+      "id": "PW-CEVNI-M08-B18",
+      "title": "INFORMATION INTO DECISION",
+      "body": "Before proceeding, combine direct observation, current radar and AIS data, the local radio picture and authority instructions. If visibility or equipment is inadequate, reduce speed and follow the relevant safe-berth procedure.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05–4.07; 6.30–6.33; 8.02"
+      ],
+      "visualId": "PW-M08-DECISION"
+    }
+  ]
+}
