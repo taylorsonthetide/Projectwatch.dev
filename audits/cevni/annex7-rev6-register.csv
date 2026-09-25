@@ -1,100 +1,100 @@
 code,current_title,Rev6_printed_page,code_in_Rev6,current_image_review
-A.1,No entry (general sign),123,True,match (board variant A.1a)
-A.1.1,Section closed; exception for non-motorized small craft,123,True,no separate matching image
-A.2,No overtaking,124,True,incorrect pictogram
-A.3,No overtaking of convoys by convoys,124,True,no separate matching image
-A.4,No passing or overtaking,124,True,no separate matching image
-A.4.1,No passing or overtaking of convoys by convoys,124,True,no separate matching image
-A.5,No berthing on this side of the waterway,125,True,no separate matching image
-A.5.1,No berthing within the indicated breadth,125,True,no separate matching image
-A.6,"No anchoring or trailing anchors, cables or chains",125,True,no separate matching image
-A.7,No making fast to the bank,125,True,no separate matching image
-A.8,No turning,125,True,no separate matching image
-A.9,Do not create wash likely to cause damage,126,True,no separate matching image
-A.10,No passing outside the marked area at bridge/weir openings,126,True,no separate matching image
-A.11,"Entry prohibited, but prepare to get under way",126,True,no separate matching image
-A.12,Motorized craft prohibited,127,True,no separate matching image
-A.13,Sports or pleasure craft prohibited,127,True,no separate matching image
-A.14,Water skiing prohibited,127,True,no separate matching image
-A.15,Sailing vessels prohibited,127,True,no separate matching image
-A.16,Craft other than motorized vessels or sailing craft prohibited,127,True,no separate matching image
-A.17,Use of sailboards prohibited,128,True,no separate matching image
-A.18,End of high-speed zone for small sport/pleasure craft,128,True,no separate matching image
-A.19,No launching or beaching of vessels,128,True,no separate matching image
-A.20,Water bikes prohibited,128,True,no separate matching image
-B.1,Proceed in the direction shown by the arrow,129,True,alternate arrow direction; not exact plate
-B.2a,Move to the side of the fairway on your port side,129,True,no separate matching image
-B.2b,Move to the side of the fairway on your starboard side,129,True,no separate matching image
-B.3a,Keep to the side of the fairway on your port side,130,True,no separate matching image
-B.3b,Keep to the side of the fairway on your starboard side,130,True,no separate matching image
-B.4a,Cross fairway to port,130,True,no separate matching image
-B.4b,Cross fairway to starboard,130,True,no separate matching image
-B.5,Stop as prescribed in the Regulations,131,True,no separate matching image
-B.6,Do not exceed the indicated speed (km/h),131,True,no separate matching image
-B.7,Give a sound signal,131,True,match
-B.8,Keep a particularly sharp lookout,131,True,no separate matching image
-B.9a,Do not enter/cross main waterway until safe to do so,132,True,no separate matching image
-B.9b,Do not enter/cross main waterway until safe to do so,132,True,no separate matching image
-B.10,Main-waterway vessels may need to facilitate vessels leaving harbour/tributary,132,True,no separate matching image
-B.11a,Obligation to enter into a radiotelephone link,133,True,no separate matching image
-B.11b,Radiotelephone link required on the channel shown,133,True,no separate matching image
-C.1,Depth of water limited,134,True,teaching example 1.65; source example 2.20
-C.2,Headroom limited,134,True,no separate matching image
-C.3,Width of passage or channel limited,134,True,no separate matching image
-C.4,Restrictions on navigation — see information plate,134,True,no separate matching image
-C.5,Channel lies at the indicated distance from the bank,134,True,no separate matching image
-D.1a,Recommended opening — both directions,135,True,generic D.1 artwork incorrect for every variant
-D.1b,Recommended opening — both directions,135,True,no separate matching image
-D.1c,Recommended opening — direction indicated only,135,True,no separate matching image
-D.1d,Recommended opening — direction indicated only,135,True,no separate matching image
-D.1e,Recommended opening — direction indicated only,135,True,no separate matching image
-D.1f,Recommended opening — direction indicated only,135,True,no separate matching image
-D.2a,Recommended to keep within the area indicated at bridge/weir opening,135,True,no separate matching image
-D.2b,Recommended to keep within the area indicated at bridge/weir opening,135,True,no separate matching image
-D.3a,Recommended to proceed in direction shown by arrow,136,True,no separate matching image
-D.3b,Recommended direction: fixed light towards isophase light,136,True,no separate matching image
-E.1,Entry permitted (general sign),136,True,match (board variant E.1a)
-E.2,Overhead cable crossing,136,True,incorrect lightning symbol
-E.3,Weir,137,True,no separate matching image
-E.4a,Ferry-boat not moving independently,137,True,no separate matching image
-E.4b,Ferry-boat moving independently,137,True,no separate matching image
-E.5,Berthing permitted on this side of the waterway,137,True,no separate matching image
-E.5.1,Berthing permitted within indicated breadth,137,True,no separate matching image
-E.5.2,Berthing permitted between indicated distances,138,True,no separate matching image
-E.5.3,Maximum number of vessels permitted to berth abreast,138,True,no separate matching image
-E.5.4,"Reserved berthing — pushing-navigation vessels, no Article 3.14 marking required",138,True,no separate matching image
-E.5.5,Reserved berthing — pushing-navigation vessels carrying one blue light/cone,138,True,no separate matching image
-E.5.6,Reserved berthing — pushing-navigation vessels carrying two blue lights/cones,138,True,no separate matching image
-E.6,Anchoring or trailing anchors/cables/chains permitted,140,True,no separate matching image
-E.6.1,Use of spuds permitted,141,True,no separate matching image
-E.7,Making fast to the bank permitted,141,True,no separate matching image
-E.7.1,Berthing area reserved for loading/unloading vehicles,141,True,no separate matching image
-E.8,Turning area,141,True,no separate matching image
-E.9a,Approaching waterways are tributaries of this waterway,142,True,no separate matching image
-E.9b,Approaching waterways are tributaries of this waterway,142,True,no separate matching image
-E.9c,Approaching waterways are tributaries of this waterway,142,True,no separate matching image
-E.10a,This waterway is tributary of the waterway being approached,142,True,no separate matching image
-E.10b,This waterway is tributary of the waterway being approached,142,True,no separate matching image
-E.11a,End of one-direction prohibition/obligation or restriction,143,True,no separate matching image
-E.11b,End of one-direction prohibition/obligation or restriction,143,True,no separate matching image
-E.12a,Advance signal — fixed white light: difficulty ahead,143,True,no separate matching image
-E.12b,Advance signal — fixed white lights: difficulty ahead,143,True,no separate matching image
-E.12c,Advance signal — isophase white light: may proceed,143,True,no separate matching image
-E.12d,Advance signal — isophase white lights: may proceed,143,True,no separate matching image
-E.13,Drinking-water supply,143,True,no separate matching image
-E.14,Telephone,144,True,no separate matching image
-E.15,Motorized vessels permitted,144,True,no separate matching image
-E.16,Sports or pleasure craft permitted,144,True,no separate matching image
-E.17,Water skiing permitted,144,True,no separate matching image
-E.18,Sailing vessels permitted,144,True,no separate matching image
-E.19,Craft other than motorized vessels or sailing craft permitted,145,True,no separate matching image
-E.20,Use of sailboards permitted,145,True,no separate matching image
-E.21,High-speed zone for small sport/pleasure craft,145,True,no separate matching image
-E.22,Launching or beaching of small craft permitted,145,True,no separate matching image
-E.23,Nautical information by radiotelephone on channel indicated,145,True,no separate matching image
-E.24,Water bikes permitted,146,True,no separate matching image
-E.25,Electrical power supply point,146,True,no separate matching image
-E.26,Winter harbour,146,True,no separate matching image
-E.26.1,Maximum number of vessels permitted to berth in winter harbour,146,True,no separate matching image
-E.27,Winter shelter,147,True,no separate matching image
-E.27.1,Winter shelter berthing limits,147,True,no separate matching image
+A.1,No entry (general sign),124,True,match (board variant A.1a)
+A.1.1,Section closed; exception for non-motorized small craft,124,True,no separate matching image
+A.2,No overtaking,125,True,incorrect pictogram
+A.3,No overtaking of convoys by convoys,125,True,no separate matching image
+A.4,No passing or overtaking,125,True,no separate matching image
+A.4.1,No passing or overtaking of convoys by convoys,125,True,no separate matching image
+A.5,No berthing on this side of the waterway,126,True,no separate matching image
+A.5.1,No berthing within the indicated breadth,126,True,no separate matching image
+A.6,"No anchoring or trailing anchors, cables or chains",126,True,no separate matching image
+A.7,No making fast to the bank,126,True,no separate matching image
+A.8,No turning,126,True,no separate matching image
+A.9,Do not create wash likely to cause damage,127,True,no separate matching image
+A.10,No passing outside the marked area at bridge/weir openings,127,True,no separate matching image
+A.11,"Entry prohibited, but prepare to get under way",127,True,no separate matching image
+A.12,Motorized craft prohibited,128,True,no separate matching image
+A.13,Sports or pleasure craft prohibited,128,True,no separate matching image
+A.14,Water skiing prohibited,128,True,no separate matching image
+A.15,Sailing vessels prohibited,128,True,no separate matching image
+A.16,Craft other than motorized vessels or sailing craft prohibited,128,True,no separate matching image
+A.17,Use of sailboards prohibited,129,True,no separate matching image
+A.18,End of high-speed zone for small sport/pleasure craft,129,True,no separate matching image
+A.19,No launching or beaching of vessels,129,True,no separate matching image
+A.20,Water bikes prohibited,129,True,no separate matching image
+B.1,Proceed in the direction shown by the arrow,130,True,alternate arrow direction; not exact plate
+B.2a,Move to the side of the fairway on your port side,130,True,no separate matching image
+B.2b,Move to the side of the fairway on your starboard side,130,True,no separate matching image
+B.3a,Keep to the side of the fairway on your port side,131,True,no separate matching image
+B.3b,Keep to the side of the fairway on your starboard side,131,True,no separate matching image
+B.4a,Cross fairway to port,131,True,no separate matching image
+B.4b,Cross fairway to starboard,131,True,no separate matching image
+B.5,Stop as prescribed in the Regulations,132,True,no separate matching image
+B.6,Do not exceed the indicated speed (km/h),132,True,no separate matching image
+B.7,Give a sound signal,132,True,match
+B.8,Keep a particularly sharp lookout,132,True,no separate matching image
+B.9a,Do not enter/cross main waterway until safe to do so,133,True,no separate matching image
+B.9b,Do not enter/cross main waterway until safe to do so,133,True,no separate matching image
+B.10,Main-waterway vessels may need to facilitate vessels leaving harbour/tributary,133,True,no separate matching image
+B.11a,Obligation to enter into a radiotelephone link,134,True,no separate matching image
+B.11b,Radiotelephone link required on the channel shown,134,True,no separate matching image
+C.1,Depth of water limited,135,True,teaching example 1.65; source example 2.20
+C.2,Headroom limited,135,True,no separate matching image
+C.3,Width of passage or channel limited,135,True,no separate matching image
+C.4,Restrictions on navigation — see information plate,135,True,no separate matching image
+C.5,Channel lies at the indicated distance from the bank,135,True,no separate matching image
+D.1a,Recommended opening — both directions,136,True,generic D.1 artwork incorrect for every variant
+D.1b,Recommended opening — both directions,136,True,no separate matching image
+D.1c,Recommended opening — direction indicated only,136,True,no separate matching image
+D.1d,Recommended opening — direction indicated only,136,True,no separate matching image
+D.1e,Recommended opening — direction indicated only,136,True,no separate matching image
+D.1f,Recommended opening — direction indicated only,136,True,no separate matching image
+D.2a,Recommended to keep within the area indicated at bridge/weir opening,136,True,no separate matching image
+D.2b,Recommended to keep within the area indicated at bridge/weir opening,136,True,no separate matching image
+D.3a,Recommended to proceed in direction shown by arrow,137,True,no separate matching image
+D.3b,Recommended direction: fixed light towards isophase light,137,True,no separate matching image
+E.1,Entry permitted (general sign),137,True,match (board variant E.1a)
+E.2,Overhead cable crossing,137,True,incorrect lightning symbol
+E.3,Weir,138,True,no separate matching image
+E.4a,Ferry-boat not moving independently,138,True,no separate matching image
+E.4b,Ferry-boat moving independently,138,True,no separate matching image
+E.5,Berthing permitted on this side of the waterway,138,True,no separate matching image
+E.5.1,Berthing permitted within indicated breadth,138,True,no separate matching image
+E.5.2,Berthing permitted between indicated distances,139,True,no separate matching image
+E.5.3,Maximum number of vessels permitted to berth abreast,139,True,no separate matching image
+E.5.4,"Reserved berthing — pushing-navigation vessels, no Article 3.14 marking required",139,True,no separate matching image
+E.5.5,Reserved berthing — pushing-navigation vessels carrying one blue light/cone,139,True,no separate matching image
+E.5.6,Reserved berthing — pushing-navigation vessels carrying two blue lights/cones,139,True,no separate matching image
+E.6,Anchoring or trailing anchors/cables/chains permitted,141,True,no separate matching image
+E.6.1,Use of spuds permitted,142,True,no separate matching image
+E.7,Making fast to the bank permitted,142,True,no separate matching image
+E.7.1,Berthing area reserved for loading/unloading vehicles,142,True,no separate matching image
+E.8,Turning area,142,True,no separate matching image
+E.9a,Approaching waterways are tributaries of this waterway,143,True,no separate matching image
+E.9b,Approaching waterways are tributaries of this waterway,143,True,no separate matching image
+E.9c,Approaching waterways are tributaries of this waterway,143,True,no separate matching image
+E.10a,This waterway is tributary of the waterway being approached,143,True,no separate matching image
+E.10b,This waterway is tributary of the waterway being approached,143,True,no separate matching image
+E.11a,End of one-direction prohibition/obligation or restriction,144,True,no separate matching image
+E.11b,End of one-direction prohibition/obligation or restriction,144,True,no separate matching image
+E.12a,Advance signal — fixed white light: difficulty ahead,144,True,no separate matching image
+E.12b,Advance signal — fixed white lights: difficulty ahead,144,True,no separate matching image
+E.12c,Advance signal — isophase white light: may proceed,144,True,no separate matching image
+E.12d,Advance signal — isophase white lights: may proceed,144,True,no separate matching image
+E.13,Drinking-water supply,144,True,no separate matching image
+E.14,Telephone,145,True,no separate matching image
+E.15,Motorized vessels permitted,145,True,no separate matching image
+E.16,Sports or pleasure craft permitted,145,True,no separate matching image
+E.17,Water skiing permitted,145,True,no separate matching image
+E.18,Sailing vessels permitted,145,True,no separate matching image
+E.19,Craft other than motorized vessels or sailing craft permitted,146,True,no separate matching image
+E.20,Use of sailboards permitted,146,True,no separate matching image
+E.21,High-speed zone for small sport/pleasure craft,146,True,no separate matching image
+E.22,Launching or beaching of small craft permitted,146,True,no separate matching image
+E.23,Nautical information by radiotelephone on channel indicated,146,True,no separate matching image
+E.24,Water bikes permitted,147,True,no separate matching image
+E.25,Electrical power supply point,147,True,no separate matching image
+E.26,Winter harbour,147,True,no separate matching image
+E.26.1,Maximum number of vessels permitted to berth in winter harbour,147,True,no separate matching image
+E.27,Winter shelter,148,True,no separate matching image
+E.27.1,Winter shelter berthing limits,148,True,no separate matching image
