@@ -1,0 +1,138 @@
+{
+  "module": 6,
+  "authority": "UNECE CEVNI Revision 6, Chapter 6, including Corrigenda 1–2",
+  "authorityUrl": "https://unece.org/sites/default/files/2024-11/2109540_E_pdf_web%2BCorr1-2_0.pdf",
+  "scope": "Rules of the road: Articles 6.01–6.23 and 6.34–6.37. Bridge, weir and lock procedure (6.24–6.29) belongs to Module 7; reduced-visibility radar procedure (6.30–6.33) belongs to Module 8.",
+  "briefings": [
+    {
+      "title": "READ THE WATERWAY BEFORE THE ENCOUNTER",
+      "body": "Chapter 6 uses the actual traffic arrangement, marked fairway and available room. Establish whether a vessel is a small craft, a convoy or another category; identify the applicable signs and local directions before making a close-quarters decision.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.01–6.03"
+      ],
+      "visualId": "PW-M06-FAIRWAY"
+    },
+    {
+      "title": "SMALL CRAFT LEAVE ROOM",
+      "body": "A small craft meeting a vessel that is not a small craft must leave that vessel enough room to hold its course and manoeuvre. It cannot require the larger-category vessel to give way simply because the small craft is more agile.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.02"
+      ],
+      "visualId": "PW-M06-FAIRWAY"
+    },
+    {
+      "title": "CROSSING: CHECK THE EXCEPTIONS",
+      "body": "For an ordinary crossing with risk of collision, the vessel with the other to starboard gives way and avoids crossing ahead if circumstances permit. This general paragraph does not apply to small craft in relation to other vessels. A vessel following the starboard boundary of a marked fairway has a specific course-holding provision; check the full article and local directions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.03 bis"
+      ],
+      "visualId": "PW-M06-CROSSING"
+    },
+    {
+      "title": "SMALL-CRAFT CROSSING",
+      "body": "Between small craft of different categories, motorized small craft give way to the others; craft neither motorized nor under sail give way to craft under sail. The marked fairway boundary provision can change the outcome, so read the whole situation.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.03 bis"
+      ],
+      "visualId": "PW-M06-CROSSING"
+    },
+    {
+      "title": "MEETING AND THE BLUE BOARD",
+      "body": "The normal upstream/downstream meeting arrangement is port to port unless the upstream vessel indicates a starboard-to-starboard pass in accordance with Article 6.04. The light-blue board and white scintillating light communicate that arrangement; the downstream vessel follows the upstream vessel's indicated course, subject to the stated exceptions. Small-craft meetings have their own provisions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.04"
+      ],
+      "visualId": "PW-M06-BLUE-BOARD"
+    },
+    {
+      "title": "DEPARTURES AND HIGH-SPEED MEETINGS",
+      "body": "A departure from the normal meeting arrangement requires the Article 6.05 procedure and a safe, understood request. High-speed-vessel meetings are treated separately under Article 6.06, including agreement by radiotelephony. Never infer consent from a board or a radio call that you have not understood.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.05–6.06"
+      ],
+      "visualId": "PW-M06-MEETING"
+    },
+    {
+      "title": "NARROW FAIRWAY",
+      "body": "Avoid meeting where the fairway is not unquestionably wide enough. Article 6.07 distinguishes waterways with and without defined upstream/downstream directions and deals with restricted view. Establish who has entered and where a safe waiting position lies before committing.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.07"
+      ],
+      "visualId": "PW-M06-NARROW"
+    },
+    {
+      "title": "A MEETING PROHIBITION IS A STOP SIGNAL",
+      "body": "Article 6.08 covers sections where meeting is prohibited by waterway signs. A sign or alternating one-way traffic instruction overrides an attractive-looking gap on the screen. Identify the sign and wait outside the restriction where required.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.08",
+        "CEVNI Rev.6 annex 7"
+      ],
+      "visualId": "PW-M06-NARROW"
+    },
+    {
+      "title": "OVERTAKING TAKES THE WHOLE PASSAGE",
+      "body": "The overtaking vessel must first make certain that overtaking can be completed without danger. The vessel being overtaken facilitates the pass insofar as necessary and possible, with a small-craft exception in Article 6.09. Article 6.10 sets out the detailed passing procedure and signals, covered for sound recognition in Module 5.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.09–6.10"
+      ],
+      "visualId": "PW-M06-OVERTAKE"
+    },
+    {
+      "title": "OVERTAKING PROHIBITIONS",
+      "body": "A waterway sign prohibiting overtaking means the manoeuvre must not be started in the signed section. Read any displayed category or dimension qualification; do not assume that clear water cancels the sign.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.11",
+        "CEVNI Rev.6 annex 7"
+      ],
+      "visualId": "PW-M06-OVERTAKE"
+    },
+    {
+      "title": "PRESCRIBED COURSE, TURN AND DEPARTURE",
+      "body": "Articles 6.12–6.14 deal with prescribed course, turning and setting off. Check the sign or traffic restriction and the room needed by other vessels before turning or departing. Module 5 teaches the matching sound patterns; here the decision is whether the movement can be made safely under the applicable rule.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.12–6.14"
+      ],
+      "visualId": "PW-M06-CROSSING"
+    },
+    {
+      "title": "CONVOYS, HARBOURS AND SIDE WATERWAYS",
+      "body": "Do not enter the spaces between vessels of a towed convoy. Before leaving or entering a harbour or tributary, establish the traffic on the main waterway and the applicable Article 6.16 and sign arrangements. Do not force an established vessel into an abrupt course or speed change.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.15–6.16"
+      ],
+      "visualId": "PW-M06-CROSSING"
+    },
+    {
+      "title": "KEEP CLEAR OF OTHER CONSTRAINTS",
+      "body": "The chapter also regulates sailing abreast, trailing anchors, drifting and convoys. Do not drift without the competent authority's permission. Avoid treating the gap beside a working convoy or a moored vessel as an automatic passing lane.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.17–6.19, 6.21–6.21 bis"
+      ],
+      "visualId": "PW-M06-FAIRWAY"
+    },
+    {
+      "title": "SPEED, WASH AND SUSPENSION",
+      "body": "Regulate speed to avoid damaging wash or suction and reduce it in good time near vulnerable craft, structures or designated sections, while retaining steerage. If navigation is suspended, comply with the applicable displayed restriction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.20, 6.22"
+      ],
+      "visualId": "PW-M06-WASH"
+    },
+    {
+      "title": "WORKING VESSELS AND FERRIES",
+      "body": "A working or disabled vessel can mark a side on which passing is prohibited; never pass on its marked red or A.1 side. A ferry may cross only when the movement of other vessels permits it without risk or an abrupt change of course or speed. Cable ferries need further room.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.22 bis–6.23"
+      ],
+      "visualId": "PW-M06-WORKS"
+    },
+    {
+      "title": "SPECIAL PRIORITIES AND WATER USERS",
+      "body": "Article 6.34 gives special priority when meeting or crossing a vessel marked under Article 3.34 (limited ability to manoeuvre) or Article 3.35 (fishing); other vessels give way. Water skiing and similar activities are restricted to daylight and good visibility under Article 6.35. Keep clear of marked fishing vessels and a sufficient distance from a marked diving vessel under Articles 6.36–6.37.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.34–6.37"
+      ],
+      "visualId": "PW-M06-WORKS"
+    }
+  ]
+}
