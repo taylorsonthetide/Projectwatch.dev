@@ -13,3 +13,7 @@ The files are separate image assets. Catalogue records refer to the paths; no im
 ## Family A expansion in build 1.80.0
 
 Individual plates from printed pp. 124–129 were added for A.1a–f, A.1.1, A.3, A.4, A.4.1, A.5, A.5.1, A.6–A.8, A.9a–b, A.11a–c, and A.12–A.20. The eleven lettered A.1, A.9 and A.11 forms have their own catalogue records. Generic A.9 and A.11 headings remain text-only. A.10 remains text-only until its replacement figure in Corrigendum 2 is obtained and checked.
+
+## Family B expansion in build 1.81.0
+
+Seventeen individual source plates from printed pp. 130–134 were added for B.1, B.2a–b, B.3a–b, B.4a–b, B.5–B.8, B.9a–b, B.10, B.11a–b and B.12. B.12 is a new catalogue record. The B.1 sample points right; an installed B.1 sign may point in another direction. B.6 and B.11b carry example numerical/channel values. B.10 contains two yellow lights, not a red-bordered board.
