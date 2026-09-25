@@ -2,12 +2,16 @@
 
 Source: *CEVNI, European Code for Inland Waterways*, sixth revised edition, ECE/TRANS/SC.3/115/Rev.6, Annex 7, printed pp. 124–150. Cross-check against the [UNECE publication](https://unece.org/transport/documents/2022/02/standards/ecetranssc3115rev6), Corrigenda 1 and 2, and Amendments 1 and 2 before publishing revised visual assets. The page-level [register](annex7-rev6-register.csv) lists every current card.
 
+## Build 1.79.0 resolution
+
+Eight separate source-plate PNGs are now in `assets/cevni/annex7/rev6/`: A.2, D.1a–f and E.2. The generic D.1 illustration is withheld; the six real variants are displayed individually. B.1 and C.1 remain code-only pending precise artwork, while A.1, B.7 and E.1 remain source-aligned teaching drawings. The 88 other current cards without a displayable plate retain a pending label. See the asset [provenance note](../../assets/cevni/annex7/rev6/README.md).
+
 ## Decisions for the learner library
 
 - The 99 current codes occur in Rev.6 Annex 7. Their card titles are generally shortened teaching summaries; this is **code presence**, not a certification of exact text or image.
 - Keep the sign name/meaning cards as text while reviewing the plates. A code-only rectangle is a placeholder, not a sign recognition image. Exclude it from any image recognition assessment.
 - Do not badge any of the eight present SVG files as *exact official art*. They are Project Watch schematic drawings. The A.1 board, B.7 disc and E.1 board are close representations of particular variants; the official family also includes other forms.
-- Remove the A.2, D.1 and E.2 drawings from learner sign recognition until replaced. A.2 depicts two same-sized arrows rather than the Annex 7 pair; D.1 is a yellow band and white stripe, whereas its actual variants are yellow diamonds/circles; E.2 uses a different lightning shape. B.1 shows an upward rather than the source's right-pointing example arrow (the sign itself is direction-dependent). C.1 says 1.65 while the source example says 2.20, so label it explicitly as a variable-depth example if retained.
+- The earlier A.2, D.1 and E.2 drawings were withheld in build 1.79.0 and A.2, six D.1 variants and E.2 gained source-plate replacements. A.2 depicts two same-sized arrows rather than the Annex 7 pair; D.1 is a yellow band and white stripe, whereas its actual variants are yellow diamonds/circles; E.2 uses a different lightning shape. B.1 shows an upward rather than the source's right-pointing example arrow (the sign itself is direction-dependent). C.1 says 1.65 while the source example says 2.20, so label it explicitly as a variable-depth example if retained.
 - A.10's official figure was replaced by Corrigendum 2 (November 2024); use the corrected figure for any new asset.
 
 ## Missing register entries
@@ -23,4 +27,4 @@ Some are alternate presentations of an umbrella meaning already listed (for exam
 
 ## Current separate files
 
-`assets/cevni/module03/` contains eight Annex 7 SVGs and ten Annex 8 SVGs. The present Annex 7 catalogue matches seven exact card codes; the eighth file is generic `D.1` while the register has `D.1a–f`. The other 92 current cards have no matching separate artwork. This audit does not approve any picture for examination use.
+`assets/cevni/module03/` contains eight Annex 7 SVGs and ten Annex 8 SVGs. The present Annex 7 catalogue matches seven exact card codes; the eighth file is generic `D.1` while the register has `D.1a–f`. At the time of the original audit, 92 current cards had no exact matching separate artwork. Build 1.79.0 supplies six D.1 variant plates; further work remains. This audit does not approve unreviewed drawings for examination use.
