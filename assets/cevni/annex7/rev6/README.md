@@ -9,3 +9,7 @@ These PNG crops reproduce individual sign artwork from *CEVNI, European Code for
 | `annex7-e-2.png` | 137 | Overhead cable crossing |
 
 The files are separate image assets. Catalogue records refer to the paths; no image bytes are embedded in HTML or JavaScript.
+
+## Family A expansion in build 1.80.0
+
+Individual plates from printed pp. 124–129 were added for A.1a–f, A.1.1, A.3, A.4, A.4.1, A.5, A.5.1, A.6–A.8, A.9a–b, A.11a–c, and A.12–A.20. The eleven lettered A.1, A.9 and A.11 forms have their own catalogue records. Generic A.9 and A.11 headings remain text-only. A.10 remains text-only until its replacement figure in Corrigendum 2 is obtained and checked.
