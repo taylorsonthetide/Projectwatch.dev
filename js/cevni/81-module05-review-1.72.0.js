@@ -66,4 +66,5 @@ const oldStart=window.cv1480Start;
 window.cv1480Start=function(i,stage){if(i===4){window.cevniOpenLesson(4,stage==='assessment'?brief.length:0);return}return oldStart.apply(this,arguments)};
 window.PW1720_M05={build:'1.72.0',briefings:brief.length,questions:counts,visuals:visuals.length,audio:3,passMark:bank.passMark};
 cevniRenderModules();
+cevniRenderSounds();
 })();
