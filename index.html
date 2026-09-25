@@ -17305,8 +17305,9 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
  <div id="cevniDevBar" class="cevniDevBar" hidden><b>DEVELOPMENT TEST MODE</b><span id="cevniDevStatus">Answers visible • free navigation</span><button onclick="cevniDevPrev()">← BACK</button><button onclick="cevniDevReveal()">SHOW ANSWER</button><button onclick="cevniDevNext()">NEXT →</button><button onclick="cevniDevReset()">RESET TEST</button><button onclick="cevniDevToggle()">EXIT</button></div>
  <div class="cevniHero"><div><div class="ver">PROJECT WATCH • INLAND WATERWAYS PATHWAY</div><h1 id="cevniCourseTitle">CEVNI — European Inland Waterways</h1><p>Learn the core European inland-waterway framework through Project Watch teaching, recognition, sound, practical scenarios and an original mock assessment. This pathway is deliberately separate from the COLREG course.</p></div><div class="cevniBadge"><small>INDEPENDENT TRAINING</small><b>CEVNI</b><span>REV.6 + CURRENT AMENDMENTS</span></div></div>
  <div class="cevniBasis"><div><small>PRIMARY BASIS</small><b>UNECE CEVNI Revision 6</b></div><div><small>UPDATE LAYER</small><b>Corrigenda + Amendments 1 &amp; 2</b></div><div><small>SIGNS</small><b>CEVNI Annex 7 + SIGNI context</b></div><div><small>STATUS</small><b>Training / mock only</b></div></div>
- <div class="cevniNav"><button class="active" onclick="cevniShow('course',this)">COURSE</button><button onclick="cevniShow('signs',this)">SIGNS &amp; MARKS</button><button onclick="cevniShow('sound',this)">SOUND LAB</button><button onclick="cevniShow('scenarios',this)">PRACTICAL</button><button onclick="pwOpenCevniMock()">MOCK EXAM ↗</button><button onclick="cevniShow('manage',this)">MANAGE</button><button onclick="showModule('home')">← PROJECT WATCH</button></div>
+ <div class="cevniNav"><button class="active" onclick="cevniShow('course',this)">COURSE</button><button onclick="cevniShow('signs',this)">SIGNS &amp; MARKS</button><button onclick="cevniShow('sound',this)">SOUND LAB</button><button onclick="cevniShow('scenarios',this)">PRACTICAL</button><button onclick="pwOpenCevniMock()">MOCK EXAM ↗</button><button onclick="showModule('home')">← PROJECT WATCH</button></div>
  <div id="cevniCourse" class="cevniSection active">
+  <p class="cevniSource"><b>Waterway rules:</b> CEVNI is a harmonised basis for national inland-waterway codes. Before navigating, consult the national, regional and local rules for the waterway concerned.</p>
   <div class="cevniProgress"><div><small>CEVNI PATHWAY PROGRESS</small><b id="cevniProgressText">0 / 9 MODULES REVIEWED</b></div><button onclick="cevniResetProgress()">RESET CEVNI PROGRESS</button></div>
   <div class="cvCourseMap">
    <div class="cvCourseMapHead"><div><div class="ver">COURSE MAP</div><h2>Nine modules. One inland progression.</h2></div><p>The next module unlocks when the previous module is reviewed in Course Mode. The CEVNI training libraries remain open at all times.</p></div>
@@ -17324,7 +17325,6 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
  <div id="cevniSound" class="cevniSection"><div class="cevniPanel"><div class="ver">INLAND SOUND SIGNAL TRAINER</div><h2>Hear the pattern — then identify the meaning.</h2><p class="cevniNote">Training timing uses approximately 1 second for a short blast and 4 seconds for a long blast. Actual carriage/use requirements depend on vessel and local rules.</p><div id="cevniSoundRows"></div></div></div>
  <div id="cevniScenarios" class="cevniSection"><div class="cevniPanel"><div class="ver">PRACTICAL APPLICATION • WATERWAY SCENARIO ENGINE</div><h2>Navigate the situation</h2><p class="cevniLead">Read the waterway, identify the regulatory marks and commit your vessel to the safe route. Start with clean training scenes; later stages can reuse the same engine with verified photographic assets.</p><div id="cv1481Simulator"></div><div class="cv1481Legacy"><div class="ver">ADDITIONAL PRACTICE</div><h3>Existing inland navigation situations</h3><div id="cevniScenarioArea"></div></div></div></div>
  <div id="cevniMock" class="cevniSection"><div class="cevniPanel"><div class="ver">PROJECT WATCH • ORIGINAL CEVNI MOCK</div><h2>30 questions • teaching coverage across the pathway</h2><p class="cevniNote">This is an independent Project Watch training assessment, not an official examination.</p><button onclick="cevniStartMock()">START NEW 30-QUESTION MOCK →</button><div id="cevniMockArea"></div></div></div>
- <div id="cevniManage" class="cevniSection"><div class="cevniPanel"><div class="ver">REUSABLE COURSE ENGINE</div><h2>Branding &amp; delivery configuration</h2><p class="cevniNote">The inland course is data-driven so the displayed course/centre identity can be changed without rewriting the teaching engine.</p><div class="cevniBrandBox"><b>Current configuration</b><p>Course: <code id="cvCfgCourse">CEVNI — European Inland Waterways</code><br>Provider: <code id="cvCfgProvider">Project Watch</code><br>Assessment label: <code id="cvCfgExam">Project Watch CEVNI Mock</code></p><p>Change these values in <code>PW_CEVNI_CONFIG</code>; module data, progress and assessment logic remain separate.</p></div><div class="cevniSource"><b>Source-control note:</b> Core teaching is based on UNECE CEVNI Revision 6 and its published corrections/amendments. CEVNI is a harmonised basis for national inland-waterway codes; learners must consult the applicable national, regional and local rules for the waterway concerned.</div></div></div>
 </section>
 
 <section id="libraryPage" class="appPage library20">
@@ -25169,7 +25169,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 <script src="libraries/cevni/annex7-signs-1.70.0.js"></script>
 <script src="libraries/cevni/early-teaching-1.70.0.js"></script>
 <script src="libraries/cevni/deep-practice-1.70.3.js"></script>
-<script id="pw-cevni-engine-14700" src="js/cevni/69-pw-cevni-engine-library-backed.js"></script>
+<script id="pw-cevni-engine-14700" src="js/cevni/69-pw-cevni-engine-library-backed-1.78.3.js"></script>
 <!-- BUILD 1.47.6 CEVNI WAV AUDIO: CEVNI Sound Lab uses embedded pre-rendered WAV horn files via HTMLAudioElement; escaped-newline bleed removed. -->
 
 <!-- PROJECT WATCH CEVNI 1.47.11 — CONTENT/DATA ARCHITECTURE -->
@@ -27000,6 +27000,6 @@ window.PW16501_M03_COMPLETE={
 <script src="js/cevni/89-mock-gate-1.77.0.js"></script>
 <link rel="stylesheet" href="css/cevni-signs-marks-1.78.2.css">
 <script src="js/cevni/90-signs-marks-1.78.2.js"></script>
-<script src="js/build-identity-1.78.2.js"></script>
+<script src="js/build-identity-1.78.3.js"></script>
 </body>
 </html>
