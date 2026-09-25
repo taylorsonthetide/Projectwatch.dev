@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.76.0</title>
+<title>Project Watch 1.77.0</title>
 <style id="pw-build-loading-style">html:not(.pw-build-ready) .ver,html:not(.pw-build-ready) #cevniPage .pwBuild,html:not(.pw-build-ready) #cevniPage .build{visibility:hidden!important}</style>
 <style>
 :root{
@@ -16642,7 +16642,7 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
 </div>
 <div class="app">
 <header>
-  <div><div class="brand">PROJECT WATCH</div><div class="ver" id="pwVisibleBuild">BUILD 1.76.0</div></div>
+  <div><div class="brand">PROJECT WATCH</div><div class="ver" id="pwVisibleBuild">BUILD 1.77.0</div></div>
   <div class="headerRight">
     <button class="vesselProfileOpen" onclick="openVesselSetup(false)">⚓ MY VESSEL</button>
     <div id="hdrMode">WATCH ONE</div>
@@ -17305,12 +17305,12 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
  <div id="cevniDevBar" class="cevniDevBar" hidden><b>DEVELOPMENT TEST MODE</b><span id="cevniDevStatus">Answers visible • free navigation</span><button onclick="cevniDevPrev()">← BACK</button><button onclick="cevniDevReveal()">SHOW ANSWER</button><button onclick="cevniDevNext()">NEXT →</button><button onclick="cevniDevReset()">RESET TEST</button><button onclick="cevniDevToggle()">EXIT</button></div>
  <div class="cevniHero"><div><div class="ver">PROJECT WATCH • INLAND WATERWAYS PATHWAY</div><h1 id="cevniCourseTitle">CEVNI — European Inland Waterways</h1><p>Learn the core European inland-waterway framework through Project Watch teaching, recognition, sound, practical scenarios and an original mock assessment. This pathway is deliberately separate from the COLREG course.</p></div><div class="cevniBadge"><small>INDEPENDENT TRAINING</small><b>CEVNI</b><span>REV.6 + CURRENT AMENDMENTS</span></div></div>
  <div class="cevniBasis"><div><small>PRIMARY BASIS</small><b>UNECE CEVNI Revision 6</b></div><div><small>UPDATE LAYER</small><b>Corrigenda + Amendments 1 &amp; 2</b></div><div><small>SIGNS</small><b>CEVNI Annex 7 + SIGNI context</b></div><div><small>STATUS</small><b>Training / mock only</b></div></div>
- <div class="cevniNav"><button class="active" onclick="cevniShow('course',this)">COURSE</button><button onclick="cevniShow('signs',this)">SIGNS &amp; MARKS</button><button onclick="cevniShow('sound',this)">SOUND LAB</button><button onclick="cevniShow('scenarios',this)">PRACTICAL</button><button onclick="cevniShow('mock',this)">30-Q MOCK</button><button onclick="cevniShow('manage',this)">MANAGE</button><button onclick="showModule('home')">← PROJECT WATCH</button></div>
+ <div class="cevniNav"><button class="active" onclick="cevniShow('course',this)">COURSE</button><button onclick="cevniShow('signs',this)">SIGNS &amp; MARKS</button><button onclick="cevniShow('sound',this)">SOUND LAB</button><button onclick="cevniShow('scenarios',this)">PRACTICAL</button><button onclick="pwOpenCevniMock()">MOCK EXAM ↗</button><button onclick="cevniShow('manage',this)">MANAGE</button><button onclick="showModule('home')">← PROJECT WATCH</button></div>
  <div id="cevniCourse" class="cevniSection active">
   <div class="cevniProgress"><div><small>CEVNI PATHWAY PROGRESS</small><b id="cevniProgressText">0 / 9 MODULES REVIEWED</b></div><button onclick="cevniResetProgress()">RESET CEVNI PROGRESS</button></div>
   <div class="cvCourseMap">
    <div class="cvCourseMapHead"><div><div class="ver">COURSE MAP</div><h2>Nine modules. One inland progression.</h2></div><p>The next module unlocks when the previous module is reviewed in Course Mode. The CEVNI training libraries remain open at all times.</p></div>
-   <div id="cevniModuleGrid" class="cvStageRail"></div>
+   <div id="cevniModuleGrid" class="cvStageRail"></div><div id="pwMockGate" class="pwMockGate"><div><span>FINAL ASSESSMENT</span><h3>CEVNI Mock Exam</h3><p>Separate 30-question practice exam • 20 minutes • opens after all nine modules are complete.</p><small id="pwMockGateState">LOCKED • COMPLETE MODULES 01–09</small></div><button id="pwMockOpen" type="button" onclick="pwOpenCevniMock()" disabled>OPEN MOCK EXAM ↗</button></div>
   </div>
   <div class="cvLibraryBar" aria-label="CEVNI training libraries">
    <button class="cvLibraryTile" onclick="cevniShow('signs')"><b>SIGNS &amp; MARKS</b><small>Annex 7 • Annex 8 • Recognition</small></button>
@@ -26996,6 +26996,8 @@ window.PW16501_M03_COMPLETE={
 <script src="libraries/cevni/module09-question-bank-1.76.0.js"></script>
 <script src="libraries/cevni/module09-visuals-1.76.0.js"></script>
 <script src="js/cevni/87-module09-final-1.76.0.js"></script>
-<script src="js/build-identity-1.76.0.js"></script>
+<link rel="stylesheet" href="css/cevni-mock-gate-1.77.0.css">
+<script src="js/cevni/89-mock-gate-1.77.0.js"></script>
+<script src="js/build-identity-1.77.0.js"></script>
 </body>
 </html>

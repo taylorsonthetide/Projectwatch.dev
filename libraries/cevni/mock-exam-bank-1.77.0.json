@@ -1,0 +1,1481 @@
+{
+  "version": "1.77.0",
+  "length": 30,
+  "minutes": 20,
+  "passMark": 22,
+  "questions": [
+    {
+      "id": "PW-MOCK-001",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign A.1 indicate?",
+      "answers": [
+        "Entry is prohibited",
+        "Entry is permitted",
+        "An overhead cable crosses",
+        "The depth is limited"
+      ],
+      "correct": 0,
+      "explanation": "A.1: No entry.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-a-1.svg"
+    },
+    {
+      "id": "PW-MOCK-002",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign A.1 on your route. Which reading should you use?",
+      "answers": [
+        "An overhead cable crosses",
+        "Entry is permitted",
+        "Entry is prohibited",
+        "The depth is limited"
+      ],
+      "correct": 2,
+      "explanation": "A.1: No entry.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-a-1.svg"
+    },
+    {
+      "id": "PW-MOCK-003",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign A.2 indicate?",
+      "answers": [
+        "Overtaking is prohibited",
+        "Overtaking is compulsory",
+        "Entry is prohibited",
+        "A sound signal is required"
+      ],
+      "correct": 0,
+      "explanation": "A.2: No overtaking.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-a-2.svg"
+    },
+    {
+      "id": "PW-MOCK-004",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign A.2 on your route. Which reading should you use?",
+      "answers": [
+        "Entry is prohibited",
+        "Overtaking is compulsory",
+        "Overtaking is prohibited",
+        "A sound signal is required"
+      ],
+      "correct": 2,
+      "explanation": "A.2: No overtaking.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-a-2.svg"
+    },
+    {
+      "id": "PW-MOCK-005",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign B.1 indicate?",
+      "answers": [
+        "Proceed in the direction shown",
+        "Keep outside the marked channel",
+        "Overtaking is prohibited",
+        "Entry is permitted"
+      ],
+      "correct": 0,
+      "explanation": "B.1: Proceed in direction shown.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-b-1.svg"
+    },
+    {
+      "id": "PW-MOCK-006",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign B.1 on your route. Which reading should you use?",
+      "answers": [
+        "Overtaking is prohibited",
+        "Keep outside the marked channel",
+        "Proceed in the direction shown",
+        "Entry is permitted"
+      ],
+      "correct": 2,
+      "explanation": "B.1: Proceed in direction shown.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-b-1.svg"
+    },
+    {
+      "id": "PW-MOCK-007",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign B.7 indicate?",
+      "answers": [
+        "Give a sound signal",
+        "Sound signals are prohibited",
+        "A cable crosses overhead",
+        "Anchor here"
+      ],
+      "correct": 0,
+      "explanation": "B.7: Give a sound signal.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-b-7.svg"
+    },
+    {
+      "id": "PW-MOCK-008",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign B.7 on your route. Which reading should you use?",
+      "answers": [
+        "A cable crosses overhead",
+        "Sound signals are prohibited",
+        "Give a sound signal",
+        "Anchor here"
+      ],
+      "correct": 2,
+      "explanation": "B.7: Give a sound signal.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-b-7.svg"
+    },
+    {
+      "id": "PW-MOCK-009",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign C.1 indicate?",
+      "answers": [
+        "Depth of water is limited",
+        "The fairway is unrestricted",
+        "A recommended opening lies ahead",
+        "Entry is prohibited"
+      ],
+      "correct": 0,
+      "explanation": "C.1: Depth of water limited.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-c-1.svg"
+    },
+    {
+      "id": "PW-MOCK-010",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign C.1 on your route. Which reading should you use?",
+      "answers": [
+        "A recommended opening lies ahead",
+        "The fairway is unrestricted",
+        "Depth of water is limited",
+        "Entry is prohibited"
+      ],
+      "correct": 2,
+      "explanation": "C.1: Depth of water limited.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-c-1.svg"
+    },
+    {
+      "id": "PW-MOCK-011",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign D.1 indicate?",
+      "answers": [
+        "A recommended opening is indicated",
+        "All traffic must stop",
+        "Overtaking is prohibited",
+        "The depth is limited"
+      ],
+      "correct": 0,
+      "explanation": "D.1: Recommended opening.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-d-1.svg"
+    },
+    {
+      "id": "PW-MOCK-012",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign D.1 on your route. Which reading should you use?",
+      "answers": [
+        "Overtaking is prohibited",
+        "All traffic must stop",
+        "A recommended opening is indicated",
+        "The depth is limited"
+      ],
+      "correct": 2,
+      "explanation": "D.1: Recommended opening.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-d-1.svg"
+    },
+    {
+      "id": "PW-MOCK-013",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign E.1 indicate?",
+      "answers": [
+        "Entry is permitted",
+        "Entry is prohibited",
+        "A sound signal is required",
+        "Vessels must anchor"
+      ],
+      "correct": 0,
+      "explanation": "E.1: Entry permitted.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-e-1.svg"
+    },
+    {
+      "id": "PW-MOCK-014",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign E.1 on your route. Which reading should you use?",
+      "answers": [
+        "A sound signal is required",
+        "Entry is prohibited",
+        "Entry is permitted",
+        "Vessels must anchor"
+      ],
+      "correct": 2,
+      "explanation": "E.1: Entry permitted.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-e-1.svg"
+    },
+    {
+      "id": "PW-MOCK-015",
+      "module": 3,
+      "prompt": "What does the illustrated Annex 7 sign E.2 indicate?",
+      "answers": [
+        "An overhead cable crosses",
+        "There is no vertical obstruction",
+        "Entry is prohibited",
+        "The depth is limited"
+      ],
+      "correct": 0,
+      "explanation": "E.2: Overhead cable crossing.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-e-2.svg"
+    },
+    {
+      "id": "PW-MOCK-016",
+      "module": 3,
+      "prompt": "You encounter the illustrated sign E.2 on your route. Which reading should you use?",
+      "answers": [
+        "Entry is prohibited",
+        "There is no vertical obstruction",
+        "An overhead cable crosses",
+        "The depth is limited"
+      ],
+      "correct": 2,
+      "explanation": "E.2: Overhead cable crossing.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": "assets/cevni/module03/annex7-e-2.svg"
+    },
+    {
+      "id": "PW-MOCK-017",
+      "module": 3,
+      "prompt": "In Annex 7, what type of sign belongs to group A?",
+      "answers": [
+        "Prohibitory",
+        "Mandatory",
+        "Restrictive",
+        "Informative"
+      ],
+      "correct": 0,
+      "explanation": "Annex 7 group A is prohibitory.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-018",
+      "module": 3,
+      "prompt": "In Annex 7, what type of sign belongs to group B?",
+      "answers": [
+        "Mandatory",
+        "Prohibitory",
+        "Informative",
+        "Recommendatory"
+      ],
+      "correct": 0,
+      "explanation": "Annex 7 group B is mandatory.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-019",
+      "module": 3,
+      "prompt": "In Annex 7, what type of sign belongs to group C?",
+      "answers": [
+        "Restrictive",
+        "Prohibitory",
+        "Mandatory",
+        "Informative"
+      ],
+      "correct": 0,
+      "explanation": "Annex 7 group C is restrictive.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-020",
+      "module": 3,
+      "prompt": "In Annex 7, what type of sign belongs to group D?",
+      "answers": [
+        "Recommendatory",
+        "Mandatory",
+        "Prohibitory",
+        "Informative"
+      ],
+      "correct": 0,
+      "explanation": "Annex 7 group D is recommendatory.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-021",
+      "module": 3,
+      "prompt": "In Annex 7, what type of sign belongs to group E?",
+      "answers": [
+        "Informative",
+        "Prohibitory",
+        "Restrictive",
+        "Mandatory"
+      ],
+      "correct": 0,
+      "explanation": "Annex 7 group E is informative.",
+      "sourceRefs": [
+        "CEVNI Rev.6 Annex 7"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-022",
+      "module": 1,
+      "prompt": "Before entering an unfamiliar inland waterway, what should be checked first?",
+      "answers": [
+        "Applicable local rules, notices and competent-authority information",
+        "Only the open-sea collision rules",
+        "Nothing if the vessel is under 20 m",
+        "Follow the last vessel without checking the current notices"
+      ],
+      "correct": 0,
+      "explanation": "CEVNI provides a harmonised basis, but the applicable local layer still matters.",
+      "sourceRefs": [
+        "Chapter 1 + competent-authority/local layer"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-023",
+      "module": 1,
+      "prompt": "Why should temporary navigation notices be checked before departure?",
+      "answers": [
+        "They can change closures, restrictions and operating arrangements",
+        "They permanently replace CEVNI",
+        "They are only for commercial vessels",
+        "Follow the last vessel without checking the current notices"
+      ],
+      "correct": 0,
+      "explanation": "Temporary directions can materially change the passage plan.",
+      "sourceRefs": [
+        "Chapter 1 + competent-authority/local layer"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-024",
+      "module": 1,
+      "prompt": "What is the safest way to interpret the inland navigation picture?",
+      "answers": [
+        "Combine signs, traffic, lights, sound, radio and physical constraints",
+        "Use one isolated cue only",
+        "Follow AIS regardless of what is visible",
+        "Follow the last vessel without checking the current notices"
+      ],
+      "correct": 0,
+      "explanation": "Inland navigation is a combined evidence problem.",
+      "sourceRefs": [
+        "Chapter 1 + competent-authority/local layer"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-025",
+      "module": 1,
+      "prompt": "When should a bridge, lock or reporting restriction be identified?",
+      "answers": [
+        "Early enough to slow, wait or reposition safely",
+        "Only after entering the restricted area",
+        "After another vessel acts first",
+        "Follow the last vessel without checking the current notices"
+      ],
+      "correct": 0,
+      "explanation": "Early decisions preserve options in constrained water.",
+      "sourceRefs": [
+        "Chapter 1 + competent-authority/local layer"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-026",
+      "module": 1,
+      "prompt": "What does Project Watch teach before assessment?",
+      "answers": [
+        "Rule, recognition and context practice",
+        "The mock answer key",
+        "Only terminology",
+        "Follow the last vessel without checking the current notices"
+      ],
+      "correct": 0,
+      "explanation": "Assessment should confirm material already taught and practised.",
+      "sourceRefs": [
+        "Chapter 1 + competent-authority/local layer"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-027",
+      "module": 2,
+      "prompt": "A sailing vessel starts using mechanical propulsion. For CEVNI classification, what changes?",
+      "answers": [
+        "It is treated as a motorized vessel",
+        "It remains a sailing vessel for every rule",
+        "It becomes a floating establishment",
+        "Assume every vessel has the same classification"
+      ],
+      "correct": 0,
+      "explanation": "Mechanical propulsion changes the regulatory classification.",
+      "sourceRefs": [
+        "Chapter 1 definitions + Chapter 2"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-028",
+      "module": 2,
+      "prompt": "Why is “small craft” not simply shorthand for “outside the rules”?",
+      "answers": [
+        "Specific provisions still apply and the definition has exclusions",
+        "Small craft have automatic priority",
+        "Small craft never display signals",
+        "Assume every vessel has the same classification"
+      ],
+      "correct": 0,
+      "explanation": "Classification determines which provisions apply; it does not remove responsibility.",
+      "sourceRefs": [
+        "Chapter 1 definitions + Chapter 2"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-029",
+      "module": 2,
+      "prompt": "Why must a navigator consider the complete formation rather than one hull?",
+      "answers": [
+        "Tows, pushed and side-by-side formations can act as one traffic unit",
+        "Only the nearest bow matters",
+        "Formation type affects paint colour only",
+        "Assume every vessel has the same classification"
+      ],
+      "correct": 0,
+      "explanation": "The formation can be larger and less manoeuvrable than one visible hull suggests.",
+      "sourceRefs": [
+        "Chapter 1 definitions + Chapter 2"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-030",
+      "module": 2,
+      "prompt": "What is air draught used to assess?",
+      "answers": [
+        "Overhead clearance",
+        "Water depth",
+        "Radio range",
+        "Assume every vessel has the same classification"
+      ],
+      "correct": 0,
+      "explanation": "Air draught is an operational limit at bridges, cables and other overhead restrictions.",
+      "sourceRefs": [
+        "Chapter 1 definitions + Chapter 2"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-031",
+      "module": 2,
+      "prompt": "What should permanent vessel marks be distinguished from?",
+      "answers": [
+        "Temporary navigation/status signals",
+        "The vessel name",
+        "Engine instruments",
+        "Assume every vessel has the same classification"
+      ],
+      "correct": 0,
+      "explanation": "Identification information and temporary operational signals serve different purposes.",
+      "sourceRefs": [
+        "Chapter 1 definitions + Chapter 2"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-032",
+      "module": 4,
+      "prompt": "What should be described before naming a visual signal?",
+      "answers": [
+        "Colours, number, positions and aspect actually visible",
+        "The answer you expect",
+        "Only AIS target type",
+        "Treat the signal as permission to enter regardless of its state"
+      ],
+      "correct": 0,
+      "explanation": "Observe first, interpret second.",
+      "sourceRefs": [
+        "Chapter 3 + Annexes 3–5"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-033",
+      "module": 4,
+      "prompt": "Why does aspect matter?",
+      "answers": [
+        "The same vessel can present a different light picture from different directions",
+        "It changes the legal waterway",
+        "It changes sound duration",
+        "Treat the signal as permission to enter regardless of its state"
+      ],
+      "correct": 0,
+      "explanation": "Relative viewing angle changes what can legitimately be seen.",
+      "sourceRefs": [
+        "Chapter 3 + Annexes 3–5"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-034",
+      "module": 4,
+      "prompt": "How should day and night signals be learned?",
+      "answers": [
+        "As related ways of communicating vessel status/operation",
+        "As unrelated lists",
+        "By colour alone",
+        "Treat the signal as permission to enter regardless of its state"
+      ],
+      "correct": 0,
+      "explanation": "Connecting day and night presentations improves recognition.",
+      "sourceRefs": [
+        "Chapter 3 + Annexes 3–5"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-035",
+      "module": 4,
+      "prompt": "Can infrastructure lights be treated as vessel navigation lights?",
+      "answers": [
+        "No; locks and bridges can display operating instructions",
+        "Yes, always",
+        "Only when AIS is absent",
+        "Treat the signal as permission to enter regardless of its state"
+      ],
+      "correct": 0,
+      "explanation": "Infrastructure signals govern the controlled passage or installation.",
+      "sourceRefs": [
+        "Chapter 3 + Annexes 3–5"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-036",
+      "module": 4,
+      "prompt": "What should happen if one visible cue conflicts with the rest of the picture?",
+      "answers": [
+        "Verify using the complete situation before committing",
+        "Force the interpretation to fit",
+        "Ignore the lookout",
+        "Treat the signal as permission to enter regardless of its state"
+      ],
+      "correct": 0,
+      "explanation": "No single cue should override contradictory evidence.",
+      "sourceRefs": [
+        "Chapter 3 + Annexes 3–5"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-037",
+      "module": 5,
+      "prompt": "How many very short blasts are required for the imminent collision-danger series?",
+      "answers": [
+        "At least six",
+        "Exactly five",
+        "Exactly four",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "The series has no fewer than six very short blasts.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-038",
+      "module": 5,
+      "prompt": "A convoy must give a prescribed sound signal. Which vessel gives it?",
+      "answers": [
+        "The vessel carrying the boatmaster",
+        "Every vessel in unison",
+        "Only the last vessel",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.01 assigns it to the vessel carrying the boatmaster.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.01"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-039",
+      "module": 5,
+      "prompt": "May a small craft proceeding alone use the general Annex 6 sound signals when necessary?",
+      "answers": [
+        "Yes, under Article 4.02",
+        "No, small craft must always be silent",
+        "Only if AIS is fitted",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.02 provides the small-craft general-signal allowance.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.02"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-040",
+      "module": 5,
+      "prompt": "When may a vessel use another sound for vessel-to-shore communication?",
+      "answers": [
+        "If it cannot be confused with a prescribed signal",
+        "Whenever the operator prefers it",
+        "Only if it sounds exactly like a prescribed signal",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.03 prohibits confusing or misusing regulated signals.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.03"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-041",
+      "module": 5,
+      "prompt": "A vessel in distress needs assistance. Which audible signals may it use?",
+      "answers": [
+        "A bell or repeated long blasts",
+        "Five short blasts only",
+        "One short and one long once",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.04 provides bell or repeated long blasts.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-042",
+      "module": 5,
+      "prompt": "Which overtaking request asks to pass on the starboard side?",
+      "answers": [
+        "Two long followed by one short",
+        "Two long followed by two short",
+        "One long followed by one short",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "The request for starboard is two long and one short.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.10; annex 6"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-043",
+      "module": 5,
+      "prompt": "After leaving a harbour or tributary, which sound announces an intention to cross the waterway?",
+      "answers": [
+        "Three long blasts",
+        "Three short blasts",
+        "One long followed by two short",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "Three long blasts announces the crossing under Article 6.16.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.16; annex 6"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-044",
+      "module": 5,
+      "prompt": "Which pattern identifies a ferry not navigating by radar in reduced visibility?",
+      "answers": [
+        "One long plus four short, repeated within one minute",
+        "One long only, repeated every five minutes",
+        "Four long blasts once",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "The non-radar ferry signal differs from that for a vessel proceeding alone.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.33; annex 6"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-045",
+      "module": 5,
+      "prompt": "What does the three-tone signal in Annex 6 point you toward?",
+      "answers": [
+        "A specified radar-navigation situation in reduced visibility",
+        "An ordinary port turn",
+        "The non-radar ferry signal",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "This radar sound belongs with Module 8’s detailed radar procedure.",
+      "sourceRefs": [
+        "CEVNI Rev.6 annex 6"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-046",
+      "module": 5,
+      "prompt": "What must an equipped vessel do before a blind section or narrow channel?",
+      "answers": [
+        "Report on the allocated ship-to-ship channel",
+        "Rely on AIS alone",
+        "Switch off nautical information to avoid interruption",
+        "Assume the sound signal cancels the give-way duties"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.05 requires the report before the specified location.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-047",
+      "module": 6,
+      "prompt": "What may a small craft require from a vessel that is not a small craft under Article 6.02?",
+      "answers": [
+        "It may not require that vessel to give way",
+        "It may demand priority in the centre of the fairway",
+        "It may demand that vessel reverse",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "The small craft must leave sufficient room for the other vessel to hold course and manoeuvre.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.02"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-048",
+      "module": 6,
+      "prompt": "In the general crossing rule, when must a vessel give way to another vessel?",
+      "answers": [
+        "When it has the other vessel to starboard and collision risk exists, subject to exceptions",
+        "Whenever the other vessel is on port",
+        "Only when the other vessel is overtaking",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.03 bis contains the general starboard-side rule and stated exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.03 bis"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-049",
+      "module": 6,
+      "prompt": "Between small craft of different categories, which craft normally gives way to a small craft under sail in a crossing?",
+      "answers": [
+        "A motorized small craft",
+        "The sailing small craft in every case",
+        "Whichever craft is slower",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "The category-specific crossing provision applies, with the marked-fairway qualification.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.03 bis"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-050",
+      "module": 6,
+      "prompt": "Two small craft meet with risk of collision. What is the normal direction each veers?",
+      "answers": [
+        "Starboard",
+        "Port",
+        "Neither craft should act",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.04 provides the small-craft meeting rule, subject to its qualifications.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.04"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-051",
+      "module": 6,
+      "prompt": "What course does an Article 6.04 blue board from an upstream vessel indicate to downstream traffic?",
+      "answers": [
+        "A starboard-to-starboard meeting",
+        "A port turn to enter a harbour",
+        "A demand to overtake to port",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "The upstream vessel indicates the passing course under Article 6.04.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.04"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-052",
+      "module": 6,
+      "prompt": "A high-speed vessel meets another vessel. What communication does Article 6.06 require for agreement on the meeting?",
+      "answers": [
+        "Radiotelephony",
+        "AIS text only",
+        "A hand signal only",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "The high-speed meeting rule calls for agreement by radiotelephony.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.06"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-053",
+      "module": 6,
+      "prompt": "What is the purpose of Article 6.07's narrow-fairway procedure?",
+      "answers": [
+        "Avoid meetings where the fairway is not clearly wide enough",
+        "Give the faster vessel automatic priority",
+        "Let every vessel enter together",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "The article structures passage and waiting in constrained width.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.07"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-054",
+      "module": 6,
+      "prompt": "A waterway sign prohibits meeting in the next section. What does Article 6.08 require you to respect?",
+      "answers": [
+        "The signed restriction or alternating-traffic control",
+        "Only a radio call from another vessel",
+        "Only what AIS displays",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.08 covers meeting prohibitions and alternate one-way traffic.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.08"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-055",
+      "module": 6,
+      "prompt": "Who must be certain an overtake can be completed without danger?",
+      "answers": [
+        "The overtaking vessel",
+        "Only the vessel being overtaken",
+        "Only the authority controlling the bank",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "The initial duty is on the overtaking vessel under Article 6.09.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.09"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-056",
+      "module": 6,
+      "prompt": "Does an empty-looking fairway cancel an applicable overtaking prohibition sign?",
+      "answers": [
+        "No; the sign still governs",
+        "Yes if your vessel is faster",
+        "Yes if you sound two long blasts",
+        "Hold course and speed until the vessels are alongside"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.11's signed prohibition remains applicable.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.11"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-057",
+      "module": 7,
+      "prompt": "Which rule applies at a bridge opening that is not clearly wide enough for simultaneous passage?",
+      "answers": [
+        "The narrow-fairway meeting procedure",
+        "Automatic priority for the smaller vessel",
+        "Overtaking permission for the faster vessel",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.24 applies Article 6.07 unless width is sufficient.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.24"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-058",
+      "module": 7,
+      "prompt": "What does a red signal at a fixed-bridge opening indicate?",
+      "answers": [
+        "That opening is prohibited for navigation",
+        "That it is the recommended opening",
+        "That only small craft may enter",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.25 provides the red/A.1 closure marking.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-059",
+      "module": 7,
+      "prompt": "What does the D.1 family indicate at a fixed bridge?",
+      "answers": [
+        "A recommended opening, with its direction governed by the variant",
+        "A compulsory mooring point",
+        "A closed lock chamber",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "The specific D.1 variant and associated marking determine direction.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.25; annex 7"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-060",
+      "module": 7,
+      "prompt": "What must be included when checking headroom?",
+      "answers": [
+        "Full air draught, equipment and actual water level",
+        "Water draught only",
+        "Beam and propeller diameter only",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Clearance is measured against the vessel’s actual vertical profile.",
+      "sourceRefs": [
+        "CEVNI Rev.6 arts. 6.24–6.25"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-061",
+      "module": 7,
+      "prompt": "What should a boatmaster do on approach to a movable bridge?",
+      "answers": [
+        "Reduce speed and comply with bridge staff directions",
+        "Overtake the queue to reach the span",
+        "Ignore B.5 if passage is delayed",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.26 governs the approach.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-062",
+      "module": 7,
+      "prompt": "A movable bridge shows red and green together. What is the passage state?",
+      "answers": [
+        "Still prohibited while opening is prepared",
+        "Open for passage in both directions",
+        "Open only for vessels under 20 m",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "The mixed display is preparation, not permission.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-063",
+      "module": 7,
+      "prompt": "What do two red lights vertically at a movable bridge mean?",
+      "answers": [
+        "Opening for navigation is suspended",
+        "Bridge is ready for immediate passage",
+        "Only downstream traffic may pass",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.26 distinguishes vertical red from the normal closed state.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.26"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-064",
+      "module": 7,
+      "prompt": "What ordinarily authorizes passage through a weir opening?",
+      "answers": [
+        "E.1 marking on both sides of the opening",
+        "A single red light",
+        "A sound signal alone",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.27 provides the E.1 rule and overhead-bridge exception.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.27"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-065",
+      "module": 7,
+      "prompt": "Where must a vessel stop if it cannot enter a lock immediately and B.5 is displayed?",
+      "answers": [
+        "Short of the B.5 board",
+        "Immediately against the gate",
+        "Inside the chamber alongside another vessel",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "Article 6.28 specifies the approach limit.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-066",
+      "module": 7,
+      "prompt": "May a small craft demand separate locking as a right?",
+      "answers": [
+        "No",
+        "Yes whenever it arrived first",
+        "Yes if its engine is running",
+        "Enter the opening before confirming it is available"
+      ],
+      "correct": 0,
+      "explanation": "The small-craft provisions prohibit a demand for separate locking.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 6.28"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-067",
+      "module": 8,
+      "prompt": "Which article contains the radar equipment and authorization conditions?",
+      "answers": [
+        "Article 4.06",
+        "Article 7.05",
+        "Article 3.14",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Radar navigation conditions are in Article 4.06.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-068",
+      "module": 8,
+      "prompt": "What is an allowed radar display arrangement for navigation by radar under Article 4.06?",
+      "answers": [
+        "Approved stand-alone radar or Inland ECDIS navigation mode with radar overlay",
+        "A simple chart without radar",
+        "A smartphone weather image",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.06 identifies the permitted radar arrangements.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-069",
+      "module": 8,
+      "prompt": "Which supporting instrument is ordinarily specified for navigating by radar?",
+      "answers": [
+        "A rate-of-turn indicator",
+        "A fish finder only",
+        "A compass rose painted on deck",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.06 requires a rate-of-turn indicator subject to stated exception.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-070",
+      "module": 8,
+      "prompt": "What is the purpose of the Article 4.06 good-visibility exception?",
+      "answers": [
+        "Radar training without the authorized person aboard",
+        "Unrestricted fog navigation",
+        "Avoiding the radio requirement",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "It applies to radar training in good visibility.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-071",
+      "module": 8,
+      "prompt": "A small craft navigating by radar also needs what?",
+      "answers": [
+        "A working ship-to-ship radiotelephone",
+        "Only a handheld torch",
+        "Only an AIS antenna",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.06(4) states the radio condition.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-072",
+      "module": 8,
+      "prompt": "Which information is treated as the only reliable source for simultaneous radar and Inland AIS target tracking?",
+      "answers": [
+        "Radar",
+        "AIS",
+        "An average of the two",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.06(5) gives this target-tracking priority.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.06(5)"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-073",
+      "module": 8,
+      "prompt": "Inland AIS position, course and status are primarily what?",
+      "answers": [
+        "Transmitted vessel data used as part of the traffic picture",
+        "Proof that no untracked craft exist",
+        "A substitute for visual lookout",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.07 concerns transmitted vessel data.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.07"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-074",
+      "module": 8,
+      "prompt": "How should entered Inland AIS data relate to the vessel?",
+      "answers": [
+        "They must correspond to current actual particulars",
+        "They remain fixed from installation",
+        "They need only resemble a neighbouring vessel",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.07 requires accurate current entries.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.07"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-075",
+      "module": 8,
+      "prompt": "Which condition applies to small-craft AIS carriage under Article 4.07?",
+      "answers": [
+        "There is an exception with a specified police-craft qualification",
+        "Every small craft must carry an Inland AIS transmitter",
+        "AIS is forbidden on every small craft",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "The article distinguishes general carriage from small-craft exceptions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.07"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-076",
+      "module": 8,
+      "prompt": "An equipped vessel approaches a designated blind section. When is its ship-to-ship report due?",
+      "answers": [
+        "Before entering",
+        "After leaving only",
+        "Only when a radar alarm sounds",
+        "Navigate solely by the AIS screen without maintaining a lookout"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.05 sets the pre-entry report.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.05"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-077",
+      "module": 9,
+      "prompt": "What is the governing response when ordinary navigation would create immediate danger?",
+      "answers": [
+        "Take the measures best suited to avoid that danger",
+        "Follow the timetable regardless",
+        "Wait for a chart application to decide",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Articles 1.04–1.05 govern vigilance and special circumstances.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.04–1.05"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-078",
+      "module": 9,
+      "prompt": "What must be reported when an object lost from a vessel may obstruct navigation?",
+      "answers": [
+        "Its loss and position to the nearest competent authority",
+        "Only the item’s replacement cost",
+        "Nothing until it is recovered",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.12 covers dangerous lost objects.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.12"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-079",
+      "module": 9,
+      "prompt": "What is required after damaging a permanent lock or bridge structure?",
+      "answers": [
+        "Notify the nearest competent authority at once",
+        "Depart without mention",
+        "Only tell the next boat",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.14 covers damage to permanent structures.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.14"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-080",
+      "module": 9,
+      "prompt": "A vessel spills a substance creating navigational danger. What notice is due?",
+      "answers": [
+        "Prompt notice to the nearest competent authority with nature and location",
+        "No notice if it disperses",
+        "Only a private note to passengers",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.15 covers hazardous spills.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.15"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-081",
+      "module": 9,
+      "prompt": "Whose safety constrains a nearby vessel’s duty to help after an accident?",
+      "answers": [
+        "The safety of its own vessel",
+        "Only its fuel budget",
+        "Only its timetable",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.16 requires immediate help consistent with own safety.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.16"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-082",
+      "module": 9,
+      "prompt": "What must a grounded vessel’s boatmaster arrange promptly?",
+      "answers": [
+        "Notice to the nearest competent authority",
+        "A social-media post instead",
+        "Only a maintenance quotation",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 requires authority notice.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-083",
+      "module": 9,
+      "prompt": "When grounding near the fairway threatens traffic, what else is required?",
+      "answers": [
+        "Warning to approaching craft in time to respond",
+        "Only a private crew briefing",
+        "Silence until towage arrives",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.17 provides for warnings.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.17"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-084",
+      "module": 9,
+      "prompt": "What must be endeavoured when your grounded craft blocks the fairway?",
+      "answers": [
+        "Clear the obstruction as soon as possible",
+        "Leave it indefinitely",
+        "Mark a detour without warning anyone",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 1.18 addresses fairway clearance.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 1.18"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-085",
+      "module": 9,
+      "prompt": "Which Article covers distress signals including repeated long blasts?",
+      "answers": [
+        "Article 4.04",
+        "Article 7.05",
+        "Article 10.06",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 4.04 covers sound distress.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 4.04"
+      ],
+      "visual": null
+    },
+    {
+      "id": "PW-MOCK-086",
+      "module": 9,
+      "prompt": "Do local water-protection rules still apply alongside Chapter 10?",
+      "answers": [
+        "Yes, for the particular waterway",
+        "No, they are all replaced",
+        "Only on tidal waters",
+        "Wait until arrival to report the hazard"
+      ],
+      "correct": 0,
+      "explanation": "Article 10.02 retains applicable local provisions.",
+      "sourceRefs": [
+        "CEVNI Rev.6 art. 10.02"
+      ],
+      "visual": null
+    }
+  ],
+  "blueprint": {
+    "3": 15,
+    "1": 2,
+    "2": 2,
+    "4": 2,
+    "5": 2,
+    "6": 2,
+    "7": 2,
+    "8": 2,
+    "9": 1
+  }
+}

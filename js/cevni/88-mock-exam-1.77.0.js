@@ -1,0 +1,24 @@
+(function(){'use strict';
+const bank=window.PW_CEVNI_MOCK_BANK, key='pwCevniMock177', doneKey='pwCevniDone';
+const $=id=>document.getElementById(id);
+const safe=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function unlocked(){try{let d=JSON.parse(localStorage.getItem(doneKey)||'[]');return Array.isArray(d)&&Array.from({length:9},(_,i)=>i).every(i=>d.includes(i))}catch(_){return false}}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function select(){let items=[];for(const [module,n] of Object.entries(bank.blueprint)){let pool=shuffle(bank.questions.filter(q=>q.module===Number(module)));items.push(...pool.slice(0,n))}return shuffle(items).map(q=>({id:q.id,order:shuffle([0,1,2,3])}))}
+let state=null,timer=null;
+function save(){localStorage.setItem(key,JSON.stringify(state))}
+function load(){try{let v=JSON.parse(localStorage.getItem(key)||'null');if(v&&Array.isArray(v.items)&&v.items.length===30&&Array.isArray(v.answers)&&v.answers.length===30&&v.items.every(x=>bank.questions.some(q=>q.id===x.id)&&x.order.length===4))return v}catch(_){ }return null}
+function remaining(){return Math.max(0,Math.ceil((state.deadline-Date.now())/1000))}
+function tick(){if(!state||state.finished)return;let sec=remaining();$('clock').textContent=`${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`;if(!sec)finish(true)}
+function show(){if(!unlocked()){document.body.innerHTML='<main class="exam"><h1>Complete Modules 01–09 to unlock the mock exam</h1><p>Your course progress is checked on this device. Return to the course map to complete the remaining modules.</p><a href="index.html">RETURN TO COURSE</a></main>';return}
+ state=load();if(!state){$('intro').hidden=false;$('work').hidden=true;$('result').hidden=true;return}
+ $('intro').hidden=true;if(state.finished){results();return}if(!remaining()){finish(true);return}render();clearInterval(timer);timer=setInterval(tick,1000);tick()}
+function start(){if(!unlocked())return;state={version:bank.version,items:select(),answers:Array(30).fill(null),at:0,deadline:Date.now()+bank.minutes*60000,finished:false};save();show()}
+function render(){if(!unlocked())return show();$('work').hidden=false;$('result').hidden=true;let i=state.at,x=state.items[i],q=bank.questions.find(q=>q.id===x.id),selected=state.answers[i];$('position').textContent=`QUESTION ${i+1} / 30`;$('progress').value=i+1;$('prompt').textContent=q.prompt;$('figure').innerHTML=q.visual?`<img src="${safe(q.visual)}" alt="Annex 7 sign ${safe(q.prompt.match(/\b[A-E]\.\d\b/)?.[0]||'')}" loading="eager">`:'';
+ $('choices').innerHTML=x.order.map((source,j)=>`<button class="choice ${selected===j?'chosen':''}" type="button" data-option="${j}" ${selected!==null?'disabled':''}><b>${'ABCD'[j]}</b><span>${safe(q.answers[source])}</span></button>`).join('');$('choices').querySelectorAll('button').forEach(b=>b.onclick=()=>answer(Number(b.dataset.option)));$('next').disabled=selected===null;$('next').textContent=i===29?'SUBMIT EXAM →':'NEXT QUESTION →';$('count').textContent=`${state.answers.filter(a=>a!==null).length} answered`;}
+function answer(i){if(!state||state.finished||state.answers[state.at]!==null||!remaining())return;state.answers[state.at]=i;save();render()}
+function next(){if(state.answers[state.at]===null)return;if(state.at===29){finish(false);return}state.at++;save();render()}
+function finish(timeout){if(!state||state.finished)return;state.finished=true;state.timeout=timeout;state.submittedAt=Date.now();save();clearInterval(timer);results()}
+function results(){if(!unlocked())return show();$('work').hidden=true;$('result').hidden=false;let score=0;let rows=state.items.map((x,i)=>{let q=bank.questions.find(q=>q.id===x.id),chosen=state.answers[i],ok=chosen!==null&&x.order[chosen]===q.correct;if(ok)score++;return `<details class="review"><summary>${i+1}. ${safe(q.prompt)} <strong>${ok?'✓':'✗'}</strong></summary><p>Your answer: ${chosen===null?'Unanswered':safe(q.answers[x.order[chosen]])}</p><p>Correct: ${safe(q.answers[q.correct])}</p><p>${safe(q.explanation)}</p><small>${safe(q.sourceRefs.join(' • '))}</small></details>`});$('score').textContent=`${score} / 30`;$('outcome').textContent=score>=bank.passMark?'PRACTICE PASS':'REVIEW AND TRY AGAIN';$('outcome').className=score>=bank.passMark?'pass':'needs';$('summary').textContent=`${state.timeout?'Time expired. ':''}Project Watch practice result • ${bank.passMark}/30 to pass. This is not an official RYA examination result.`;$('review').innerHTML=rows.join('')}
+$('begin').onclick=start;$('again').onclick=()=>{localStorage.removeItem(key);state=null;start()};$('next').onclick=next;$('submit').onclick=()=>{if(confirm('Submit your current answers and finish the mock exam?'))finish(false)};show();
+})();
