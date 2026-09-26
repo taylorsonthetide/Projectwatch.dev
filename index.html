@@ -10,6 +10,7 @@
 <style id="pw-build-loading-style">html:not(.pw-build-ready) .ver,html:not(.pw-build-ready) #cevniPage .pwBuild,html:not(.pw-build-ready) #cevniPage .build{visibility:hidden!important}</style>
 <link rel="stylesheet" href="css/project-watch-core-1.88.0.css">
 <link rel="stylesheet" href="css/platform-home-1.89.0.css">
+<link rel="stylesheet" href="css/safety-awareness-1.90.0.css">
 <link rel="stylesheet" href="css/collision-flow-1.88.1.css">
 
 <style id="stage3TeachingReview1376b">
@@ -1173,7 +1174,7 @@
       <h1>Learn the skills.<br>Take the watch.</h1>
       <p>Choose a training pathway, continue where you left off, or explore the practical tools. Bridge watchkeeping and European inland waterways are ready to use; more seamanship subjects are planned.</p>
       <div class="homeStatusLine">
-        <span><b>2</b> TRAINING PATHWAYS</span>
+        <span><b>3</b> TRAINING PATHWAYS</span>
         <span><b>GUIDED</b> LESSONS</span>
         <span><b>LIVE</b> PRACTICE</span>
       </div>
@@ -1191,6 +1192,7 @@
   <div class="pwPathwayCards">
     <article class="pwPathwayCard"><span class="pwPathwayState">READY TO LEARN</span><h3>Bridge Watchkeeping</h3><p>Eight stages covering COLREGs, recognition, collision avoidance, buoyage, traffic separation and AIS.</p><button type="button" onclick="showCoursePage()">OPEN BRIDGE COURSE →</button></article>
     <article class="pwPathwayCard inland"><span class="pwPathwayState">READY TO LEARN</span><h3>CEVNI Inland Waterways</h3><p>Nine modules covering inland rules, signs, signals and practical situations, with a separate mock assessment.</p><button type="button" onclick="showModule('cevni')">OPEN CEVNI COURSE →</button></article>
+    <article class="pwPathwayCard safety"><span class="pwPathwayState">NEW • INDEPENDENT TRAINING</span><h3>Safety Awareness at Sea</h3><p>Six visual lessons on preparing, spotting hazards, protecting the crew and responding when plans change.</p><button type="button" onclick="pwSafetyOpen()">OPEN SAFETY TRAINING →</button></article>
   </div>
 </div>
 
@@ -1267,7 +1269,14 @@
   <div class="homeEyebrow">FUTURE TRAINING • IN DEVELOPMENT</div>
   <h2 id="pwFutureTrainingTitle">More seamanship subjects are planned</h2>
   <p>These are roadmap subjects, not live courses yet. Existing pathways and their progress are unaffected.</p>
-  <div class="pwFutureTopics"><span>Navigation, charts &amp; tides</span><span>Passage planning &amp; weather</span><span>Boat systems &amp; stability</span><span>Safety, survival &amp; first aid</span><span>VHF &amp; communication</span><span>Practical procedures</span></div>
+  <div class="pwFutureTopics"><span>Navigation, charts &amp; tides</span><span>Passage planning &amp; weather</span><span>Boat systems &amp; stability</span><span>Sea survival &amp; first aid</span><span>VHF &amp; communication</span><span>Practical procedures</span></div>
+</section>
+
+<section id="safetyPage" class="appPage pwSafetyPage" aria-labelledby="pwSafetyTitle">
+ <div class="pwSafetyHero"><div><div class="homeEyebrow">PROJECT WATCH • SEPARATE TRAINING PATHWAY</div><h1 id="pwSafetyTitle">Safety Awareness at Sea</h1><p>Recognise hazards, make safer choices and brief your crew before conditions change. Original Project Watch training for recreational boaters, informed by fishing-industry safety guidance.</p><div class="pwSafetyHeroActions"><button type="button" onclick="showModule('home')">← TRAINING HUB</button><span id="pwSafetyProgress">0 / 6 LESSONS REVIEWED</span></div></div><img src="assets/safety/departure.svg" alt="Five pre-departure safety decisions" loading="lazy"></div>
+ <div class="pwSafetyBoundary"><b>Training scope</b><p>This independent learning module does not provide a Seafish, MCA or RYA certificate. Commercial fishing requirements vary by role and vessel. Practical sea survival, first aid and VHF operator training need their own approved courses and hands-on practice.</p></div>
+ <div class="pwSafetyLayout"><nav class="pwSafetyNav" aria-label="Safety awareness lessons"><div class="homeEyebrow">THE SIX LESSONS</div><div id="pwSafetyLessonNav"></div><button type="button" class="pwSafetyQuizLink" onclick="pwSafetyShowQuiz()">KNOWLEDGE CHECK →</button></nav><div id="pwSafetyContent" class="pwSafetyContent" aria-live="polite"></div></div>
+ <div class="pwSafetySources"><h2>Source and artwork register</h2><p>Lessons and questions are original Project Watch material. The six SVG diagrams in <code>assets/safety/</code> were created for this module and are stored in the GitHub image library. No Seafish, MCA or RYA course photos, logos or assessment questions are reproduced.</p><div id="pwSafetySourceLinks"></div></div>
 </section>
 
   <div class="homeFooterBar">
@@ -5800,6 +5809,8 @@ window.PW16501_M03_COMPLETE={
 <script src="js/cevni/90-signs-marks-1.85.5.js"></script>
 <script src="js/cevni/91-landing-1.86.1.js"></script>
 <script src="js/cevni/92-lesson-flow-1.87.1.js"></script>
-<script src="js/build-identity-1.89.0.js"></script>
+<script src="libraries/project-watch/safety-awareness-1.90.0.js"></script>
+<script src="js/safety-awareness-1.90.0.js"></script>
+<script src="js/build-identity-1.90.0.js"></script>
 </body>
 </html>
