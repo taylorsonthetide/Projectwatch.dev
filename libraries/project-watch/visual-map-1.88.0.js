@@ -1,0 +1,3 @@
+/* Project Watch content library; values preserved from the approved build. */
+window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
+window.PW_ORIGINAL_LIBRARIES.PW_LIBRARY_ART = {"hero":"assets/embedded/pw-asset-021-15e4d8f047.jpg","colregs":"assets/embedded/pw-asset-035-3989bfb2f9.jpg","collision":"assets/embedded/pw-asset-036-d035d206ad.jpg","lights":"assets/embedded/pw-asset-037-b3e5a91b66.jpg","sound":"assets/embedded/pw-asset-038-2dc5ddf939.jpg","buoyage":"assets/embedded/pw-asset-039-8b19b01fc9.jpg","tss":"assets/embedded/pw-asset-040-12bfd423d4.jpg","ais":"assets/embedded/pw-asset-041-3fab32020b.jpg"};
