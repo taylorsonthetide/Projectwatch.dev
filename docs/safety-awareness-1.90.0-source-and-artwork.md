@@ -44,9 +44,11 @@ The six numbered flow diagrams remain in the repository as historical source ass
 | --- | --- | --- |
 | `assets/safety/scenes/departure.webp` | Before leaving the berth | Crew check chart and conditions alongside. |
 | `assets/safety/scenes/risk.webp` | Spot and control risk | Loose line crosses a deck route; crew pause. |
-| `assets/safety/scenes/deck.webp` | Stay aboard and work safely | Lifejacket, handhold and clear route by mooring gear. |
+| `assets/safety/scenes/deck-v2.webp` | Stay aboard and work safely | Lifejacket, handhold and clear route underway. |
 | `assets/safety/scenes/equipment.webp` | Know and check the safety kit | Lifejacket, throw line, VHF and extinguisher check. |
-| `assets/safety/scenes/conditions.webp` | People and changing conditions | Crew discuss weather and chart safely in harbour. |
-| `assets/safety/scenes/emergency.webp` | Act early in an emergency | Training dummy man-overboard drill with helm and lookout roles. |
+| `assets/safety/scenes/weather-review.webp` | People and changing conditions | Crew discuss weather and chart safely in harbour. |
+| `assets/safety/scenes/mob-drill.webp` | Act early in an emergency | Training dummy man-overboard drill with helm and lookout roles. |
 
 Generated using the built-in image generation tool from the Project Watch lesson-specific prompt set on 26 September 2026. Source PNG masters remain in the generation workspace; repository assets are optimized WebP versions. No third-party photo licence applies to these generated scenes. Image details are illustrative and are never used to determine a scored answer.
+
+Build 1.92.1 corrects the scene mapping: the initially named `conditions.webp` contained the man-overboard drill and `emergency.webp` contained the weather discussion. The new descriptive filenames above are the learner-facing assets; `deck-v2.webp` replaces the marina side-deck photograph. The earlier assets remain as historical files but are not referenced by lessons.
