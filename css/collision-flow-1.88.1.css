@@ -1,0 +1,20 @@
+/* Keep the encounter launch action in reach as the scenario cards scroll. */
+#handover .scenarioInlineLaunch{
+  position:sticky;top:68px;z-index:12;display:flex;align-items:center;
+  justify-content:space-between;gap:10px;margin:10px 0;padding:9px 11px;
+  background:#074057;border:1px solid #69daf3;border-radius:10px;
+  box-shadow:0 5px 15px #0017229c;color:#e6faff;font-size:10px;font-weight:700
+}
+#handover .scenarioInlineLaunch button,.debriefReturn{
+  cursor:pointer;border:1px solid #8eeaff;border-radius:8px;background:#198ec0;
+  color:#fff;font:inherit;font-weight:900;letter-spacing:.03em;padding:10px 13px;
+  white-space:nowrap
+}
+#handover .scenarioInlineLaunch button:hover,.debriefReturn:hover{background:#20a5d8}
+.debriefReturn{display:inline-block;margin-top:12px;font-size:12px}
+body.pw-collision-debrief-active #hdrMode{display:flex;align-items:center;cursor:pointer}
+@media(max-width:650px){
+  #handover .scenarioInlineLaunch{top:62px;flex-wrap:wrap}
+  #handover .scenarioInlineLaunch button{width:100%}
+  body.pw-collision-debrief-active #hdrMode{font-size:9px;padding:7px}
+}

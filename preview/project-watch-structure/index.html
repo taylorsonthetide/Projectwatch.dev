@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><base href="/Projectwatch.dev/">
+<head>
+<base href="/Projectwatch.dev/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,6 +10,7 @@
 <title>Project Watch 1.77.0</title>
 <style id="pw-build-loading-style">html:not(.pw-build-ready) .ver,html:not(.pw-build-ready) #cevniPage .pwBuild,html:not(.pw-build-ready) #cevniPage .build{visibility:hidden!important}</style>
 <link rel="stylesheet" href="css/project-watch-core-1.88.0.css">
+<link rel="stylesheet" href="css/collision-flow-1.88.1.css">
 
 <style id="stage3TeachingReview1376b">
 .lsTeachGrid{display:grid;gap:12px;align-items:stretch}.lsTeachGrid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.lsTeachGrid.four{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -1510,6 +1512,7 @@
         <button data-filter="overtaking" onclick="setScenarioFilter('overtaking',this)">OVERTAKING</button>
         <button data-filter="sail" onclick="setScenarioFilter('sail',this)">SAIL</button>
       </div>
+      <div class="scenarioInlineLaunch"><span>Select an encounter below, then take the watch.</span><button type="button" onclick="startWatch()">TAKE THE WATCH →</button></div>
       <div class="scenarios" id="scenarioList"></div>
       <div class="csSelectedBrief" id="scenarioSelectedBrief"></div>
     </main>
@@ -1873,6 +1876,7 @@
 
 <section id="debrief" class="screen appPage">
   <div class="panel"><div class="ver">POST-WATCH DEBRIEF</div><h1 style="margin:.2em 0">What happened?</h1><div id="outcome" class="status"></div>
+  <button class="debriefReturn" type="button" onclick="showModule('scenarios')">← BACK TO SCENARIOS</button>
   <div style="margin-top:14px;background:#052a3c;border-radius:14px;padding:14px">
     <div class="ver">PROVISIONAL TRAINING SCORE</div>
     <div id="scoreValue" style="font-size:48px;font-weight:900;line-height:1">— / 5</div>
@@ -1916,7 +1920,7 @@
     <p class="note"><b>The 1–5 score is a provisional simulator training score, not a legal finding or professional COLREGS certification. In this build, all simulator warnings are intentionally inhibited outside 0.50 NM.</b> It uses collision outcome, closest approach, timing and manoeuvre-quality flags. The thresholds are training parameters, not statutory COLREG limits, and remain subject to maritime review.</p>
   </div>
 
-  <div class="panel"><button class="big" onclick="restart()">TAKE THE WATCH AGAIN</button></div>
+  <div class="panel"><button class="big" onclick="restart()">← BACK TO SCENARIOS</button></div>
 </section>
 
 </div></div>
@@ -2665,7 +2669,9 @@ body.pw-collision-watch-active #pwLiveVesselIdentity{display:block}
  }
  function sync(){
    const live=visible('watch');
+   const debrief=visible('debrief');
    document.body.classList.toggle('pw-collision-watch-active',live);
+   document.body.classList.toggle('pw-collision-debrief-active',debrief);
    const id=ensureIdentity();
    if(id)id.innerHTML='<b>'+profileLabel()+'</b><small>'+stateLabel()+'</small>';
 
@@ -2675,7 +2681,8 @@ body.pw-collision-watch-active #pwLiveVesselIdentity{display:block}
 
    const hdr=document.getElementById('hdrMode');
    if(hdr){
-     if(live){
+     if(live||debrief){
+       if(debrief)hdr.textContent='← SCENARIOS';
        hdr.setAttribute('role','button');hdr.setAttribute('tabindex','0');
        hdr.setAttribute('aria-label','Back to Collision Scenarios');
      }else{
@@ -2684,10 +2691,10 @@ body.pw-collision-watch-active #pwLiveVesselIdentity{display:block}
    }
  }
  function backToCollision(){
-   if(!visible('watch'))return false;
+   if(!visible('watch')&&!visible('debrief'))return false;
    try{if(typeof running!=='undefined')running=false}catch(e){}
    const play=document.getElementById('play');if(play)play.textContent='▶ PLAY';
-   if(typeof go==='function')go('handover');
+   if(typeof showModule==='function')showModule('scenarios');
    setTimeout(sync,0);
    return true;
  }
@@ -5991,6 +5998,6 @@ window.PW16501_M03_COMPLETE={
 <script src="js/cevni/90-signs-marks-1.85.5.js"></script>
 <script src="js/cevni/91-landing-1.86.1.js"></script>
 <script src="js/cevni/92-lesson-flow-1.87.1.js"></script>
-<script src="js/build-identity-1.87.1.js"></script>
+<script src="js/build-identity-1.88.1.js"></script>
 </body>
 </html>
