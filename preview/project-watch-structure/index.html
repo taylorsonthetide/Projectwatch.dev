@@ -17953,6 +17953,12 @@ svg{width:100%;height:100%}.own{fill:#fff}.tgt{fill:#ff655f}.ot{fill:none;stroke
 </section>
 
 </div></div>
+<script src="libraries/project-watch/buoyage-reference-1.88.0.js"></script>
+<script src="libraries/project-watch/lights-recognition-1.88.0.js"></script>
+<script src="libraries/project-watch/sound-reference-1.88.0.js"></script>
+<script src="libraries/project-watch/colregs-reference-1.88.0.js"></script>
+<script src="libraries/project-watch/course-directory-1.88.0.js"></script>
+<script src="libraries/project-watch/ais-content-1.88.0.js"></script>
 <script src="libraries/project-watch/course-content-1.88.0.js"></script>
 <script src="libraries/project-watch/simulator-data-1.88.0.js"></script>
 <script src="libraries/project-watch/sound-data-1.88.0.js"></script>
@@ -18430,22 +18436,9 @@ function bxReviewHTML(q,user,i){
  return `<div class="examReview ${ok?'ok':'bad'}"><b>${i+1}. ${b.name} • ${q.cat} ${q.critical?'• SAFETY-CRITICAL':''}</b>${bxVisualHTML({...q,mode:'day'},true)}<p>${q.q}</p><p>Your answer: <span class="answerKey">${userText}</span></p><p>Correct answer: <span class="answerKey">${q.a[q.correct]}</span></p><p class="why">${q.why}</p></div>`;
 }
 
-const BUOY_TRAINING={
- port:{day:'Red body; cylindrical / can shape or red can topmark where fitted.',pass:'LEAVE TO PORT',choice:'port',explain:'In IALA Region A, when proceeding in the conventional direction of buoyage, a port-hand lateral mark identifies the port side of the channel. Keep the red mark on your port side.',flash:'Red light when fitted. Any rhythm except composite group flashing (2+1). The 4-second flash shown in Project Watch is a representative training rhythm, not a universal characteristic.'},
- starboard:{day:'Green body; conical shape or single green cone point upward where fitted.',pass:'LEAVE TO STARBOARD',choice:'starboard',explain:'In IALA Region A, when proceeding in the conventional direction of buoyage, a starboard-hand lateral mark identifies the starboard side of the channel. Keep the green mark on your starboard side.',flash:'Green light when fitted. Any rhythm except composite group flashing (2+1). The 4-second flash shown here is representative only.'},
- prefStbd:{day:'Red with one broad green horizontal band; red can topmark where fitted.',pass:'PREFERRED CHANNEL IS TO STARBOARD • LEAVE MARK TO PORT',choice:'port',explain:'This is a modified port-hand lateral mark used at a channel division. Treat it as the port-hand boundary of the preferred channel to starboard.',flash:'Red composite group flashing (2+1). Count two flashes, a pause, then one.'},
- prefPort:{day:'Green with one broad red horizontal band; green cone point upward where fitted.',pass:'PREFERRED CHANNEL IS TO PORT • LEAVE MARK TO STARBOARD',choice:'starboard',explain:'This is a modified starboard-hand lateral mark used at a channel division. Treat it as the starboard-hand boundary of the preferred channel to port.',flash:'Green composite group flashing (2+1). Count two flashes, a pause, then one.'},
- north:{day:'Black above yellow. Two black cones, both points upward.',pass:'PASS NORTH OF THE MARK',choice:'north',explain:'A North Cardinal tells you that the best navigable water is to the north of the mark.',flash:'White continuous quick or very quick flashing. North has no numbered clock-face group.'},
- east:{day:'Black with one broad yellow band. Two black cones base-to-base.',pass:'PASS EAST OF THE MARK',choice:'east',explain:'An East Cardinal tells you the best navigable water is to the east. Think of the clock face: east is 3 o’clock.',flash:'White VQ(3) every 5 seconds or Q(3) every 10 seconds. Count THREE.'},
- south:{day:'Yellow above black. Two black cones, both points downward.',pass:'PASS SOUTH OF THE MARK',choice:'south',explain:'A South Cardinal tells you the best navigable water is to the south. Six on the clock face is followed by a long flash to distinguish it clearly.',flash:'White VQ(6) + long flash every 10 seconds, or Q(6) + long flash every 15 seconds. Count SIX, then ONE LONG.'},
- west:{day:'Yellow with one broad black band. Two black cones point-to-point.',pass:'PASS WEST OF THE MARK',choice:'west',explain:'A West Cardinal tells you the best navigable water is to the west. Think of 9 o’clock.',flash:'White VQ(9) every 10 seconds or Q(9) every 15 seconds. Count NINE.'},
- isolated:{day:'Black with one or more broad red horizontal bands. Two black spheres.',pass:'NO FIXED SIDE • PASS AT THE SAFE DISTANCE SHOWN BY CHART / PUBLICATION',choice:'either',explain:'The mark is on or near an isolated danger with navigable water around it. The buoyage system does not give one universal passing side or distance.',flash:'White group flashing two. Count TWO flashes.'},
- safe:{day:'Red and white vertical stripes. Single red spherical topmark where fitted.',pass:'SAFE WATER ALL AROUND • NO FIXED SIDE',choice:'either',explain:'A Safe Water Mark does not mark a danger. It may identify a centreline, fairway, mid-channel, entrance, approach or landfall.',flash:'White light: isophase, occulting, one long flash every 10 seconds, or Morse A. Project Watch shows one permitted representative characteristic.'},
- special:{day:'Yellow. Yellow X topmark where fitted.',pass:'NO GENERIC PASSING SIDE • CHECK THE CHART',choice:'chart',explain:'A Special Mark identifies a special area or feature. Its meaning comes from the chart or nautical publication, so do not invent a passing side from the colour alone.',flash:'Yellow light when fitted, using a rhythm not reserved for another mark.'},
- wreck:{day:'Equal blue and yellow vertical stripes. Upright yellow cross topmark.',pass:'NEW DANGER • KEEP CLEAR AS DIRECTED BY CHART / WARNINGS',choice:'chart',explain:'The Emergency Wreck Marking Buoy is a temporary mark for a new wreck or newly discovered danger while information is being promulgated and other marking is established.',flash:'Alternating blue and yellow light: 1 second blue, 0.5 second eclipse, 1 second yellow, 0.5 second eclipse.'}
-};
+const BUOY_TRAINING=window.PW_ORIGINAL_LIBRARIES.BUOY_TRAINING;
 
-const BUOY_ORDER=['port','starboard','prefStbd','prefPort','north','east','south','west','isolated','safe','special','wreck'];
+const BUOY_ORDER=window.PW_ORIGINAL_LIBRARIES.BUOY_ORDER;
 let btI=0,btNight=false,btAnim=null;
 
 function showBuoyTutorial(){
@@ -18596,20 +18589,7 @@ function bpFinish(){
  $('bpFeedback').textContent='';$('bpProgress').textContent='COMPLETE';
 }
 
-const BUOY_DATA=[
- {id:'port',name:'Port-hand lateral',family:'Lateral • Region A',body:'red',top:'can',light:'Red; any rhythm except the reserved composite group (2+1)',meaning:'Marks the port-hand side of a channel or fairway when proceeding in the conventional direction of buoyage.',source:'IALA R1001 §2.1.3',lamp:'red',pattern:[[0,.55]],period:4,patternLabel:'Representative Fl R 4s training rhythm'},
- {id:'starboard',name:'Starboard-hand lateral',family:'Lateral • Region A',body:'green',top:'coneUp',light:'Green; any rhythm except the reserved composite group (2+1)',meaning:'Marks the starboard-hand side of a channel or fairway when proceeding in the conventional direction of buoyage.',source:'IALA R1001 §2.1.3',lamp:'green',pattern:[[0,.55]],period:4,patternLabel:'Representative Fl G 4s training rhythm'},
- {id:'prefStbd',name:'Preferred channel to starboard',family:'Modified lateral • Region A',body:'redGreenRed',top:'canRed',light:'Red; composite group flashing (2+1)',meaning:'At a channel division, the preferred channel is to starboard when proceeding in the conventional direction of buoyage.',source:'IALA R1001 §2.1.5',lamp:'red',pattern:[[0,.35],[.75,1.10],[2.0,2.35]],period:4,patternLabel:'Fl(2+1) R'},
- {id:'prefPort',name:'Preferred channel to port',family:'Modified lateral • Region A',body:'greenRedGreen',top:'coneGreen',light:'Green; composite group flashing (2+1)',meaning:'At a channel division, the preferred channel is to port when proceeding in the conventional direction of buoyage.',source:'IALA R1001 §2.1.5',lamp:'green',pattern:[[0,.35],[.75,1.10],[2.0,2.35]],period:4,patternLabel:'Fl(2+1) G'},
- {id:'north',name:'North Cardinal',family:'Cardinal',body:'blackYellow',top:'conesUp',light:'White: VQ or Q',meaning:'Safe water lies to the north of the mark.',source:'IALA R1001 §2.2',lamp:'white',pattern:[[0,.25]],period:.5,patternLabel:'VQ (continuous very quick training rhythm)'},
- {id:'east',name:'East Cardinal',family:'Cardinal',body:'blackYellowBlack',top:'conesBase',light:'White: VQ(3)5s or Q(3)10s',meaning:'Safe water lies to the east of the mark.',source:'IALA R1001 §2.2',lamp:'white',pattern:[[0,.25],[.50,.75],[1.00,1.25]],period:5,patternLabel:'VQ(3) 5s'},
- {id:'south',name:'South Cardinal',family:'Cardinal',body:'yellowBlack',top:'conesDown',light:'White: VQ(6)+LFl 10s or Q(6)+LFl 15s',meaning:'Safe water lies to the south of the mark.',source:'IALA R1001 §2.2',lamp:'white',pattern:[[0,.25],[.50,.75],[1.00,1.25],[1.50,1.75],[2.00,2.25],[2.50,2.75],[3.25,5.25]],period:10,patternLabel:'VQ(6)+LFl 10s'},
- {id:'west',name:'West Cardinal',family:'Cardinal',body:'yellowBlackYellow',top:'conesPoint',light:'White: VQ(9)10s or Q(9)15s',meaning:'Safe water lies to the west of the mark.',source:'IALA R1001 §2.2',lamp:'white',pattern:[[0,.25],[.50,.75],[1.00,1.25],[1.50,1.75],[2.00,2.25],[2.50,2.75],[3.00,3.25],[3.50,3.75],[4.00,4.25]],period:10,patternLabel:'VQ(9) 10s'},
- {id:'isolated',name:'Isolated Danger',family:'General mark',body:'blackRedBlack',top:'twoBalls',light:'White: Fl(2)',meaning:'The mark is on or near an isolated danger with navigable water all around. Consult the chart for safe passing distance.',source:'IALA R1001 §2.3',lamp:'white',pattern:[[0,.45],[1.0,1.45]],period:5,patternLabel:'Fl(2) W'},
- {id:'safe',name:'Safe Water',family:'General mark',body:'redWhiteVertical',top:'redBall',light:'White: Iso, Oc, LFl 10s or Mo(A)',meaning:'Navigable water exists all around the mark; used for centreline, mid-channel, entrance, approach or landfall purposes.',source:'IALA R1001 §2.4',lamp:'white',pattern:[[0,2.0]],period:4,patternLabel:'Iso W (representative permitted characteristic)'},
- {id:'special',name:'Special Mark',family:'General mark',body:'yellow',top:'xYellow',light:'Yellow; rhythm not reserved for another mark',meaning:'Marks a special area or feature whose nature is identified from the chart or nautical publication.',source:'IALA R1001 §2.5',lamp:'yellow',pattern:[[0,.55]],period:4,patternLabel:'Representative Fl Y 4s training rhythm'},
- {id:'wreck',name:'Emergency Wreck Mark',family:'New danger',body:'blueYellowVertical',top:'crossYellow',light:'Alternating blue and yellow: 1 s blue, 0.5 s eclipse, 1 s yellow, 0.5 s eclipse',meaning:'Used to mark a new wreck or newly discovered danger while information is being promulgated and other marking is established.',source:'IALA R1001 new-danger provisions',lamp:'alternate',pattern:[[0,1,'blue'],[1.5,2.5,'yellow']],period:3,patternLabel:'Al.BuY 3s'}
-];
+const BUOY_DATA=window.PW_ORIGINAL_LIBRARIES.BUOY_DATA;
 
 function buoySVG(item){
  const bodyY=64, bodyH=78, x=43, w=44;
@@ -18919,31 +18899,8 @@ function completeStage3(){if(!lsLessonsComplete()){alert('Complete all six Stage
 
 function pwToggleAspectTrainer(){const p=document.getElementById('pwLegacyAspectTrainer'),b=document.getElementById('pwAspectToggle');if(!p)return;const open=p.style.display==='none'||!p.style.display;p.style.display=open?'block':'none';if(b)b.textContent=open?'CLOSE ASPECT TRAINER ↑':'OPEN ASPECT TRAINER ↓';if(open)bvRender();}
 
-const BV_ASPECTS=[['ahead','BOW'],['stbd','STARBOARD'],['astern','STERN'],['port','PORT']];
-const BV=[
-{id:'pd',name:'Power-driven vessel under 50 m, underway',kind:'cargo',rule:'23',shape:'',status:[],nav:'pd',memory:'One masthead white, sidelights and sternlight.'},
-{id:'pd50',name:'Power-driven vessel 50 m or more, underway',kind:'ship',rule:'23',shape:'',status:[],nav:'pd2',memory:'Two masthead whites; after masthead light higher. Sidelights and sternlight.'},
-{id:'sail',name:'Sailing vessel underway',kind:'yacht',rule:'25',shape:'',status:[],nav:'sail',memory:'Sidelights and sternlight. This core scene does not use the optional red-over-green pair.'},
-{id:'motor',name:'Sailing vessel proceeding under machinery',kind:'yacht',rule:'25',shape:'coneDown',status:[],nav:'pd',memory:'By day: cone apex downward. At night she displays the lights for a power-driven vessel of her size.'},
-{id:'trawl',name:'Vessel engaged in trawling, making way',kind:'trawler',rule:'26',shape:'conesMeet',status:[['G',270,92],['W',270,126]],nav:'move',memory:'Green over white all-round. When making way: sidelights and sternlight.'},
-{id:'fish',name:'Fishing other than trawling, making way',kind:'fisher',rule:'26',shape:'conesMeet',status:[['R',270,92],['W',270,126]],nav:'move',memory:'Red over white all-round. When making way: sidelights and sternlight.'},
-{id:'nuc',name:'Vessel not under command, making way',kind:'ship',rule:'27',shape:'twoBalls',status:[['R',270,88],['R',270,124]],nav:'move',memory:'Two all-round reds. When making way: sidelights and sternlight; no masthead light.'},
-{id:'ram',name:'Restricted in ability to manoeuvre, making way',kind:'work',rule:'27',shape:'ballDiamondBall',status:[['R',270,70],['W',270,106],['R',270,142]],nav:'pd',memory:'Red-white-red all-round plus power-driven lights when making way.'},
-{id:'cbd',name:'Vessel constrained by her draught',kind:'tanker',rule:'28',shape:'cylinder',status:[['R',270,68],['R',270,104],['R',270,140]],nav:'pd2',memory:'May show three all-round reds or a cylinder in addition to Rule 23 lights.'},
-{id:'pilot',name:'Pilot vessel on pilotage duty, underway',kind:'pilot',rule:'29',shape:'',status:[['W',270,88],['R',270,124]],nav:'move',memory:'White over red all-round; when underway, sidelights and sternlight.'},
-{id:'anchorU50',name:'Vessel at anchor — under 50 m',kind:'ship',rule:'30',shape:'ball',status:[['W',310,95]],nav:'none',memory:'One all-round white anchor light may be shown where it can best be seen; one ball by day.'},
-{id:'anchor50',name:'Vessel at anchor — 50 m or more',kind:'ship',rule:'30',shape:'ball',status:[['W',310,95],['W',230,126]],nav:'none',memory:'Forward all-round white and a second all-round white at or near the stern at a lower level; one ball by day.'},
-{id:'agroundU50',name:'Vessel aground — under 50 m',kind:'ship',rule:'30',shape:'threeBalls',status:[['R',270,83],['R',270,119],['W',320,100]],nav:'none',memory:'Anchor light for a vessel under 50 m plus two all-round reds; three balls by day.'},
-{id:'aground50',name:'Vessel aground — 50 m or more',kind:'ship',rule:'30',shape:'threeBalls',status:[['R',270,83],['R',270,119],['W',320,100],['W',220,132]],nav:'none',memory:'Forward and lower after anchor whites plus two all-round reds; three balls by day.'},
-{id:'towShort',name:'Towing astern — tow 200 m or less',kind:'work',rule:'24',shape:'',status:[],nav:'tow2',memory:'Two masthead towing lights in a vertical line, sidelights, sternlight, and a yellow towing light vertically above the sternlight.'},
-{id:'towLong',name:'Towing astern — tow over 200 m',kind:'work',rule:'24',shape:'diamond',status:[],nav:'tow3',memory:'Three masthead towing lights in a vertical line; a diamond by day; sidelights, sternlight, and a yellow towing light above the sternlight.'},
-{id:'push',name:'Pushing ahead / towing alongside — not a composite unit',kind:'work',rule:'24',shape:'',status:[],nav:'push',memory:'Two masthead lights in a vertical line, sidelights, and a sternlight.'},
-{id:'composite',name:'Rigid composite unit',kind:'work',rule:'24',shape:'',status:[],nav:'pd',memory:'A rigidly connected pushing vessel and vessel pushed ahead are treated as one power-driven vessel under Rule 23.'},
-{id:'gear150',name:'Fishing — outlying gear over 150 m to starboard',kind:'fisher',rule:'26',shape:'conesGear',status:[['R',270,92],['W',270,126],['W',365,126]],nav:'move',memory:'Red over white, plus an all-round white toward the outlying gear; this training example places the gear to starboard. By day an extra cone apex upward is shown toward the gear.'},
-{id:'dredge',name:'Dredging / underwater operations — obstruction to starboard',kind:'work',rule:'27',shape:'dredge',status:[['R',270,58],['W',270,94],['R',270,130],['R',365,82],['R',365,118],['G',175,82],['G',175,118]],nav:'pd',memory:'RAM red-white-red, plus two red on the obstruction side and two green on the side on which another vessel may pass.'},
-{id:'diving',name:'Diving operations — reduced display',kind:'work',rule:'27',shape:'alpha',status:[['R',270,58],['W',270,94],['R',270,130]],nav:'none',memory:'Where the vessel is too small for the full dredging display: red-white-red all-round plus a rigid International Code flag A by day.'},
-{id:'mine',name:'Mine-clearance vessel',kind:'ship',rule:'27',shape:'mineBalls',status:[['G',270,62],['G',195,112],['G',345,112]],nav:'pd',memory:'Three all-round green lights, or three balls by day: one near the foremast head and one at each end of the fore yard. It is dangerous to approach within 1000 m.'}
-];
+const BV_ASPECTS=window.PW_ORIGINAL_LIBRARIES.BV_ASPECTS;
+const BV=window.PW_ORIGINAL_LIBRARIES.BV;
 let bvI=0,bvMode='learn',bvLight='night',bvAspect='ahead';
 const BV_DAY_IDS=new Set(['motor','trawl','fish','nuc','ram','cbd','anchorU50','anchor50','agroundU50','aground50','towLong','gear150','dredge','diving','mine']);
 function bvValidIndexes(){return BV.map((x,i)=>({x,i})).filter(o=>bvLight==='night'||BV_DAY_IDS.has(o.x.id)).map(o=>o.i)}
@@ -19108,11 +19065,7 @@ function getSignalAudio(){
   return signalAudioCtx;
 }
 
-const HORN_PROFILES={
-  large:{f:110,label:'Large ship • 110 Hz training fundamental'},
-  medium:{f:190,label:'Medium ship • 190 Hz training fundamental'},
-  small:{f:360,label:'Small vessel • 360 Hz training fundamental'}
-};
+const HORN_PROFILES=window.PW_ORIGINAL_LIBRARIES.HORN_PROFILES;
 
 function setHornProfile(p){
   hornProfile=p;
@@ -20070,302 +20023,8 @@ function tssSimEnd(manual=false){
 
 const RULE_DATA=window.PW_ORIGINAL_LIBRARIES.RULE_DATA;
 
-const COLREG_IMAGE_LIBRARY={
-  "bridge": {
-    "file": "Bridge of a Modern Cruise Ship.jpg",
-    "title": "Bridge of a Modern Cruise Ship",
-    "creator": "Richard Weil",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Bridge_of_a_Modern_Cruise_Ship.jpg",
-    "use": "Bridge/watchkeeping, lookout, responsibility and verification"
-  },
-  "cargo": {
-    "file": "Cargo ship.jpg",
-    "title": "Cargo ship",
-    "creator": "Wilfredor",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Cargo_ship.jpg",
-    "use": "General power-driven vessel and open-water rules"
-  },
-  "channel_ship": {
-    "file": "Container Ship, English Channel (10509006206).jpg",
-    "title": "Container Ship, English Channel",
-    "creator": "Gary Todd",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Container_Ship,_English_Channel_(10509006206).jpg",
-    "use": "Channel/open-water encounter context"
-  },
-  "narrow": {
-    "file": "US Navy 040629-N-6213R-128 Commanding Officer, USS John C. Stennis (CVN 74), Capt. David H. Buss, keeps close watch as the ship is navigated through the narrow channel into Pearl Harbor, Hawaii.jpg",
-    "title": "USS John C. Stennis navigating a narrow channel",
-    "creator": "U.S. Navy / Mark J. Rebilas",
-    "license": "Public Domain — U.S. Navy federal work",
-    "source": "https://commons.wikimedia.org/wiki/File:US_Navy_040629-N-6213R-128_Commanding_Officer,_USS_John_C._Stennis_(CVN_74),_Capt._David_H._Buss,_keeps_close_watch_as_the_ship_is_navigated_through_the_narrow_channel_into_Pearl_Harbor,_Hawaii.jpg",
-    "use": "Rule 9 narrow channels"
-  },
-  "sail": {
-    "file": "Sailboat in the ocean.jpg",
-    "title": "Sailboat in the ocean",
-    "creator": "Seabee314",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Sailboat_in_the_ocean.jpg",
-    "use": "Sailing vessel rules"
-  },
-  "fishing": {
-    "file": "Fishing vessel UK-272.jpg",
-    "title": "Fishing vessel UK-272",
-    "creator": "Tvabutzku1234",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Fishing_vessel_UK-272.jpg",
-    "use": "Fishing vessel rules"
-  },
-  "mixed": {
-    "file": "Fishing vessel and container ship.jpg",
-    "title": "Fishing vessel and container ship",
-    "creator": "Tvabutzku1234",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Fishing_vessel_and_container_ship.jpg",
-    "use": "Crossing/responsibility between vessel types"
-  },
-  "tug": {
-    "file": "Tugboat with work barge in Tokyo 20110812 2.jpg",
-    "title": "Tugboat with work barge in Tokyo",
-    "creator": "Vantey",
-    "license": "Public Domain — released by author worldwide",
-    "source": "https://commons.wikimedia.org/wiki/File:Tugboat_with_work_barge_in_Tokyo_20110812_2.jpg",
-    "use": "Towing, pushing and manoeuvring"
-  },
-  "pilot": {
-    "file": "Enterprise pilot boat.JPG",
-    "title": "Enterprise pilot boat",
-    "creator": "Alf van Beem",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Enterprise_pilot_boat.JPG",
-    "use": "Pilot vessel"
-  },
-  "fog": {
-    "file": "Margaret Todd in the fog.jpg",
-    "title": "Margaret Todd in the fog",
-    "creator": "Snyder261",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Margaret_Todd_in_the_fog.jpg",
-    "use": "Restricted visibility and fog signals"
-  },
-  "aground": {
-    "file": "Big cargo ship aground.jpg",
-    "title": "Big cargo ship aground",
-    "creator": "Steve Hillebrand / U.S. Fish and Wildlife Service",
-    "license": "Public Domain — author/federal source",
-    "source": "https://commons.wikimedia.org/wiki/File:Big_cargo_ship_aground.jpg",
-    "use": "Anchored/aground vessel context"
-  },
-  "navlights": {
-    "file": "Nr Rule23a.gif",
-    "title": "COLREG Rule 23 navigation-light diagram",
-    "creator": "U.S. Coast Guard",
-    "license": "Public Domain — U.S. Coast Guard federal work",
-    "source": "https://commons.wikimedia.org/wiki/File:Nr_Rule23a.gif",
-    "use": "Lights, definitions and visibility"
-  },
-  "bell": {
-    "file": "Ship bell missile cruiser USS Chancellorsville.jpg",
-    "title": "Ship bell aboard USS Chancellorsville",
-    "creator": "U.S. Navy",
-    "license": "Public Domain — U.S. Navy federal work",
-    "source": "https://commons.wikimedia.org/wiki/File:Ship_bell_missile_cruiser_USS_Chancellorsville.jpg",
-    "use": "Sound-signal equipment"
-  },
-  "flare": {
-    "file": "JASDF U-125A 20090822-05(Signal flare).JPG",
-    "title": "Signal flare",
-    "creator": "Los688",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:JASDF_U-125A_20090822-05(Signal_flare).JPG",
-    "use": "Distress signal recognition"
-  },
-  "seaplane": {
-    "file": "XJR2F-1 NATC NAN1-50.jpg",
-    "title": "Grumman seaplane",
-    "creator": "U.S. Navy",
-    "license": "Public Domain — U.S. Navy federal work",
-    "source": "https://commons.wikimedia.org/wiki/File:XJR2F-1_NATC_NAN1-50.jpg",
-    "use": "Rule 31 seaplanes"
-  },
-  "buoy": {
-    "file": "Red and green light navigation buoys.webp",
-    "title": "Red and green light navigation buoys",
-    "creator": "Wikideas1",
-    "license": "CC0 1.0",
-    "source": "https://commons.wikimedia.org/wiki/File:Red_and_green_light_navigation_buoys.webp",
-    "use": "Project Watch home hub — Buoyage & Marks"
-  }
-};
-const COLREG_RULE_PHOTOS={
-  "1": [
-    "cargo",
-    "APPLICATION"
-  ],
-  "2": [
-    "bridge",
-    "RESPONSIBILITY"
-  ],
-  "3": [
-    "cargo",
-    "DEFINITIONS"
-  ],
-  "4": [
-    "bridge",
-    "CONDUCT"
-  ],
-  "5": [
-    "bridge",
-    "LOOK-OUT"
-  ],
-  "6": [
-    "channel_ship",
-    "SAFE SPEED"
-  ],
-  "7": [
-    "bridge",
-    "RISK OF COLLISION"
-  ],
-  "8": [
-    "cargo",
-    "AVOIDING ACTION"
-  ],
-  "9": [
-    "narrow",
-    "NARROW CHANNEL"
-  ],
-  "10": [
-    "channel_ship",
-    "TRAFFIC SEPARATION"
-  ],
-  "11": [
-    "bridge",
-    "IN SIGHT"
-  ],
-  "12": [
-    "sail",
-    "SAILING VESSELS"
-  ],
-  "13": [
-    "channel_ship",
-    "OVERTAKING"
-  ],
-  "14": [
-    "cargo",
-    "HEAD-ON"
-  ],
-  "15": [
-    "mixed",
-    "CROSSING"
-  ],
-  "16": [
-    "cargo",
-    "GIVE-WAY"
-  ],
-  "17": [
-    "bridge",
-    "STAND-ON"
-  ],
-  "18": [
-    "mixed",
-    "RESPONSIBILITIES"
-  ],
-  "19": [
-    "fog",
-    "RESTRICTED VISIBILITY"
-  ],
-  "20": [
-    "navlights",
-    "LIGHTS — APPLICATION"
-  ],
-  "21": [
-    "navlights",
-    "LIGHT DEFINITIONS"
-  ],
-  "22": [
-    "navlights",
-    "VISIBILITY OF LIGHTS"
-  ],
-  "23": [
-    "cargo",
-    "POWER-DRIVEN"
-  ],
-  "24": [
-    "tug",
-    "TOWING / PUSHING"
-  ],
-  "25": [
-    "sail",
-    "SAILING / OARS"
-  ],
-  "26": [
-    "fishing",
-    "FISHING VESSELS"
-  ],
-  "27": [
-    "cargo",
-    "NUC / RAM"
-  ],
-  "28": [
-    "cargo",
-    "CONSTRAINED BY DRAUGHT"
-  ],
-  "29": [
-    "pilot",
-    "PILOT VESSELS"
-  ],
-  "30": [
-    "aground",
-    "ANCHOR / AGROUND"
-  ],
-  "31": [
-    "seaplane",
-    "SEAPLANES"
-  ],
-  "32": [
-    "bell",
-    "SOUND DEFINITIONS"
-  ],
-  "33": [
-    "bell",
-    "SOUND EQUIPMENT"
-  ],
-  "34": [
-    "tug",
-    "MANOEUVRING SIGNALS"
-  ],
-  "35": [
-    "fog",
-    "FOG SIGNALS"
-  ],
-  "36": [
-    "bridge",
-    "ATTRACTING ATTENTION"
-  ],
-  "37": [
-    "flare",
-    "DISTRESS"
-  ],
-  "38": [
-    "bridge",
-    "EXEMPTIONS"
-  ],
-  "39": [
-    "cargo",
-    "DEFINITIONS"
-  ],
-  "40": [
-    "bridge",
-    "APPLICATION"
-  ],
-  "41": [
-    "bridge",
-    "VERIFICATION"
-  ]
-};
+const COLREG_IMAGE_LIBRARY=window.PW_ORIGINAL_LIBRARIES.COLREG_IMAGE_LIBRARY;
+const COLREG_RULE_PHOTOS=window.PW_ORIGINAL_LIBRARIES.COLREG_RULE_PHOTOS;
 const COLREG_IMAGE_CACHE_VERSION='pw-colreg-img-v1';
 
 function commonsThumb(file,width=640){
@@ -20407,7 +20066,7 @@ function rulePhotoFallback(img,key,label){
    v.insertBefore(f,v.firstChild);
  }
 }
-const PW_COLREG_RULE_ART={"1": "assets/embedded/pw-asset-023-d4648caffa.jpg", "2": "assets/embedded/pw-asset-024-1ab07f5f59.jpg", "3": "assets/embedded/pw-asset-025-64c5dd2936.jpg", "4": "assets/embedded/pw-asset-026-73a57ef16c.jpg", "5": "assets/embedded/pw-asset-027-a92f8084dd.jpg", "6": "assets/embedded/pw-asset-028-7338208bb2.jpg", "7": "assets/embedded/pw-asset-029-4d440e4ec6.jpg", "8": "assets/embedded/pw-asset-030-e58ce9fe1f.jpg", "9": "assets/embedded/pw-asset-031-1431b1ee35.jpg", "10": "assets/embedded/pw-asset-032-0a09bf3075.jpg", "11": "assets/embedded/pw-asset-033-83b55334e8.jpg", "12": "assets/embedded/pw-asset-034-0da90a424e.jpg"};
+const PW_COLREG_RULE_ART=window.PW_ORIGINAL_LIBRARIES.PW_COLREG_RULE_ART;
 function enhanceColregRuleVisuals(){
  document.querySelectorAll('#ruleList .ruleRow').forEach(row=>{
    if(row.dataset.visualised==='1')return;
@@ -20441,40 +20100,7 @@ function openImageCredits(){
 }
 function closeImageCredits(){const s=$('imageCreditSheet');if(s)s.classList.remove('open')}
 
-const ANNEX_DATA={
- 1:{
-  title:'Annex I • Positioning & Technical Details of Lights and Shapes',
-  summary:'Sets the technical detail behind the navigation lights and day shapes required by Part C — including vertical and horizontal positioning and spacing, screens for sidelights, positioning of shapes, colour specification, intensity and visibility sectors.',
-  training:'Use Annex I to understand why a correct light pattern must also be placed correctly on the vessel. Recognition depends on both colour/sequence and physical position.',
-  project:'Project Watch already teaches the practical result in Lights & Shapes. This Annex card links the learner from the legal/technical framework directly into the visual bridge trainer.',
-  source:'COLREG Annex I',
-  actions:[['OPEN LIGHTS & SHAPES','lights']]
- },
- 2:{
-  title:'Annex II • Additional Signals for Fishing Vessels Fishing in Close Proximity',
-  summary:'Provides additional signals for fishing vessels operating in close proximity, including prescribed signals connected with trawling and purse-seine fishing operations.',
-  training:'These are additional working signals. They do not replace the ordinary Rule 26 lights and shapes for a vessel engaged in fishing.',
-  project:'Project Watch can use Annex II as an advanced fishing-vessel recognition lesson alongside the Rule 26 Lights & Shapes material.',
-  source:'COLREG Annex II',
-  actions:[['OPEN FISHING LIGHTS','lights']]
- },
- 3:{
-  title:'Annex III • Technical Details of Sound Signal Appliances',
-  summary:'Provides the technical requirements for whistles, bells and gongs, including acoustic characteristics, audible range and installation requirements.',
-  training:'Part D tells you which sound signal to make. Annex III explains the appliance that must produce it and the technical performance expected.',
-  project:'The Signals trainer already reproduces manoeuvring and restricted-visibility patterns. Annex III connects those practical exercises to the equipment behind the sound.',
-  source:'COLREG Annex III',
-  actions:[['OPEN SIGNALS TRAINING','signals']]
- },
- 4:{
-  title:'Annex IV • Distress Signals',
-  summary:'Lists the internationally recognised signals indicating distress and need of assistance, including explosive signals, continuous sounding, red-star rockets, SOS, MAYDAY, visual signals, DSC distress alerts, satellite distress alerts, EPIRB signals and other approved radiocommunication distress signals.',
-  training:'Recognise that these are distress signals, not routine manoeuvring or collision-avoidance signals. Their use for another purpose, or use of confusingly similar signals, is prohibited.',
-  project:'Project Watch already contains the full Distress section, Mayday procedure, Pan-Pan distinction, beacon guidance and spoken training examples. Annex IV links directly to that practical emergency module.',
-  source:'COLREG Annex IV',
-  actions:[['OPEN DISTRESS TRAINING','distress']]
- }
-};
+const ANNEX_DATA=window.PW_ORIGINAL_LIBRARIES.ANNEX_DATA;
 
 function openAnnex(n){
  const a=ANNEX_DATA[n];if(!a)return;
@@ -20612,14 +20238,7 @@ function exitTutorialWatch(){
  showCollisionTutorial();
 }
 
-const COLREGS_BEGINNER=[
- {title:'What are the COLREGs?',sub:'The rulebook and what it is for',intro:'Start with the purpose: preventing collisions at sea.',visual:'intro',facts:[['International rules','COLREGs are the International Regulations for Preventing Collisions at Sea.'],['Not just right of way','They cover lookout, speed, risk assessment, avoiding action, conduct between vessels, lights, shapes and sound signals.'],['Use the whole situation','A rule number is never a substitute for lookout, judgement and the precautions required by good seamanship.'],['Project Watch','The Rules 1–41 library is a training reference. Official Convention text remains the authority.']]},
- {title:'How the 41 Rules are organised',sub:'Parts A to F',intro:'You do not need to treat the COLREGs as one block of 41 unrelated rules.',visual:'parts',facts:[['Part A • Rules 1–3','General: application, responsibility and definitions.'],['Part B • Rules 4–19','Steering and Sailing Rules: how vessels assess and avoid collision.'],['Part C • Rules 20–31','Lights and Shapes: how vessels show identity and status.'],['Parts D–F • Rules 32–41','Sound/light signals, exemptions and convention compliance.']]},
- {title:'The four rules beneath every encounter',sub:'Lookout → speed → risk → action',intro:'Before worrying about crossing, head-on or overtaking, build this habit.',visual:'core',facts:[['Rule 5 • Look-out','Maintain a proper lookout by sight, hearing and all available appropriate means.'],['Rule 6 • Safe speed','Travel at a speed that allows proper and effective action and stopping within an appropriate distance.'],['Rule 7 • Risk of collision','Use all available means. If there is any doubt, risk shall be deemed to exist.'],['Rule 8 • Avoiding action','Action should be positive, in ample time and with due regard to good seamanship; check it works until finally past and clear.']]},
- {title:'First identify the situation',sub:'Do not jump straight to a give-way rule',intro:'Work out which family of rules applies before deciding what either vessel should do.',visual:'flow',facts:[['Any visibility • Rules 4–10','The baseline Steering and Sailing Rules apply in any condition of visibility.'],['In sight • Rules 11–18','When vessels are in sight of one another, identify sailing, overtaking, head-on, crossing and vessel responsibilities as applicable.'],['Restricted visibility • Rule 19','When vessels are not in sight in or near restricted visibility, Rule 19 governs the encounter rather than pretending Rules 11–18 apply.'],['Rule 13 matters early','Check overtaking before treating geometry as an ordinary crossing encounter.']]},
- {title:'Give-way and stand-on',sub:'What those words actually mean',intro:'Stand-on does not mean ignore danger, and give-way does not mean make a tiny token alteration.',visual:'roles',facts:[['Give-way • Rule 16','Take early and substantial action to keep well clear.'],['Stand-on • Rule 17','Initially keep course and speed, while continuing to monitor the developing situation.'],['Escalation','The stand-on vessel may act when it becomes apparent the give-way vessel is not taking appropriate action, and must act when collision cannot be avoided by give-way action alone.'],['Always monitor','Responsibilities do not remove the duty to keep a proper lookout and assess risk.']]},
- {title:'Special environments change the picture',sub:'Channels, TSS and restricted visibility',intro:'The same two vessels can have different obligations when the navigational environment changes.',visual:'special',facts:[['Rule 9 • Narrow channels','Channel constraints and duties can affect what action is safe and practicable.'],['Rule 10 • TSS','Traffic separation schemes have specific lane, crossing, joining, leaving and separation-zone requirements.'],['Rule 19 • Restricted visibility','Radar information, safe speed, engines ready and special avoiding-action cautions become central when vessels are not in sight.'],['Do not use slogans','Simple ideas such as “power gives way to sail” are not a substitute for identifying the applicable rules and circumstances.']]}
-];
+const COLREGS_BEGINNER=window.PW_ORIGINAL_LIBRARIES.COLREGS_BEGINNER;
 const CR_QUIZ=window.PW_ORIGINAL_LIBRARIES.CR_QUIZ;
 const CR_QUIZ_RULE_REFS=window.PW_ORIGINAL_LIBRARIES.CR_QUIZ_RULE_REFS;
 
@@ -20788,9 +20407,7 @@ let pwLibraryMode='all';
 document.addEventListener('DOMContentLoaded',pwApplyLibraryArt);
 function pwLibrarySetFilter(mode,btn){pwLibraryMode=mode;document.querySelectorAll('#lib20Filter button').forEach(b=>b.classList.toggle('active',b===btn));pwLibraryFilter()}
 function pwLibraryNormalise(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/&/g,' and ').replace(/[^a-z0-9]+/g,' ').trim()}
-const PW_LIBRARY_SEARCH_ALIASES={
- 'may day':'mayday','channel 16':'vhf distress mayday','ch 16':'vhf distress mayday','panpan':'pan pan','pan pan':'panpan','securite':'securite safety','call regs':'colregs','col regs':'colregs','collision regs':'colregs','nav lights':'navigation lights','side lights':'sidelights','stern light':'sternlight','top mark':'topmark','motor sailing':'motorsailing','motor sailer':'motorsailing','right angle':'90 degrees crossing','closest point':'cpa','time to cpa':'tcpa','course over ground':'cog','speed over ground':'sog','call sign':'callsign','man overboard':'mob','not under command':'nuc','restricted ability to manoeuvre':'ram','restricted ability to maneuver':'ram','constrained by draught':'cbd','constrained by draft':'cbd','traffic separation scheme':'tss','inshore traffic zone':'itz'
-};
+const PW_LIBRARY_SEARCH_ALIASES=window.PW_ORIGINAL_LIBRARIES.PW_LIBRARY_SEARCH_ALIASES;
 function pwLibraryFilter(){
  const raw=document.getElementById('lib20Search')?.value||'';
  let q=pwLibraryNormalise(raw);
@@ -20956,40 +20573,7 @@ function resetProjectWatchForTesting(){
 const PW_COURSE_STORAGE='projectWatchCourseProgressV1';
 const PW_AIS_TASKS_STORAGE='projectWatchAisTasksV1';
 
-const PW_COURSE_STAGES=[
- {id:'orientation',no:'01',title:'Orientation & Watchkeeping Fundamentals',module:'course',type:'FOUNDATION',
-  desc:'Establish the language and safety mindset used by every later module.',
-  objectives:['Describe heading, COG and SOG','Use port/starboard and relative sectors correctly','Explain why lookout outranks electronic aids','Understand Guided, Watch and Exam modes'],
-  requirement:'First complete Bridge Language lessons 1–6. Then unlock the Stage 1 final knowledge check, score at least 4/5, and confirm the safety acknowledgement.'},
- {id:'foundations',no:'02',title:'COLREG Foundations',module:'colregs',type:'RULE FRAMEWORK',
-  desc:'Six teaching lessons follow the same proven flow as Stage 1. The 10-question final check unlocks only after Lesson 6.',
-  objectives:['Locate the major COLREG Parts','Explain Rules 5–8 principles','Distinguish in-sight and restricted-visibility frameworks','Understand give-way / stand-on escalation'],
-  requirement:'Complete all 6 teaching lessons and score at least 8/10 in the foundation knowledge check.'},
- {id:'lights',no:'03',title:'Lights & Shapes Recognition',module:'lights',type:'VESSEL RECOGNITION',
-  desc:'Recognise what another vessel is, its aspect and any special status before deciding responsibility.',
-  objectives:['Recognise core Rule 20–31 displays','Use viewing aspect correctly','Interpret day shapes','Identify NUC, RAM, fishing, towing, pilot and anchor/aground displays'],
-  requirement:'Complete all 6 teaching lessons and score at least 8/10 in the Stage 3 final knowledge check. The 45-question full mock remains available as advanced assessment practice.'},
- {id:'signals',no:'04',title:'Sound, Fog & Distress Signals',module:'signals',type:'COMMUNICATION',
-  desc:'Recognise manoeuvring and restricted-visibility signals and understand distress indications.',
-  objectives:['Recognise Rule 34 manoeuvring signals','Recognise common Rule 35 fog signals','Distinguish doubt/warning signals','Identify key distress signals and procedures'],
-  requirement:'Complete all 6 teaching lessons and score at least 8/10 in the Stage 4 final knowledge check.'},
- {id:'collision',no:'05',title:'Collision Avoidance & Rules of the Road',module:'scenarios',type:'DECISION MAKING',
-  desc:'Apply the Rule framework to developing encounters and demonstrate safe avoiding action.',
-  objectives:['Recognise overtaking, head-on and crossing','Assess collision risk','Apply Rules 13–18 correctly','Take early, substantial action and monitor the result'],
-  requirement:'Pass the Collision Knowledge Mock with no safety-critical error.'},
- {id:'buoyage',no:'06',title:'Buoyage & Marks',module:'buoyage',type:'PILOTAGE FOUNDATION',
-  desc:'Learn the complete IALA Region A visual set by day and night, then prove the knowledge in a live buoy-passage assessment.',
-  objectives:['Recognise lateral and preferred-channel marks','Use all four cardinal marks','Recognise isolated danger, safe water and special marks','Interpret light characteristics and safe passage'],
-  requirement:'Learn all 12 marks by day and night, then pass the Stage 6 buoy-passage assessment with at least 10/12 correct.'},
- {id:'tss',no:'07',title:'Traffic Separation Schemes',module:'tss',type:'TRAFFIC MANAGEMENT',
-  desc:'Nine guided Rule 10 lessons build the traffic picture step by step, followed by the Stage 7 final knowledge check.',
-  objectives:['Read lanes, separation zones, ITZs and terminations','Cross on the correct heading','Join/leave using the correct geometry','Apply vessel-specific Rule 10 duties without forgetting the other COLREGs'],
-  requirement:'Review all 9 guided TSS lessons and score at least 8/10 in the Stage 7 final knowledge check.'},
- {id:'ais',no:'08',title:'AIS & Electronic Situational Awareness',module:'ais',type:'ELECTRONIC AID',
-  desc:'Use AIS as supporting information without allowing it to replace lookout or COLREG judgement.',
-  objectives:['Understand what AIS is and what it is not','Read identity, COG/SOG, heading and target age','Interpret CPA/TCPA as predictions','Recognise missing, stale, wrong and virtual data','Cross-check AIS with lookout, radar and COLREGs'],
-  requirement:'Review all 6 guided AIS lessons and score at least 8/10 in the Stage 8 final knowledge check.'}
-];
+const PW_COURSE_STAGES=window.PW_ORIGINAL_LIBRARIES.PW_COURSE_STAGES;
 
 function courseLoad(){
  try{
@@ -21149,10 +20733,7 @@ function refreshAisCourseTasks(){
 
 const PW_VESSEL_STORAGE='projectWatchVesselProfileV2';
 const PW_VESSEL_SEEN='projectWatchVesselSetupSeenV2';
-const TRAINING_VESSEL_PROFILES={
-  watch1:{id:'watch1',name:'Watch One',propulsion:'power',make:'Project Watch',model:'Power Training Vessel',length:14.2,beam:4.5,draft:1.6,cruise:7,maxSpeed:9,aisClass:'B',homePort:'',callsign:'',photo:'',isDefault:true},
-  watch2:{id:'watch2',name:'Watch Two',propulsion:'sail',make:'Project Watch',model:'Sailing Training Vessel',length:12.0,beam:3.8,draft:1.8,cruise:6,maxSpeed:8,aisClass:'B',homePort:'',callsign:'',photo:'',isDefault:true}
-};
+const TRAINING_VESSEL_PROFILES=window.PW_ORIGINAL_LIBRARIES.TRAINING_VESSEL_PROFILES;
 const DEFAULT_VESSEL_PROFILE=TRAINING_VESSEL_PROFILES.watch1;
 let PW_VESSEL_PROFILE=null,PW_PENDING_PHOTO='';
 
@@ -21470,16 +21051,7 @@ function initVesselProfile(){
  if(!seen)setTimeout(()=>openVesselSetup(true),250);
 }
 
-const AIS_TRAINING_TARGETS=[
- {id:'a1',name:'MERIDIAN STAR',mmsi:'232001101',imo:'9301101',call:'MSTA7',cls:'A',type:'Cargo',colour:'#66cfa2',x:-2.7,y:2.1,cog:128,hdg:124,sog:13.4,rot:0,status:'Under way using engine',dest:'LIVERPOOL',eta:'15 SEP 04:20',draught:'8.2 m',len:'182 m',beam:'28 m',age:2},
- {id:'a2',name:'NORTH CHANNEL',mmsi:'235004208',imo:'9464208',call:'2NCH4',cls:'A',type:'Tanker',colour:'#e8756f',x:2.1,y:1.1,cog:248,hdg:247,sog:11.8,rot:-2,status:'Under way using engine',dest:'BELFAST',eta:'15 SEP 02:45',draught:'9.6 m',len:'144 m',beam:'23 m',age:3},
- {id:'a3',name:'ISLAND FERRY',mmsi:'235011425',imo:'9811425',call:'2IFR8',cls:'A',type:'Passenger',colour:'#7398ef',x:-1.2,y:-2.6,cog:018,hdg:020,sog:17.2,rot:1,status:'Under way using engine',dest:'DOUGLAS',eta:'14 SEP 23:35',draught:'4.8 m',len:'96 m',beam:'18 m',age:1},
- {id:'a4',name:'SEA HARVEST',mmsi:'235099114',imo:'',call:'MSEA6',cls:'A',type:'Fishing',colour:'#efa44e',x:2.9,y:-1.8,cog:302,hdg:290,sog:5.8,rot:4,status:'Engaged in fishing',dest:'',eta:'',draught:'3.1 m',len:'24 m',beam:'7 m',age:5},
- {id:'a5',name:'COAST RUNNER',mmsi:'235771902',imo:'',call:'',cls:'B',type:'Pleasure',colour:'#d987d3',x:.7,y:2.8,cog:188,hdg:176,sog:8.1,rot:null,status:'',dest:'',eta:'',draught:'',len:'13 m',beam:'4 m',age:14},
- {id:'a6',name:'TUG ALPHA',mmsi:'232551120',imo:'9123411',call:'MTUG5',cls:'A',type:'Tug',colour:'#5dcac4',x:-3.0,y:-.6,cog:082,hdg:080,sog:9.4,rot:0,status:'Restricted manoeuvrability',dest:'WORK AREA',eta:'',draught:'4.0 m',len:'31 m',beam:'10 m',age:4},
- {id:'a7',name:'WESTERN YACHT',mmsi:'235888701',imo:'',call:'',cls:'B',type:'Pleasure',colour:'#d987d3',x:3.3,y:2.6,cog:224,hdg:218,sog:6.7,rot:null,status:'',dest:'',eta:'',draught:'',len:'15 m',beam:'4.5 m',age:22},
- {id:'a8',name:'OLD SIGNAL',mmsi:'235550099',imo:'',call:'2OLD9',cls:'A',type:'Cargo',colour:'#7c9b96',x:-.3,y:3.4,cog:194,hdg:193,sog:10.2,rot:0,status:'Under way using engine',dest:'HEYSHAM',eta:'',draught:'5.6 m',len:'88 m',beam:'14 m',age:75,lost:true}
-];
+const AIS_TRAINING_TARGETS=window.PW_ORIGINAL_LIBRARIES.AIS_TRAINING_TARGETS;
 let aisTargets=[],aisOwn={x:0,y:0,cog:12,hdg:12,sog:vesselCruiseSpeed()},aisSelected=null,aisRunning=true,aisLast=0,aisRAF=0,aisRange=6,aisNames=true,aisVectors=true,aisLesson=1,aisStartEpoch=Date.now();
 
 function aisInit(){
@@ -21721,18 +21293,7 @@ function aisUpdatePanel(){
   <div class="aisTrafficNote">Training traffic is intentionally slowed. Targets may enter close-quarters situations for learning, but the simulation now prevents fictional vessels from physically colliding with each other or the training vessel.</div>`;
 }
 
-const MODULE_META={
- home:{no:'',title:'',desc:'',state:''},
- course:{no:'COURSE',title:'Structured Training Pathway',desc:'Project Watch core curriculum, prerequisites, learning outcomes and progression.',state:'COURSE MODE'},
- library:{no:'LIBRARY',title:'Training Library',desc:'Direct access to Project Watch learning modules, simulators, references and assessments.',state:'DIRECT ACCESS'},
- scenarios:{no:'01',title:'Collision Scenarios',desc:'Scenario briefing, guided watch, simulator and debrief.',state:'SIMULATOR MODULE'},
- colregs:{no:'02',title:'COLREGS',desc:'Rules 1–41, technical Annexes and licensed reference imagery.',state:'RULES MODULE'},
- lights:{no:'03',title:'Lights & Shapes',desc:'Bridge-view recognition of navigation lights and day shapes.',state:'RECOGNITION MODULE'},
- signals:{no:'04',title:'Signals',desc:'Sound signals, restricted visibility, distress and harbour practice.',state:'SIGNALS MODULE'},
- buoyage:{no:'05',title:'Buoyage',desc:'IALA Region A marks, lights and recognition challenges.',state:'BUOYAGE MODULE'},
- tss:{no:'06',title:'Traffic Separation',desc:'Rule 10 learning, crossing geometry, bridge display and live TSS watch.',state:'TSS MODULE'},
- ais:{no:'07',title:'AIS Target Trainer',desc:'Simulated AIS chart, vessel targets, COG/heading, CPA/TCPA and lost-target awareness.',state:'AIS LEARNING MODULE'}
-};
+const MODULE_META=window.PW_ORIGINAL_LIBRARIES.MODULE_META;
 function updateModuleContext(name){
  const box=$('moduleContext'),m=MODULE_META[name]||MODULE_META.home;
  if(!box)return;
@@ -22741,18 +22302,7 @@ window.addEventListener('DOMContentLoaded',pwRenderTestBar);setTimeout(pwRenderT
 
 <script>
 const AIS_STAGE8_LESSONS=window.PW_ORIGINAL_LIBRARIES.AIS_STAGE8_LESSONS;
-const AIS_STAGE8_Q=[
- {q:'What is the best description of AIS on the bridge?',a:['An additional source of navigational information that supports situational awareness','A replacement for visual lookout when every target has a name','A system that determines which vessel is stand-on','A collision-avoidance autopilot'],c:0},
- {q:'A vessel is visible ahead but no AIS target appears. What should you conclude?',a:['The vessel may simply not be transmitting or fitted with AIS; continue using all available means','It is a false visual contact','It must be under 20 metres','It has right of way'],c:0},
- {q:'What does COG describe?',a:['The direction the vessel is moving over the ground','The direction the bow is pointing','The compass error','The relative bearing of the target'],c:0},
- {q:'AIS shows COG 082° and heading 074°. Which statement is sound?',a:['The values describe different things and can legitimately differ','The heading sensor must be broken','COG should be ignored for all purposes','The vessel must be turning to port'],c:0},
- {q:'A target has CPA 0.2 NM and TCPA 8 minutes. What is the safest interpretation?',a:['It is a predicted close approach requiring attention, cross-checking and COLREG assessment','AIS has ordered you to alter course','The target is definitely the give-way vessel','The collision will occur in exactly eight minutes'],c:0},
- {q:'Why should destination, ETA or navigational status be treated cautiously?',a:['Some AIS information depends on manual entry and may be outdated or wrong','AIS encrypts those fields at sea','Only radar can receive voyage data','They are calculated from CPA'],c:0},
- {q:'A grey/lost AIS target stops updating. What does that prove?',a:['Only that fresh AIS reports are no longer being received; the vessel may still be present','The vessel has sunk','The vessel has left radar range','The vessel has switched to Class A'],c:0},
- {q:'Which statement about Class B AIS is safest?',a:['Do not expect every Class B target to provide the same data/reporting behaviour as Class A','Class B targets can be ignored for collision risk','Class B always transmits more often than Class A','Class B is shore-station data only'],c:0},
- {q:'An AIS target position and radar echo do not correlate well. What should you do?',a:['Investigate and cross-check rather than blindly trusting the AIS position','Delete the radar target','Assume the radar is wrong','Call the AIS target and follow whatever it says'],c:0},
- {q:'Which principle should finish every AIS lesson?',a:['Use AIS to supplement lookout, radar where fitted and COLREG judgement—not replace them','If AIS gives a ship name, VHF agreement overrides COLREGs','A good CPA means no further monitoring is required','AIS displays every navigational hazard'],c:0}
-];
+const AIS_STAGE8_Q=window.PW_ORIGINAL_LIBRARIES.AIS_STAGE8_Q;
 let aisCourseLesson=0,aisCourseReviewed=new Set(),aisFinalQs=[],aisFinalI=0,aisFinalScore=0;
 function aisCourseLoad(){try{aisCourseReviewed=new Set(JSON.parse(localStorage.getItem('pwAisStage8Reviewed')||'[]'))}catch(e){aisCourseReviewed=new Set()}}
 function aisCourseSave(){try{localStorage.setItem('pwAisStage8Reviewed',JSON.stringify([...aisCourseReviewed]))}catch(e){}}
