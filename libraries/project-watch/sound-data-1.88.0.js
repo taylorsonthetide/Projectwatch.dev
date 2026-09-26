@@ -1,0 +1,55 @@
+/* Project Watch content library; values preserved from the approved build. */
+window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
+window.PW_ORIGINAL_LIBRARIES.MAN_SIGNALS = [
+{id:'stbd',title:'I am altering course to starboard',pattern:'•',meaning:'One short blast',rule:'34(a)',seq:[['short']]},
+{id:'port',title:'I am altering course to port',pattern:'••',meaning:'Two short blasts',rule:'34(a)',seq:[['short'],['short']]},
+{id:'astern',title:'I am operating astern propulsion',pattern:'•••',meaning:'Three short blasts',rule:'34(a)',seq:[['short'],['short'],['short']]},
+{id:'overtakeStbd',title:'Intend to overtake on your starboard side',pattern:'— — •',meaning:'Two prolonged, one short',rule:'34(c)',seq:[['long'],['long'],['short']]},
+{id:'overtakePort',title:'Intend to overtake on your port side',pattern:'— — ••',meaning:'Two prolonged, two short',rule:'34(c)',seq:[['long'],['long'],['short'],['short']]},
+{id:'agreeOvertake',title:'Agreement to overtaking',pattern:'— • — •',meaning:'One prolonged, one short, one prolonged, one short',rule:'34(c)',seq:[['long'],['short'],['long'],['short']]},
+{id:'doubt',title:'Danger / doubt signal',pattern:'•••••+',meaning:'At least five short and rapid blasts',rule:'34(d)',seq:[['rapid5']]},
+{id:'bend',title:'Approaching obscured bend',pattern:'—',meaning:'One prolonged blast',rule:'34(e)',seq:[['long']]}
+];
+window.PW_ORIGINAL_LIBRARIES.FOG_SIGNALS = [
+{id:'pdMakingWay',title:'Power-driven vessel making way',pattern:'—',meaning:'One prolonged blast at intervals of not more than 2 minutes',rule:'35(a)',seq:[['long']]},
+{id:'pdStopped',title:'Power-driven vessel underway but stopped',pattern:'— —',meaning:'Two prolonged blasts, with about 2 seconds between them, at intervals of not more than 2 minutes',rule:'35(b)',seq:[['long'],['pause2'],['long']]},
+{id:'specialFog',title:'NUC / RAM / CBD / sailing / fishing',pattern:'— ••',meaning:'One prolonged followed by two short blasts at intervals of not more than 2 minutes',rule:'35(c)',seq:[['long'],['short'],['short']]},
+{id:'towPush',title:'Towing or pushing vessel',pattern:'— ••',meaning:'One prolonged followed by two short blasts at intervals of not more than 2 minutes',rule:'35(d)',seq:[['long'],['short'],['short']]},
+{id:'towLast',title:'Last vessel of a manned tow',pattern:'— •••',meaning:'One prolonged followed by three short blasts, when practicable immediately after the towing vessel signal',rule:'35(e)',seq:[['long'],['short'],['short'],['short']]},
+{id:'compositeFog',title:'Rigid composite pushing unit making way',pattern:'—',meaning:'Treated as a power-driven vessel: one prolonged blast when making way',rule:'35(f) / 35(a)',seq:[['long']]},
+{id:'anchor',title:'Vessel at anchor — under 100 m',pattern:'🔔 ≈5s',meaning:'Rapid bell for about 5 seconds, at intervals of not more than 1 minute',rule:'35(g)',seq:[['rapidBell']]},
+{id:'anchor100',title:'Vessel at anchor — 100 m or more',pattern:'🔔 ≈5s + GONG ≈5s',meaning:'Rapid bell forward for about 5 seconds, immediately followed by rapid gong aft for about 5 seconds',rule:'35(g)',seq:[['rapidBell'],['rapidGong']]},
+{id:'anchorWarn',title:'Anchor vessel warning approaching vessel',pattern:'• — •',meaning:'Optional one short, one prolonged, one short',rule:'35(g)',seq:[['short'],['long'],['short']]},
+{id:'aground',title:'Vessel aground — under 100 m',pattern:'3 🔔 + rapid 🔔 + 3 🔔',meaning:'Three distinct bell strokes, rapid bell about 5 seconds, then three distinct strokes',rule:'35(h)',seq:[['threeBell'],['rapidBell'],['threeBell']]},
+{id:'aground100',title:'Vessel aground — 100 m or more',pattern:'3 🔔 + rapid 🔔 + 3 🔔 + GONG',meaning:'Aground bell signal forward, followed by rapid gong aft for about 5 seconds',rule:'35(h)',seq:[['threeBell'],['rapidBell'],['threeBell'],['rapidGong']]},
+{id:'workAtAnchor',title:'Fishing / RAM carrying out work at anchor',pattern:'— ••',meaning:'Uses the Rule 35(c) one-prolonged-two-short signal instead of the ordinary anchor bell signal',rule:'35(c)',seq:[['long'],['short'],['short']]},
+{id:'pilot',title:'Pilot vessel identity addition',pattern:'••••',meaning:'Four short blasts may be added to the applicable Rule 35 signal',rule:'35(k)',seq:[['short'],['short'],['short'],['short']]},
+{id:'smallFogRef',title:'Small-vessel alternative sound signal',pattern:'REFERENCE',meaning:'Certain vessels under 20 m are not obliged to make some prescribed bell/whistle signals; where exempt, an efficient sound signal is required at intervals of not more than 2 minutes',rule:'35(i) / 35(j)',seq:[]}
+];
+window.PW_ORIGINAL_LIBRARIES.DISTRESS_SIGNALS = [
+{id:'explosive',icon:'💥',title:'Explosive signal',short:'Gun or other explosive signal at intervals of about one minute.',basis:'COLREG Annex IV 1(a)',detail:'A recognised distress signal when fired at intervals of about one minute. It indicates distress and need of assistance.'},
+{id:'continuousFog',icon:'📣',title:'Continuous fog signal',short:'Continuous sounding with any fog-signalling apparatus.',basis:'COLREG Annex IV 1(b)',detail:'Continuous sounding — not a normal Rule 35 fog sequence — is an Annex IV distress signal.'},
+{id:'redStars',icon:'🔴',title:'Red star rockets / shells',short:'Rockets or shells throwing red stars, one at a time at short intervals.',basis:'COLREG Annex IV 1(c)',detail:'Red-star rockets or shells fired one at a time at short intervals indicate distress.'},
+{id:'sos',icon:'··· ——— ···',title:'SOS',short:'Morse group ... --- ... by any signalling method.',basis:'COLREG Annex IV 1(d)',detail:'SOS may be made by any signalling method. Recognition is the Morse group three short, three long, three short.'},
+{id:'mayday',icon:'📻',title:'MAYDAY',short:'Spoken radiotelephony distress signal.',basis:'COLREG Annex IV 1(e) + MCA GMDSS procedure',detail:'MAYDAY is the spoken radiotelephony distress signal. Open this card for the complete UK small-vessel DSC/VHF training procedure.',special:'mayday'},
+{id:'panpan',icon:'📻',title:'PAN-PAN — Urgency',short:'Urgency call when concerned for the safety of a person or vessel.',basis:'MCA GMDSS urgency procedure — not an Annex IV distress signal',detail:'PAN-PAN is an urgency procedure, not a MAYDAY distress signal. MCA guidance uses a DSC All Ships Urgency Call nominating a working channel, followed by the PAN-PAN announcement on Channel 16 and the urgency message on the nominated working channel.',special:'panpan'},
+{id:'nc',icon:'🚩',title:'N.C. flags',short:'International Code Signal of distress N.C.',basis:'COLREG Annex IV 1(f)',detail:'The International Code Signal N.C. is a recognised distress signal.'},
+{id:'flagBall',icon:'⚫⬜',title:'Square flag and ball',short:'Square flag with a ball, or anything resembling a ball, above or below it.',basis:'COLREG Annex IV 1(g)',detail:'The square flag and ball combination is a recognised visual distress signal.'},
+{id:'flames',icon:'🔥',title:'Flames on vessel',short:'Flames on the vessel.',basis:'COLREG Annex IV 1(h)',detail:'Flames on the vessel, such as from a burning barrel, are a recognised distress signal.'},
+{id:'redFlare',icon:'🧨',title:'Red flare',short:'Rocket parachute flare or hand flare showing a red light.',basis:'COLREG Annex IV 1(i)',detail:'Both a red rocket parachute flare and a hand flare showing red are Annex IV distress signals.'},
+{id:'orangeSmoke',icon:'🟧',title:'Orange smoke',short:'Smoke signal giving off orange-coloured smoke.',basis:'COLREG Annex IV 1(j)',detail:'Orange smoke is a recognised distress signal and is particularly useful for visual location in daylight.'},
+{id:'arms',icon:'🙆',title:'Arm signal',short:'Slowly and repeatedly raise and lower outstretched arms.',basis:'COLREG Annex IV 1(k)',detail:'Slowly and repeatedly raising and lowering arms outstretched to each side is a recognised distress signal.'},
+{id:'dsc',icon:'📡',title:'DSC distress alert',short:'Digital Selective Calling distress alert.',basis:'COLREG Annex IV 1(l)',detail:'Annex IV recognises DSC distress alerts on VHF Channel 70 and specified MF/HF DSC frequencies. Voice is not transmitted on Channel 70.'},
+{id:'satellite',icon:'🛰️',title:'Satellite distress alert',short:'Ship-to-shore distress alert via Inmarsat or another mobile satellite service provider ship earth station.',basis:'COLREG Annex IV 1(m)',detail:'A ship-to-shore distress alert transmitted by an appropriate satellite ship earth station is recognised by Annex IV.'},
+{id:'epirb',icon:'📍',title:'EPIRB',short:'Emergency Position-Indicating Radio Beacon signal.',basis:'COLREG Annex IV 1(n) + MCA 2026 beacon guidance',detail:'EPIRB signals are expressly listed in Annex IV. UK-coded 406 MHz EPIRBs must be registered with the UK Beacon Registry.',special:'beacon'},
+{id:'radioApproved',icon:'📶',title:'Approved radio distress signal',short:'Approved radiocommunication distress signals, including survival-craft radar transponders.',basis:'COLREG Annex IV 1(o)',detail:'Annex IV also recognises approved signals transmitted by radiocommunication systems, including survival-craft radar transponders.'},
+{id:'plb',icon:'🆘',title:'PLB — Personal Locator Beacon',short:'Personal 406 MHz distress beacon carried by an individual.',basis:'MCA 2026 beacon guidance — operational equipment',detail:'A PLB is a personal 406 MHz beacon. It is important UK emergency equipment, but unlike EPIRB it is not separately named in the Annex IV list. UK requirements now mandate registration for PLBs carried on UK flagged ships, hovercraft and watercraft.',special:'plb'}
+];
+window.PW_ORIGINAL_LIBRARIES.HARBOUR_SIGNALS = [
+{id:'harbourStbd',title:'I am altering course to starboard',pattern:'•',meaning:'One short blast.',basis:'International COLREG Rule 34(a)',flag:'COLREG',seq:[['short']]},
+{id:'harbourPort',title:'I am altering course to port',pattern:'••',meaning:'Two short blasts.',basis:'International COLREG Rule 34(a)',flag:'COLREG',seq:[['short'],['short']]},
+{id:'harbourAstern',title:'I am operating astern propulsion',pattern:'•••',meaning:'Three short blasts. This indicates astern propulsion is being operated; it does not by itself prove the vessel is already moving astern.',basis:'International COLREG Rule 34(a)',flag:'COLREG',seq:[['short'],['short'],['short']]},
+{id:'harbourDoubt',title:'Danger / doubt',pattern:'•••••+',meaning:'At least five short and rapid blasts when in doubt about another vessel’s intentions/actions or whether sufficient action is being taken.',basis:'International COLREG Rule 34(d)',flag:'COLREG',seq:[['rapid5']]},
+{id:'harbourBend',title:'Obscured bend / channel obstruction',pattern:'—',meaning:'One prolonged blast when nearing a bend or area of a channel/fairway where other vessels may be obscured.',basis:'International COLREG Rule 34(e)',flag:'COLREG',seq:[['long']]},
+{id:'localBerth',title:'Leaving berth / dock — local rule example',pattern:'LOCAL',meaning:'Some jurisdictions prescribe additional departure signals. These are not universal International COLREG signals and must be checked against local harbour/byelaw requirements.',basis:'Local / jurisdiction-specific',flag:'LOCAL',seq:[]}
+];

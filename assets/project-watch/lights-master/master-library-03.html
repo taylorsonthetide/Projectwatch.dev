@@ -1,0 +1,246 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Watch — Complete COLREG Lights & Shapes Review Library</title><style>
+*{box-sizing:border-box}body{margin:0;background:#06151d;color:#eaf5f8;font-family:Arial,Helvetica,sans-serif}
+header{padding:26px 22px;background:#082430;border-bottom:1px solid #1f5365}header h1{margin:0;font-size:26px}header p{max-width:1000px;line-height:1.5;color:#b9ced5}
+.badge{display:inline-block;background:#0c3b4b;border:1px solid #2b7188;border-radius:999px;padding:7px 11px;margin:4px;font-size:12px;font-weight:700}
+.controls{padding:14px 22px;display:flex;gap:8px;flex-wrap:wrap}button{background:#0b3342;color:#fff;border:1px solid #28687e;border-radius:9px;padding:9px 12px;font-weight:700;cursor:pointer}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;padding:0 22px 30px}
+.card{background:#0a2632;border:1px solid #1d5264;border-radius:15px;overflow:hidden;box-shadow:0 8px 22px #0005}
+.meta{display:flex;justify-content:space-between;padding:9px 12px;font-size:11px;font-weight:800;color:#8fd9ee;background:#071d26}
+.night{height:250px;background:#000;position:relative;border-top:1px solid #173947;border-bottom:1px solid #173947}
+.lamp{position:absolute;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;z-index:2}
+.white{background:#fff;box-shadow:0 0 8px 3px #fff,0 0 22px 8px #dff7ff99}
+.red{background:#ff3030;box-shadow:0 0 8px 3px #ff3030,0 0 22px 8px #ff303077}
+.green{background:#31ed75;box-shadow:0 0 8px 3px #31ed75,0 0 22px 8px #31ed7577}
+.yellow{background:#ffd633;box-shadow:0 0 8px 3px #ffd633,0 0 22px 8px #ffd63377}
+.flashRing{position:absolute;inset:-10px;border:2px dashed currentColor;border-radius:50%;opacity:.8}
+.yellow .flashRing{color:#ffd633}.red .flashRing{color:#ff3030}
+.card h2{font-size:17px;margin:13px 14px 5px}.subtitle{margin:0 14px;color:#8ed6ea;font-weight:700;font-size:13px}.card p{margin:10px 14px 16px;color:#c8d9df;line-height:1.45;font-size:13px}
+.conditional,.arc{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:800;letter-spacing:.05em;color:#9eb4bc;white-space:nowrap}
+.notice{margin:0 22px 18px;padding:14px;border:1px solid #5b7b36;background:#172b16;border-radius:12px;line-height:1.5}
+footer{padding:20px 22px;color:#8ba5af;font-size:12px;border-top:1px solid #173947}
+@media(max-width:600px){main{padding:0 10px 20px}header,.controls{padding-left:12px;padding-right:12px}.notice{margin-left:12px;margin-right:12px}}
+
+.sectionTitle{grid-column:1/-1;background:#082430;border:1px solid #28687e;border-radius:14px;padding:15px 17px;margin-top:8px}
+.sectionTitle h2{margin:0 0 5px;font-size:20px}.sectionTitle p{margin:0;color:#b9ced5;font-size:13px}
+.day{height:250px;background:#f7f7f2;position:relative;border-top:1px solid #d4d4ce;border-bottom:1px solid #d4d4ce}
+.shape{position:absolute;transform:translate(-50%,-50%);background:#000}
+.ball{width:34px;height:34px;border-radius:50%}
+.diamond{width:34px;height:34px;transform:translate(-50%,-50%) rotate(45deg)}
+.cylinder{width:32px;height:64px}
+.coneUp{width:0;height:0;background:transparent;border-left:22px solid transparent;border-right:22px solid transparent;border-bottom:44px solid #000}
+.coneDown{width:0;height:0;background:transparent;border-left:22px solid transparent;border-right:22px solid transparent;border-top:44px solid #000}
+.flagA{width:76px;height:56px;background:linear-gradient(90deg,#fff 0 50%,#1565c0 50%);border:2px solid #111}
+.kindtag{position:absolute;right:10px;bottom:8px;font-size:10px;font-weight:800;color:#777}
+.smallnote{font-size:11px;color:#91aab3}
+</style></head><body>
+<header><h1>PROJECT WATCH — COMPLETE COLREG LIGHTS & SHAPES REVIEW LIBRARY</h1>
+<p><b>Approved Master Library 03 — Stage 3 visual standard.</b> Built from the approved Board 01 Rev D visual language. Night recognition uses lights only on black. Day shapes use black forms on a light field. This is the approved visual source of truth for Stage 3.</p>
+<span class="badge">RULES 21–31</span><span class="badge">ANNEX I</span><span class="badge">ANNEX II FISHING SIGNALS</span><span class="badge">STATUS: APPROVED • STAGE 3</span></header>
+<div class="controls">
+<button onclick="filterCards('all')">ALL</button>
+<button onclick="filterCards('23')">23 POWER</button><button onclick="filterCards('24')">24 TOWING</button><button onclick="filterCards('25')">25 SAIL</button>
+<button onclick="filterCards('26')">26 FISHING</button><button onclick="filterCards('27')">27 NUC/RAM</button><button onclick="filterCards('28')">28 CBD</button>
+<button onclick="filterCards('29')">29 PILOT</button><button onclick="filterCards('30')">30 ANCHOR</button><button onclick="filterCards('31')">31 SPECIAL</button><button onclick="filterCards('Annex')">ANNEX</button>
+</div>
+<main><div class="sectionTitle"><h2>21–22 — Definitions & visibility</h2><p>Core recognition definitions plus the visibility-range reference that underpins the Part C lights.</p></div><article class="card" data-rule="21(a)">
+<div class="meta"><span>PW-R21-MH</span><span>RULE 21(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:50%"></span></div>
+<h2>Masthead light</h2><div class="subtitle">White • 225°</div>
+<p>Right ahead to 22.5° abaft the beam either side.</p></article><article class="card" data-rule="21(c)">
+<div class="meta"><span>PW-R21-ST</span><span>RULE 21(c)</span></div><div class="night"><span class="lamp white" style="left:50%;top:50%"></span></div>
+<h2>Sternlight</h2><div class="subtitle">White • 135°</div>
+<p>After sector: 67.5° from right aft on each side.</p></article><article class="card" data-rule="21(d)">
+<div class="meta"><span>PW-R21-TW</span><span>RULE 21(d)</span></div><div class="night"><span class="lamp yellow" style="left:50%;top:50%"></span></div>
+<h2>Towing light</h2><div class="subtitle">Yellow • 135°</div>
+<p>Rendered as a yellow sternlight-characteristic light in towing configurations.</p></article><article class="card" data-rule="21(e)">
+<div class="meta"><span>PW-R21-AR</span><span>RULE 21(e)</span></div><div class="night"><span class="lamp white" style="left:50%;top:50%"></span></div>
+<h2>All-round light</h2><div class="subtitle">360°</div>
+<p>Unbroken over the full horizon.</p></article><div class="sectionTitle"><h2>23 — Power-driven vessels underway</h2><p>Includes the approved Project Watch aspect geometry from Board 01 Rev D.</p></div><article class="card" data-rule="23(a)"><div class="meta"><span>PW-R23-50-A</span><span>RULE 23(a)</span></div>
+<div class="night"><span class="lamp white" style="left:50%;top:24%"></span><span class="lamp white" style="left:50%;top:46%"></span><span class="lamp green" style="left:25%;top:72%"></span><span class="lamp red" style="left:75%;top:72%"></span></div>
+<h2>Power-driven vessel ≥50 m — ahead</h2><div class="subtitle">Two masthead whites • both sidelights</div><p>Approved Project Watch direct-ahead geometry: both masthead lights exactly centred.</p></article><article class="card" data-rule="23(a)"><div class="meta"><span>PW-R23-50-P</span><span>RULE 23(a)</span></div>
+<div class="night"><span class="lamp white" style="left:78%;top:24%"></span><span class="lamp white" style="left:22%;top:49%"></span><span class="lamp red" style="left:22%;top:74%"></span></div>
+<h2>Power-driven vessel ≥50 m — port aspect</h2><div class="subtitle">Wide fore/aft masthead separation • red sidelight</div><p>After masthead higher; clear side-aspect recognition geometry.</p></article><article class="card" data-rule="23(a)"><div class="meta"><span>PW-R23-50-S</span><span>RULE 23(a)</span></div>
+<div class="night"><span class="lamp white" style="left:22%;top:24%"></span><span class="lamp white" style="left:78%;top:49%"></span><span class="lamp green" style="left:78%;top:74%"></span></div>
+<h2>Power-driven vessel ≥50 m — starboard aspect</h2><div class="subtitle">Wide fore/aft masthead separation • green sidelight</div><p>Mirror of the port-aspect recognition card.</p></article><article class="card" data-rule="23(a)">
+<div class="meta"><span>PW-R23-U50-A</span><span>RULE 23(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:34%"></span><span class="lamp green" style="left:28%;top:72%"></span><span class="lamp red" style="left:72%;top:72%"></span></div>
+<h2>Power-driven vessel &lt;50 m — ahead</h2><div class="subtitle">One masthead white • both sidelights</div>
+<p>Second masthead light is optional below 50 m.</p></article><article class="card" data-rule="23(d)(i)">
+<div class="meta"><span>PW-R23-U12</span><span>RULE 23(d)(i)</span></div><div class="night"><span class="lamp white" style="left:50%;top:34%"></span><span class="lamp green" style="left:28%;top:72%"></span><span class="lamp red" style="left:72%;top:72%"></span></div>
+<h2>Power-driven vessel &lt;12 m — permitted alternative</h2><div class="subtitle">All-round white + sidelights</div>
+<p>Permitted in lieu of the Rule 23(a) display.</p></article><article class="card" data-rule="23(d)(ii)">
+<div class="meta"><span>PW-R23-U7</span><span>RULE 23(d)(ii)</span></div><div class="night"><span class="lamp white" style="left:50%;top:50%"></span></div>
+<h2>&lt;7 m, maximum speed ≤7 kn — permitted alternative</h2><div class="subtitle">All-round white; sidelights if practicable</div>
+<p>Specific small-vessel alternative.</p></article><article class="card" data-rule="23(b)">
+<div class="meta"><span>PW-R23-AC</span><span>RULE 23(b)</span></div><div class="night"><span class="lamp yellow" style="left:50%;top:20%"><span class="flashRing"></span></span><span class="lamp white" style="left:50%;top:42%"></span><span class="lamp green" style="left:25%;top:75%"></span><span class="lamp red" style="left:75%;top:75%"></span></div>
+<h2>Air-cushion vessel — non-displacement mode</h2><div class="subtitle">Normal power lights + flashing yellow</div>
+<p>Flashing yellow is additional.</p></article><article class="card" data-rule="23(c)">
+<div class="meta"><span>PW-R23-WIG</span><span>RULE 23(c)</span></div><div class="night"><span class="lamp red" style="left:50%;top:20%"><span class="flashRing"></span></span><span class="lamp white" style="left:50%;top:42%"></span><span class="lamp green" style="left:25%;top:75%"></span><span class="lamp red" style="left:75%;top:75%"></span></div>
+<h2>WIG craft — specified near-surface operation</h2><div class="subtitle">Normal power lights + high-intensity flashing red</div>
+<p>Applies when taking off, landing or in flight near the surface.</p></article><div class="sectionTitle"><h2>24 — Towing & pushing</h2><p>Towing, pushing, composite units, tows and inconspicuous partly-submerged objects.</p></div><article class="card" data-rule="24(a)">
+<div class="meta"><span>PW-R24-T200-A</span><span>RULE 24(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:25%"></span><span class="lamp white" style="left:50%;top:45%"></span><span class="lamp green" style="left:25%;top:72%"></span><span class="lamp red" style="left:75%;top:72%"></span></div>
+<h2>Towing astern — tow ≤200 m — ahead</h2><div class="subtitle">Two vertical masthead whites + sidelights</div>
+<p>Towing vessel display from ahead.</p></article><article class="card" data-rule="24(a)">
+<div class="meta"><span>PW-R24-T200-R</span><span>RULE 24(a)</span></div><div class="night"><span class="lamp yellow" style="left:50%;top:37%"></span><span class="lamp white" style="left:50%;top:62%"></span></div>
+<h2>Towing astern — tow ≤200 m — astern</h2><div class="subtitle">Yellow towing light above white sternlight</div>
+<p>Characteristic astern recognition pair.</p></article><article class="card" data-rule="24(a)">
+<div class="meta"><span>PW-R24-TGT200-A</span><span>RULE 24(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:18%"></span><span class="lamp white" style="left:50%;top:38%"></span><span class="lamp white" style="left:50%;top:58%"></span><span class="lamp green" style="left:25%;top:78%"></span><span class="lamp red" style="left:75%;top:78%"></span></div>
+<h2>Towing astern — tow &gt;200 m — ahead</h2><div class="subtitle">Three vertical masthead whites + sidelights</div>
+<p>Three masthead lights indicate tow length exceeds 200 m.</p></article><article class="card" data-rule="24(a)(v)">
+<div class="meta"><span>PW-R24-TGT200-D</span><span>RULE 24(a)(v)</span></div><div class="day"><span class="shape diamond" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Tow &gt;200 m — day shape</h2><div class="subtitle">Black diamond</div>
+<p>Towing vessel exhibits a diamond where best seen.</p></article><article class="card" data-rule="24(b)">
+<div class="meta"><span>PW-R24-COMP</span><span>RULE 24(b)</span></div><div class="night"><span class="lamp white" style="left:50%;top:34%"></span><span class="lamp green" style="left:28%;top:72%"></span><span class="lamp red" style="left:72%;top:72%"></span></div>
+<h2>Rigid composite unit</h2><div class="subtitle">Treat as a power-driven vessel</div>
+<p>A rigidly connected pushing vessel and vessel pushed ahead are treated as one power-driven vessel.</p></article><article class="card" data-rule="24(c)">
+<div class="meta"><span>PW-R24-PUSH</span><span>RULE 24(c)</span></div><div class="night"><span class="lamp white" style="left:50%;top:25%"></span><span class="lamp white" style="left:50%;top:45%"></span><span class="lamp green" style="left:25%;top:72%"></span><span class="lamp red" style="left:75%;top:72%"></span></div>
+<h2>Pushing ahead / towing alongside — not composite</h2><div class="subtitle">Two vertical masthead whites + sidelights</div>
+<p>No towing light above sternlight is prescribed by 24(c).</p></article><article class="card" data-rule="24(e)">
+<div class="meta"><span>PW-R24-TOWED</span><span>RULE 24(e)</span></div><div class="night"><span class="lamp green" style="left:25%;top:65%"></span><span class="lamp red" style="left:75%;top:65%"></span></div>
+<h2>Vessel or object being towed — ahead</h2><div class="subtitle">Sidelights</div>
+<p>Also exhibits a sternlight; &gt;200 m adds a diamond.</p></article><article class="card" data-rule="24(g)">
+<div class="meta"><span>PW-R24-SUB</span><span>RULE 24(g)</span></div><div class="night"><span class="lamp white" style="left:28%;top:32%"></span><span class="lamp white" style="left:75%;top:67%"></span></div>
+<h2>Inconspicuous partly-submerged tow</h2><div class="subtitle">All-round white marking lights</div>
+<p>Card is a simplified review marker; exact number depends on breadth and length.</p></article><article class="card" data-rule="24(g)(iv)">
+<div class="meta"><span>PW-R24-SUB-D</span><span>RULE 24(g)(iv)</span></div><div class="day"><span class="shape diamond" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Partly-submerged tow — day</h2><div class="subtitle">Diamond at aftermost extremity</div>
+<p>Additional forward diamond if total tow length exceeds 200 m.</p></article><div class="sectionTitle"><h2>25 — Sailing vessels & vessels under oars</h2><p>Sailing aspects, optional red-over-green, small sailing vessels, oars, and sail plus machinery.</p></div><article class="card" data-rule="25(a)">
+<div class="meta"><span>PW-R25-A</span><span>RULE 25(a)</span></div><div class="night"><span class="lamp green" style="left:25%;top:65%"></span><span class="lamp red" style="left:75%;top:65%"></span></div>
+<h2>Sailing vessel underway — ahead</h2><div class="subtitle">Red and green sidelights</div>
+<p>No masthead white as a sailing-vessel identifier.</p></article><article class="card" data-rule="25(a)">
+<div class="meta"><span>PW-R25-P</span><span>RULE 25(a)</span></div><div class="night"><span class="lamp red" style="left:72%;top:62%"></span></div>
+<h2>Sailing vessel underway — port aspect</h2><div class="subtitle">Red sidelight</div>
+<p>Sternlight becomes visible only within its prescribed after sector.</p></article><article class="card" data-rule="25(a)">
+<div class="meta"><span>PW-R25-S</span><span>RULE 25(a)</span></div><div class="night"><span class="lamp green" style="left:28%;top:62%"></span></div>
+<h2>Sailing vessel underway — starboard aspect</h2><div class="subtitle">Green sidelight</div>
+<p>Clear starboard aspect.</p></article><article class="card" data-rule="25(a)">
+<div class="meta"><span>PW-R25-R</span><span>RULE 25(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:58%"></span></div>
+<h2>Sailing vessel underway — astern</h2><div class="subtitle">White sternlight</div>
+<p>Direct astern recognition.</p></article><article class="card" data-rule="25(c)">
+<div class="meta"><span>PW-R25-RG</span><span>RULE 25(c)</span></div><div class="night"><span class="lamp red" style="left:50%;top:25%"></span><span class="lamp green" style="left:50%;top:43%"></span><span class="lamp green" style="left:25%;top:73%"></span><span class="lamp red" style="left:75%;top:73%"></span></div>
+<h2>Sailing vessel — optional mast lights</h2><div class="subtitle">Red over green + normal sailing lights</div>
+<p>Optional all-round red over green; not with the combined lantern permitted by 25(b).</p></article><article class="card" data-rule="25(e)">
+<div class="meta"><span>PW-R25-MOTOR-D</span><span>RULE 25(e)</span></div><div class="day"><span class="shape coneDown" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Sailing vessel also propelled by machinery — day</h2><div class="subtitle">Cone apex down</div>
+<p>Displayed forward where best seen.</p></article><div class="sectionTitle"><h2>26 — Fishing vessels</h2><p>Trawling, fishing other than trawling, making way, outlying gear and Annex II additional fishing signals.</p></div><article class="card" data-rule="26(b)">
+<div class="meta"><span>PW-R26-TR</span><span>RULE 26(b)</span></div><div class="night"><span class="lamp green" style="left:50%;top:38%"></span><span class="lamp white" style="left:50%;top:62%"></span></div>
+<h2>Trawler — not making way</h2><div class="subtitle">Green over white</div>
+<p>All-round green over all-round white.</p></article><article class="card" data-rule="26(b)">
+<div class="meta"><span>PW-R26-TR-MW</span><span>RULE 26(b)</span></div><div class="night"><span class="lamp green" style="left:50%;top:25%"></span><span class="lamp white" style="left:50%;top:45%"></span><span class="lamp green" style="left:25%;top:75%"></span><span class="lamp red" style="left:75%;top:75%"></span></div>
+<h2>Trawler — making way — ahead</h2><div class="subtitle">Green over white + sidelights</div>
+<p>Sidelights and sternlight are added when making way.</p></article><article class="card" data-rule="26(b)(ii)">
+<div class="meta"><span>PW-R26-TR50</span><span>RULE 26(b)(ii)</span></div><div class="night"><span class="lamp white" style="left:76%;top:20%"></span><span class="lamp green" style="left:50%;top:38%"></span><span class="lamp white" style="left:50%;top:56%"></span><span class="lamp green" style="left:25%;top:78%"></span><span class="lamp red" style="left:75%;top:78%"></span></div>
+<h2>Trawler ≥50 m — making way — ahead</h2><div class="subtitle">Masthead white abaft/higher + green over white + sidelights</div>
+<p>Under 50 m the additional masthead light is optional.</p></article><article class="card" data-rule="26(b)(i)">
+<div class="meta"><span>PW-R26-TR-D</span><span>RULE 26(b)(i)</span></div><div class="day"><span class="shape coneDown" style="left:50%;top:39%"></span><span class="shape coneUp" style="left:50%;top:61%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Trawler — day</h2><div class="subtitle">Two cones apexes together</div>
+<p>Fishing day shape.</p></article><article class="card" data-rule="26(c)">
+<div class="meta"><span>PW-R26-F</span><span>RULE 26(c)</span></div><div class="night"><span class="lamp red" style="left:50%;top:38%"></span><span class="lamp white" style="left:50%;top:62%"></span></div>
+<h2>Fishing other than trawling — not making way</h2><div class="subtitle">Red over white</div>
+<p>All-round red over all-round white.</p></article><article class="card" data-rule="26(c)">
+<div class="meta"><span>PW-R26-F-MW</span><span>RULE 26(c)</span></div><div class="night"><span class="lamp red" style="left:50%;top:30%"></span><span class="lamp white" style="left:50%;top:50%"></span><span class="lamp green" style="left:25%;top:78%"></span><span class="lamp red" style="left:75%;top:78%"></span></div>
+<h2>Fishing other than trawling — making way — ahead</h2><div class="subtitle">Red over white + sidelights</div>
+<p>Sidelights and sternlight are added when making way.</p></article><article class="card" data-rule="26(c)(ii)">
+<div class="meta"><span>PW-R26-GEAR</span><span>RULE 26(c)(ii)</span></div><div class="night"><span class="lamp red" style="left:50%;top:28%"></span><span class="lamp white" style="left:50%;top:50%"></span><span class="lamp white" style="left:82%;top:50%"></span></div>
+<h2>Fishing gear extending &gt;150 m</h2><div class="subtitle">Additional all-round white toward gear</div>
+<p>Direction-indicating light is placed in direction of outlying gear.</p></article><article class="card" data-rule="26(c)(ii)">
+<div class="meta"><span>PW-R26-GEAR-D</span><span>RULE 26(c)(ii)</span></div><div class="day"><span class="shape coneUp" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Fishing gear extending &gt;150 m — day</h2><div class="subtitle">Cone apex up toward gear</div>
+<p>Direction of gear is indicated by the cone.</p></article><article class="card" data-rule="Annex II">
+<div class="meta"><span>PW-AII-SHOOT</span><span>RULE Annex II</span></div><div class="night"><span class="lamp white" style="left:50%;top:38%"></span><span class="lamp white" style="left:50%;top:62%"></span></div>
+<h2>Trawler shooting nets</h2><div class="subtitle">Two white lights vertical</div>
+<p>Additional close-proximity fishing signal.</p></article><article class="card" data-rule="Annex II">
+<div class="meta"><span>PW-AII-HAUL</span><span>RULE Annex II</span></div><div class="night"><span class="lamp white" style="left:50%;top:38%"></span><span class="lamp red" style="left:50%;top:62%"></span></div>
+<h2>Trawler hauling nets</h2><div class="subtitle">White over red</div>
+<p>Additional close-proximity fishing signal.</p></article><article class="card" data-rule="Annex II">
+<div class="meta"><span>PW-AII-FAST</span><span>RULE Annex II</span></div><div class="night"><span class="lamp red" style="left:50%;top:38%"></span><span class="lamp red" style="left:50%;top:62%"></span></div>
+<h2>Trawler nets fast on obstruction</h2><div class="subtitle">Two red lights vertical</div>
+<p>Additional close-proximity fishing signal.</p></article><article class="card" data-rule="Annex II">
+<div class="meta"><span>PW-AII-PURSE</span><span>RULE Annex II</span></div><div class="night"><span class="lamp yellow" style="left:50%;top:38%"><span class="flashRing"></span></span><span class="lamp yellow" style="left:50%;top:62%"><span class="flashRing"></span></span></div>
+<h2>Purse seiner hampered by gear</h2><div class="subtitle">Two yellow lights flashing alternately</div>
+<p>Optional additional signal when hampered by fishing gear.</p></article><div class="sectionTitle"><h2>27 — NUC, RAM & special operations</h2><p>Not under command, restricted ability to manoeuvre, dredging, diving and mine-clearance.</p></div><article class="card" data-rule="27(a)">
+<div class="meta"><span>PW-R27-NUC</span><span>RULE 27(a)</span></div><div class="night"><span class="lamp red" style="left:50%;top:38%"></span><span class="lamp red" style="left:50%;top:62%"></span></div>
+<h2>Not under command — not making way</h2><div class="subtitle">Red over red</div>
+<p>Two all-round red lights.</p></article><article class="card" data-rule="27(a)">
+<div class="meta"><span>PW-R27-NUC-MW</span><span>RULE 27(a)</span></div><div class="night"><span class="lamp red" style="left:50%;top:22%"></span><span class="lamp red" style="left:50%;top:40%"></span><span class="lamp green" style="left:25%;top:75%"></span><span class="lamp red" style="left:75%;top:75%"></span></div>
+<h2>Not under command — making way — ahead</h2><div class="subtitle">Red over red + sidelights</div>
+<p>Sidelights and sternlight are added when making way.</p></article><article class="card" data-rule="27(a)(ii)">
+<div class="meta"><span>PW-R27-NUC-D</span><span>RULE 27(a)(ii)</span></div><div class="day"><span class="shape ball" style="left:50%;top:37%"></span><span class="shape ball" style="left:50%;top:63%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Not under command — day</h2><div class="subtitle">Two black balls</div>
+<p>Two balls in a vertical line.</p></article><article class="card" data-rule="27(b)">
+<div class="meta"><span>PW-R27-RAM</span><span>RULE 27(b)</span></div><div class="night"><span class="lamp red" style="left:50%;top:27%"></span><span class="lamp white" style="left:50%;top:50%"></span><span class="lamp red" style="left:50%;top:73%"></span></div>
+<h2>Restricted ability to manoeuvre — not making way</h2><div class="subtitle">Red-white-red</div>
+<p>Three all-round lights vertical.</p></article><article class="card" data-rule="27(b)">
+<div class="meta"><span>PW-R27-RAM-MW</span><span>RULE 27(b)</span></div><div class="night"><span class="lamp red" style="left:50%;top:18%"></span><span class="lamp white" style="left:50%;top:36%"></span><span class="lamp red" style="left:50%;top:54%"></span><span class="lamp green" style="left:25%;top:80%"></span><span class="lamp red" style="left:75%;top:80%"></span></div>
+<h2>RAM — making way — ahead</h2><div class="subtitle">Red-white-red + power-driven underway lights</div>
+<p>Masthead light(s), sidelights and sternlight are additional when making way.</p></article><article class="card" data-rule="27(b)(ii)">
+<div class="meta"><span>PW-R27-RAM-D</span><span>RULE 27(b)(ii)</span></div><div class="day"><span class="shape ball" style="left:50%;top:27%"></span><span class="shape diamond" style="left:50%;top:50%"></span><span class="shape ball" style="left:50%;top:73%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Restricted ability to manoeuvre — day</h2><div class="subtitle">Ball-diamond-ball</div>
+<p>Three shapes in a vertical line.</p></article><article class="card" data-rule="27(d)">
+<div class="meta"><span>PW-R27-DREDGE</span><span>RULE 27(d)</span></div><div class="night"><span class="lamp red" style="left:50%;top:20%"></span><span class="lamp white" style="left:50%;top:38%"></span><span class="lamp red" style="left:50%;top:56%"></span><span class="lamp red" style="left:18%;top:48%"></span><span class="lamp red" style="left:18%;top:66%"></span><span class="lamp green" style="left:82%;top:48%"></span><span class="lamp green" style="left:82%;top:66%"></span></div>
+<h2>Dredging / underwater ops with obstruction</h2><div class="subtitle">RAM + red obstruction side + green safe side</div>
+<p>Two red all-round lights mark obstruction; two green mark side another vessel may pass.</p></article><article class="card" data-rule="27(d)">
+<div class="meta"><span>PW-R27-DREDGE-D</span><span>RULE 27(d)</span></div><div class="day"><span class="shape ball" style="left:50%;top:27%"></span><span class="shape diamond" style="left:50%;top:50%"></span><span class="shape ball" style="left:50%;top:73%"></span><span class="shape ball" style="left:18%;top:40%"></span><span class="shape ball" style="left:18%;top:63%"></span><span class="shape diamond" style="left:82%;top:40%"></span><span class="shape diamond" style="left:82%;top:63%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Dredging / underwater ops — day</h2><div class="subtitle">Ball-diamond-ball + balls obstruction + diamonds safe</div>
+<p>Maximum practical horizontal separation is required by Annex I.</p></article><article class="card" data-rule="27(e)">
+<div class="meta"><span>PW-R27-DIVE</span><span>RULE 27(e)</span></div><div class="night"><span class="lamp red" style="left:50%;top:27%"></span><span class="lamp white" style="left:50%;top:50%"></span><span class="lamp red" style="left:50%;top:73%"></span></div>
+<h2>Small diving-operation vessel</h2><div class="subtitle">Red-white-red</div>
+<p>When full dredging display is impracticable, also carries rigid Code flag A.</p></article><article class="card" data-rule="27(e)(ii)">
+<div class="meta"><span>PW-R27-DIVE-A</span><span>RULE 27(e)(ii)</span></div><div class="day"><span class="shape flagA" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Diving operation — Code flag A</h2><div class="subtitle">Rigid replica • all-round visibility</div>
+<p>Not less than 1 m high under Rule 27(e)(ii).</p></article><article class="card" data-rule="27(f)">
+<div class="meta"><span>PW-R27-MINE</span><span>RULE 27(f)</span></div>
+<div class="night"><span class="lamp green" style="left:50%;top:24%"></span><span class="lamp green" style="left:27%;top:62%"></span><span class="lamp green" style="left:73%;top:62%"></span><span class="conditional">ADDITIONAL MINE-CLEARANCE SIGNALS</span></div>
+<h2>Mine-clearance vessel — additional night signals</h2><div class="subtitle">Three all-round green lights</div>
+<p>One near the foremast head and one at each end of the fore yard. These are additional to the lights otherwise prescribed for a power-driven vessel.</p></article><article class="card" data-rule="27(f)">
+<div class="meta"><span>PW-R27-MINE-D</span><span>RULE 27(f)</span></div><div class="day"><span class="shape ball" style="left:50%;top:25%"></span><span class="shape ball" style="left:25%;top:58%"></span><span class="shape ball" style="left:75%;top:58%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Mine-clearance vessel — day</h2><div class="subtitle">Three black balls in prescribed arrangement</div>
+<p>Indicates danger to vessels approaching within 1000 m.</p></article><div class="sectionTitle"><h2>28 — Constrained by draught</h2><p>Optional additional signal for a power-driven vessel constrained by her draught.</p></div><article class="card" data-rule="28">
+<div class="meta"><span>PW-R28-CBD</span><span>RULE 28</span></div><div class="night"><span class="lamp red" style="left:50%;top:20%"></span><span class="lamp red" style="left:50%;top:38%"></span><span class="lamp red" style="left:50%;top:56%"></span><span class="lamp green" style="left:25%;top:80%"></span><span class="lamp red" style="left:75%;top:80%"></span></div>
+<h2>Constrained by draught — underway — ahead</h2><div class="subtitle">Three all-round red + Rule 23 lights</div>
+<p>The three red all-round lights are optional additional signals.</p></article><article class="card" data-rule="28">
+<div class="meta"><span>PW-R28-CBD-D</span><span>RULE 28</span></div><div class="day"><span class="shape cylinder" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Constrained by draught — day</h2><div class="subtitle">Black cylinder</div>
+<p>Optional additional day shape.</p></article><div class="sectionTitle"><h2>29 — Pilot vessels</h2><p>Pilotage duty underway and at anchor.</p></div><article class="card" data-rule="29(a)">
+<div class="meta"><span>PW-R29-U</span><span>RULE 29(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:22%"></span><span class="lamp red" style="left:50%;top:42%"></span><span class="lamp green" style="left:25%;top:75%"></span><span class="lamp red" style="left:75%;top:75%"></span></div>
+<h2>Pilot vessel on pilotage duty — underway — ahead</h2><div class="subtitle">White over red + sidelights</div>
+<p>Sternlight is also exhibited.</p></article><article class="card" data-rule="29(a)">
+<div class="meta"><span>PW-R29-A</span><span>RULE 29(a)</span></div><div class="night"><span class="lamp white" style="left:50%;top:22%"></span><span class="lamp red" style="left:50%;top:42%"></span><span class="lamp white" style="left:50%;top:72%"></span></div>
+<h2>Pilot vessel on pilotage duty — at anchor</h2><div class="subtitle">White over red + anchor light(s)</div>
+<p>Anchor light(s) or shape are additional.</p></article><div class="sectionTitle"><h2>30 — Anchored & aground</h2><p>Anchor displays by length and aground additions.</p></div><article class="card" data-rule="30(b)">
+<div class="meta"><span>PW-R30-U50</span><span>RULE 30(b)</span></div><div class="night"><span class="lamp white" style="left:50%;top:52%"></span></div>
+<h2>Vessel &lt;50 m at anchor</h2><div class="subtitle">One all-round white</div>
+<p>May exhibit one all-round white where best seen.</p></article><article class="card" data-rule="30(a)">
+<div class="meta"><span>PW-R30-GE50</span><span>RULE 30(a)</span></div><div class="night"><span class="lamp white" style="left:28%;top:32%"></span><span class="lamp white" style="left:75%;top:67%"></span></div>
+<h2>Vessel ≥50 m at anchor</h2><div class="subtitle">Forward white higher + after white lower</div>
+<p>Forward anchor light is higher than after light.</p></article><article class="card" data-rule="30(a)">
+<div class="meta"><span>PW-R30-ANCH-D</span><span>RULE 30(a)</span></div><div class="day"><span class="shape ball" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Vessel at anchor — day</h2><div class="subtitle">One black ball</div>
+<p>Displayed where best seen.</p></article><article class="card" data-rule="30(d)">
+<div class="meta"><span>PW-R30-AG</span><span>RULE 30(d)</span></div><div class="night"><span class="lamp red" style="left:50%;top:20%"></span><span class="lamp red" style="left:50%;top:40%"></span><span class="lamp white" style="left:50%;top:72%"></span></div>
+<h2>Vessel aground</h2><div class="subtitle">Anchor light(s) + two all-round red</div>
+<p>Aground adds two vertical red all-round lights.</p></article><article class="card" data-rule="30(d)">
+<div class="meta"><span>PW-R30-AG-D</span><span>RULE 30(d)</span></div><div class="day"><span class="shape ball" style="left:50%;top:27%"></span><span class="shape ball" style="left:50%;top:50%"></span><span class="shape ball" style="left:50%;top:73%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Vessel aground — day</h2><div class="subtitle">Three black balls</div>
+<p>Three balls in a vertical line.</p></article><div class="sectionTitle"><h2>31 — Seaplanes & WIG craft</h2><p>Closest-possible compliance where prescribed characteristics or positions are impracticable.</p></div><article class="card" data-rule="31">
+<div class="meta"><span>PW-R31</span><span>RULE 31</span></div><div class="night"><span class="lamp white" style="left:50%;top:50%"></span></div>
+<h2>Seaplane / WIG craft where normal positioning impracticable</h2><div class="subtitle">As closely similar as possible</div>
+<p>Rule 31 is a closest-possible-compliance provision rather than a unique recognition pattern.</p></article><div class="sectionTitle"><h2>Annex I — Master day-shape primitives</h2><p>Project Watch renders these black on a light field for maximum recognition.</p></div><article class="card" data-rule="Annex I §6">
+<div class="meta"><span>PW-AI-BALL</span><span>RULE Annex I §6</span></div><div class="day"><span class="shape ball" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Ball</h2><div class="subtitle">Black ball</div>
+<p>Master primitive.</p></article><article class="card" data-rule="Annex I §6">
+<div class="meta"><span>PW-AI-CONE-U</span><span>RULE Annex I §6</span></div><div class="day"><span class="shape coneUp" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Cone — apex up</h2><div class="subtitle">Black cone</div>
+<p>Master primitive.</p></article><article class="card" data-rule="Annex I §6">
+<div class="meta"><span>PW-AI-CONE-D</span><span>RULE Annex I §6</span></div><div class="day"><span class="shape coneDown" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Cone — apex down</h2><div class="subtitle">Black cone</div>
+<p>Master primitive.</p></article><article class="card" data-rule="Annex I §6">
+<div class="meta"><span>PW-AI-DIAMOND</span><span>RULE Annex I §6</span></div><div class="day"><span class="shape diamond" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Diamond</h2><div class="subtitle">Black diamond</div>
+<p>Two cones with common base.</p></article><article class="card" data-rule="Annex I §6">
+<div class="meta"><span>PW-AI-CYL</span><span>RULE Annex I §6</span></div><div class="day"><span class="shape cylinder" style="left:50%;top:50%"></span><span class="kindtag">DAY SHAPE</span></div>
+<h2>Cylinder</h2><div class="subtitle">Black cylinder</div>
+<p>Height twice its diameter in the full-size Annex I specification.</p></article></main>
+<footer>Project Watch • Master Review Build 02 • Original Project Watch recognition graphics • Regulatory source: COLREG Rules 20–31, Annex I and Annex II as reproduced in MCA MSN 1781. This artifact is not an MCA approval.<br><b>Build 03 automated render audit: 66 cards • 48 night panels • 18 day panels • blank night panels 0 • blank day panels 0.</b></footer>
+<script>
+function filterCards(x){document.querySelectorAll('.card').forEach(c=>c.style.display=(x==='all'||c.dataset.rule.startsWith(x))?'block':'none');document.querySelectorAll('.sectionTitle').forEach(s=>s.style.display=x==='all'?'block':'none')}
+</script></body></html>
