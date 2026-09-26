@@ -35,3 +35,18 @@ All paths are stored in the GitHub repository and referenced by URL from the pag
 | `assets/safety/photos/lifebuoy.jpg` | Ypsilon from Finland, CC0 | [Viking Grace lifebuoy](https://commons.wikimedia.org/wiki/File:Viking_Grace_lifebuoy.jpg) |
 
 The JPEG files are resized Wikimedia Commons thumbnails, saved locally to keep the lesson independent of Commons uptime. The ship or equipment in an illustrative photograph is not presented as a pleasure-vessel specification. The unused bridge and fishing-vessel downloads were excluded from publication.
+
+## Build 1.92.0 teaching scene revision
+
+The six numbered flow diagrams remain in the repository as historical source assets but are no longer displayed as the primary lesson artwork. The teaching panels now use original AI-generated recreational boating scenes, reviewed for the intended situation. They are illustrative; their chart, equipment and line geometry are not an operational specification. The question bank and its existing image references remain separate from the lesson visuals.
+
+| GitHub path | Lesson | Illustration prompt intent |
+| --- | --- | --- |
+| `assets/safety/scenes/departure.webp` | Before leaving the berth | Crew check chart and conditions alongside. |
+| `assets/safety/scenes/risk.webp` | Spot and control risk | Loose line crosses a deck route; crew pause. |
+| `assets/safety/scenes/deck.webp` | Stay aboard and work safely | Lifejacket, handhold and clear route by mooring gear. |
+| `assets/safety/scenes/equipment.webp` | Know and check the safety kit | Lifejacket, throw line, VHF and extinguisher check. |
+| `assets/safety/scenes/conditions.webp` | People and changing conditions | Crew discuss weather and chart safely in harbour. |
+| `assets/safety/scenes/emergency.webp` | Act early in an emergency | Training dummy man-overboard drill with helm and lookout roles. |
+
+Generated using the built-in image generation tool from the Project Watch lesson-specific prompt set on 26 September 2026. Source PNG masters remain in the generation workspace; repository assets are optimized WebP versions. No third-party photo licence applies to these generated scenes. Image details are illustrative and are never used to determine a scored answer.
