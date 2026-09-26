@@ -6,7 +6,9 @@ Keep these directories at the same relative paths when moving hosting providers.
 
 ## Content boundary
 
-- `index.html`: page structure, existing controls, navigation and simulator runtime.
+- `index.html`: page structure and existing controls.
+- `css/project-watch-core-1.88.0.css` and `js/project-watch-core-1.88.0.js`:
+  the original presentation and simulator runtime, loaded in their original order.
 - `libraries/project-watch/`: original Project Watch question banks, lessons,
   scenario definitions, rule reference data and visual path maps.
 - `assets/project-watch/lights-master/`: standalone approved Lights & Shapes
@@ -28,7 +30,7 @@ and assessment stay independent of the original eight-stage course.
 
 The content extraction moved 53 literal collections and 17 approved visual
 HTML pages without editing their questions, correct-answer indexes or artwork.
-Other inline page templates, dynamically generated SVGs and older runtime logic
+Other inline page templates, dynamically generated SVGs and later feature patches
 still require staged review before the entire original page is fully separated.
 Do not delete an inline source until its external replacement is verified in the
 live learner flow. The approved 1.87.1 branch is the rollback reference.
