@@ -1269,8 +1269,6 @@
 
 
 <section id="cevniPage" class="appPage">
- <button id="cevniDevToggle" class="cevniDevToggle" onclick="cevniDevToggle()">🧪 TEST MODE</button>
- <div id="cevniDevBar" class="cevniDevBar" hidden><b>DEVELOPMENT TEST MODE</b><span id="cevniDevStatus">Answers visible • free navigation</span><button onclick="cevniDevPrev()">← BACK</button><button onclick="cevniDevReveal()">SHOW ANSWER</button><button onclick="cevniDevNext()">NEXT →</button><button onclick="cevniDevReset()">RESET TEST</button><button onclick="cevniDevToggle()">EXIT</button></div>
  <div class="cevniHero"><div><div class="ver">PROJECT WATCH • INLAND WATERWAYS PATHWAY</div><h1 id="cevniCourseTitle">CEVNI — European Inland Waterways</h1><p>Learn the core European inland-waterway framework through Project Watch teaching, recognition, sound, practical scenarios and an original mock assessment. This pathway is deliberately separate from the COLREG course.</p></div><div class="cevniBadge"><small>INDEPENDENT TRAINING</small><b>CEVNI</b><span>REV.6 + CURRENT AMENDMENTS</span></div></div>
  <div class="cevniBasis"><div><small>PRIMARY BASIS</small><b>UNECE CEVNI Revision 6</b></div><div><small>UPDATE LAYER</small><b>Corrigenda + Amendments 1 &amp; 2</b></div><div><small>SIGNS</small><b>CEVNI Annex 7 + SIGNI context</b></div><div><small>STATUS</small><b>Training / mock only</b></div></div>
  <div class="cevniNav"><button class="active" onclick="cevniShow('course',this)">COURSE</button><button onclick="cevniShow('signs',this)">SIGNS &amp; MARKS</button><button onclick="cevniShow('sound',this)">SOUND LAB</button><button onclick="cevniShow('scenarios',this)">PRACTICAL</button><button onclick="pwOpenCevniMock()">MOCK EXAM ↗</button><button onclick="showModule('home')">← PROJECT WATCH</button></div>
@@ -4151,7 +4149,6 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 </script>
 <!-- BUILD 1.46.55-QA-MICROTEXT-REPAIR: Lights & Shapes mock QA repair only. Q9 knowledge visual, Aspect caption neutrality, mandatory sequential answers, final NEXT submits, submit redirects to first missing. -->
 <style id="pw-cevni-dev-css-14708">
-.cevniDevToggle{position:fixed;top:142px;right:24px;z-index:100001;background:#ffb21a!important;color:#061f2c!important;border:2px solid #ffe19a!important;border-radius:12px!important;padding:11px 16px!important;font-weight:900!important;box-shadow:0 8px 24px #0008!important}.cevniDevToggle.on{background:#ff5f45!important;color:#fff!important}.cevniDevBar{position:fixed;top:142px;left:50%;transform:translateX(-50%);z-index:100000;background:#071f2c;border:2px solid #ffb21a;border-radius:14px;padding:10px 12px;box-shadow:0 12px 34px #000b;display:flex;gap:8px;align-items:center;max-width:calc(100vw - 210px);flex-wrap:wrap}.cevniDevBar[hidden]{display:none}.cevniDevBar b{color:#ffca55}.cevniDevBar span{color:#b7d7e5;font-size:12px}.cevniDevBar button{padding:8px 11px!important;font-size:12px!important}.cevniDevCorrect{outline:3px solid #48e28b!important;box-shadow:0 0 0 5px #48e28b33!important}.cevniDevWrong{opacity:.48}.cevniDevTag{display:inline-block;margin:10px 0 0;padding:6px 9px;border-radius:8px;background:#123d4d;color:#8fffc0;font-weight:800;font-size:12px}@media(max-width:800px){.cevniDevToggle{top:136px;right:10px}.cevniDevBar{top:132px;left:10px;right:10px;transform:none;max-width:none}}
 </style>
 <script src="libraries/cevni/live-question-bundle-1.70.0.js"></script>
 <script src="libraries/cevni/base-briefings-1.70.0.js"></script>
@@ -4159,7 +4156,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 <script src="libraries/cevni/early-teaching-1.70.0.js"></script>
 <script src="libraries/cevni/deep-practice-1.70.3.js"></script>
 <script src="libraries/cevni/annex7-official-plates-1.84.0.js"></script>
-<script id="pw-cevni-engine-14700" src="js/cevni/69-pw-cevni-engine-library-backed-1.78.3.js"></script>
+<script id="pw-cevni-engine-14700" src="js/cevni/69-pw-cevni-engine-library-backed-1.88.2-full.js"></script>
 <!-- BUILD 1.47.6 CEVNI WAV AUDIO: CEVNI Sound Lab uses embedded pre-rendered WAV horn files via HTMLAudioElement; escaped-newline bleed removed. -->
 
 <!-- PROJECT WATCH CEVNI 1.47.11 — CONTENT/DATA ARCHITECTURE -->
@@ -4247,7 +4244,6 @@ window.cevniOpenLesson=function(i,step=0){
  const q=cevniShuffleQuestion(m.check[0],m.check[1],m.check[2]);
  a.innerHTML=`<div class="cvLessonShell"><div class="cvLessonTop"><div><div class="ver">MODULE ${m.n} • KNOWLEDGE CHECK</div><h2>${m.title}</h2><p class="cevniLead">Complete the module check after reviewing all ${total} teaching briefings.</p></div><div class="cvLessonCounter">CHECK • ${i+1} / 9</div></div><div class="cvLessonProgress"><i style="width:100%"></i></div><div class="cevniKnowledge cvKnowledgeOnly"><div class="ver">KNOWLEDGE CHECK • REQUIRED BEFORE REVIEW</div><h3>${q.prompt}</h3><div class="cevniAnswers">${q.answers.map((x,j)=>`<button onclick="cevniLessonAnswer(this,${j===q.correct},${i})">${String.fromCharCode(65+j)} • ${x}</button>`).join('')}</div><div id="cevniLessonFeedback"></div></div><div class="cvLessonNav"><button class="cvClose" onclick="cevniCloseLesson()">CLOSE</button><span></span><button class="cvBack" onclick="cevniOpenLesson(${i},${Math.max(0,total-1)})">← PREVIOUS</button></div></div>`;
  window.scrollTo({top:document.getElementById('cevniLessonArea').getBoundingClientRect().top+window.scrollY-100,behavior:'smooth'});
- if(cvDevMode)setTimeout(()=>cevniDevReveal(),30);
 };
 /* Development inventory is generated from the libraries, so future content is automatically testable. */
 window.cevniLibraryManifest=function(){return {version:CEVNI_DATA_VERSION,sources:CEVNI_SOURCE_REGISTRY,schema:CEVNI_LIBRARY_SCHEMA,health:cevniValidateLibraries()}}
@@ -4415,79 +4411,7 @@ window.PROJECT_WATCH_BUILD='1.47.14-CEVNI-MASTER-SPEC-MATRIX';
 document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.14-CEVNI-MASTER-SPEC-MATRIX';});
 </script>
 
-<!-- PW_DEVTOOLS_START : remove this entire marked block for production if desired -->
-<style id="pwDevToolsStyles">
-html.pw-devtools-disabled #cevniDevToggle,html.pw-devtools-disabled #cevniDevBar{display:none!important}
-</style>
-<script id="pwDevToolsScript">
-/*
- PROJECT WATCH DEVELOPMENT HARNESS — v1
- --------------------------------------
- ONE production switch controls the complete CEVNI test UI.
- Set PW_DEVTOOLS_ENABLED=false for a production build, or remove everything
- between PW_DEVTOOLS_START / PW_DEVTOOLS_END. Course/content code does not
- depend on this block.
 
- New assessment components do NOT add logic to the toolbar. They expose their
- current answer in one of two standard ways:
-   1) preferred: data-pw-correct="true" on the correct answer button, OR
-   2) register one adapter with pwDevRegisterAnswerAdapter().
- Existing legacy CEVNI buttons are supported by the fallback adapter below.
-*/
-const PW_DEVTOOLS_ENABLED=true;
-const PW_DEV_ANSWER_ADAPTERS=[];
-function pwDevRegisterAnswerAdapter(name,getState){
- PW_DEV_ANSWER_ADAPTERS.push({name,getState});
-}
-function pwDevVisible(el){return !!(el&&el.getClientRects().length&&getComputedStyle(el).visibility!=='hidden')}
-function pwDevAnswerRoot(){
- const roots=[...document.querySelectorAll('#cevniPage .cevniAnswers')].filter(pwDevVisible);
- return roots.length?roots[roots.length-1]:null;
-}
-/* Preferred universal contract for every new question component. */
-pwDevRegisterAnswerAdapter('data-contract',()=>{
- const root=pwDevAnswerRoot(); if(!root)return null;
- const buttons=[...root.querySelectorAll('button')];
- const correct=buttons.findIndex(b=>b.dataset.pwCorrect==='true');
- return correct>=0?{root,buttons,correct}:null;
-});
-/* Compatibility adapter for existing scaffold questions. No question IDs are hard-coded. */
-pwDevRegisterAnswerAdapter('legacy-inline-contract',()=>{
- const root=pwDevAnswerRoot(); if(!root)return null;
- const buttons=[...root.querySelectorAll('button')];
- const correct=buttons.findIndex(b=>/\btrue\b/.test(b.getAttribute('onclick')||''));
- return correct>=0?{root,buttons,correct}:null;
-});
-function pwDevCurrentAnswer(){
- for(const a of PW_DEV_ANSWER_ADAPTERS){try{const x=a.getState();if(x&&x.correct>=0)return x}catch(e){}}
- return null;
-}
-window.cevniDevReveal=function(){
- if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
- document.querySelectorAll('.cevniDevCorrect,.cevniDevWrong').forEach(x=>x.classList.remove('cevniDevCorrect','cevniDevWrong'));
- document.querySelectorAll('.cevniDevTag').forEach(x=>x.remove());
- const state=pwDevCurrentAnswer();
- if(!state){
-  const st=document.getElementById('cevniDevStatus');
-  if(st)st.textContent=(st.textContent||'TEST')+' • ANSWER CONTRACT NOT FOUND';
-  return;
- }
- state.buttons.forEach((b,i)=>b.classList.add(i===state.correct?'cevniDevCorrect':'cevniDevWrong'));
- const tag=document.createElement('div');tag.className='cevniDevTag';
- const answer=(state.buttons[state.correct]?.textContent||'').replace(/^[A-Z]\s*•\s*/,'');
- tag.textContent=`TEST ANSWER: ${String.fromCharCode(65+state.correct)} • ${answer}`;
- state.root.after(tag);
-};
-function pwDevApplyProductionSwitch(){
- document.documentElement.classList.toggle('pw-devtools-disabled',!PW_DEVTOOLS_ENABLED);
- const toggle=document.getElementById('cevniDevToggle'),bar=document.getElementById('cevniDevBar');
- if(!PW_DEVTOOLS_ENABLED){cvDevMode=false;if(toggle)toggle.hidden=true;if(bar)bar.hidden=true}
-}
-document.addEventListener('DOMContentLoaded',pwDevApplyProductionSwitch);
-window.PROJECT_WATCH_BUILD='1.47.13-CEVNI-CURRICULUM-BLUEPRINT';
-document.addEventListener('DOMContentLoaded',()=>{const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent='BUILD 1.47.13-CEVNI-CURRICULUM-BLUEPRINT';});
-</script>
-<!-- PW_DEVTOOLS_END -->
 
 <!-- PROJECT WATCH CEVNI 1.47.15 — DEFINITIVE SOURCE AUDIT REGISTER -->
 <style id="cvSourceAuditStyles">
@@ -4658,7 +4582,7 @@ document.addEventListener('DOMContentLoaded',()=>{setTimeout(cevni14720Panel,50)
 #cevniPage .cv148Nav{display:flex;gap:8px;justify-content:space-between;margin-top:12px}#cevniPage .cv148Nav button{width:auto}
 @media(max-width:900px){#cevniPage .cv148Stats{grid-template-columns:repeat(2,1fr)}#cevniPage .cv148Grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){#cevniPage .cv148Grid,#cevniPage .cv148Stage{grid-template-columns:1fr}}
 </style>
-<script src="js/cevni/51-legacy-layer-51.js"></script>
+<script src="js/cevni/51-legacy-layer-1.88.2.js"></script>
 <!-- PW1480_END -->
 <style id="cv1481Style">
 .cv1481Legacy{margin-top:28px;padding-top:20px;border-top:1px solid #ffffff22}.cv1481Sim{margin-top:16px;background:#031f2d;border:1px solid #28748b;border-radius:16px;padding:16px}.cv1481Head{display:flex;justify-content:space-between;gap:12px;align-items:center}.cv1481Head b{font-size:20px}.cv1481Scene{position:relative;height:430px;overflow:hidden;border-radius:16px;margin:14px 0;background:linear-gradient(90deg,#4d6c3e 0 12%,#16768e 12% 88%,#4d6c3e 88%);border:1px solid #6ddff044}.cv1481Water{position:absolute;inset:0 12%;background:linear-gradient(#1b8299,#12677e)}.cv1481Bridge{position:absolute;left:10%;right:10%;top:70px;height:82px;background:#5c6670;border-top:12px solid #39434b;border-bottom:8px solid #39434b;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;padding:0 7%}.cv1481Opening{background:#143e4d;border-left:14px solid #6f777d;border-right:14px solid #6f777d;position:relative}.cv1481Sign{position:absolute;top:-54px;left:50%;transform:translateX(-50%);min-width:58px;height:40px;display:grid;place-items:center;font-weight:950;font-size:14px}.cv1481A1{background:#fff;border:7px solid #d83b42;color:#111}.cv1481D1{background:#fff;border:5px solid #39a6d8;color:#111}.cv1481D2{background:#fff;border:5px solid #f1d34e;color:#111}.cv1481Lane{position:absolute;top:150px;bottom:0;width:25%;border-left:2px dashed #ffffff22;border-right:2px dashed #ffffff22;cursor:pointer}.cv1481Lane:hover,.cv1481Lane.sel{background:#ffffff10}.cv1481Lane.l1{left:12.5%}.cv1481Lane.l2{left:37.5%}.cv1481Lane.l3{left:62.5%}.cv1481Boat{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:42px;filter:drop-shadow(0 4px 4px #0008);transition:left .45s,bottom .45s}.cv1481Prompt{font-size:18px;line-height:1.45}.cv1481Choices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.cv1481Choices button{min-height:58px}.cv1481Feedback{margin-top:12px;padding:14px;border-radius:12px;background:#07394a;display:none}.cv1481Feedback.show{display:block}.cv1481Progress{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.cv1481Pill{padding:6px 9px;border-radius:999px;background:#083b4d;font-size:12px;font-weight:900}.cv1481Pill.done{background:#176a4b}@media(max-width:700px){.cv1481Scene{height:360px}.cv1481Bridge{gap:6px;padding:0 3%}.cv1481Choices{grid-template-columns:1fr}.cv1481Opening{border-left-width:8px;border-right-width:8px}}
@@ -4751,147 +4675,16 @@ const cv1482Prev21=window.cevni14721Render;window.cevni14721Render=function(){co
 </script>
 <!-- PW1482_END -->
 
-<!-- PW1483_START : detachable development harness regression repair -->
-<script id="cv1483DevHarnessRepair">
-(function(){
-'use strict';
-window.PROJECT_WATCH_BUILD='1.48.3-CEVNI-DEV-HARNESS-REGRESSION-REPAIR';
-
-function cleanReveal(){
- document.querySelectorAll('.cevniDevCorrect,.cevniDevWrong').forEach(x=>x.classList.remove('cevniDevCorrect','cevniDevWrong'));
- document.querySelectorAll('.cevniDevTag').forEach(x=>x.remove());
-}
-function statusText(){
- const all=(typeof cevniDevItems==='function')?cevniDevItems():[];
- if(!all.length)return 'TEST MODE • NO REGISTERED TEST ITEMS';
- cvDevIndex=((cvDevIndex%all.length)+all.length)%all.length;
- return `${cvDevIndex+1}/${all.length} • ${all[cvDevIndex].label}`;
-}
-
-/* Test reset is intentionally isolated from learner/course progress.
-   RESET CEVNI PROGRESS remains the only control that clears progression. */
-window.cevniDevReset=function(){
- if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
- cleanReveal();
- cvDevIndex=0;cvScore=0;cvMock=[];
- if(typeof cvMi!=='undefined')cvMi=0;
- const st=document.getElementById('cevniDevStatus');if(st)st.textContent='TEST HARNESS RESET';
- if(typeof cevniDevGo==='function')cevniDevGo();
-};
-window.cevniDevPrev=function(){
- if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
- cleanReveal();cvDevIndex--;cevniDevGo();
-};
-window.cevniDevNext=function(){
- if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
- cleanReveal();cvDevIndex++;cevniDevGo();
-};
-
-/* Keep the universal answer contract from 1.47.12, but make non-question
-   screens explicit rather than looking like a broken contract. */
-window.cevniDevReveal=function(){
- if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
- cleanReveal();
- const state=(typeof pwDevCurrentAnswer==='function')?pwDevCurrentAnswer():null;
- const st=document.getElementById('cevniDevStatus');
- if(!state){if(st)st.textContent=statusText()+' • NO ACTIVE ANSWER ON THIS SCREEN';return;}
- state.buttons.forEach((b,i)=>b.classList.add(i===state.correct?'cevniDevCorrect':'cevniDevWrong'));
- const tag=document.createElement('div');tag.className='cevniDevTag';
- const answer=(state.buttons[state.correct]?.textContent||'').replace(/^[A-Z]\s*•\s*/,'');
- tag.textContent=`TEST ANSWER: ${String.fromCharCode(65+state.correct)} • ${answer}`;
- state.root.after(tag);
- if(st)st.textContent=statusText();
-};
-
-/* Exit removes only development decoration/state. Course progress is untouched. */
-window.cevniDevToggle=function(){
- if(!PW_DEVTOOLS_ENABLED)return;
- cvDevMode=!cvDevMode;
- const b=document.getElementById('cevniDevToggle'),bar=document.getElementById('cevniDevBar');
- if(b){b.classList.toggle('on',cvDevMode);b.textContent=cvDevMode?'🧪 TEST MODE ON':'🧪 TEST MODE';}
- if(bar)bar.hidden=!cvDevMode;
- cleanReveal();
- if(cvDevMode){if(typeof cevniRenderModules==='function')cevniRenderModules();cvDevIndex=0;cevniDevGo();}
- else {if(typeof cevniRenderModules==='function')cevniRenderModules();}
-};
-
-/* Small detachable harness health contract for future regression checks. */
-window.pwDevHarnessHealth=function(){
- const ids=['cevniDevToggle','cevniDevBar','cevniDevStatus'];
- return {ok:ids.every(id=>!!document.getElementById(id))&&['cevniDevPrev','cevniDevReveal','cevniDevNext','cevniDevReset','cevniDevToggle'].every(n=>typeof window[n]==='function'),controls:['BACK','SHOW ANSWER','NEXT','RESET TEST','EXIT'],progressIsolation:true};
-};
-function label(){
- const txt='BUILD 1.48.3-CEVNI-DEV-HARNESS-REGRESSION-REPAIR';
- document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build').forEach(x=>{if(/CEVNI|1\.48\./i.test(x.textContent||''))x.textContent=txt});
- const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent=txt;
-}
-label();setTimeout(label,250);
-})();
-</script>
-<!-- PW1483_END -->
 
 
-<!-- PW1484_START : development full-reset contract repair -->
-<script id="cv1484DevFullResetRepair">
-(function(){
-'use strict';
-window.PROJECT_WATCH_BUILD='1.48.4-CEVNI-DEV-FULL-RESET-REPAIR';
 
-function cv1484ResetExerciseState(){
-  // Development navigation / scoring state.
-  if(typeof cvDevIndex!=='undefined') cvDevIndex=0;
-  if(typeof cvScore!=='undefined') cvScore=0;
-  if(typeof cvMock!=='undefined') cvMock=[];
-  if(typeof cvMi!=='undefined') cvMi=0;
-  // Custom coached-practice cursors. These are deliberately transient and
-  // are reset through the dev harness only; no completion logic lives here.
-  if(typeof cv14718Index!=='undefined') cv14718Index=0;
-  if(typeof cv14719Index!=='undefined') cv14719Index=0;
-  if(typeof cv14721Index!=='undefined') cv14721Index=0;
-  if(typeof cv1482ContextIndex!=='undefined') cv1482ContextIndex=0;
-  if(typeof cv1482ContextSolved!=='undefined') cv1482ContextSolved=false;
-}
-function cv1484ResetCourseThroughContract(){
-  // Clear the authoritative CEVNI progression record and its legacy render
-  // mirror together. The course map remains a renderer, never the authority.
-  localStorage.removeItem('pwCevniProgressV2');
-  localStorage.removeItem('pwCevniDone');
-  if(typeof cevniRenderModules==='function') cevniRenderModules();
-  if(typeof cevniCloseLesson==='function') cevniCloseLesson();
-}
-window.cevniDevReset=function(){
-  if(!PW_DEVTOOLS_ENABLED||!cvDevMode)return;
-  if(typeof cleanReveal==='function') cleanReveal();
-  else {
-    document.querySelectorAll('.cevniDevCorrect,.cevniDevWrong').forEach(x=>x.classList.remove('cevniDevCorrect','cevniDevWrong'));
-    document.querySelectorAll('.cevniDevTag').forEach(x=>x.remove());
-  }
-  cv1484ResetExerciseState();
-  cv1484ResetCourseThroughContract();
-  const st=document.getElementById('cevniDevStatus');
-  if(st)st.textContent='TEST RESET • CEVNI COURSE RETURNED TO CLEAN STATE';
-  // Keep Test Mode itself active, but return its cursor to the first registered item.
-  setTimeout(()=>{ if(typeof cevniDevGo==='function') cevniDevGo(); },0);
-};
-window.pwDevHarnessHealth=function(){
-  const ids=['cevniDevToggle','cevniDevBar','cevniDevStatus'];
-  return {ok:ids.every(id=>!!document.getElementById(id))&&['cevniDevPrev','cevniDevReveal','cevniDevNext','cevniDevReset','cevniDevToggle'].every(n=>typeof window[n]==='function'),controls:['BACK','SHOW ANSWER','NEXT','RESET TEST','EXIT'],resetScope:'development + CEVNI progression',progressContract:'pwCevniProgressV2'};
-};
-function cv1484Label(){
- const txt='BUILD 1.48.4-CEVNI-DEV-FULL-RESET-REPAIR';
- document.querySelectorAll('#cevniPage .pwBuild,.pwBuild,#cevniPage .build').forEach(x=>{if(/CEVNI|1\.48\./i.test(x.textContent||''))x.textContent=txt});
- const vb=document.getElementById('pwVisibleBuild');if(vb)vb.textContent=txt;
-}
-cv1484Label();setTimeout(cv1484Label,250);
-})();
-</script>
-<!-- PW1484_END -->
+
 <!-- PW1490_VISUAL_CURRICULUM_START -->
 <style>
 #cevniVisualSchool{display:none}.cv1490Shell{margin:18px 0;padding:18px;border:1px solid #69ddff44;border-radius:18px;background:#062b3a}.cv1490Top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}.cv1490Top h2{margin:4px 0 6px}.cv1490Pill{padding:7px 10px;border-radius:999px;background:#0a5368;color:#9ff2ff;font-weight:900;font-size:12px}.cv1490Tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.cv1490Tabs button.active{background:#1d95d0}.cv1490Grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.cv1490Card{background:#073346;border:1px solid #ffffff18;border-radius:14px;padding:14px;min-height:145px}.cv1490Card .ver{color:#72dff5}.cv1490Card h3{margin:5px 0 7px;font-size:18px}.cv1490Card p{margin:0;color:#c7dce3;line-height:1.45}.cv1490Status{display:inline-block;margin-top:9px;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:900;background:#0b5c49;color:#9fffcf}.cv1490Status.queue{background:#5a4917;color:#ffe59a}.cv1490Sign{height:94px;display:grid;place-items:center;margin-bottom:8px;border-radius:10px;background:#052331}.cv1490Sign svg{max-width:150px;max-height:88px}.cv1490Family{height:76px;border-radius:12px;display:grid;place-items:center;font-size:34px;font-weight:950;background:#0b455b;color:#8feaff;border:2px solid #6ee0ff55}.cv1490Scene{height:150px;border-radius:12px;position:relative;overflow:hidden;background:linear-gradient(90deg,#587347 0 13%,#17788e 13% 87%,#587347 87%);margin:8px 0 10px}.cv1490Scene .lane{position:absolute;top:0;bottom:0;border-left:2px dashed #ffffff33}.cv1490Scene .boat{position:absolute;bottom:12px;left:48%;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:30px solid white;filter:drop-shadow(0 2px 2px #0008)}.cv1490Scene .mark{position:absolute;top:16px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:950;background:#fff;color:#08212b;border:5px solid #d94a4a}.cv1490Bridge{position:absolute;left:10%;right:10%;top:44px;height:35px;background:#65727a;border-bottom:8px solid #414b50}.cv1490Bridge:before,.cv1490Bridge:after{content:'';position:absolute;top:35px;width:18px;height:55px;background:#69777e}.cv1490Bridge:before{left:28%}.cv1490Bridge:after{right:28%}.cv1490Lights{height:105px;border-radius:12px;background:#02141d;position:relative;margin:8px 0 10px}.cv1490Light{position:absolute;width:18px;height:18px;border-radius:50%;box-shadow:0 0 14px currentColor}.cv1490White{background:#fff;color:#fff}.cv1490Red{background:#ff3b3b;color:#ff3b3b}.cv1490Green{background:#42e277;color:#42e277}.cv1490Shape{display:flex;gap:16px;align-items:center;justify-content:center;height:105px;background:#e7eef0;border-radius:12px;margin:8px 0 10px}.cv1490Ball{width:30px;height:30px;border-radius:50%;background:#111}.cv1490Diamond{width:28px;height:28px;background:#111;transform:rotate(45deg)}.cv1490Cone{width:0;height:0;border-left:18px solid transparent;border-right:18px solid transparent;border-bottom:36px solid #111}.cv1490Footer{margin-top:16px;padding:14px;border-radius:12px;background:#042431;border:1px dashed #f0c34b88}.cv1490Footer b{color:#8feaff}@media(max-width:900px){.cv1490Grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.cv1490Grid{grid-template-columns:1fr}}
 </style>
 <script src="libraries/cevni/visual-catalogues-1.71.2.js"></script>
-<script src="js/cevni/77-visual-catalogue-library-backed.js"></script>
+<script src="js/cevni/77-visual-catalogue-library-backed-1.88.2.js"></script>
 <!-- PW1490_VISUAL_CURRICULUM_END --><!-- PW1500_DEEP_VISUAL_TRAINING_START -->
 <style>
 #cevniDeepSchool{display:none}.cv1500Shell{padding:18px;background:#062f43;border:1px solid #66dfff44;border-radius:18px}.cv1500Tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.cv1500Tabs button{background:#159bd7}.cv1500Tabs button.active{outline:2px solid #ffc338;background:#0c789f}.cv1500Grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.cv1500Card{background:#07364a;border:1px solid #6ee0ff2c;border-radius:14px;padding:14px;min-height:178px}.cv1500Card h3{margin:7px 0;font-size:19px}.cv1500Card p{margin:5px 0;color:#c4d6de;line-height:1.35}.cv1500Code{font-size:30px;font-weight:900;color:#83e8ff;border:2px solid #4ac4e366;border-radius:12px;padding:12px;text-align:center;background:#0b4c62}.cv1500Meta{font-size:12px;color:#68d9f3;text-transform:uppercase;letter-spacing:.04em}.cv1500Tag{display:inline-block;margin-top:8px;padding:4px 8px;border-radius:999px;background:#08764f;color:#9ff5c9;font-size:11px;font-weight:800}.cv1500Night{height:105px;background:#00141f;border-radius:11px;position:relative;display:flex;align-items:center;justify-content:center;gap:14px}.cv1500Dot{width:16px;height:16px;border-radius:50%;box-shadow:0 0 12px currentColor;display:inline-block}.cv1500White{background:#fff;color:#fff}.cv1500Red{background:#ff4242;color:#ff4242}.cv1500Green{background:#45df7c;color:#45df7c}.cv1500Blue{background:#3b8cff;color:#3b8cff}.cv1500Yellow{background:#ffd74d;color:#ffd74d}.cv1500Stack{display:flex;flex-direction:column;gap:8px}.cv1500Tri{position:relative;width:100px;height:72px}.cv1500Tri .a{position:absolute;left:42px;top:4px}.cv1500Tri .b{position:absolute;left:18px;top:43px}.cv1500Tri .c{position:absolute;right:18px;top:43px}.cv1500Quiz{background:#05283a;border:1px solid #ffd04a66;border-radius:14px;padding:16px}.cv1500Answers{display:grid;gap:8px;margin-top:12px}.cv1500Answers button{text-align:left}.cv1500Answers button.good{background:#08764f}.cv1500Answers button.bad{background:#9c3540}.cv1500Complete{padding:20px;border:1px solid #56e0a1;border-radius:14px;background:#073b38}.cv1500Scene{height:180px;border-radius:12px;background:linear-gradient(90deg,#557347 0 10%,#23839a 10% 90%,#557347 90%);position:relative;overflow:hidden}.cv1500Scene:after{content:'▲';position:absolute;bottom:16px;left:49%;color:white;font-size:25px}.cv1500Lane{position:absolute;top:0;bottom:0;border-left:2px dashed #ffffff33}.cv1500Bridge{position:absolute;left:10%;right:10%;top:35px;height:20px;background:#68737d;box-shadow:0 15px 0 #4e5961}.cv1500Notice{padding:12px;border:1px dashed #ffc33888;border-radius:12px;margin:12px 0;color:#c8dbe3}.cv1500Progress{display:flex;justify-content:space-between;gap:10px;color:#8fe9ff;margin-bottom:10px}.cv1500ShapeRow{height:105px;background:#e8eff2;border-radius:11px;display:flex;align-items:center;justify-content:center;gap:16px}.cv1500Ball{width:25px;height:25px;background:#111;border-radius:50%}.cv1500Cone{width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:30px solid #111}.cv1500Diamond{width:25px;height:25px;background:#111;transform:rotate(45deg)}
@@ -5997,6 +5790,6 @@ window.PW16501_M03_COMPLETE={
 <script src="js/cevni/90-signs-marks-1.85.5.js"></script>
 <script src="js/cevni/91-landing-1.86.1.js"></script>
 <script src="js/cevni/92-lesson-flow-1.87.1.js"></script>
-<script src="js/build-identity-1.88.1.js"></script>
+<script src="js/build-identity-1.88.2.js"></script>
 </body>
 </html>
