@@ -11,6 +11,8 @@ Keep these directories at the same relative paths when moving hosting providers.
   scenario definitions, rule reference data and visual path maps.
 - `assets/project-watch/lights-master/`: standalone approved Lights & Shapes
   reference and recognition visuals formerly carried as base64 HTML in the page.
+- `libraries/project-watch/asset-catalog-1.88.0.json`: paths and SHA-256 checksums
+  for 54 existing image assets and 17 standalone Lights & Shapes visual pages.
 - `libraries/cevni/` and `assets/cevni/`: separate inland course content and visuals.
 - `css/` and `js/`: presentation and behaviour. Data files are loaded as classic
   scripts before the existing original Project Watch runtime so its bindings
@@ -24,7 +26,7 @@ and assessment stay independent of the original eight-stage course.
 
 ## Migration checkpoint
 
-The first content extraction moved 36 literal collections and 17 approved visual
+The content extraction moved 53 literal collections and 17 approved visual
 HTML pages without editing their questions, correct-answer indexes or artwork.
 Other inline page templates, dynamically generated SVGs and older runtime logic
 still require staged review before the entire original page is fully separated.
