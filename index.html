@@ -26568,6 +26568,7 @@ setTimeout(setBuild,8800);
 <!-- PW16400_MODULE03_APPROVED_GRAPHICS_INTEGRATION_START -->
 <style id="pw16400M03GraphicsCss">#cevniPage .pwM03VisualPanel{margin:0 0 18px;padding:13px;border:1px solid #58d9f044;border-radius:15px;background:#041f2b;box-shadow:0 10px 26px #0003}#cevniPage .pwM03VisualHead{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px}#cevniPage .pwM03VisualHead b{font-size:12px;letter-spacing:.06em;color:#eafaff}#cevniPage .pwM03VisualHead span{font-size:10px;color:#79dff6;font-weight:900}#cevniPage .pwM03VisualGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:9px}#cevniPage .pwM03VisualCard{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #ffffff22}#cevniPage .pwM03Art{height:155px;display:grid;place-items:center;padding:8px;background:#fff}#cevniPage .pwM03Art svg{width:100%;height:100%}#cevniPage .pwM03VisualCard figcaption{background:#082b39;color:#eafaff;padding:8px 9px;font-size:10px;font-weight:900;line-height:1.3;min-height:38px}#cevniPage .pwM03VisualCard figcaption small{display:block;color:#79dff6;font-size:8px;margin-top:3px}#cevniPage .pwM03Single{max-width:330px;margin-left:auto;margin-right:auto}@media(max-width:620px){#cevniPage .pwM03VisualGrid{grid-template-columns:repeat(2,minmax(0,1fr))}#cevniPage .pwM03Art{height:135px}}</style>
 <script src="libraries/cevni/annex8-marks-1.70.0.js"></script>
+<script src="libraries/cevni/annex8-official-plates-1.85.0.js"></script>
 <script id="pw16400M03GraphicsJs">(function(){'use strict';const BUILD='1.64.0-M03-GRAPHICS-REVIEW',A8=window.PW_CEVNI_ANNEX8,ANNEX7_APPROVED=new Set(['A.1','A.2','B.1','B.7','C.1','D.1','E.1','E.2']),STEP_MAP=[['A.1','A.2'],['B.1','B.7'],['C.1'],['D.1'],['E.1','E.2'],[],['PW-CEVNI-ANNEX8-1-A','PW-CEVNI-ANNEX8-2-A','PW-CEVNI-ANNEX8-3-A','PW-CEVNI-ANNEX8-4-C','PW-CEVNI-ANNEX8-5-C','PW-CEVNI-ANNEX8-N-CARDINAL','PW-CEVNI-ANNEX8-8-D'],['A.1','D.1','E.1']];let m3=false,last=null;
 function s7(code){try{const x=(window.CEVNI_SIGNS||[]).find(v=>String(v.code||'').toUpperCase()===code.toUpperCase());if(x&&x.svg)return{id:'PW-CEVNI-ANNEX7-'+code.replaceAll('.','-'),label:code+' · '+(x.meaning||'CEVNI sign'),svg:x.svg}}catch(e){}return null}
 function asset(id){return id.startsWith('PW-CEVNI-ANNEX8-')?A8[id]:s7(id)}function card(a){return '<figure class="pwM03VisualCard"><div class="pwM03Art">'+a.svg+'</div><figcaption>'+a.label+'<small>'+a.id+' · USER APPROVED</small></figcaption></figure>'}
@@ -27004,7 +27005,7 @@ window.PW16501_M03_COMPLETE={
 <link rel="stylesheet" href="css/cevni-mock-gate-1.77.0.css">
 <script src="js/cevni/89-mock-gate-1.77.0.js"></script>
 <link rel="stylesheet" href="css/cevni-signs-marks-1.78.2.css">
-<script src="js/cevni/90-signs-marks-1.84.1.js"></script>
-<script src="js/build-identity-1.84.1.js"></script>
+<script src="js/cevni/90-signs-marks-1.85.0.js"></script>
+<script src="js/build-identity-1.85.0.js"></script>
 </body>
 </html>
