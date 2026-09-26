@@ -25,3 +25,7 @@ Nine C-family plates from printed p. 135 cover C.1a–b, C.2a–b, C.3a–b, C.4
 ## Family E expansion in build 1.83.0
 
 Fifty-six individual E-family plate files from printed pp. 137–148 now cover E.1a–d, E.3, E.4a–b, E.5–E.5.15, E.6–E.27.1 (with the source's coded subvariants). E.2 was included in the earlier batch. E.1 remains an umbrella teaching entry with a source-aligned board; its four exact presentations have distinct files and cards. Figures and channel numerals in the source examples are variable operational values.
+
+## Source examples and umbrella cards in build 1.84.0
+
+A.1 and E.1 umbrella cards now display the source's A.1a and E.1a board examples using those same image paths. They do not create a new plate or imply that the board is the only form. Four separate composite PNGs, `annex7-aux-a.png` through `annex7-aux-d.png`, reproduce the official Annex 7 Part II examples on printed pp. 149–150. Auxiliary cards label them as examples; a complete sign reading depends on the main sign and its setting.

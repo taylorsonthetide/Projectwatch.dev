@@ -2,11 +2,11 @@
 
 Source: *CEVNI, European Code for Inland Waterways*, sixth revised edition, ECE/TRANS/SC.3/115/Rev.6, Annex 7, printed pp. 124–150. Cross-check against the [UNECE publication](https://unece.org/transport/documents/2022/02/standards/ecetranssc3115rev6), Corrigenda 1 and 2, and Amendments 1 and 2 before publishing revised visual assets. The page-level [register](annex7-rev6-register.csv) captures the original 99-card audit; the added variant records live in the versioned catalogue scripts.
 
-## Build 1.83.0 progress
+## Build 1.84.0 progress
 
-The learner register now has 132 cards. One hundred twenty-three cards link to individual PNG crops from the Rev.6 Annex 7 source (30 family A, 17 family B, nine family C, ten family D and 57 family E). A.1 and E.1 retain source-aligned Project Watch teaching boards, making 125 displayed images. The remaining seven cards are code-only and labelled as unverified artwork. The source images are separate files in `assets/cevni/annex7/rev6/`, referenced by paths from the catalogue.
+The learner register now has 132 cards. One hundred twenty-five cards link to PNG crops from the Rev.6 Annex 7 source (30 family A, 17 family B, nine family C, ten family D and 57 family E). The A.1 and E.1 umbrella cards reuse the exact A.1a and E.1a board files, respectively; 123 distinct plate files serve 125 displayed sign cards. The remaining seven cards are code-only and labelled as unverified artwork. The source images are separate files in `assets/cevni/annex7/rev6/`, referenced by paths from the catalogue.
 
-The E family gained 56 more plates and 13 previously omitted visual variants. The C family gained its eight visual variants plus C.4; D.2a–b and D.3a–b gained exact source figures. The B family gained all 17 distinct plates on printed pp. 130–134, including the missing B.12 onshore-power obligation. B.7 now uses the source plate instead of the old teaching disc. The A family gained 29 new plates after the initial A.2, plus 11 distinct A.1/A.9/A.11 variant records. A.10 remains pending the Corrigendum 2 replacement figure. Generic A.9 and A.11 remain text-only headings. See the asset [provenance note](../../assets/cevni/annex7/rev6/README.md).
+Four auxiliary cards now display source examples from Annex 7 Part II. The E family gained 56 more plates and 13 previously omitted visual variants. The C family gained its eight visual variants plus C.4; D.2a–b and D.3a–b gained exact source figures. The B family gained all 17 distinct plates on printed pp. 130–134, including the missing B.12 onshore-power obligation. B.7 now uses the source plate instead of the old teaching disc. The A family gained 29 new plates after the initial A.2, plus 11 distinct A.1/A.9/A.11 variant records. A.10 remains pending the Corrigendum 2 replacement figure. Generic A.9 and A.11 remain text-only headings. See the asset [provenance note](../../assets/cevni/annex7/rev6/README.md).
 
 ## Decisions for the learner library
 
@@ -25,4 +25,4 @@ Some are alternate presentations of an umbrella meaning already listed (for exam
 
 ## Original separate files
 
-`assets/cevni/module03/` contains eight Annex 7 SVGs and ten Annex 8 SVGs. The present Annex 7 catalogue matches seven exact card codes; the eighth file is generic `D.1` while the register has `D.1a–f`. At the time of the original audit, 92 current cards had no exact matching separate artwork. Builds 1.79–1.83 supply 123 source-plate files; further work remains. This audit does not approve unreviewed drawings for examination use.
+`assets/cevni/module03/` contains eight Annex 7 SVGs and ten Annex 8 SVGs. The present Annex 7 catalogue matches seven exact card codes; the eighth file is generic `D.1` while the register has `D.1a–f`. At the time of the original audit, 92 current cards had no exact matching separate artwork. Builds 1.79–1.84 supply 123 distinct sign-plate files and four auxiliary example files; further work remains. This audit does not approve unreviewed drawings for examination use.

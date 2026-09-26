@@ -25169,7 +25169,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 <script src="libraries/cevni/annex7-signs-1.70.0.js"></script>
 <script src="libraries/cevni/early-teaching-1.70.0.js"></script>
 <script src="libraries/cevni/deep-practice-1.70.3.js"></script>
-<script src="libraries/cevni/annex7-official-plates-1.83.0.js"></script>
+<script src="libraries/cevni/annex7-official-plates-1.84.0.js"></script>
 <script id="pw-cevni-engine-14700" src="js/cevni/69-pw-cevni-engine-library-backed-1.78.3.js"></script>
 <!-- BUILD 1.47.6 CEVNI WAV AUDIO: CEVNI Sound Lab uses embedded pre-rendered WAV horn files via HTMLAudioElement; escaped-newline bleed removed. -->
 
@@ -26012,7 +26012,7 @@ function patch(){
    const cards=[...document.querySelectorAll('#pw1540Grid .pw1540Card')];const list=f==='ALL'?R:R.filter(x=>x.family===f);
    cards.forEach((c,i)=>{const r=list[i];if(!r)return;const a=c.querySelector('.pw1540Art');if(a)a.innerHTML=pw1550SignArt(r);const st=c.querySelector('.pw1540Status');if(st){const ok=!!verifiedArt(r);st.textContent=ok?'VERIFIED CENTRAL ASSET':'SOURCE VERIFIED • ARTWORK STILL TO VERIFY';st.classList.toggle('pw1540Pending',!ok);c.classList.toggle('pw1550Verified',ok);c.classList.toggle('pw1550Queue',!ok)}});
  },0)};}catch(e){}
- const school=document.getElementById('pw1540SignSchool');if(school){const head=school.querySelector('.pw1540Head');if(head&&!document.getElementById('pw1550Coverage')){const d=document.createElement('div');d.id='pw1550Coverage';d.innerHTML=`<div class="pw1550Coverage"><div class="pw1550Cov"><b>${R.length}</b><span>ANNEX 7 RECORDS REGISTERED</span></div><div class="pw1550Cov"><b>${verified}</b><span>SOURCE-ALIGNED IMAGES DISPLAYED</span></div><div class="pw1550Cov"><b>${R.length-verified}</b><span>ARTWORK STILL TO VERIFY</span></div><div class="pw1550Cov"><b>1</b><span>CENTRAL SIGN LIBRARY</span></div></div><div class="pw1550Note"><b>Unified library:</b> verified CEVNI plate files and the remaining source-aligned teaching boards are linked from the central asset library. Unverified records display their code until their plate is checked.</div>`;head.after(d)}}
+ const school=document.getElementById('pw1540SignSchool');if(school){const head=school.querySelector('.pw1540Head');if(head&&!document.getElementById('pw1550Coverage')){const d=document.createElement('div');d.id='pw1550Coverage';d.innerHTML=`<div class="pw1550Coverage"><div class="pw1550Cov"><b>${R.length}</b><span>ANNEX 7 RECORDS REGISTERED</span></div><div class="pw1550Cov"><b>${verified}</b><span>SOURCE-PLATE IMAGES DISPLAYED</span></div><div class="pw1550Cov"><b>${R.length-verified}</b><span>ARTWORK STILL TO VERIFY</span></div><div class="pw1550Cov"><b>1</b><span>CENTRAL SIGN LIBRARY</span></div></div><div class="pw1550Note"><b>Unified library:</b> verified CEVNI plate files and the remaining source-aligned teaching boards are linked from the central asset library. Unverified records display their code until their plate is checked.</div>`;head.after(d)}}
  // Keep old visual school from rendering its short sign list if reached indirectly.
  try{const oldRender1490=window.cv1490Render;window.cv1490Render=function(tab='signs'){if(tab==='signs'&&window.pw1540Open){pw1540Open();return}return oldRender1490(tab)}}catch(e){}
  // Build label only.
@@ -27004,7 +27004,7 @@ window.PW16501_M03_COMPLETE={
 <link rel="stylesheet" href="css/cevni-mock-gate-1.77.0.css">
 <script src="js/cevni/89-mock-gate-1.77.0.js"></script>
 <link rel="stylesheet" href="css/cevni-signs-marks-1.78.2.css">
-<script src="js/cevni/90-signs-marks-1.83.0.js"></script>
-<script src="js/build-identity-1.83.0.js"></script>
+<script src="js/cevni/90-signs-marks-1.84.0.js"></script>
+<script src="js/build-identity-1.84.0.js"></script>
 </body>
 </html>
