@@ -1,0 +1,17 @@
+/* Platform entry: active pathways first, future subjects clearly marked. */
+#homePage .pwPathwayHub{margin:16px 0;padding:18px;border-radius:18px;background:#041e2b;border:1px solid #62d9f633}
+#homePage .pwPathwayHubHead{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:13px}
+#homePage .pwPathwayHubHead h2,#homePage .pwFutureTraining h2{margin:4px 0 0;font-size:24px}
+#homePage .pwPathwayHubHead p{margin:0;color:#b3cbd5;font-size:13px}
+#homePage .pwPathwayCards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#homePage .pwPathwayCard{display:flex;flex-direction:column;align-items:flex-start;min-height:205px;padding:20px;border:1px solid #6addfa55;border-radius:14px;background:linear-gradient(135deg,#0b4359,#062a3b)}
+#homePage .pwPathwayCard.inland{background:linear-gradient(135deg,#164b45,#092c36);border-color:#78dcb255}
+#homePage .pwPathwayState{font-size:10px;font-weight:800;letter-spacing:.08em;color:#8df1c1}
+#homePage .pwPathwayCard h3{font-size:22px;margin:11px 0 7px}
+#homePage .pwPathwayCard p{font-size:13px;line-height:1.5;color:#c3d8e0;margin:0 0 18px;max-width:480px}
+#homePage .pwPathwayCard button{margin-top:auto;width:auto;min-height:42px;font-size:12px}
+#homePage .pwFutureTraining{margin:18px 0;padding:20px;border:1px solid #ffffff29;border-radius:16px;background:#061f2d}
+#homePage .pwFutureTraining>p{font-size:13px;color:#b7ccd4;line-height:1.45}
+#homePage .pwFutureTopics{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+#homePage .pwFutureTopics span{padding:9px 12px;border:1px solid #ffffff24;border-radius:10px;background:#ffffff0a;color:#d1e1e6;font-size:12px}
+@media(max-width:700px){#homePage .pwPathwayCards{grid-template-columns:1fr}#homePage .pwPathwayHubHead{display:block}#homePage .pwPathwayHubHead p{margin-top:6px}#homePage .pwPathwayCard{min-height:180px}#homePage .pwFutureTopics span{width:100%;box-sizing:border-box}}

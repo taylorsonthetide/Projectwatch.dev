@@ -9,6 +9,7 @@
 <title>Project Watch 1.77.0</title>
 <style id="pw-build-loading-style">html:not(.pw-build-ready) .ver,html:not(.pw-build-ready) #cevniPage .pwBuild,html:not(.pw-build-ready) #cevniPage .build{visibility:hidden!important}</style>
 <link rel="stylesheet" href="css/project-watch-core-1.88.0.css">
+<link rel="stylesheet" href="css/platform-home-1.89.0.css">
 <link rel="stylesheet" href="css/collision-flow-1.88.1.css">
 
 <style id="stage3TeachingReview1376b">
@@ -1168,14 +1169,13 @@
     <img id="homeVesselHeroImg" class="homeProHeroImg" src="assets/embedded/pw-asset-020-81da868d6b.jpg" alt="Watch One underway">
     <div class="homeProHeroShade"></div>
     <div class="homeProHeroContent">
-      <div class="homeEyebrow">PROJECT WATCH • MARINE BRIDGE TRAINING SYSTEM</div>
-      <h1>Learn it.<br>Practise it. Take the watch.</h1>
-      <p>Eight structured training stages covering watchkeeping, COLREGs, lights &amp; shapes, sound and distress signals, collision avoidance, IALA buoyage, traffic separation and AIS — supported by reference libraries, guided lessons, live trainers, audio training and Project Watch assessments.</p>
+      <div class="homeEyebrow">PROJECT WATCH • MARINE TRAINING</div>
+      <h1>Learn the skills.<br>Take the watch.</h1>
+      <p>Choose a training pathway, continue where you left off, or explore the practical tools. Bridge watchkeeping and European inland waterways are ready to use; more seamanship subjects are planned.</p>
       <div class="homeStatusLine">
-        <span><b>8</b> COURSE STAGES</span>
-        <span><b>4</b> FULL MOCK EXAMS</span>
-        <span><b>41</b> COLREG RULES</span>
-        <span><b>LIVE</b> TRAINING &amp; SIMULATORS</span>
+        <span><b>2</b> TRAINING PATHWAYS</span>
+        <span><b>GUIDED</b> LESSONS</span>
+        <span><b>LIVE</b> PRACTICE</span>
       </div>
     </div>
     <div class="homeVesselBadge">
@@ -1186,6 +1186,14 @@
   </div>
 
   
+<div class="pwPathwayHub" aria-labelledby="pwPathwayHubTitle">
+  <div class="pwPathwayHubHead"><div><div class="homeEyebrow">CHOOSE YOUR TRAINING</div><h2 id="pwPathwayHubTitle">Your pathways</h2></div><p>Each pathway has its own lessons and progress.</p></div>
+  <div class="pwPathwayCards">
+    <article class="pwPathwayCard"><span class="pwPathwayState">READY TO LEARN</span><h3>Bridge Watchkeeping</h3><p>Eight stages covering COLREGs, recognition, collision avoidance, buoyage, traffic separation and AIS.</p><button type="button" onclick="showCoursePage()">OPEN BRIDGE COURSE →</button></article>
+    <article class="pwPathwayCard inland"><span class="pwPathwayState">READY TO LEARN</span><h3>CEVNI Inland Waterways</h3><p>Nine modules covering inland rules, signs, signals and practical situations, with a separate mock assessment.</p><button type="button" onclick="showModule('cevni')">OPEN CEVNI COURSE →</button></article>
+  </div>
+</div>
+
 <div class="homeCourseDashboard">
   <div class="homeCoursePrimary">
     <div class="homeCourseTopline">
@@ -1255,10 +1263,12 @@
   </div>
 
 
-<div class="cevniHomeDoor">
- <div><div class="ver">SEPARATE TRAINING PATHWAY • EUROPEAN INLAND WATERWAYS</div><h2>CEVNI — European Inland Waterways</h2><p>A dedicated inland-navigation course. CEVNI content, progress and assessment remain separate from the locked eight-stage COLREG pathway.</p></div>
- <button onclick="showModule('cevni')">ENTER CEVNI PATHWAY →</button>
-</div>
+<section class="pwFutureTraining" aria-labelledby="pwFutureTrainingTitle">
+  <div class="homeEyebrow">FUTURE TRAINING • IN DEVELOPMENT</div>
+  <h2 id="pwFutureTrainingTitle">More seamanship subjects are planned</h2>
+  <p>These are roadmap subjects, not live courses yet. Existing pathways and their progress are unaffected.</p>
+  <div class="pwFutureTopics"><span>Navigation, charts &amp; tides</span><span>Passage planning &amp; weather</span><span>Boat systems &amp; stability</span><span>Safety, survival &amp; first aid</span><span>VHF &amp; communication</span><span>Practical procedures</span></div>
+</section>
 
   <div class="homeFooterBar">
     <div><small>BUILD</small><b>1.62.0</b></div>
@@ -5790,6 +5800,6 @@ window.PW16501_M03_COMPLETE={
 <script src="js/cevni/90-signs-marks-1.85.5.js"></script>
 <script src="js/cevni/91-landing-1.86.1.js"></script>
 <script src="js/cevni/92-lesson-flow-1.87.1.js"></script>
-<script src="js/build-identity-1.88.2.js"></script>
+<script src="js/build-identity-1.89.0.js"></script>
 </body>
 </html>
