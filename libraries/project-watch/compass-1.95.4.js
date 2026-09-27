@@ -5,7 +5,7 @@ window.PW_COMPASS = Object.freeze({
     {
       "title": "Learn the compass circle",
       "subtitle": "North, east, south, west",
-      "art": "scenes/beginner-rose-v2",
+      "art": "scenes/accurate-compass-rose",
       "lead": "Imagine a full circle around the boat. Start at north and turn clockwise: east, south, then west.",
       "plain": "North is 000°, east 090°, south 180° and west 270°. Halfway points include northeast 045° and southwest 225°. We write directions with three digits.",
       "remember": "A compass direction is measured clockwise from north."
