@@ -14,8 +14,8 @@ window.PW_COMPASS = Object.freeze({
       "title": "Read the direction of the bow",
       "subtitle": "The steering compass",
       "art": "scenes/beginner-helm",
-      "lead": "The orange line on the fixed housing is the lubber line. Read the card at that line to find where the bow points.",
-      "plain": "Here the reading is 075° C: almost east, a little north of it. C tells us this number came from the boat’s compass.",
+      "lead": "The fixed mark on the compass housing is the lubber line. Read the card at that line to find where the bow points.",
+      "plain": "For example, 075° C means the bow points almost east, a little north of it. C tells us this number came from the boat’s compass; the photo does not show that example reading.",
       "remember": "Heading means bow direction."
     },
     {
@@ -23,7 +23,7 @@ window.PW_COMPASS = Object.freeze({
       "subtitle": "Heading and bearing",
       "art": "scenes/beginner-bearing",
       "lead": "A bearing points from your boat to an identified object. The object need not be straight ahead.",
-      "plain": "The bow points east at 090° C. The lighthouse lies northeast at 045° C from the boat. That is its bearing, not our heading.",
+      "plain": "In a worked example, the bow points east at 090° C while a lighthouse bears northeast at 045° C. That is its bearing, not the boat’s heading; the photo has no assigned reading.",
       "remember": "Heading points along the bow; bearing points to the object."
     },
     {
@@ -31,7 +31,7 @@ window.PW_COMPASS = Object.freeze({
       "subtitle": "Heading and track",
       "art": "scenes/beginner-track",
       "lead": "A boat can point one way but move across the ground in another direction when wind, current and steering affect the trip.",
-      "plain": "Here the compass heading is 090° and a moving GPS reports 105° COG: course over ground. Neither number alone tells us the exact current.",
+      "plain": "In a worked example, the compass heading is 090° and a moving GPS reports 105° COG: course over ground. Neither number alone tells us the exact current; the photo has no assigned track.",
       "remember": "Check your actual track as well as the bow direction."
     }
   ],
