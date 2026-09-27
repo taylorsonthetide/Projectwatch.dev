@@ -1,0 +1,12 @@
+#homePage .pwPathwayCards{grid-template-columns:repeat(5,minmax(0,1fr))}
+#homePage .pwPathwayCard.systems{background:linear-gradient(135deg,#184f5a,#213e4f);border-color:#a7e2cf66}
+#homePage .pwPathwayCard.systems .pwPathwayState{color:#a3ecd1}
+.pwSystemsPage .pwTidesHero img{background:#edf5f5;object-fit:contain}
+.pwSystemsPage .pwSystemsDiagram img{height:auto;max-height:none;object-fit:contain;background:#edf5f5}
+.pwSystemsCase{background:#0b3548;border:1px solid #ffffff2b;border-radius:12px;padding:17px;margin:12px 0}
+.pwSystemsCase small{color:#8fe8e1;font-weight:800;letter-spacing:.1em}
+.pwSystemsCase h3{margin:9px 0}.pwSystemsCase p{color:#d0e6e9;line-height:1.55;font-size:14px}
+.pwSystemsCase details{background:#154b54;padding:10px 14px;border-radius:8px}.pwSystemsCase summary{cursor:pointer;font-weight:800;color:#a9efce}
+@media(max-width:1450px){#homePage .pwPathwayCards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){#homePage .pwPathwayCards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#homePage .pwPathwayCards{grid-template-columns:1fr}}
