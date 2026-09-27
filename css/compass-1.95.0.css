@@ -1,0 +1,12 @@
+#homePage .pwPathwayCards{grid-template-columns:repeat(3,minmax(0,1fr))}
+#homePage .pwPathwayCard.compass{background:linear-gradient(135deg,#153c65,#144d59);border-color:#89d7ee77}
+#homePage .pwPathwayCard.compass .pwPathwayState{color:#afeaff}
+.pwCompassPage .pwTidesHero img,.pwCompassPage .pwTidesScene img{object-fit:contain;background:#e9f4f7}
+.pwCompassPage .pwTidesScene img{height:auto;max-height:none}
+.pwCompassWorkshop{background:#0b3548;border:1px solid #ffffff35;border-radius:14px;padding:20px;margin:18px 0}
+.pwCompassWorkshop label{display:block;margin:12px 0;color:#d6eef0;font-weight:700}
+.pwCompassWorkshop input,.pwCompassWorkshop select{margin-left:8px;padding:8px 10px;border:1px solid #74b8c4;border-radius:7px;background:#f5fafb;color:#133647;font:inherit;max-width:100px}
+.pwCompassWorkshop output{display:block;background:#194d59;border-radius:9px;padding:15px;color:#fff;line-height:1.65;margin-top:15px}
+.pwCompassWorkshop small{color:#a7e9ee}
+@media(max-width:1050px){#homePage .pwPathwayCards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#homePage .pwPathwayCards{grid-template-columns:1fr}.pwCompassWorkshop input,.pwCompassWorkshop select{margin-left:0}}

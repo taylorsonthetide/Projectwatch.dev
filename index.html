@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="css/tides-1.93.0.css">
 <link rel="stylesheet" href="css/tides-art-1.93.1.css">
 <link rel="stylesheet" href="css/boat-systems-1.94.0.css">
+<link rel="stylesheet" href="css/compass-1.95.0.css">
 <link rel="stylesheet" href="css/collision-flow-1.88.1.css">
 
 <style id="stage3TeachingReview1376b">
@@ -1177,7 +1178,7 @@
       <h1>Learn the skills.<br>Take the watch.</h1>
       <p>Choose a training pathway, continue where you left off, or explore the practical tools. Bridge Watchkeeping, CEVNI, Safety Awareness, Tides and Boat Systems are ready to explore; more seamanship subjects are planned.</p>
       <div class="homeStatusLine">
-        <span><b>5</b> TRAINING PATHWAYS</span>
+        <span><b>6</b> TRAINING PATHWAYS</span>
         <span><b>GUIDED</b> LESSONS</span>
         <span><b>LIVE</b> PRACTICE</span>
       </div>
@@ -1198,6 +1199,7 @@
     <article class="pwPathwayCard safety"><span class="pwPathwayState">NEW • INDEPENDENT TRAINING</span><h3>Safety Awareness at Sea</h3><p>Six visual lessons on preparing, spotting hazards, protecting the crew and responding when plans change.</p><button type="button" onclick="pwSafetyOpen()">OPEN SAFETY TRAINING →</button></article>
     <article class="pwPathwayCard tides"><span class="pwPathwayState">NEW • VISUAL NAVIGATION</span><h3>Tides, Heights &amp; Streams</h3><p>Eight visual lessons and practical workshops for tidal depth, stream and passage timing.</p><button type="button" onclick="pwTidesOpen()">OPEN TIDES TRAINING →</button></article>
     <article class="pwPathwayCard systems"><span class="pwPathwayState">NEW • PRACTICAL SEAMANSHIP</span><h3>Boat Systems &amp; Stability</h3><p>Eight visual lessons on loading, watertight integrity, propulsion, fuel, electrical power and steering.</p><button type="button" onclick="pwSystemsOpen()">OPEN SYSTEMS TRAINING →</button></article>
+    <article class="pwPathwayCard compass"><span class="pwPathwayState">NEW • PRACTICAL NAVIGATION</span><h3>Understanding Compass</h3><p>Eight visual lessons on heading, true and magnetic north, variation, deviation, bearings and steering.</p><button type="button" onclick="pwCompassOpen()">OPEN COMPASS TRAINING →</button></article>
   </div>
 </div>
 
@@ -1305,6 +1307,13 @@
  <p class="pwTidesBoundary"><b>Independent recreational training.</b> Diagrams explain principles, not the stability characteristics or safe loading of a particular boat. Use your builder’s manual, fitted equipment instructions and a competent marine professional for boat-specific limits or repairs.</p>
  <div class="pwTidesLayout"><nav class="pwTidesNav" aria-label="Boat systems lessons"><div class="homeEyebrow">EIGHT VISUAL LESSONS</div><div id="pwSystemsLessonNav"></div><button type="button" onclick="pwSystemsWorkshop()">PRACTICAL DECISIONS →</button><button type="button" onclick="pwSystemsQuiz()">KNOWLEDGE CHECK →</button></nav><div id="pwSystemsContent" class="pwTidesContent" aria-live="polite"></div></div>
  <details class="pwTidesSources"><summary>Guidance and artwork</summary><p>Lesson principles are based on RYA safety and maintenance guidance. These original Project Watch diagrams are separate SVG files. This course does not award an RYA or MCA qualification.</p><div id="pwSystemsSources"></div></details>
+</section>
+
+<section id="compassPage" class="appPage pwTidesPage pwCompassPage" aria-labelledby="pwCompassTitle">
+ <div class="pwTidesHero"><div><div class="homeEyebrow">PROJECT WATCH • RECREATIONAL NAVIGATION</div><h1 id="pwCompassTitle">Understanding Compass</h1><p>Find your direction, make sense of north, convert between compass and chart, and check where the boat actually goes.</p><div class="pwTidesHeroActions"><button type="button" onclick="showModule('home')">← TRAINING HUB</button><span id="pwCompassProgress">0 / 8 LESSONS REVIEWED</span></div></div><img src="assets/compass/card.svg" alt="Compass rose and lubber line showing a sample heading" loading="lazy"></div>
+ <p class="pwTidesBoundary"><b>Independent training with fictional numbers.</b> These diagrams are not a chart, live magnetic model or steering instruction for a passage. Use current chart information, your boat’s checked deviation data and independent position checks for real navigation.</p>
+ <div class="pwTidesLayout"><nav class="pwTidesNav" aria-label="Compass lessons"><div class="homeEyebrow">EIGHT VISUAL LESSONS</div><div id="pwCompassLessonNav"></div><button type="button" onclick="pwCompassWorkshop()">CONVERSION PRACTICE →</button><button type="button" onclick="pwCompassQuiz()">KNOWLEDGE CHECK →</button></nav><div id="pwCompassContent" class="pwTidesContent" aria-live="polite"></div></div>
+ <details class="pwTidesSources"><summary>Primary references and artwork</summary><p>Original schematic SVG diagrams and original questions. Course principles checked against the references below. This pathway awards no RYA or MCA qualification.</p><div id="pwCompassSources"></div></details>
 </section>
 
 <section id="cevniPage" class="appPage">
@@ -5835,6 +5844,8 @@ window.PW16501_M03_COMPLETE={
 <script src="js/tides-1.93.3a.js"></script>
 <script src="libraries/project-watch/boat-systems-1.94.0.js"></script>
 <script src="js/boat-systems-1.94.0.js"></script>
-<script src="js/build-identity-1.94.0.js"></script>
+<script src="libraries/project-watch/compass-1.95.0.js"></script>
+<script src="js/compass-1.95.0.js"></script>
+<script src="js/build-identity-1.95.0.js"></script>
 </body>
 </html>
