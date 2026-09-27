@@ -1,0 +1,33 @@
+#homePage .pwPathwayCards{grid-template-columns:repeat(3,minmax(0,1fr))}
+#homePage .pwPathwayCard.compass{background:linear-gradient(135deg,#153c65,#144d59);border-color:#89d7ee77}
+#homePage .pwPathwayCard.compass .pwPathwayState{color:#afeaff}
+.pwCompassPage .pwTidesHero img,.pwCompassPage .pwTidesScene img{object-fit:contain;background:#e9f4f7}
+.pwCompassPage .pwTidesScene img{height:auto;max-height:none}
+.pwCompassWorkshop{background:#0b3548;border:1px solid #ffffff35;border-radius:14px;padding:20px;margin:18px 0}
+.pwCompassWorkshop label{display:block;margin:12px 0;color:#d6eef0;font-weight:700}
+.pwCompassWorkshop input,.pwCompassWorkshop select{margin-left:8px;padding:8px 10px;border:1px solid #74b8c4;border-radius:7px;background:#f5fafb;color:#133647;font:inherit;max-width:100px}
+.pwCompassWorkshop output{display:block;background:#194d59;border-radius:9px;padding:15px;color:#fff;line-height:1.65;margin-top:15px}
+.pwCompassWorkshop small{color:#a7e9ee}
+@media(max-width:1050px){#homePage .pwPathwayCards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){#homePage .pwPathwayCards{grid-template-columns:1fr}.pwCompassWorkshop input,.pwCompassWorkshop select{margin-left:0}}
+
+.pwCompassPage .pwCompassBasicsButton{background:#195e65;border-color:#6de0da;color:#f0fffc;font-weight:900;margin-bottom:11px}
+.pwCompassPlain{background:#164a55;border:1px solid #79d2d0;border-radius:14px;padding:18px 22px;margin:18px 0;color:#f2ffff}
+.pwCompassPlain small{color:#9eece6;font-size:12px;letter-spacing:.12em;font-weight:900}
+.pwCompassPlain p{font-size:19px;line-height:1.5;margin:8px 0 0}
+.pwCompassNoRush{color:#b7d9df;font-size:14px;margin-top:18px}
+
+.pwCompassContextScene{margin-bottom:12px}
+.pwCompassPage .pwCompassContextScene img{background:#0c344a}
+
+#pwCompassContent{scroll-margin-top:82px}
+
+#pwCompassContent h2{scroll-margin-top:100px}
+
+.pwCompassBeginnerCheck{margin:18px 0 24px;padding:20px;border-radius:14px;background:#123e50;border:1px solid #66bac2;color:#eef9fa}
+.pwCompassBeginnerCheck h3{font-size:14px;letter-spacing:.1em;color:#91e7de;margin:0 0 7px}
+.pwCompassBeginnerCheck p{font-size:18px;line-height:1.5;margin:8px 0 14px}
+.pwCompassBeginnerCheck button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 15px;border-radius:9px;background:#eaf4f4;color:#183c4d;border:1px solid #8bb6bd;font:inherit;font-weight:700;cursor:pointer}
+.pwCompassBeginnerCheck button:hover,.pwCompassBeginnerCheck button:focus-visible{background:#c7eeeb}
+.pwCompassBeginnerCheck #pwCompassBeginnerFeedback{font-size:16px;margin:11px 0 0;padding:10px 12px;border-radius:7px}
+.pwCompassBeginnerCheck .correct{background:#185d50;color:#eafff5}.pwCompassBeginnerCheck .incorrect{background:#68422d;color:#fff0dc}
