@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif">
+<title id="title">Spring and neap tides</title><desc id="desc">The range changes with the Moon–Sun arrangement; local conditions still matter. Fictional schematic for learning, not for navigation.</desc>
+<defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
+<rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Spring and neap tides</text>
+<text x="38" y="151" fill="#456573" font-size="17" font-weight="500">The range changes with the Moon–Sun arrangement; local conditions still matter.</text>
+<rect x="38" y="178" width="426" height="275" rx="16" fill="#ffffff" stroke="#cee1e5"/><rect x="496" y="178" width="426" height="275" rx="16" fill="#ffffff" stroke="#cee1e5"/><text x="64" y="218" fill="#087e90" font-size="22" font-weight="800">SPRINGS</text><text x="522" y="218" fill="#9b6a1d" font-size="22" font-weight="800">NEAPS</text><text x="64" y="247" fill="#456573" font-size="16" font-weight="500">Larger difference between high and low</text><text x="522" y="247" fill="#456573" font-size="16" font-weight="500">Smaller difference between high and low</text><circle cx="248" cy="335" r="53" fill="#256e91"/><ellipse cx="248" cy="335" rx="104" ry="66" fill="none" stroke="#087e90" stroke-width="8"/><circle cx="710" cy="335" r="53" fill="#256e91"/><ellipse cx="710" cy="335" rx="69" ry="65" fill="none" stroke="#d39d40" stroke-width="8"/><circle cx="114" cy="335" r="14" fill="#bfbbb0"/><circle cx="397" cy="335" r="25" fill="#f2c861"/><circle cx="710" cy="270" r="14" fill="#bfbbb0"/><circle cx="855" cy="335" r="25" fill="#f2c861"/><text x="64" y="431" fill="#15384a" font-size="17" font-weight="600">New / full Moon alignment</text><text x="522" y="431" fill="#15384a" font-size="17" font-weight="600">Quarter Moon arrangement</text>
+<path d="M38 493H922" stroke="#c9dcdf"/>
+<text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+</svg>

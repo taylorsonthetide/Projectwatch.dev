@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif">
+<title id="title">Match the reference hour</title><desc id="desc">A stream plate uses high water at its named reference port. Fictional schematic for learning, not for navigation.</desc>
+<defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
+<rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Match the reference hour</text>
+<text x="38" y="151" fill="#456573" font-size="17" font-weight="500">A stream plate uses high water at its named reference port.</text>
+<rect x="38" y="180" width="884" height="275" rx="16" fill="#ffffff" stroke="#cee1e5"/><rect x="66" y="205" width="828" height="64" rx="9" fill="#d9ecee"/><text x="86" y="245" fill="#15384a" font-size="21" font-weight="800">EXAMPLE PLATE  ·  HW REFERENCE PORT − 2 HOURS</text><path d="M120 345L512 345" fill="none" stroke="#087e90" stroke-width="9"/><path d="M512 345l-13 -7v14z" fill="#087e90" transform="rotate(0.0 512 345)"/><text x="92" y="413" fill="#15384a" font-size="18" font-weight="700">Arrowhead = direction towards</text><rect x="610" y="295" width="254" height="117" rx="10" fill="#f8f0da"/><text x="631" y="328" fill="#9b6a1d" font-size="15" font-weight="800">EXAMPLE RATES</text><text x="631" y="363" fill="#15384a" font-size="20" font-weight="600">Spring 1.8 kn</text><text x="631" y="393" fill="#15384a" font-size="20" font-weight="600">Neap 0.9 kn</text>
+<path d="M38 493H922" stroke="#c9dcdf"/>
+<text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+</svg>

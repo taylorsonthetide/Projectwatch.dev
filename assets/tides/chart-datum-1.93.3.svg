@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif">
+<title id="title">Sounding + tide = water depth</title><desc id="desc">Keep every height on the same datum before comparing with draught. Fictional schematic for learning, not for navigation.</desc>
+<defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
+<rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Sounding + tide = water depth</text>
+<text x="38" y="151" fill="#456573" font-size="17" font-weight="500">Keep every height on the same datum before comparing with draught.</text>
+<rect x="38" y="180" width="884" height="280" rx="16" fill="#ffffff" stroke="#cee1e5"/><path d="M61 223H898V414H61Z" fill="url(#sea)"/><path d="M61 414Q440 414 898 414V440H61Z" fill="#bea980"/><path d="M61 366L898 366" fill="none" stroke="#f8e2a8" stroke-width="3" stroke-dasharray="12 7"/><text x="80" y="394" fill="#493a25" font-size="17" font-weight="800">CHART DATUM</text><path d="M610 366L610 414" fill="none" stroke="#15384a" stroke-width="4"/><path d="M598 366L622 366" fill="none" stroke="#15384a" stroke-width="3"/><path d="M598 414L622 414" fill="none" stroke="#15384a" stroke-width="3"/><path d="M720 223L720 366" fill="none" stroke="#fff" stroke-width="4"/><path d="M708 223L732 223" fill="none" stroke="#fff" stroke-width="3"/><path d="M708 366L732 366" fill="none" stroke="#fff" stroke-width="3"/><rect x="153" y="207" width="160" height="37" rx="7" fill="#fff"/><path d="M163 243L303 243L283 275H184Z" fill="#fff" stroke="#15384a" stroke-width="3"/><text x="82" y="337" fill="#fff" font-size="22" font-weight="800">Tide height 1.5 m</text><text x="350" y="275" fill="#15384a" font-size="18" font-weight="700">Water surface</text><text x="350" y="399" fill="#15384a" font-size="18" font-weight="700">Charted sounding 2.0 m</text><text x="81" y="447" fill="#15384a" font-size="16" font-weight="700">2.0 + 1.5 = 3.5 m water depth</text>
+<path d="M38 493H922" stroke="#c9dcdf"/>
+<text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+</svg>
