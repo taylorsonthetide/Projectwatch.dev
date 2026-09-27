@@ -1,0 +1,3 @@
+# Beginner compass flow — 1.95.1
+
+Three simple visual steps precede the existing eight detailed lessons. They use three original illustrated boating scenes from `assets/compass/scenes/`; the precise schematic SVGs in `assets/compass/` remain in the detailed lessons, with teaching content in `libraries/project-watch/compass-1.95.1.js` and view logic in `js/compass-1.95.1.js`. Step 1: read bow direction at the lubber line. Step 2: distinguish heading from ground track. Step 3: see why chart and compass directions may differ, with fictional C 082 → M 084 → T 080. The full lessons, practice calculator and quiz remain available. The beginner flow does not count as completion of the eight lessons. The track diagram's 090° heading arrow was aligned east for this revision.
