@@ -20,8 +20,8 @@ window.PW_DIESEL={
       "text": "The alternator is driven by a belt and generates electrical power while running. Inspect its belt only with the engine stopped."
     },
     {
-      "x": 70,
-      "y": 76,
+      "x": 64,
+      "y": 68.5,
       "title": "Rigid injection lines",
       "text": "These lines carry high-pressure fuel towards the injectors in the cylinder head. Keep clear of pressure leaks; do not loosen them as a beginner."
     },
