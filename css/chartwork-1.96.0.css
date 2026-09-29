@@ -1,0 +1,32 @@
+#homePage .pwPathwayCard.chartwork{background:linear-gradient(135deg,#18485d,#275c5b);border-color:#b0ddcd88}
+#homePage .pwPathwayCard.chartwork .pwPathwayState{color:#c2f0d4}
+.pwChartPage .pwTidesHero img{object-fit:contain;background:#f4f1e7}
+.pwChartPage .pwTidesNav{top:88px;max-height:calc(100vh - 110px);overflow:auto}
+#pwChartLessonNav{display:grid;gap:7px;margin:12px 0}
+#pwChartLessonNav .cwBasics{background:#195e65;border-color:#85dcce;color:#f0fffc;font-weight:900;margin-bottom:8px}
+#pwChartContent h2{scroll-margin-top:100px}
+.cwFigure{margin:20px 0;border-radius:12px;overflow:hidden;border:1px solid #9cb6b7;background:#f4f1e7}
+.cwFigure img{display:block;width:100%;height:auto;max-height:none}
+.cwFigure figcaption{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 14px;background:#113d4a;color:#d6edf0;font-size:13px;line-height:1.45}
+.cwFigure figcaption button{white-space:nowrap;min-height:40px;padding:8px 12px;font-size:11px;background:#1c6971;border:1px solid #93d9cf;color:#fff;border-radius:7px}
+.cwActions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;position:sticky;bottom:12px;background:#0b3346f5;padding:14px;border:1px solid #82c6cd55;border-radius:12px;box-shadow:0 8px 22px #00182088;margin:20px 0 0;z-index:8}
+.cwActions button{min-height:46px;min-width:110px;font-size:13px}
+.cwActions .secondary{background:#144b5a}
+.cwFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0;padding:18px;border-radius:12px;background:#123e4e;border:1px solid #ffffff22}
+.cwFields label,.cwWorked label{font-size:14px;color:#d9edef;line-height:1.5}
+.cwFields input,.cwWorked input{display:block;width:100%;box-sizing:border-box;background:#f3f8f5;color:#173d4b;border:1px solid #7aa5b0;border-radius:7px;padding:11px;margin-top:6px;font:inherit}
+.cwFields button{align-self:end;min-height:44px}.cwWorked{background:#123e4e;border:1px solid #ffffff22;padding:20px;border-radius:12px;margin:20px 0}.cwWorked input{max-width:300px}.cwWorked button{margin-top:14px}.cwWorked label{display:block;margin-bottom:12px}
+.cwChartCanvas{position:relative;min-width:650px;background:#f4f1e7}
+.cwChartCanvas img{width:100%;height:auto;display:block}
+.cwChartCanvas svg{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;touch-action:pan-y}
+.cwCanvasWrap{overflow:auto;border:1px solid #9cb6b7;border-radius:12px;margin:20px 0}
+.cwGood,.cwReview,#cwCalculation,#cwPlotFeedback,#cwGPSFeedback{padding:14px 16px;line-height:1.65;border-radius:9px;font-size:15px;background:#154b54;color:#e9f8f3;display:block;margin:16px 0}
+.cwGood{background:#185c4b!important;color:#e4fff1!important}.cwReview{background:#703f39!important;color:#fff1e8!important}
+.cwChoices{display:grid;gap:10px;margin:20px 0}.cwChoices button{text-align:left;min-height:52px;padding:13px 16px;background:#123f51;border:1px solid #86bbc6;color:#eef9fb;border-radius:9px;font-size:15px;line-height:1.5}
+.cwSmall{font-size:13px;color:#bddce0;line-height:1.6}
+#cwChartDialog{width:96vw;max-width:1700px;max-height:92vh;box-sizing:border-box;padding:14px;background:#0b2b3a;color:#eefbfc;border:1px solid #83bfcc;border-radius:14px}
+#cwChartDialog::backdrop{background:#001018db}
+.cwDialogBar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:13px}.cwDialogBar button{min-height:44px;padding:8px 18px}
+.cwDialogScroll{overflow:auto;max-height:calc(92vh - 90px);background:#f4f1e7;border-radius:8px}
+.cwDialogScroll img{display:block;width:1600px;max-width:none;height:auto}
+@media(max-width:760px){.pwChartPage .pwTidesNav{position:static;max-height:none}.cwFields{grid-template-columns:1fr}.cwFigure figcaption{align-items:flex-start;flex-direction:column}.cwActions{bottom:8px;padding:10px;gap:7px}.cwActions button{min-width:80px;font-size:12px;flex:1}.cwChartCanvas{min-width:760px}}

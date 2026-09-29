@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="css/tides-art-1.93.1.css">
 <link rel="stylesheet" href="css/boat-systems-1.94.0.css">
 <link rel="stylesheet" href="css/compass-1.95.6.css">
+<link rel="stylesheet" href="css/chartwork-1.96.0.css">
 <link rel="stylesheet" href="css/collision-flow-1.88.1.css">
 
 <style id="stage3TeachingReview1376b">
@@ -1178,7 +1179,7 @@
       <h1>Learn the skills.<br>Take the watch.</h1>
       <p>Choose a training pathway, continue where you left off, or explore the practical tools. Bridge Watchkeeping, CEVNI, Safety Awareness, Tides, Boat Systems and Compass are ready to explore; more seamanship subjects are planned.</p>
       <div class="homeStatusLine">
-        <span><b>6</b> TRAINING PATHWAYS</span>
+        <span><b>7</b> TRAINING PATHWAYS</span>
         <span><b>GUIDED</b> LESSONS</span>
         <span><b>LIVE</b> PRACTICE</span>
       </div>
@@ -1200,6 +1201,7 @@
     <article class="pwPathwayCard tides"><span class="pwPathwayState">NEW • VISUAL NAVIGATION</span><h3>Tides, Heights &amp; Streams</h3><p>Eight visual lessons and practical workshops for tidal depth, stream and passage timing.</p><button type="button" onclick="pwTidesOpen()">OPEN TIDES TRAINING →</button></article>
     <article class="pwPathwayCard systems"><span class="pwPathwayState">NEW • PRACTICAL SEAMANSHIP</span><h3>Boat Systems &amp; Stability</h3><p>Eight visual lessons on loading, watertight integrity, propulsion, fuel, electrical power and steering.</p><button type="button" onclick="pwSystemsOpen()">OPEN SYSTEMS TRAINING →</button></article>
     <article class="pwPathwayCard compass"><span class="pwPathwayState">NEW • PRACTICAL NAVIGATION</span><h3>Understanding Compass</h3><p>Start with four visual steps on the compass circle, heading, bearings and ground track. Then explore eight detailed lessons.</p><button type="button" onclick="pwCompassOpen()">OPEN COMPASS TRAINING →</button></article>
+    <article class="pwPathwayCard chartwork"><span class="pwPathwayState">NEW • COASTAL NAVIGATION</span><h3>Chart Work &amp; Position</h3><p>Read realistic training charts, plot positions, take visual fixes, build DR and EP, and cross-check GPS.</p><button type="button" onclick="pwChartOpen()">OPEN CHART WORK →</button></article>
   </div>
 </div>
 
@@ -1276,7 +1278,7 @@
   <div class="homeEyebrow">FUTURE TRAINING • IN DEVELOPMENT</div>
   <h2 id="pwFutureTrainingTitle">More seamanship subjects are planned</h2>
   <p>These are roadmap subjects, not live courses yet. Existing pathways and their progress are unaffected.</p>
-  <div class="pwFutureTopics"><span>Navigation &amp; chart work</span><span>Passage planning &amp; weather</span><span>Sea survival &amp; first aid</span><span>VHF &amp; communication</span><span>Practical procedures</span></div>
+  <div class="pwFutureTopics"><span>Advanced navigation</span><span>Passage planning &amp; weather</span><span>Sea survival &amp; first aid</span><span>VHF &amp; communication</span><span>Practical procedures</span></div>
 </section>
 
 
@@ -1314,6 +1316,14 @@
  <p class="pwTidesBoundary"><b>Independent training with fictional numbers.</b> These diagrams are not a chart, live magnetic model or steering instruction for a passage. Use current chart information, your boat’s checked deviation data and independent position checks for real navigation.</p>
  <div class="pwTidesLayout"><nav class="pwTidesNav" aria-label="Compass lessons"><div class="homeEyebrow">START SIMPLE OR EXPLORE</div><div id="pwCompassLessonNav"></div><button type="button" onclick="pwCompassWorkshop()">CONVERSION PRACTICE →</button><button type="button" onclick="pwCompassQuiz()">KNOWLEDGE CHECK →</button></nav><div id="pwCompassContent" class="pwTidesContent" aria-live="polite"></div></div>
  <details class="pwTidesSources"><summary>Primary references and artwork</summary><p>Original schematic SVG diagrams and original questions. Course principles checked against the references below. This pathway awards no RYA or MCA qualification.</p><div id="pwCompassSources"></div></details>
+</section>
+
+<section id="chartworkPage" class="appPage pwTidesPage pwChartPage" aria-labelledby="pwChartTitle">
+ <div class="pwTidesHero"><div><div class="homeEyebrow">PROJECT WATCH • RECREATIONAL NAVIGATION</div><h1 id="pwChartTitle">Chart Work &amp; Position</h1><p>Start with the chart, then find your place on it. Learn visual fixes, dead reckoning, estimated position and GPS through one coastal training area.</p><div class="pwTidesHeroActions"><button type="button" onclick="showModule('home')">← TRAINING HUB</button><span id="pwChartProgress">0 / 12 LESSONS REVIEWED</span></div></div><img src="assets/chartwork/overview.svg" alt="Alder Bay original coastal training chart" loading="lazy"></div>
+ <p class="pwTidesBoundary"><b>Fictional training charts — not for navigation.</b> Geography, depths and marks are invented; coordinate scales and worked plots are calculated. This independent course awards no RYA or MCA qualification.</p>
+ <div class="pwTidesLayout"><nav class="pwTidesNav" aria-label="Chart-work lessons"><div class="homeEyebrow">READ • PLOT • FIX • CHECK</div><div id="pwChartLessonNav"></div><button type="button" onclick="pwChartPractice(0)">GUIDED CHART PRACTICE →</button><button type="button" onclick="pwChartWorkshop()">DR &amp; EP WORKSHOP →</button><button type="button" onclick="pwChartQuiz()">KNOWLEDGE CHECK →</button></nav><div id="pwChartContent" class="pwTidesContent" aria-live="polite"></div></div>
+ <details class="pwTidesSources"><summary>Teaching references and chart information</summary><p>The charts are original Project Watch assets, with an accurately calculated Mercator graticule and fictional coastal detail. They do not reproduce UKHO, RYA or other commercial charts. The lessons and questions are original, checked against the primary references below.</p><div id="pwChartSources"></div></details>
+ <dialog id="cwChartDialog"><div class="cwDialogBar"><span>ALDER BAY • TRAINING ONLY • SCROLL TO EXPLORE</span><button type="button" onclick="document.getElementById('cwChartDialog').close()">CLOSE ✕</button></div><div class="cwDialogScroll"><img id="cwDialogImage" alt="Enlarged original training chart with the worked plotting example"></div></dialog>
 </section>
 
 <section id="cevniPage" class="appPage">
@@ -5846,6 +5856,8 @@ window.PW16501_M03_COMPLETE={
 <script src="js/boat-systems-1.94.0.js"></script>
 <script src="libraries/project-watch/compass-1.95.4.js?v=1.95.7"></script>
 <script src="js/compass-1.95.4.js?v=1.95.7"></script>
-<script src="js/build-identity-1.95.7.js"></script>
+<script src="libraries/project-watch/chartwork-1.96.0.js"></script>
+<script src="js/chartwork-1.96.0.js"></script>
+<script src="js/build-identity-1.96.0.js"></script>
 </body>
 </html>

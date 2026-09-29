@@ -1,0 +1,52 @@
+{
+  "id": "PW-CW01",
+  "fictional": true,
+  "navigationUse": false,
+  "projection": "Mercator",
+  "datum": "WGS84",
+  "bounds": {
+    "west": -4.333333333333333,
+    "east": -4,
+    "south": 50,
+    "north": 50.166666666666664
+  },
+  "viewBox": [
+    0,
+    0,
+    1600,
+    1200
+  ],
+  "panel": {
+    "x": 75,
+    "y": 145,
+    "width": 1210,
+    "height": 942.8494662636068
+  },
+  "points": {
+    "P": [
+      4,
+      10
+    ],
+    "A": [
+      8,
+      10
+    ],
+    "B": [
+      4,
+      4
+    ],
+    "C": [
+      7,
+      17
+    ],
+    "DR": [
+      4,
+      5.326344547429983
+    ],
+    "EP": [
+      5,
+      5.326344547429983
+    ]
+  },
+  "license": "Original Project Watch artwork; no third-party chart or geography reproduced."
+}
