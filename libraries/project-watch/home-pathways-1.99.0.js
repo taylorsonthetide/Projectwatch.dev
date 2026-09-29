@@ -150,6 +150,10 @@ window.PW_HOME_PATHWAYS = Object.freeze([
     "description": "Learn the engine cycle, checks, filters, diesel bug, cooling, servicing and sensible fault finding through visual lessons.",
     "group": "Boat knowledge",
     "image": "assets/diesel/four-cylinder-real.webp",
+    "credit": "Cjp24",
+    "source": "https://commons.wikimedia.org/wiki/File:Marine_diesel_engine_with_hydraulic_machinery.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "alt": "Four-cylinder marine diesel engine",
     "action": "pwDieselOpen",
     "topics": [

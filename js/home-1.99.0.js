@@ -17,6 +17,7 @@
  function card(course, detailed) {
   return `<article class="pwPathwayCard ${escape(course.id)} ${detailed?'pwMapCard':''}">
    <div class="pwPathwayArt"><img loading="lazy" src="${escape(course.image)}" alt="${escape(course.alt)}"></div>
+   ${course.credit?`<small class="pwHomeImageCredit">Photo: <a href="${escape(course.source)}" target="_blank" rel="noopener">${escape(course.credit)}</a> · <a href="${escape(course.licenseUrl)}" target="_blank" rel="noopener">${escape(course.license)}</a> · resized / cropped</small>`:''}
    <div class="pwPathwayCopy"><span class="pwPathwayState">${escape(course.group)}</span><h3>${escape(course.title)}</h3><p>${escape(course.description)}</p>
    ${detailed?`<div class="pwMapTopics"><h4>What you will learn</h4><ul>${course.topics.map(t=>`<li>${escape(t)}</li>`).join('')}</ul></div>`:''}
    <button type="button" onclick="pwHomeOpen('${escape(course.id)}')">Open course <span aria-hidden="true">→</span><span class="pwHomeSrOnly">: ${escape(course.title)}</span></button></div>
