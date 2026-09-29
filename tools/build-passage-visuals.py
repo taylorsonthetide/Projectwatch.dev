@@ -55,6 +55,6 @@ def xy(a,b):return 75+sc*math.radians((20-b)/60),145+sc*(merc(50+10/60)-merc(50+
 pts=[(4,10),(6.1,7.8),(6.1,1.1),(4,1.0)]; ov='<g font-family="Arial">'
 coords=[xy(*p) for p in pts]
 ov+='<polyline points="'+' '.join(f'{x:.2f},{y:.2f}' for x,y in coords)+'" fill="none" stroke="#116e97" stroke-width="7"/>'
-for i,(x,y) in enumerate(coords):ov+=f'<circle cx="{x}" cy="{y}" r="10" fill="#fff" stroke="#116e97" stroke-width="4"/>'+tx(x+14,y-16,['START','WP1','WP2','FINISH'][i],22,'#116e97')
-x,y=coords[0];u,v=coords[-1];ov+=f'<line x1="{x}" y1="{y}" x2="{u}" y2="{v}" stroke="#b45560" stroke-width="4" stroke-dasharray="12 9"/>'+tx(765,708,'Direct line crosses land',22,'#b45560')+'</g>'
+for i,(x,y) in enumerate(coords):ov+=f'<circle cx="{x}" cy="{y}" r="10" fill="#fff" stroke="#116e97" stroke-width="4"/>'+tx(x+(-110 if i==3 else 14),y-16,['START','WP1','WP2','FINISH'][i],22,'#116e97')
+x,y=coords[0];u,v=coords[-1];ov+=f'<line x1="{x}" y1="{y}" x2="{u}" y2="{v}" stroke="#b45560" stroke-width="4" stroke-dasharray="12 9"/>'+tx(765,757,'Direct line crosses land',22,'#b45560')+'</g>'
 s=s.replace('</svg>',ov+'</svg>');(A/'route.svg').write_text(s)
