@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#031923">
-<title>Project Watch 1.77.0</title>
+<title>Project Watch 1.99.0</title>
 <style id="pw-build-loading-style">html:not(.pw-build-ready) .ver,html:not(.pw-build-ready) #cevniPage .pwBuild,html:not(.pw-build-ready) #cevniPage .build{visibility:hidden!important}</style>
 <link rel="stylesheet" href="css/project-watch-core-1.88.0.css">
 <link rel="stylesheet" href="css/platform-home-1.89.0.css">
@@ -544,6 +544,7 @@
 
 <style>#cevniPage .cevniPlate img,#cevniPage .pwM03Art img,#cevniPage .pw165Art img,#cevniPage .pw16402Mini img{display:block;width:100%;height:100%;object-fit:contain}</style><link rel="stylesheet" href="css/passage-1.97.0.css">
 <link rel="stylesheet" href="css/diesel-1.98.0.css">
+<link rel="stylesheet" href="css/home-1.99.0.css">
 </head>
 <body>
 <div id="vesselSetupModal" class="vesselSetupModal" aria-hidden="true">
@@ -1179,7 +1180,7 @@
     <div class="homeProHeroContent">
       <div class="homeEyebrow">PROJECT WATCH • MARINE TRAINING</div>
       <h1>Learn the skills.<br>Take the watch.</h1>
-      <p>Choose a training pathway, continue where you left off, or explore the practical tools. Bridge Watchkeeping, CEVNI, Safety Awareness, Tides, Boat Systems, Compass, Chart Work, Passage Planning and Diesel Engine Basics are ready to explore; more seamanship subjects are planned.</p>
+      <p>Build confidence on the water. Explore clear, visual courses in navigation, safety and boat knowledge.</p><a class="pwHomeHeroLink" href="#pwPathwayHubTitle">Choose your training <span aria-hidden="true">↓</span></a>
       <div class="homeStatusLine">
         <span><b>9</b> TRAINING PATHWAYS</span>
         <span><b>GUIDED</b> LESSONS</span>
@@ -1194,102 +1195,31 @@
   </div>
 
   
+<section class="pwHomeExplore" aria-labelledby="pwHomeExploreTitle">
+ <div class="pwHomeExploreHead"><div class="homeEyebrow">EXPLORE YOUR WAY</div><h2 id="pwHomeExploreTitle">Find your next step.</h2><p>Follow a course, or go straight to the tools you need.</p></div>
+ <div class="pwHomeExploreLinks">
+ <button type="button" class="pwExploreLink" onclick="showTrainingLibrary()"><span class="pwExploreNo" aria-hidden="true">01</span><span><b>Open Training Library</b><small>COLREGs, simulators, recognition practice and reference tools.</small></span><span aria-hidden="true">↗</span></button>
+ <button type="button" class="pwExploreLink" onclick="pwShowAllCourses()"><span class="pwExploreNo" aria-hidden="true">02</span><span><b>Explore All Courses</b><small>See all nine pathways and the skills covered in each course.</small></span><span aria-hidden="true">↗</span></button>
+ </div>
+</section>
+
 <div class="pwPathwayHub" aria-labelledby="pwPathwayHubTitle">
-  <div class="pwPathwayHubHead"><div><div class="homeEyebrow">CHOOSE YOUR TRAINING</div><h2 id="pwPathwayHubTitle">Your pathways</h2></div><p>Each pathway has its own lessons and progress.</p></div>
-  <div class="pwPathwayCards">
-    <article class="pwPathwayCard"><span class="pwPathwayState">READY TO LEARN</span><h3>Bridge Watchkeeping</h3><p>Eight stages covering COLREGs, recognition, collision avoidance, buoyage, traffic separation and AIS.</p><button type="button" onclick="showCoursePage()">OPEN BRIDGE COURSE →</button></article>
-    <article class="pwPathwayCard inland"><span class="pwPathwayState">READY TO LEARN</span><h3>CEVNI Inland Waterways</h3><p>Nine modules covering inland rules, signs, signals and practical situations, with a separate mock assessment.</p><button type="button" onclick="showModule('cevni')">OPEN CEVNI COURSE →</button></article>
-    <article class="pwPathwayCard safety"><span class="pwPathwayState">NEW • INDEPENDENT TRAINING</span><h3>Safety Awareness at Sea</h3><p>Six visual lessons on preparing, spotting hazards, protecting the crew and responding when plans change.</p><button type="button" onclick="pwSafetyOpen()">OPEN SAFETY TRAINING →</button></article>
-    <article class="pwPathwayCard tides"><span class="pwPathwayState">NEW • VISUAL NAVIGATION</span><h3>Tides, Heights &amp; Streams</h3><p>Eight visual lessons and practical workshops for tidal depth, stream and passage timing.</p><button type="button" onclick="pwTidesOpen()">OPEN TIDES TRAINING →</button></article>
-    <article class="pwPathwayCard systems"><span class="pwPathwayState">NEW • PRACTICAL SEAMANSHIP</span><h3>Boat Systems &amp; Stability</h3><p>Eight visual lessons on loading, watertight integrity, propulsion, fuel, electrical power and steering.</p><button type="button" onclick="pwSystemsOpen()">OPEN SYSTEMS TRAINING →</button></article>
-    <article class="pwPathwayCard compass"><span class="pwPathwayState">NEW • PRACTICAL NAVIGATION</span><h3>Understanding Compass</h3><p>Start with four visual steps on the compass circle, heading, bearings and ground track. Then explore eight detailed lessons.</p><button type="button" onclick="pwCompassOpen()">OPEN COMPASS TRAINING →</button></article>
-    <article class="pwPathwayCard chartwork"><span class="pwPathwayState">NEW • COASTAL NAVIGATION</span><h3>Chart Work &amp; Position</h3><p>Read realistic training charts, plot positions, take visual fixes, build DR and EP, and cross-check GPS.</p><button type="button" onclick="pwChartOpen()">OPEN CHART WORK →</button></article>
-    <article class="pwPathwayCard passage"><span class="pwPathwayState">NEW • PLAN &amp; MONITOR</span><h3>Passage Planning &amp; Logbook</h3><p>Build a sensible passage plan, prepare alternatives, monitor the journey and keep a useful navigation log.</p><button type="button" onclick="pwPassageOpen()">OPEN PASSAGE PLANNING →</button></article>
-    <article class="pwPathwayCard diesel"><span class="pwPathwayState">NEW • ENGINE KNOWLEDGE</span><h3>Diesel Engine Basics</h3><p>Learn the engine cycle, checks, filters, diesel bug, cooling, servicing and sensible fault finding through visual lessons.</p><button type="button" onclick="pwDieselOpen()">OPEN DIESEL TRAINING →</button></article>
-  </div>
+  <div class="pwPathwayHubHead"><div><div class="homeEyebrow">CHOOSE YOUR TRAINING</div><h2 id="pwPathwayHubTitle">Choose your next subject</h2></div><p>Open a course to see its lessons and your progress.</p></div>
+  <div class="pwPathwayCards" id="pwHomePathways"></div>
 </div>
 
-<div class="homeCourseDashboard">
-  <div class="homeCoursePrimary">
-    <div class="homeCourseTopline">
-      <div>
-        <div class="homeEyebrow">PROJECT WATCH • STRUCTURED TRAINING</div>
-        <h2>Your bridge-watchkeeping course</h2>
-        <p>Follow the recommended sequence from foundations through COLREGs, vessel recognition, collision avoidance, buoyage, TSS and AIS.</p>
-      </div>
-      <div class="homeCoursePercentWrap">
-        <small>COURSE PROGRESS</small>
-        <b id="homeCoursePercentBig">0%</b>
-        <span id="homeCourseStageText">0 / 8 STAGES</span>
-      </div>
-    </div>
-
-    <div class="homeCourseProgressBar"><div id="homeCourseProgressBar"></div></div>
-
-    <div class="homeCourseNow">
-      <div class="homeCourseStageBadge">
-        <span>NEXT</span>
-        <b id="homeNextStageNo">01</b>
-      </div>
-      <div class="homeCourseNowCopy">
-        <small id="homeNextStageType">FOUNDATION</small>
-        <h3 id="homeNextStageTitle">Orientation & Watchkeeping Fundamentals</h3>
-        <p id="homeNextStageDesc">Start with the language, vessel profile and watchkeeping mindset used throughout Project Watch.</p>
-      </div>
-      <button id="homeContinueCourseBtn" onclick="continueCourseFromHome()">START COURSE →</button>
-    </div>
-
-    <div class="homeCourseMilestones">
-      <span><b>8</b><small>COURSE STAGES</small></span>
-      <span><b>4</b><small>FULL MOCK EXAMS</small></span>
-      <span><b>LIVE</b><small>SIMULATION</small></span>
-      <span><b id="homeVesselCourseName">WATCH ONE</b><small>TRAINING VESSEL</small></span>
-    </div>
-  </div>
-
-  <div class="homeQuickAccess">
-    <div class="ver">QUICK ACCESS</div>
-    <h3>Experienced user?</h3>
-    <p>Jump straight to any simulator, reference module or assessment without affecting the recommended course order.</p>
-    <button onclick="showTrainingLibrary()">OPEN TRAINING LIBRARY →</button>
-    <button class="alt" onclick="showCoursePage()">VIEW FULL COURSE MAP →</button>
-  </div>
-</div>
-
-<div class="homePathwaySnapshot">
-  <div class="homePathwaySnapshotHead">
-    <div>
-      <div class="ver">COURSE MAP</div>
-      <h2>Eight stages. One progression.</h2>
-    </div>
-    <p>The next stage unlocks when the previous stage is complete in Course Mode. The Training Library remains open at all times.</p>
-  </div>
-  <div id="homeCourseStageRail" class="homeCourseStageRail"></div>
-</div>
-
-<div class="homeCapabilityBar">
-    <span><b>COLREGs</b><small>Rules • Reference • Training</small></span>
-    <span><b>LIGHTS &amp; SHAPES</b><small>Recognition • Practice • Exam</small></span>
-    <span><b>SOUND &amp; DISTRESS</b><small>Signals • Fog • Audio training</small></span>
-    <span><b>COLLISION</b><small>Guided watch • Simulator • Exam</small></span>
-    <span><b>BUOYAGE</b><small>IALA passage • Recognition • Exam</small></span>
-    <span><b>TSS</b><small>Live trainer • Rules • Exam</small></span>
-    <span><b>AIS</b><small>Interactive target trainer</small></span>
-  </div>
-
-
-<section class="pwFutureTraining" aria-labelledby="pwFutureTrainingTitle">
+<details class="pwFutureTraining"><summary>On the horizon <span>Future seamanship subjects</span></summary>
   <div class="homeEyebrow">FUTURE TRAINING • IN DEVELOPMENT</div>
-  <h2 id="pwFutureTrainingTitle">More seamanship subjects are planned</h2>
+  <h2>More seamanship subjects are planned</h2>
   <p>These are roadmap subjects, not live courses yet. Existing pathways and their progress are unaffected.</p>
   <div class="pwFutureTopics"><span>Advanced navigation</span><span>Weather &amp; forecasting</span><span>Sea survival &amp; first aid</span><span>VHF &amp; communication</span><span>Practical procedures</span></div>
-</section>
+</details>
 
 
 
   <div class="homeFooterBar">
-    <div><small>BUILD</small><b>1.98.0</b></div>
-    <div><small>COURSE MODE</small><b>8 STAGES • STRUCTURED PROGRESSION</b></div>
+    <div><small>BUILD</small><b>1.99.0</b></div>
+    <div><small>TRAINING</small><b>9 PATHWAYS • LEARN AT YOUR PACE</b></div>
     <div><small>TRAINING VESSEL</small><b id="homeTrainingVesselSummary">WATCH ONE • POWER-DRIVEN</b></div>
   </div>
 </section>
@@ -1391,6 +1321,13 @@
   <div id="lib20Empty" class="lib20Empty">No existing Project Watch library resource matches that search or filter.</div>
   <div class="lib20Foot"><b>Library 2.0 visual architecture:</b> original Project Watch concept artwork is embedded directly into the library cards; this build reorganises the existing Project Watch resources only. No approved teaching content, simulator, assessment or Course Mode stage has been removed or rewritten. Future subjects can be added into this structure without disturbing the eight-stage core.</div>
 </section>
+<section id="allCoursesPage" class="appPage" aria-labelledby="pwAllCoursesTitle">
+ <div class="pwCourseOverviewHero"><div><div class="homeEyebrow">YOUR TRAINING AT A GLANCE</div><h1 id="pwAllCoursesTitle">Your course map</h1><p>Nine pathways. Choose the skills you want to build, then open a course for its lessons and progress.</p></div><button type="button" onclick="showModule('home')">← Training home</button></div>
+ <nav class="pwCourseMapJump" aria-label="Course categories"><a href="#pwMapNavigation">Rules &amp; navigation</a><a href="#pwMapSafety">Safety &amp; seamanship</a><a href="#pwMapBoats">Boat knowledge</a></nav>
+ <div id="pwAllCourseGroups"></div>
+ <div class="pwMapLibrary"><h2>Looking for a specific tool?</h2><p>The Training Library gives you direct access to reference material, simulators and recognition practice.</p><button type="button" onclick="showTrainingLibrary()">Open Training Library →</button></div>
+</section>
+
 <section id="coursePage" class="appPage">
   <div class="courseHero">
     <div>
@@ -1424,6 +1361,21 @@
     </div>
     <button onclick="showModule('home')">← TRAINING HUB</button>
     </div>
+
+  <div class="pwBridgeContinue">    <div class="homeCourseNow">
+      <div class="homeCourseStageBadge">
+        <span>NEXT</span>
+        <b id="homeNextStageNo">01</b>
+      </div>
+      <div class="homeCourseNowCopy">
+        <small id="homeNextStageType">FOUNDATION</small>
+        <h3 id="homeNextStageTitle">Orientation & Watchkeeping Fundamentals</h3>
+        <p id="homeNextStageDesc">Start with the language, vessel profile and watchkeeping mindset used throughout Project Watch.</p>
+      </div>
+      <button id="homeContinueCourseBtn" onclick="continueCourseFromHome()">START COURSE →</button>
+    </div>
+
+</div>
 
   <div id="courseStageList" class="courseStageList"></div>
 
@@ -5868,6 +5820,8 @@ window.PW16501_M03_COMPLETE={
 <script src="js/passage-1.97.0.js"></script>
 <script src="libraries/project-watch/diesel-1.98.0.js?rev=2"></script>
 <script src="js/diesel-1.98.0.js?rev=2"></script>
-<script src="js/build-identity-1.98.0.js"></script>
+<script src="libraries/project-watch/home-pathways-1.99.0.js"></script>
+<script src="js/home-1.99.0.js"></script>
+<script src="js/build-identity-1.99.0.js"></script>
 </body>
 </html>
