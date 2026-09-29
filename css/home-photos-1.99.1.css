@@ -1,0 +1,2 @@
+/* Uniform photographic crops for home and overview cards only. */
+#homePage .pwPathwayArt img,#allCoursesPage .pwPathwayArt img{object-fit:cover;object-position:center}
