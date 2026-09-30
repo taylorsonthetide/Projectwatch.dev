@@ -1,0 +1,35 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+let PGlite;try{({PGlite}=require('@electric-sql/pglite'))}catch{({PGlite}=require('/tmp/pw-account-tests/node_modules/@electric-sql/pglite'))}
+(async()=>{
+ const db=new PGlite();
+ const A='11111111-1111-1111-1111-111111111111',B='22222222-2222-2222-2222-222222222222';
+ await db.exec(`create role anon;create role authenticated;create schema auth;
+ create table auth.users(id uuid primary key,email text,raw_user_meta_data jsonb,created_at timestamptz default now(),email_confirmed_at timestamptz,last_sign_in_at timestamptz);
+ create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
+ grant usage on schema auth, public to anon,authenticated;
+ insert into auth.users(id,email,raw_user_meta_data,email_confirmed_at) values ('${A}','a@example.test','{}',now()),('${B}','b@example.test','{}',now());`);
+ await db.exec(fs.readFileSync(path.join(__dirname,'../backend/accounts.sql'),'utf8'));
+ await db.exec(`set role authenticated;select set_config('request.jwt.claim.sub','${A}',false)`);
+ await db.query("select public.pw_save_state($1::jsonb)",[JSON.stringify([{state_key:'pwCevniDone',value:'[0,1,1,8]'}])]);
+ assert.equal((await db.query('select * from public.pw_account_state')).rows.length,1);
+ await assert.rejects(db.query(`insert into public.pw_account_state(user_id,state_key,value) values ('${B}','pwCevniDone','[7]')`),/row-level security/);
+ await assert.rejects(db.query('select public.pw_owner_dashboard(0)'),/Owner access required/);
+ await assert.rejects(db.query(`insert into pw_private.owners values ('${A}')`),/permission denied/);
+ await assert.rejects(db.query("select public.pw_save_state('[{\"state_key\":\"pw-auth-v1\",\"value\":\"secret\"}]')"),/check constraint/);
+ await assert.rejects(db.query("select public.pw_save_state('[{\"state_key\":\"pwCevniDone\",\"value\":{}}]')"),/Invalid state value/);
+ await db.query('select public.pw_touch_account()');
+ await db.exec(`select set_config('request.jwt.claim.sub','${B}',false)`);
+ assert.equal((await db.query('select * from public.pw_account_state')).rows.length,0);
+ await db.query("select public.pw_save_state('[{\"state_key\":\"pwCevniDone\",\"value\":\"malformed\"}]')");
+ assert.equal((await db.query(`update public.pw_account_state set value='[]' where user_id='${A}' returning *`)).rows.length,0);
+ await db.exec(`reset role;insert into pw_private.owners values ('${A}');set role authenticated;select set_config('request.jwt.claim.sub','${A}',false)`);
+ assert.equal((await db.query('select public.pw_is_owner() as owner')).rows[0].owner,true);
+ const result=(await db.query('select public.pw_owner_dashboard(0) as dashboard')).rows[0].dashboard;
+ assert.equal(result.total,2);assert.equal(result.active30,1);assert.equal(result.learners.find(x=>x.email==='a@example.test').cevni_modules,3);assert.equal(result.learners.find(x=>x.email==='b@example.test').cevni_modules,0);
+ await db.query("select public.pw_save_state('[{\"state_key\":\"pwCevniDone\",\"value\":null}]')");assert.equal((await db.query('select value from public.pw_account_state')).rows[0].value,null);
+ await db.exec("reset role;set role anon;select set_config('request.jwt.claim.sub','',false)");
+ await assert.rejects(db.query('select * from public.pw_account_state'),/permission denied/);
+ await assert.rejects(db.query('select public.pw_owner_dashboard(0)'),/permission denied/);
+ await assert.rejects(db.query("select public.pw_save_state('[]')"),/permission denied/);
+ await db.close();console.log('PASS: PostgreSQL migration, cross-user RLS, protected owner assignment/roster, anonymous denial, allowed-key/type constraints, durable null tombstones, activity and malformed-progress handling.');
+})().catch(e=>{console.error(e);process.exit(1)});

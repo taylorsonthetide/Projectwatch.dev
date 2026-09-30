@@ -1,0 +1,4 @@
+.pw-account-checking body{visibility:hidden}
+.account-bar{display:flex;justify-content:flex-end;gap:12px;align-items:center;padding:10px 24px;background:#052331;font:13px system-ui;color:#a6cbd7}
+.account-bar a{color:#77d9f2}
+@media(max-width:760px){.account-bar span{display:none}}
