@@ -5,6 +5,7 @@ revoke all on schema pw_private from public, anon, authenticated;
 create table if not exists pw_private.owners (
   user_id uuid primary key references auth.users(id) on delete cascade
 );
+alter table pw_private.owners enable row level security;
 revoke all on pw_private.owners from public, anon, authenticated;
 
 create table if not exists public.pw_account_activity (
@@ -54,22 +55,22 @@ end $$;
 revoke all on function public.pw_save_state(jsonb) from public, anon;
 grant execute on function public.pw_save_state(jsonb) to authenticated;
 
-create or replace function public.pw_touch_account() returns void
+create or replace function pw_private.pw_touch_account() returns void
 language plpgsql security definer set search_path = '' as $$
 begin
   if auth.uid() is null then raise exception 'Authentication required' using errcode = '42501'; end if;
   insert into public.pw_account_activity(user_id, last_seen_at) values (auth.uid(), now())
   on conflict (user_id) do update set last_seen_at = excluded.last_seen_at;
 end $$;
-revoke all on function public.pw_touch_account() from public, anon;
-grant execute on function public.pw_touch_account() to authenticated;
+revoke all on function pw_private.pw_touch_account() from public, anon;
+grant execute on function pw_private.pw_touch_account() to authenticated;
 
-create or replace function public.pw_is_owner() returns boolean
+create or replace function pw_private.pw_is_owner() returns boolean
 language sql stable security definer set search_path = '' as $$
-  select exists (select 1 from pw_private.owners where user_id = auth.uid());
+  select auth.uid() is not null and exists (select 1 from pw_private.owners where user_id = auth.uid());
 $$;
-revoke all on function public.pw_is_owner() from public, anon;
-grant execute on function public.pw_is_owner() to authenticated;
+revoke all on function pw_private.pw_is_owner() from public, anon;
+grant execute on function pw_private.pw_is_owner() to authenticated;
 
 -- Learner progress is self-reported, not a certificate or verified exam result.
 create or replace function pw_private.module_count(value text) returns integer
@@ -84,11 +85,11 @@ exception when others then return 0;
 end $$;
 revoke all on function pw_private.module_count(text) from public, anon, authenticated;
 
-create or replace function public.pw_owner_dashboard(page_offset integer default 0) returns jsonb
+create or replace function pw_private.pw_owner_dashboard(page_offset integer default 0) returns jsonb
 language plpgsql stable security definer set search_path = '' as $$
 declare result jsonb;
 begin
-  if not public.pw_is_owner() then raise exception 'Owner access required' using errcode = '42501'; end if;
+  if auth.uid() is null or not pw_private.pw_is_owner() then raise exception 'Owner access required' using errcode = '42501'; end if;
   if page_offset < 0 then raise exception 'Invalid offset'; end if;
   select jsonb_build_object(
     'total', (select count(*) from auth.users),
@@ -106,8 +107,26 @@ begin
   ) into result;
   return result;
 end $$;
-revoke all on function public.pw_owner_dashboard(integer) from public, anon;
-grant execute on function public.pw_owner_dashboard(integer) to authenticated;
+revoke all on function pw_private.pw_owner_dashboard(integer) from public, anon;
+grant execute on function pw_private.pw_owner_dashboard(integer) to authenticated;
+
+-- Only invoker wrappers are exposed through the Data API. Private functions
+-- check the caller's identity; schema usage grants no access to private tables.
+grant usage on schema pw_private to authenticated;
+create or replace function public.pw_touch_account() returns void
+language sql security invoker set search_path = '' as $$ select pw_private.pw_touch_account(); $$;
+create or replace function public.pw_is_owner() returns boolean
+language sql stable security invoker set search_path = '' as $$ select pw_private.pw_is_owner(); $$;
+create or replace function public.pw_owner_dashboard(page_offset integer default 0) returns jsonb
+language sql stable security invoker set search_path = '' as $$ select pw_private.pw_owner_dashboard(page_offset); $$;
+revoke all on function public.pw_touch_account(), public.pw_is_owner(), public.pw_owner_dashboard(integer) from public, anon;
+grant execute on function public.pw_touch_account(), public.pw_is_owner(), public.pw_owner_dashboard(integer) to authenticated;
+-- Supabase's optional automatic-RLS event trigger is internal setup only.
+do $$ begin
+  if to_regprocedure('public.rls_auto_enable()') is not null then
+    revoke execute on function public.rls_auto_enable() from public, anon, authenticated;
+  end if;
+end $$;
 commit;
 
 -- After Cliff has registered and confirmed his email, use the SQL editor to assign
