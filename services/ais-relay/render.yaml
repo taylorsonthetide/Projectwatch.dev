@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: helmlore-ais-relay
+    runtime: node
+    plan: free
+    rootDir: services/ais-relay
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: AISSTREAM_API_KEY
+        sync: false
+      - key: AIS_BOUNDS
+        value: 50,-7,56.5,-2
+      - key: ALLOWED_ORIGINS
+        value: https://helmlore.com,https://www.helmlore.com,https://taylorsonthetide.github.io
