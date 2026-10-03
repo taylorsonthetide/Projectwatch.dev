@@ -1,0 +1,5 @@
+/* Make downloaded forecasts reopenable offline, without caching chart tiles. */
+(()=>{'use strict';const el=document.getElementById('weatherOfflineStatus');
+if(!('serviceWorker' in navigator)){el.textContent='Offline reopening is unavailable in this browser. Saved forecasts work while this page remains open.';return;}
+navigator.serviceWorker.register('navigation-sw.js',{scope:'./',updateViaCache:'none'}).then(async r=>{await navigator.serviceWorker.ready;el.textContent='Offline forecast viewer ready on this device. Saved weather can reopen without internet; chart tiles, planning page and AIS still need a connection.';r.addEventListener('updatefound',()=>{if(r.installing)r.installing.addEventListener('statechange',()=>{if(r.installing?.state==='redundant')el.textContent='Offline viewer update failed. Keep this page open for saved forecasts.';});});}).catch(()=>{el.textContent='Offline viewer could not be prepared. Keep this page open to use saved weather, and retry online.';});
+})();
