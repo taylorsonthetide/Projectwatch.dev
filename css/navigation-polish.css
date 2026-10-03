@@ -1,0 +1,76 @@
+/* Helmlore console styling. Static CSS only; no additional rendering work. */
+.chart-app{--bg:#102333;--panel:#132d40;--line:#375162;--text:#f0f6fa;--muted:#9eb5c5;--cyan:#63ded6;--amber:#f1c47e;-webkit-font-smoothing:antialiased}
+.chart-app .nav-header{background:#102333;border-bottom:1px solid #ffffff18;padding-inline:16px;box-shadow:0 2px 8px #07131c22}
+.chart-app .wordmark{display:flex;align-items:center;gap:10px;font-size:17px;letter-spacing:.18em;font-weight:800}
+.brand-mark{width:30px;height:30px;flex-shrink:0;color:#63ded6}
+.brand-copy{display:flex;flex-direction:column;gap:3px}
+.chart-app .wordmark .brand-subtitle{display:block!important;font-size:7px;letter-spacing:.22em;color:#8fa9bb;margin:0;font-weight:600}
+.ui-icon{width:21px;height:21px;flex-shrink:0;vertical-align:middle;stroke:currentColor;fill:none;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.chart-app button,.chart-app select,.chart-app .trip-export{border-radius:8px;font-weight:600}
+.chart-app .nav-header button{min-height:36px;background:#20394b;border:1px solid #ffffff1f;color:#eaf4fa}
+.chart-app .menu-toggle{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;min-width:88px}
+.chart-app .nav-header .menu-toggle[aria-expanded=true]{background:#63ded6;color:#102333}
+.chart-app .header-actions{gap:8px}
+.chart-app .header-actions>a{color:#9ab7ca;font-size:10px;text-decoration:none;padding:8px 10px;border-left:1px solid #ffffff22}
+.chart-app .badge{border-radius:20px;font-size:8px;letter-spacing:.1em;border-color:#ffffff2a;color:#a8c5d3}
+.chart-app .badge.gps{color:#79e5b1;background:#183b34}.chart-app .badge.demo{color:#f1ca88;background:#3a3326}
+.chart-app .instruments{background:#102333;border-bottom:1px solid #294355;gap:7px;padding:8px;overflow:hidden}
+.chart-app .instruments>div,.chart-app .instruments>div:last-child{background:#1a3648;border:1px solid #ffffff9c;border-radius:9px;padding:12px 16px;box-shadow:inset 0 1px #ffffff08}
+.chart-app .instruments span{font-size:8px;letter-spacing:.14em;color:#a4c0d1;margin-bottom:6px}
+.chart-app .instruments strong{font-size:36px;font-weight:650;letter-spacing:-.035em;color:#fff;font-variant-numeric:tabular-nums}
+.chart-app .instruments small{color:#a8bdcc;font-size:9px;margin-top:5px;line-height:1.45}
+.chart-app .position-instrument strong{font-size:17px!important;letter-spacing:.01em;line-height:1.35}
+.chart-app .chart-dropdown{width:300px;padding:12px;gap:8px;background:#102333;border:1px solid #ffffff30;border-radius:14px;box-shadow:0 12px 32px #05142055}
+.chart-app .chart-dropdown button,.chart-app .chart-dropdown .chart-tool{min-height:78px;gap:7px;background:#1b3548;border:1px solid #ffffff13;border-radius:10px;font-size:21px;color:#68dcd6}
+.chart-app .chart-dropdown button:hover,.chart-app .chart-dropdown .chart-tool:hover{background:#294b60;border-color:#63ded666}
+.chart-app .chart-dropdown span{color:#eff6fa;font-size:11px;letter-spacing:.02em;margin:0;font-weight:600}
+.chart-app[data-theme=day] .planning-panel{background:#f8fafc;color:#173044;--text:#173044;--muted:#60788b;--line:#d8e3ea;--cyan:#087f89;--amber:#896122;border:1px solid #c6d6e0;box-shadow:0 8px 30px #10233333;border-radius:12px}
+.chart-app .menu-title{padding:12px 14px;background:#183548;color:#f3f8fc;border-bottom:1px solid #365264;min-height:60px}
+.chart-app .menu-title strong{font-size:14px;font-weight:650;letter-spacing:.02em}
+.chart-app .menu-title button{width:36px;min-height:36px;padding:5px;background:#29485b;border:1px solid #ffffff21;color:#d6e7f1}
+.chart-app .planning-panel h2{font-size:20px;font-weight:700;letter-spacing:-.03em;margin:0 0 8px}
+.chart-app .planning-panel h3{font-size:13px;font-weight:700;letter-spacing:.015em;margin-top:22px}
+.chart-app .planning-panel .helper{font-size:12px;line-height:1.7}
+.chart-app .planning-panel>section{padding:22px}
+.chart-app[data-theme=day] .planning-panel button,.chart-app[data-theme=day] .planning-panel .trip-export{background:#edf3f7;color:#23475d;border:1px solid #cedde7;box-shadow:0 1px 1px #10233305}
+.chart-app[data-theme=day] .planning-panel button:hover{background:#dfeef3;border-color:#75b6bd}
+.chart-app[data-theme=day] .planning-panel button.primary,.chart-app[data-theme=day] .planning-panel button[aria-pressed=true],.chart-app[data-theme=day] .planning-panel #downloadWeather{background:#087f89;color:white;border-color:#087f89}
+.chart-app .planning-panel .button-row{flex-wrap:wrap}
+.chart-app .planning-panel .button-row button,.chart-app .planning-panel .trip-export{font-size:12px;min-height:44px}
+.chart-app[data-theme=day] .planning-panel input:not([type=checkbox]):not([type=range]),.chart-app[data-theme=day] .planning-panel select{background:#fff!important;border:1px solid #cbdce6!important;color:#1f3e51!important;border-radius:8px;padding:12px;box-sizing:border-box}
+.chart-app .planning-panel label{font-size:12px;font-weight:600}
+.chart-app[data-theme=day] .planning-panel .prototype-note{color:#745c35;background:#fff6e7;border:1px solid #ead5ac;font-size:11px;padding:12px;border-radius:8px}
+.chart-app[data-theme=day] .planning-panel .prototype-note strong{color:#745c35}
+.chart-app[data-theme=day] #weatherStatus{background:#eaf3f6;border:1px solid #d0e1e9;border-left:3px solid #168d99;padding:12px;border-radius:7px;color:#39596d;font-size:11px;line-height:1.65}
+.chart-app[data-theme=day] #areaSelectionStatus{color:#426276;font-size:12px}
+.chart-app .weather-toggles{gap:15px;padding:10px 0;margin:8px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.chart-app[data-theme=day] .trip-table th{background:#e7eff4;color:#315268}
+.chart-app[data-theme=day] .trip-table td{border-color:#d8e3ea}
+.chart-app[data-theme=day] .trip-table tr:nth-child(even){background:#edf3f7}
+.chart-app[data-theme=day] .trip-card{border-color:#ccdae4}
+.chart-app[data-theme=day] .trip-card[aria-pressed=true]{background:#e2f3f3;color:#185461;border-color:#4c9ba2}
+.chart-app[data-theme=day] #seaLevelPlot{padding:8px;border:1px solid #d8e3ea;background:#183548;border-radius:8px}
+.chart-app .weather-timeline{background:#102b3f;border:1px solid #ffffff35;padding:12px 16px;border-radius:12px;box-shadow:0 6px 22px #10233340}
+.chart-app .timeline-heading{margin-bottom:7px}
+.chart-app .timeline-heading strong{font-size:12px;letter-spacing:.02em}
+.chart-app .timeline-heading span{font-size:9px;border:1px solid #63ded644;padding:4px 7px;border-radius:20px;color:#6bdfd7}
+.chart-app .weather-timeline button{background:#1d4055;border:1px solid #ffffff20;color:#eaf5fa}
+.chart-app .timeline-footer{color:#b5cbd9;font-size:10px;gap:12px}
+.chart-app .chart-notice{background:#152c3dec;color:#d7c6a7;border:1px solid #ffffff1f;border-radius:6px;padding:6px 9px;font-size:8px;letter-spacing:.035em}
+.chart-app .leaflet-control-zoom{border:1px solid #b5c6d0!important;box-shadow:0 3px 10px #10233320!important;border-radius:8px!important;overflow:hidden}
+.chart-app .leaflet-control-zoom a{background:#f8fafc!important;color:#25475b!important}
+.chart-app .leaflet-popup-content-wrapper{border-radius:10px;box-shadow:0 5px 20px #10233325}
+.chart-app .leaflet-control-attribution{font-size:9px;background:#f8fafce8}
+.chart-app[data-theme=night]{--panel:#0c1d2a;--text:#a9bcc9;--muted:#829aaa;--line:#2b4050;--cyan:#78aeb3}
+.chart-app[data-theme=night] .nav-header,.chart-app[data-theme=night] .instruments{background:#07141e}
+.chart-app[data-theme=night] .instruments>div{background:#102532;border-color:#ffffff35}
+.chart-app[data-theme=night] .instruments strong{color:#b8cbd6}
+.chart-app[data-theme=night] .planning-panel{background:#0c1d2a;border-color:#2a4253;box-shadow:0 8px 25px #0005}
+.chart-app[data-theme=night] .menu-title,.chart-app[data-theme=night] .weather-timeline,.chart-app[data-theme=night] .chart-dropdown{background:#0c1d2a}
+.chart-app[data-theme=night] .chart-dropdown button,.chart-app[data-theme=night] .chart-dropdown .chart-tool{background:#142c3b;color:#78aeb3}
+.chart-app[data-theme=night] .chart-dropdown span{color:#a7bfcd}
+.chart-app[data-theme=night] .brand-mark{color:#78aeb3}
+.chart-app[data-dock=left] .instruments,.chart-app[data-dock=right] .instruments{gap:7px;padding:8px}
+.chart-app[data-dock=left] .instruments>div,.chart-app[data-dock=right] .instruments>div{padding:12px}
+@media(max-width:700px){.chart-app .nav-header{padding-inline:10px}.chart-app .wordmark{font-size:12px;gap:6px;letter-spacing:.13em}.brand-mark{width:23px;height:23px}.chart-app .wordmark .brand-subtitle{font-size:6px;letter-spacing:.1em}.chart-app .menu-toggle{min-width:64px;gap:5px;font-size:11px}.chart-app .header-actions{gap:4px}.chart-app .header-actions button{font-size:9px;padding:5px 7px}.chart-app .instruments{gap:4px;padding:5px}.chart-app .instruments>div{padding:9px 6px}.chart-app .instruments strong{font-size:24px}.chart-app .instruments span{font-size:7px;letter-spacing:.03em}.chart-app .instruments small{font-size:8px}.chart-app .position-instrument strong{font-size:10px!important}.chart-app .planning-panel>section{padding:17px}.chart-app .planning-panel h2{font-size:18px}.chart-app .planning-panel .helper{font-size:11px}.chart-app .chart-dropdown{width:270px}.chart-app .chart-dropdown button,.chart-app .chart-dropdown .chart-tool{min-height:72px}.chart-app .weather-timeline{padding:9px 11px}.chart-app .timeline-footer{font-size:9px}.chart-app[data-dock=left] .instruments>div,.chart-app[data-dock=right] .instruments>div{padding:8px}}
+@media(prefers-reduced-motion:reduce){.chart-app *{scroll-behavior:auto!important}}
