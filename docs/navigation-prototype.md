@@ -1,0 +1,40 @@
+# Helmlore Navigation Lab 0.1
+
+Entry point: https://helmlore.com/navigation.html
+
+A separate browser prototype. It does not modify the training site or Supabase account system.
+
+## Features
+
+- OpenStreetMap base map and OpenSeaMap sea-mark overlay, initially centred on Whitehaven.
+- Explicit GPS permission request; no location requested on page load.
+- Demonstration voyage at 7 knots, visibly marked SIMULATED.
+- Speed over ground in knots and course over ground in degrees true. Unavailable values remain blank. Position-derived speed is labelled estimated and requires movement greater than the fix accuracy.
+- GPS age and accuracy. Values older than 15 seconds are not presented as current, and recording stops on stale or inaccurate fixes.
+- Manual waypoints with editable names, draggable map markers, selection of next target, distance, bearing and estimated arrival based on current speed.
+- Separate demo and GPS routes and tracks stored only in the current browser.
+- Track recording with a 6,000-point limit. Pauses create separate segments on screen and in GPX exports.
+- Explicit route and track export, with XML escaping of names.
+
+## Map sources and dependencies
+
+Leaflet 1.9.4 is loaded from unpkg with the published Subresource Integrity hashes. Leaflet's BSD-2-Clause license is available at https://github.com/Leaflet/Leaflet/blob/v1.9.4/LICENSE.
+
+Base tiles: https://tile.openstreetmap.org/{z}/{x}/{y}.png
+Sea marks: https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png
+
+Visible OpenStreetMap and OpenSeaMap attribution is included in the map. The browser uses ordinary HTTP caching and sends its normal referrer. There is no bulk tile download or prefetch feature. See https://operations.osmfoundation.org/policies/tiles/.
+
+## Prototype limitations
+
+This is not a complete or official navigation chart. There is no verified depth/hazard coverage, safe-water route checking, tide/weather data, AIS, instrument connection, or autopilot control. The example route is simulated and not approved for navigation.
+
+Maps require an internet connection. There is no offline chart pack or background recording. iPad Safari may suspend the page when the screen is locked or another app is used. Leave the page visible for testing and check the position age.
+
+Wi-Fi-only iPads do not provide built-in GNSS positioning. Browser geolocation can report a coarse position from other sources; location accuracy is shown rather than claiming a satellite fix.
+
+Local storage key: `helmlore-navigation-lab-v1`. Recording never resumes automatically after reload or browser back/forward restoration. GPS coordinates are not uploaded to Helmlore accounts. Map providers receive ordinary viewport tile requests.
+
+## Validation
+
+`node tests/navigation.cjs` covers nautical-mile conversion, true bearings, dateline crossings, coordinate rounding, missing and inaccurate GPS values, motion estimation, escaped GPX names, and preservation of separate recording segments.
