@@ -54,3 +54,13 @@ Choose the start and destination marina, or pick map points. Copy current positi
 Confirming a plan replaces the GPS route, preserving demo routes and both sets of tracks. Navigation opens with GPS off and the first point after the start selected as the next target. Select Use my GPS when ready; waypoint selection remains manual through Set next. Export GPX remains available. The UK marina library still includes inland locations pending a later sea-access review.
 
 Validation: numerical and validation tests for ETA scaling, dateline distances, locked point movement, waypoint insertion and unchecked confirmation; existing navigation, AIS and marina tests. Browser checks cover vessel saving, marina search, touch insertion, marker dragging, locking and route handoff. Actual iPad GPS hardware and licensed-depth alerting are not validated in this prototype.
+
+## Menu and trip logbook (0.8)
+
+Navigation and Planning now use a top-left Menu dropdown. Navigation menus include the trip logbook alongside existing weather, AIS, marina, vessel, route and control panels. Existing route/track storage remains intact; older tracks are accessible through Legacy tracks.
+
+The new logbook records named GPS or explicitly simulated trips. Choose 5, 15, 30 (default) or 60 minute log intervals aligned to clock boundaries. Entries retain scheduled time separately from actual GPS-fix time and include coordinates, accuracy, SOG, true COG, travelled distance, remaining route distance, next target and ETA at GPS speed. Marina-only targets are explicitly direct distances. Manual entries support notes.
+
+The travelled track is sampled separately. Unavailable, old or inaccurate fixes create gaps; distances do not bridge those gaps and are marked incomplete. Recording ends when the source changes, the page is left or navigation becomes hidden. Interrupted sessions are retained without resuming recording. Trip route/vessel snapshots are kept with the trip. Storage is browser/device-local, maximum 50 trips and 8,000 track positions / 2,000 scheduled entries per trip; limits stop recording without silently deleting earlier trips. Browser storage failure is surfaced. CSV uses UTC timestamps; GPX and complete JSON exports are available.
+
+Tests cover clock alignment, actual fix timestamps, missing-boundary entries, waypoint-based remaining distance, marina direct-distance labelling, GPS gap segmentation, source isolation and CSV escaping. The original navigation, planning, AIS and marina suites also pass. No offline chart pack, weather-download package or anchor watch is introduced by this section.
