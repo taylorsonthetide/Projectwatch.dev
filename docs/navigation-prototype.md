@@ -44,3 +44,13 @@ Weather & sea panel explicitly loads a 3×3 sample of the visible map bounds via
 
 ## Chart shell (0.3)
 The map occupies the full dynamic viewport. Instruments dock to top/bottom/left/right, with a separate persisted layout preference. Move bar cycles through edges; Controls provides explicit selection. Weather, waypoints, track and controls open one overlay menu at a time, with Close/Escape focus restoration. Menus scroll independently. Chart notices and map attributions remain visible. Full screen uses the browser API when supported, with Home Screen web-app instructions as a fallback; manifest and Apple standalone metadata are provided. No offline service worker or native background GPS was added.
+
+## Vessel data and manual passage planning (0.7)
+
+Open Planning from the chart toolbar. Save a vessel name, draught in metres, cruising speed in knots, optional maximum speed and minimum-water-depth warning threshold. These settings and drafts are device/browser local, not synced through the training account. Depth alerts remain explicitly unavailable until reliable licensed chart depths and compatible tide heights are connected.
+
+Choose the start and destination marina, or pick map points. Copy current position requests one fix only and rejects fixes older than 15 seconds or with accuracy worse than 100 m; no continuous GPS runs on Planning. Tap a route leg to insert a waypoint, drag it and lock it. Leg distance, true bearing and total passage time use the saved cruising speed without tides, weather or stops. Plans are not checked for safe water.
+
+Confirming a plan replaces the GPS route, preserving demo routes and both sets of tracks. Navigation opens with GPS off and the first point after the start selected as the next target. Select Use my GPS when ready; waypoint selection remains manual through Set next. Export GPX remains available. The UK marina library still includes inland locations pending a later sea-access review.
+
+Validation: numerical and validation tests for ETA scaling, dateline distances, locked point movement, waypoint insertion and unchecked confirmation; existing navigation, AIS and marina tests. Browser checks cover vessel saving, marina search, touch insertion, marker dragging, locking and route handoff. Actual iPad GPS hardware and licensed-depth alerting are not validated in this prototype.
