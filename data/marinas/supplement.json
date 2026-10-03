@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "marinas": [
+    {
+      "id": "helmlore-fleetwood-beacon-marina",
+      "name": "Fleetwood Beacon Marina",
+      "named": true,
+      "aliases": ["Fleetwood Marina", "Fleetwood Haven Marina"],
+      "lat": 53.9152642,
+      "lon": -3.0128653,
+      "coordinateBasis": "published-marina-location",
+      "entranceVerified": false,
+      "locality": "Fleetwood",
+      "postcode": "FY7 6PP",
+      "address": "Port & Marina Office, Lancashire",
+      "operator": "Associated British Ports",
+      "website": "https://www.beaconmarinas.co.uk/our-marinas/fleetwood-beacon-marina/",
+      "access": "",
+      "sourceUrl": "https://www.transeuropemarinas.com/marinas/fleetwood-beacon-marina/",
+      "sourceIds": ["helmlore-fleetwood-beacon-marina"],
+      "coordinateSourceUrl": "https://embed.savvy-navvy.com/index.html?depth-unit=m&lat=53.9152642&lng=-3.0128653&marker=true&zoom=12",
+      "nameSourceUrl": "https://www.abports.co.uk/services/marinas/",
+      "reviewedAt": "2026-10-03",
+      "reviewNote": "Published marina reference point from TransEurope Marinas' map/directions; not an entrance waypoint. Absent from the UK leisure=marina OSM snapshot."
+    }
+  ]
+}

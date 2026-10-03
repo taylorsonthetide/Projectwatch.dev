@@ -55,6 +55,13 @@ for record in sorted(records, key=lambda m: (not m['named'], m['name'].casefold(
     else:
         unique.append(record)
 
+osm_count = len(unique)
+supplement_path = pathlib.Path(__file__).resolve().parents[1] / 'data/marinas/supplement.json'
+supplement = json.loads(supplement_path.read_text()).get('marinas', []) if supplement_path.exists() else []
+if set(m['id'] for m in supplement) & set(m['id'] for m in unique):
+    raise SystemExit('Supplement IDs conflict with source records')
+unique.extend(supplement)
+unique.sort(key=lambda m: m['name'].casefold())
 output = pathlib.Path(sys.argv[2])
 output.parent.mkdir(parents=True, exist_ok=True)
 library = dict(schemaVersion=1, generatedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(), sourceTimestamp=raw.get('osm3s', {}).get('timestamp_osm_base'),
@@ -63,6 +70,6 @@ library = dict(schemaVersion=1, generatedAt=datetime.datetime.now(datetime.timez
                coordinateWarning='Node positions or mapped area centres, not verified marina entrances or safe approach waypoints.',
                licence='ODbL-1.0', licenceUrl='https://opendatacommons.org/licenses/odbl/1-0/', attribution='© OpenStreetMap contributors',
                sourceQuery='[out:json][timeout:45];area["ISO3166-1"="GB"][admin_level=2]->.uk;nwr[leisure=marina](area.uk);out center tags;',
-               rawRecordCount=len(records), deduplicatedCount=len(records)-len(unique), namedCount=sum(m['named'] for m in unique), marinas=unique)
+               rawRecordCount=len(records), deduplicatedCount=len(records)-osm_count, supplementalCount=len(supplement), namedCount=sum(m['named'] for m in unique), marinas=unique)
 output.write_text(json.dumps(library, ensure_ascii=False, separators=(',', ':')) + '\n')
 print(f'{len(unique)} locations; {library["namedCount"]} named; {library["deduplicatedCount"]} near-identical duplicates consolidated')

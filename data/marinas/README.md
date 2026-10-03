@@ -17,3 +17,7 @@ Database: © OpenStreetMap contributors, licensed under Open Data Commons Open D
 Download a UK Overpass snapshot once using the query recorded in the JSON and an identifying User-Agent. Respect the endpoint's usage policy and keep the existing file if the response reports an error. The website searches the committed snapshot locally; it makes no per-user Overpass requests and sends no GPS position to a marina lookup service.
 
 Run `python3 tools/build-marina-library.py SNAPSHOT.json data/marinas/uk-marinas.json`, then `node --test tests/marinas.cjs`. Review the coverage counts and notable sites before publishing. Keep source links and coordinate-verification status when curating new records. Verified entrance coordinates require separate source-backed review.
+
+## Reviewed additions
+
+The library now totals 1,006 locations (785 named), including Fleetwood Beacon Marina, added in `supplement.json` so rebuilds retain it. Fleetwood Marina and Fleetwood Haven Marina are search aliases. The reference coordinates come from the TransEurope Marinas listing’s embedded map and directions; its identity is corroborated by ABP. This is a published marina location, not a verified entrance. The supplementary record preserves source links and review date.
