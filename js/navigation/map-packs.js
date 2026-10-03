@@ -1,0 +1,2 @@
+/* Protomaps v4.15.2 extract, 2026-10-03. OSM attribution required. */
+window.HelmloreMapPacks=[{"id":"whitehaven","name":"Whitehaven & surrounding coast","description":"More detailed local basemap for testing; no chart depths or hazards","bounds":[-3.75,54.4,-3.35,54.75],"maxZoom":14,"bytes":3457012,"sha256":"9a48396384e4e21628254e4785814981a7c07116ce392f77e5b25a85ad4a2c1f","url":"data/navigation/whitehaven.pmtiles"}];
