@@ -38,3 +38,6 @@ Local storage key: `helmlore-navigation-lab-v1`. Recording never resumes automat
 ## Validation
 
 `node tests/navigation.cjs` covers nautical-mile conversion, true bearings, dateline crossings, coordinate rounding, missing and inaccurate GPS values, motion estimation, escaped GPX names, and preservation of separate recording segments.
+
+## Forecast layers (0.2)
+Weather & sea panel explicitly loads a 3×3 sample of the visible map bounds via Open-Meteo, in knots. No GPS callback sends coordinates to the weather service. Wind arrows point downwind (reported FROM +180°); current arrows point TOWARDS the reported bearing. Returned model-cell coordinates locate the samples; no interpolation implies more resolution. Hourly valid times use UTC Unix timestamps and display local timezone. 24-hour forecast slider, wave/gust summary and MSL sea-level curve are available. Marine model is roughly 8 km and unsuitable for coastal navigation; MSL values must not be used as harbour/chart-datum tide heights. Network failures clear values; retrieval older than one hour expires rather than persisting indefinitely. Public free API is for this noncommercial testing phase; review service terms before monetisation. Official harbour tide tables remain pending a suitable licensed provider.
