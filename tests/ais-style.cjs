@@ -1,0 +1,2 @@
+const test=require('node:test'),assert=require('node:assert/strict'),{vesselStyle}=require('../js/navigation/ais-style.js');
+test('broadcast AIS codes select the expected colour category',()=>{for(const [code,key] of [[70,'cargo'],[79,'cargo'],[80,'tanker'],[89,'tanker'],[60,'passenger'],[30,'fishing'],[52,'service'],[36,'sailing'],[37,'pleasure'],[40,'other'],[0,'unknown'],[undefined,'unknown'],['37','unknown']])assert.equal(vesselStyle(code).key,key);});

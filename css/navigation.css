@@ -9,3 +9,26 @@
 
 .ais-target{background:none;border:0}.ais-symbol{font-size:24px;line-height:24px;color:#146d5a;text-shadow:0 1px white,1px 0 white,-1px 0 white;transform-origin:center}#aisTargets{display:grid;gap:6px}#aisTargets button{text-align:left;font-size:12px}
 @media(max-height:650px){.chart-buttons{gap:4px}.chart-buttons button{min-height:44px;padding:3px;font-size:16px}.chart-buttons span{font-size:9px}}
+
+/* Individual instrument frames remain visible at every docking position. */
+.chart-app .instruments{border:0;gap:3px;padding:3px;overflow:visible}
+.chart-app .instruments>div,.chart-app .instruments>div:last-child,.chart-app[data-dock=left] .instruments>div,.chart-app[data-dock=right] .instruments>div{border:1px solid #ffffffd9;border-radius:5px;min-height:0}
+.ais-legend{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0;font-size:11px;line-height:1.4}
+.ais-legend span{display:flex;align-items:center;gap:7px}.ais-legend i{width:11px;height:11px;border:1px solid #fff8;border-radius:50%;flex-shrink:0}
+.chart-app[data-theme=night]{--bg:#030b11;--panel:#071620;--line:#24313b;--text:#a6b2b9;--muted:#7d8d98;--cyan:#65939d;--amber:#b99e70}
+.chart-app[data-theme=night] #map{background:#061017}
+.chart-app[data-theme=night] .leaflet-tile-pane{filter:brightness(.27) saturate(.55)}
+.chart-app[data-theme=night] .nav-header,.chart-app[data-theme=night] .menu-title{background:#030b11f7}
+.chart-app[data-theme=night] .instruments,.chart-app[data-theme=night] .planning-panel{background:#071620f5}
+.chart-app[data-theme=night] .instruments>div{border-color:#ffffff40}
+.chart-app[data-theme=night] button,.chart-app[data-theme=night] select{background:#10212b;color:var(--text);border-color:#34424b}
+.chart-app[data-theme=night] .wordmark{color:var(--text)}
+.chart-app[data-theme=night] .chart-notice,.chart-app[data-theme=night] .prototype-note{background:#211c15;color:#ae9e80}
+.chart-app[data-theme=night] .ais-symbol{filter:brightness(.78);text-shadow:0 1px #87949b,1px 0 #87949b,-1px 0 #87949b}
+.chart-app[data-theme=night] .forecast-arrow{filter:brightness(.7)}
+.chart-app[data-theme=night] .leaflet-popup-content-wrapper,.chart-app[data-theme=night] .leaflet-popup-tip{background:#10212b}
+.chart-app[data-theme=night] .leaflet-popup-content,.chart-app[data-theme=night] .leaflet-container a.leaflet-popup-close-button{color:var(--text)}
+.chart-app[data-theme=night] .leaflet-control-zoom a,.chart-app[data-theme=night] .leaflet-control-attribution,.chart-app[data-theme=night] .leaflet-control-scale-line{background:#10212bee!important;color:#92a1ab!important}
+.chart-app[data-theme=night] .leaflet-control-attribution a{color:#7c9aa8!important}
+@media(max-width:700px){.chart-app .header-actions{gap:4px}.chart-app .header-actions button{padding:5px 7px}}
+
