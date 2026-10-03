@@ -1,4 +1,4 @@
-/* Original Project Watch reference and training data. */
+/* Original Helmlore reference and training data. */
 window.PW_ORIGINAL_LIBRARIES=window.PW_ORIGINAL_LIBRARIES||{};
 window.PW_ORIGINAL_LIBRARIES.COLREG_IMAGE_LIBRARY={
   "bridge": {
@@ -127,7 +127,7 @@ window.PW_ORIGINAL_LIBRARIES.COLREG_IMAGE_LIBRARY={
     "creator": "Wikideas1",
     "license": "CC0 1.0",
     "source": "https://commons.wikimedia.org/wiki/File:Red_and_green_light_navigation_buoys.webp",
-    "use": "Project Watch home hub — Buoyage & Marks"
+    "use": "Helmlore home hub — Buoyage & Marks"
   }
 };
 window.PW_ORIGINAL_LIBRARIES.COLREG_RULE_PHOTOS={
@@ -302,7 +302,7 @@ window.PW_ORIGINAL_LIBRARIES.ANNEX_DATA={
   title:'Annex I • Positioning & Technical Details of Lights and Shapes',
   summary:'Sets the technical detail behind the navigation lights and day shapes required by Part C — including vertical and horizontal positioning and spacing, screens for sidelights, positioning of shapes, colour specification, intensity and visibility sectors.',
   training:'Use Annex I to understand why a correct light pattern must also be placed correctly on the vessel. Recognition depends on both colour/sequence and physical position.',
-  project:'Project Watch already teaches the practical result in Lights & Shapes. This Annex card links the learner from the legal/technical framework directly into the visual bridge trainer.',
+  project:'Helmlore already teaches the practical result in Lights & Shapes. This Annex card links the learner from the legal/technical framework directly into the visual bridge trainer.',
   source:'COLREG Annex I',
   actions:[['OPEN LIGHTS & SHAPES','lights']]
  },
@@ -310,7 +310,7 @@ window.PW_ORIGINAL_LIBRARIES.ANNEX_DATA={
   title:'Annex II • Additional Signals for Fishing Vessels Fishing in Close Proximity',
   summary:'Provides additional signals for fishing vessels operating in close proximity, including prescribed signals connected with trawling and purse-seine fishing operations.',
   training:'These are additional working signals. They do not replace the ordinary Rule 26 lights and shapes for a vessel engaged in fishing.',
-  project:'Project Watch can use Annex II as an advanced fishing-vessel recognition lesson alongside the Rule 26 Lights & Shapes material.',
+  project:'Helmlore can use Annex II as an advanced fishing-vessel recognition lesson alongside the Rule 26 Lights & Shapes material.',
   source:'COLREG Annex II',
   actions:[['OPEN FISHING LIGHTS','lights']]
  },
@@ -326,13 +326,13 @@ window.PW_ORIGINAL_LIBRARIES.ANNEX_DATA={
   title:'Annex IV • Distress Signals',
   summary:'Lists the internationally recognised signals indicating distress and need of assistance, including explosive signals, continuous sounding, red-star rockets, SOS, MAYDAY, visual signals, DSC distress alerts, satellite distress alerts, EPIRB signals and other approved radiocommunication distress signals.',
   training:'Recognise that these are distress signals, not routine manoeuvring or collision-avoidance signals. Their use for another purpose, or use of confusingly similar signals, is prohibited.',
-  project:'Project Watch already contains the full Distress section, Mayday procedure, Pan-Pan distinction, beacon guidance and spoken training examples. Annex IV links directly to that practical emergency module.',
+  project:'Helmlore already contains the full Distress section, Mayday procedure, Pan-Pan distinction, beacon guidance and spoken training examples. Annex IV links directly to that practical emergency module.',
   source:'COLREG Annex IV',
   actions:[['OPEN DISTRESS TRAINING','distress']]
  }
 };
 window.PW_ORIGINAL_LIBRARIES.COLREGS_BEGINNER=[
- {title:'What are the COLREGs?',sub:'The rulebook and what it is for',intro:'Start with the purpose: preventing collisions at sea.',visual:'intro',facts:[['International rules','COLREGs are the International Regulations for Preventing Collisions at Sea.'],['Not just right of way','They cover lookout, speed, risk assessment, avoiding action, conduct between vessels, lights, shapes and sound signals.'],['Use the whole situation','A rule number is never a substitute for lookout, judgement and the precautions required by good seamanship.'],['Project Watch','The Rules 1–41 library is a training reference. Official Convention text remains the authority.']]},
+ {title:'What are the COLREGs?',sub:'The rulebook and what it is for',intro:'Start with the purpose: preventing collisions at sea.',visual:'intro',facts:[['International rules','COLREGs are the International Regulations for Preventing Collisions at Sea.'],['Not just right of way','They cover lookout, speed, risk assessment, avoiding action, conduct between vessels, lights, shapes and sound signals.'],['Use the whole situation','A rule number is never a substitute for lookout, judgement and the precautions required by good seamanship.'],['Helmlore','The Rules 1–41 library is a training reference. Official Convention text remains the authority.']]},
  {title:'How the 41 Rules are organised',sub:'Parts A to F',intro:'You do not need to treat the COLREGs as one block of 41 unrelated rules.',visual:'parts',facts:[['Part A • Rules 1–3','General: application, responsibility and definitions.'],['Part B • Rules 4–19','Steering and Sailing Rules: how vessels assess and avoid collision.'],['Part C • Rules 20–31','Lights and Shapes: how vessels show identity and status.'],['Parts D–F • Rules 32–41','Sound/light signals, exemptions and convention compliance.']]},
  {title:'The four rules beneath every encounter',sub:'Lookout → speed → risk → action',intro:'Before worrying about crossing, head-on or overtaking, build this habit.',visual:'core',facts:[['Rule 5 • Look-out','Maintain a proper lookout by sight, hearing and all available appropriate means.'],['Rule 6 • Safe speed','Travel at a speed that allows proper and effective action and stopping within an appropriate distance.'],['Rule 7 • Risk of collision','Use all available means. If there is any doubt, risk shall be deemed to exist.'],['Rule 8 • Avoiding action','Action should be positive, in ample time and with due regard to good seamanship; check it works until finally past and clear.']]},
  {title:'First identify the situation',sub:'Do not jump straight to a give-way rule',intro:'Work out which family of rules applies before deciding what either vessel should do.',visual:'flow',facts:[['Any visibility • Rules 4–10','The baseline Steering and Sailing Rules apply in any condition of visibility.'],['In sight • Rules 11–18','When vessels are in sight of one another, identify sailing, overtaking, head-on, crossing and vessel responsibilities as applicable.'],['Restricted visibility • Rule 19','When vessels are not in sight in or near restricted visibility, Rule 19 governs the encounter rather than pretending Rules 11–18 apply.'],['Rule 13 matters early','Check overtaking before treating geometry as an ordinary crossing encounter.']]},

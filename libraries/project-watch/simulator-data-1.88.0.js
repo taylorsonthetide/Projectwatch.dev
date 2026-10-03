@@ -1,4 +1,4 @@
-/* Project Watch content library; values preserved from the approved build. */
+/* Helmlore content library; values preserved from the approved build. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.POWER_SCENARIO_ORDER = ['cross_stbd','cross_port','rule17_fail','head_on','overtake','overtaken','cross_stbd_offset','head_on_offset','overtake_port','power_vs_sail'];
 window.PW_ORIGINAL_LIBRARIES.SAIL_SCENARIO_ORDER = ['sail_vs_power','sail_port_tack','sail_starboard_tack','sail_windward','sail_leeward','sail_overtaking'];

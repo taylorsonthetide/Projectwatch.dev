@@ -1,4 +1,4 @@
-/* Project Watch content library; copied without editing questions or answer indexes. */
+/* Helmlore content library; copied without editing questions or answer indexes. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.SCENARIOS = {
   cross_stbd:{name:'Crossing — target starboard',mode:'power',ownH:0,ownS:7,tgtH:270,tgtS:10,kind:'cross_giveway',offset:0,ownType:'power',tgtType:'power'},

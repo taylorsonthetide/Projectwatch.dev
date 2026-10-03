@@ -1,4 +1,4 @@
-/* Original Project Watch recreational tides teaching. Diagrams are separate assets. */
+/* Original Helmlore recreational tides teaching. Diagrams are separate assets. */
 window.PW_TIDES_LIBRARY = Object.freeze({
   "version": "1.93.0",
   "lessons": [

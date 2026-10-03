@@ -1,4 +1,4 @@
-/* Original Project Watch reference and training data. */
+/* Original Helmlore reference and training data. */
 window.PW_ORIGINAL_LIBRARIES=window.PW_ORIGINAL_LIBRARIES||{};
 window.PW_ORIGINAL_LIBRARIES.BV_ASPECTS=[['ahead','BOW'],['stbd','STARBOARD'],['astern','STERN'],['port','PORT']];
 window.PW_ORIGINAL_LIBRARIES.BV=[

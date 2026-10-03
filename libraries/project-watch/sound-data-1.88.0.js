@@ -1,4 +1,4 @@
-/* Project Watch content library; values preserved from the approved build. */
+/* Helmlore content library; values preserved from the approved build. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.MAN_SIGNALS = [
 {id:'stbd',title:'I am altering course to starboard',pattern:'•',meaning:'One short blast',rule:'34(a)',seq:[['short']]},

@@ -1,7 +1,7 @@
 /* One public build identity. Older lesson scripts retain their historical version metadata. */
 (function () {
   'use strict';
-  const version = '1.99.1';
+  const version = '1.99.2';
   const label = 'BUILD ' + version;
   const title = 'Helmlore ' + version;
   window.PW_BUILD_IDENTITY = Object.freeze({version, label});

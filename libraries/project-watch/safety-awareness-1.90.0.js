@@ -1,4 +1,4 @@
-/* Original Project Watch lessons. External authority links are references, not reused course material. */
+/* Original Helmlore lessons. External authority links are references, not reused course material. */
 window.PW_SAFETY_AWARENESS = Object.freeze({
   lessons:[
     {id:'prepare',title:'Before leaving the berth',image:'assets/safety/departure.svg',alt:'Five connected pre-departure decisions: conditions, vessel, people, equipment and fallback.',scene:'assets/safety/scenes/departure.webp',sceneAlt:'Two recreational boaters wearing lifejackets review a chart and conditions before departure.',sceneCaption:'Before leaving: agree the route, limits and fallback while the boat is safely alongside.',lead:'A safe trip starts with a decision to go, delay, change the plan or stay alongside.',points:[

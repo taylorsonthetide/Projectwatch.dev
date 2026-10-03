@@ -1,6 +1,6 @@
 # Annex 7 source plates
 
-These PNG crops reproduce individual sign artwork from *CEVNI, European Code for Inland Waterways*, sixth revised edition (ECE/TRANS/SC.3/115/Rev.6), Annex 7. Source: [UNECE publication and corrigenda](https://unece.org/transport/documents/2022/02/standards/ecetranssc3115rev6). The source PDF used for comparison was the mirrored 199-page English Rev.6 book; this directory contains only the individual plates needed by Project Watch. A.10 is not included here; Corrigendum 2 replaces its figure.
+These PNG crops reproduce individual sign artwork from *CEVNI, European Code for Inland Waterways*, sixth revised edition (ECE/TRANS/SC.3/115/Rev.6), Annex 7. Source: [UNECE publication and corrigenda](https://unece.org/transport/documents/2022/02/standards/ecetranssc3115rev6). The source PDF used for comparison was the mirrored 199-page English Rev.6 book; this directory contains only the individual plates needed by Helmlore. A.10 is not included here; Corrigendum 2 replaces its figure.
 
 | Files | Printed page | Meaning |
 | --- | ---: | --- |

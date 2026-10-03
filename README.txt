@@ -1,4 +1,4 @@
-Project Watch 1.60.0 — Controlled Asset Separation
+Helmlore 1.60.0 — Controlled Asset Separation
 
 Baseline: 1.59.4 clean audited checkpoint.
 

@@ -1,6 +1,6 @@
 # Understanding Compass — source and artwork record
 
-Eight original recreational lessons, a fictional conversion workshop and 12 original self-check questions. This is independent training, not an RYA or MCA award. The eight SVGs in `assets/compass/` were created for Project Watch as schematic educational artwork, with no third-party image dependency. No real local variation or deviation is inferred from them.
+Eight original recreational lessons, a fictional conversion workshop and 12 original self-check questions. This is independent training, not an RYA or MCA award. The eight SVGs in `assets/compass/` were created for Helmlore as schematic educational artwork, with no third-party image dependency. No real local variation or deviation is inferred from them.
 
 ## Primary reference check
 

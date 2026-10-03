@@ -39,7 +39,7 @@ The four-cylinder photograph is an installed engine with hydrostatic transmissio
 - Independent image files: `assets/diesel/`.
 - Reproducible original teaching library / vector builder: `tools/build-diesel.py`.
 - Separate progress key: `pw-diesel-reviewed-v1`; other course progress is unaffected.
-- New ninth training pathway. No changes to approved course files or original Project Watch repository.
+- New ninth training pathway. No changes to approved course files or original Helmlore repository.
 
 ## Validation
 

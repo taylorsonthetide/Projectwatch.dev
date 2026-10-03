@@ -92,7 +92,7 @@ window.cevniOpenLesson=function(i,step=0){
  }
  return result;
 };
-function identity(){window.PROJECT_WATCH_BUILD=BUILD;const v=document.getElementById('pwVisibleBuild');if(v)v.textContent='BUILD '+BUILD;document.title='Project Watch '+BUILD}
+function identity(){window.PROJECT_WATCH_BUILD=BUILD;const v=document.getElementById('pwVisibleBuild');if(v)v.textContent='BUILD '+BUILD;document.title='Helmlore '+BUILD}
 function start(){const a=document.getElementById('cevniLessonArea');if(a)new MutationObserver(()=>setTimeout(identity,0)).observe(a,{childList:true,subtree:true});identity()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 window.PW1680_M04={build:BUILD,source:'CEVNI Rev.6 Chapter 3 / Annex 3',phase:'teaching-locked',questionBankIntegrated:false,visualsAssessmentReady:false,module3Changed:false};

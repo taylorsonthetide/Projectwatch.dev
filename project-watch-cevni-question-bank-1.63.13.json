@@ -3862,7 +3862,7 @@
     ],
     "correctIndex": 0,
     "explanation": "Module 2 separates physical identity and draught markings from operational visual signals, which are taught in Module 4.",
-    "regulatoryBasis": "Project Watch curriculum routing"
+    "regulatoryBasis": "Helmlore curriculum routing"
   },
   {
     "id": "PW-CEVNI-M03-CHECK-001",
@@ -4967,7 +4967,7 @@
     "module": 4,
     "stage": "REVIEW",
     "order": 95,
-    "question": "Why must Project Watch keep a local-rules layer with these visuals?",
+    "question": "Why must Helmlore keep a local-rules layer with these visuals?",
     "choices": [
       "Chapter 9 permits specified regional/national variations",
       "Because CEVNI has no visual rules",

@@ -19,16 +19,16 @@ Seafish fishing training and MCA fishing-specific requirements informed early sc
 
 ## Image licence register
 
-All paths are stored in the GitHub repository and referenced by URL from the page. The SVG diagrams are original Project Watch artwork.
+All paths are stored in the GitHub repository and referenced by URL from the page. The SVG diagrams are original Helmlore artwork.
 
 | GitHub path | Creator / licence | Original file |
 | --- | --- | --- |
-| `assets/safety/departure.svg` | Project Watch original | — |
-| `assets/safety/risk-cycle.svg` | Project Watch original | — |
-| `assets/safety/deck-zones.svg` | Project Watch original | — |
-| `assets/safety/kit-check.svg` | Project Watch original | — |
-| `assets/safety/decision.svg` | Project Watch original | — |
-| `assets/safety/emergency.svg` | Project Watch original | — |
+| `assets/safety/departure.svg` | Helmlore original | — |
+| `assets/safety/risk-cycle.svg` | Helmlore original | — |
+| `assets/safety/deck-zones.svg` | Helmlore original | — |
+| `assets/safety/kit-check.svg` | Helmlore original | — |
+| `assets/safety/decision.svg` | Helmlore original | — |
+| `assets/safety/emergency.svg` | Helmlore original | — |
 | `assets/safety/photos/fog.jpg` | Snyder261, CC0 | [Margaret Todd in the fog](https://commons.wikimedia.org/wiki/File:Margaret_Todd_in_the_fog.jpg) |
 | `assets/safety/photos/lifejacket-check.jpg` | US Coast Guard / Petty Officer Crystalynn A. Kneen, US federal public domain | [Lifejacket inspection](https://commons.wikimedia.org/wiki/File:Boater_Edward_Bryant_hands_Coast_Guard_Auxiliary_member_Jim_Kight_a_life_jacket.jpg) |
 | `assets/safety/photos/fire-extinguisher.jpg` | ProjectManhattan, CC0 | [ABC fire extinguisher](https://commons.wikimedia.org/wiki/File:Abc_fire_extinguisher.jpg) |
@@ -49,6 +49,6 @@ The six numbered flow diagrams remain in the repository as historical source ass
 | `assets/safety/scenes/weather-review.webp` | People and changing conditions | Crew discuss weather and chart safely in harbour. |
 | `assets/safety/scenes/mob-drill.webp` | Act early in an emergency | Training dummy man-overboard drill with helm and lookout roles. |
 
-Generated using the built-in image generation tool from the Project Watch lesson-specific prompt set on 26 September 2026. Source PNG masters remain in the generation workspace; repository assets are optimized WebP versions. No third-party photo licence applies to these generated scenes. Image details are illustrative and are never used to determine a scored answer.
+Generated using the built-in image generation tool from the Helmlore lesson-specific prompt set on 26 September 2026. Source PNG masters remain in the generation workspace; repository assets are optimized WebP versions. No third-party photo licence applies to these generated scenes. Image details are illustrative and are never used to determine a scored answer.
 
 Build 1.92.1 corrects the scene mapping: the initially named `conditions.webp` contained the man-overboard drill and `emergency.webp` contained the weather discussion. The new descriptive filenames above are the learner-facing assets; `deck-v2.webp` replaces the marina side-deck photograph. The earlier assets remain as historical files but are not referenced by lessons.

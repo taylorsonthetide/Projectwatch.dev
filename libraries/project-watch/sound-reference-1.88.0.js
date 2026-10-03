@@ -1,4 +1,4 @@
-/* Original Project Watch reference and training data. */
+/* Original Helmlore reference and training data. */
 window.PW_ORIGINAL_LIBRARIES=window.PW_ORIGINAL_LIBRARIES||{};
 window.PW_ORIGINAL_LIBRARIES.HORN_PROFILES={
   large:{f:110,label:'Large ship • 110 Hz training fundamental'},

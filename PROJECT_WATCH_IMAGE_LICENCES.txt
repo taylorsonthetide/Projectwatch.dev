@@ -1,4 +1,4 @@
-PROJECT WATCH — LICENSED IMAGE LIBRARY
+HELMLORE — LICENSED IMAGE LIBRARY
 
 Policy: Only CC0 or unequivocal public-domain assets are used in the COLREG Rules 1–41 photographic map.
 
@@ -96,4 +96,4 @@ Use: Rule 31 seaplanes
 Creator: Wikideas1
 Licence: CC0 1.0
 Source: https://commons.wikimedia.org/wiki/File:Red_and_green_light_navigation_buoys.webp
-Use: Project Watch home hub — Buoyage & Marks
+Use: Helmlore home hub — Buoyage & Marks

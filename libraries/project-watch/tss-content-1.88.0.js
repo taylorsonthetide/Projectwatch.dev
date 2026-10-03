@@ -1,4 +1,4 @@
-/* Project Watch content library; values preserved from the approved build. */
+/* Helmlore content library; values preserved from the approved build. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.TSS_RULES = [
  ['Traffic lanes','Proceed in the appropriate lane in the general direction of traffic flow and keep clear of the separation line or zone so far as practicable.','10(b)'],

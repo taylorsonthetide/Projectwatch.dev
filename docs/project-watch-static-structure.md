@@ -1,4 +1,4 @@
-# Project Watch content structure
+# Helmlore content structure
 
 The current application is a static website. A standard HTTPS web server can serve
 `index.html`, `css/`, `js/`, `libraries/`, and `assets/` together without a build step.
@@ -9,7 +9,7 @@ Keep these directories at the same relative paths when moving hosting providers.
 - `index.html`: page structure and existing controls.
 - `css/project-watch-core-1.88.0.css` and `js/project-watch-core-1.88.0.js`:
   the original presentation and simulator runtime, loaded in their original order.
-- `libraries/project-watch/`: original Project Watch question banks, lessons,
+- `libraries/project-watch/`: original Helmlore question banks, lessons,
   scenario definitions, rule reference data and visual path maps.
 - `assets/project-watch/lights-master/`: standalone approved Lights & Shapes
   reference and recognition visuals formerly carried as base64 HTML in the page.
@@ -17,7 +17,7 @@ Keep these directories at the same relative paths when moving hosting providers.
   for 54 existing image assets and 17 standalone Lights & Shapes visual pages.
 - `libraries/cevni/` and `assets/cevni/`: separate inland course content and visuals.
 - `css/` and `js/`: presentation and behaviour. Data files are loaded as classic
-  scripts before the existing original Project Watch runtime so its bindings
+  scripts before the existing original Helmlore runtime so its bindings
   and progression rules remain unchanged.
 
 The original course still saves progress and mock state in the learner's browser

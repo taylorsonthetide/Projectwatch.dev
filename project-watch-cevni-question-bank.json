@@ -25,7 +25,7 @@
     "module": 1,
     "stage": "APPLY",
     "order": 2,
-    "question": "You approach an unfamiliar European inland waterway. What should be established before relying on Project Watch teaching?",
+    "question": "You approach an unfamiliar European inland waterway. What should be established before relying on Helmlore teaching?",
     "choices": [
       "The applicable national/local navigation rules and competent-authority information",
       "Only the COLREG steering rules",
@@ -185,7 +185,7 @@
     "module": 2,
     "stage": "ASSESSMENT",
     "order": 6,
-    "question": "Where will Project Watch teach the detailed navigation light and day-signal patterns?",
+    "question": "Where will Helmlore teach the detailed navigation light and day-signal patterns?",
     "choices": [
       "Module 4 — Lights & Visual Signals",
       "Module 2 only",
@@ -1065,7 +1065,7 @@
     "module": 4,
     "stage": "ASSESSMENT",
     "order": 17,
-    "question": "Why must Project Watch keep a local-rules layer with these visuals?",
+    "question": "Why must Helmlore keep a local-rules layer with these visuals?",
     "choices": [
       "Chapter 9 permits specified regional/national variations",
       "Because CEVNI has no visual rules",

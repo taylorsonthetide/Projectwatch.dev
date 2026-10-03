@@ -1,4 +1,4 @@
-/* Project Watch content library; copied without editing questions or answer indexes. */
+/* Helmlore content library; copied without editing questions or answer indexes. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.STAGE5_FINAL = [
  ['If there is doubt whether risk of collision exists, what should you assume?',['There is no risk until CPA is below 0.5 NM','Risk of collision exists','Only the faster vessel has risk','Wait for a sound signal'],1,'Rule 7 requires doubt to be resolved on the safe side: risk is deemed to exist.'],

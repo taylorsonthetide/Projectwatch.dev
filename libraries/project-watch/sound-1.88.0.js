@@ -1,4 +1,4 @@
-/* Project Watch content library; copied without editing questions or answer indexes. */
+/* Helmlore content library; copied without editing questions or answer indexes. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.SIG_FINAL_QUIZ = [
  ['Listen to the signal. A power-driven vessel is in sight and underway. What manoeuvre is she indicating?',['Altering course to starboard','Altering course to port','Operating astern propulsion'],0,'Rule 34(a): one short blast indicates an alteration of course to starboard.','stbd'],

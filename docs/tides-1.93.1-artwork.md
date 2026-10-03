@@ -1,6 +1,6 @@
-# Project Watch tidal artwork — build 1.93.1
+# Helmlore tidal artwork — build 1.93.1
 
-Eight original AI-generated Project Watch teaching scenes are stored in `assets/tides/scenes/`. They are fictional illustrations, not chart reproductions or live predictions. Each lesson also links its separate, exact SVG teaching diagram under `assets/tides/`; the words, figures, calculations and reference-port rules remain in the external data library `libraries/project-watch/tides-1.93.1.js`.
+Eight original AI-generated Helmlore teaching scenes are stored in `assets/tides/scenes/`. They are fictional illustrations, not chart reproductions or live predictions. Each lesson also links its separate, exact SVG teaching diagram under `assets/tides/`; the words, figures, calculations and reference-port rules remain in the external data library `libraries/project-watch/tides-1.93.1.js`.
 
 | Lesson | Scene file | Prompt brief / intended visual |
 |---|---|---|

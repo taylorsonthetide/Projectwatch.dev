@@ -1,4 +1,4 @@
-/* Original Project Watch reference and training data. */
+/* Original Helmlore reference and training data. */
 window.PW_ORIGINAL_LIBRARIES=window.PW_ORIGINAL_LIBRARIES||{};
 window.PW_ORIGINAL_LIBRARIES.AIS_TRAINING_TARGETS=[
  {id:'a1',name:'MERIDIAN STAR',mmsi:'232001101',imo:'9301101',call:'MSTA7',cls:'A',type:'Cargo',colour:'#66cfa2',x:-2.7,y:2.1,cog:128,hdg:124,sog:13.4,rot:0,status:'Under way using engine',dest:'LIVERPOOL',eta:'15 SEP 04:20',draught:'8.2 m',len:'182 m',beam:'28 m',age:2},

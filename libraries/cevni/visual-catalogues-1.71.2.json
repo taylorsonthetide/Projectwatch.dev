@@ -202,7 +202,7 @@
       {
         "id": "daynight",
         "title": "Day / night pairing",
-        "teach": "Project Watch will pair day marks and night displays by operational meaning instead of teaching two disconnected lists.",
+        "teach": "Helmlore will pair day marks and night displays by operational meaning instead of teaching two disconnected lists.",
         "kind": "shapes",
         "source": "ch3"
       }

@@ -1,4 +1,4 @@
-/* Original Project Watch reference and training data. */
+/* Original Helmlore reference and training data. */
 window.PW_ORIGINAL_LIBRARIES=window.PW_ORIGINAL_LIBRARIES||{};
 window.PW_ORIGINAL_LIBRARIES.PW_LIBRARY_SEARCH_ALIASES={
  'may day':'mayday','channel 16':'vhf distress mayday','ch 16':'vhf distress mayday','panpan':'pan pan','pan pan':'panpan','securite':'securite safety','call regs':'colregs','col regs':'colregs','collision regs':'colregs','nav lights':'navigation lights','side lights':'sidelights','stern light':'sternlight','top mark':'topmark','motor sailing':'motorsailing','motor sailer':'motorsailing','right angle':'90 degrees crossing','closest point':'cpa','time to cpa':'tcpa','course over ground':'cog','speed over ground':'sog','call sign':'callsign','man overboard':'mob','not under command':'nuc','restricted ability to manoeuvre':'ram','restricted ability to maneuver':'ram','constrained by draught':'cbd','constrained by draft':'cbd','traffic separation scheme':'tss','inshore traffic zone':'itz'
@@ -39,8 +39,8 @@ window.PW_ORIGINAL_LIBRARIES.PW_COURSE_STAGES=[
 ];
 window.PW_ORIGINAL_LIBRARIES.MODULE_META={
  home:{no:'',title:'',desc:'',state:''},
- course:{no:'COURSE',title:'Structured Training Pathway',desc:'Project Watch core curriculum, prerequisites, learning outcomes and progression.',state:'COURSE MODE'},
- library:{no:'LIBRARY',title:'Training Library',desc:'Direct access to Project Watch learning modules, simulators, references and assessments.',state:'DIRECT ACCESS'},
+ course:{no:'COURSE',title:'Structured Training Pathway',desc:'Helmlore core curriculum, prerequisites, learning outcomes and progression.',state:'COURSE MODE'},
+ library:{no:'LIBRARY',title:'Training Library',desc:'Direct access to Helmlore learning modules, simulators, references and assessments.',state:'DIRECT ACCESS'},
  scenarios:{no:'01',title:'Collision Scenarios',desc:'Scenario briefing, guided watch, simulator and debrief.',state:'SIMULATOR MODULE'},
  colregs:{no:'02',title:'COLREGS',desc:'Rules 1–41, technical Annexes and licensed reference imagery.',state:'RULES MODULE'},
  lights:{no:'03',title:'Lights & Shapes',desc:'Bridge-view recognition of navigation lights and day shapes.',state:'RECOGNITION MODULE'},
@@ -50,6 +50,6 @@ window.PW_ORIGINAL_LIBRARIES.MODULE_META={
  ais:{no:'07',title:'AIS Target Trainer',desc:'Simulated AIS chart, vessel targets, COG/heading, CPA/TCPA and lost-target awareness.',state:'AIS LEARNING MODULE'}
 };
 window.PW_ORIGINAL_LIBRARIES.TRAINING_VESSEL_PROFILES={
-  watch1:{id:'watch1',name:'Watch One',propulsion:'power',make:'Project Watch',model:'Power Training Vessel',length:14.2,beam:4.5,draft:1.6,cruise:7,maxSpeed:9,aisClass:'B',homePort:'',callsign:'',photo:'',isDefault:true},
-  watch2:{id:'watch2',name:'Watch Two',propulsion:'sail',make:'Project Watch',model:'Sailing Training Vessel',length:12.0,beam:3.8,draft:1.8,cruise:6,maxSpeed:8,aisClass:'B',homePort:'',callsign:'',photo:'',isDefault:true}
+  watch1:{id:'watch1',name:'Watch One',propulsion:'power',make:'Helmlore',model:'Power Training Vessel',length:14.2,beam:4.5,draft:1.6,cruise:7,maxSpeed:9,aisClass:'B',homePort:'',callsign:'',photo:'',isDefault:true},
+  watch2:{id:'watch2',name:'Watch Two',propulsion:'sail',make:'Helmlore',model:'Sailing Training Vessel',length:12.0,beam:3.8,draft:1.8,cruise:6,maxSpeed:8,aisClass:'B',homePort:'',callsign:'',photo:'',isDefault:true}
 };

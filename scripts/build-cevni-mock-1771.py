@@ -1,4 +1,4 @@
-"""Build the original, source-labelled Project Watch CEVNI mock bank."""
+"""Build the original, source-labelled Helmlore CEVNI mock bank."""
 import json
 from pathlib import Path
 
@@ -70,4 +70,4 @@ bank=dict(version='1.77.1',length=30,minutes=20,passMark=22,
 assert len(questions)==40 and len({q['id'] for q in questions})==40
 folder=root/'libraries/cevni'
 (folder/'mock-exam-bank-1.77.1.json').write_text(json.dumps(bank,indent=2,ensure_ascii=False)+'\n')
-(folder/'mock-exam-bank-1.77.1.js').write_text('/* Original Project Watch training questions; see adjacent JSON. */\nwindow.PW_CEVNI_MOCK_BANK='+json.dumps(bank,ensure_ascii=False,separators=(',',':'))+';\n')
+(folder/'mock-exam-bank-1.77.1.js').write_text('/* Original Helmlore training questions; see adjacent JSON. */\nwindow.PW_CEVNI_MOCK_BANK='+json.dumps(bank,ensure_ascii=False,separators=(',',':'))+';\n')

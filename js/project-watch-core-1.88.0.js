@@ -102,8 +102,8 @@ function submitCollisionKnowledgeExam(){
   const pass=pct>=90&&criticalWrong.length===0;
   courseRecordScore('collision',pct,pass);
   $('ckProgress').textContent=`Complete • ${correct}/${collisionExamSet.length} • ${pct}%`;
-  $('ckQuestionArea').innerHTML=`<div class="examResultsHero ${pass?'pass':'fail'}"><div><div class="ver">PROJECT WATCH MOCK RESULT</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2><p class="note">${pass?'Knowledge standard achieved with no safety-critical error.':'Review the debrief below, retrain weak areas and generate a new mock.'}</p></div><div class="examScoreBig">${pct}%</div></div>
-    <div class="examStandardNote"><b>Project Watch pass rule:</b> 90% overall and no wrong answer on a designated safety-critical item. This is an independent training standard, not an MCA/RYA certificate.</div>
+  $('ckQuestionArea').innerHTML=`<div class="examResultsHero ${pass?'pass':'fail'}"><div><div class="ver">HELMLORE MOCK RESULT</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2><p class="note">${pass?'Knowledge standard achieved with no safety-critical error.':'Review the debrief below, retrain weak areas and generate a new mock.'}</p></div><div class="examScoreBig">${pct}%</div></div>
+    <div class="examStandardNote"><b>Helmlore pass rule:</b> 90% overall and no wrong answer on a designated safety-critical item. This is an independent training standard, not an MCA/RYA certificate.</div>
     ${criticalWrong.length?`<div class="examStandardNote"><b>Safety-critical errors:</b> ${criticalWrong.length}. A designated critical item was answered incorrectly or left unanswered.</div>`:''}
     <div class="examResultGrid">${collisionExamSet.map((q,i)=>examReviewHTML(q,collisionExamAnswers[i],i)).join('')}</div>
     <div class="examNav"><button onclick="startCollisionKnowledgeExam()">NEW RANDOM MOCK</button><button onclick="showCollisionExamMode('oral')">CAPTAIN'S ORAL →</button><button onclick="showCollisionExamMode('practical')">PRACTICAL →</button></div>`;
@@ -135,7 +135,7 @@ function submitCollisionOralExam(){
   const pct=Math.round(correct/collisionOralSet.length*100);
   const criticalWrong=collisionOralSet.filter((q,i)=>q.critical&&collisionOralAnswers[i]!==q.correct);
   const pass=pct>=80&&criticalWrong.length===0;
-  $('coQuestionArea').innerHTML=`<div class="examResultsHero ${pass?'pass':'fail'}"><div><div class="ver">PROJECT WATCH ORAL MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2><p class="note">Project Watch oral benchmark: 80% plus no safety-critical error. The detailed reasoning is now revealed.</p></div><div class="examScoreBig">${pct}%</div></div>
+  $('coQuestionArea').innerHTML=`<div class="examResultsHero ${pass?'pass':'fail'}"><div><div class="ver">HELMLORE ORAL MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2><p class="note">Helmlore oral benchmark: 80% plus no safety-critical error. The detailed reasoning is now revealed.</p></div><div class="examScoreBig">${pct}%</div></div>
   <div class="examResultGrid">${collisionOralSet.map((q,i)=>examReviewHTML({cat:"Captain's Oral",rule:q.rule,critical:q.critical,q:q.prompt,a:q.a,correct:q.correct,why:q.why},collisionOralAnswers[i],i)).join('')}</div>
   <div class="examNav"><button onclick="startCollisionOralExam()">NEW ORAL MOCK</button><button onclick="showCollisionExamMode('knowledge')">KNOWLEDGE →</button><button onclick="showCollisionExamMode('practical')">PRACTICAL →</button></div>`;
 }
@@ -448,10 +448,10 @@ function submitBuoyageExam(){
  courseRecordScore('buoyage',pct,pass);
  $('bxProgress').textContent=`Complete • ${correct}/${buoyExamSet.length} • ${pct}%`;
  $('bxQuestionArea').innerHTML=`<div class="bxResultsSummary ${pass?'pass':'fail'}">
-   <div><div class="ver">PROJECT WATCH BUOYAGE MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2>
+   <div><div class="ver">HELMLORE BUOYAGE MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2>
    <p class="note">${pass?'Buoyage standard achieved with no safety-critical passage error.':'Review the incorrect marks below, return to the tutorial where necessary, then sit a new mock.'}</p></div>
    <div class="bxScore">${pct}%</div></div>
-   <div class="examStandardNote"><b>Project Watch standard:</b> 90% overall plus no incorrect designated safety-critical light/passage item. This is a training benchmark, not an RYA or MCA certificate.</div>
+   <div class="examStandardNote"><b>Helmlore standard:</b> 90% overall plus no incorrect designated safety-critical light/passage item. This is a training benchmark, not an RYA or MCA certificate.</div>
    ${criticalWrong.length?`<div class="examStandardNote"><b>Safety-critical errors:</b> ${criticalWrong.length}. One or more important passage/light decisions were wrong or unanswered.</div>`:''}
    <div class="examResultGrid">${buoyExamSet.map((q,i)=>bxReviewHTML(q,buoyExamAnswers[i],i)).join('')}</div>
    <div class="examNav"><button onclick="startBuoyageExam()">NEW FULL MOCK</button><button onclick="showModule('buoyage')">RETURN TO BUOYAGE</button><button onclick="showBuoyTutorial()">REVIEW BEGINNER COURSE</button></div>`;
@@ -738,7 +738,7 @@ function openBuoy(id){
  $('detailTitle').textContent=b.name;
  $('detailSummary').textContent=b.meaning;
  $('detailTraining').textContent='Topmark and body colours are shown in the vector diagram. Light: '+b.light+'. Night animation: '+b.patternLabel+'.';
- $('detailProject').textContent='Project Watch will next use this exact mark data inside the live navigation/buoy-field trainer.';
+ $('detailProject').textContent='Helmlore will next use this exact mark data inside the live navigation/buoy-field trainer.';
  $('detailSource').textContent=b.source;
  $('detailSheet').classList.add('open');
 }
@@ -831,7 +831,7 @@ function submitLightsFullExam(){
   if(unanswered){
     const firstMissing=lightsExamAnswers.findIndex(x=>x===null);
     lightsExamIndex=firstMissing;renderLightsExamQuestion();
-    alert(`${unanswered} question(s) are unanswered. Project Watch has taken you to the first unanswered question.`);
+    alert(`${unanswered} question(s) are unanswered. Helmlore has taken you to the first unanswered question.`);
     return;
   }
   lightsExamSubmitted=true;
@@ -841,10 +841,10 @@ function submitLightsFullExam(){
   const pass=pct>=90&&criticalWrong.length===0;
   $('lxProgress').textContent=`Complete • ${correct}/${lightsExamSet.length} • ${pct}%`;
   $('lxQuestionArea').innerHTML=`<div class="lxResultsSummary ${pass?'pass':'fail'}">
-      <div><div class="ver">PROJECT WATCH LIGHTS & SHAPES MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2>
+      <div><div class="ver">HELMLORE LIGHTS & SHAPES MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2>
       <p class="note">${pass?'Full mock standard achieved with no safety-critical error.':'Review every incorrect display below, retrain weak areas, then run the exam again.'}</p></div>
       <div class="lxScore">${pct}%</div></div>
-    <div class="examStandardNote"><b>Project Watch standard:</b> 90% overall plus no designated safety-critical recognition error. This is an independent training benchmark, not an MCA or RYA certificate.</div>
+    <div class="examStandardNote"><b>Helmlore standard:</b> 90% overall plus no designated safety-critical recognition error. This is an independent training benchmark, not an MCA or RYA certificate.</div>
     ${criticalWrong.length?`<div class="examStandardNote"><b>Safety-critical recognition errors:</b> ${criticalWrong.length}. One or more designated vessel/status displays were answered incorrectly or left unanswered.</div>`:''}
     <div class="examResultGrid">${lightsExamSet.map((q,i)=>lxReviewHTML(q,lightsExamAnswers[i],i)).join('')}</div>
     <div class="examNav"><button onclick="startLightsFullExam()">NEW FULL MOCK</button><button onclick="showModule('lights')">RETURN TO LIGHTS & SHAPES</button><button onclick="showLightsTutorial()">REVIEW BEGINNER COURSE</button></div>`;
@@ -879,8 +879,8 @@ let lsIndex=0,lsLessonsFinished=0,lsFinalIndex=0,lsFinalScore=0,lsFinalAnswered=
 const PW_MASTER_LESSON_URLS=window.PW_ORIGINAL_LIBRARIES.PW_MASTER_LESSON_URLS;
 const PW_MASTER_QUIZ_URLS=window.PW_ORIGINAL_LIBRARIES.PW_MASTER_QUIZ_URLS;
 function pwMasterFrame(url,label){return `<iframe class="pwMasterLessonFrame" title="${label}" src="${url}" loading="eager"></iframe>`;}
-function lsVisual(kind){return pwMasterFrame(PW_MASTER_LESSON_URLS[kind]||PW_MASTER_LESSON_URLS.intro,'Approved Project Watch Master Library 03 lesson visual');}
-function lsQuizVisual(kind){return pwMasterFrame(PW_MASTER_QUIZ_URLS[kind]||PW_MASTER_LESSON_URLS.intro,'Approved Project Watch Master Library 03 recognition visual');}
+function lsVisual(kind){return pwMasterFrame(PW_MASTER_LESSON_URLS[kind]||PW_MASTER_LESSON_URLS.intro,'Approved Helmlore Master Library 03 lesson visual');}
+function lsQuizVisual(kind){return pwMasterFrame(PW_MASTER_QUIZ_URLS[kind]||PW_MASTER_LESSON_URLS.intro,'Approved Helmlore Master Library 03 recognition visual');}
 function showLightsMasterLibrary(){
  stopCourseSpeech();document.querySelectorAll('.appPage.active,.screen.active').forEach(p=>p.classList.remove('active'));
  updateHeaderNav('lights');updateModuleContext('lights');const p=$('lightsMasterLibraryPage');if(p)p.classList.add('active');
@@ -1240,7 +1240,7 @@ function openDistress(id){
   if(d.special==='mayday' || d.special==='panpan') extra=maydayProcedureHTML();
   if(d.special==='beacon') extra=beaconHTML('epirb');
   if(d.special==='plb') extra=beaconHTML('plb');
-  box.innerHTML=`<div class="ver">${d.basis}</div><h3>${d.icon} ${d.title}</h3><p>${d.detail}</p>${extra}<div class="sourceNote">Project Watch training wording is paraphrased from the current IMO COLREG Annex IV and UK MCA guidance checked for this build.</div>`;
+  box.innerHTML=`<div class="ver">${d.basis}</div><h3>${d.icon} ${d.title}</h3><p>${d.detail}</p>${extra}<div class="sourceNote">Helmlore training wording is paraphrased from the current IMO COLREG Annex IV and UK MCA guidance checked for this build.</div>`;
   box.classList.add('active');
   if(d.special==='mayday' || d.special==='panpan') setTimeout(()=>{setRadioExample(d.special==='panpan'?'panpan':'mayday')},0);
   box.scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -1360,7 +1360,7 @@ function beaconHTML(kind){
    <div class="beaconBox"><b>${isPLB?'PLB':'EPIRB'}</b>${isPLB?'Personal beacon intended to identify a person in distress.':'Maritime beacon associated with a vessel and expressly named in COLREG Annex IV.'}</div>
    <div class="beaconBox"><b>406 MHz</b>Satellite distress alerting to search and rescue authorities; registration information helps responders identify the casualty and contacts.</div>
    <div class="beaconBox"><b>UK registration</b>Current UK 2026 rules require relevant UK-coded EPIRBs and PLBs to be registered and the details kept current.</div>
-   <div class="beaconBox"><b>Training distinction</b>${isPLB?'PLB belongs in Project Watch emergency equipment training, but we label it MCA/GMDSS equipment rather than pretending Annex IV names PLB separately.':'EPIRB is directly listed by Annex IV as a recognised distress signal.'}</div>
+   <div class="beaconBox"><b>Training distinction</b>${isPLB?'PLB belongs in Helmlore emergency equipment training, but we label it MCA/GMDSS equipment rather than pretending Annex IV names PLB separately.':'EPIRB is directly listed by Annex IV as a recognised distress signal.'}</div>
  </div>`;
 }
 
@@ -1557,7 +1557,7 @@ function tssEcdisSVG(live=false,mode=tssGeometryMode){
    </svg>`;
  }
 
- return `<svg viewBox="0 0 900 520" aria-label="Project Watch ECDIS-style TSS crossing display">
+ return `<svg viewBox="0 0 900 520" aria-label="Helmlore ECDIS-style TSS crossing display">
    <rect width="900" height="520" fill="#eee4cc"/>
    <g stroke="#c8bfa9" stroke-width="1">
     <path d="M0 80 H900 M0 160 H900 M0 240 H900 M0 320 H900 M0 400 H900 M0 480 H900"/>
@@ -1836,7 +1836,7 @@ function startTSSFullExam(){
  tssExamIndex=0;tssExamSubmitted=false;renderTSSExamQuestion();
 }
 function txVisualHTML(q,review=false){
- if(!q.visual)return `<div class="txKnowledgeOnly"><div><b>RULE 10 KNOWLEDGE</b><span>Apply the under-20-metre TSS principles taught in Project Watch. No diagram is required for this question.</span></div></div>`;
+ if(!q.visual)return `<div class="txKnowledgeOnly"><div><b>RULE 10 KNOWLEDGE</b><span>Apply the under-20-metre TSS principles taught in Helmlore. No diagram is required for this question.</span></div></div>`;
  return `<div class="${review?'txReviewVisual':'txVisual'}">${tssEcdisSVG(false,q.visual)}</div>${review?'':`<div class="txVisualHead"><span>RULE 10 GEOMETRY</span><span>${q.visual.toUpperCase()}</span></div>`}`;
 }
 function renderTSSExamQuestion(){
@@ -1868,10 +1868,10 @@ function submitTSSFullExam(){
  courseRecordScore('tss',pct,pass);
  $('txProgress').textContent=`Complete • ${correct}/${tssExamSet.length} • ${pct}%`;
  $('txQuestionArea').innerHTML=`<div class="txResultsSummary ${pass?'pass':'fail'}">
-   <div><div class="ver">PROJECT WATCH TSS MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2>
+   <div><div class="ver">HELMLORE TSS MOCK</div><h2>${pass?'PASS':'NOT YET PASSED'}</h2>
    <p class="note">${pass?'Rule 10 mock standard achieved with no safety-critical error.':'Review the debrief below, revisit the relevant lessons, then sit a new mock.'}</p></div>
    <div class="txScore">${pct}%</div></div>
-   <div class="examStandardNote"><b>Project Watch standard:</b> 90% overall plus no designated safety-critical Rule 10 error. This is an independent training benchmark, not an MCA/RYA certificate.</div>
+   <div class="examStandardNote"><b>Helmlore standard:</b> 90% overall plus no designated safety-critical Rule 10 error. This is an independent training benchmark, not an MCA/RYA certificate.</div>
    ${criticalWrong.length?`<div class="examStandardNote"><b>Safety-critical errors:</b> ${criticalWrong.length}. One or more important crossing, non-impeding or traffic-management decisions were wrong or unanswered.</div>`:''}
    <div class="examResultGrid">${tssExamSet.map((q,i)=>txReviewHTML(q,tssExamAnswers[i],i)).join('')}</div>
    <div class="examNav"><button onclick="startTSSFullExam()">NEW FULL MOCK</button><button onclick="showTSSTutorial()">REVIEW BEGINNER COURSE</button><button onclick="showModule('tss')">RETURN TO TSS</button></div>`;
@@ -2167,8 +2167,8 @@ function openModule(title,summary,training){
  $('detailTitle').textContent=title;
  $('detailSummary').textContent=summary;
  $('detailTraining').textContent=training;
- $('detailProject').textContent='This module is part of the Project Watch training architecture and will be connected to scenario-based assessment.';
- $('detailSource').textContent='Project Watch module';
+ $('detailProject').textContent='This module is part of the Helmlore training architecture and will be connected to scenario-based assessment.';
+ $('detailSource').textContent='Helmlore module';
  $('detailSheet').classList.add('open');
 }
 
@@ -2362,7 +2362,7 @@ function renderCrQuiz(){
  const area=$('crQuizArea'),box=$('crKnowledge');if(!area)return;
  if(typeof CR_QUIZ==='undefined'||!Array.isArray(CR_QUIZ)||CR_QUIZ.length!==10){
   if(box)box.classList.remove('locked');
-  area.innerHTML='<div class="stage2QuizIntro"><b>FINAL CHECK ERROR</b><br>The Stage 2 question bank did not load. Please reload Project Watch.</div>';
+  area.innerHTML='<div class="stage2QuizIntro"><b>FINAL CHECK ERROR</b><br>The Stage 2 question bank did not load. Please reload Helmlore.</div>';
   return;
  }
  const unlocked=crLessonsFinished>=6;
@@ -2569,8 +2569,8 @@ function contextRuleOpenFull(){
 function resetProjectWatchForTesting(){
  stopCourseSpeech();
  const ok=confirm(
-  'START PROJECT WATCH AGAIN FROM THE BEGINNING?\n\n'+
-  'This testing reset clears saved Project Watch learner progress and vessel setup on this device, then returns Course Mode to Stage 1 at 0%.\n\n'+
+  'START HELMLORE AGAIN FROM THE BEGINNING?\n\n'+
+  'This testing reset clears saved Helmlore learner progress and vessel setup on this device, then returns Course Mode to Stage 1 at 0%.\n\n'+
   'The application itself is not changed.'
  );
  if(!ok)return;
@@ -2589,7 +2589,7 @@ function resetProjectWatchForTesting(){
    if(/^projectwatch/i.test(k)||/^projectWatch/i.test(k)||/^pw_/i.test(k))sremove.push(k);
   }
   sremove.forEach(k=>sessionStorage.removeItem(k));
- }catch(e){console.warn('Project Watch QA reset',e)}
+ }catch(e){console.warn('Helmlore QA reset',e)}
 
  try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
  location.reload();
@@ -2815,7 +2815,7 @@ function resizeVesselImage(file){
 async function handleVesselPhoto(ev){
  const f=ev.target.files?.[0];if(!f)return;
  try{PW_PENDING_PHOTO=await resizeVesselImage(f);renderVesselPhotoPreview(PW_PENDING_PHOTO)}
- catch(e){alert('Project Watch could not read that image. Please try another photo.')}
+ catch(e){alert('Helmlore could not read that image. Please try another photo.')}
 }
 function renderVesselPhotoPreview(src){
  const box=$('vpPhotoPreview');if(!box)return;
@@ -2827,8 +2827,8 @@ function openVesselSetup(firstRun=false){
  const modal=$('vesselSetupModal');if(!modal)return;
  modal.classList.add('show');modal.setAttribute('aria-hidden','false');
  const existing=vesselProfile(),isFirst=firstRun&&!pwStoreGet(PW_VESSEL_SEEN);
- $('vesselSetupHeading').textContent=isFirst?'Welcome aboard Project Watch':'My training vessel';
- $('vesselSetupIntro').textContent=isFirst?'Choose Watch One, Watch Two, or set up your own vessel.':'Update the vessel Project Watch uses throughout the training platform.';
+ $('vesselSetupHeading').textContent=isFirst?'Welcome aboard Helmlore':'My training vessel';
+ $('vesselSetupIntro').textContent=isFirst?'Choose Watch One, Watch Two, or set up your own vessel.':'Update the vessel Helmlore uses throughout the training platform.';
  $('vesselSetupClose').style.display=isFirst?'none':'block';
  $('vpCancelBtn').style.display=isFirst?'none':'inline-block';
  $('vesselFirstChoice').style.display=isFirst?'grid':'none';
@@ -2855,7 +2855,7 @@ function populateVesselForm(p){
 }
 function updateProfileRulePreview(){
  const nm=$('vpName')?.value.trim()||'Your vessel',len=parseFloat($('vpLength')?.value),prop=$('vpPropulsion')?.value;
- let msg='Project Watch will use this vessel name, photograph and profile throughout the training platform.';
+ let msg='Helmlore will use this vessel name, photograph and profile throughout the training platform.';
  if(Number.isFinite(len)){
    if(prop==='sail')msg+=` Rule 10(j) applies because this is a sailing vessel.`;
    else if(len<20)msg+=` At ${len.toFixed(1)} m, Rule 10(j)'s under-20 m non-impeding duty applies.`;
@@ -2950,7 +2950,7 @@ function refreshTSSVesselContext(){
  const tut=$('tssTutorialPage');
  if(tut){
    const hp=tut.querySelector('.tutTssHero p');
-   if(hp)hp.textContent=`You are in command of ${vesselName()}, a ${vesselDisplayLength()} ${vesselTypeText()}. Project Watch adapts the vessel-status parts of Rule 10 to this profile while keeping the verified crossing geometry unchanged.`;
+   if(hp)hp.textContent=`You are in command of ${vesselName()}, a ${vesselDisplayLength()} ${vesselTypeText()}. Helmlore adapts the vessel-status parts of Rule 10 to this profile while keeping the verified crossing geometry unchanged.`;
  }
  const live=$('tssLive');
  if(live){
@@ -2986,7 +2986,7 @@ function adaptTSSTutorialForProfile(){
  const L0=TSS_TUTORIAL[0];
  L0.rule=applies?'YOUR VESSEL • RULE 10(j)':'YOUR VESSEL • RULE 10';
  L0.title='Start here: know your vessel status';
- L0.intro=`Project Watch is configured for ${nm}, a ${len} ${type}.`;
+ L0.intro=`Helmlore is configured for ${nm}, a ${len} ${type}.`;
  L0.facts=[
    ['TRAINING VESSEL',`${nm} • ${len} • ${type}`],
    ['RULE 10(j)',applies
@@ -3302,7 +3302,7 @@ function aisUpdatePanel(){
  const diff=Math.abs((((t.cog-t.hdg)+540)%360)-180);
  panel.innerHTML=`<div class="aisTargetHead"><div><div class="ver">${aisTypeLabel(t).toUpperCase()} • AIS CLASS ${t.cls}</div><h3>${t.name}</h3></div><span class="aisTargetClass">CLASS ${t.cls}</span></div>
   <div class="aisVesselPhoto">${aisVesselProfileSVG(t)}</div>
-  <div class="aisVesselCaption"><b>PROJECT WATCH VESSEL PROFILE</b><span>Original training illustration • fictional vessel</span></div>
+  <div class="aisVesselCaption"><b>HELMLORE VESSEL PROFILE</b><span>Original training illustration • fictional vessel</span></div>
   <div class="aisTargetGrid">
    <div><small>MMSI</small><b>${t.mmsi}</b></div><div><small>CALL SIGN</small><b>${t.call||'—'}</b></div>
    <div><small>RANGE</small><b>${r.range.toFixed(2)} NM</b></div><div><small>BEARING</small><b>${String(Math.round(r.bearing)).padStart(3,'0')}°T</b></div>
@@ -3327,7 +3327,7 @@ function updateModuleContext(name){
    return;
  }
  $('moduleContextNo').textContent=m.no;
- $('moduleContextKicker').textContent='PROJECT WATCH • TRAINING MODULE';
+ $('moduleContextKicker').textContent='HELMLORE • TRAINING MODULE';
  $('moduleContextTitle').textContent=m.title;
  $('moduleContextDesc').textContent=m.desc;
  $('moduleContextState').textContent=m.state;
@@ -3606,8 +3606,8 @@ function startWatch(){
     }
     requestAnimationFrame(()=>{draw(); if(!running) toggle();});
   }catch(err){
-    console.error('Project Watch start error',err);
-    alert('Project Watch could not start this scenario: '+err.message);
+    console.error('Helmlore start error',err);
+    alert('Helmlore could not start this scenario: '+err.message);
   }
 }
 

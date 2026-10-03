@@ -17,7 +17,7 @@ function mount(){
  const page=document.getElementById('cevniPage'); if(!page||document.getElementById('pwEvidenceSchool')) return;
  const host=document.createElement('section'); host.id='pwEvidenceSchool'; host.className='pwEvidenceSchool';
  host.innerHTML=`<div class="pwEvHero"><div><div class="ver">BUILD 1.62.0 • REAL-WORLD VISUAL EVIDENCE</div><h2>See the waterway before you answer the question.</h2><p>Verified photographs are used for context and operational recognition. Exact signs, lights and marks stay with the clean regulatory artwork. A photograph is never allowed to smuggle an unverified rule answer into the course.</p></div><div class="pwEvBadge">6<br><small>QUALIFIED<br>CONTEXT SCENES</small></div></div>
- <div class="pwEvRule"><b>PROJECT WATCH VISUAL METHOD</b><span>TEACH with exact diagrams → RECOGNISE the object → SEE it in a real waterway → APPLY the rule separately.</span></div>
+ <div class="pwEvRule"><b>HELMLORE VISUAL METHOD</b><span>TEACH with exact diagrams → RECOGNISE the object → SEE it in a real waterway → APPLY the rule separately.</span></div>
  <div class="pwEvGrid">${EVIDENCE.map(card).join('')}</div>
  <div class="pwEvFoot"><b>Evidence boundary:</b> these scenes teach structure, scale, approach and operating context only. Signal permission, sign meaning, light identity and dangerous-goods status remain controlled by separately verified regulatory assets.</div>`;
  const anchor=document.getElementById('cevniLibraryHardening')||page.querySelector('.cvVisualSchool')||page.lastElementChild;

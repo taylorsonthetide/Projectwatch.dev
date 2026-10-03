@@ -3,7 +3,7 @@
   'use strict';
   const version = '1.91.0';
   const label = 'BUILD ' + version;
-  const title = 'Project Watch ' + version;
+  const title = 'Helmlore ' + version;
   window.PW_BUILD_IDENTITY = Object.freeze({version, label});
   try {
     Object.defineProperty(window, 'PROJECT_WATCH_BUILD', {

@@ -2,11 +2,11 @@
 <title id="title">Water level and tidal stream</title><desc id="desc">Height is vertical; stream has direction and speed across the water. Fictional schematic for learning, not for navigation.</desc>
 <defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
 <rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
-<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">HELMLORE  /  TIDAL NAVIGATION</text>
 <text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Water level and tidal stream</text>
 <text x="38" y="151" fill="#456573" font-size="17" font-weight="500">Height is vertical; stream has direction and speed across the water.</text>
 <rect x="38" y="180" width="884" height="275" rx="16" fill="#ffffff" stroke="#cee1e5"/><path d="M59 292C240 267 303 313 475 290S716 269 901 292V415H59Z" fill="url(#sea)"/><text x="75" y="241" fill="#087e90" font-size="19" font-weight="800">WATER LEVEL</text><path d="M235 235L235 282" fill="none" stroke="#087e90" stroke-width="3"/><path d="M156 346L332 346" fill="none" stroke="#087e90" stroke-width="5"/><path d="M332 346l-13 -7v14z" fill="#087e90" transform="rotate(0.0 332 346)"/><path d="M400 346L576 346" fill="none" stroke="#087e90" stroke-width="5"/><path d="M576 346l-13 -7v14z" fill="#087e90" transform="rotate(0.0 576 346)"/><path d="M644 346L820 346" fill="none" stroke="#087e90" stroke-width="5"/><path d="M820 346l-13 -7v14z" fill="#087e90" transform="rotate(0.0 820 346)"/><text x="88" y="439" fill="#15384a" font-size="20" font-weight="800">STREAM SET → direction of flow</text><text x="489" y="439" fill="#456573" font-size="18" font-weight="600">Rate = speed in knots</text><text x="619" y="241" fill="#9b6a1d" font-size="16" font-weight="700">Slack does not have to match HW/LW</text>
 <path d="M38 493H922" stroke="#c9dcdf"/>
 <text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
-<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">HELMLORE</text>
 </svg>

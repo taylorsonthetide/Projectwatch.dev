@@ -1,4 +1,4 @@
-/* Original Project Watch recreational tides teaching. AI-generated scenes and separate precision diagrams. */
+/* Original Helmlore recreational tides teaching. AI-generated scenes and separate precision diagrams. */
 window.PW_TIDES_LIBRARY = Object.freeze({
   "version": "1.93.1",
   "lessons": [

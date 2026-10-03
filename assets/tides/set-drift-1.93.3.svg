@@ -2,11 +2,11 @@
 <title id="title">Boat movement + stream = track</title><desc id="desc">A vector sketch for one hour of constant motion in a fictional example. Fictional schematic for learning, not for navigation.</desc>
 <defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
 <rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
-<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">HELMLORE  /  TIDAL NAVIGATION</text>
 <text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Boat movement + stream = track</text>
 <text x="38" y="151" fill="#456573" font-size="17" font-weight="500">A vector sketch for one hour of constant motion in a fictional example.</text>
 <rect x="38" y="180" width="884" height="275" rx="16" fill="#ffffff" stroke="#cee1e5"/><path d="M189 411L189 238" fill="none" stroke="#c9902b" stroke-width="7"/><path d="M189 411L389 411" fill="none" stroke="#087e90" stroke-width="7"/><path d="M189 411L389 238" fill="none" stroke="#24445d" stroke-width="7"/><circle cx="189" cy="411" r="9" fill="#24445d" stroke="#fff" stroke-width="2"/><circle cx="189" cy="238" r="8" fill="#c9902b" stroke="#fff" stroke-width="2"/><circle cx="389" cy="411" r="8" fill="#087e90" stroke="#fff" stroke-width="2"/><circle cx="389" cy="238" r="9" fill="#24445d" stroke="#fff" stroke-width="2"/><text x="75" y="223" fill="#15384a" font-size="21" font-weight="800">N</text><text x="75" y="314" fill="#9b6a1d" font-size="18" font-weight="800">4 NM north</text><text x="211" y="439" fill="#087e90" font-size="18" font-weight="800">1 NM east</text><text x="405" y="232" fill="#24445d" font-size="19" font-weight="800">Track over ground</text><rect x="540" y="287" width="344" height="127" rx="10" fill="#e2eff1"/><text x="561" y="323" fill="#456573" font-size="17" font-weight="800">AFTER 1 HOUR</text><text x="561" y="359" fill="#15384a" font-size="23" font-weight="600">4 NM north</text><text x="561" y="389" fill="#15384a" font-size="23" font-weight="600">+ 1 NM east</text>
 <path d="M38 493H922" stroke="#c9dcdf"/>
 <text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
-<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">HELMLORE</text>
 </svg>

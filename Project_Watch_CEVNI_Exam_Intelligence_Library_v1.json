@@ -1,8 +1,8 @@
 {
-  "library": "Project Watch CEVNI Exam Intelligence Library",
+  "library": "Helmlore CEVNI Exam Intelligence Library",
   "version": "1.0",
-  "purpose": "Research/reference pool for designing original Project Watch mock questions.",
-  "copyrightRule": "Do not reproduce RYA test wording or artwork. Use source only to identify assessed concepts; write original questions and verified Project Watch visuals.",
+  "purpose": "Research/reference pool for designing original Helmlore mock questions.",
+  "copyrightRule": "Do not reproduce RYA test wording or artwork. Use source only to identify assessed concepts; write original questions and verified Helmlore visuals.",
   "examFormatEvidence": {
     "paper": "30 multiple-choice questions; pass mark 22/30",
     "online": "two sections of 15; pass mark 11/15 in each",
@@ -32,7 +32,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-002",
@@ -43,7 +43,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-003",
@@ -54,7 +54,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-004",
@@ -65,7 +65,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-005",
@@ -76,7 +76,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-006",
@@ -87,7 +87,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-007",
@@ -98,7 +98,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-008",
@@ -109,7 +109,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-009",
@@ -120,7 +120,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-010",
@@ -131,7 +131,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-011",
@@ -142,7 +142,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-012",
@@ -153,7 +153,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-013",
@@ -164,7 +164,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-014",
@@ -175,7 +175,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-015",
@@ -186,7 +186,7 @@
       "correctAnswer": null,
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-016",
@@ -197,7 +197,7 @@
       "correctAnswer": "Depends on the depicted Annex 3 shape; retain source visual reference for verified reconstruction.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-017",
@@ -208,7 +208,7 @@
       "correctAnswer": "Depends on the depicted Annex 3 shape; retain source visual reference for verified reconstruction.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-018",
@@ -219,7 +219,7 @@
       "correctAnswer": "Depends on the depicted light arrangement; rebuild from verified CEVNI Annex 3 asset.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-019",
@@ -230,7 +230,7 @@
       "correctAnswer": "Motorized vessel leading a towed convoy.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-020",
@@ -241,7 +241,7 @@
       "correctAnswer": "Both alter to starboard and pass port-to-port.",
       "visualRequired": false,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-021",
@@ -252,7 +252,7 @@
       "correctAnswer": "It is leaving the passage for the oncoming vessel to pass on its starboard side (starboard-to-starboard encounter).",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-022",
@@ -263,7 +263,7 @@
       "correctAnswer": "A high-speed vessel.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-023",
@@ -274,7 +274,7 @@
       "correctAnswer": "Depends on the depicted red/green/white light geometry; retain source visual reference for exact passing side.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-024",
@@ -285,7 +285,7 @@
       "correctAnswer": "Depends on the depicted ferry-light arrangement; rebuild from verified CEVNI Annex 3 asset.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-025",
@@ -296,7 +296,7 @@
       "correctAnswer": "Depends on the depicted visual/signal combination; retain source visual reference for verification.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-026",
@@ -307,7 +307,7 @@
       "correctAnswer": "The vessel is leaving a harbour/tributary and intends to cross the waterway.",
       "visualRequired": false,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-027",
@@ -318,7 +318,7 @@
       "correctAnswer": "Turning to starboard.",
       "visualRequired": false,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-028",
@@ -329,7 +329,7 @@
       "correctAnswer": "The vessel is going astern / using astern propulsion.",
       "visualRequired": false,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-029",
@@ -340,7 +340,7 @@
       "correctAnswer": "One long blast.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     },
     {
       "id": "PW-CEVNI-EXAM-INTEL-RYA-A-030",
@@ -351,7 +351,7 @@
       "correctAnswer": "Retain source visual/audio-pattern reference; verify against the applicable CEVNI distress provision before activation.",
       "visualRequired": true,
       "activation": "DO_NOT_USE_IN_LIVE_ASSESSMENT_UNTIL_VERIFIED",
-      "notes": "Project Watch paraphrase/concept capture; not copied RYA question wording or artwork."
+      "notes": "Helmlore paraphrase/concept capture; not copied RYA question wording or artwork."
     }
   ]
 }

@@ -9,7 +9,7 @@ function cevni14717TeachingSections(){
  ['FAMILY 3 — LIGHT & SOUND TERMS','These definitions establish the vocabulary used later in Lights & Day Signals and Sound Lab. Here we learn what the terms mean; the dedicated libraries will teach recognition and rehearsal.'],
  ['FAMILY 4 — OPERATIONAL TERMS','Finally learn the terms used repeatedly in navigation rules: stationary, under way, reduced visibility, safe speed, fairway, banks, upstream/downstream, radar and Inland AIS.']
  ];
- return intro.concat(CEVNI_14717_DEFINITIONS.map((d,idx)=>[`${d[0]}.${String(idx+1).padStart(2,'0')} — ${d[1]}`,`${d[2]}\n\nPROJECT WATCH TEACHING POINT: ${d[3]}`]));
+ return intro.concat(CEVNI_14717_DEFINITIONS.map((d,idx)=>[`${d[0]}.${String(idx+1).padStart(2,'0')} — ${d[1]}`,`${d[2]}\n\nHELMLORE TEACHING POINT: ${d[3]}`]));
 }
 function cevni14717InstallCourseContent(){
  if(!window.CEVNI_MODULES||!CEVNI_MODULES[1])return;
@@ -30,7 +30,7 @@ window.cevniOpenLesson=function(i,step=0){
    const card=document.querySelector('#cevniLessonArea .cvBriefingCard');
    if(card){
      const p=card.querySelector('p');
-     if(p){const parts=p.textContent.split('PROJECT WATCH TEACHING POINT:'); if(parts.length>1){p.textContent=parts[0].trim();const tp=document.createElement('div');tp.className='cvTeachPoint';tp.innerHTML='<b>PROJECT WATCH TEACHING POINT</b><br>'+parts.slice(1).join('PROJECT WATCH TEACHING POINT:').trim();p.after(tp);}}
+     if(p){const parts=p.textContent.split('HELMLORE TEACHING POINT:'); if(parts.length>1){p.textContent=parts[0].trim();const tp=document.createElement('div');tp.className='cvTeachPoint';tp.innerHTML='<b>HELMLORE TEACHING POINT</b><br>'+parts.slice(1).join('HELMLORE TEACHING POINT:').trim();p.after(tp);}}
      const chip=document.createElement('span');chip.className='cvSourceChip';chip.textContent='SOURCE • CEVNI REV.6 • ARTICLE 1.01';card.appendChild(chip);
    }
  }

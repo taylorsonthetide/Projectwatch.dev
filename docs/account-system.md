@@ -13,7 +13,7 @@ registration until a real backend is configured. No pretend accounts are created
    password length of 12. Configure a production mail sender before launch.
 4. Set the Auth Site URL to the actual site. Allow its exact `accounts.html` URL
    as a redirect URL for confirmation and password recovery. For development:
-   `https://taylorsonthetide.github.io/Projectwatch.dev/accounts.html`.
+   `https://helmlore.com/accounts.html`.
 5. Set the project URL and **publishable** key in `js/account-config.js`.
    Never use a secret or service-role key in browser code or GitHub. Set
    `enabled: true` only once the backend and email callbacks have been tested.

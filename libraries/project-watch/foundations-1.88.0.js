@@ -1,9 +1,9 @@
-/* Project Watch content library; copied without editing questions or answer indexes. */
+/* Helmlore content library; copied without editing questions or answer indexes. */
 window.PW_ORIGINAL_LIBRARIES = window.PW_ORIGINAL_LIBRARIES || {};
 window.PW_ORIGINAL_LIBRARIES.CR_QUIZ = [ ['What is the main purpose of the COLREGs?',['To set harbour fees','To prevent collisions at sea','To replace good seamanship'],1,'The COLREGs provide internationally agreed navigation rules intended to prevent collisions at sea.'],
  ['Which Rule requires every vessel to maintain a proper look-out?',['Rule 5','Rule 10','Rule 19'],0,'Rule 5 is the look-out rule and applies to every vessel.'],
  ['Which group contains the core rules for look-out, safe speed, risk of collision and action to avoid collision?',['Rules 20–23','Rules 32–37','Rules 5–8'],2,'Rules 5, 6, 7 and 8 form the core sequence taught in this stage.'],
- ['Before deciding who gives way, what should you identify first?',['Which vessel is larger','The actual situation and applicable Rules','Which vessel has the newest electronics'],1,'Project Watch teaches you to identify the navigational situation and applicable Rules before deciding obligations.'],
+ ['Before deciding who gives way, what should you identify first?',['Which vessel is larger','The actual situation and applicable Rules','Which vessel has the newest electronics'],1,'Helmlore teaches you to identify the navigational situation and applicable Rules before deciding obligations.'],
  ['What is the basic duty of a give-way vessel?',['Always stop immediately','Maintain course and speed whatever happens','Take early and substantial action to keep well clear'],2,'A give-way vessel should take early and substantial action to keep well clear.'],
  ['Does being the stand-on vessel mean you can stop monitoring the other vessel?',['No — continue to monitor and be ready to act as Rule 17 requires','Yes — the other vessel has all responsibility','Only during daylight'],0,'Stand-on status does not remove the duty to keep a proper look-out and monitor the developing situation.'],
  ['Which Rule deals specifically with narrow channels?',['Rule 10','Rule 9','Rule 19'],1,'Rule 9 contains the narrow-channel provisions.'],

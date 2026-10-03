@@ -2,11 +2,11 @@
 <title id="title">Read a tide prediction</title><desc id="desc">Use the named place, date, time zone and height datum together. Fictional schematic for learning, not for navigation.</desc>
 <defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
 <rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
-<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">HELMLORE  /  TIDAL NAVIGATION</text>
 <text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Read a tide prediction</text>
 <text x="38" y="151" fill="#456573" font-size="17" font-weight="500">Use the named place, date, time zone and height datum together.</text>
 <rect x="38" y="180" width="884" height="270" rx="16" fill="#ffffff" stroke="#cee1e5"/><text x="65" y="215" fill="#087e90" font-size="17" font-weight="800">FICTIONAL PORT  ·  TRAINING DAY  ·  LOCAL TIME</text><rect x="64" y="230" width="830" height="46" rx="5" fill="#d9ecee"/><text x="82" y="259" fill="#456573" font-size="17" font-weight="800">EVENT</text><text x="450" y="259" fill="#456573" font-size="17" font-weight="800">TIME</text><text x="656" y="259" fill="#456573" font-size="17" font-weight="800">HEIGHT ABOVE DATUM</text><path d="M64 326L894 326" fill="none" stroke="#c9dcdf" stroke-width="2"/><path d="M64 393L894 393" fill="none" stroke="#c9dcdf" stroke-width="2"/><text x="82" y="307" fill="#15384a" font-size="23" font-weight="600">Low water</text><text x="450" y="307" fill="#15384a" font-size="23" font-weight="600">08:00</text><text x="656" y="307" fill="#15384a" font-size="23" font-weight="600">0.8 m</text><text x="82" y="374" fill="#15384a" font-size="23" font-weight="600">High water</text><text x="450" y="374" fill="#15384a" font-size="23" font-weight="600">14:00</text><text x="656" y="374" fill="#15384a" font-size="23" font-weight="600">4.2 m</text><text x="82" y="430" fill="#6b5360" font-size="16" font-weight="600">Example only • check the official local prediction</text>
 <path d="M38 493H922" stroke="#c9dcdf"/>
 <text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
-<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">HELMLORE</text>
 </svg>

@@ -36,7 +36,7 @@ const PW1490_LIGHTS=[
  {id:'stern',title:'Stern light',teach:'White light visible over a 135° horizontal arc centred astern.',kind:'stern',source:'ch3'},
  {id:'allround',title:'All-round light',teach:'A light visible through an uninterrupted horizontal arc of 360°.',kind:'all',source:'ch3'},
  {id:'aspect',title:'Aspect changes the picture',teach:'The same vessel presents different visible lights from ahead, abeam and astern. Describe what is actually visible before identifying the display.',kind:'aspect',source:'ch3'},
- {id:'daynight',title:'Day / night pairing',teach:'Project Watch will pair day marks and night displays by operational meaning instead of teaching two disconnected lists.',kind:'shapes',source:'ch3'}
+ {id:'daynight',title:'Day / night pairing',teach:'Helmlore will pair day marks and night displays by operational meaning instead of teaching two disconnected lists.',kind:'shapes',source:'ch3'}
 ];
 const PW1490_STRUCTURES=[
  {id:'fixedbridge',title:'Fixed bridge • choose the opening',teach:'Read the complete sign/marking arrangement before committing to an opening. Recommended and prohibited indications are operationally different.',scene:'bridge',source:'rev6'},

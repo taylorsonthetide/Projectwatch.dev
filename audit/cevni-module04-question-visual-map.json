@@ -395,7 +395,7 @@
     {
       "id": "PW-CEVNI-M04-REVIEW-005",
       "stage": "REVIEW",
-      "prompt": "Why must Project Watch keep a local-rules layer with these visuals?",
+      "prompt": "Why must Helmlore keep a local-rules layer with these visuals?",
       "answer": "Chapter 9 permits specified regional/national variations",
       "basis": "CEVNI Chapter 3 / Annex 3",
       "liveIn1651": false,

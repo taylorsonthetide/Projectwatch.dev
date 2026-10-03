@@ -2,11 +2,11 @@
 <title id="title">Between low and high water</title><desc id="desc">The rate of change varies; a smooth curve is only a teaching model. Fictional schematic for learning, not for navigation.</desc>
 <defs><linearGradient id="sea" x2="0" y2="1"><stop stop-color="#97deed"/><stop offset="1" stop-color="#16849e"/></linearGradient></defs>
 <rect width="960" height="540" fill="#edf5f5"/><rect width="960" height="122" fill="#092e42"/>
-<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">PROJECT WATCH  /  TIDAL NAVIGATION</text>
+<text x="38" y="39" fill="#8ee1dc" font-size="14" font-weight="700">HELMLORE  /  TIDAL NAVIGATION</text>
 <text x="38" y="86" fill="#fff" font-size="31" font-weight="700">Between low and high water</text>
 <text x="38" y="151" fill="#456573" font-size="17" font-weight="500">The rate of change varies; a smooth curve is only a teaching model.</text>
 <rect x="38" y="180" width="884" height="278" rx="16" fill="#ffffff" stroke="#cee1e5"/><path d="M104 412L867 412" fill="none" stroke="#577989" stroke-width="3"/><path d="M104 412L104 211" fill="none" stroke="#577989" stroke-width="3"/><path d="M123 346L846 346" fill="none" stroke="#d0e1e5" stroke-width="2" stroke-dasharray="6 8"/><path d="M123 280L846 280" fill="none" stroke="#d0e1e5" stroke-width="2" stroke-dasharray="6 8"/><path d="M135 394C235 390 306 367 362 315S485 224 613 218S770 217 840 222" fill="none" stroke="#07849a" stroke-width="8" stroke-linecap="round"/><circle cx="135" cy="394" r="7" fill="#087e90" stroke="#fff" stroke-width="2"/><circle cx="466" cy="253" r="7" fill="#087e90" stroke="#fff" stroke-width="2"/><circle cx="705" cy="218" r="7" fill="#087e90" stroke="#fff" stroke-width="2"/><text x="129" y="440" fill="#15384a" font-size="16" font-weight="800">LOW WATER</text><text x="670" y="440" fill="#15384a" font-size="16" font-weight="800">HIGH WATER</text><text x="135" y="241" fill="#456573" font-size="14" font-weight="800">HEIGHT</text><text x="843" y="440" fill="#456573" font-size="14" font-weight="800" text-anchor="end">TIME →</text><text x="265" y="289" fill="#087e90" font-size="20" font-weight="800">Faster rise</text><text x="617" y="260" fill="#087e90" font-size="20" font-weight="800">Slower near high</text><text x="570" y="397" fill="#456573" font-size="16" font-weight="600">Example shape • local curves vary</text>
 <path d="M38 493H922" stroke="#c9dcdf"/>
 <text x="38" y="517" fill="#496a76" font-size="13" font-weight="700">SCHEMATIC • FICTIONAL EXAMPLES • NOT FOR NAVIGATION</text>
-<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">PROJECT WATCH</text>
+<text x="922" y="517" fill="#6a8c96" font-size="12" font-weight="700" text-anchor="end">HELMLORE</text>
 </svg>

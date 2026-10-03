@@ -39,7 +39,7 @@ def callout(x,y,head,rows):
  return s
 def base():
  s=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img"><defs><clipPath id="panel"><rect x="{X}" y="{Y}" width="1210" height="{PH}"/></clipPath><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#167ca2"/></marker></defs><rect width="1600" height="1200" fill="#f4f1e7"/><g font-family="Arial,Helvetica,sans-serif">'''
- s+=text(75,51,'PROJECT WATCH • COASTAL TRAINING CHART',14,'#3f6470',extra='letter-spacing="2"')+text(75,90,'Alder Bay & East Island',34,'#173d4b',extra='font-weight="700"')
+ s+=text(75,51,'HELMLORE • COASTAL TRAINING CHART',14,'#3f6470',extra='letter-spacing="2"')+text(75,90,'Alder Bay & East Island',34,'#173d4b',extra='font-weight="700"')
  s+=text(75,119,'PW–CW01  |  Fictional coast  |  Mercator  |  WGS 84  |  Depths in metres',16)
  s+=f'<rect x="{X}" y="{Y}" width="1210" height="{PH}" fill="#fbfaf5" stroke="#213b44" stroke-width="2"/><g clip-path="url(#panel)">'
  # Broad coastal depth bands. All depths and geography invented.
@@ -117,7 +117,7 @@ def base():
  scale=S*(merc(50+5/60+1/60)-merc(50+5/60))
  for i in range(3):s+=f'<rect x="{1340+i*scale/2}" y="635" width="{scale/2}" height="9" fill="'+('#334f59' if i%2==0 else '#fff')+'" stroke="#334f59"/>'
  s+=text(1340,666,'0',13)+text(1340+scale,666,'1 NM',13,'#26333a','middle')+text(1340,692,'1′ latitude ≈ 1 NM',14)
- s+=text(1340,1120,'ORIGINAL PROJECT WATCH',12,'#57717b')+text(1340,1141,'Training chart PW–CW01 • v1',12,'#57717b')
+ s+=text(1340,1120,'ORIGINAL HELMLORE',12,'#57717b')+text(1340,1141,'Training chart PW–CW01 • v1',12,'#57717b')
  return s
 P=(4,10);A=(8,10);B=(4,4);C=(7,17)
 nm_lon=1/math.cos(math.radians(50+4/60))
@@ -142,5 +142,5 @@ plates={
 }
 for name,(title,steps,overlay) in plates.items():
  (OUT/f'{name}.svg').write_text(footer(base(),title,steps,overlay))
-(OUT/'chart-metadata.json').write_text(json.dumps({'id':'PW-CW01','fictional':True,'navigationUse':False,'projection':'Mercator','datum':'WGS84','bounds':{'west':LEFT,'east':RIGHT,'south':BOTTOM,'north':TOP},'viewBox':[0,0,W,H],'panel':{'x':X,'y':Y,'width':1210,'height':PH},'points':{'P':P,'A':A,'B':B,'C':C,'DR':D,'EP':E},'license':'Original Project Watch artwork; no third-party chart or geography reproduced.'},indent=2))
+(OUT/'chart-metadata.json').write_text(json.dumps({'id':'PW-CW01','fictional':True,'navigationUse':False,'projection':'Mercator','datum':'WGS84','bounds':{'west':LEFT,'east':RIGHT,'south':BOTTOM,'north':TOP},'viewBox':[0,0,W,H],'panel':{'x':X,'y':Y,'width':1210,'height':PH},'points':{'P':P,'A':A,'B':B,'C':C,'DR':D,'EP':E},'license':'Original Helmlore artwork; no third-party chart or geography reproduced.'},indent=2))
 print(f'Generated {len(plates)} calculated chart plates; chart panel height {PH:.3f}px')
