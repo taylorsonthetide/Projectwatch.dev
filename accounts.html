@@ -1,5 +1,9 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#031923"><title>Your account · Helmlore</title><link rel="stylesheet" href="css/accounts.css?brand=1.99.2"><script src="js/account-config.js?brand=1.99.2"></script><script src="js/account-storage.js?brand=1.99.2"></script></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#031923"><title>Your account · Helmlore</title><link rel="stylesheet" href="css/accounts.css?brand=1.99.2"><script src="js/account-config.js?brand=1.99.2"></script><script src="js/account-storage.js?brand=1.99.2"></script><style id="helmlore-footer-style">
+.helmlore-footer{max-width:1200px;margin:0 auto;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));border-top:1px solid #ffffff22;text-align:center;color:#a8bec9;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.helmlore-footer p{margin:4px 0}.helmlore-footer a{color:#6ee0ff;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.helmlore-footer a:focus-visible{outline:2px solid #6ee0ff;outline-offset:4px;border-radius:2px}
+</style>
+</head>
 <body><main class="account-shell">
 <section class="account-intro"><span class="eyebrow">HELMLORE · FREE BOATING TRAINING</span><h1>Your learning.<br>Your vessel.<br>Your own pace.</h1><p>Create an account to keep your vessel details and learning progress together. Pick Watch One, Watch Two or add your own boat after signing in.</p><ul><li>Free access to the training courses</li><li>Continue learning across your devices</li><li>Keep your progress in one place</li></ul><p class="account-small">Build your boating knowledge with Helmlore.</p></section>
 <section class="account-card" aria-label="Your account">
@@ -11,4 +15,8 @@
 <p id="signupNote" class="account-small" hidden>We use your email for your account and essential account messages. Signing up does not subscribe you to marketing.</p></div>
 <div id="profilePanel" hidden><h2>You’re signed in</h2><p id="profileEmail"></p><p>Your vessel choice and course progress belong to this account.</p><div class="account-profile-actions"><a href="index.html" class="account-primary">Continue to training →</a><button type="button" id="importProgress" class="account-secondary" hidden>Import existing progress from this browser</button><a href="account-admin.html" id="adminLink" hidden>Owner dashboard</a><button id="signOut" type="button" class="account-secondary">Log out</button></div><p class="account-small" id="importNote" hidden>Import adds missing vessel and progress records. Existing account records take priority. The original browser data is preserved.</p></div>
 <div class="account-footer"><a href="index.html" id="developmentReturn">Back to Helmlore</a><p>Account system · development preview</p></div>
-</section></main><script src="js/vendor/supabase-2.102.0.js"></script><script src="js/account-service.js?brand=1.99.2"></script><script src="js/account-page.js?brand=1.99.2"></script></body></html>
+</section></main><script src="js/vendor/supabase-2.102.0.js"></script><script src="js/account-service.js?brand=1.99.2"></script><script src="js/account-page.js?brand=1.99.2"></script><footer class="helmlore-footer" aria-label="Contact and copyright">
+<p>Contact: <a href="mailto:Helmlore.com@gmail.com">Helmlore.com@gmail.com</a></p>
+<p><small>&copy; 2026 Helmlore. All rights reserved.</small></p>
+</footer>
+</body></html>
