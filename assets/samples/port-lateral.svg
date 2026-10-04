@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" class="buoySvg" viewBox="0 0 130 170" aria-label="Port-hand lateral mark">
+   <line x1="65" y1="51" x2="65" y2="64" stroke="#222" stroke-width="3"/>
+   <g class="dayTop"><rect x="55" y="34" width="20" height="15" fill="#e33232"/></g><g class="dayBody"><rect x="43" y="64" width="44" height="78" rx="7" fill="#e33232"/></g>
+   <ellipse class="waterShadow" cx="65" cy="145" rx="31" ry="7" fill="#072b3d" opacity=".55"/><circle class="buoyLamp" data-lamp="red" cx="65" cy="57" r="6" fill="#fff"/>
+  </svg>

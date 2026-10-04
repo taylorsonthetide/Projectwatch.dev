@@ -1,0 +1,35 @@
+[
+  {
+    "id": "port",
+    "prompt": "In IALA Region A, you are travelling with the conventional direction of buoyage. Which side do you leave the red port-hand mark on?",
+    "options": [
+      "Your starboard side (right)",
+      "Your port side (left)",
+      "Either side, regardless of the channel"
+    ],
+    "correct": 1,
+    "explanation": "With the conventional direction of buoyage, leave the red port-hand mark on your port side."
+  },
+  {
+    "id": "topmark",
+    "prompt": "Which topmark belongs to a starboard-hand lateral mark in Region A, when a topmark is fitted?",
+    "options": [
+      "A red cylinder (can)",
+      "Two black balls",
+      "A green cone pointing upwards"
+    ],
+    "correct": 2,
+    "explanation": "The starboard-hand topmark is a single green cone with its point upwards."
+  },
+  {
+    "id": "return",
+    "prompt": "You turn around and travel against the conventional direction of buoyage through the same channel. Which side is the red port-hand mark now on?",
+    "options": [
+      "Your starboard side (right)",
+      "Your port side (left)",
+      "It becomes a green mark"
+    ],
+    "correct": 0,
+    "explanation": "Travelling against the conventional direction reverses the marks\u2019 sides relative to your boat. The mark stays red and remains a port-hand mark."
+  }
+]
