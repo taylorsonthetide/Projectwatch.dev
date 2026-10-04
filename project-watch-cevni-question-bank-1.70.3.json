@@ -4043,7 +4043,7 @@
     "revision": 1,
     "title": "Bridge approach",
     "scenario": "The left opening carries A.1 and the centre opening carries D.1.",
-    "question": "Which interpretation is correct?",
+    "question": "The left opening carries A.1 and the centre opening carries D.1. Which interpretation is correct?",
     "choices": [
       "Left is prohibited; centre is the recommended opening",
       "Both openings mean the same thing",
@@ -4062,7 +4062,7 @@
     "revision": 1,
     "title": "Restricted headroom",
     "scenario": "A bridge opening displays C.2 with a clearance figure.",
-    "question": "What is the correct decision process?",
+    "question": "A bridge opening displays C.2 with a clearance figure. What is the correct decision process?",
     "choices": [
       "Compare the stated headroom with your vessel air draught and conditions",
       "Treat it as a speed limit",
@@ -4081,7 +4081,7 @@
     "revision": 1,
     "title": "Shallow reach",
     "scenario": "A C.1 depth restriction is displayed ahead.",
-    "question": "What matters most before proceeding?",
+    "question": "A C.1 depth restriction is displayed ahead. What matters most before proceeding?",
     "choices": [
       "Available depth versus vessel draught and an appropriate margin",
       "The vessel name",
@@ -4100,7 +4100,7 @@
     "revision": 1,
     "title": "Fairway obstruction",
     "scenario": "Annex 8 marking shows an obstruction and a clear navigable side.",
-    "question": "What should guide your route?",
+    "question": "Annex 8 marking shows an obstruction and a clear navigable side. What should guide your route?",
     "choices": [
       "The marked clear side while maintaining a proper lookout",
       "The closest bank regardless of marks",
@@ -4438,7 +4438,7 @@
     "order": 31,
     "title": "Lock approach — authority and fitness",
     "scenario": "You are approaching a busy lock. The nominated boatmaster is severely fatigued and another qualified person is available on board.",
-    "question": "What is the correct operational decision?",
+    "question": "You are approaching a busy lock. The nominated boatmaster is severely fatigued and another qualified person is available on board. What is the correct operational decision?",
     "choices": [
       "Continue because nomination overrides fatigue",
       "Transfer effective charge to a qualified, fit person before continuing",
@@ -4458,7 +4458,7 @@
     "order": 32,
     "title": "Pushed convoy — who leads?",
     "scenario": "A powered pusher is rigidly connected behind two barges and provides the main propulsion. The formation is approaching a restricted reach.",
-    "question": "Who is the default convoy boatmaster under the CEVNI framework?",
+    "question": "A powered pusher is rigidly connected behind two barges and provides the main propulsion. The formation is approaching a restricted reach. Who is the default convoy boatmaster under the CEVNI framework?",
     "choices": [
       "The boatmaster of the pusher providing the main propulsion",
       "The boatmaster of the forward barge",
@@ -4478,7 +4478,7 @@
     "order": 33,
     "title": "Towed convoy — retained duty",
     "scenario": "A convoy boatmaster orders a towed vessel to maintain position. Its own boatmaster then sees an immediate local hazard affecting that vessel.",
-    "question": "What should happen?",
+    "question": "A convoy boatmaster orders a towed vessel to maintain position. Its own boatmaster then sees an immediate local hazard affecting that vessel. What should happen?",
     "choices": [
       "Do nothing until a new convoy order arrives",
       "Take the steps required by the circumstances while remaining within the convoy authority structure",
@@ -4498,7 +4498,7 @@
     "order": 34,
     "title": "Floating equipment in operation",
     "scenario": "A dredger is working in the fairway. Its nominated boatmaster proposes supervising from the bank by radio.",
-    "question": "Is that sufficient for the Article 1.02 presence requirement?",
+    "question": "A dredger is working in the fairway. Its nominated boatmaster proposes supervising from the bank by radio. Is that sufficient for the Article 1.02 presence requirement?",
     "choices": [
       "Yes, if radio coverage is good",
       "No; the boatmaster is required on board while the floating equipment is operating",
@@ -4518,7 +4518,7 @@
     "order": 35,
     "title": "Moored vessel — boatmaster absent",
     "scenario": "A vessel is secured alongside overnight. The boatmaster has left, but a person is assigned the required watch and surveillance duty.",
-    "question": "Who carries the immediate compliance responsibility described by Article 1.02?",
+    "question": "A vessel is secured alongside overnight. The boatmaster has left, but a person is assigned the required watch and surveillance duty. Who carries the immediate compliance responsibility described by Article 1.02?",
     "choices": [
       "Nobody until the boatmaster returns",
       "The person responsible for watch and surveillance",
@@ -4538,7 +4538,7 @@
     "order": 36,
     "title": "Special-risk stretch",
     "scenario": "A qualified boatmaster reaches a waterway stretch for which the competent authority requires specific additional authorization.",
-    "question": "What is the correct action?",
+    "question": "A qualified boatmaster reaches a waterway stretch for which the competent authority requires specific additional authorization. What is the correct action?",
     "choices": [
       "Proceed because the general qualification is enough everywhere",
       "Ensure the required specific authorization is held before navigating the stretch",
@@ -4765,7 +4765,7 @@
     "module": 4,
     "stage": "APPLY",
     "order": 71,
-    "question": "Which light should you not expect to be visible from this ahead aspect?",
+    "question": "You are looking almost directly at the bow of a motorized vessel proceeding alone. You see a white masthead light with red and green sidelights. Which light should you not expect to be visible from this ahead aspect?",
     "choices": [
       "The stern light",
       "The masthead light",
@@ -4786,7 +4786,7 @@
     "module": 4,
     "stage": "APPLY",
     "order": 72,
-    "question": "What is the operational lesson?",
+    "question": "A sailing vessel is also using mechanical propulsion and displays a black cone point-down. What is the operational lesson?",
     "choices": [
       "Treat the display as the prescribed motor-sailing day marking and read the vessel’s full status/context",
       "Assume it is anchored",
@@ -4807,7 +4807,7 @@
     "module": 4,
     "stage": "APPLY",
     "order": 73,
-    "question": "What should you do next?",
+    "question": "Ahead you identify the lead motorized vessel of a towed convoy with two white masthead lights vertically. What should you do next?",
     "choices": [
       "Read the complete convoy and its extent before making a passing/crossing decision",
       "Treat it as a single small craft",
@@ -4828,7 +4828,7 @@
     "module": 4,
     "stage": "APPLY",
     "order": 74,
-    "question": "What does that side communicate?",
+    "question": "A working vessel shows the prescribed pair of green markings on one side. What does that side communicate?",
     "choices": [
       "The fairway is clear on that side",
       "No entry on that side",
@@ -4849,7 +4849,7 @@
     "module": 4,
     "stage": "APPLY",
     "order": 75,
-    "question": "Which side is indicated as clear for passage?",
+    "question": "A working vessel shows red-white-red vertically and also shows two red lights on one side and two green lights on the other. Which side is indicated as clear for passage?",
     "choices": [
       "The side showing the two green lights",
       "The side showing the two red lights",
@@ -4870,7 +4870,7 @@
     "module": 4,
     "stage": "APPLY",
     "order": 76,
-    "question": "Which standard should govern the passage?",
+    "question": "Your CEVNI base knowledge is correct, but you are entering a jurisdiction with published Chapter 9 variations. Which standard should govern the passage?",
     "choices": [
       "CEVNI base plus the applicable competent-authority/local variation",
       "The app diagram alone",
@@ -5138,7 +5138,7 @@
     "module": 5,
     "stage": "APPLY",
     "order": 71,
-    "question": "Which sound pattern is the request?",
+    "question": "You intend to request overtaking on the port side under the applicable CEVNI overtaking procedure. Which sound pattern is the request?",
     "choices": [
       "Two long followed by two short",
       "Two long followed by one short",
@@ -5159,7 +5159,7 @@
     "module": 5,
     "stage": "APPLY",
     "order": 72,
-    "question": "What is it communicating?",
+    "question": "The vessel ahead responds with five short blasts. What is it communicating?",
     "choices": [
       "I cannot be overtaken",
       "Overtake on my port side",
@@ -5180,7 +5180,7 @@
     "module": 5,
     "stage": "APPLY",
     "order": 73,
-    "question": "Which Annex 6 pattern applies?",
+    "question": "You are leaving a harbour and intend to go to port. Which Annex 6 pattern applies?",
     "choices": [
       "Three long followed by two short",
       "One long followed by two short",
@@ -5201,7 +5201,7 @@
     "module": 5,
     "stage": "APPLY",
     "order": 74,
-    "question": "What is the sound-signal requirement taught here?",
+    "question": "You are proceeding alone in reduced visibility and are not navigating by radar. What is the sound-signal requirement taught here?",
     "choices": [
       "One long at intervals of not more than one minute",
       "One short every minute",
@@ -5222,7 +5222,7 @@
     "module": 5,
     "stage": "APPLY",
     "order": 75,
-    "question": "What communication principle applies?",
+    "question": "Your vessel is equipped with the required inland-waterway radiotelephone and you are approaching a blind section. What communication principle applies?",
     "choices": [
       "Use the ship-to-ship network/reporting procedure required by Article 4.05 and the competent authority",
       "Turn the radio off to keep the channel clear",
@@ -5243,7 +5243,7 @@
     "module": 5,
     "stage": "APPLY",
     "order": 76,
-    "question": "Which meaning governs there?",
+    "question": "A local competent-authority rule gives the repeated short + long signal a locally prescribed meaning. Which meaning governs there?",
     "choices": [
       "The applicable local/competent-authority provision",
       "The app’s base CEVNI wording regardless",
@@ -5663,7 +5663,7 @@
     "module": 6,
     "stage": "APPLY",
     "order": 71,
-    "question": "What is the correct operational decision?",
+    "question": "You are in a motorized small craft. A large commercial vessel is crossing your intended track. Continuing would require the commercial vessel to alter. What is the correct operational decision?",
     "choices": [
       "Keep clear and leave the commercial vessel room to hold course and manoeuvre",
       "Continue because it is on your port side",
@@ -5684,7 +5684,7 @@
     "module": 6,
     "stage": "APPLY",
     "order": 72,
-    "question": "For the relevant CEVNI category rules, what changed?",
+    "question": "A small sailing craft starts its engine while still carrying sail and approaches another small sailing craft. For the relevant CEVNI category rules, what changed?",
     "choices": [
       "It is now treated as motorized",
       "Nothing; visible sails always make it a sailing vessel",
@@ -5705,7 +5705,7 @@
     "module": 6,
     "stage": "APPLY",
     "order": 73,
-    "question": "What should you do?",
+    "question": "You are closing a slower vessel from astern, but a bend and opposing traffic mean the fairway is not unquestionably wide enough. What should you do?",
     "choices": [
       "Remain behind until overtaking can be made safely",
       "Begin overtaking and rely on the other vessel to slow",
@@ -5726,7 +5726,7 @@
     "module": 6,
     "stage": "APPLY",
     "order": 74,
-    "question": "What is your starting obligation?",
+    "question": "You are proceeding upstream and meet a downstream vessel where the normal upstream/downstream procedure applies. What is your starting obligation?",
     "choices": [
       "Give way to the downstream vessel, considering local circumstances and traffic",
       "Require the downstream vessel to stop",
@@ -5747,7 +5747,7 @@
     "module": 6,
     "stage": "APPLY",
     "order": 75,
-    "question": "What should happen first?",
+    "question": "You intend to leave a harbour and cross the waterway, but approaching traffic would have to brake sharply. What should happen first?",
     "choices": [
       "Wait until the manoeuvre can be made without forcing abrupt course or speed changes",
       "Sound and cross immediately",
@@ -5768,7 +5768,7 @@
     "module": 6,
     "stage": "APPLY",
     "order": 76,
-    "question": "What is the correct approach?",
+    "question": "Visibility has deteriorated severely. You are tempted to continue using only the ordinary visual encounter rules. What is the correct approach?",
     "choices": [
       "Apply the specific Chapter 6 reduced-visibility regime and applicable local requirements",
       "Use the daylight crossing rules unchanged",
@@ -6169,7 +6169,7 @@
     "module": 7,
     "stage": "APPLY",
     "order": 71,
-    "question": "What should you do?",
+    "question": "You are in a small pleasure craft. Larger commercial traffic is waiting and the lock has not invited you in. What should you do?",
     "choices": [
       "Wait; enter only when invited and after the other vessels when sharing the lock",
       "Enter first because you are more manoeuvrable",
@@ -6190,7 +6190,7 @@
     "module": 7,
     "stage": "APPLY",
     "order": 72,
-    "question": "What is the correct decision?",
+    "question": "You can see the preparation aspect but the chamber looks empty. What is the correct decision?",
     "choices": [
       "Remain outside until entry is permitted",
       "Enter because the chamber is visibly clear",
@@ -6211,7 +6211,7 @@
     "module": 7,
     "stage": "APPLY",
     "order": 73,
-    "question": "What is the correct handling?",
+    "question": "You are made fast in the chamber and the level is changing. What is the correct handling?",
     "choices": [
       "Tend the mooring lines and fenders; do not use propulsion until permitted to leave",
       "Lock the lines solid and leave them unattended",
@@ -6232,7 +6232,7 @@
     "module": 7,
     "stage": "APPLY",
     "order": 74,
-    "question": "Where may you navigate?",
+    "question": "A bridge opening carries A.10 boards defining the usable passage. Where may you navigate?",
     "choices": [
       "Only within the area between the boards",
       "Anywhere under the bridge with sufficient headroom",
@@ -6253,7 +6253,7 @@
     "module": 7,
     "stage": "APPLY",
     "order": 75,
-    "question": "What do you do?",
+    "question": "You reach a lock where the prescribed entry lights and boards are absent and nobody has instructed you to enter. What do you do?",
     "choices": [
       "Remain outside until expressly ordered by lock staff",
       "Enter slowly",
@@ -6274,7 +6274,7 @@
     "module": 7,
     "stage": "APPLY",
     "order": 76,
-    "question": "Which procedure governs your passage?",
+    "question": "The competent authority publishes a special bridge-passage rule differing from the harmonized base in an area where Chapter 9 permits variation. Which procedure governs your passage?",
     "choices": [
       "The applicable local rule",
       "Ignore it and use the generic rule",
@@ -6675,7 +6675,7 @@
     "module": 8,
     "stage": "APPLY",
     "order": 71,
-    "question": "What is the correct information action?",
+    "question": "Your vessel carries working radiotelephone equipment and you are approaching a blind section. What is the correct information action?",
     "choices": [
       "Make the required ship-to-ship report before entering",
       "Wait until another vessel calls you",
@@ -6696,7 +6696,7 @@
     "module": 8,
     "stage": "APPLY",
     "order": 72,
-    "question": "What should you do?",
+    "question": "Your AIS still shows “moored” after you have got under way. What should you do?",
     "choices": [
       "Update the navigational status immediately",
       "Leave it until the destination",
@@ -6717,7 +6717,7 @@
     "module": 8,
     "stage": "APPLY",
     "order": 73,
-    "question": "What is required?",
+    "question": "You stop inside a mandatory reporting sector and the interruption will exceed two hours. What is required?",
     "choices": [
       "Report the beginning and end of the interruption",
       "Nothing until departure",
@@ -6738,7 +6738,7 @@
     "module": 8,
     "stage": "APPLY",
     "order": 74,
-    "question": "What information process should follow?",
+    "question": "An oncoming vessel appears on radar in a situation governed by the radar-navigation provisions. What information process should follow?",
     "choices": [
       "Use the prescribed radiotelephone contact and agree the passing procedure",
       "Assume AIS gives you priority",
@@ -6759,7 +6759,7 @@
     "module": 8,
     "stage": "APPLY",
     "order": 75,
-    "question": "Is that configuration compliant with the harmonized CEVNI AIS provision?",
+    "question": "A small craft has elected to operate AIS but the ship-to-ship radio receiver is not working. Is that configuration compliant with the harmonized CEVNI AIS provision?",
     "choices": [
       "No — working radio receiving ship-to-ship is also required",
       "Yes — AIS replaces radio",
@@ -6780,7 +6780,7 @@
     "module": 8,
     "stage": "APPLY",
     "order": 76,
-    "question": "What should the passage plan use?",
+    "question": "The waterway authority publishes an AIS/reporting requirement for the sector that differs from the generic training example. What should the passage plan use?",
     "choices": [
       "The applicable current local requirement within the CEVNI framework",
       "Ignore it and use only the generic lesson",
@@ -7181,7 +7181,7 @@
     "module": 9,
     "stage": "APPLY",
     "order": 71,
-    "question": "What is the safe CEVNI decision?",
+    "question": "Deck cargo has been positioned so that the boatmaster’s direct view ahead no longer meets the applicable requirement. What is the safe CEVNI decision?",
     "choices": [
       "Correct the loading/view problem before departure",
       "Depart and rely on AIS",
@@ -7202,7 +7202,7 @@
     "module": 9,
     "stage": "APPLY",
     "order": 72,
-    "question": "What should you do?",
+    "question": "Another vessel has suffered an accident and people are in danger. You can assist without placing your own vessel in danger. What should you do?",
     "choices": [
       "Give immediate assistance",
       "Continue because only authorities may assist",
@@ -7223,7 +7223,7 @@
     "module": 9,
     "stage": "APPLY",
     "order": 73,
-    "question": "What combination is required?",
+    "question": "Your vessel grounds near the fairway where traffic cannot see the obstruction early. What combination is required?",
     "choices": [
       "Notify the competent authority and warn approaching traffic",
       "Only display deck lights",
@@ -7244,7 +7244,7 @@
     "module": 9,
     "stage": "APPLY",
     "order": 74,
-    "question": "What is the correct response?",
+    "question": "Oil is escaping and there is a threat it may enter the waterway. What is the correct response?",
     "choices": [
       "Contain/stop it if safe and notify the nearest competent authority without delay with spill details",
       "Wash it into the water before it spreads onboard",
@@ -7265,7 +7265,7 @@
     "module": 9,
     "stage": "APPLY",
     "order": 75,
-    "question": "What is the correct management approach?",
+    "question": "Used oily rags and ordinary household refuse have accumulated onboard. What is the correct management approach?",
     "choices": [
       "Keep waste categories appropriately separated and deliver through the proper reception route",
       "Burn them onboard",
@@ -7286,7 +7286,7 @@
     "module": 9,
     "stage": "APPLY",
     "order": 76,
-    "question": "What should happen?",
+    "question": "Fuel is flowing and the direct communication method between the receiving vessel and supplier fails. What should happen?",
     "choices": [
       "Interrupt filling immediately",
       "Continue if no spill is visible",
@@ -11444,12 +11444,12 @@
     "order": 1,
     "question": "You see A.1 over the left opening and D.1 over the centre.",
     "answers": [
-      "Use centre D.1 opening",
-      "Use left A.1 opening",
-      "Ignore both"
+      "Use the centre D.1 opening",
+      "Use the left A.1 opening",
+      "Ignore both markings"
     ],
     "correct": 0,
-    "explanation": "A.1 prohibits entry; D.1 identifies the recommended opening.",
+    "explanation": "A.1 prohibits entry; D.1 identifies the recommended opening. Unmarked openings are not the preferred choice.",
     "livePayload": [
       "Bridge opening",
       "You see A.1 over the left opening and D.1 over the centre.",
@@ -11473,12 +11473,12 @@
     "order": 2,
     "question": "A bridge approach displays C.2 with a clearance figure.",
     "answers": [
-      "Compare clearance with actual vessel air draught before committing",
-      "Assume it is safe if another boat passed",
+      "Compare the displayed clearance with the vessel’s actual air draught before committing",
+      "Assume it is safe if another vessel passed",
       "Ignore it at low speed"
     ],
     "correct": 0,
-    "explanation": "C.2 is a restrictive headroom indication.",
+    "explanation": "C.2 is a restrictive headroom indication; the vessel/clearance relationship must be positively assessed.",
     "livePayload": [
       "Headroom",
       "A bridge approach displays C.2 with a clearance figure.",
@@ -12089,7 +12089,7 @@
       "Pass directly over the bifurcation mark"
     ],
     "correct": 0,
-    "explanation": "The bifurcation record belongs to the Marks Library and may indicate the preferable/main fairway side.",
+    "explanation": "At a split, the bifurcation mark helps you identify the fairway branches and any main-fairway indication. Read it together with the chart and local signs before choosing your branch; it does not mean you must always turn right.",
     "livePayload": {
       "id": "op-09",
       "title": "Bifurcation • route choice",
@@ -12106,7 +12106,7 @@
         "Always take the right branch",
         "Pass directly over the bifurcation mark"
       ],
-      "explain": "The bifurcation record belongs to the Marks Library and may indicate the preferable/main fairway side."
+      "explain": "At a split, the bifurcation mark helps you identify the fairway branches and any main-fairway indication. Read it together with the chart and local signs before choosing your branch; it does not mean you must always turn right."
     },
     "sourceRefs": [
       "CEVNI deep teaching practice"
@@ -12120,12 +12120,12 @@
     "order": 10,
     "question": "Floating marks define both sides of the navigable fairway.",
     "answers": [
-      "Use the red right-hand and green left-hand fairway-limit system as the waterway orientation requires",
+      "Read right-hand and left-hand fairway marks using the defined downstream direction, not your boat’s heading",
       "Treat the physical banks as the fairway limits",
       "Steer midway between the banks regardless of marks"
     ],
     "correct": 0,
-    "explanation": "Annex 8 distinguishes the marked fairway from the physical banks.",
+    "explanation": "Annex 8 uses red for the right-hand fairway limit and green for the left-hand limit, viewed in the defined downstream direction. When travelling upstream, those sides reverse relative to your boat. On canals, lakes and similar waters, check the direction designated by the competent authority. The marked fairway need not extend to the banks.",
     "livePayload": {
       "id": "op-10",
       "title": "Fairway limits",
@@ -12139,11 +12139,11 @@
       "vessel": "motor",
       "prompt": "Floating marks define both sides of the navigable fairway.",
       "answers": [
-        "Use the red right-hand and green left-hand fairway-limit system as the waterway orientation requires",
+        "Read right-hand and left-hand fairway marks using the defined downstream direction, not your boat’s heading",
         "Treat the physical banks as the fairway limits",
         "Steer midway between the banks regardless of marks"
       ],
-      "explain": "Annex 8 distinguishes the marked fairway from the physical banks."
+      "explain": "Annex 8 uses red for the right-hand fairway limit and green for the left-hand limit, viewed in the defined downstream direction. When travelling upstream, those sides reverse relative to your boat. On canals, lakes and similar waters, check the direction designated by the competent authority. The marked fairway need not extend to the banks."
     },
     "sourceRefs": [
       "CEVNI deep teaching practice"
@@ -12198,7 +12198,7 @@
       "Treat bridge signs and fairway marks as unrelated"
     ],
     "correct": 0,
-    "explanation": "The composition engine combines Signs, Marks, Structures and Vessel records into one operational decision.",
+    "explanation": "Follow the marked fairway towards the bridge, then read the signs for each opening. Stay clear of the prohibited opening and check that the recommended opening is suitable for your vessel, including clearance and any traffic restrictions.",
     "livePayload": {
       "id": "op-12",
       "title": "Integrated route reading",
@@ -12218,7 +12218,7 @@
         "Use only the nearest physical opening",
         "Treat bridge signs and fairway marks as unrelated"
       ],
-      "explain": "The composition engine combines Signs, Marks, Structures and Vessel records into one operational decision."
+      "explain": "Follow the marked fairway towards the bridge, then read the signs for each opening. Stay clear of the prohibited opening and check that the recommended opening is suitable for your vessel, including clearance and any traffic restrictions."
     },
     "sourceRefs": [
       "CEVNI deep teaching practice"

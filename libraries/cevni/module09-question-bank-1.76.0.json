@@ -185,7 +185,7 @@
       "stage": "rehearsal",
       "prompt": "What does the general Chapter 10 waste duty require?",
       "answers": [
-        "Avoid pollution, minimize waste and limit mixing categories",
+        "Avoid pollution, minimise waste and limit mixing categories",
         "Mix all waste to save space",
         "Pump waste away when no one is watching"
       ],
@@ -426,8 +426,8 @@
       "prompt": "Diesel escapes into the water during bunkering. What do you report?",
       "answers": [
         "Position, quantity, nature and measures taken, without delay",
-        "Only the boat’s paint colour",
-        "Nothing if the leak stops"
+        "Wait until the spill has dispersed before reporting",
+        "Report only if the leak is still continuing"
       ],
       "correct": 0,
       "explanation": "Article 10.04(3) specifies notification details.",
@@ -602,8 +602,8 @@
       "prompt": "What must a grounded vessel’s boatmaster arrange promptly?",
       "answers": [
         "Notice to the nearest competent authority",
-        "A social-media post instead",
-        "Only a maintenance quotation"
+        "Notify the insurer first and wait for instructions before reporting",
+        "Report only if the vessel cannot be refloated"
       ],
       "correct": 0,
       "explanation": "Article 1.17 requires authority notice.",
@@ -631,7 +631,7 @@
     {
       "id": "PW-CEVNI-M09-A08",
       "stage": "assessment",
-      "prompt": "What must be endeavoured when your grounded craft blocks the fairway?",
+      "prompt": "Your grounded boat is blocking the fairway. What should you try to do as soon as possible?",
       "answers": [
         "Clear the obstruction as soon as possible",
         "Leave it indefinitely",

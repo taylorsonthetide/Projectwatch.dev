@@ -79,6 +79,21 @@
     }
     box.append(intro,grid);
   }
+  function signQuizChoices(rows,row,index){
+    const meaning=r=>r.code.replace(/[a-f]$/,'');
+    const title=r=>r.title.trim().toLowerCase().replace(/\s+/g,' ');
+    const candidates=rows.filter(r=>meaning(r)!==meaning(row)&&title(r)!==title(row));
+    const preferred=candidates.filter(r=>r.family===row.family);
+    const pool=preferred.concat(candidates.filter(r=>r.family!==row.family));
+    const wrong=[];
+    for(let n=0;n<pool.length&&wrong.length<2;n++){
+      const candidate=pool[(index*7+n)%pool.length];
+      if(!wrong.some(r=>meaning(r)===meaning(candidate)||title(r)===title(candidate)))wrong.push(candidate);
+    }
+    if(wrong.length!==2)throw new Error('Not enough distinct sign meanings for the quiz');
+    wrong.splice(index%3,0,row);
+    return wrong;
+  }
   let quizIndex=0;
   function verifiedQuiz(){
     const lib=window.PW_CEVNI_ANNEX7_SIGN_LIBRARY;
@@ -87,14 +102,7 @@
     if(!box||!rows.length)return;
     document.querySelectorAll('#pw1540SignSchool .pw1540Tabs button').forEach(b=>b.classList.toggle('on',b.dataset.fam==='QUIZ'));
     const row=rows[quizIndex%rows.length];
-    const others=rows.filter(r=>r.family===row.family&&r.code!==row.code);
-    const a=others[(quizIndex*7+1)%others.length];
-    const b=others[(quizIndex*11+3)%others.length];
-    const choices=[row,a,b].filter((r,i,arr)=>arr.findIndex(x=>x.code===r.code)===i);
-    if(choices.length<3)choices.push(rows.find(r=>r.code!==row.code&&r.code!==a.code));
-    const answerAt=quizIndex%3;
-    const arranged=choices.filter(r=>r.code!==row.code);
-    arranged.splice(answerAt,0,row);
+    const arranged=signQuizChoices(rows,row,quizIndex);
     box.replaceChildren();
     const panel=document.createElement('div');panel.className='pw1540Quiz';
     const meta=document.createElement('div');meta.className='pw1540Meta';meta.textContent='SOURCE-PLATE RECOGNITION • '+(quizIndex%rows.length+1)+' / '+rows.length;

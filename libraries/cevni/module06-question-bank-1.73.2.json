@@ -38,7 +38,7 @@
     {
       "id": "PW-CEVNI-M06-R03",
       "stage": "rehearsal",
-      "prompt": "Two motorized small craft meet with collision risk. What is their normal passing action?",
+      "prompt": "Two motorised small craft meet with collision risk. What is their normal passing action?",
       "answers": [
         "Each veers to starboard to pass port to port",
         "Both turn to port",
@@ -198,7 +198,7 @@
     {
       "id": "PW-CEVNI-M06-C01",
       "stage": "context",
-      "prompt": "You are in a motorized small craft and a large convoy needs room to manoeuvre. What should you do?",
+      "prompt": "You are in a motorised small craft and a large convoy needs room to manoeuvre. What should you do?",
       "answers": [
         "Leave enough room for its course and manoeuvre",
         "Require the convoy to stop for you",
@@ -217,8 +217,8 @@
       "prompt": "A vessel approaches from starboard, but you are near a marked fairway boundary with that boundary to starboard. What should you check before using the simple starboard-gives-way rule?",
       "answers": [
         "The marked-fairway course provision and any small-craft exception",
-        "Only the vessels' paint colour",
-        "Whether the other skipper waves"
+        "Apply the starboard rule without checking either vessel’s position in the fairway",
+        "Give priority solely to the larger vessel"
       ],
       "correct": 0,
       "explanation": "The crossing article contains a marked-fairway boundary provision and category exceptions.",
@@ -392,7 +392,7 @@
       "stage": "assessment",
       "prompt": "Between small craft of different categories, which craft normally gives way to a small craft under sail in a crossing?",
       "answers": [
-        "A motorized small craft",
+        "A motorised small craft",
         "The sailing small craft in every case",
         "Whichever craft is slower"
       ],
@@ -601,8 +601,8 @@
       "prompt": "On a section with a prescribed course, what do mandatory B.1–B.4 signs control?",
       "answers": [
         "The course vessels must follow",
-        "The colour of a private mooring",
-        "The optional shortcut"
+        "Only the recommended course, with no obligation to follow it",
+        "Only the course of commercial vessels"
       ],
       "correct": 0,
       "explanation": "The course on that section is prescribed by the displayed mandatory sign.",

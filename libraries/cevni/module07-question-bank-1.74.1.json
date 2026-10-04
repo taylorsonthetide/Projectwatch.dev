@@ -358,7 +358,7 @@
     {
       "id": "PW-CEVNI-M07-C05",
       "stage": "context",
-      "prompt": "A weir opening has no E.1 boards on both sides and no overhead-bridge authorization. What is the decision?",
+      "prompt": "A weir opening has no E.1 boards on both sides and no overhead-bridge authorisation. What is the decision?",
       "answers": [
         "Do not use that opening",
         "Enter if the water appears deep",

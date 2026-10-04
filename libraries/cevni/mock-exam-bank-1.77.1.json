@@ -400,7 +400,7 @@
       "id": "PW-MOCK-LIGHT-02",
       "section": 2,
       "concept": "light-2",
-      "prompt": "Viewed directly ahead at night, which lights identify an ordinary motorized vessel?",
+      "prompt": "Viewed directly ahead at night, which lights identify an ordinary motorised vessel?",
       "answers": [
         "A white masthead light and red and green sidelights",
         "Only a white stern light",
@@ -438,7 +438,7 @@
       "id": "PW-MOCK-LIGHT-04",
       "section": 2,
       "concept": "light-4",
-      "prompt": "Which additional light identifies a towing motorized vessel from astern at night?",
+      "prompt": "Which additional light identifies a towing motorised vessel from astern at night?",
       "answers": [
         "A yellow stern light",
         "A blue flashing light",
@@ -478,7 +478,7 @@
       "concept": "light-6",
       "prompt": "A craft is under sail but starts using its engine. Which navigation-light rules then become relevant?",
       "answers": [
-        "Those for a motorized vessel",
+        "Those for a motorised vessel",
         "Only those for a vessel at anchor",
         "Only those for a ferry",
         "No navigation lights are required"
@@ -698,7 +698,7 @@
         "They can change closures, restrictions and operating arrangements",
         "They permanently replace CEVNI",
         "They are only for commercial vessels",
-        "Follow the last vessel without checking the current notices"
+        "They affect only information shown on a chart, not traffic arrangements"
       ],
       "correct": 0,
       "explanation": "Temporary directions can materially change the passage plan.",
@@ -715,10 +715,10 @@
       "module": 2,
       "prompt": "A sailing vessel starts using mechanical propulsion. For CEVNI classification, what changes?",
       "answers": [
-        "It is treated as a motorized vessel",
+        "It is treated as a motorised vessel",
         "It remains a sailing vessel for every rule",
         "It becomes a floating establishment",
-        "Assume every vessel has the same classification"
+        "It becomes a non-motorised vessel because its sails remain set"
       ],
       "correct": 0,
       "explanation": "Mechanical propulsion changes the regulatory classification.",
@@ -738,7 +738,7 @@
         "A starboard-to-starboard meeting",
         "A port turn to enter a harbour",
         "A demand to overtake to port",
-        "Hold course and speed until the vessels are alongside"
+        "A port-to-port meeting without changing the displayed board"
       ],
       "correct": 0,
       "explanation": "The upstream vessel indicates the passing course under Article 6.04.",
@@ -758,7 +758,7 @@
         "Still prohibited while opening is prepared",
         "Open for passage in both directions",
         "Open only for vessels under 20 m",
-        "Enter the opening before confirming it is available"
+        "Passage is permitted while the bridge is still moving"
       ],
       "correct": 0,
       "explanation": "The mixed display is preparation, not permission.",
@@ -778,7 +778,7 @@
         "Radar",
         "AIS",
         "An average of the two",
-        "Navigate solely by the AIS screen without maintaining a lookout"
+        "Whichever source has the most recent vessel name"
       ],
       "correct": 0,
       "explanation": "Article 4.06(5) gives this target-tracking priority.",
@@ -798,7 +798,7 @@
         "Its loss and position to the nearest competent authority",
         "Only the item’s replacement cost",
         "Nothing until it is recovered",
-        "Wait until arrival to report the hazard"
+        "Report only if another vessel has already struck the object"
       ],
       "correct": 0,
       "explanation": "Article 1.12 covers dangerous lost objects.",

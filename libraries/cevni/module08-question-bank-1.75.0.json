@@ -25,12 +25,12 @@
       "stage": "rehearsal",
       "prompt": "Who must be aboard for ordinary navigation by radar?",
       "answers": [
-        "A person with the specific radar authorization required by the authority",
+        "A person with the specific radar authorisation required by the authority",
         "Any passenger who has used a plotter",
         "A shore operator only"
       ],
       "correct": 0,
-      "explanation": "The authorized-person condition belongs to Article 4.06.",
+      "explanation": "The authorised-person condition belongs to Article 4.06.",
       "sourceRefs": [
         "CEVNI Rev.6 art. 4.06"
       ],
@@ -39,7 +39,7 @@
     {
       "id": "PW-CEVNI-M08-R03",
       "stage": "rehearsal",
-      "prompt": "When is the radar training exception available without that authorized person?",
+      "prompt": "When is the radar training exception available without that authorised person?",
       "answers": [
         "Training in good visibility by day or night",
         "Routine travel in thick fog",
@@ -121,12 +121,12 @@
       "stage": "rehearsal",
       "prompt": "Does the ordinary Inland AIS carriage requirement cover every small craft?",
       "answers": [
-        "No; Article 4.07 states exceptions and a specific police craft qualification",
-        "Yes, every canoe without exception",
-        "Only if it has a white hull"
+        "Ordinary small craft are excepted, but police vessels equipped with radar are not covered by that small-craft exception",
+        "Yes, all small craft must carry Inland AIS under this provision",
+        "Only small craft navigating at night must carry it"
       ],
       "correct": 0,
-      "explanation": "The provision states the equipment requirement and its exceptions.",
+      "explanation": "Article 4.07 excepts small craft from its ordinary carriage requirement, apart from police vessels equipped with radar. This is an exception to the equipment rule, not a qualification certificate. Check any additional requirements imposed by the competent authority for your waterway.",
       "sourceRefs": [
         "CEVNI Rev.6 art. 4.07"
       ],
@@ -202,8 +202,8 @@
       "prompt": "An upstream vessel navigating by radar detects oncoming traffic. What is the next coordination step?",
       "answers": [
         "Call by radiotelephone and agree the passing procedure",
-        "Rely only on a change of AIS colour",
-        "Continue silently at full speed"
+        "Wait until the vessels are abeam before making the radio call",
+        "Assume the AIS heading alone establishes an agreed passing side"
       ],
       "correct": 0,
       "explanation": "Article 6.32 sets upstream radio coordination.",
@@ -343,7 +343,7 @@
     {
       "id": "PW-CEVNI-M08-C04",
       "stage": "context",
-      "prompt": "You have no radar authorization aboard and fog closes in. Is the good-visibility training exception sufficient?",
+      "prompt": "You have no radar authorisation aboard and fog closes in. Is the good-visibility training exception sufficient?",
       "answers": [
         "No; do not rely on that exception for radar navigation in fog",
         "Yes, the exception covers all weather",
@@ -378,8 +378,8 @@
       "prompt": "Your AIS record still says under way after mooring. What is the operational correction?",
       "answers": [
         "Change the navigational status promptly",
-        "Leave the old status until tomorrow",
-        "Only change the vessel colour"
+        "Leave the old status until the next departure",
+        "Change the destination field instead of the navigational status"
       ],
       "correct": 0,
       "explanation": "Article 4.07 requires the transmitted data to be current.",
@@ -519,7 +519,7 @@
     {
       "id": "PW-CEVNI-M08-A01",
       "stage": "assessment",
-      "prompt": "Which article contains the radar equipment and authorization conditions?",
+      "prompt": "Which article contains the radar equipment and authorisation conditions?",
       "answers": [
         "Article 4.06",
         "Article 7.05",
@@ -554,8 +554,8 @@
       "prompt": "Which supporting instrument is ordinarily specified for navigating by radar?",
       "answers": [
         "A rate-of-turn indicator",
-        "A fish finder only",
-        "A compass rose painted on deck"
+        "An AIS receiver instead of supporting radar instruments",
+        "A depth sounder instead of a rate-of-turn indicator"
       ],
       "correct": 0,
       "explanation": "Article 4.06 requires a rate-of-turn indicator subject to stated exception.",
@@ -569,7 +569,7 @@
       "stage": "assessment",
       "prompt": "What is the purpose of the Article 4.06 good-visibility exception?",
       "answers": [
-        "Radar training without the authorized person aboard",
+        "Radar training without the authorised person aboard",
         "Unrestricted fog navigation",
         "Avoiding the radio requirement"
       ],
@@ -649,12 +649,12 @@
       "stage": "assessment",
       "prompt": "Which condition applies to small-craft AIS carriage under Article 4.07?",
       "answers": [
-        "There is an exception with a specified police-craft qualification",
+        "Ordinary small craft are excepted, but police vessels equipped with radar are not covered by that small-craft exception",
         "Every small craft must carry an Inland AIS transmitter",
         "AIS is forbidden on every small craft"
       ],
       "correct": 0,
-      "explanation": "The article distinguishes general carriage from small-craft exceptions.",
+      "explanation": "Article 4.07 excepts small craft from its ordinary carriage requirement, apart from police vessels equipped with radar. This is an exception to the equipment rule, not a qualification certificate. Check any additional requirements imposed by the competent authority for your waterway.",
       "sourceRefs": [
         "CEVNI Rev.6 art. 4.07"
       ],
@@ -762,8 +762,8 @@
       "prompt": "What information accompanies an Article 6.32 upstream radar call?",
       "answers": [
         "Category, name, direction and position",
-        "Only a vessel colour",
-        "Only the engine model"
+        "Only the vessel name and destination",
+        "Only speed and estimated arrival time"
       ],
       "correct": 0,
       "explanation": "Article 6.32 lists these details.",
@@ -842,8 +842,8 @@
       "prompt": "What are two routine sector messages for a vessel subject to Article 8.02?",
       "answers": [
         "Entry and exit reports",
-        "Only its intended fuel purchase",
-        "A weekly social update"
+        "An entry report only; departure needs no report",
+        "Reports only if the intended route changes"
       ],
       "correct": 0,
       "explanation": "The sector entry and exit are reportable.",

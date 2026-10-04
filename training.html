@@ -1951,7 +1951,7 @@
 <script src="libraries/project-watch/sound-reference-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/colregs-reference-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/course-directory-1.88.0.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/ais-content-1.88.0.js?brand=1.99.2"></script>
+<script src="libraries/project-watch/ais-content-1.88.0.js?v=review20261004"></script>
 <script src="libraries/project-watch/course-content-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/simulator-data-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/sound-data-1.88.0.js?brand=1.99.2"></script>
@@ -1959,13 +1959,13 @@
 <script src="libraries/project-watch/reference-data-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/visual-map-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/lights-master-visuals-1.88.0.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/collision-1.88.0.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/buoyage-1.88.0.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/lights-shapes-1.88.0.js?brand=1.99.2"></script>
+<script src="libraries/project-watch/collision-1.88.0.js?v=review20261004"></script>
+<script src="libraries/project-watch/buoyage-1.88.0.js?v=review20261004"></script>
+<script src="libraries/project-watch/lights-shapes-1.88.0.js?v=review20261004"></script>
 <script src="libraries/project-watch/tss-1.88.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/foundations-1.88.0.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/sound-1.88.0.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/course-finals-1.88.0.js?brand=1.99.2"></script>
+<script src="libraries/project-watch/sound-1.88.0.js?v=review20261004"></script>
+<script src="libraries/project-watch/course-finals-1.88.0.js?v=review20261004"></script>
 <script src="js/project-watch-core-1.88.0.js?brand=1.99.2"></script>
 
 
@@ -2378,9 +2378,9 @@ function aisCourseUpdate(){$('aisCourseCount').textContent=`${aisCourseReviewed.
 function aisCoursePrev(){aisCourseGo(aisCourseLesson-1)}
 function aisCourseMarkNext(){aisCourseReviewed.add(aisCourseLesson);aisCourseSave();if(aisCourseLesson<5)aisCourseGo(aisCourseLesson+1);else{aisCourseRenderTabs();aisCourseUpdate();$('aisFinalStart')?.scrollIntoView({behavior:'smooth',block:'center'})}}
 function aisShuffle(a){let x=[...a];for(let i=x.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[x[i],x[j]]=[x[j],x[i]]}return x}
-function aisStartFinal(){if(aisCourseReviewed.size<6)return;aisFinalQs=AIS_STAGE8_Q.map(q=>{let opts=q.a.map((t,i)=>({t,ok:i===q.c}));return{q:q.q,opts:aisShuffle(opts)}});aisFinalI=0;aisFinalScore=0;$('aisCoursePanel').style.display='none';$('aisFinalPanel').style.display='block';aisRenderFinal();$('aisFinalPanel').scrollIntoView({behavior:'smooth',block:'start'})}
+function aisStartFinal(){if(aisCourseReviewed.size<6)return;aisFinalQs=AIS_STAGE8_Q.map(q=>{let opts=q.a.map((t,i)=>({t,ok:i===q.c}));return{q:q.q,why:q.why,opts:aisShuffle(opts)}});aisFinalI=0;aisFinalScore=0;$('aisCoursePanel').style.display='none';$('aisFinalPanel').style.display='block';aisRenderFinal();$('aisFinalPanel').scrollIntoView({behavior:'smooth',block:'start'})}
 function aisRenderFinal(){let p=$('aisFinalPanel');if(aisFinalI>=aisFinalQs.length){let pass=aisFinalScore>=8;if(pass)courseRecordComplete('ais',Math.round(aisFinalScore*10));p.innerHTML=`<div class="aisFinalResult ${pass?'pass':''}"><div class="ver">STAGE 8 FINAL • ${aisFinalScore}/10</div><h2>${pass?'STAGE 8 KNOWLEDGE ACHIEVED':'REVIEW AIS & TRY AGAIN'}</h2><p>${pass?'You have completed AIS & Electronic Situational Awareness. Remember: AIS supports the watch; it never replaces it.':'You need 8/10. Return to the teaching section, review the weak areas and try again.'}</p><button onclick="aisFinalBack()">${pass?'STAGE 8 COMPLETE ✓':'RETURN TO LEARNING'}</button></div>`;return}let q=aisFinalQs[aisFinalI];p.innerHTML=`<div class="ver">STAGE 8 FINAL • QUESTION ${aisFinalI+1} / 10 • ${aisFinalScore} CORRECT</div><div class="aisFinalQ"><h2>${q.q}</h2><div class="aisFinalAnswers">${q.opts.map((o,i)=>`<button onclick="aisAnswerFinal(${i})">${o.t}</button>`).join('')}</div><div id="aisFinalFeedback"></div></div>`}
-function aisAnswerFinal(i){let q=aisFinalQs[aisFinalI],ok=q.opts[i].ok;if(ok)aisFinalScore++;document.querySelectorAll('.aisFinalAnswers button').forEach((b,j)=>{b.disabled=true;if(q.opts[j].ok)b.classList.add('correct');else if(j===i)b.classList.add('wrong')});$('aisFinalFeedback').innerHTML=`<p style="margin-top:14px;color:${ok?'#70e6b0':'#ff9b9b'}"><b>${ok?'CORRECT':'NOT QUITE'}.</b> ${q.opts.find(o=>o.ok).t}</p><button onclick="aisFinalI++;aisRenderFinal()">${aisFinalI===9?'FINISH STAGE 8 →':'NEXT QUESTION →'}</button>`}
+function aisAnswerFinal(i){let q=aisFinalQs[aisFinalI],ok=q.opts[i].ok;if(ok)aisFinalScore++;document.querySelectorAll('.aisFinalAnswers button').forEach((b,j)=>{b.disabled=true;if(q.opts[j].ok)b.classList.add('correct');else if(j===i)b.classList.add('wrong')});$('aisFinalFeedback').innerHTML=`<p style="margin-top:14px;color:${ok?'#70e6b0':'#ff9b9b'}"><b>${ok?'CORRECT':'NOT QUITE'}.</b> ${q.why||q.opts.find(o=>o.ok).t}</p><button onclick="aisFinalI++;aisRenderFinal()">${aisFinalI===9?'FINISH STAGE 8 →':'NEXT QUESTION →'}</button>`}
 function aisFinalBack(){$('aisFinalPanel').style.display='none';$('aisCoursePanel').style.display='block';aisCourseGo(aisCourseLesson)}
 const _aisInitStage8=aisInit;aisInit=function(){_aisInitStage8();aisCourseLoad();aisCourseGo(0)};
 </script>
@@ -4179,7 +4179,7 @@ small,.small,.mini,.muted,.hint,.sub,.eyebrow,.kicker,.build,.ver,
 <script src="libraries/cevni/base-briefings-1.70.0.js?brand=1.99.2"></script>
 <script src="libraries/cevni/annex7-signs-1.70.0.js?brand=1.99.2"></script>
 <script src="libraries/cevni/early-teaching-1.70.0.js?brand=1.99.2"></script>
-<script src="libraries/cevni/deep-practice-1.70.3.js?brand=1.99.2"></script>
+<script src="libraries/cevni/deep-practice-1.70.3.js?v=review20261004"></script>
 <script src="libraries/cevni/annex7-official-plates-1.84.0.js?brand=1.99.2"></script>
 <script id="pw-cevni-engine-14700" src="js/cevni/69-pw-cevni-engine-library-backed-1.88.2-full.js?brand=1.99.2"></script>
 <!-- BUILD 1.47.6 CEVNI WAV AUDIO: CEVNI Sound Lab uses embedded pre-rendered WAV horn files via HTMLAudioElement; escaped-newline bleed removed. -->
@@ -5790,36 +5790,36 @@ window.PW16501_M03_COMPLETE={
 <script src="js/cevni/82-module05-answer-feedback-1.72.1.js?brand=1.99.2"></script>
 <link rel="stylesheet" href="css/cevni-module06-1.73.0.css?brand=1.99.2">
 <script src="libraries/cevni/module06-briefings-1.73.2.js?brand=1.99.2"></script>
-<script src="libraries/cevni/module06-question-bank-1.73.2.js?brand=1.99.2"></script>
+<script src="libraries/cevni/module06-question-bank-1.73.2.js?v=review20261004"></script>
 <script src="libraries/cevni/module06-visuals-1.73.2.js?brand=1.99.2"></script>
 <script src="js/cevni/84-module06-rules-1.73.0.js?brand=1.99.2"></script>
 <link rel="stylesheet" href="css/cevni-module07-1.74.0.css?brand=1.99.2">
 <script src="libraries/cevni/module07-briefings-1.74.1.js?brand=1.99.2"></script>
-<script src="libraries/cevni/module07-question-bank-1.74.1.js?brand=1.99.2"></script>
+<script src="libraries/cevni/module07-question-bank-1.74.1.js?v=review20261004"></script>
 <script src="libraries/cevni/module07-visuals-1.74.2.js?brand=1.99.2"></script>
 <script src="js/cevni/85-module07-operations-1.74.0.js?brand=1.99.2"></script>
 <link rel="stylesheet" href="css/cevni-module03-sign-sizing-1.74.3.css?brand=1.99.2">
 <link rel="stylesheet" href="css/cevni-module08-1.75.0.css?brand=1.99.2">
 <script src="libraries/cevni/module08-briefings-1.75.0.js?brand=1.99.2"></script>
-<script src="libraries/cevni/module08-question-bank-1.75.0.js?brand=1.99.2"></script>
+<script src="libraries/cevni/module08-question-bank-1.75.0.js?v=review20261004"></script>
 <script src="libraries/cevni/module08-visuals-1.75.0.js?brand=1.99.2"></script>
 <script src="js/cevni/86-module08-technology-1.75.0.js?brand=1.99.2"></script>
 <link rel="stylesheet" href="css/cevni-module09-1.76.0.css?brand=1.99.2">
 <script src="libraries/cevni/module09-briefings-1.76.0.js?brand=1.99.2"></script>
-<script src="libraries/cevni/module09-question-bank-1.76.0.js?brand=1.99.2"></script>
+<script src="libraries/cevni/module09-question-bank-1.76.0.js?v=review20261004"></script>
 <script src="libraries/cevni/module09-visuals-1.76.0.js?brand=1.99.2"></script>
 <script src="js/cevni/87-module09-final-1.76.0.js?brand=1.99.2"></script>
 <link rel="stylesheet" href="css/cevni-mock-gate-1.77.0.css?brand=1.99.2">
 <script src="js/cevni/89-mock-gate-1.77.0.js?brand=1.99.2"></script>
 <link rel="stylesheet" href="css/cevni-signs-marks-1.78.2.css?brand=1.99.2">
-<script src="js/cevni/90-signs-marks-1.85.5.js?brand=1.99.2"></script>
+<script src="js/cevni/90-signs-marks-1.85.5.js?v=review20261004"></script>
 <script src="js/cevni/91-landing-1.86.1.js?brand=1.99.2"></script>
 <script src="js/cevni/92-lesson-flow-1.87.1.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/safety-awareness-1.90.0.js?v=1.92.1&brand=1.99.2"></script>
 <script src="js/safety-awareness-1.90.0.js?v=1.92.1&brand=1.99.2"></script>
 <script src="libraries/project-watch/tides-1.93.3.js?brand=1.99.2"></script>
 <script src="js/tides-1.93.3a.js?brand=1.99.2"></script>
-<script src="libraries/project-watch/boat-systems-1.94.0.js?brand=1.99.2"></script>
+<script src="libraries/project-watch/boat-systems-1.94.0.js?v=review20261004"></script>
 <script src="js/boat-systems-1.94.0.js?brand=1.99.2"></script>
 <script src="libraries/project-watch/compass-1.95.4.js?v=1.95.7&brand=1.99.2"></script>
 <script src="js/compass-1.95.4.js?v=1.95.7&brand=1.99.2"></script>
