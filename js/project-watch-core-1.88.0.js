@@ -549,7 +549,7 @@ function speakMarineAndWait(text,kind){
    try{
      window.speechSynthesis.cancel();
      const u=new SpeechSynthesisUtterance(text);
-     const pref=localStorage.getItem('pwVoiceName')||'';
+     let pref='';try{pref=localStorage.getItem('pwVoiceName')||''}catch{}
      const voices=window.speechSynthesis.getVoices();
      const chosen=voices.find(v=>v.name===pref) ||
        voices.find(v=>/Daniel|Arthur|Oliver|Ryan|Sonia|Serena/i.test(v.name) && /^en[-_]?GB/i.test(v.lang||'')) ||
@@ -560,6 +560,7 @@ function speakMarineAndWait(text,kind){
      let done=false;
      const finish=()=>{if(done)return;done=true;resolve()};
      u.onend=finish;u.onerror=finish;
+     window.HelmloreLanguage?.applySpeech(u,text);
      window.speechSynthesis.speak(u);
      setTimeout(finish,Math.max(5000,text.length*115));
    }catch(e){resolve()}
@@ -1350,6 +1351,7 @@ function playRadioExample(){
  const v=chooseBritishVoice(); if(v)u.voice=v;
  u.onstart=()=>{if($('radioVoiceStatus'))$('radioVoiceStatus').textContent='Playing '+(radioExampleMode==='mayday'?'MAYDAY':'PAN-PAN')+' example'+(v?' • '+v.name:' • en-GB device voice')};
  u.onend=()=>{if($('radioVoiceStatus'))$('radioVoiceStatus').textContent='Example complete.'};
+ window.HelmloreLanguage?.applySpeech(u,radioSpeechText());
  speechSynthesis.speak(u);
 }
 function stopRadioExample(){if('speechSynthesis' in window)speechSynthesis.cancel();if($('radioVoiceStatus'))$('radioVoiceStatus').textContent='Playback stopped.'}
@@ -3571,6 +3573,7 @@ function speakMarine(text,kind='instruction'){
   if(kind==='warning'){u.rate=0.96;u.pitch=0.98}
   else if(kind==='confirmation'){u.rate=0.91;u.pitch=1.0}
   else{u.rate=0.88;u.pitch=1.0}
+  window.HelmloreLanguage?.applySpeech(u,text);
   synth.speak(u);
   return u;
 }

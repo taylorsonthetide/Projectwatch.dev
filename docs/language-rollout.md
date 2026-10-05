@@ -1,0 +1,135 @@
+# Helmlore language rollout
+
+Updated 5 October 2026. English remains the source language. This is a development record, not linguistic or regulatory approval.
+
+## Current coverage
+
+French, German and Dutch: public homepage, account interface, About page, free Region A buoyage lesson and its diagram, CEVNI base briefings for Foundations & Scope and Vessels, Marks & Definitions, and their base knowledge checks. This does not mark all material in modules 1–2 complete: additional teaching layers, drills and diagrams must be checked separately.
+
+Shared language selector is installed on 17 active HTML pages. Other text remains English until a matching translation is supplied. Selected language is stored separately from learning progress. Question identifiers, answer positions, grading and progress data are not translated or changed.
+
+## Speech
+
+All three speech entry points in project-watch-core-1.88.0.js call the shared language helper. It selects a voice matching the language of the spoken text. A passage is translated only if every textual part can be mapped; incomplete passages remain wholly English and use an English voice. If a matching device voice is unavailable, the utterance requests the correct language without assigning an unrelated voice. Switching the language stops current speech. Original radio procedure text stays English until a complete reviewed translation exists.
+
+## Remaining work
+
+Translate and check the remaining course briefings, all question/answer/explanation banks, CEVNI layered lessons and mock exam, sound/radio examples, interactive simulator prompts, feedback/status messages, navigation/planning settings and help, alt/ARIA text, inline and external SVG labels and any text burned into raster diagrams. Preserve official sign artwork. A multilingual reviewer should sign off nautical translations before they are described as reviewed or certified.
+
+## Validation
+
+Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the two translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. No live iPad speech test or native speaker sign-off has been performed in this build.
+
+## Runtime source inventory
+
+109 current local script/data dependencies were read from the 17 page references, excluding vendor and account/configuration files. This list is an inventory of sources to inspect, not proof of complete translation coverage. JSON fetched dynamically by these scripts and inline HTML/script strings require a further scan.
+
+- `libraries/project-watch/buoyage-reference-1.88.0.js` (9625 characters)
+- `libraries/project-watch/lights-recognition-1.88.0.js` (5699 characters)
+- `libraries/project-watch/sound-reference-1.88.0.js` (365 characters)
+- `libraries/project-watch/colregs-reference-1.88.0.js` (15407 characters)
+- `libraries/project-watch/course-directory-1.88.0.js` (7163 characters)
+- `libraries/project-watch/ais-content-1.88.0.js` (6730 characters)
+- `libraries/project-watch/course-content-1.88.0.js` (34113 characters)
+- `libraries/project-watch/simulator-data-1.88.0.js` (4039 characters)
+- `libraries/project-watch/sound-data-1.88.0.js` (11095 characters)
+- `libraries/project-watch/tss-content-1.88.0.js` (12976 characters)
+- `libraries/project-watch/reference-data-1.88.0.js` (17908 characters)
+- `libraries/project-watch/visual-map-1.88.0.js` (626 characters)
+- `libraries/project-watch/lights-master-visuals-1.88.0.js` (1358 characters)
+- `libraries/project-watch/collision-1.88.0.js` (43323 characters)
+- `libraries/project-watch/buoyage-1.88.0.js` (14344 characters)
+- `libraries/project-watch/lights-shapes-1.88.0.js` (20937 characters)
+- `libraries/project-watch/tss-1.88.0.js` (14110 characters)
+- `libraries/project-watch/foundations-1.88.0.js` (3445 characters)
+- `libraries/project-watch/sound-1.88.0.js` (3787 characters)
+- `libraries/project-watch/course-finals-1.88.0.js` (6720 characters)
+- `js/project-watch-core-1.88.0.js` (238463 characters)
+- `libraries/cevni/live-question-bundle-1.70.0.js` (27203 characters)
+- `libraries/cevni/base-briefings-1.70.0.js` (20472 characters)
+- `libraries/cevni/annex7-signs-1.70.0.js` (2084 characters)
+- `libraries/cevni/early-teaching-1.70.0.js` (13436 characters)
+- `libraries/cevni/deep-practice-1.70.3.js` (19034 characters)
+- `libraries/cevni/annex7-official-plates-1.84.0.js` (12705 characters)
+- `js/cevni/69-pw-cevni-engine-library-backed-1.88.2-full.js` (0 characters)
+- `js/cevni/45-cvchapter1script.js` (14155 characters)
+- `js/cevni/72-definitions-library-backed.js` (5992 characters)
+- `js/cevni/70-context-library-backed.js` (5526 characters)
+- `js/cevni/71-responsibility-library-backed.js` (5813 characters)
+- `js/cevni/51-legacy-layer-1.88.2.js` (23184 characters)
+- `libraries/cevni/visual-catalogues-1.71.2.js` (25031 characters)
+- `js/cevni/77-visual-catalogue-library-backed-1.88.2.js` (6761 characters)
+- `js/cevni/73-deep-library-backed.js` (8910 characters)
+- `js/cevni/78-hardened-catalogue-library-backed.js` (10222 characters)
+- `js/cevni/74-composition-library-backed.js` (6579 characters)
+- `libraries/cevni/annex7-A-register-1.80.0.js` (1205 characters)
+- `libraries/cevni/annex7-B-register-1.81.0.js` (463 characters)
+- `libraries/cevni/annex7-C-register-1.82.0.js` (1082 characters)
+- `libraries/cevni/annex7-E-register-1.83.0.js` (1563 characters)
+- `js/cevni/79-sign-catalogue-library-backed.js` (5503 characters)
+- `libraries/cevni/visual-evidence-1.71.1.js` (2758 characters)
+- `js/cevni/76-visual-evidence-library-backed.js` (4931 characters)
+- `libraries/cevni/legacy-module01-02-visuals-1.71.4.js` (7537 characters)
+- `libraries/cevni/annex8-marks-1.70.0.js` (2332 characters)
+- `libraries/cevni/annex8-official-plates-1.85.0.js` (1141 characters)
+- `libraries/cevni/module03-memory-1.71.1.js` (1450 characters)
+- `js/cevni/80-module04-libraries-locked.js` (6522 characters)
+- `libraries/cevni/module05-briefings-1.72.0.js` (5720 characters)
+- `libraries/cevni/module05-question-bank-1.72.0.js` (11187 characters)
+- `libraries/cevni/module05-visuals-1.72.0.js` (2010 characters)
+- `js/cevni/82-module05-answer-feedback-1.72.1.js` (7480 characters)
+- `libraries/cevni/module06-briefings-1.73.2.js` (7129 characters)
+- `libraries/cevni/module06-question-bank-1.73.2.js` (24175 characters)
+- `libraries/cevni/module06-visuals-1.73.2.js` (4438 characters)
+- `js/cevni/84-module06-rules-1.73.0.js` (6585 characters)
+- `libraries/cevni/module07-briefings-1.74.1.js` (7817 characters)
+- `libraries/cevni/module07-question-bank-1.74.1.js` (22576 characters)
+- `libraries/cevni/module07-visuals-1.74.2.js` (5484 characters)
+- `js/cevni/85-module07-operations-1.74.0.js` (6611 characters)
+- `libraries/cevni/module08-briefings-1.75.0.js` (6730 characters)
+- `libraries/cevni/module08-question-bank-1.75.0.js` (24045 characters)
+- `libraries/cevni/module08-visuals-1.75.0.js` (3841 characters)
+- `js/cevni/86-module08-technology-1.75.0.js` (6619 characters)
+- `libraries/cevni/module09-briefings-1.76.0.js` (6875 characters)
+- `libraries/cevni/module09-question-bank-1.76.0.js` (23039 characters)
+- `libraries/cevni/module09-visuals-1.76.0.js` (4273 characters)
+- `js/cevni/87-module09-final-1.76.0.js` (7363 characters)
+- `js/cevni/89-mock-gate-1.77.0.js` (1280 characters)
+- `js/cevni/90-signs-marks-1.85.5.js` (12191 characters)
+- `js/cevni/91-landing-1.86.1.js` (3774 characters)
+- `js/cevni/92-lesson-flow-1.87.1.js` (3316 characters)
+- `libraries/project-watch/safety-awareness-1.90.0.js` (12638 characters)
+- `js/safety-awareness-1.90.0.js` (6197 characters)
+- `libraries/project-watch/tides-1.93.3.js` (16202 characters)
+- `js/tides-1.93.3a.js` (9076 characters)
+- `libraries/project-watch/boat-systems-1.94.0.js` (11628 characters)
+- `js/boat-systems-1.94.0.js` (6151 characters)
+- `libraries/project-watch/compass-1.95.4.js` (15631 characters)
+- `js/compass-1.95.4.js` (10060 characters)
+- `libraries/project-watch/chartwork-1.96.0.js` (22680 characters)
+- `js/chartwork-1.96.0.js` (15083 characters)
+- `libraries/project-watch/passage-1.97.0.js` (16940 characters)
+- `js/passage-1.97.0.js` (13878 characters)
+- `libraries/project-watch/diesel-1.98.0.js` (33358 characters)
+- `js/diesel-1.98.0.js` (10864 characters)
+- `libraries/project-watch/home-pathways-1.99.1.js` (6155 characters)
+- `js/home-1.99.0.js` (3185 characters)
+- `js/build-identity-1.99.2.js` (2270 characters)
+- `js/navigation/core.js` (3224 characters)
+- `js/navigation/planning-core.js` (3150 characters)
+- `js/navigation/vessel.js` (946 characters)
+- `js/navigation/weather-core.js` (2922 characters)
+- `js/navigation/weather.js` (13226 characters)
+- `js/navigation/ais-style.js` (1139 characters)
+- `js/navigation/ais.js` (5664 characters)
+- `js/navigation/layout.js` (4115 characters)
+- `js/navigation/marinas-core.js` (897 characters)
+- `js/navigation/marinas.js` (4890 characters)
+- `js/navigation/logbook-core.js` (4209 characters)
+- `js/navigation/logbook.js` (6810 characters)
+- `js/navigation/app.js` (18909 characters)
+- `js/navigation/offline.js` (1116 characters)
+- `js/navigation/planning.js` (10361 characters)
+- `libraries/cevni/mock-exam-bank-1.77.1.js` (17987 characters)
+- `js/cevni/88-mock-exam-1.77.1.js` (5562 characters)
+- `js/sample-lesson.js` (2689 characters)
