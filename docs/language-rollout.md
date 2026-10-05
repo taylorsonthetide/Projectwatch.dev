@@ -4,7 +4,7 @@ Updated 5 October 2026. English remains the source language. This is a developme
 
 ## Current coverage
 
-French, German and Dutch: public homepage, account interface, About page, free Region A buoyage lesson and its diagram, CEVNI base briefings for all nine modules in base-briefings-1.70.0.js, and their base knowledge checks. This does not mark all material in modules 1–9 complete: additional teaching layers, drills and diagrams must be checked separately.
+French, German and Dutch: public homepage, account interface, About page, free Region A buoyage lesson and its diagram, CEVNI base briefings for all nine modules in base-briefings-1.70.0.js, and their base knowledge checks. The live mock-exam bank (40 candidate questions), all answer choices/explanations/source labels, instructions, lock screen, confirmation dialog, dynamic status, result and answer review are also translated. This does not mark all material in modules 1–9 complete: additional teaching layers, drills and diagrams must be checked separately.
 
 Shared language selector is installed on 17 active HTML pages. Other text remains English until a matching translation is supplied. Selected language is stored separately from learning progress. Question identifiers, answer positions, grading and progress data are not translated or changed.
 
@@ -14,11 +14,11 @@ All three speech entry points in project-watch-core-1.88.0.js call the shared la
 
 ## Remaining work
 
-Translate and check the remaining course briefings, all question/answer/explanation banks, CEVNI layered lessons and mock exam, sound/radio examples, interactive simulator prompts, feedback/status messages, navigation/planning settings and help, alt/ARIA text, inline and external SVG labels and any text burned into raster diagrams. Preserve official sign artwork. A multilingual reviewer should sign off nautical translations before they are described as reviewed or certified.
+Translate and check the remaining course briefings, all question/answer/explanation banks, CEVNI layered lessons sound/radio examples, interactive simulator prompts, feedback/status messages, navigation/planning settings and help, alt/ARIA text, inline and external SVG labels and any text burned into raster diagrams. Preserve official sign artwork. A multilingual reviewer should sign off nautical translations before they are described as reviewed or certified.
 
 ## Validation
 
-Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the all nine translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. No live iPad speech test or native speaker sign-off has been performed in this build.
+Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the all nine translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. Mock-exam VM integration tests cover 30 distinct selected questions, 15 questions per section, overall/section pass boundaries, translated native confirmation, result review, unchanged timer/deadline and saved answers during language switching, and preservation of the language control on the locked screen. No live iPad speech test or native speaker sign-off has been performed in this build.
 
 ## Runtime source inventory
 
