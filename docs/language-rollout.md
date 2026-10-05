@@ -4,7 +4,7 @@ Updated 5 October 2026. English remains the source language. This is a developme
 
 ## Current coverage
 
-French, German and Dutch: public homepage, account interface, About page, free Region A buoyage lesson and its diagram, CEVNI base briefings for Foundations & Scope and Vessels, Marks & Definitions, and their base knowledge checks. This does not mark all material in modules 1–2 complete: additional teaching layers, drills and diagrams must be checked separately.
+French, German and Dutch: public homepage, account interface, About page, free Region A buoyage lesson and its diagram, CEVNI base briefings for all nine modules in base-briefings-1.70.0.js, and their base knowledge checks. This does not mark all material in modules 1–9 complete: additional teaching layers, drills and diagrams must be checked separately.
 
 Shared language selector is installed on 17 active HTML pages. Other text remains English until a matching translation is supplied. Selected language is stored separately from learning progress. Question identifiers, answer positions, grading and progress data are not translated or changed.
 
@@ -18,7 +18,7 @@ Translate and check the remaining course briefings, all question/answer/explanat
 
 ## Validation
 
-Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the two translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. No live iPad speech test or native speaker sign-off has been performed in this build.
+Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the all nine translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. No live iPad speech test or native speaker sign-off has been performed in this build.
 
 ## Runtime source inventory
 
