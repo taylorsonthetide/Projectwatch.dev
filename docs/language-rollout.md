@@ -8,6 +8,8 @@ French, German and Dutch: public homepage, account interface, About page, free R
 
 Shared language selector is installed on 17 active HTML pages. Other text remains English until a matching translation is supplied. Selected language is stored separately from learning progress. Question identifiers, answer positions, grading and progress data are not translated or changed.
 
+The eight Article 1.01 context exercises in live-question-bundle-1.70.0.js are also fully covered: titles, situations, decisions, all choices and explanations. The context exercise interface in 70-context-library-backed.js (instructions, retry/completion feedback, navigation and dynamic progress) has matching translations. Other recognition and Article 1.02 responsibility exercises remain pending.
+
 ## Speech
 
 All three speech entry points in project-watch-core-1.88.0.js call the shared language helper. It selects a voice matching the language of the spoken text. A passage is translated only if every textual part can be mapped; incomplete passages remain wholly English and use an English voice. If a matching device voice is unavailable, the utterance requests the correct language without assigning an unrelated voice. Switching the language stops current speech. Original radio procedure text stays English until a complete reviewed translation exists.
@@ -18,7 +20,7 @@ Translate and check the remaining course briefings, all question/answer/explanat
 
 ## Validation
 
-Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the all nine translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. Mock-exam VM integration tests cover 30 distinct selected questions, 15 questions per section, overall/section pass boundaries, translated native confirmation, result review, unchanged timer/deadline and saved answers during language switching, and preservation of the language control on the locked screen. No live iPad speech test or native speaker sign-off has been performed in this build.
+Node syntax checks and VM tests cover switching/restoring English, dynamic text, protected user inputs, sample quiz feedback, diagram switching, full speech coverage of the all nine translated core briefings, language/voice alignment, mixed-content English fallback, absent voices and blocked storage. Mock-exam VM integration tests cover 30 distinct selected questions, 15 questions per section, overall/section pass boundaries, translated native confirmation, result review, unchanged timer/deadline and saved answers during language switching, and preservation of the language control on the locked screen. Context coverage tests check every title, situation, prompt, choice and explanation, fully translated spoken passages, progress labels and unchanged source answer indices. No live iPad speech test or native speaker sign-off has been performed in this build.
 
 ## Runtime source inventory
 
