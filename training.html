@@ -555,7 +555,7 @@
 .helmlore-footer p{margin:4px 0}.helmlore-footer a{color:#6ee0ff;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.helmlore-footer a:focus-visible{outline:2px solid #6ee0ff;outline-offset:4px;border-radius:2px}
 </style>
 <link rel="stylesheet" href="css/languages.css?v=1">
-<script src="js/languages.js?v=5" defer></script>
+<script src="js/languages.js?v=6" defer></script>
 </head>
 <body>
 <div id="vesselSetupModal" class="vesselSetupModal" aria-hidden="true">
@@ -4536,7 +4536,7 @@ function cevni14718Render(){
  const host=document.getElementById('cv14718Practice');if(!host)return;
  if(cv14718Index>=CEVNI_14718_RECOGNITION.length){host.innerHTML=`<div class="cvPracticeDone"><h3>Recognition rehearsal complete</h3><p>You have worked through all four Article 1.01 definition families. This is practice, not an exam: no score is recorded and no assessment question has been released.</p><span class="cvPracticeBadge">NEXT DEPENDENCY • CONTEXT PRACTICE</span><div class="cvPracticeNav"><button class="secondary" onclick="cv14718Index=0;cevni14718Render()">REHEARSE AGAIN</button></div></div>`;return;}
  const q=CEVNI_14718_RECOGNITION[cv14718Index];cv14718Answered=false;
- host.innerHTML=`<article class="cvPracticeCard"><div class="cvPracticeEyebrow">REHEARSAL ${cv14718Index+1} / ${CEVNI_14718_RECOGNITION.length} • FAMILY ${q.family}</div><div class="cue">${q.cue}</div><div class="hint">Choose the CEVNI term or interpretation that fits the clue. You can retry immediately — this is teaching practice.</div><div class="cvPracticeChoices">${q.choices.map((x,i)=>`<button onclick="cevni14718Answer(this,${i})">${x}</button>`).join('')}</div><div id="cv14718Feedback"></div></article>`;
+ host.innerHTML=`<article class="cvPracticeCard" data-translation-scope="recognition"><div class="cvPracticeEyebrow">REHEARSAL ${cv14718Index+1} / ${CEVNI_14718_RECOGNITION.length} • FAMILY ${q.family}</div><div class="cue">${q.cue}</div><div class="hint">Choose the CEVNI term or interpretation that fits the clue. You can retry immediately — this is teaching practice.</div><div class="cvPracticeChoices">${q.choices.map((x,i)=>`<button onclick="cevni14718Answer(this,${i})">${x}</button>`).join('')}</div><div id="cv14718Feedback"></div></article>`;
 }
 function cevni14718Answer(btn,i){if(cv14718Answered)return;const q=CEVNI_14718_RECOGNITION[cv14718Index],fb=document.getElementById('cv14718Feedback');if(i===q.correct){cv14718Answered=true;btn.classList.add('good');fb.innerHTML=`<div class="cvPracticeFeedback"><b>RECOGNISED</b><br>${q.why}<div class="cvPracticeNav"><button class="primary" onclick="cv14718Index++;cevni14718Render()">NEXT REHEARSAL →</button></div></div>`;}else{btn.classList.add('bad');fb.innerHTML=`<div class="cvPracticeFeedback"><b>NOT QUITE — TRY AGAIN</b><br>Use the defining feature in the clue rather than the vessel’s general appearance or everyday meaning.</div>`;setTimeout(()=>btn.classList.remove('bad'),700);}}
 const cv14718PrevOpen=window.cevniOpenLesson;
