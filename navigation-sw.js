@@ -1,5 +1,5 @@
 /* Cache only the navigation viewer. Charts, APIs and account pages are excluded. */
-const CACHE='helmlore-navigation-viewer-v0.12.1',BASE=new URL('./',self.location.href);
+const CACHE='helmlore-navigation-viewer-v0.12.2',BASE=new URL('./',self.location.href);
 const FILES=['navigation.html','navigation.webmanifest','css/navigation-weather.css','css/navigation.css','css/navigation-polish.css','js/navigation/core.js','js/navigation/planning-core.js','js/navigation/vessel.js','js/navigation/weather-core.js','js/navigation/weather.js','js/navigation/ais-config.js','js/navigation/ais-style.js','js/navigation/ais.js','js/navigation/layout.js','js/navigation/marinas-core.js','js/navigation/marinas.js','js/navigation/logbook-core.js','js/navigation/logbook.js','js/navigation/app.js','js/navigation/offline.js','https://unpkg.com/leaflet@1.9.4/dist/leaflet.css','https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'];
 const URLS=FILES.map(p=>new URL(p,BASE).href);
 self.addEventListener('install',e=>e.waitUntil((async()=>{const cache=await caches.open(CACHE);await cache.addAll(URLS.map(url=>new Request(url,{cache:'reload',mode:'cors'})));await self.skipWaiting();})()));
