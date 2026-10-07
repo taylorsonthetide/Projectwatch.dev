@@ -1,22 +1,22 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Helmlore · Whitehaven Chart Lab</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Helmlore · UK & Ireland Chart Lab</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#062b3b;color:#f1f7f9;font:17px/1.5 system-ui,sans-serif}header{padding:18px 24px;display:flex;justify-content:space-between;gap:18px;align-items:center}h1{font-size:25px;margin:0}p{margin:6px 0}a{color:#80dcff}main{display:grid;grid-template-columns:minmax(0,1fr) 320px;min-height:75vh}#map{height:75vh;min-height:420px;background:#dcebf1}aside{padding:18px;background:#0b3548}button{font:inherit;color:white;background:#14536b;border:1px solid #5396ab;border-radius:8px;padding:10px 14px;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #ffd56b}label{display:block;margin:14px 0}input{width:20px;height:20px;vertical-align:middle;margin-right:8px}.notice{background:#775322;padding:10px 24px}.badge{font-size:13px;letter-spacing:.09em;color:#9adce8}.status{min-height:48px;color:#bce9f3}.key{border-top:1px solid #467082;margin-top:18px;padding-top:12px}.small{font-size:14px;color:#c8dce5}footer{padding:20px 24px}details{max-width:1100px}summary{cursor:pointer;font-weight:700}.leaflet-popup-content{color:#142b37;font:15px/1.45 system-ui}.leaflet-control-attribution{font-size:11px}.leaflet-control-attribution a{color:#14546f}
 @media(max-width:800px){header{align-items:flex-start;padding:15px;flex-direction:column}main{grid-template-columns:1fr}#map{height:60vh;min-height:340px}aside{padding:15px}h1{font-size:23px}.notice{padding:10px 15px}}
 </style></head><body>
-<header><div><div class="badge">HELMLORE · DATA DEVELOPMENT</div><h1>Whitehaven Chart Lab</h1><p>Our first area for combining and checking marine data.</p></div><a href="navigation.html">Open Navigation Lab →</a></header>
+<header><div><div class="badge">HELMLORE · DATA DEVELOPMENT</div><h1>UK & Ireland Chart Lab</h1><p>Explore UK and Ireland marine data, with layers you can switch on and off.</p></div><a href="navigation.html">Open Navigation Lab →</a></header>
 <div class="notice">Development basemap · no verified depth or hazard coverage · not for navigation</div>
-<main><div id="map" aria-label="Whitehaven development map"></div><aside><h2 style="font-size:21px;margin:0">Map layers</h2>
-<p id="status" class="status" role="status">Loading the Whitehaven basemap…</p>
-<label><input type="checkbox" id="seamarks">Online sea marks</label><p id="marksStatus" class="small">Optional OpenSeaMap overlay. Internet required; coverage is not verified.</p>
-<label><input type="checkbox" id="boundary" checked>Show collected area</label>
-<button id="reset" type="button">Return to test area</button>
-<div class="key"><b>What we have here</b><p>Coastline, land, places and harbour layout from the existing open basemap.</p><p id="zoomStatus" class="small">Zoom is limited to the available detail (14).</p></div>
-<div class="key"><b>What still needs data</b><p>Reliable soundings and contours, complete local rocks and wrecks, and a saved sea-mark dataset.</p></div>
-<p class="small">Basemap build: 3 October 2026. The blue boundary shows the saved extent. Empty sea space does not mean safe water.</p>
+<main><div id="map" aria-label="UK and Ireland development map"></div><aside><h2 style="font-size:21px;margin:0">Map layers</h2>
+<p id="status" class="status" role="status">Loading the UK and Ireland online basemap…</p>
+<label><input type="checkbox" id="seamarks" checked>Online sea marks</label><p id="marksStatus" class="small">Optional OpenSeaMap overlay. Internet required; coverage is not verified.</p>
+<label><input type="checkbox" id="depths" checked>Depth shading</label><label><input type="checkbox" id="contours">Depth contours</label><p id="depthStatus" class="small" role="status">EMODnet research depth layer. Internet required.</p><label><input type="checkbox" id="boundary">Show UK & Ireland study extent</label>
+<button id="reset" type="button">Show UK & Ireland</button>
+<div class="key"><b>What we have here</b><p>OpenStreetMap coastline and places, OpenSeaMap symbols, and EMODnet seabed shading and contours.</p><p id="zoomStatus" class="small">Zoom is limited to the available detail (14).</p></div>
+<div class="key"><b>What still needs data</b><p>Verified navigation charts, detailed harbour soundings, complete hazards, and downloadable offline coverage.</p></div>
+<p class="small">Online research layers cover the wider region; detail and completeness vary. EMODnet depths are not live water depth and are not for navigation. Empty sea space does not mean safe water.</p>
 </aside></main>
 <footer><details><summary>Data inventory and next steps</summary><p>The catalogue separates usable layers, undecoded files, reference snapshots and sources we have yet to collect.</p><p><a href="docs/marine-data-inventory-20261007.md">Read the inventory</a> · <a href="data/navigation/marine-data-inventory-20261007.json">Download the source manifest</a></p><p>No TimeZero files have been imported into this published test map.</p></details></footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="js/vendor/pmtiles-4.3.0.js"></script><script src="js/vendor/protomaps-leaflet-5.0.0.js"></script>
-<script src="js/navigation/chart-lab-20261007.js?v=4"></script></body></html>
+
+<script src="js/navigation/chart-lab-20261007.js?v=5"></script></body></html>
