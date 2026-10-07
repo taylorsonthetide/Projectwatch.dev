@@ -1,0 +1,174 @@
+{
+  "type": "FeatureCollection",
+  "description": "Six positioned candidates manually extracted from Ribble Pilot printed page 2, explicitly correct to June 2010. Most training-wall perches in the book have names and light descriptions but no coordinate table. No route lines or depth contours inferred.",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1483333333333334,
+          53.69583333333333
+        ]
+      },
+      "properties": {
+        "name": "Gut buoy",
+        "feature_type": "buoy",
+        "source_url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+        "author": "John Eccles",
+        "source_pdf_page": 4,
+        "source_printed_page": 2,
+        "source_valid_to": "2010-06",
+        "retrieved": "2026-10-07",
+        "horizontal_datum_stated": "WGS84",
+        "source_latitude": "53 degrees 41.75 minutes N",
+        "source_longitude": "3 degrees 8.90 minutes W",
+        "position_approximate_in_source": false,
+        "verification_status": "Historical candidate; present position and existence unverified",
+        "hazard_status": "unknown",
+        "depth_status": "not imported; vertical datum/current survey unresolved",
+        "usage": "Research only; not a current navigation aid or route waypoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0833333333333335,
+          53.715
+        ]
+      },
+      "properties": {
+        "name": "Entrance waypoint Bravo",
+        "feature_type": "waypoint",
+        "source_url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+        "author": "John Eccles",
+        "source_pdf_page": 4,
+        "source_printed_page": 2,
+        "source_valid_to": "2010-06",
+        "retrieved": "2026-10-07",
+        "horizontal_datum_stated": "WGS84",
+        "source_latitude": "53 degrees 42.90 minutes N",
+        "source_longitude": "3 degrees 5.00 minutes W",
+        "position_approximate_in_source": false,
+        "verification_status": "Historical candidate; present position and existence unverified",
+        "hazard_status": "unknown",
+        "depth_status": "not imported; vertical datum/current survey unresolved",
+        "usage": "Research only; not a current navigation aid or route waypoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.093,
+          53.66566666666667
+        ]
+      },
+      "properties": {
+        "name": "Zealandia wreck",
+        "feature_type": "wreck",
+        "source_url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+        "author": "John Eccles",
+        "source_pdf_page": 4,
+        "source_printed_page": 2,
+        "source_valid_to": "2010-06",
+        "retrieved": "2026-10-07",
+        "horizontal_datum_stated": "WGS84",
+        "source_latitude": "53 degrees 39.94 minutes N",
+        "source_longitude": "3 degrees 5.58 minutes W",
+        "position_approximate_in_source": false,
+        "verification_status": "Historical candidate; present position and existence unverified",
+        "hazard_status": "unknown",
+        "depth_status": "not imported; vertical datum/current survey unresolved",
+        "usage": "Research only; not a current navigation aid or route waypoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.107,
+          53.666666666666664
+        ]
+      },
+      "properties": {
+        "name": "West cardinal near Zealandia",
+        "feature_type": "cardinal_buoy",
+        "source_url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+        "author": "John Eccles",
+        "source_pdf_page": 4,
+        "source_printed_page": 2,
+        "source_valid_to": "2010-06",
+        "retrieved": "2026-10-07",
+        "horizontal_datum_stated": "WGS84",
+        "source_latitude": "53 degrees 40.00 minutes N",
+        "source_longitude": "3 degrees 6.42 minutes W",
+        "position_approximate_in_source": true,
+        "verification_status": "Historical candidate; present position and existence unverified",
+        "hazard_status": "unknown",
+        "depth_status": "not imported; vertical datum/current survey unresolved",
+        "usage": "Research only; not a current navigation aid or route waypoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1005,
+          53.70766666666667
+        ]
+      },
+      "properties": {
+        "name": "Obstruction 23",
+        "feature_type": "obstruction",
+        "source_url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+        "author": "John Eccles",
+        "source_pdf_page": 4,
+        "source_printed_page": 2,
+        "source_valid_to": "2010-06",
+        "retrieved": "2026-10-07",
+        "horizontal_datum_stated": "WGS84",
+        "source_latitude": "53 degrees 42.46 minutes N",
+        "source_longitude": "3 degrees 6.03 minutes W",
+        "position_approximate_in_source": false,
+        "verification_status": "Historical candidate; present position and existence unverified",
+        "hazard_status": "unknown",
+        "depth_status": "not imported; vertical datum/current survey unresolved",
+        "usage": "Research only; not a current navigation aid or route waypoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0788333333333333,
+          53.718666666666664
+        ]
+      },
+      "properties": {
+        "name": "Unnamed obstruction",
+        "feature_type": "obstruction",
+        "source_url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+        "author": "John Eccles",
+        "source_pdf_page": 4,
+        "source_printed_page": 2,
+        "source_valid_to": "2010-06",
+        "retrieved": "2026-10-07",
+        "horizontal_datum_stated": "WGS84",
+        "source_latitude": "53 degrees 43.12 minutes N",
+        "source_longitude": "3 degrees 4.73 minutes W",
+        "position_approximate_in_source": false,
+        "verification_status": "Historical candidate; present position and existence unverified",
+        "hazard_status": "unknown",
+        "depth_status": "not imported; vertical datum/current survey unresolved",
+        "usage": "Research only; not a current navigation aid or route waypoint"
+      }
+    }
+  ]
+}
