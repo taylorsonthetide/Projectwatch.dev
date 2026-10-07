@@ -1,0 +1,32 @@
+{
+  "NGA_Pub141.pdf": {
+    "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub141bk.pdf",
+    "edition": "18th, 2026",
+    "updated_to": "2026-06-25",
+    "horizontal_datum": "not established for each mention"
+  },
+  "NGA_Pub142_2024.pdf": {
+    "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub142bk.pdf",
+    "edition": "17th, 2024",
+    "updated_to": "2026-03-26",
+    "horizontal_datum": "not established for each mention"
+  },
+  "NGA_Pub191.pdf": {
+    "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub191bk.pdf",
+    "edition": "21st, 2024",
+    "updated_to": "2025-09-20",
+    "horizontal_datum": "not established for each mention"
+  },
+  "NGA_Pub192.pdf": {
+    "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub192bk.pdf",
+    "edition": "18th, 2025",
+    "updated_to": "2026-08-27",
+    "horizontal_datum": "not established for each mention"
+  },
+  "Ribble_Pilot_John_Eccles.pdf": {
+    "url": "https://prestonmarina.co.uk/wp-content/uploads/2018/11/Ribble-Pilot-J-Eccles-Preston-Marina.pdf",
+    "edition": "John Eccles, June 2010",
+    "updated_to": "2010-06",
+    "horizontal_datum": "WGS84 stated on printed page 2; verify individual references"
+  }
+}
