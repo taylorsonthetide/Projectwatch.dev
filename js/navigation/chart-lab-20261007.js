@@ -54,7 +54,7 @@ async function redraw(c){
 const note=$('note-'+c.id);
 if(!$(c.id).checked){if(c.layer)map.removeLayer(c.layer);note.textContent='Hidden';return;}
 if(map.getZoom()<c.zoom){if(c.layer)map.removeLayer(c.layer);note.textContent='Zoom in to level '+c.zoom+' to show this layer.';return;}
-if(!c.data){if(c.loading)return;c.loading=true;note.textContent='Loading saved data…';try{const r=await fetch(c.url||'data/navigation/collected-20261007/'+c.id+'.geojson');if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(d.type!=='FeatureCollection')throw Error('Invalid dataset');c.data=d.features.map(f=>({f,b:bbox(f.geometry)}));}catch(e){note.textContent='Unavailable: '+e.message;c.loading=false;return;}c.loading=false;return redraw(c);}
+if(!c.data){if(c.loading)return;c.loading=true;note.textContent='Loading saved data…';try{const r=await fetch((c.url||'data/navigation/collected-20261007/'+c.id+'.geojson')+'?v=20261007-full');if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(d.type!=='FeatureCollection')throw Error('Invalid dataset');c.data=d.features.map(f=>({f,b:bbox(f.geometry)}));}catch(e){note.textContent='Unavailable: '+e.message;c.loading=false;return;}c.loading=false;return redraw(c);}
 if(c.layer){map.removeLayer(c.layer);c.layer.clearLayers();}
 const b=map.getBounds(),showPlanned=$('proposals').checked;
 const available=c.data.filter(o=>o.b[0]<=b.getEast()&&o.b[2]>=b.getWest()&&o.b[1]<=b.getNorth()&&o.b[3]>=b.getSouth()&&(showPlanned||!proposed(o.f)));
