@@ -1,0 +1,484 @@
+{
+  "retrieved": "2026-10-07",
+  "description": "Pilotage source directory. Approximate map centres only. No new soundings or navigation marks.",
+  "harbours": [
+    {
+      "id": "preston",
+      "name": "Preston & River Ribble",
+      "area": "North West England",
+      "centre": [
+        53.73,
+        -2.73
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Pilot book and local notes",
+      "detail": "John Eccles’s free Ribble Pilot dates from 2010. Compare its perches, channel and entry notes with current notices before treating any positions as current.",
+      "sources": [
+        {
+          "title": "Marina pilotage downloads",
+          "url": "https://prestonmarina.co.uk/index.php/downloads/"
+        },
+        {
+          "title": "Ribble Pilot — history and copyright",
+          "url": "https://prestonmarina.co.uk/index.php/ribble-pilot-book-by-john-eccles/"
+        },
+        {
+          "title": "Local notices and cancellations",
+          "url": "https://prestonmarina.co.uk/index.php/notices-to-mariners-preston-dock-river-ribble/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "conwy",
+      "name": "Conwy",
+      "area": "North Wales",
+      "centre": [
+        53.28,
+        -3.83
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Approach guidance",
+      "detail": "Council approach-channel information is a lead for local marks and channel details. Check the latest survey and notices.",
+      "sources": [
+        {
+          "title": "Council approach channel",
+          "url": "https://www.conwy.gov.uk/en/Resident/Leisure-sport-and-health/Coast-and-Countryside/Seaside/Conwy-Harbour-Approach-Channel.aspx"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "caernarfon",
+      "name": "Caernarfon & Menai Strait",
+      "area": "North Wales",
+      "centre": [
+        53.14,
+        -4.28
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour and marina guides",
+      "detail": "Local guide excerpts include older Anglesey pilot material. The published copying permission is limited to harbours and marinas supplying their visitors.",
+      "sources": [
+        {
+          "title": "Harbour Trust guides",
+          "url": "https://www.caernarfonharbour.org.uk/harbour-and-marina-guides/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "holyhead",
+      "name": "Holyhead",
+      "area": "North Wales",
+      "centre": [
+        53.31,
+        -4.63
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Notices and circulars",
+      "detail": "Local notices and safety circulars can help identify changes to marks and wreck information. Check whether each notice remains in force.",
+      "sources": [
+        {
+          "title": "Port notices",
+          "url": "https://www.holyheadportauthority.co.uk/lntms"
+        },
+        {
+          "title": "Marine safety circulars",
+          "url": "https://www.holyheadportauthority.co.uk/mscs"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "pwllheli",
+      "name": "Pwllheli",
+      "area": "North Wales",
+      "centre": [
+        52.88,
+        -4.41
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Channel entry guide",
+      "detail": "Entry guidance is available alongside council notices. The guide is not a verified marks inventory.",
+      "sources": [
+        {
+          "title": "Channel entry guide",
+          "url": "https://plasheli.org/index.php/facilities/pontoon/pwllheli-harbour"
+        },
+        {
+          "title": "Gwynedd local notices",
+          "url": "https://www.gwynedd.llyw.cymru/en-gb/leisure-country-parks-paths-and-beaches/maritime-harbours-and-beaches/local-notices-to-mariners"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "milford",
+      "name": "Milford Haven",
+      "area": "South Wales",
+      "centre": [
+        51.71,
+        -5.04
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Leisure guide and tidal atlases",
+      "detail": "The authority lists a 2026 leisure guide, port entry/departure guidance and four tidal-stream atlas volumes. Their depth dates and reuse permissions need inspecting.",
+      "sources": [
+        {
+          "title": "Authority guide and atlas library",
+          "url": "https://www.mhpa.co.uk/resource-library/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "bristol",
+      "name": "Bristol Harbour",
+      "area": "Bristol Channel",
+      "centre": [
+        51.45,
+        -2.61
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Navigation and bridge guidance",
+      "detail": "Council guidance gives access to navigation, bridge-clearance and visitor information.",
+      "sources": [
+        {
+          "title": "Council navigation guidance",
+          "url": "https://www.bristol.gov.uk/bristol-harbour/arriving-departing/navigating-around-the-harbour"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "falmouth",
+      "name": "Falmouth",
+      "area": "South West England",
+      "centre": [
+        50.15,
+        -5.06
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour guide",
+      "detail": "The harbour publishes a downloadable Falmouth Guide. Local details and source dates need checking before adding chart features.",
+      "sources": [
+        {
+          "title": "Falmouth Harbour guide",
+          "url": "https://falmouthharbour.co.uk/leisure/falmouth-guide/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "yealm",
+      "name": "River Yealm",
+      "area": "South West England",
+      "centre": [
+        50.31,
+        -4.04
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour guide",
+      "detail": "A 2025 harbour guide was located. Check for a newer issue before relying on its local details.",
+      "sources": [
+        {
+          "title": "2025 harbour guide PDF",
+          "url": "https://www.yealmharbourauthority.co.uk/wp-content/uploads/2025/06/Harbour-Guide-2025.pdf"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "salcombe",
+      "name": "Salcombe",
+      "area": "South West England",
+      "centre": [
+        50.24,
+        -3.77
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour guide and pilotage",
+      "detail": "The authority lists a 2026 harbour guide and pilotage information for the estuary.",
+      "sources": [
+        {
+          "title": "Harbour guide",
+          "url": "https://www.salcombeharbour.co.uk/harbourguide"
+        },
+        {
+          "title": "Authority pilotage page",
+          "url": "https://www.salcombeharbour.co.uk/pilotage"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "dart",
+      "name": "Dartmouth & River Dart",
+      "area": "South West England",
+      "centre": [
+        50.35,
+        -3.58
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour guide",
+      "detail": "Dart Harbour lists a 2026 guide and visitor information, including upriver destinations.",
+      "sources": [
+        {
+          "title": "Dart Harbour guide and information",
+          "url": "https://www.dartharbour.org/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "poole",
+      "name": "Poole Harbour",
+      "area": "South coast",
+      "centre": [
+        50.71,
+        -1.99
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour and marina guide",
+      "detail": "The commissioners publish a harbour and marina guide, a useful lead for shallow channels and local navigation details.",
+      "sources": [
+        {
+          "title": "Commissioners’ harbour guide",
+          "url": "https://www.phc.co.uk/leisure/harbour-guide/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "cowes",
+      "name": "Cowes",
+      "area": "Solent",
+      "centre": [
+        50.76,
+        -1.3
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Navigation and harbour plan",
+      "detail": "Harbour navigation guidance and a harbour diagram are available. Commercial pilotage directions are separate from leisure information.",
+      "sources": [
+        {
+          "title": "Harbour navigation",
+          "url": "https://www.cowes.co.uk/safety-navigation/navigation/"
+        },
+        {
+          "title": "Harbour diagram",
+          "url": "https://www.cowes.co.uk/harbour-information/harbour-map/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "chichester",
+      "name": "Chichester Harbour",
+      "area": "South coast",
+      "centre": [
+        50.79,
+        -0.91
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Mariners guide",
+      "detail": "The conservancy lists its Information for Mariners Guide 2026 and navigation guidance.",
+      "sources": [
+        {
+          "title": "Conservancy navigation and guide",
+          "url": "https://www.conservancy.co.uk/on-the-water/navigation-safety/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "london",
+      "name": "Thames & London",
+      "area": "East coast",
+      "centre": [
+        51.5,
+        0.05
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Harbour directions",
+      "detail": "General and pilotage directions are primarily regulatory references, not a full recreational pilot book or marks dataset.",
+      "sources": [
+        {
+          "title": "PLA general directions",
+          "url": "https://pla.co.uk/general-directions-navigation-port-london"
+        },
+        {
+          "title": "PLA pilotage directions",
+          "url": "https://pla.co.uk/pilotage-directions-port-london"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "harwich",
+      "name": "Harwich Haven",
+      "area": "East coast",
+      "centre": [
+        51.95,
+        1.3
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Pilotage directions",
+      "detail": "The authority lists Haven Ports Pilotage Directions 2025. These concern commercial pilotage requirements.",
+      "sources": [
+        {
+          "title": "Harwich Haven Authority",
+          "url": "https://hha.co.uk/operations/pilotage/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "whitby",
+      "name": "Whitby",
+      "area": "North East England",
+      "centre": [
+        54.49,
+        -0.61
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Navigation guidance",
+      "detail": "Council harbour navigation guidance provides a local approach and harbour reference.",
+      "sources": [
+        {
+          "title": "Council navigation guidance",
+          "url": "https://www.northyorks.gov.uk/roads-parking-and-travel/ports-and-harbours/whitby-harbour/navigation-whitby-harbour"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "tees",
+      "name": "Tees & Hartlepool",
+      "area": "North East England",
+      "centre": [
+        54.64,
+        -1.18
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Pilotage directions",
+      "detail": "PD Ports publishes pilotage directions and exemption guidance. This is not a complete small-craft marks register.",
+      "sources": [
+        {
+          "title": "PD Ports pilotage documents",
+          "url": "https://www.pdports.co.uk/marine-information/pilotage/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "oban",
+      "name": "Oban",
+      "area": "West Scotland",
+      "centre": [
+        56.42,
+        -5.48
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Navigation guidance",
+      "detail": "Harbour navigation information includes local buoyage direction and access guidance.",
+      "sources": [
+        {
+          "title": "Oban harbour navigation",
+          "url": "https://obanharbour.scot/navigation-marine-safety/navigation/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "orkney",
+      "name": "Orkney & Kirkwall",
+      "area": "Northern Isles",
+      "centre": [
+        58.99,
+        -2.96
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Sailing guides",
+      "detail": "Orkney Marinas publishes sailing guidance and downloadable local island-route guides.",
+      "sources": [
+        {
+          "title": "Orkney sailing guides",
+          "url": "https://www.orkneymarinas.co.uk/plan-your-trip/sailing-to-and-around-orkney"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "lerwick",
+      "name": "Lerwick",
+      "area": "Northern Isles",
+      "centre": [
+        60.16,
+        -1.14
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Port navigation guidance",
+      "detail": "Port navigation information links to directions and byelaws for the harbour.",
+      "sources": [
+        {
+          "title": "Lerwick Port Authority",
+          "url": "https://www.lerwick-harbour.co.uk/operations/navigation"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    },
+    {
+      "id": "belfast",
+      "name": "Belfast",
+      "area": "Northern Ireland",
+      "centre": [
+        54.61,
+        -5.91
+      ],
+      "coordinate_role": "Approximate directory centre, not a navigation mark or waypoint",
+      "kind": "Leisure guide and notices",
+      "detail": "The harbour lists a Marina Leisure Users Guide and navigational information. Revised-depth notices are another research lead.",
+      "sources": [
+        {
+          "title": "Belfast harbour guides",
+          "url": "https://www.belfast-harbour.co.uk/port/navigation-pilotage/"
+        }
+      ],
+      "review": "Source located; full contents and current local coverage still to verify"
+    }
+  ],
+  "regional": [
+    {
+      "name": "Scotland",
+      "title": "NGA Pub. 141 — Scotland",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub141bk.pdf",
+      "edition": "2026 · updates stated to 25 June 2026"
+    },
+    {
+      "name": "Ireland & west coast",
+      "title": "NGA Pub. 142 — Ireland and the West Coast of England",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub142bk.pdf",
+      "edition": "2024 · updates stated to 26 March 2026"
+    },
+    {
+      "name": "English Channel",
+      "title": "NGA Pub. 191 — English Channel",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub191bk.pdf",
+      "edition": "2024 · updates stated to 20 September 2025"
+    },
+    {
+      "name": "North Sea",
+      "title": "NGA Pub. 192 — North Sea",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694491/SFH00000/Pub192bk.pdf",
+      "edition": "2025 · updates stated to 27 August 2026"
+    },
+    {
+      "name": "UK & Ireland",
+      "title": "Regional pilot books and source register",
+      "url": "docs/uk-pilotage-source-register-20261007.md",
+      "edition": "Publisher, club and harbour sources · checked 7 October 2026"
+    }
+  ]
+}
