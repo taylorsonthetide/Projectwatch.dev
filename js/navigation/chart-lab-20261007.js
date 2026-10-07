@@ -6,7 +6,7 @@ L.control.scale({imperial:true,metric:true}).addTo(map);
 const options={maxZoom:14,keepBuffer:0,updateWhenIdle:true,updateWhenZooming:false,noWrap:true};
 map.createPane('depthPane');map.getPane('depthPane').style.zIndex=250;map.getPane('depthPane').style.pointerEvents='none';
 map.createPane('contourPane');map.getPane('contourPane').style.zIndex=300;map.getPane('contourPane').style.pointerEvents='none';
-map.createPane('markPane');map.getPane('markPane').style.zIndex=400;
+map.createPane('markPane');map.getPane('markPane').style.zIndex=350;map.getPane('markPane').style.pointerEvents='none';
 const base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{...options,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a>'}).addTo(map);
 let baseError=false;
 base.on('tileerror',()=>{baseError=true;$('status').textContent='Some online basemap tiles failed. Check your connection.';});
