@@ -59,12 +59,13 @@ if(c.layer){map.removeLayer(c.layer);c.layer.clearLayers();}
 const b=map.getBounds(),showPlanned=$('proposals').checked;
 const available=c.data.filter(o=>o.b[0]<=b.getEast()&&o.b[2]>=b.getWest()&&o.b[1]<=b.getNorth()&&o.b[3]>=b.getSouth()&&(showPlanned||!proposed(o.f)));
 const selected=available.slice(0,1500).map(o=>o.f);
-c.layer=L.geoJSON(selected,{renderer,style:f=>({renderer,color:proposed(f)||inactive(f)?'#8b8d94':c.color,weight:1.5,opacity:.85,fillOpacity:.09,dashArray:proposed(f)||inactive(f)?'5 5':null}),pointToLayer:(f,ll)=>L.circleMarker(ll,{renderer,radius:c.id==='wreckpoints'?4:5,color:proposed(f)||inactive(f)?'#8b8d94':c.color,fillColor:c.color,fillOpacity:inactive(f)?.2:.7,weight:1}),onEachFeature:(f,l)=>l.bindPopup(()=>popup(f,c),{autoPan:false,maxHeight:260})}).addTo(map);
+c.layer=L.geoJSON(selected,{renderer,style:f=>({renderer,color:proposed(f)||inactive(f)?'#8b8d94':c.color,weight:1.5,opacity:.85,fillOpacity:.09,dashArray:proposed(f)||inactive(f)?'5 5':null}),pointToLayer:(f,ll)=>L.circleMarker(ll,{renderer,radius:c.id==='wreckpoints'?4:5,color:proposed(f)||inactive(f)?'#8b8d94':c.color,fillColor:c.color,fillOpacity:inactive(f)?.2:.7,weight:1}),onEachFeature:(f,l)=>l.bindPopup(()=>popup(f,c),{autoPan:true,maxHeight:180})}).addTo(map);
 note.textContent=selected.length+' displayed / '+c.data.length+' saved'+(available.length>1500?' · '+(available.length-1500)+' more nearby; zoom in for detail.':'')+(showPlanned?' · proposals included.':' · known proposals hidden.');
 }
 for(const c of configs){$(c.id).onchange=()=>redraw(c);}
 $('proposals').onchange=()=>configs.forEach(redraw);
-let vectorTimer;map.on('moveend',()=>{clearTimeout(vectorTimer);vectorTimer=setTimeout(()=>configs.forEach(redraw),180);});
+let vectorTimer;map.on('moveend',()=>{clearTimeout(vectorTimer);vectorTimer=setTimeout(()=>{if(!document.querySelector('.leaflet-popup'))configs.forEach(redraw);},180);});
 configs.forEach(redraw);
+map.on('popupclose',()=>{clearTimeout(vectorTimer);vectorTimer=setTimeout(()=>configs.forEach(redraw),180);});
 
 })();
