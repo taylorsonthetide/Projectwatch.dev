@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.065,
+          53.71666666666667
+        ]
+      },
+      "properties": {
+        "name": "13½ mile south perch",
+        "source": "Preston City Council notice reproduced by Preston Marina",
+        "source_url": "https://prestonmarina.co.uk/index.php/notices-to-mariners-preston-dock-river-ribble/",
+        "notice_date": "2026-04-29",
+        "latest_update_date": "2026-05-09",
+        "reported_light": "Flashing green 5 seconds",
+        "reported_update": "Marina notice says previous outage cancelled and light working on 9 May 2026.",
+        "current_status": "Not independently confirmed at retrieval date",
+        "retrieved": "2026-10-07",
+        "map_use": "Research candidate only; not integrated into published map.",
+        "coordinate_source": "53°43.000′ N 03°3.900′ W",
+        "coordinate_conversion": "Degrees and decimal minutes converted to decimal degrees.",
+        "coverage": "One notice record, not a complete Ribble navigation-aid inventory."
+      }
+    }
+  ]
+}
