@@ -556,6 +556,43 @@
 </style>
 <link rel="stylesheet" href="css/languages.css?v=1">
 <script src="js/languages.js?v=6" defer></script>
+<style id="collision-tutorial-readability-20261007">
+
+/* Collision beginner course: use the platform's shared readable typography. */
+#collisionTutorialPage .tutorialLessonBtn b,
+#collisionTutorialPage .tutorialPoint b{
+  font-size:var(--pw-type-card,1.0625rem)!important;
+  line-height:1.3!important;
+}
+#collisionTutorialPage .tutorialPoint span{
+  font-size:var(--pw-type-body,1rem)!important;
+  line-height:var(--pw-line-body,1.5)!important;
+}
+#collisionTutorialPage .tutorialLessonBtn small,
+#collisionTutorialPage .tutorialLessonNum,
+#collisionTutorialPage .tutorialLessonCheck,
+#collisionTutorialPage .tutorialProgressHead,
+#collisionTutorialPage .tutorialHeroBadge span{
+  font-size:var(--pw-type-secondary,.875rem)!important;
+  line-height:1.4!important;
+}
+#collisionTutorialPage .tutorialPoint{padding:13px 15px}
+#collisionTutorialPage .tutorialLessonBtn{padding:10px;min-height:60px}
+#collisionTutorialPage .tutorialLessonBtn>span,
+#collisionTutorialPage .tutorialLessonMain{min-width:0}
+#collisionTutorialPage .tutorialLessonBtn b,
+#collisionTutorialPage .tutorialLessonBtn small,
+#collisionTutorialPage .tutorialPoint{overflow-wrap:break-word}
+#collisionTutorialPage .tutorialLessonPoints{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#collisionTutorialPage .tutorialProgressHead{flex-wrap:wrap}
+@media(max-width:900px){
+  #collisionTutorialPage .tutorialLessonList{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  #collisionTutorialPage .tutorialLessonList,
+  #collisionTutorialPage .tutorialLessonPoints{grid-template-columns:minmax(0,1fr)}
+}
+</style>
 </head>
 <body>
 <div id="vesselSetupModal" class="vesselSetupModal" aria-hidden="true">
