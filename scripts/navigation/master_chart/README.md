@@ -2,6 +2,8 @@
 
 This is a versioned **custom research chart catalogue**, not an official ENC or a verified navigation chart. Helmlore owns its correction workflow and rendering work; conversion does not transfer ownership or remove the licences of source data.
 
+The compact master backup retains all tables, IDs, source observations, source attributes and correction history. Rebuildable secondary and spatial indexes are omitted to reduce its size. Restore it over a repository checkout, then run `python3 scripts/navigation/master_chart/restore_indexes.py --database data/navigation/master-chart/build/helmlore-master.sqlite` before tile rebuilds or regular updates. Read-only inspection works without those indexes. The original historical source/tile files stay in the repository and are not duplicated in the backup.
+
 ## What is maintained
 
 SQLite is the master store. `entities` hold permanent Helmlore feature IDs; `observations` retain every source record/version, geometry, attributes, source date and retrieval date. `sources`, `files`, `releases` and `reviews` retain provenance, checksums, release history and correction evidence. The spatial R-tree supports tile rebuild queries.
