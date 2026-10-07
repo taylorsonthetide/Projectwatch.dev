@@ -93,5 +93,30 @@ for(const button of document.querySelectorAll('[data-view]'))button.onclick=()=>
 for(const id of viewIds)$(id).addEventListener('change',()=>{for(const b of document.querySelectorAll('[data-view]'))b.setAttribute('aria-pressed','false');});
 fetch('data/navigation/pilotage-sources-20261007.json?v=12').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{if(!Array.isArray(d.harbours)||!Array.isArray(d.regional))throw Error('Invalid directory');directory=d;renderGuides();const icon=L.divIcon({className:'guide-pin',html:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1zM12 6v14" fill="none" stroke="currentColor" stroke-width="2"/></svg>',iconSize:[28,28],iconAnchor:[14,14]});for(const g of d.harbours){const marker=L.marker(g.centre,{icon,title:g.name+' — pilotage sources',alt:g.name+' harbour guide'}).on('click',()=>showGuide(g,true));guideLayer.addLayer(marker);guideMarkers.set(g.id,marker);}if($('harbourguides').checked)guideLayer.addTo(map);const regional=$('regional-guides');for(const g of d.regional){const a=document.createElement('a');a.className='regional-link';a.href=safeLink(g.url);a.target='_blank';a.rel='noopener noreferrer';a.textContent=g.title+' ↗';const p=document.createElement('p');p.className='small';p.textContent=g.edition;regional.append(a,p);}}).catch(e=>{$('guide-status').textContent='Source directory unavailable: '+e.message;});
 
+
+// Coordinate mentions stay separate from charted aids until independently checked.
+let reviewData=null,reviewLayer=L.layerGroup(),reviewTimer;
+function reviewPopup(point){
+ const root=document.createElement('div');let index=0;
+ const body=document.createElement('div'),nav=document.createElement('div');
+ const previous=document.createElement('button'),next=document.createElement('button'),count=document.createElement('span');
+ previous.textContent='Previous source';next.textContent='Next source';
+ function show(){const m=point.mentions[index];body.innerHTML='<b>'+escape(m.name||'Unverified pilotage point')+'</b><p>'+point.coordinates[1].toFixed(6)+', '+point.coordinates[0].toFixed(6)+'</p><p><b>Source date:</b> '+escape(m.date||'Unknown')+'<br>'+escape(m.file)+' · PDF page '+escape(m.page)+'<br><b>Datum:</b> '+escape(m.datum||'Not established')+'</p><p><b>Original position:</b> '+escape(m.raw||'Manual transcription')+'</p><p>'+escape(m.context)+'</p><p><a href="'+escape(safeLink(m.url))+'" target="_blank" rel="noopener noreferrer">Open original source ↗</a></p>';count.textContent=' Source '+(index+1)+' of '+point.mentions.length+' ';previous.disabled=index===0;next.disabled=index===point.mentions.length-1;}
+ previous.onclick=()=>{index--;show();};next.onclick=()=>{index++;show();};
+ nav.append(previous,count,next);root.append(body,nav);show();return root;
+}
+function drawReview(){
+ reviewLayer.clearLayers();if(!reviewData)return;
+ if(!$('pilotreview').checked){map.removeLayer(reviewLayer);$('reviewStatus').textContent='Pilotage review points hidden. '+reviewData.total_positions.toLocaleString()+' positions available.';return;}
+ const b=map.getBounds();let visible=0;
+ for(const p of reviewData.points){const ll=L.latLng(p.coordinates[1],p.coordinates[0]);if(!b.contains(ll))continue;visible++;L.circleMarker(ll,{renderer,radius:map.getZoom()<7?3:5,color:'#a014a8',fillColor:'#fff',fillOpacity:.65,weight:1.5}).bindPopup(()=>reviewPopup(p),{maxWidth:380,maxHeight:300}).addTo(reviewLayer);}
+ reviewLayer.addTo(map);$('reviewStatus').textContent=visible.toLocaleString()+' positions in this view · '+reviewData.total_positions.toLocaleString()+' total · '+reviewData.total_mentions.toLocaleString()+' source mentions. Purple circles are unverified.';
+}
+$('pilotreview').onchange=drawReview;
+map.on('moveend',()=>{clearTimeout(reviewTimer);reviewTimer=setTimeout(()=>{if(!document.querySelector('.leaflet-popup'))drawReview();},180);});
+map.on('popupclose',()=>{clearTimeout(reviewTimer);reviewTimer=setTimeout(drawReview,180);});
+fetch('data/navigation/research/pilotage-review-points-20261007.json?v=13').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{if(!Array.isArray(d.points)||d.points.length!==d.total_positions||d.points.reduce((n,p)=>n+p.mentions.length,0)!==d.total_mentions)throw Error('Invalid review dataset');reviewData=d;drawReview();}).catch(e=>{$('reviewStatus').textContent='Pilotage review points unavailable: '+e.message;});
+
 })();
+
 
