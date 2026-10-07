@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "coast": 136002,
+    "depthareas": 130620,
+    "contours": 154851,
+    "marks": 43700,
+    "hazards": 107675,
+    "soundings": 668684
+  },
+  "failed_cells": [],
+  "offsets": {
+    "zero": 427038,
+    "nonzero": 188518
+  },
+  "note": "2011 historical records. Multiple chart scales retained. Coverage cells intersect UK/Ireland study extent; polygons can extend beyond it."
+}
