@@ -14,7 +14,7 @@ base.on('load',()=>{if(!baseError)$('status').textContent='UK & Ireland online b
 const extent=L.rectangle(bounds,{color:'#176993',weight:2,dashArray:'7 5',fill:false,interactive:false});
 $('boundary').onchange=()=>{$('boundary').checked?extent.addTo(map):map.removeLayer(extent);};
 $('reset').onclick=()=>{$('region').value='all';map.fitBounds(bounds);};
-$('region').onchange=()=>{const p={preston:[53.73,-2.9,11],irish:[54,-4.8,9],ireland:[53.3,-6.1,9],solent:[50.8,-1.2,10],north:[57,1,8],scotland:[58,-3.5,8]}[$('region').value];if(p)map.setView([p[0],p[1]],p[2]);else map.fitBounds(bounds);};
+$('region').onchange=()=>{const p={preston:[53.73,-2.9,11],barrow:[54.062,-3.175,12],whitehaven:[54.54,-3.61,10],irish:[54,-4.8,9],ireland:[53.3,-6.1,9],solent:[50.8,-1.2,10],north:[57,1,8],scotland:[58,-3.5,8]}[$('region').value];if(p)map.setView([p[0],p[1]],p[2]);else map.fitBounds(bounds);};
 const marks=L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{...options,pane:'markPane',attribution:'Sea marks: <a href="https://www.openseamap.org/">OpenSeaMap</a>'});
 let markErrors=0;
 marks.on('tileerror',()=>{markErrors++;$('marksStatus').textContent='Some sea-mark tiles failed. Missing symbols do not establish clear water.';});
@@ -117,6 +117,29 @@ map.on('moveend',()=>{clearTimeout(reviewTimer);reviewTimer=setTimeout(()=>{if(!
 map.on('popupclose',()=>{clearTimeout(reviewTimer);reviewTimer=setTimeout(drawReview,180);});
 fetch('data/navigation/research/pilotage-review-points-20261007.json?v=13').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{if(!Array.isArray(d.points)||d.points.length!==d.total_positions||d.points.reduce((n,p)=>n+p.mentions.length,0)!==d.total_mentions)throw Error('Invalid review dataset');reviewData=d;drawReview();}).catch(e=>{$('reviewStatus').textContent='Pilotage review points unavailable: '+e.message;});
 
+
+let localMarks=null,localLayer=L.layerGroup(),localTimer;
+function localTitle(p){return p.name||({port:'Port-hand',starboard:'Starboard-hand',cardinal_south:'South cardinal',safe_water:'Safe-water',special:'Special-purpose',landmark:'Light landmark'}[p.mark_type]+' '+p.structure);}
+function localIcon(p){
+ const colour=p.colour==='black'?'#202b35':p.mark_type==='port'?'#dc323e':p.mark_type==='starboard'?'#07894c':'#f2c52a';
+ let body;
+ if(p.mark_type==='cardinal_south')body='<path d="M7 3h10l-5 6zM7 9h10l-5 6z" fill="#17222b"/><path d="M10 15h4v6h-4z" fill="#e4bd20"/>';
+ else if(p.structure==='tower')body='<path d="M8 21l2-15h4l2 15zM9 6V3h6v3z" fill="'+colour+'" stroke="#fff" stroke-width="1.5"/>';
+ else if(p.structure==='beacon')body='<path d="M11 9h2v12h-2z" fill="#273747"/><path d="'+(p.mark_type==='starboard'?'M7 9l5-8 5 8z':'M7 2h10v8H7z')+'" fill="'+colour+'" stroke="#fff" stroke-width="1.5"/>';
+ else if(p.mark_type==='safe_water')body='<path d="M8 20l1-14h6l1 14z" fill="#fff" stroke="#c52e3b" stroke-width="2"/><path d="M12 6v14" stroke="#c52e3b" stroke-width="2"/><circle cx="12" cy="3" r="2" fill="#c52e3b"/>';
+ else if(p.structure==='sphere')body='<circle cx="12" cy="12" r="6" fill="'+colour+'" stroke="#fff" stroke-width="1.5"/>';
+ else body='<path d="'+(p.mark_type==='starboard'?'M5 19l7-15 7 15z':'M6 6h12v13H6z')+'" fill="'+colour+'" stroke="#fff" stroke-width="1.5"/>';
+ return L.divIcon({className:'local-mark-icon',html:'<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">'+body+'<path d="M3 22h18" stroke="#273747" stroke-width="1.4"/></svg>',iconSize:[24,24],iconAnchor:[12,22],popupAnchor:[0,-22]});
+}
+function localPopup(f){const p=f.properties;return '<b>'+escape(localTitle(p))+'</b><p>'+escape(p.raw_position)+'</p><p><b>Mark:</b> '+escape(p.mark_type.replaceAll('_',' '))+'<br><b>Structure:</b> '+escape(p.structure)+'<br><b>Colour:</b> '+escape(p.colour||'Not specified in panel')+'<br><b>Light:</b> '+escape(p.light||'Not specified in panel')+'</p><p><b>Reference:</b> '+escape(p.source_file)+'<br>'+escape(p.source)+'<br>'+escape(p.position_status)+'</p><p>Chart edition and datum are not displayed in the supplied panel.</p>';}
+function drawLocal(){localLayer.clearLayers();if(!localMarks)return;if(!$('localmarks').checked){map.removeLayer(localLayer);$('localMarkStatus').textContent='Local chartplotter marks hidden · '+localMarks.features.length+' saved.';return;}
+ const b=map.getBounds();let visible=0;for(const f of localMarks.features){const ll=L.latLng(f.geometry.coordinates[1],f.geometry.coordinates[0]);if(!b.contains(ll))continue;visible++;const p=f.properties;const m=map.getZoom()>=9?L.marker(ll,{icon:localIcon(p),title:localTitle(p),alt:localTitle(p)}):L.circleMarker(ll,{renderer,radius:4,color:'#163f58',fillColor:p.mark_type==='port'?'#dc323e':p.mark_type==='starboard'?'#07894c':'#e4bd20',fillOpacity:1,weight:1});m.bindPopup(()=>localPopup(f),{maxWidth:380,maxHeight:310}).addTo(localLayer);}
+ localLayer.addTo(map);$('localMarkStatus').textContent=visible+' local features in view · '+localMarks.features.length+' total. Positions confirmed by you on 7 October 2026. Zoom in for mark symbols.';
+}
+$('localmarks').onchange=drawLocal;map.on('moveend',()=>{clearTimeout(localTimer);localTimer=setTimeout(()=>{if(!document.querySelector('.leaflet-popup'))drawLocal();},180);});map.on('popupclose',()=>{clearTimeout(localTimer);localTimer=setTimeout(drawLocal,180);});
+fetch('data/navigation/user-local-marks-20261007.geojson?v=14').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();}).then(d=>{if(d.type!=='FeatureCollection'||d.features.length!==41)throw Error('Invalid local mark data');localMarks=d;drawLocal();}).catch(e=>{$('localMarkStatus').textContent='Local marks unavailable: '+e.message;});
+
 })();
+
 
 
