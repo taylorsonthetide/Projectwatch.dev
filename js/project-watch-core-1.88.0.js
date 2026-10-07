@@ -173,7 +173,58 @@ function scenarioRole(id){
   return['ASSESS','chartStand'];
 }
 function scenarioChartHTML(id){
-  return window.PW_ENCOUNTER_ART(SCENARIOS[id], scenarioInitialRelative(SCENARIOS[id]));
+  if(window.PW_ENCOUNTER_ART) return window.PW_ENCOUNTER_ART(SCENARIOS[id], scenarioInitialRelative(SCENARIOS[id]));
+  const s=SCENARIOS[id],r=scenarioInitialRelative(s),spec=SCENARIO_VISUALS[id]||['COLREG SCENARIO',''];
+  const a=-rad(s.ownH);
+  const rx=r.x*Math.cos(a)+r.y*Math.sin(a);
+  const ry=-r.x*Math.sin(a)+r.y*Math.cos(a);
+
+  const ownX=90,ownY=66,scale=34/2;
+  const tx=ownX+rx*scale,ty=ownY-ry*scale;
+  const tgtRelH=((s.tgtH-s.ownH)%360+360)%360;
+
+  const boat=(x,y,h,kind)=>`
+    <g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${h.toFixed(1)})">
+      <line class="${kind==='own'?'chartCourseOwn':'chartCourseTarget'}" x1="0" y1="7" x2="0" y2="-29"/>
+      <path class="${kind==='own'?'chartOwn':'chartTarget'}" d="M0,-8 L5,6 L0,4 L-5,6 Z"/>
+    </g>`;
+
+  const role=scenarioRole(id);
+  let wind='';
+  if(s.ownType==='sail'){
+    const wf=(typeof s.windFrom==='number'?s.windFrom:(s.ownTack==='port'?270:90));
+    const rel=((wf-s.ownH)%360+360)%360;
+    const cx=31,cy=27,L=25;
+    const sx=cx+Math.sin(rad(rel))*L/2, sy=cy-Math.cos(rad(rel))*L/2;
+    const ex=cx-Math.sin(rad(rel))*L/2, ey=cy+Math.cos(rad(rel))*L/2;
+    const ah=5, ang=Math.atan2(ey-sy,ex-sx);
+    const p1x=ex-ah*Math.cos(ang-Math.PI/6), p1y=ey-ah*Math.sin(ang-Math.PI/6);
+    const p2x=ex-ah*Math.cos(ang+Math.PI/6), p2y=ey-ah*Math.sin(ang+Math.PI/6);
+    wind=`<g>
+      <line class="chartWind" x1="${sx.toFixed(1)}" y1="${sy.toFixed(1)}" x2="${ex.toFixed(1)}" y2="${ey.toFixed(1)}"/>
+      <path d="M${ex.toFixed(1)},${ey.toFixed(1)} L${p1x.toFixed(1)},${p1y.toFixed(1)} L${p2x.toFixed(1)},${p2y.toFixed(1)} Z" fill="#256f9a"/>
+      <text class="chartWindText" x="8" y="11">WIND FROM ${String(s.ownTack||'').toUpperCase()} SIDE</text>
+    </g>`;
+  }
+
+  let rel='AHEAD';
+  if(rx>.18)rel='TARGET ON STARBOARD';
+  else if(rx<-.18)rel='TARGET ON PORT';
+  else if(ry<-.15)rel='TARGET ASTERN';
+
+  return `<span class="scenarioChart">
+    <span class="scenarioChartTitle">${rel}</span>
+    <span class="scenarioChartKey"><span><i class="ownKey"></i>OWN</span><span><i class="targetKey"></i>TARGET</span></span>
+    <span class="scenarioChartRule">${spec[1]}</span>
+    <svg viewBox="0 0 180 104" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <line class="chartBearing" x1="${ownX}" y1="${ownY}" x2="${tx.toFixed(1)}" y2="${ty.toFixed(1)}"/>
+      ${wind}
+      ${boat(ownX,ownY,0,'own')}
+      ${boat(tx,ty,tgtRelH,'target')}
+      <rect class="chartRolePill ${role[1]}" x="91" y="7" width="81" height="12" rx="4"/>
+      <text class="chartRolePillText" x="131.5" y="15" text-anchor="middle">${role[0]}</text>
+    </svg>
+  </span>`;
 }
 
 function scenarioSubtitle(id){
