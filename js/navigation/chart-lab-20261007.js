@@ -21,6 +21,6 @@ if(hash!=='9a48396384e4e21628254e4785814981a7c07116ce392f77e5b25a85ad4a2c1f')thr
 const pm=new pmtiles.PMTiles(new pmtiles.FileSource(new File([blob],'whitehaven.pmtiles')));
 const header=await pm.getHeader();if(header.tileType!==1||header.maxZoom!==14)throw Error('Unexpected basemap format');
 protomapsL.leafletLayer({url:pm,flavor:'light',lang:'en',maxDataZoom:14,levelDiff:0,maxZoom:19,noWrap:true,bounds,attribution:'<a href="https://protomaps.com/">Protomaps</a> · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a> · build 2026-10-03'}).addTo(map);
-extent.bringToFront();$('status').textContent='Whitehaven basemap loaded and integrity checked.';
+if($('seamarks').checked)marks.bringToFront();extent.bringToFront();$('status').textContent='Whitehaven basemap loaded and integrity checked.';
 }catch(e){$('status').textContent='Basemap unavailable: '+e.message+'. No chart coverage is displayed.';}
 })();
