@@ -1,5 +1,5 @@
 /* UK and Ireland online research map; no GPS or account changes. */
-(()=>{'use strict';
+(async()=>{'use strict';
 const $=id=>document.getElementById(id),bounds=[[49,-12],[61,3]];
 const map=L.map('map',{minZoom:4,maxZoom:18,zoomAnimation:false,fadeAnimation:false}).fitBounds(bounds);
 L.control.scale({imperial:true,metric:true}).addTo(map);
@@ -55,16 +55,18 @@ const configs=[
 {id:'oenergy',label:'Ocean energy sites',color:'#268357',zoom:7,source:'EMODnet / AZTI · CC BY 4.0'},
 {id:'oenergytests',label:'Energy test areas',color:'#268357',zoom:6,source:'EMODnet / AZTI · CC BY 4.0'}
 ];
+let managedVersion='20261007-master-v1';
+try{const response=await fetch('data/navigation/master-chart/published-release.json',{cache:'no-store'});if(!response.ok)throw Error('Master release unavailable');const release=await response.json();if(typeof release.id!=='string'||!release.layers)throw Error('Invalid master release');managedVersion=release.id;for(const c of configs){if(['ukfibrecables','platforms','portlocations','oenergy'].includes(c.id)&&typeof release.layers[c.id]==='string'&&release.layers[c.id].startsWith('data/navigation/master-chart/'))c.url=release.layers[c.id];}}catch(e){console.warn('Using saved chart sources: '+e.message);}
 function bbox(g){let b=[Infinity,Infinity,-Infinity,-Infinity];function scan(a){if(typeof a[0]==='number'){b[0]=Math.min(b[0],a[0]);b[1]=Math.min(b[1],a[1]);b[2]=Math.max(b[2],a[0]);b[3]=Math.max(b[3],a[1]);}else a.forEach(scan);}if(g)scan(g.coordinates);return b;}
 function status(f){const p=f.properties||{};return String(p.status??p.current_status??p.project_status??p.site_status??p.lease_status??'');}
 function proposed(f){return /planned|approved|propos|application/i.test(status(f));}
-function inactive(f){return /dismant|decomm|abandon|completed|removed|closed|inactive/i.test(status(f));}
-function popup(f,c){const p=f.properties||{},name=p.name||p.objnam||p.portname||p.testsite||p.pipe_name||'Unnamed record';const box=document.createElement('div');box.innerHTML='<b>'+escape(name)+'</b><p>'+escape(c.label)+' · '+escape(c.source)+'</p>'+Object.entries(p).filter(([k,v])=>v!==null&&v!==''&&!/globalid|^fid$|shape_/i.test(k)).slice(0,18).map(([k,v])=>'<div><b>'+escape(k.replaceAll('_',' '))+':</b> '+escape(v)+'</div>').join('')+(c.id.startsWith('wreck')?'<p>No depth or current hazard status supplied by this export.</p>':'')+'<p>Research record; coverage and status may be incomplete.</p>';return box;}
+function inactive(f){return /dismant|decomm|abandon|completed|removed|closed|inactive|cancelled|canceled/i.test(status(f));}
+function popup(f,c){const p=f.properties||{},name=p.name||p.objnam||p.portname||p.testsite||p.pipe_name||'Unnamed record';const box=document.createElement('div');box.innerHTML='<b>'+escape(name)+'</b><p>'+escape(c.label)+' · '+escape(c.source)+'</p>'+(p.helmlore_id?'<p><b>Helmlore feature:</b> '+escape(p.helmlore_id)+'<br><b>Source record:</b> '+escape(p.source_external_id||'')+'<br><b>Source date:</b> '+escape(p.source_date||'unknown')+'</p>':'')+Object.entries(p).filter(([k,v])=>v!==null&&v!==''&&!/globalid|^fid$|shape_|helmlore_id|source_observation|source_external_id/i.test(k)).slice(0,18).map(([k,v])=>'<div><b>'+escape(k.replaceAll('_',' '))+':</b> '+escape(v)+'</div>').join('')+(c.id.startsWith('wreck')?'<p>No depth or current hazard status supplied by this export.</p>':'')+'<p>Research record; coverage and status may be incomplete.</p>';return box;}
 async function redraw(c){
 const note=$('note-'+c.id);
 if(!$(c.id).checked){if(c.layer)map.removeLayer(c.layer);note.textContent='Hidden';return;}
 if(map.getZoom()<c.zoom){if(c.layer)map.removeLayer(c.layer);note.textContent='Zoom in to level '+c.zoom+' to show this layer.';return;}
-if(!c.data){if(c.loading)return;c.loading=true;note.textContent='Loading saved data…';try{const r=await fetch((c.url||'data/navigation/collected-20261007/'+c.id+'.geojson')+'?v=20261007-full');if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(d.type!=='FeatureCollection')throw Error('Invalid dataset');c.data=d.features.map(f=>({f,b:bbox(f.geometry)}));}catch(e){note.textContent='Unavailable: '+e.message;c.loading=false;return;}c.loading=false;return redraw(c);}
+if(!c.data){if(c.loading)return;c.loading=true;note.textContent='Loading saved data…';try{const r=await fetch((c.url||'data/navigation/collected-20261007/'+c.id+'.geojson')+'?v='+encodeURIComponent(managedVersion));if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(d.type!=='FeatureCollection')throw Error('Invalid dataset');c.data=d.features.map(f=>({f,b:bbox(f.geometry)}));}catch(e){note.textContent='Unavailable: '+e.message;c.loading=false;return;}c.loading=false;return redraw(c);}
 if(c.layer){map.removeLayer(c.layer);c.layer.clearLayers();}
 const b=map.getBounds(),showPlanned=$('proposals').checked;
 const available=c.data.filter(o=>o.b[0]<=b.getEast()&&o.b[2]>=b.getWest()&&o.b[1]<=b.getNorth()&&o.b[3]>=b.getSouth()&&(showPlanned||!proposed(o.f)));

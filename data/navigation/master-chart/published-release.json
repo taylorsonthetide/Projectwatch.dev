@@ -1,0 +1,28 @@
+{
+  "id": "20261007-master-v1",
+  "layers": {
+    "ukfibrecables": "data/navigation/master-chart/current-v1/ukfibrecables.geojson",
+    "platforms": "data/navigation/master-chart/current-v1/platforms.geojson",
+    "portlocations": "data/navigation/master-chart/current-v1/portlocations.geojson",
+    "oenergy": "data/navigation/master-chart/current-v1/oenergy.geojson"
+  },
+  "counts": {
+    "ukfibrecables": 25,
+    "platforms": 379,
+    "portlocations": 78,
+    "oenergy": 175
+  },
+  "sha256": {
+    "ukfibrecables": "d0c1c668733e98432aceb0b07ebb6c3655427a0ca29e5049627c5c6f3c8cb511",
+    "platforms": "c2bf1924d9f8c06ca69f0585074e88dee689143bb2e23ff7d50d02f00567a462",
+    "portlocations": "0f223639ef8c4aaed12be817dac8125de8f1f182a03473ec28267a1b6f5ca2e6",
+    "oenergy": "f3cd676bc5fc0da2633a5393d1c1b8a92dc083e79b7d1142d3168f70fe481c00"
+  },
+  "historical_source_year": 2011,
+  "review_summary": "docs/helmlore-master-chart-audit-20261007.md",
+  "raster_seamarks": "Live OpenSeaMap raster remains separate; vector reconciliation pending",
+  "corrections": [
+    "Kinsale Head Alpha platform retired",
+    "Kinsale Head Bravo platform retired"
+  ]
+}

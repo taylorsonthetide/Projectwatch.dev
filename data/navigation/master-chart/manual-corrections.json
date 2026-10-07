@@ -1,0 +1,22 @@
+[
+  {
+    "source": "emodnet:platforms",
+    "external_id": "IE2",
+    "name": "Kinsale Head Alpha",
+    "action": "retire",
+    "evidence_url": "https://www.arup.com/globalassets/downloads/arup-journal/the-arup-journal-2023-issue-2.pdf",
+    "evidence_date": "2023",
+    "evidence_location": "Printed pages 36–37, PDF page 19 (index 18)",
+    "reason": "Arup's project account confirms removal of the Alpha and Bravo platforms down to seabed level, completed by mid-September 2022. EMODnet still labels this platform Operational. Retire only the platform depiction; pipelines/cables were left in situ and seabed hazards are not inferred absent."
+  },
+  {
+    "source": "emodnet:platforms",
+    "external_id": "IE3",
+    "name": "Kinsale Head Bravo",
+    "action": "retire",
+    "evidence_url": "https://www.arup.com/globalassets/downloads/arup-journal/the-arup-journal-2023-issue-2.pdf",
+    "evidence_date": "2023",
+    "evidence_location": "Printed pages 36–37, PDF page 19 (index 18)",
+    "reason": "Arup's project account confirms removal of the Alpha and Bravo platforms down to seabed level, completed by mid-September 2022. EMODnet still labels this platform Operational. Retire only the platform depiction; pipelines/cables were left in situ and seabed hazards are not inferred absent."
+  }
+]

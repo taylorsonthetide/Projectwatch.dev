@@ -1,0 +1,66 @@
+[
+  {
+    "source": "ukfibrecables",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Aukfibrecables&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:02.137116+00:00",
+    "features": 25,
+    "sha256": "5ef59668578312ff71577226d94c6172913c2eb5c84275ec416081de10566254",
+    "ok": true
+  },
+  {
+    "source": "platforms",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Aplatforms&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:02.415061+00:00",
+    "features": 591,
+    "sha256": "d94014a9df3d82d80c2a93e98a23530f124c1ce218abef000aefe89b2ee479f9",
+    "ok": true
+  },
+  {
+    "source": "portlocations",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Aportlocations&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:02.126407+00:00",
+    "features": 88,
+    "sha256": "2f02a88fc476fa5a834cdd322a93246713204c4457d9f2e49d0cd943c86f7c60",
+    "ok": true
+  },
+  {
+    "source": "oenergy",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Aoenergy&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:02.252659+00:00",
+    "features": 189,
+    "sha256": "40bfa799ab4058d6656ddfb9063a84053b84a7aa46ea1f3bed47976f4631594a",
+    "ok": true
+  },
+  {
+    "source": "windfarms",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Awindfarms&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:08.959847+00:00",
+    "features": 108,
+    "sha256": "6f16c20032aa79017dc717c4566771eec74a959f4c3c6ed24a355f9c0a3ad1f9",
+    "ok": true
+  },
+  {
+    "source": "windfarmspoly",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Awindfarmspoly&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:09.638645+00:00",
+    "features": 271,
+    "sha256": "19c88144b6c8343c0e9d6da77848306fe83e0e895c13a80e91f3915167e7f649",
+    "ok": true
+  },
+  {
+    "source": "pipelines",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Apipelines&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:10.382599+00:00",
+    "features": 2625,
+    "sha256": "69bf94d5b34f031a29035247cda984db534da7ecd33831b17559401d6f81c534",
+    "ok": true
+  },
+  {
+    "source": "oenergytests",
+    "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Aoenergytests&outputFormat=application%2Fjson&srsName=EPSG%3A4326&bbox=-12%2C49%2C3%2C61%2CEPSG%3A4326&count=100000",
+    "retrieved_at": "2026-10-07T22:06:09.141975+00:00",
+    "features": 21,
+    "sha256": "de344be24bc503fd1b4d2ae1af71d3c9e93a38d339923dbb02cfec29593fee5a",
+    "ok": true
+  }
+]

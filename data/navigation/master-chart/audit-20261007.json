@@ -1,0 +1,118 @@
+{
+  "created_at": "2026-10-07T22:29:08.270348+00:00",
+  "source_revision": "c2bbaa3ac77aa5d2640b307ddc6be30051e0f1dd",
+  "bounds": [
+    -12,
+    49,
+    3,
+    61
+  ],
+  "counts": {
+    "imported_observations": 1324208,
+    "exact_repeat_observations": 22105,
+    "derived_tile_records": 1318856,
+    "observations": 1324208,
+    "entities": 1300384,
+    "files": 8907,
+    "reviews": 19589,
+    "exact_duplicate_entity_groups": 56,
+    "retired_entities": 2
+  },
+  "osm_extraction": {
+    "source_url": "https://download.geofabrik.de/europe/britain-and-ireland-261006.osm.pbf",
+    "pbf_sha256": "49736767ebe4e3428fe0195e61c166e9bd90141d569d7b85aecda32ae5357f31",
+    "pbf_bytes": 2619809354,
+    "retrieved_at": "2026-10-07T22:28:09.159397+00:00",
+    "nodes": 20243,
+    "tagged_ways": 4711,
+    "exported_ways": 4711,
+    "missing_way_positions": [],
+    "assembled_relations": 65,
+    "relations_pending_geometry": [
+      {
+        "id": 6701391,
+        "reason": "unhandled member role part"
+      },
+      {
+        "id": 10129080,
+        "reason": "732730343"
+      },
+      {
+        "id": 10539932,
+        "reason": "371865141"
+      },
+      {
+        "id": 10539939,
+        "reason": "760777801"
+      },
+      {
+        "id": 10626831,
+        "reason": "766541482"
+      },
+      {
+        "id": 11343101,
+        "reason": "non-way geometry member"
+      },
+      {
+        "id": 12583521,
+        "reason": "482902720"
+      },
+      {
+        "id": 19268061,
+        "reason": "non-way geometry member"
+      },
+      {
+        "id": 19646000,
+        "reason": "outer members do not form a closed area"
+      },
+      {
+        "id": 20194148,
+        "reason": "non-way geometry member"
+      }
+    ],
+    "coverage": "Geofabrik Britain and Ireland extract; not an assertion of all offshore data within the chart bounding box.",
+    "licence": "OpenStreetMap ODbL 1.0; source attribution and derived database obligations apply"
+  },
+  "review_types": {
+    "close_cross_source": 12926,
+    "confirmed_platform_removal": 2,
+    "geometry_detail_difference": 1718,
+    "inactive_source_status": 239,
+    "not_in_latest_extract": 388,
+    "same_name_nearby": 4309,
+    "source_change": 1,
+    "wind_site_association": 6
+  },
+  "layers": {
+    "coast": 136002,
+    "contours": 154851,
+    "depthareas": 130620,
+    "hazards": 107675,
+    "localmarks": 41,
+    "marks": 43700,
+    "oenergy": 350,
+    "oenergytests": 40,
+    "pilotage": 3883,
+    "pipelines": 5383,
+    "platforms": 776,
+    "portlocations": 156,
+    "research": 7,
+    "seamarks": 45262,
+    "soundings": 668684,
+    "ukfibrecables": 55,
+    "windfarms": 202,
+    "windfarmspoly": 470,
+    "wreckareas": 161,
+    "wreckpoints": 25890
+  },
+  "errors": [],
+  "limitations": [
+    "Custom research chart, not an official ENC.",
+    "Source retrieval date is not a survey/update date.",
+    "Proximity and missing records never trigger automatic deletion.",
+    "Live OpenSeaMap raster remains separate until vector reconciliation is reviewed.",
+    "Historic depth/survey currency has not been verified.",
+    "Notices to Mariners are not yet an exhaustive reconciled correction series.",
+    "Wind-farm audit does not assert complete turbine-level coverage."
+  ]
+}

@@ -1,0 +1,6 @@
+build/
+__pycache__/
+snapshots/*.geojson
+snapshots/openseamap-nodes.json
+snapshots/openseamap-relations.json
+snapshots/openseamap-refresh-report.json

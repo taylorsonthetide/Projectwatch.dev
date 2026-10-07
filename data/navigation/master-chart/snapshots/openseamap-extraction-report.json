@@ -1,0 +1,55 @@
+{
+  "source_url": "https://download.geofabrik.de/europe/britain-and-ireland-261006.osm.pbf",
+  "pbf_sha256": "49736767ebe4e3428fe0195e61c166e9bd90141d569d7b85aecda32ae5357f31",
+  "pbf_bytes": 2619809354,
+  "retrieved_at": "2026-10-07T22:28:09.159397+00:00",
+  "nodes": 20243,
+  "tagged_ways": 4711,
+  "exported_ways": 4711,
+  "missing_way_positions": [],
+  "assembled_relations": 65,
+  "relations_pending_geometry": [
+    {
+      "id": 6701391,
+      "reason": "unhandled member role part"
+    },
+    {
+      "id": 10129080,
+      "reason": "732730343"
+    },
+    {
+      "id": 10539932,
+      "reason": "371865141"
+    },
+    {
+      "id": 10539939,
+      "reason": "760777801"
+    },
+    {
+      "id": 10626831,
+      "reason": "766541482"
+    },
+    {
+      "id": 11343101,
+      "reason": "non-way geometry member"
+    },
+    {
+      "id": 12583521,
+      "reason": "482902720"
+    },
+    {
+      "id": 19268061,
+      "reason": "non-way geometry member"
+    },
+    {
+      "id": 19646000,
+      "reason": "outer members do not form a closed area"
+    },
+    {
+      "id": 20194148,
+      "reason": "non-way geometry member"
+    }
+  ],
+  "coverage": "Geofabrik Britain and Ireland extract; not an assertion of all offshore data within the chart bounding box.",
+  "licence": "OpenStreetMap ODbL 1.0; source attribution and derived database obligations apply"
+}
