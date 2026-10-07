@@ -1228,7 +1228,7 @@
     <div class="homeProHeroContent">
       <div class="homeEyebrow">HELMLORE • MARINE TRAINING</div>
       <h1>Learn the skills.<br>Take the watch.</h1>
-      <p>Build confidence on the water. Explore clear, visual courses in navigation, safety and boat knowledge.</p><a class="pwHomeHeroLink" href="#pwPathwayHubTitle">Choose your training <span aria-hidden="true">↓</span></a>
+      <p>Build confidence on the water. Explore clear, visual courses in navigation, safety and boat knowledge.</p><a class="pwHomeHeroLink" href="#pwHomeExploreTitle">New to Bridge Watchkeeping? Start here <span aria-hidden="true">↓</span></a>
       <div class="homeStatusLine">
         <span><b>9</b> TRAINING PATHWAYS</span>
         <span><b>GUIDED</b> LESSONS</span>
@@ -1244,15 +1244,15 @@
 
   
 <section class="pwHomeExplore" aria-labelledby="pwHomeExploreTitle">
- <div class="pwHomeExploreHead"><div class="homeEyebrow">EXPLORE YOUR WAY</div><h2 id="pwHomeExploreTitle">Find your next step.</h2><p>Follow a course, or go straight to the tools you need.</p></div>
+ <div class="pwHomeExploreHead"><div class="homeEyebrow">BRIDGE WATCHKEEPING • START HERE</div><h2 id="pwHomeExploreTitle">Learn the basics. Then take the watch.</h2><p>New to watchkeeping? Start in the library to understand what you see and hear before beginning the training modules.</p></div>
  <div class="pwHomeExploreLinks">
- <button type="button" class="pwExploreLink" onclick="showTrainingLibrary()"><span class="pwExploreNo" aria-hidden="true">01</span><span><b>Open Training Library</b><small>COLREGs, simulators, recognition practice and reference tools.</small></span><span aria-hidden="true">↗</span></button>
- <button type="button" class="pwExploreLink" onclick="pwShowAllCourses()"><span class="pwExploreNo" aria-hidden="true">02</span><span><b>Explore All Courses</b><small>See all nine pathways and the skills covered in each course.</small></span><span aria-hidden="true">↗</span></button>
+ <button type="button" class="pwExploreLink" onclick="showTrainingLibrary()"><span class="pwExploreNo" aria-hidden="true">01</span><span><b>Start here: learn in the library</b><small>Begin with lights and day shapes, then sound signals and collision regulations (COLREGs). Explore the scenarios and recognition practice at your own pace.</small></span><span aria-hidden="true">→</span></button>
+ <button type="button" class="pwExploreLink" onclick="showCoursePage()"><span class="pwExploreNo" aria-hidden="true">02</span><span><b>Next: Bridge Watchkeeping training</b><small>Put your understanding into practice. Follow the course modules, scenarios and assessments. Returning learners can continue here.</small></span><span aria-hidden="true">→</span></button>
  </div>
 </section>
 
 <div class="pwPathwayHub" aria-labelledby="pwPathwayHubTitle">
-  <div class="pwPathwayHubHead"><div><div class="homeEyebrow">CHOOSE YOUR TRAINING</div><h2 id="pwPathwayHubTitle">Choose your next subject</h2></div><p>Open a course to see its lessons and your progress.</p></div>
+  <div class="pwPathwayHubHead"><div><div class="homeEyebrow">EXPLORE MORE TRAINING</div><h2 id="pwPathwayHubTitle">CEVNI &amp; additional subjects</h2></div><p>Follow the CEVNI pathway or build your knowledge with the other available courses.</p></div>
   <div class="pwPathwayCards" id="pwHomePathways"></div>
 </div>
 
@@ -1341,8 +1341,8 @@
   </style>
   <div class="lib20Hero">
     <div class="lib20HeroTop">
-      <div><div class="ver">HELMLORE • BRIDGE LIBRARY 2.0</div><h1>Training &amp; Reference Library</h1><p>The permanent Helmlore learning space. Browse by subject, then choose the tool you need: learn the principle, check the reference, practise it, run the simulator or revisit an assessment. Course progress remains separate and nothing in the existing library has been removed.</p></div>
-      <div class="lib20Actions"><button onclick="showModule('home')">← HOME</button><button onclick="showCoursePage()">COURSE MAP →</button></div>
+      <div><div class="ver">HELMLORE • BRIDGE LIBRARY 2.0</div><h1>Training &amp; Reference Library</h1><p>Start here before Bridge Watchkeeping training. First learn vessel lights and day shapes, then sound signals and collision regulations (COLREGs). Use the reference material, scenarios and recognition practice to build your understanding. When you are ready, continue to the Bridge Watchkeeping modules.</p></div>
+      <div class="lib20Actions"><button onclick="showModule('home')">← HOME</button><button onclick="showCoursePage()">NEXT: BRIDGE WATCHKEEPING →</button></div>
     </div>
     <div class="lib20Tools"><label class="lib20Search"><span>⌕</span><input id="lib20Search" type="search" placeholder="Search COLREGs, lights, buoyage, AIS, TSS…" oninput="pwLibraryFilter()"></label><div class="lib20Filter" id="lib20Filter"><button class="active" data-filter="all" onclick="pwLibrarySetFilter('all',this)">ALL</button><button data-filter="reference" onclick="pwLibrarySetFilter('reference',this)">REFERENCE</button><button data-filter="learn" onclick="pwLibrarySetFilter('learn',this)">LEARN</button><button data-filter="practice" onclick="pwLibrarySetFilter('practice',this)">PRACTISE</button><button data-filter="simulator" onclick="pwLibrarySetFilter('simulator',this)">SIMULATORS</button></div></div>
   </div>
