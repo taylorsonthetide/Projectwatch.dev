@@ -1,7 +1,7 @@
 /* Independent data prototype; no GPS, accounts or training-state changes. */
 (async()=>{'use strict';
 const $=id=>document.getElementById(id),bounds=[[54.4,-3.75],[54.75,-3.35]];
-const map=L.map('map',{minZoom:9,maxZoom:19}).fitBounds(bounds);
+const map=L.map('map',{minZoom:9,maxZoom:19}).setView([54.547,-3.590],12);
 L.control.scale({imperial:true,metric:true}).addTo(map);
 const extent=L.rectangle(bounds,{color:'#176993',weight:2,dashArray:'7 5',fill:false,interactive:false}).addTo(map);
 $('boundary').onchange=()=>{$('boundary').checked?extent.addTo(map):map.removeLayer(extent);};
