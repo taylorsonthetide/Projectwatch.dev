@@ -1,0 +1,9 @@
+# Historical UK and Ireland display tiles
+
+7,456 clipped XYZ vector display tiles from the user-supplied October 2011 CM93 archive. Bounds: longitude -12 to 3, latitude 49 to 61, covering UK and Ireland study waters. Seven native scale levels: A at z3, B z5, C z7, D z9, E z11, F z12 and G z13.
+
+Each z/x/y.json contains gzip-compressed JSON records encoded as base64. Record schema: [layer_index, source_class, geometry_type, coordinates, properties]. Geographic coordinates remain WGS84. index.json supplies bounding boxes, counts, byte sizes and layer coverage masks. Each sounding retains its source position and value. Lines and areas are clipped at tile boundaries and simplified at approximately one quarter native display pixel with topology preservation. Full source GeoJSON and original cells are retained separately.
+
+The web renderer loads up to four tiles concurrently and keeps up to 48 decompressed tiles in memory. Each visible layer independently falls back to broader tiles when finer tiles are missing. Broader geometry is masked to missing tile regions. Display zoom reaches 18; zooming beyond source detail does not add surveyed information. Browser and HTTP caching do not make the full app offline; basemap and online overlays still require their services.
+
+Build dependencies are in requirements.txt. Run `python scripts/navigation/build_historical_tiles.py --input data/navigation/historical-2011 --output data/navigation/historical-tiles-2011-v1` from the repository root. The build validates output record counts before creating the tile index. report.json records 1,241,519 input records, 1,318,856 tile records (clipped lines/areas can create more than one tile record), and no failed records. Z-scale overview records are excluded. Experimental historical display data, not current surveyed hydrography or an official ENC.
