@@ -13,7 +13,8 @@ base.on('tileerror',()=>{baseError=true;$('status').textContent='Some online bas
 base.on('load',()=>{if(!baseError)$('status').textContent='UK & Ireland online basemap loaded. These layers are not an offline chart pack.';});
 const extent=L.rectangle(bounds,{color:'#176993',weight:2,dashArray:'7 5',fill:false,interactive:false});
 $('boundary').onchange=()=>{$('boundary').checked?extent.addTo(map):map.removeLayer(extent);};
-$('reset').onclick=()=>map.fitBounds(bounds);
+$('reset').onclick=()=>{$('region').value='all';map.fitBounds(bounds);};
+$('region').onchange=()=>{const p={irish:[54,-4.8,9],ireland:[53.3,-6.1,9],solent:[50.8,-1.2,10],north:[57,1,8],scotland:[58,-3.5,8]}[$('region').value];if(p)map.setView([p[0],p[1]],p[2]);else map.fitBounds(bounds);};
 const marks=L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{...options,pane:'markPane',attribution:'Sea marks: <a href="https://www.openseamap.org/">OpenSeaMap</a>'});
 let markErrors=0;
 marks.on('tileerror',()=>{markErrors++;$('marksStatus').textContent='Some sea-mark tiles failed. Missing symbols do not establish clear water.';});
