@@ -1,29 +1,32 @@
-/* Independent data prototype; no GPS, accounts or training-state changes. */
-(async()=>{'use strict';
-const $=id=>document.getElementById(id),bounds=[[54.4,-3.75],[54.75,-3.35]];
-const map=L.map('map',{minZoom:9,maxZoom:14,zoomAnimation:false,fadeAnimation:false}).setView([54.547,-3.590],12);
+/* UK and Ireland online research map; no GPS or account changes. */
+(()=>{'use strict';
+const $=id=>document.getElementById(id),bounds=[[49,-12],[61,3]];
+const map=L.map('map',{minZoom:4,maxZoom:14,zoomAnimation:false,fadeAnimation:false}).fitBounds(bounds);
 L.control.scale({imperial:true,metric:true}).addTo(map);
-const extent=L.rectangle(bounds,{color:'#176993',weight:2,dashArray:'7 5',fill:false,interactive:false}).addTo(map);
+const options={maxZoom:14,keepBuffer:0,updateWhenIdle:true,updateWhenZooming:false,noWrap:true};
+map.createPane('depthPane');map.getPane('depthPane').style.zIndex=250;map.getPane('depthPane').style.pointerEvents='none';
+map.createPane('contourPane');map.getPane('contourPane').style.zIndex=300;map.getPane('contourPane').style.pointerEvents='none';
+map.createPane('markPane');map.getPane('markPane').style.zIndex=400;
+const base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{...options,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a>'}).addTo(map);
+let baseError=false;
+base.on('tileerror',()=>{baseError=true;$('status').textContent='Some online basemap tiles failed. Check your connection.';});
+base.on('load',()=>{if(!baseError)$('status').textContent='UK & Ireland online basemap loaded. These layers are not an offline chart pack.';});
+const extent=L.rectangle(bounds,{color:'#176993',weight:2,dashArray:'7 5',fill:false,interactive:false});
 $('boundary').onchange=()=>{$('boundary').checked?extent.addTo(map):map.removeLayer(extent);};
 $('reset').onclick=()=>map.fitBounds(bounds);
-const marks=L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{maxZoom:14,keepBuffer:0,updateWhenIdle:true,updateWhenZooming:false,attribution:'Sea marks: <a href="https://www.openseamap.org/">OpenSeaMap</a> · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a>'});
+const marks=L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{...options,pane:'markPane',attribution:'Sea marks: <a href="https://www.openseamap.org/">OpenSeaMap</a>'});
 let markErrors=0;
-marks.on('tileerror',()=>{markErrors++;$('marksStatus').textContent='Some sea-mark tiles failed to load. Missing symbols do not establish clear water.';});
+marks.on('tileerror',()=>{markErrors++;$('marksStatus').textContent='Some sea-mark tiles failed. Missing symbols do not establish clear water.';});
 marks.on('loading',()=>{if(!markErrors)$('marksStatus').textContent='Requesting online sea-mark tiles…';});
-marks.on('load',()=>{if(!markErrors)$('marksStatus').textContent='Online sea-mark tiles loaded. Symbols and coverage are community data, not verified chart coverage.';});
-$('seamarks').onchange=()=>{markErrors=0;if($('seamarks').checked)marks.addTo(map);else{map.removeLayer(marks);$('marksStatus').textContent='Sea marks hidden. This overlay needs an internet connection.';}};
-map.on('zoomend',()=>{$('zoomStatus').textContent=map.getZoom()>14?'Display zoom '+map.getZoom()+': enlarged source data; no additional stored detail beyond zoom 14.':'Source detail extends to zoom 14. Display zoom '+map.getZoom()+'.';});
-try{
-const response=await fetch('data/navigation/whitehaven.pmtiles');if(!response.ok)throw Error('Basemap download returned '+response.status);
-const blob=await response.blob();if(blob.size!==3457012)throw Error('Incomplete basemap');
-const digest=await crypto.subtle.digest('SHA-256',await blob.arrayBuffer()),hash=Array.from(new Uint8Array(digest),n=>n.toString(16).padStart(2,'0')).join('');
-if(hash!=='9a48396384e4e21628254e4785814981a7c07116ce392f77e5b25a85ad4a2c1f')throw Error('Basemap integrity mismatch');
-const pm=new pmtiles.PMTiles(new pmtiles.FileSource(new File([blob],'whitehaven.pmtiles')));
-const header=await pm.getHeader();if(header.tileType!==1||header.maxZoom!==14)throw Error('Unexpected basemap format');
-const basemap=protomapsL.leafletLayer({url:pm,flavor:'light',lang:'en',maxDataZoom:14,levelDiff:0,maxZoom:14,keepBuffer:0,updateWhenIdle:true,updateWhenZooming:false,noWrap:true,bounds,attribution:'<a href="https://protomaps.com/">Protomaps</a> · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a> · build 2026-10-03'});
-// Bound canvas memory on high-density tablets; tile geometry stays at 256 CSS pixels.
-basemap.tileSize=256;
-basemap.addTo(map);
-if($('seamarks').checked)marks.bringToFront();extent.bringToFront();$('status').textContent='Whitehaven basemap loaded and integrity checked.';
-}catch(e){$('status').textContent='Basemap unavailable: '+e.message+'. No chart coverage is displayed.';}
+marks.on('load',()=>{if(!markErrors)$('marksStatus').textContent='Sea-mark tiles loaded. Community coverage varies; zoom in to see available symbols.';});
+$('seamarks').onchange=()=>{markErrors=0;if($('seamarks').checked)marks.addTo(map);else{map.removeLayer(marks);$('marksStatus').textContent='Sea marks hidden.';}};
+const wms='https://ows.emodnet-bathymetry.eu/wms';
+const depths=L.tileLayer.wms(wms,{...options,pane:'depthPane',layers:'emodnet:mean_multicolour',format:'image/png',transparent:true,version:'1.1.1',opacity:.78,attribution:'Depths: <a href="https://emodnet.ec.europa.eu/en/bathymetry">EMODnet Bathymetry</a> · research only'});
+const contours=L.tileLayer.wms(wms,{...options,pane:'contourPane',layers:'emodnet:contours',format:'image/png',transparent:true,version:'1.1.1',attribution:'Contours: EMODnet Bathymetry'});
+let depthFailed=false;
+function depthMessage(){if(!depthFailed)$('depthStatus').textContent=$('depths').checked||$('contours').checked?'EMODnet depth tiles loaded. Broad seabed data; not live water depth or verified harbour soundings.':'Depth layers hidden.';}
+for(const layer of [depths,contours]){layer.on('loading',()=>{if(!depthFailed)$('depthStatus').textContent='Requesting EMODnet depth tiles…';});layer.on('tileerror',()=>{depthFailed=true;$('depthStatus').textContent='Some depth tiles failed. The missing area has no displayed depth information.';});layer.on('load',depthMessage);}
+for(const [id,layer] of [['depths',depths],['contours',contours]]){$(id).onchange=()=>{depthFailed=false;if($(id).checked)layer.addTo(map);else map.removeLayer(layer);depthMessage();};}
+map.on('zoomend',()=>{$('zoomStatus').textContent='Display zoom '+map.getZoom()+'. Zooming in does not increase the accuracy of the depth source.';});
+if($('depths').checked)depths.addTo(map);if($('contours').checked)contours.addTo(map);if($('seamarks').checked)marks.addTo(map);
 })();
