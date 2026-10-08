@@ -1,0 +1,80 @@
+{
+  "schema": "helmlore-depiction-precedence-v1",
+  "date": "2026-10-08",
+  "name": "Gut",
+  "action": "suppress_2011_depiction_when_online_seamarks_enabled",
+  "reason": "User confirmed overlapping 2011 and online Gut depictions. Original records remain inspectable with online sea marks off. No claim of physical buoy removal.",
+  "replacement_position": [
+    -3.1496666666666666,
+    53.69606666666667
+  ],
+  "evidence_url": "https://www.trinityhouse.co.uk/notice-to-mariners/2/2023-gut-lighted-buoy",
+  "historical_records": [
+    {
+      "id": "51265e2c8e87:483",
+      "scale": "C",
+      "class": "BOYSAW",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.149645,
+          53.697782
+        ]
+      },
+      "properties": {
+        "offset_m": [
+          0.0,
+          0.0
+        ],
+        "COLMAR": 11,
+        "BOYSHP": 3,
+        "COLPAT": 2,
+        "OBJNAM": "Gut"
+      }
+    },
+    {
+      "id": "55f8599bea1b:565",
+      "scale": "D",
+      "class": "BOYSAW",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.149722,
+          53.695588
+        ]
+      },
+      "properties": {
+        "offset_m": [
+          0.0,
+          0.0
+        ],
+        "COLMAR": 11,
+        "BOYSHP": 3,
+        "COLPAT": 2,
+        "OBJNAM": "Gut"
+      }
+    },
+    {
+      "id": "1dcebc5b4d87:1336",
+      "scale": "E",
+      "class": "BOYSAW",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.149889,
+          53.695672
+        ]
+      },
+      "properties": {
+        "offset_m": [
+          0.0,
+          0.0
+        ],
+        "COLMAR": 11,
+        "COLPAT": 2,
+        "BOYSHP": 3,
+        "OBJNAM": "Gut"
+      }
+    }
+  ]
+}
