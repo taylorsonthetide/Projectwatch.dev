@@ -1,7 +1,7 @@
 (()=>{let symbolId=0;function markSymbol(f){
  const type=f.properties['seamark:type']||'';
  const svg=body=>'<svg viewBox="0 0 40 48" width="26" height="32" aria-hidden="true">'+body+'</svg>';
- if(type==='wind_turbine')return svg('<g fill="none" stroke="#385667" stroke-width="2"><path d="M20 20 V42 M20 20 L20 4 M20 20 L6 28 M20 20 L34 28"/><circle cx="20" cy="20" r="2"/></g>');
+ if(isTurbine(f))return svg('<g fill="none" stroke="#385667" stroke-width="2"><path d="M20 20 V42 M20 20 L20 4 M20 20 L6 28 M20 20 L34 28"/><circle cx="20" cy="20" r="2"/></g>');
  if(type==='light_major'||type==='light_minor'||type==='lighthouse')return svg('<path d="M12 41 L16 18 H24 L28 41 Z" fill="white" stroke="#385667" stroke-width="2"/><path d="M15 27 H25" stroke="#e43435" stroke-width="5"/><path d="M13 18 L20 10 L27 18 Z" fill="#385667"/><path d="M8 10 L3 6 M32 10 L37 6 M20 5 V1" stroke="#d28716" stroke-width="2"/>');
  if(type==='platform')return svg('<path d="M7 20 H33 V31 H7 Z M11 31 V43 M29 31 V43 M20 20 V8" fill="none" stroke="#385667" stroke-width="2"/>');
  if(type&&!/^(buoy_|beacon_)/.test(type))return svg('<circle cx="20" cy="26" r="4" fill="white" stroke="#385667" stroke-width="2"/>');
@@ -17,4 +17,5 @@
  const hasLight=!!p['seamark:light:character']||p.LITCHR!==undefined;
  return '<svg viewBox="0 0 40 48" width="26" height="32" aria-hidden="true"><defs><clipPath id="'+clip+'"><path d="'+body+'"/></clipPath></defs><path d="M20 15 V24" stroke="#172d37" stroke-width="2"/>'+top+'<path d="'+body+'" fill="'+fill+'" stroke="#172d37" stroke-width="1.6"/>'+ (bands?'<g clip-path="url(#'+clip+')">'+bands+'</g>':'')+'<path d="M7 42 Q13 39 20 42 T33 42" fill="none" stroke="#244f65" stroke-width="1.5"/>'+(hasLight?'<path d="M31 15 L34 12 M33 20 H37 M29 11 V7" stroke="#d28716" stroke-width="2"/>':'')+'</svg>';
 }
-window.HelmloreMarkSymbol=markSymbol;})();
+function isTurbine(f){const p=f.properties;return p['seamark:type']==='wind_turbine'||p['generator:method']==='wind_turbine'||(p['seamark:landmark:category']==='windmotor'&&p.man_made!=='petroleum_well');}
+window.HelmloreIsTurbine=isTurbine;window.HelmloreMarkSymbol=markSymbol;})();
