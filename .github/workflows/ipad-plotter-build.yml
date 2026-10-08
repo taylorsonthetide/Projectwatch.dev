@@ -10,6 +10,7 @@ on:
       - 'navigation-sw.js'
       - 'data/navigation/offline-chart-manifest.json'
       - 'tests/chart-pack.cjs'
+      - 'tests/confirmed-marks.cjs'
       - 'tests/route-library.cjs'
       - '.github/workflows/ipad-plotter-build.yml'
   workflow_dispatch:
@@ -22,10 +23,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Validate chart downloads, route backups and NMEA
-        run: node --test tests/chart-pack.cjs tests/route-library.cjs tests/weather-offline.cjs tests/ipad/nmea.test.cjs
+        run: node --test tests/confirmed-marks.cjs tests/chart-pack.cjs tests/route-library.cjs tests/weather-offline.cjs tests/ipad/nmea.test.cjs
       - name: Generate chartplotter-only project
         run: python3 scripts/ipad/build_ipad_project.py --output "$RUNNER_TEMP/HelmlorePlotter"
       - name: Build unsigned simulator app
         run: xcodebuild -project "$RUNNER_TEMP/HelmlorePlotter/HelmlorePlotter.xcodeproj" -scheme HelmlorePlotter -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/PlotterBuild" CODE_SIGNING_ALLOWED=NO build
       - name: Build unsigned iPad device app
         run: xcodebuild -project "$RUNNER_TEMP/HelmlorePlotter/HelmlorePlotter.xcodeproj" -scheme HelmlorePlotter -configuration Release -destination 'generic/platform=iOS' -derivedDataPath "$RUNNER_TEMP/PlotterDeviceBuild" CODE_SIGNING_ALLOWED=NO build
+
