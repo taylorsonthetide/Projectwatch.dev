@@ -1,4 +1,5 @@
-(()=>{let symbolId=0;function markSymbol(f){
+(()=>{let symbolId=0;function resolved(f){const inherited=window.HelmloreMarkEnrichment?.[f.id];if(!inherited)return f;const properties={...f.properties};for(const [key,value] of Object.entries(inherited.properties))if(!properties[key]||(key==='seamark:type'&&/^light_(minor|major)$/.test(properties[key])&&properties.man_made!=='lighthouse'))properties[key]=value;return {...f,properties};}
+function markSymbol(f){f=resolved(f);
  const original=f.properties;
  // Physical structure takes precedence over the generic light classification.
  const secondary=/^light_(minor|major)$/.test(original['seamark:type']||'')?['buoy_lateral','beacon_lateral','buoy_cardinal','beacon_cardinal','buoy_safe_water','beacon_safe_water','buoy_isolated_danger','beacon_isolated_danger','buoy_special_purpose','beacon_special_purpose'].filter(t=>Object.keys(original).some(k=>k.startsWith('seamark:'+t+':'))):[];
@@ -28,4 +29,4 @@
 }
 function isTurbine(f){const p=f.properties;return p['seamark:type']==='wind_turbine'||p['generator:method']==='wind_turbine'||(p['seamark:landmark:category']==='windmotor'&&p.man_made!=='petroleum_well');}
 function audit(features){const out={total:features.length,lightOnly:0,lateralMissingCategory:0,lateralOtherCategory:0,cardinalMissingDirection:0,cardinalDirections:{north:0,east:0,south:0,west:0},explicitLighthouses:0};for(const f of features){const p=f.properties,t=p['seamark:type']||'';if(p.man_made==='lighthouse'||t==='lighthouse')out.explicitLighthouses++;if(/^light_(minor|major)$/.test(t)&&p.man_made!=='lighthouse'&&!Object.keys(p).some(k=>/^seamark:(buoy|beacon)_/.test(k)))out.lightOnly++;if(t.endsWith('lateral')){const category=p['seamark:'+t+':category'];if(!category)out.lateralMissingCategory++;else if(!['port','starboard','preferred_channel_port','preferred_channel_starboard'].includes(category))out.lateralOtherCategory++;}if(t.endsWith('cardinal')){const direction=p['seamark:'+t+':category'];if(direction in out.cardinalDirections)out.cardinalDirections[direction]++;else out.cardinalMissingDirection++;}}return out;}
-window.HelmloreMarkDataAudit=audit;window.HelmloreIsTurbine=isTurbine;window.HelmloreMarkSymbol=markSymbol;})();
+window.HelmloreResolvedMark=resolved;window.HelmloreMarkDataAudit=audit;window.HelmloreIsTurbine=isTurbine;window.HelmloreMarkSymbol=markSymbol;})();
