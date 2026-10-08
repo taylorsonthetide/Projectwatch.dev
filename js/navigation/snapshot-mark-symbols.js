@@ -1,4 +1,10 @@
 (()=>{let symbolId=0;function markSymbol(f){
+ const type=f.properties['seamark:type']||'';
+ const svg=body=>'<svg viewBox="0 0 40 48" width="26" height="32" aria-hidden="true">'+body+'</svg>';
+ if(type==='wind_turbine')return svg('<g fill="none" stroke="#385667" stroke-width="2"><path d="M20 20 V42 M20 20 L20 4 M20 20 L6 28 M20 20 L34 28"/><circle cx="20" cy="20" r="2"/></g>');
+ if(type==='light_major'||type==='light_minor'||type==='lighthouse')return svg('<path d="M12 41 L16 18 H24 L28 41 Z" fill="white" stroke="#385667" stroke-width="2"/><path d="M15 27 H25" stroke="#e43435" stroke-width="5"/><path d="M13 18 L20 10 L27 18 Z" fill="#385667"/><path d="M8 10 L3 6 M32 10 L37 6 M20 5 V1" stroke="#d28716" stroke-width="2"/>');
+ if(type==='platform')return svg('<path d="M7 20 H33 V31 H7 Z M11 31 V43 M29 31 V43 M20 20 V8" fill="none" stroke="#385667" stroke-width="2"/>');
+ if(type&&!/^(buoy_|beacon_)/.test(type))return svg('<circle cx="20" cy="26" r="4" fill="white" stroke="#385667" stroke-width="2"/>');
  const clip='mark-body-'+(++symbolId);const p=f.properties,t=p['seamark:type']||'',cls=p.class||'',lateral=t.endsWith('lateral')||cls.endsWith('LAT'),cardinal=t.endsWith('cardinal')||cls.endsWith('CAR'),safe=t.endsWith('safe_water')||cls.endsWith('SAW'),danger=t.endsWith('isolated_danger')||cls.endsWith('ISD'),special=t.endsWith('special_purpose')||cls.endsWith('SPP'),beacon=t.startsWith('beacon_')||cls.startsWith('BCN');
  const category=p['seamark:'+t+':category'],hand=category||({1:'port',2:'starboard'}[p.CATLAM]),direction=category||({1:'north',2:'east',3:'south',4:'west'}[p.CATCAM]);
  const colours=String(p['seamark:'+t+':colour']||'').split(';').filter(Boolean);let fill=colours[0]||({1:'white',2:'black',3:'red',4:'green',6:'yellow'}[Array.isArray(p.COLOUR)?p.COLOUR[0]:p.COLOUR])|| (lateral?(hand==='port'?'red':hand==='starboard'?'green':'#98a5aa'):safe?'red':special?'yellow':danger?'black':cardinal?'yellow':'#98a5aa');

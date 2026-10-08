@@ -56,7 +56,7 @@
  loadRoute(r){try{localStorage.removeItem(window.HelmlorePlanning.ACTIVE);}catch{}resetSource('explore');state.routes[r.source]=r.points.map(p=>({...p}));state.planId=r.source==='gps'?r.id:null;state.target=0;save();drawRoute();render();map.fitBounds(r.points.map(p=>[p.lat,p.lon]),{padding:[60,60],maxZoom:14});},
  startGPS(){if(state.mode!=='gps')startGPS();}
  };
- window.addEventListener('navigation-saved-chart',e=>{map.removeLayer(base);map.removeLayer(seamarks);document.body.dataset.offlineChart='true';$('mapStatus').textContent='Saved chart · '+e.detail.release+' · coastline and depths 2011';});
+ window.addEventListener('navigation-saved-chart',e=>{if(!navigator.onLine)map.removeLayer(base);else base.addTo(map);map.removeLayer(seamarks);document.body.dataset.offlineChart='true';$('mapStatus').textContent='Saved chart · '+e.detail.release+' · coastline and depths 2011';});
  window.dispatchEvent(new CustomEvent("navigation-map-ready",{detail:{map,base,seamarks}}));
  if(state.planId&&route().length>1)map.fitBounds(route().map(p=>[p.lat,p.lon]),{padding:[180,180],maxZoom:14});
  drawRoute();drawTrack();render();setInterval(render,1000);
