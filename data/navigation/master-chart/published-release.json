@@ -1,5 +1,5 @@
 {
-  "id": "20261007-master-v1",
+  "id": "20261008-reviewed-v2",
   "layers": {
     "ukfibrecables": "data/navigation/master-chart/current-v1/ukfibrecables.geojson",
     "platforms": "data/navigation/master-chart/current-v1/platforms.geojson",
@@ -19,10 +19,39 @@
     "oenergy": "f3cd676bc5fc0da2633a5393d1c1b8a92dc083e79b7d1142d3168f70fe481c00"
   },
   "historical_source_year": 2011,
-  "review_summary": "docs/helmlore-master-chart-audit-20261007.md",
+  "review_summary": "docs/helmlore-reviewed-chart-20261008.md",
   "raster_seamarks": "Live OpenSeaMap raster remains separate; vector reconciliation pending",
   "corrections": [
     "Kinsale Head Alpha platform retired",
     "Kinsale Head Bravo platform retired"
-  ]
+  ],
+  "reviewed_tiles_root": "data/navigation/master-chart/20261008-reviewed-v2/",
+  "reviewed_tiles_manifest": "data/navigation/master-chart/20261008-reviewed-v2/tile-patches.json",
+  "depiction_register": "data/navigation/master-chart/20261008-reviewed-v2/depiction-register.json",
+  "review_exported_at": "2026-10-08T11:34:27.488Z",
+  "reviewed_mark_counts": {
+    "release": "20261008-reviewed-v2",
+    "review_exported_at": "2026-10-08T11:34:27.488Z",
+    "review_sha256": "8ce0d5e325a8e141d0e3a40ce829a3b0eb162dacdeedff1c813706db843be88c",
+    "manual_hidden_records": 2800,
+    "reconciled_hidden_records": 1716,
+    "combined_hidden_records": 4516,
+    "restored_records": 20,
+    "confirmed_recheck_hidden_records": 269,
+    "compiled_tiles": 7456,
+    "changed_tiles": 730,
+    "tile_bundles": 83,
+    "original_tile_rows": 1318856,
+    "retained_tile_rows": 1314340,
+    "removed_mark_tile_rows": 4516,
+    "hidden_ids_in_tiles": 4516,
+    "hidden_ids_outside_tile_pack": [],
+    "restored_ids_missing_from_tiles": [],
+    "original_observations_preserved": 1324208,
+    "online_records_removed": 0,
+    "non_mark_rows_changed": 0,
+    "historical_source_date": "2011-10",
+    "online_snapshot_date": "2026-10-07",
+    "note": "Custom research chart, not an official ENC or verified current depths. Chart-scale versions counted separately."
+  }
 }

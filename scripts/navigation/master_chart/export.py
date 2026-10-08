@@ -3,12 +3,12 @@ import argparse,gzip,json,sqlite3
 from pathlib import Path
 
 def export(database,output):
-    db=sqlite3.connect(database);db.row_factory=sqlite3.Row;out=Path(output);out.mkdir(parents=True,exist_ok=True)
+    db=sqlite3.connect(database);db.row_factory=sqlite3.Row;db.execute('CREATE TABLE IF NOT EXISTS chart_mark_decisions(source_external_id TEXT PRIMARY KEY,action TEXT,evidence TEXT,decided_at TEXT,review_sha256 TEXT)');out=Path(output);out.mkdir(parents=True,exist_ok=True)
     groups={};counts={}
     # Remove prior exported layer files when all features of a layer were retired.
     # Only this dedicated output directory is managed by the exporter.
     for p in out.glob('*.geojson'):p.unlink()
-    query="SELECT o.*,e.decision FROM entities e JOIN observations o ON o.id=e.current_observation WHERE e.decision NOT IN ('retired','merged') AND o.on_chart=1"
+    query="SELECT o.*,e.decision FROM entities e JOIN observations o ON o.id=e.current_observation WHERE e.decision NOT IN ('retired','merged') AND o.on_chart=1 AND NOT EXISTS (SELECT 1 FROM chart_mark_decisions d WHERE o.source='cm93-2011' AND d.source_external_id=o.external_id AND d.action='hide')"
     with gzip.open(out/'current-features.jsonl.gz','wt',encoding='utf-8') as all_features:
         for r in db.execute(query):
             props=json.loads(r['properties']);props.update({'helmlore_id':r['entity_id'],'source_observation':r['id'],'source_external_id':r['external_id'],'source':r['source'],

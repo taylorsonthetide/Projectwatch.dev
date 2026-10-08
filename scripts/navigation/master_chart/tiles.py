@@ -14,7 +14,7 @@ SCALES={3:'A',5:'B',7:'C',9:'D',11:'E',12:'F',13:'G'}
 LAYERS={'coast':0,'contours':2,'soundings':3,'marks':4}
 
 def rebuild(database, output, queue_all=False):
-    db=sqlite3.connect(database);db.row_factory=sqlite3.Row;out=Path(output);out.mkdir(parents=True,exist_ok=True)
+    db=sqlite3.connect(database);db.row_factory=sqlite3.Row;db.execute('CREATE TABLE IF NOT EXISTS chart_mark_decisions(source_external_id TEXT PRIMARY KEY,action TEXT,evidence TEXT,decided_at TEXT,review_sha256 TEXT)');out=Path(output);out.mkdir(parents=True,exist_ok=True)
     index_path=out/'index.json'
     index=json.loads(index_path.read_text()) if index_path.exists() else {'year':2011,'layers':['coast','depthareas','contours','soundings','marks','hazards'],'cells':[],'bounds':[-12,49,3,61]}
     entries={c['id']:c for c in index['cells']}
@@ -31,7 +31,7 @@ def rebuild(database, output, queue_all=False):
         rows=[]
         query="""SELECT o.* FROM observation_bounds b JOIN observations o ON o.rowid=b.row_id
           JOIN entities e ON o.id=e.current_observation
-          WHERE e.decision NOT IN ('retired','merged') AND o.source='cm93-2011' AND o.scale=? AND o.on_chart=1
+          WHERE e.decision NOT IN ('retired','merged') AND o.source='cm93-2011' AND o.scale=? AND o.on_chart=1 AND NOT EXISTS (SELECT 1 FROM chart_mark_decisions d WHERE o.source='cm93-2011' AND d.source_external_id=o.external_id AND d.action='hide')
           AND b.minx<=? AND b.maxx>=? AND b.miny<=? AND b.maxy>=?"""
         for o in db.execute(query,(scale,b.east,b.west,b.north,b.south)):
             if o['layer'] not in LAYERS:continue

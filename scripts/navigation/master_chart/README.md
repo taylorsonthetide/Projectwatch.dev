@@ -88,3 +88,7 @@ python scripts/navigation/master_chart/import_mark_corrections.py --database pat
 ```
 
 The importer checks exact source ID, current position and mark classification before applying any retirements. Unknown, merged or moved records abort the batch. Repeated imports are safe. Original observations remain; affected tiles/layers are queued. Run the existing tile/export release workflow and publish the resulting reviewed assets to make the correction shared.
+
+## Reviewed release v2
+
+See `docs/helmlore-reviewed-chart-20261008.md`. Source-record hiding and retaining are stored in `chart_mark_decisions`; `chart_pair_decisions` preserves final lateral review results. `compile_reviewed_release.py` produces complete filtered native tiles while keeping all original observations. `export.py` and `tiles.py` exclude only IDs with an explicit hide decision.
