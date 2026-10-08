@@ -1,0 +1,17 @@
+{
+  "radius_m": 50,
+  "historical_mark_records": 43700,
+  "online_buoy_beacon_records": 6443,
+  "cross_layer_candidate_pairs": 4659,
+  "suppressed_2011_buoy_beacon_records": 1476,
+  "suppressed_associated_light_records": 240,
+  "additional_prior_reviewed_records": 4,
+  "retained_2011_mark_records": 41984,
+  "retained_online_records": 6443,
+  "pending_candidate_pairs": 3185,
+  "hazard_layers_changed": 0,
+  "online_records_removed": 0,
+  "snapshot_retrieved_at": "2026-10-07T22:28:09.159397+00:00",
+  "scope": "UK/Ireland within [-12,49,3,61], saved OSM extract coverage only; this is not a real-time feed or proof of complete offshore coverage. Multi-scale source records counted separately.",
+  "unique_online_replacements": 864
+}
