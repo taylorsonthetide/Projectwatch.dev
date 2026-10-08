@@ -21,3 +21,5 @@ jobs:
         run: python3 scripts/ipad/build_ipad_project.py --output "$RUNNER_TEMP/HelmlorePlotter"
       - name: Build unsigned simulator app
         run: xcodebuild -project "$RUNNER_TEMP/HelmlorePlotter/HelmlorePlotter.xcodeproj" -scheme HelmlorePlotter -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/PlotterBuild" CODE_SIGNING_ALLOWED=NO build
+      - name: Build unsigned iPad device app
+        run: xcodebuild -project "$RUNNER_TEMP/HelmlorePlotter/HelmlorePlotter.xcodeproj" -scheme HelmlorePlotter -configuration Release -destination 'generic/platform=iOS' -derivedDataPath "$RUNNER_TEMP/PlotterDeviceBuild" CODE_SIGNING_ALLOWED=NO build

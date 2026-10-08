@@ -1,6 +1,6 @@
 # Helmlore Plotter — offline iPad source project, milestone 1
 
-This is a chartplotter-only SwiftUI/WKWebView app foundation using the existing Helmlore renderer. No training platform, question banks, login or analytics are included. It is a SOURCE PROJECT, not an installable or signed .ipa. Native compilation and device testing have not been performed: the build environment has no Xcode or Apple SDK.
+This is a chartplotter-only SwiftUI/WKWebView app foundation using the existing Helmlore renderer. No training platform, question banks, login or analytics are included. It is a SOURCE PROJECT, not an installable or signed .ipa. The Swift project passed the GitHub macOS/Xcode unsigned simulator build. Actual iPad installation, runtime behaviour and gateway compatibility still require device testing.
 
 ## Install for testing
 
@@ -31,7 +31,7 @@ A paid developer account/TestFlight or App Store distribution can be arranged af
 
 ## Required acceptance checks in Xcode/on the iPad
 
-Build for simulator and device. Resolve all native compiler errors before distribution. Cold launch/relaunch with airplane mode; pan UK/Ireland and zoom to 12+; inspect red depths <=3m; test saved seamarks and restored marks. Create and reopen routes/trips, export/share GPX/CSV/JSON, test GPS permission denied and accuracy unavailable. Connect actual gateway TCP 0183 output; compare position/COG/SOG/heading/depth/wind with vessel instruments. Test disconnection, stale RMC, malformed data, source switching and background/resume. Confirm no remote chart tiles are fetched and HTTP(S) requests remain blocked until explicitly enabled. Test forecast storage/IndexedDB under the app's custom scheme. WebKit-origin persistence and all native bridges require device verification.
+The unsigned simulator build passed. Build/sign for your device before distribution. Cold launch/relaunch with airplane mode; pan UK/Ireland and zoom to 12+; inspect red depths <=3m; test saved seamarks and restored marks. Create and reopen routes/trips, export/share GPX/CSV/JSON, test GPS permission denied and accuracy unavailable. Connect actual gateway TCP 0183 output; compare position/COG/SOG/heading/depth/wind with vessel instruments. Test disconnection, stale RMC, malformed data, source switching and background/resume. Confirm no remote chart tiles are fetched and HTTP(S) requests remain blocked until explicitly enabled. Test forecast storage/IndexedDB under the app's custom scheme. WebKit-origin persistence and all native bridges require device verification.
 
 ## Rebuild from the repository
 
