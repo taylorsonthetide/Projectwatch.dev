@@ -1,5 +1,14 @@
 (()=>{let symbolId=0;function resolved(f){const inherited=window.HelmloreMarkEnrichment?.[f.id];const properties={...f.properties},type=properties['seamark:type'];const direction=({'2 cones up':'north','2 cones down':'south','2 cones base together':'east','2 cones point together':'west'})[properties['seamark:topmark:shape']];if(type?.endsWith('cardinal')&&!properties['seamark:'+type+':category']&&direction)properties['seamark:'+type+':category']=direction;for(const [key,value] of Object.entries(inherited?.properties||{}))if(!properties[key]||(key==='seamark:type'&&/^light_(minor|major)$/.test(properties[key])&&properties.man_made!=='lighthouse'))properties[key]=value;return {...f,properties};}
+const fixedLights={
+ 'osm-node-6307599547':{name:'Whitehaven North Pier',colour:'red',reference:'A 4700'},
+ 'osm-node-6307599548':{name:'Whitehaven West Pier',colour:'green',reference:'A 4698'}
+};
+function fixedLight(f){const a=fixedLights[f.id],p=f.properties||{};return a&&p['seamark:type']==='light_minor'&&p['seamark:light:reference']===a.reference&&p['seamark:light:colour']===a.colour?a:null;}
+window.HelmloreFixedLightAppearance=fixedLight;
 function markSymbol(f){f=resolved(f);
+ const fixed=fixedLight(f);
+ if(fixed){const colour=fixed.colour==='red'?'#e43435':'#159e5b';return '<svg viewBox="0 0 40 48" width="26" height="32" aria-hidden="true"><path d="M14 35 L17 10 H23 L26 35 Z M17 10 V5 H23 V10" fill="#fff" stroke="#385667" stroke-width="1.6"/><path d="M11 36 H29" stroke="#385667" stroke-width="2"/><path d="M20 34 L33 43 Q37 43 34 39 Z" fill="'+colour+'" stroke="#385667" stroke-width="1"/></svg>';}
+
  const original=f.properties;
  // Physical structure takes precedence over the generic light classification.
  const secondary=/^light_(minor|major)$/.test(original['seamark:type']||'')?['buoy_lateral','beacon_lateral','buoy_cardinal','beacon_cardinal','buoy_safe_water','beacon_safe_water','buoy_isolated_danger','beacon_isolated_danger','buoy_special_purpose','beacon_special_purpose'].filter(t=>Object.keys(original).some(k=>k.startsWith('seamark:'+t+':'))):[];
