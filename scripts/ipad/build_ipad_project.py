@@ -29,7 +29,7 @@ def build(repo, output):
     html=re.sub(r'<script[^>]+src="js/(?:languages|website-traffic)[^>]+></script>','',html)
     html=re.sub(r'<a[^>]+href="(?:index|planning|chart-mark-review)\.html"[^>]*>.*?</a>','',html,flags=re.S)
     html=html.replace('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css','js/vendor/leaflet/leaflet.css').replace('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js','js/vendor/leaflet/leaflet.js')
-    html=html.replace('<script src="js/navigation/offline.js?v=0.10.1"></script>','')
+    html=re.sub(r'<script src="js/navigation/offline.js[^"]*"></script>','',html)
     html=html.replace('<script src="js/navigation/app.js?v=0.10.2"></script>','<script src="js/navigation/snapshot-mark-symbols.js"></script><script src="nmea-core.js"></script><script src="native-bridge.js"></script><script src="js/navigation/app.js?v=ipad-0.1"></script>')
     html=html.replace('Online sea marks','Saved sea marks · 7 October 2026')
     html=html.replace('Map tiles and AIS require internet.','Charts are installed locally. Internet AIS and weather requests require enabling online services in Connections.')
