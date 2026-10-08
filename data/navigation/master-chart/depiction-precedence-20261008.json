@@ -76,5 +76,11 @@
         "OBJNAM": "Gut"
       }
     }
-  ]
+  ],
+  "associated_light_records": [
+    "51265e2c8e87:549",
+    "55f8599bea1b:621",
+    "1dcebc5b4d87:1359"
+  ],
+  "light_association_evidence": "Each LIGHTS record has exactly the same coordinates as its named Gut BOYSAW record and a white long-flash 10-second characteristic matching Gut."
 }

@@ -145,7 +145,7 @@ fetch('data/navigation/user-local-marks-20261007.geojson?v=14').then(r=>{if(!r.o
 map.createPane('historyPane');map.getPane('historyPane').style.zIndex=320;const TileCanvas=MarineCanvas.extend({_updatePoly(layer,closed){const clips=layer.options.clipRects;if(!clips||!this._drawing)return MarineCanvas.prototype._updatePoly.call(this,layer,closed);const ctx=this._ctx;ctx.save();ctx.beginPath();for(const b of clips){const a=map.latLngToLayerPoint([b[3],b[0]]),d=map.latLngToLayerPoint([b[1],b[2]]);ctx.rect(a.x,a.y,d.x-a.x,d.y-a.y);}ctx.clip();MarineCanvas.prototype._updatePoly.call(this,layer,closed);ctx.restore();}});const historicalRenderer=new TileCanvas({padding:.1,tolerance:8,pane:'historyPane'});
 let historyTiles=new Map(),historyIndex=null,historyGeneration=0,historyTimer,historyLayers=[],historyCache=new Map();
 // Reviewed depiction precedence: retain source records, prefer the online mark.
-const superseded2011=new Set(['51265e2c8e87:483','55f8599bea1b:565','1dcebc5b4d87:1336']);
+const superseded2011=new Set(['51265e2c8e87:483','55f8599bea1b:565','1dcebc5b4d87:1336','51265e2c8e87:549','55f8599bea1b:621','1dcebc5b4d87:1359']);
 const historyIds=['hcoast','hdepthareas','hcontours','hsoundings','hmarks','hhazards'];
 const historyScales=['Z','A','B','C','D','E','F','G'];
 const historyRoot='data/navigation/historical-tiles-2011-v1/';
