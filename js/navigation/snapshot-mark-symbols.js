@@ -1,8 +1,16 @@
 (()=>{let symbolId=0;function markSymbol(f){
+ const original=f.properties;
+ // Physical structure takes precedence over the generic light classification.
+ const secondary=/^light_(minor|major)$/.test(original['seamark:type']||'')?['buoy_lateral','beacon_lateral','buoy_cardinal','beacon_cardinal','buoy_safe_water','beacon_safe_water','buoy_isolated_danger','beacon_isolated_danger','buoy_special_purpose','beacon_special_purpose'].filter(t=>Object.keys(original).some(k=>k.startsWith('seamark:'+t+':'))):[];
+ if(secondary.length===1)f={...f,properties:{...original,'seamark:type':secondary[0]}};
  const type=f.properties['seamark:type']||'';
  const svg=body=>'<svg viewBox="0 0 40 48" width="26" height="32" aria-hidden="true">'+body+'</svg>';
  if(isTurbine(f))return svg('<g fill="none" stroke="#385667" stroke-width="2"><path d="M20 20 V42 M20 20 L20 4 M20 20 L6 28 M20 20 L34 28"/><circle cx="20" cy="20" r="2"/></g>');
- if(type==='light_major'||type==='light_minor'||type==='lighthouse')return svg('<path d="M12 41 L16 18 H24 L28 41 Z" fill="white" stroke="#385667" stroke-width="2"/><path d="M15 27 H25" stroke="#e43435" stroke-width="5"/><path d="M13 18 L20 10 L27 18 Z" fill="#385667"/><path d="M8 10 L3 6 M32 10 L37 6 M20 5 V1" stroke="#d28716" stroke-width="2"/>');
+ if(type==='lighthouse'||(f.properties.man_made==='lighthouse'&&!/^(buoy_|beacon_)/.test(type)))return svg('<path d="M12 41 L16 18 H24 L28 41 Z" fill="white" stroke="#385667" stroke-width="2"/><path d="M15 27 H25" stroke="#e43435" stroke-width="5"/><path d="M13 18 L20 10 L27 18 Z" fill="#385667"/><path d="M8 10 L3 6 M32 10 L37 6 M20 5 V1" stroke="#d28716" stroke-width="2"/>');
+ if(type==='light_major'||type==='light_minor'){
+ const colour=String(f.properties['seamark:light:colour']||'').split(';')[0],fill=({red:'#e43435',green:'#159e5b',white:'#fff',yellow:'#ffd84b'})[colour]||'#ffd84b';
+ return svg('<path d="M20 13 L22 21 L30 23 L22 25 L20 33 L18 25 L10 23 L18 21 Z" fill="'+fill+'" stroke="#385667" stroke-width="1.6"/><circle cx="20" cy="23" r="2" fill="#385667"/>');
+ }
  if(type==='platform')return svg('<path d="M7 20 H33 V31 H7 Z M11 31 V43 M29 31 V43 M20 20 V8" fill="none" stroke="#385667" stroke-width="2"/>');
  if(type&&!/^(buoy_|beacon_)/.test(type))return svg('<circle cx="20" cy="26" r="4" fill="white" stroke="#385667" stroke-width="2"/>');
  const clip='mark-body-'+(++symbolId);const p=f.properties,t=p['seamark:type']||'',cls=p.class||'',lateral=t.endsWith('lateral')||cls.endsWith('LAT'),cardinal=t.endsWith('cardinal')||cls.endsWith('CAR'),safe=t.endsWith('safe_water')||cls.endsWith('SAW'),danger=t.endsWith('isolated_danger')||cls.endsWith('ISD'),special=t.endsWith('special_purpose')||cls.endsWith('SPP'),beacon=t.startsWith('beacon_')||cls.startsWith('BCN');

@@ -46,7 +46,7 @@ this._fillStroke(ctx,layer);ctx.restore();
 }});
 const renderer=new MarineCanvas({padding:.1,tolerance:8});
 const configs=[
-{id:'windareas',label:'Wind farm areas',url:'data/navigation/emodnet-uk-ireland-windfarms-areas-20261007.geojson',color:'#a06a18',zoom:5,source:'EMODnet / CETMAR · CC BY 4.0'},
+{id:'windareas',label:'Wind farm areas',url:'data/navigation/emodnet-uk-ireland-windfarms-areas-20261007.geojson',color:'#b535a5',zoom:5,source:'EMODnet / CETMAR · CC BY 4.0'},
 {id:'windpoints',label:'Wind farm points',url:'data/navigation/emodnet-uk-ireland-windfarms-points-20261007.geojson',color:'#a06a18',zoom:7,source:'EMODnet / CETMAR · CC BY 4.0'},
 {id:'wreckpoints',label:'UKHO wreck positions',color:'#b62d45',zoom:9,source:'UK Hydrographic Office · OGL · positions/names only'},
 {id:'wreckareas',label:'UKHO wreck areas',color:'#b62d45',zoom:8,source:'UK Hydrographic Office · OGL · positions/names only'},
@@ -73,7 +73,7 @@ if(c.layer){map.removeLayer(c.layer);c.layer.clearLayers();}
 const b=map.getBounds(),showPlanned=$('proposals').checked;
 const available=c.data.filter(o=>o.b[0]<=b.getEast()&&o.b[2]>=b.getWest()&&o.b[1]<=b.getNorth()&&o.b[3]>=b.getSouth()&&(showPlanned||!proposed(o.f)));
 const selected=available.slice(0,1500).map(o=>o.f);
-c.layer=L.geoJSON(selected,{renderer,style:f=>({renderer,color:proposed(f)||inactive(f)?'#8b8d94':c.color,weight:1.5,opacity:.85,fillOpacity:.09,dashArray:proposed(f)||inactive(f)?'5 5':null}),pointToLayer:(f,ll)=>L.circleMarker(ll,{renderer,radius:c.id==='wreckpoints'?8:5,wreckSymbol:c.id==='wreckpoints',fill:c.id!=='wreckpoints',color:proposed(f)||inactive(f)?'#8b8d94':c.color,fillColor:c.color,fillOpacity:inactive(f)?.2:.7,weight:c.id==='wreckpoints'?1.4:1}),onEachFeature:(f,l)=>l.bindPopup(()=>popup(f,c),{autoPan:true,maxHeight:180})}).addTo(map);
+c.layer=L.geoJSON(selected,{renderer,style:f=>({renderer,color:proposed(f)||inactive(f)?'#8b8d94':c.color,weight:c.id==='windareas'?2.2:1.5,opacity:c.id==='windareas'?1:.85,fillOpacity:c.id==='windareas'?0:.09,dashArray:proposed(f)||inactive(f)?'5 5':c.id==='windareas'?'8 4':null}),pointToLayer:(f,ll)=>L.circleMarker(ll,{renderer,radius:c.id==='wreckpoints'?8:5,wreckSymbol:c.id==='wreckpoints',fill:c.id!=='wreckpoints',color:proposed(f)||inactive(f)?'#8b8d94':c.color,fillColor:c.color,fillOpacity:inactive(f)?.2:.7,weight:c.id==='wreckpoints'?1.4:1}),onEachFeature:(f,l)=>l.bindPopup(()=>popup(f,c),{autoPan:true,maxHeight:180})}).addTo(map);
 note.textContent=selected.length+' displayed / '+c.data.length+' saved'+(available.length>1500?' · '+(available.length-1500)+' more nearby; zoom in for detail.':'')+(showPlanned?' · proposals included.':' · known proposals hidden.');
 }
 for(const c of configs){$(c.id).onchange=()=>redraw(c);}
