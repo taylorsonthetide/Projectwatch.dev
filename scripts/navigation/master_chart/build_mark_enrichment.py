@@ -44,6 +44,10 @@ for f in online:
     if ot.endswith(('lateral','cardinal')) and not cat:continue
     newcat=p.get('seamark:'+t+':category')
     if newcat and cat and newcat!=cat:rejected['category_conflict']+=1;continue
+    modern_colour=p.get('seamark:'+t+':colour')
+    modern_direction={'2 cones up':'north','2 cones down':'south','2 cones base together':'east','2 cones point together':'west'}.get(p.get('seamark:topmark:shape'))
+    if cat in ('port','starboard') and modern_colour in ('red','green') and modern_colour!={'port':'red','starboard':'green'}[cat]:rejected['body_colour_conflict']+=1;continue
+    if ot.endswith('cardinal') and modern_direction and cat!=modern_direction:rejected['topmark_conflict']+=1;continue
     lightcolour=p.get('seamark:light:colour')
     if light and cat in ('port','starboard') and lightcolour in ('red','green') and lightcolour!=({'port':'red','starboard':'green'}[cat]):rejected['light_colour_conflict']+=1;continue
     candidates.append((ot,cat,h,dist,rid,'name and proximity' if matched else 'reviewed suppressed counterpart'))
