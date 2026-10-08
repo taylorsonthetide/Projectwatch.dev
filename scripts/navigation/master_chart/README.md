@@ -76,3 +76,15 @@ Run meaningful workflow tests:
 ```sh
 python3 -m unittest discover -s scripts/navigation/master_chart -p 'test_*.py' -v
 ```
+
+## Review marks on the map
+
+Open `/chart-mark-review.html`. Choose an area and zoom in, select a historical mark or enable recent local positions, add a reason or chart reference and remove it. Restore retains the original source record. The register is device-local and also filters `/chart-lab.html` on the same origin. It does not publish a shared correction. Save a corrections file for transfer or backup; loading merges identities without replacing existing device decisions. Raster OpenSeaMap marks cannot be individually edited in this release.
+
+To apply a reviewed file to the master database:
+
+```bash
+python scripts/navigation/master_chart/import_mark_corrections.py --database path/to/helmlore-master.sqlite --file helmlore-mark-corrections.json
+```
+
+The importer checks exact source ID, current position and mark classification before applying any retirements. Unknown, merged or moved records abort the batch. Repeated imports are safe. Original observations remain; affected tiles/layers are queued. Run the existing tile/export release workflow and publish the resulting reviewed assets to make the correction shared.

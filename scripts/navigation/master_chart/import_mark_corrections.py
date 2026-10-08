@@ -3,7 +3,6 @@ No fuzzy matching. A changed position or unknown source aborts the entire batch.
 """
 import argparse, json, sqlite3, uuid, math
 from pathlib import Path
-from review import apply
 
 def import_file(db, path):
     data=json.loads(Path(path).read_text())
@@ -26,7 +25,7 @@ def import_file(db, path):
             raise ValueError('Position or classification changed; review again: '+c['source_external_id'])
         rid=str(uuid.uuid5(uuid.NAMESPACE_URL,'helmlore:manual-retire:'+eid+':'+oid))
         ready.append((rid,oid,c['evidence']))
-    # apply() opens its own transaction: isolate the whole batch with a savepoint.
+    # Validate every source identity before changing any record.
     db.execute('BEGIN')
     try:
         for rid,oid,evidence in ready:
