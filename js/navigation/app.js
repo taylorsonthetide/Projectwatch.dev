@@ -53,7 +53,7 @@
  setMarinaDestination(m){if(!m){state.marinaTarget=null;render();return;}if(!N.valid(m))return;state.marinaTarget={lat:m.lat,lon:m.lon,name:String(m.name||'Marina').slice(0,80)};if(state.adding)toggleAdding();render();},
  getPosition(){const fresh=state.fix&&!stale()&&state.fix.accuracy<=100;return {mode:state.mode,fix:fresh?{...state.fix}:null,speed:fresh?state.motion.speed:null};},
  getRoute(){return {source:source(),points:route().map(p=>({...p}))};},
- loadRoute(r){resetSource('explore');state.routes[r.source]=r.points.map(p=>({...p}));state.planId=r.source==='gps'?r.id:null;state.target=0;save();drawRoute();render();map.fitBounds(r.points.map(p=>[p.lat,p.lon]),{padding:[60,60],maxZoom:14});},
+ loadRoute(r){try{localStorage.removeItem(window.HelmlorePlanning.ACTIVE);}catch{}resetSource('explore');state.routes[r.source]=r.points.map(p=>({...p}));state.planId=r.source==='gps'?r.id:null;state.target=0;save();drawRoute();render();map.fitBounds(r.points.map(p=>[p.lat,p.lon]),{padding:[60,60],maxZoom:14});},
  startGPS(){if(state.mode!=='gps')startGPS();}
  };
  window.addEventListener('navigation-saved-chart',e=>{map.removeLayer(base);map.removeLayer(seamarks);document.body.dataset.offlineChart='true';$('mapStatus').textContent='Saved chart · '+e.detail.release+' · coastline and depths 2011';});
