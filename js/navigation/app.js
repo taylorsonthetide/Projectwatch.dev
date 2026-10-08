@@ -54,7 +54,7 @@
  getPosition(){const fresh=state.fix&&!stale()&&state.fix.accuracy<=100;return {mode:state.mode,fix:fresh?{...state.fix}:null,speed:fresh?state.motion.speed:null};},
  startGPS(){if(state.mode!=='gps')startGPS();}
  };
- window.dispatchEvent(new CustomEvent("navigation-map-ready",{detail:{map}}));
+ window.dispatchEvent(new CustomEvent("navigation-map-ready",{detail:{map,base,seamarks}}));
  if(state.planId&&route().length>1)map.fitBounds(route().map(p=>[p.lat,p.lon]),{padding:[180,180],maxZoom:14});
  drawRoute();drawTrack();render();setInterval(render,1000);
 })();

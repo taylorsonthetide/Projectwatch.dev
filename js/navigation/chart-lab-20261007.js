@@ -1,14 +1,14 @@
 /* UK and Ireland online research map; no GPS or account changes. */
-(async()=>{'use strict';
+async function initialiseReviewedChart(shared){'use strict';
 const offlineChart=document.body.dataset.offlineChart==='true';
 const $=id=>document.getElementById(id),bounds=[[49,-12],[61,3]];
-const map=L.map('map',{minZoom:4,maxZoom:18,zoomAnimation:false,fadeAnimation:false}).fitBounds(bounds);
-L.control.scale({imperial:true,metric:true}).addTo(map);
+const map=shared?.map||L.map('map',{minZoom:4,maxZoom:18,zoomAnimation:false,fadeAnimation:false}).fitBounds(bounds);
+if(!shared)L.control.scale({imperial:true,metric:true}).addTo(map);
 const options={maxZoom:18,maxNativeZoom:14,keepBuffer:0,updateWhenIdle:true,updateWhenZooming:false,noWrap:true};
 map.createPane('depthPane');map.getPane('depthPane').style.zIndex=250;map.getPane('depthPane').style.pointerEvents='none';
 map.createPane('contourPane');map.getPane('contourPane').style.zIndex=300;map.getPane('contourPane').style.pointerEvents='none';
 map.createPane('markPane');map.getPane('markPane').style.zIndex=350;map.getPane('markPane').style.pointerEvents='none';
-const base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{...options,maxNativeZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a>'});if(!offlineChart)base.addTo(map);else $('status').textContent='Local chart package · 2011 chart detail and saved 7 October sea marks.';
+const base=shared?.base||L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{...options,maxNativeZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors / ODbL</a>'});if(!offlineChart){if(!shared)base.addTo(map);}else $('status').textContent='Local chart package · 2011 chart detail and saved 7 October sea marks.';
 let baseError=false;
 base.on('tileerror',()=>{baseError=true;$('status').textContent='Some online basemap tiles failed. Check your connection.';});
 base.on('load',()=>{if(!baseError)$('status').textContent='UK & Ireland basemap loaded · reviewed chart release '+(chartRelease?.id||'baseline')+'. Online basemap and live sea marks require internet.';});
@@ -16,12 +16,13 @@ const extent=L.rectangle(bounds,{color:'#176993',weight:2,dashArray:'7 5',fill:f
 $('boundary').onchange=()=>{$('boundary').checked?extent.addTo(map):map.removeLayer(extent);};
 $('reset').onclick=()=>{$('region').value='all';map.fitBounds(bounds);};
 $('region').onchange=()=>{const p={preston:[53.73,-2.9,11],barrow:[54.062,-3.175,12],whitehaven:[54.54,-3.61,10],irish:[54,-4.8,9],ireland:[53.3,-6.1,9],solent:[50.8,-1.2,10],north:[57,1,8],scotland:[58,-3.5,8]}[$('region').value];if(p)map.setView([p[0],p[1]],p[2]);else map.fitBounds(bounds);};
-const marks=L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{...options,pane:'markPane',attribution:'Sea marks: <a href="https://www.openseamap.org/">OpenSeaMap</a>'});
+const marks=shared?.seamarks||L.tileLayer('https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png',{...options,pane:'markPane',attribution:'Sea marks: <a href="https://www.openseamap.org/">OpenSeaMap</a>'});
 let markErrors=0;
 marks.on('tileerror',()=>{markErrors++;$('marksStatus').textContent='Some sea-mark tiles failed. Missing symbols do not establish clear water.';});
 marks.on('loading',()=>{if(!markErrors)$('marksStatus').textContent='Requesting online sea-mark tiles…';});
 marks.on('load',()=>{if(!markErrors)$('marksStatus').textContent='Sea-mark tiles loaded. Community coverage varies; zoom in to see available symbols.';});
 $('seamarks').onchange=()=>{if(offlineChart){drawSnapshotMarks();return;}markErrors=0;if($('seamarks').checked)marks.addTo(map);else{map.removeLayer(marks);$('marksStatus').textContent='Sea marks hidden.';}};
+if(shared){$('seamarks').addEventListener('change',()=>{for(const id of ['seamarksToggle','seaVisible'])$(id).checked=$('seamarks').checked;});$('seamarksToggle').addEventListener('change',()=>{$('seamarks').checked=$('seamarksToggle').checked;$('seamarks').dispatchEvent(new Event('change'));});}
 const wms='https://ows.emodnet-bathymetry.eu/wms';
 const depths=L.tileLayer.wms(wms,{...options,pane:'depthPane',layers:'emodnet:mean',styles:'atlas_land',format:'image/png',transparent:true,version:'1.1.1',opacity:.45,attribution:'Depths: <a href="https://emodnet.ec.europa.eu/en/bathymetry">EMODnet Bathymetry</a> · research only'});
 const contours=L.tileLayer.wms(wms,{...options,pane:'contourPane',layers:'emodnet:contours',format:'image/png',transparent:true,version:'1.1.1',attribution:'Contours: EMODnet Bathymetry'});
@@ -197,4 +198,5 @@ let snapshotData=null,snapshotLoading=false;const snapshotLayer=L.layerGroup();
 async function drawSnapshotMarks(){if(!offlineChart)return;if(!$('seamarks').checked){map.removeLayer(snapshotLayer);$('marksStatus').textContent='Saved sea marks hidden.';return;}if(!snapshotData){if(snapshotLoading)return;snapshotLoading=true;try{const r=await fetch('data/navigation/master-chart/20261008-reviewed-v2/online-seamarks.json');if(!r.ok)throw Error('HTTP '+r.status);let d=await r.json();if(d.gzip){const bytes=Uint8Array.from(atob(d.gzip),x=>x.charCodeAt(0));d=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());}if(d.type!=='FeatureCollection')throw Error('Invalid saved sea marks');snapshotData=d.features;}catch(e){$('marksStatus').textContent='Saved sea marks unavailable: '+e.message;snapshotLoading=false;return;}snapshotLoading=false;}snapshotLayer.clearLayers();const b=map.getBounds();const fs=snapshotData.filter(f=>f.geometry.type==='Point'&&b.contains([f.geometry.coordinates[1],f.geometry.coordinates[0]]));let count=0;for(const f of fs.slice(0,1500)){const p=f.properties,icon=L.divIcon({className:'snapshot-mark',html:window.HelmloreMarkSymbol(f),iconSize:[26,32],iconAnchor:[13,27]});L.marker([f.geometry.coordinates[1],f.geometry.coordinates[0]],{icon,title:p['seamark:name']||p['seamark:type']||'Sea mark',pane:'markPane'}).bindPopup('<b>'+escape(p['seamark:name']||p['seamark:type']||'Sea mark')+'</b><p>Saved OpenSeaMap snapshot · 7 October 2026</p><p>'+escape(f.id)+'</p><p>Object edited: '+escape(p.source_date||'unknown')+'</p><pre>'+escape(JSON.stringify(p,null,2))+'</pre>',{maxHeight:220}).addTo(snapshotLayer);count++;}snapshotLayer.addTo(map);$('marksStatus').textContent=count+' saved sea marks shown / '+snapshotData.length+' points · snapshot 7 October 2026'+(fs.length>1500?' · zoom in for further marks':'');}
 if(offlineChart){map.getPane('markPane').style.pointerEvents='auto';map.on('moveend',drawSnapshotMarks);drawSnapshotMarks();}
 
-})();
+}
+if(document.body.dataset.navigationChart==='true'){window.addEventListener('navigation-map-ready',e=>initialiseReviewedChart(e.detail).catch(error=>{document.getElementById('historyStatus').textContent='Reviewed chart could not load: '+error.message;console.error(error);}),{once:true});}else initialiseReviewedChart();
