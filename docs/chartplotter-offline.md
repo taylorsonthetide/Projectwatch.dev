@@ -10,9 +10,8 @@ The original 2011 coastline/depths keep their source date. Snapshot sea marks re
 External street and raster seamark tiles are never bulk downloaded. The saved
 viewer uses historical land/coastline and vector snapshot marks instead.
 
-Downloads are explicit, six requests at a time, with byte and SHA-256 checks for
-all files. A failed or cancelled download deletes its staging cache, preserving
-the active package. Only complete downloads switch the active package pointer.
+Downloads are explicit, three requests at a time, with byte and SHA-256 checks for
+all files. Temporary HTTP/network failures retry up to five times with a delay and a 30-second request timeout. Interrupted network downloads keep verified files for the next attempt. Cancel, invalid data and storage errors discard staging, preserving the active package. Only complete downloads switch the active package pointer.
 Check for updates bypasses the installed chart cache; ordinary chart reads stay
 pinned to the saved package, even online. Reload after installation/update before
 reviewing chart data. Removing a pack does not remove routes, tracks or trips.
