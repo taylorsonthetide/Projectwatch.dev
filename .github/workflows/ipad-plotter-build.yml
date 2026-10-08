@@ -1,0 +1,23 @@
+name: iPad plotter source validation
+on:
+  push:
+    paths:
+      - 'ios/**'
+      - 'scripts/ipad/**'
+      - 'tests/ipad/**'
+      - '.github/workflows/ipad-plotter-build.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: macos-15
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate NMEA framing and position conversion
+        run: node --test tests/ipad/nmea.test.cjs
+      - name: Generate chartplotter-only project
+        run: python3 scripts/ipad/build_ipad_project.py --output "$RUNNER_TEMP/HelmlorePlotter"
+      - name: Build unsigned simulator app
+        run: xcodebuild -project "$RUNNER_TEMP/HelmlorePlotter/HelmlorePlotter.xcodeproj" -scheme HelmlorePlotter -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/PlotterBuild" CODE_SIGNING_ALLOWED=NO build

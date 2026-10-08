@@ -1,0 +1,12 @@
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const N=require('../../ios/HelmlorePlotter/Web/nmea-core.js');
+function sentence(body){let n=0;for(const c of body)n^=c.charCodeAt(0);return '$'+body+'*'+n.toString(16).padStart(2,'0');}
+const body='GNRMC,120000.25,A,5343.8000,N,00254.0000,W,7.0,123.4,081026,,,A';
+test('RMC parses signed coordinates, true COG, knots and UTC date without inventing accuracy',()=>{const r=N.decode(sentence(body));assert.equal(r.fix.lat,53.73);assert.equal(r.fix.lon,-2.9);assert.equal(r.fix.heading,123.4);assert.equal(r.fix.speed,7*1852/3600);assert.equal(r.fix.time,Date.UTC(2026,9,8,12,0,0,250));assert.equal(r.fix.accuracy,null);});
+test('corrupt checksum and missing checksum rejected',()=>{const s=sentence(body);assert.equal(N.decode(s.slice(0,-2)+'FF'),null);assert.equal(N.decode('$'+body),null);});
+test('void, simulated and estimated positions rejected',()=>{for(const b of [body.replace(',A,',',V,'),body.replace(/A$/,'S'),body.replace(/A$/,'E')])assert.equal(N.decode(sentence(b)),null);});
+test('invalid coordinate minutes, hemisphere, calendar and bounds rejected',()=>{for(const b of [body.replace('5343.8000','5363.8000'),body.replace(',N,',',E,'),body.replace('081026','310226'),body.replace('00254.0000','18254.0000')])assert.equal(N.decode(sentence(b)),null);});
+test('fragmented and coalesced TCP sentences retain framing',()=>{let rows=[];const s=sentence(body)+'\r\n';const stream=new N.Stream(r=>rows.push(r));stream.push(s.slice(0,15));stream.push(s.slice(15)+s);assert.equal(rows.length,2);});
+test('oversized junk cannot exhaust buffering and valid next record recovers',()=>{const stream=new N.Stream(()=>{});stream.push('x'.repeat(100000));assert.ok(stream.pending.length<=512);stream.push('\n');let rows=[];stream.onRecord=r=>rows.push(r);stream.push(sentence(body)+'\n');assert.equal(rows.length,1);});
+test('depth offset remains separate; invalid wind reference/status rejected',()=>{const r=N.decode(sentence('SDDPT,5.3,-0.5'));assert.equal(r.depthBelowTransducer,5.3);assert.equal(r.depthOffset,-0.5);assert.equal(N.decode(sentence('IIMWV,35,R,10,N,V')),null);assert.equal(N.decode(sentence('IIMWV,35,X,10,N,A')),null);});
+test('missing speed and course remain null and true heading does not replace COG',()=>{const r=N.decode(sentence(body.replace(',7.0,123.4,',',,,')));assert.equal(r.fix.speed,null);assert.equal(r.fix.heading,null);assert.equal(N.decode(sentence('HEHDT,45,T')).headingTrue,45);});
