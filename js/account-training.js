@@ -27,6 +27,9 @@
     setInterval(sync, 15000);
     service.client.rpc('pw_touch_account').then(() => {});
     setInterval(() => service.client.rpc('pw_touch_account').then(() => {}), 300000);
+    if (new URLSearchParams(location.search).get('start') === 'library' && typeof window.showTrainingLibrary === 'function') {
+      window.showTrainingLibrary();
+    }
     await sync();
   } catch (_) { location.replace(login); }
 })();
