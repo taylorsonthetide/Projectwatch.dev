@@ -30,6 +30,10 @@
     for (const value of [page.page === '/index.html' ? 'Home page' : page.page,Number(page.views).toLocaleString()]) { const cell=document.createElement('td'); cell.textContent=value; row.append(cell); }
     $('trafficPages').append(row);
    }
+   const sample = await service.client.rpc('helmlore_sample_summary',{range_days:Number($('trafficRange').value)});
+   if (current !== request) return;
+   $('sampleStarted').textContent = sample.error ? 'Unavailable' : Number(sample.data.started).toLocaleString();
+   $('sampleCompleted').textContent = sample.error ? 'Unavailable' : Number(sample.data.completed).toLocaleString();
    $('trafficStatus').textContent = data.started ? 'Updated '+new Date().toLocaleTimeString()+'. First recorded views: '+data.started+'.' : 'Tracking is ready. No page views recorded yet.';
   } catch (error) { if(current === request) $('trafficStatus').textContent='Could not load traffic. '+error.message+' Try Refresh.'; }
   finally { if(current === request) $('trafficRefresh').disabled=false; }

@@ -4,6 +4,18 @@ const host = document.getElementById('sample-quiz');
 const progress = document.getElementById('sample-progress');
 const reset = document.getElementById('sample-reset');
 if (!host) return;
+const recorded = new Set();
+function recordActivity(eventName) {
+ if (recorded.has(eventName) || navigator.webdriver || /bot|crawler|spider|headless/i.test(navigator.userAgent)) return;
+ if (!['helmlore.com','www.helmlore.com','helmlore.co.uk','www.helmlore.co.uk','taylorsonthetide.github.io'].includes(location.hostname)) return;
+ recorded.add(eventName);
+ // Anonymous counts only; once per event per page load, including quiz retries.
+ fetch('https://rpgjtxdxqcdxwcwmhqfl.supabase.co/rest/v1/rpc/helmlore_record_sample', {
+  method:'POST', credentials:'omit', keepalive:true,
+  headers:{'Content-Type':'application/json',apikey:'sb_publishable_gupuY4sO_SvPJl5dE7A5cw_Ytx5SkHL'},
+  body:JSON.stringify({event_name:eventName})
+ }).catch(() => {});
+}
 fetch('../banks/public/buoyage-sample.json').then(r => { if (!r.ok) throw new Error('Unavailable'); return r.json(); }).then(questions => {
  const solved = new Set();
  function render() {
@@ -23,8 +35,10 @@ fetch('../banks/public/buoyage-sample.json').then(r => { if (!r.ok) throw new Er
    form.addEventListener('submit', event => {
     event.preventDefault(); const selected = form.querySelector('input:checked');
     if (!selected) { feedback.textContent = 'Choose an answer first.'; return; }
+    recordActivity('started');
     if (Number(selected.value) === q.correct) {
-     solved.add(q.id); form.dataset.result = 'correct'; feedback.textContent = 'Correct. ' + q.explanation;
+     solved.add(q.id);
+     if (solved.size === questions.length) recordActivity('completed'); form.dataset.result = 'correct'; feedback.textContent = 'Correct. ' + q.explanation;
      fieldset.disabled = true; button.disabled = true; button.textContent = 'Completed ✓';
      progress.textContent = solved.size === questions.length ? 'All three complete. Region A: red to port and green to starboard when travelling with the conventional direction of buoyage.' : `${solved.size} of ${questions.length} complete.`;
     } else { form.dataset.result = 'incorrect'; feedback.textContent = 'Not quite. Look back at the marks and direction of buoyage and try again.'; }
