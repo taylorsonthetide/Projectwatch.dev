@@ -1,9 +1,17 @@
 (() => {
  'use strict';
+ // Temporarily disabled: retain dictionaries and translation code for a future rollout.
+ const TRANSLATIONS_ENABLED=false;
  const KEY='helmlore-language-v1', names={en:'English',fr:'Français',de:'Deutsch',nl:'Nederlands'};
  const script=document.currentScript, root=new URL('../',script.src), originals=new WeakMap(), imageSources=new WeakMap(), attributes=new WeakMap();
  let preferred='en', language='en', dictionaries={}, observer, bar, select, note, request=0, speechEntries=[];
  const normalize=s=>s.replace(/\s+/g,' ').trim();
+ if(!TRANSLATIONS_ENABLED){
+  document.documentElement.lang='en-GB';
+  try{localStorage.setItem(KEY,'en')}catch{}
+  window.HelmloreLanguage={get current(){return 'en'},set:async()=>{},translate:source=>source,speechText,applySpeech};
+  return;
+ }
  try { const saved=localStorage.getItem(KEY);if(names[saved])preferred=saved; } catch {}
  function translate(source,scope){const key=normalize(source),dict=dictionaries[language]||{};if(language==='en')return source;let value=(scope&&dict[scope+':'+key])||dict[key];if(!value){const rehearsal=key.match(/^REHEARSAL (\d+) \/ (\d+) • FAMILY (I{1,3}|IV)$/);if(rehearsal&&dict['REHEARSAL {current} / {total} • FAMILY {family}'])value=dict['REHEARSAL {current} / {total} • FAMILY {family}'].replace('{current}',rehearsal[1]).replace('{total}',rehearsal[2]).replace('{family}',rehearsal[3]);const responsibility=key.match(/^RESPONSIBILITY (\d+) \/ (\d+)$/);if(responsibility&&dict['RESPONSIBILITY {current} / {total}'])value=dict['RESPONSIBILITY {current} / {total}'].replace('{current}',responsibility[1]).replace('{total}',responsibility[2]);const context=key.match(/^CONTEXT (\d+) \/ (\d+)$/);if(context&&dict['CONTEXT {current} / {total}'])value=dict['CONTEXT {current} / {total}'].replace('{current}',context[1]).replace('{total}',context[2]);const q=key.match(/^(\d+\.\s+)(.*)$/);if(q&&dict[q[2]])value=q[1]+dict[q[2]];const correct=key.match(/^Correct\. (.*)$/);if(correct&&dict[correct[1]])value=(dict['Correct.']||'Correct.')+' '+dict[correct[1]];const progress=key.match(/^(\d+) of (\d+) complete\.$/);if(progress)value=language==='fr'?`${progress[1]} sur ${progress[2]} terminées.`:language==='de'?`${progress[1]} von ${progress[2]} abgeschlossen.`:`${progress[1]} van ${progress[2]} voltooid.`;}return value?source.match(/^\s*/)[0]+value+source.match(/\s*$/)[0]:source;}
  function protectedNode(node){return !node.parentElement||!!node.parentElement.closest('script,style,textarea,input,code,pre,[contenteditable],.hl-languagebar,[data-no-translate],#profileEmail');}
