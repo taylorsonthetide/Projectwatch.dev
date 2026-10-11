@@ -17,14 +17,14 @@
     {
       "region": "north-west",
       "type": "surveyor",
-      "name": "Jonathan B Jackson Ltd",
-      "area": "Ulverston / Cumbria contact; confirm current North West availability",
-      "service": "Yacht and small-craft pre-purchase surveys.",
-      "url": "https://jacksonyachtsurveyor.com/",
-      "evidence": "SCMS directory lists Jonathan Jackson as a Member, with an Ulverston contact.",
-      "review": "Cliff\u2019s personal recommendation; independent star rating not verified.",
-      "review_url": "https://www.scmshq.org/surveyor/jonathan-jackson/",
-      "recommended": true,
+      "name": "AC Yacht & Boat Surveyors \u2014 Mike Hunter",
+      "area": "Dearham, near Maryport / Cumbria",
+      "service": "Pre-purchase, condition, valuation and insurance surveys.",
+      "url": "https://www.acyachtsurveyors.co.uk/",
+      "evidence": "Provider publishes Dearham base and Mike Hunter as lead surveyor; confirm current professional credentials and insurance.",
+      "review": "Provider website displays Google-sourced Trustindex reviews, based on 2 reviews; independent aggregate score not separately verified.",
+      "review_url": "",
+      "recommended": false,
       "checked": "2026-10-11"
     },
     {
@@ -38,6 +38,19 @@
       "review": "Provider website displays Google-sourced reviews via Trustindex, based on 12 reviews at research check; no independently verified aggregate score.",
       "review_url": "",
       "recommended": false,
+      "checked": "2026-10-11"
+    },
+    {
+      "region": "north-west",
+      "type": "surveyor",
+      "name": "Jonathan B Jackson Ltd",
+      "area": "France-based; UK surveys by arrangement",
+      "service": "Yacht and small-craft pre-purchase surveys. Recommended by Cliff; confirm UK visits, travel fees and availability.",
+      "url": "https://jacksonyachtsurveyor.com/",
+      "evidence": "Website focuses on France; SCMS directory retains an Ulverston contact. Confirm UK arrangements directly.",
+      "review": "Cliff\u2019s personal recommendation; independent star rating not verified.",
+      "review_url": "https://www.scmshq.org/surveyor/jonathan-jackson/",
+      "recommended": true,
       "checked": "2026-10-11"
     },
     {

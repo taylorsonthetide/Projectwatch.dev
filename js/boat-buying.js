@@ -28,14 +28,15 @@
     const term = search.value.trim().toLowerCase();
     let shown = 0;
     for (const card of cards) {
-      const visible = (region.value === 'all' || card.dataset.contactRegion === region.value)
+      const active = Boolean(region.value || term);
+      const visible = active && (!region.value || card.dataset.contactRegion === region.value)
         && (service.value === 'all' || card.dataset.contactType === service.value)
         && (!term || card.dataset.contactSearch.includes(term));
       card.hidden = !visible;
       if (visible) shown++;
     }
-    count.textContent = `${shown} ${shown === 1 ? 'contact' : 'contacts'} shown. Select the boat’s area to narrow the list.`;
-    document.getElementById('buy-contact-empty').hidden = shown !== 0;
+    count.textContent = (region.value || term) ? `${shown} ${shown === 1 ? 'contact' : 'contacts'} shown for your search.` : 'Choose a coastal area or search for a town or business to see contacts.';
+    document.getElementById('buy-contact-empty').hidden = shown !== 0 || !(region.value || term);
   }
   region.addEventListener('change', filter);
   service.addEventListener('change', filter);
