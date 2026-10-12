@@ -1,0 +1,25 @@
+name: New navigation compiled-engine validation
+on:
+  push:
+    paths:
+      - 'native/**'
+      - '.github/workflows/native-navigation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compiled-engines:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prepare Rust browser target
+        run: rustup target add wasm32-unknown-unknown
+      - name: Compile C++ and Rust modules from source
+        run: bash native/build.sh
+      - name: Bundle weather controls
+        run: npm exec --yes --package=esbuild -- esbuild native/weather/mount.mjs --bundle --minify --outfile=native/weather.js --format=iife --target=safari16
+      - name: Check compiled calculations, chart decoding and isolation
+        run: node --test native/tests/engine.test.mjs

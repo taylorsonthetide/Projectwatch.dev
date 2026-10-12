@@ -1,0 +1,18 @@
+import {Native} from './engine.js';
+window.addEventListener('navigation-map-ready',({detail:{map}})=>{
+ const panel=document.querySelector('[data-panel="offline"]'),section=document.createElement('section');section.innerHTML='<h3>Save the visible chart area</h3><p class="helper">Save historical chart data for the area on screen across all available scales. Your existing full-chart download is also available here.</p><button id="nativeSaveArea">Download visible area</button><button id="nativeCancelArea" hidden>Cancel</button><progress id="nativeAreaProgress" max="100" hidden style="width:100%"></progress><p id="nativeAreaStatus" role="status">No area downloaded in this version yet.</p>';panel.prepend(section);
+ const button=section.querySelector('#nativeSaveArea'),cancel=section.querySelector('#nativeCancelArea'),progress=section.querySelector('progress'),status=section.querySelector('#nativeAreaStatus');let controller;
+ cancel.onclick=()=>controller?.abort();
+ button.onclick=async()=>{if(controller)return;controller=new AbortController();button.disabled=true;cancel.hidden=false;progress.hidden=false;progress.value=0;let done=0;try{
+ await navigator.storage?.persist?.();const bounds=map.getBounds(),box=[bounds.getWest(),bounds.getSouth(),bounds.getEast(),bounds.getNorth()];
+ const release=await fetch('data/navigation/master-chart/published-release.json').then(r=>{if(!r.ok)throw Error('Chart release unavailable');return r.json();});
+ const manifest=await fetch(release.reviewed_tiles_manifest).then(r=>{if(!r.ok)throw Error('Reviewed chart unavailable');return r.json();});
+ const index=await fetch('data/navigation/historical-tiles-2011-v1/index.json').then(r=>{if(!r.ok)throw Error('Tile index unavailable');return r.json();});
+ const cells=index.cells.map(c=>manifest.patches[c.id]?.entry||c).filter(c=>c.bbox[0]<=box[2]&&c.bbox[2]>=box[0]&&c.bbox[1]<=box[3]&&c.bbox[3]>=box[1]);
+ const bytes=cells.reduce((n,c)=>n+c.bytes,0),estimate=await navigator.storage?.estimate?.();if(estimate?.quota&&estimate.quota-estimate.usage<bytes*1.2)throw Error('Not enough device storage');
+ if(cells.length>1500)throw Error('Zoom in to select a smaller area (maximum 1,500 tiles per download)');let cursor=0;
+ const results=await Promise.allSettled(Array.from({length:Math.min(3,cells.length)},async()=>{while(cursor<cells.length){if(controller.signal.aborted)throw new DOMException('Cancelled','AbortError');const cell=cells[cursor++],url='data/navigation/historical-tiles-2011-v1/'+cell.id+'.json';const payload=await Native.tile(url,controller.signal);await Native.decode(cell,payload,manifest.patches[cell.id]);if(!await Native.keepTile(url,payload))throw Error('Device storage could not save a chart tile');done++;progress.value=done/cells.length*100;status.textContent='Saved '+done+' / '+cells.length+' tiles · '+(bytes/1048576).toFixed(1)+' MB total';}}));const failed=results.find(r=>r.status==='rejected');if(failed)throw failed.reason;
+ const record={box,tiles:cells.length,bytes,saved:new Date().toISOString(),release:release.id};localStorage.setItem('helmlore-native-area-v1',JSON.stringify(record));status.textContent='Area saved and checked · '+cells.length+' tiles across all available scales. Historical chart source: 2011.';
+ }catch(e){status.textContent=e.name==='AbortError'?'Stopped. Completed tiles remain saved.':'Area download stopped: '+e.message;}finally{controller=null;button.disabled=false;cancel.hidden=true;progress.hidden=true;}};
+ try{const saved=JSON.parse(localStorage.getItem('helmlore-native-area-v1'));if(saved)status.textContent='Saved area: '+saved.tiles+' tiles · '+new Date(saved.saved).toLocaleString('en-GB');}catch{}
+});
