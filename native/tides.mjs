@@ -1,0 +1,26 @@
+// Harbour sea-level forecasts: metres above mean sea level, never chart datum.
+export const TIDE_KEY='helmlore-port-tides-v1',HOUR=3600000;
+export function validateTides(pack,catalogue){
+ if(pack?.schema!=='helmlore-port-tides-v1'||!Number.isFinite(Date.parse(pack.downloadedAt))||!Array.isArray(pack.ports)||pack.ports.length!==catalogue.length)throw Error('Invalid saved tide forecast');
+ for(let i=0;i<catalogue.length;i++){const p=pack.ports[i],c=catalogue[i];if(p.id!==c.id||p.name!==c.name||p.lat!==c.lat||p.lon!==c.lon)throw Error('Unknown tide location');if(!p.model)continue;const m=p.model;if(!Number.isFinite(m.lat)||!Number.isFinite(m.lon)||!Number.isFinite(Date.parse(m.downloadedAt))||!Array.isArray(m.times)||m.times.length<2||m.times.length>160||!Array.isArray(m.heights)||m.times.length!==m.heights.length||!m.times.every((t,j)=>Number.isFinite(t)&&(!j||t-m.times[j-1]===HOUR))||!m.heights.every(h=>h===null||Number.isFinite(h)&&Math.abs(h)<=30))throw Error('Invalid tide series');}
+ return pack;
+}
+export function tideEvents(model){const out=[];if(!model)return out;const {times,heights:h}=model;for(let i=1;i<h.length-1;i++){if(![h[i-1],h[i],h[i+1]].every(Number.isFinite))continue;const high=h[i]>=h[i-1]&&h[i]>h[i+1],low=h[i]<=h[i-1]&&h[i]<h[i+1];if(high||low)out.push({time:times[i],height:h[i],kind:high?'High':'Low'});}return out;}
+export function tideState(model,time){
+ if(!model||!Number.isFinite(time))return null;const {times,heights:h}=model;if(time<times[0]||time>times.at(-1))return null;const i=Math.min(h.length-2,Math.floor((time-times[0])/HOUR)),fraction=(time-times[i])/HOUR;
+ if(!Number.isFinite(h[i])||fraction>0&&!Number.isFinite(h[i+1]))return null;const height=fraction===0?h[i]:h[i]+(h[i+1]-h[i])*fraction;
+ const slope=fraction===0&&i>0&&Number.isFinite(h[i-1])&&Number.isFinite(h[i+1])?(h[i+1]-h[i-1])/2:Number.isFinite(h[i+1])?h[i+1]-h[i]:null;
+ const events=tideEvents(model),before=events.filter(e=>e.time<=time).at(-1),after=events.find(e=>e.time>time);let range=before&&after&&before.kind!==after.kind?[before.height,after.height]:h.filter((v,j)=>Math.abs(times[j]-time)<=6*HOUR&&Number.isFinite(v));range.push(height);const low=Math.min(...range),high=Math.max(...range),fill=high-low>.05?Math.max(0,Math.min(1,(height-low)/(high-low))):null;
+ return {height,low,high,fill,label:slope===null?'State unavailable':Math.abs(slope)<.03?'Turning':slope>0?'Rising':'Falling',symbol:slope===null?'?':Math.abs(slope)<.03?'↔':slope>0?'↑':'↓'};
+}
+const pause=(ms,signal)=>new Promise((resolve,reject)=>{if(signal?.aborted){reject(new DOMException('Cancelled','AbortError'));return;}const abort=()=>{clearTimeout(timer);reject(new DOMException('Cancelled','AbortError'));},timer=setTimeout(()=>{signal?.removeEventListener('abort',abort);resolve();},ms);signal?.addEventListener('abort',abort,{once:true});});
+export async function downloadTides(catalogue,fetcher=fetch,signal,onProgress=()=>{},previous=null,pace=true){
+ const now=new Date().toISOString(),ports=[],errors=[];
+ for(let offset=0;offset<catalogue.length;offset+=35){const batch=catalogue.slice(offset,offset+35);try{const url=new URL('https://marine-api.open-meteo.com/v1/marine');url.search=new URLSearchParams({latitude:batch.map(p=>p.lat).join(','),longitude:batch.map(p=>p.lon).join(','),hourly:'sea_level_height_msl',past_hours:'12',forecast_hours:'78',timezone:'GMT',timeformat:'unixtime',cell_selection:'sea'});const response=await fetcher(url,{signal:signal||AbortSignal.timeout(45000)});if(!response.ok)throw Error('Tide provider returned '+response.status);const body=await response.json(),rows=Array.isArray(body)?body:[body];if(rows.length!==batch.length)throw Error('Incomplete tide locations');const next=[];for(let j=0;j<batch.length;j++){const row=rows[j],time=row.hourly?.time,height=row.hourly?.sea_level_height_msl;const model=row.hourly_units?.sea_level_height_msl==='m'&&Array.isArray(time)&&Array.isArray(height)&&height.some(Number.isFinite)?{lat:row.latitude,lon:row.longitude,times:time.map(t=>t*1000),heights:height,downloadedAt:now}:null;const item={...batch[j],model};validateTides({schema:TIDE_KEY,downloadedAt:now,ports:[item]},[batch[j]]);next.push(item);}ports.push(...next);}
+ catch(error){if(signal?.aborted)throw error;errors.push(error.message);for(const p of batch){const old=previous?.ports.find(q=>q.id===p.id);ports.push({...p,model:old?.model||null});}}
+ onProgress(Math.round(ports.length/catalogue.length*100));if(pace&&offset+35<catalogue.length)await pause(5000,signal);
+ }
+ const pack=validateTides({schema:TIDE_KEY,downloadedAt:now,ports,errors},catalogue);if(!ports.some(p=>p.model))throw Error(errors[0]||'No tidal sea-level values returned');return pack;
+}
+// Select a compact non-overlapping subset; all ports remain available in the list.
+export function visibleTidePorts(ports,project,size){const occupied=[],out=[];for(const p of [...ports].sort((a,b)=>(a.priority??1)-(b.priority??1)||a.id.localeCompare(b.id))){const q=project(p);if(q.x<24||q.y<44||q.x>size.x-24||q.y>size.y-44)continue;const r={x:q.x-22,y:q.y-35,w:44,h:70};if(occupied.some(a=>r.x<a.x+a.w&&r.x+r.w>a.x&&r.y<a.y+a.h&&r.y+r.h>a.y))continue;occupied.push(r);out.push(p);}return out;}
