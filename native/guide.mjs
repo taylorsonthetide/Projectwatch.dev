@@ -1,7 +1,7 @@
 const KEY='helmlore-weather-guide-v1';
 export const GUIDE_STEPS=[
-{target:'boatMenu',title:'Start here: your boat limits',text:'Open Boat limits to tell us which wind and wave conditions you find comfortable.'},
-{target:'boatForm',title:'Save your comfort limits',text:'Enter your boat name, maximum wave height, minimum wave period and maximum wind force. Press Save my limits. These are your preferences, not a guarantee of safety.'},
+{target:'boatMenu',title:'Start here: your boat limits',text:'Open Boat setup to tell us which wind and wave conditions you find comfortable.'},
+{target:'boatForm',title:'Save your comfort limits',text:'Enter your boat name, maximum wave height, minimum wave period and maximum wind force. The ride section adds waterline length, heading and a speed range. Press Save my boat setup. These are your preferences, not a guarantee of safety.'},
 {target:'map',title:'Choose your boating area',text:'Drag the map and use + or − to zoom. Show the sea area you want to check. The forecast download covers the area visible on screen.'},
 {target:'download',title:'Download the next 72 hours',text:'Press Download forecast. Wind, waves and available ocean currents save on this device. Wait for the download to finish; the outlined boundary shows the area covered.'},
 {target:'play',title:'Play and check your limits',text:'Press Play forecast to run through the hours. Green is within your settings, amber is near a limit, red is above and grey means incomplete data. A warning pauses playback when a limit is crossed.'},
