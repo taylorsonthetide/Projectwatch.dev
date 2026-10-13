@@ -1,0 +1,44 @@
+import {HOUR,tideState,tideEvents} from './tides.mjs?v=2.9.1';
+export const datumLabel=model=>model?.datum==='CD'?'Chart datum':model?.datum==='LAT'?'Local LAT':'Mean sea level · MSL';
+export function tidePlot(model,start,duration=24*HOUR){
+ if(!model||!Number.isFinite(start))return null;
+ const end=start+duration,points=model.times.map((time,i)=>({time,height:model.heights[i]})).filter(p=>p.time>=start-HOUR&&p.time<=end+HOUR),known=points.filter(p=>Number.isFinite(p.height));
+ if(known.length<2)return null;const low=Math.min(...known.map(p=>p.height)),high=Math.max(...known.map(p=>p.height)),padding=Math.max(.1,(high-low)*.12),floor=low-padding,ceiling=high+padding,segments=[];let segment=[];
+ for(const p of points){if(!Number.isFinite(p.height)){if(segment.length>1)segments.push(segment);segment=[];}else segment.push(p);}if(segment.length>1)segments.push(segment);
+ return {start,end,low:floor,high:ceiling,segments,events:tideEvents(model).filter(e=>e.time>=start&&e.time<=end)};
+}
+const format=t=>new Date(t).toLocaleString('en-GB',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+const clock=t=>new Date(t).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+export function createTideView({onClose=()=>{}}={}){
+ const node=(tag,value,className)=>{const el=document.createElement(tag);if(value!==undefined)el.textContent=value;if(className)el.className=className;return el;};
+ const button=(label,action)=>{const el=node('button',label);el.type='button';el.onclick=action;return el;};
+ let dialog=null,currentPort=null,cursor=null,start=null,lastForecastTime=null;
+ function graph(model,time,from,compact=false){
+  const box=node('div',undefined,'tideFilledGraph'),plot=tidePlot(model,from);if(!plot){box.textContent='Curve unavailable for this time.';return box;}
+  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),W=800,H=compact?270:400,left=58,right=744,top=38,bottom=H-42;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.setAttribute('role','img');svg.setAttribute('aria-label','24-hour tide curve · '+datumLabel(model));
+  const x=t=>left+(t-plot.start)/(plot.end-plot.start)*(right-left),y=h=>bottom-(h-plot.low)/(plot.high-plot.low)*(bottom-top);
+  const item=(tag,attrs,text)=>{const el=document.createElementNS(ns,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;svg.append(el);return el;};
+  for(let i=0;i<=4;i++){const h=plot.low+(plot.high-plot.low)*i/4,yy=y(h);item('line',{x1:left,x2:right,y1:yy,y2:yy,stroke:'currentColor',opacity:'.12'});item('text',{x:left-8,y:yy+5,'text-anchor':'end','font-size':compact?17:16,fill:'currentColor'},h.toFixed(1));}
+  for(const segment of plot.segments){const d=segment.map((p,i)=>(i?'L':'M')+x(p.time).toFixed(1)+' '+y(p.height).toFixed(1)).join(' ');item('path',{d:d+' L '+x(segment.at(-1).time)+' '+bottom+' L '+x(segment[0].time)+' '+bottom+' Z',fill:'#195ac4',opacity:'.82'});item('path',{d,fill:'none',stroke:'#084197','stroke-width':3});}
+  for(let i=0;i<=8;i++){const t=plot.start+(plot.end-plot.start)*i/8;item('text',{x:x(t),y:bottom+27,'text-anchor':'middle','font-size':compact?16:15,fill:'currentColor'},clock(t));}
+  if(!compact)for(const e of plot.events){item('circle',{cx:x(e.time),cy:y(e.height),r:4,fill:'#084197'});item('text',{x:Math.max(left+45,Math.min(right-45,x(e.time))),y:e.kind==='High'?y(e.height)-12:y(e.height)+23,'text-anchor':'middle','font-size':16,fill:'currentColor'},e.kind+' '+e.height.toFixed(2)+' m');}
+  const state=tideState(model,time);if(state&&time>=plot.start&&time<=plot.end){const xx=x(time);item('line',{x1:xx,x2:xx,y1:top,y2:bottom,stroke:'#3975e4','stroke-width':2});item('circle',{cx:xx,cy:y(state.height),r:6,fill:'#fff',stroke:'#3975e4','stroke-width':3});const labelX=Math.max(left+62,Math.min(right-62,xx));item('rect',{x:labelX-61,y:4,width:122,height:26,rx:5,fill:'#195ac4'});item('text',{x:labelX,y:23,'text-anchor':'middle','font-size':18,fill:'#fff'},state.symbol+' '+state.height.toFixed(2)+' m');}
+  box.append(svg);return box;
+ }
+ function notes(port){const model=port.model,box=node('div',undefined,'tideSourceNotes');box.append(node('strong',datumLabel(model)),node('p',model?.datum==='CD'||model?.datum==='LAT'?'Predicted heights use the named local datum. They are tide heights, not water depths; weather effects may differ from the prediction.':'This curve uses modelled sea level above MSL, not chart datum or water depth. Coastal accuracy is limited; use official tide tables for navigation.'));
+  box.append(node('small',model?.source||'Open-Meteo / Météo-France · modelled sea level'));
+  const link=node('a',port.id==='whitehaven'?'Whitehaven chart-datum tide table · ADMIRALTY':'Official chart-datum tide tables · ADMIRALTY');link.href=port.id==='whitehaven'?'https://easytide.admiralty.co.uk/?PortID=0435':'https://easytide.admiralty.co.uk/';link.target='_blank';link.rel='noopener';box.append(link);return box;
+ }
+ function card(port,time,onOpen){const model=port.model,state=tideState(model,time),box=node('div',undefined,'tideSummaryCard');box.append(node('h2',port.name),node('p',format(time),'tideSelectedTime'));if(state){box.append(graph(model,time,Math.max(model.times[0],time-12*HOUR),true));const summary=node('div',undefined,'tideSummaryRows'),next=tideEvents(model).find(e=>e.time>time);summary.append(node('span','Selected height · '+datumLabel(model)),node('strong',state.symbol+' '+state.height.toFixed(2)+' m · '+state.label),node('span','Next tide'),node('strong',next?next.kind+' · '+format(next.time)+' · '+next.height.toFixed(2)+' m':'Unavailable in this forecast'));box.append(summary);}else box.append(node('p','Tidal forecast unavailable for this hour.'));
+  box.append(button('Open tide graph',()=>{onOpen?.();open(port,time);}),notes(port));return box;}
+ function render(){if(!dialog||!currentPort)return;const port=currentPort,model=port.model;dialog.replaceChildren();const header=node('div',undefined,'tideFullHeader');header.append(node('h2',port.name+' · tides'),button('Close graph',close));dialog.append(header);const controls=node('div',undefined,'tideDayControls');controls.append(button('‹ Previous day',()=>move(-24*HOUR)),button('Now',()=>{cursor=Date.now();start=Math.max(model?.times[0]??cursor,cursor-12*HOUR);render();}),button('Next day ›',()=>move(24*HOUR)));dialog.append(controls,node('p',format(cursor)+' · '+datumLabel(model),'tideSelectedTime'));
+  if(model){const state=tideState(model,cursor),stats=node('div',undefined,'tideFullStats'),height=node('div',undefined,'tideHeightStat');height.append(node('span','Selected tide height'),node('strong',state?state.symbol+' '+state.height.toFixed(2)+' m':'Unavailable'),node('small',state?.label||'No prediction for this hour'));stats.append(height);const table=node('table'),body=node('tbody');const events=tideEvents(model).filter(e=>e.time>=start&&e.time<=start+24*HOUR);for(const e of events){const tr=node('tr');for(const value of [format(e.time),e.kind,e.height.toFixed(2)+' m'])tr.append(node('td',value));body.append(tr);}if(!events.length){const tr=node('tr');tr.append(node('td','High / low events unavailable in this window'));body.append(tr);}table.append(body);stats.append(table);dialog.append(stats,graph(model,cursor,start));
+   const slider=node('input');slider.type='range';slider.min=Math.max(start,model.times[0]);slider.max=Math.min(start+24*HOUR,model.times.at(-1));slider.step=5*60000;slider.value=Math.max(Number(slider.min),Math.min(Number(slider.max),cursor));slider.setAttribute('aria-label','Inspect tide time');slider.onchange=e=>{cursor=Number(e.target.value);render();const next=dialog.querySelector('input');next?.focus?.();};dialog.append(slider);
+  }else dialog.append(node('p','No tidal curve is available for this port.'));dialog.append(notes(port));}
+ function move(delta){if(!currentPort?.model)return;const m=currentPort.model;start=Math.max(m.times[0],Math.min(m.times.at(-1)-24*HOUR,start+delta));cursor=Math.max(start,Math.min(start+24*HOUR,cursor+delta));render();}
+ function close(){if(!dialog)return;dialog.close();dialog.remove();dialog=null;currentPort=null;onClose();}
+ function open(port,time){close();currentPort=port;cursor=time;lastForecastTime=time;start=Math.max(port.model?.times[0]??time,time-12*HOUR);dialog=node('dialog',undefined,'tideFullDialog');document.body.append(dialog);dialog.addEventListener('cancel',e=>{e.preventDefault();close();});render();dialog.showModal();}
+ function update(port,time){if(!dialog||currentPort?.id!==port.id)return;const changed=currentPort.model!==port.model||lastForecastTime!==time;currentPort=port;if(!changed)return;lastForecastTime=time;cursor=time;start=Math.max(port.model?.times[0]??time,time-12*HOUR);render();}
+ return {card,open,update,close};
+}

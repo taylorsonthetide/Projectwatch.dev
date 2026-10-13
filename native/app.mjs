@@ -1,5 +1,5 @@
 import {compareRide} from './ride.mjs?v=2.9.0';
-import {createTideDisplay} from './tide-display.mjs?v=2.8.4';
+import {createTideDisplay} from './tide-display.mjs?v=2.9.1';
 import {createGuide} from './guide.mjs?v=2.9.0';
 import {forecastArea} from './simple-controls.mjs?v=2.8.3';
 import {createCoastalMap} from './coastal-map.mjs?v=2.8.2';
