@@ -33,6 +33,9 @@ function updateArea(){
 function chooseArea(){if(busy||currentBusy)return;clearForMap();picking=true;areaBox?.remove();$('areaPicker').hidden=false;$('chooseArea').setAttribute('aria-expanded','true');updateArea();}
 function closeAreaPicker(){picking=false;$('areaPicker').hidden=true;$('chooseArea').setAttribute('aria-expanded','false');if(areaBox&&displaySettings.boundary)areaBox.addTo(map);}
 $('chooseArea').onclick=chooseArea;
+$('phoneArea').onclick=chooseArea;
+$('phoneDownload').onclick=()=>{mainMenu(false);return refresh();};
+$('phoneButtons').onclick=()=>{mainMenu(false);$('quickToggle').click();};
 $('resetArea').onclick=()=>{if(busy||currentBusy)return;map.fitBounds([[UK_AREA.south,UK_AREA.west],[UK_AREA.north,UK_AREA.east]],{padding:[20,20],animate:false});updateArea();};
 $('loadArea').onclick=()=>refresh();
 $('cancelArea').onclick=()=>{closeAreaPicker();if(pack){$('controls').hidden=false;$('controlsToggle').textContent='Hide forecast';$('controlsToggle').setAttribute('aria-expanded','true');}}
