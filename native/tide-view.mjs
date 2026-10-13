@@ -15,14 +15,14 @@ export function createTideView({onClose=()=>{}}={}){
  let dialog=null,currentPort=null,cursor=null,start=null,lastForecastTime=null;
  function graph(model,time,from,compact=false){
   const box=node('div',undefined,'tideFilledGraph'),plot=tidePlot(model,from);if(!plot){box.textContent='Curve unavailable for this time.';return box;}
-  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),W=800,H=compact?270:400,left=58,right=744,top=38,bottom=H-42;
+  const phone=globalThis.matchMedia?.('(max-width:600px)')?.matches===true;const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),W=phone?400:800,H=phone?300:compact?270:400,left=phone?42:58,right=W-(phone?20:56),top=38,bottom=H-42;
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.setAttribute('role','img');svg.setAttribute('aria-label','24-hour tide curve · '+datumLabel(model));
   const x=t=>left+(t-plot.start)/(plot.end-plot.start)*(right-left),y=h=>bottom-(h-plot.low)/(plot.high-plot.low)*(bottom-top);
   const item=(tag,attrs,text)=>{const el=document.createElementNS(ns,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;svg.append(el);return el;};
-  for(let i=0;i<=4;i++){const h=plot.low+(plot.high-plot.low)*i/4,yy=y(h);item('line',{x1:left,x2:right,y1:yy,y2:yy,stroke:'currentColor',opacity:'.12'});item('text',{x:left-8,y:yy+5,'text-anchor':'end','font-size':compact?17:16,fill:'currentColor'},h.toFixed(1));}
+  for(let i=0;i<=4;i++){const h=plot.low+(plot.high-plot.low)*i/4,yy=y(h);item('line',{x1:left,x2:right,y1:yy,y2:yy,stroke:'currentColor',opacity:'.12'});item('text',{x:left-8,y:yy+5,'text-anchor':'end','font-size':phone?12:compact?17:16,fill:'currentColor'},h.toFixed(1));}
   for(const segment of plot.segments){const d=segment.map((p,i)=>(i?'L':'M')+x(p.time).toFixed(1)+' '+y(p.height).toFixed(1)).join(' ');item('path',{d:d+' L '+x(segment.at(-1).time)+' '+bottom+' L '+x(segment[0].time)+' '+bottom+' Z',fill:'#195ac4',opacity:'.82'});item('path',{d,fill:'none',stroke:'#084197','stroke-width':3});}
-  for(let i=0;i<=8;i++){const t=plot.start+(plot.end-plot.start)*i/8;item('text',{x:x(t),y:bottom+27,'text-anchor':'middle','font-size':compact?16:15,fill:'currentColor'},clock(t));}
-  if(!compact)for(const e of plot.events){item('circle',{cx:x(e.time),cy:y(e.height),r:4,fill:'#084197'});item('text',{x:Math.max(left+45,Math.min(right-45,x(e.time))),y:e.kind==='High'?y(e.height)-12:y(e.height)+23,'text-anchor':'middle','font-size':16,fill:'currentColor'},e.kind+' '+e.height.toFixed(2)+' m');}
+  const ticks=phone?4:8;for(let i=0;i<=ticks;i++){const t=plot.start+(plot.end-plot.start)*i/ticks;item('text',{x:x(t),y:bottom+27,'text-anchor':'middle','font-size':phone?12:compact?16:15,fill:'currentColor'},clock(t));}
+  if(!compact)for(const e of plot.events){item('circle',{cx:x(e.time),cy:y(e.height),r:4,fill:'#084197'});item('text',{x:Math.max(left+45,Math.min(right-45,x(e.time))),y:e.kind==='High'?y(e.height)-12:y(e.height)+23,'text-anchor':'middle','font-size':phone?12:16,fill:'currentColor'},e.kind+' '+e.height.toFixed(2)+' m');}
   const state=tideState(model,time);if(state&&time>=plot.start&&time<=plot.end){const xx=x(time);item('line',{x1:xx,x2:xx,y1:top,y2:bottom,stroke:'#3975e4','stroke-width':2});item('circle',{cx:xx,cy:y(state.height),r:6,fill:'#fff',stroke:'#3975e4','stroke-width':3});const labelX=Math.max(left+62,Math.min(right-62,xx));item('rect',{x:labelX-61,y:4,width:122,height:26,rx:5,fill:'#195ac4'});item('text',{x:labelX,y:23,'text-anchor':'middle','font-size':18,fill:'#fff'},state.symbol+' '+state.height.toFixed(2)+' m');}
   box.append(svg);return box;
  }
