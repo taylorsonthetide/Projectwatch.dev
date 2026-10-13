@@ -1,14 +1,14 @@
-import {createGuide} from './guide.mjs?v=2.8.1';
-import {forecastArea} from './simple-controls.mjs?v=2.8.1';
-import {createCoastalMap} from './coastal-map.mjs?v=2.8.1';
+import {createGuide} from './guide.mjs?v=2.8.2';
+import {forecastArea} from './simple-controls.mjs?v=2.8.2';
+import {createCoastalMap} from './coastal-map.mjs?v=2.8.2';
 import {createAreaToggle} from './view-toggle.mjs';
-import {createDisplay,createWarningDisplay} from './weather-display.mjs?v=2.8.1';
+import {createDisplay,createWarningDisplay} from './weather-display.mjs?v=2.8.2';
 import {downloadCurrents} from './currents.mjs';
 import {download,validate,saved,save,profile,summarize,beaufort,HOUR,UK_AREA} from './forecast.mjs';
 import {BreachGate,rowAt} from './warnings.mjs';
-import {loadCoast,isSea} from './coast.mjs?v=2.8.1';
+import {loadCoast,isSea} from './coast.mjs?v=2.8.2';
 const $=id=>document.getElementById(id),labels=['Data unavailable','Within your limits','Approaching your limits','Above your limits'],classes=['unknown','within','near','above'];
-let engine;try{engine=await import('./weather-engine.mjs?v=2.8.1');}catch(e){$('verdictTitle').textContent='Weather engine could not start';$('verdictText').textContent='Reconnect and reload this page.';$('download').disabled=true;throw e;}
+let engine;try{engine=await import('./weather-engine.mjs?v=2.8.2');}catch(e){$('verdictTitle').textContent='Weather engine could not start';$('verdictText').textContent='Reconnect and reload this page.';$('download').disabled=true;throw e;}
 const map=L.map('map',{minZoom:5,maxZoom:16,zoomAnimation:false,maxBounds:[[38,-30],[72,20]],maxBoundsViscosity:1}).setView([54.4,-4.1],7);
 const base=createCoastalMap(map);
 new ResizeObserver(()=>{document.documentElement.style.setProperty('--header-height',Math.ceil(document.querySelector('header').getBoundingClientRect().height)+'px');map.invalidateSize();}).observe(document.querySelector('header'));
