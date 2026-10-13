@@ -85,3 +85,7 @@ The existing Open-Meteo / Météo-France mean-sea-level tide series remains unch
 
 ## 2.9.2 iPhone layout
 Phone portrait uses a short header and one horizontally swipeable weather-layer row; Download forecast, Choose new area and Hide/show layers are also accessible in Menu. The forecast console is bounded by the dynamic viewport, uses two-column instruments and a full-width play button, and can scroll without moving the map. Settings, alerts and tide cards fit the viewport; the full tide graph scales to phone width instead of forcing a 600px canvas. Safe-area insets protect the notch and home indicator. In short landscape windows the layer row stays swipeable, all its actions remain in Menu, and the forecast is a scrollable side console. No boat preferences, tide forecast, area-reset or ride calculations are changed.
+
+
+## 2.9.3 Phone forecast strip
+Phone portrait and phone landscape (up to 1000px wide / up to 500px high) now use a compact bottom strip rather than the longer desktop console. Details expands the existing readings, outlook and ride comparison; Less restores the strip. The landscape translation inherited from desktop is explicitly removed, and the download toast no longer overlays the centre with offline-installation prose. Normal iPad layouts retain their existing console. Enabling ride comparison now marks waterline length and heading as required, shows an explicit hint and opens the section if validation fails. A provider 503 remains a real upstream failure; the preceding forecast is retained and no fallback values are invented.
