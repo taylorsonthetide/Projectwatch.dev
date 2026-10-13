@@ -27,6 +27,7 @@ export function createTideView({onClose=()=>{}}={}){
   box.append(svg);return box;
  }
  function notes(port){const model=port.model,box=node('div',undefined,'tideSourceNotes');box.append(node('strong',datumLabel(model)),node('p',model?.datum==='CD'||model?.datum==='LAT'?'Predicted heights use the named local datum. They are tide heights, not water depths; weather effects may differ from the prediction.':'This curve uses modelled sea level above MSL, not chart datum or water depth. Coastal accuracy is limited; use official tide tables for navigation.'));
+  box.append(node('p','Hourly model samples · high/low times are approximate. The time slider interpolates between samples.'));
   box.append(node('small',model?.source||'Open-Meteo / Météo-France · modelled sea level'));
   const link=node('a',port.id==='whitehaven'?'Whitehaven chart-datum tide table · ADMIRALTY':'Official chart-datum tide tables · ADMIRALTY');link.href=port.id==='whitehaven'?'https://easytide.admiralty.co.uk/?PortID=0435':'https://easytide.admiralty.co.uk/';link.target='_blank';link.rel='noopener';box.append(link);return box;
  }
