@@ -1,0 +1,2 @@
+// Visible map downloads, clipped to the supported UK/Ireland forecast region.
+export function forecastArea(bounds){const area={west:Math.max(-12,bounds.west),east:Math.min(3,bounds.east),south:Math.max(49,bounds.south),north:Math.min(62,bounds.north)};if(!Object.values(area).every(Number.isFinite)||area.west>=area.east||area.south>=area.north)throw Error('Move the map over the UK or Ireland coast, then try again.');return area;}

@@ -1,0 +1,18 @@
+const KEY='helmlore-weather-guide-v1';
+export const GUIDE_STEPS=[
+{target:'boatMenu',title:'Start here: your boat limits',text:'Open Boat limits to tell us which wind and wave conditions you find comfortable.'},
+{target:'boatForm',title:'Save your comfort limits',text:'Enter your boat name, maximum wave height, minimum wave period and maximum wind force. Press Save my limits. These are your preferences, not a guarantee of safety.'},
+{target:'map',title:'Choose your boating area',text:'Drag the map and use + or − to zoom. Show the sea area you want to check. The forecast download covers the area visible on screen.'},
+{target:'download',title:'Download the next 72 hours',text:'Press Download forecast. Wind, waves and available ocean currents save on this device. Wait for the download to finish; the outlined boundary shows the area covered.'},
+{target:'play',title:'Play and check your limits',text:'Press Play forecast to run through the hours. Green is within your settings, amber is near a limit, red is above and grey means incomplete data. A warning pauses playback when a limit is crossed.'},
+{target:'quickBar',title:'Simple switches, whenever you need them',text:'Tap Wind or Waves to choose the weather colours. Currents, AIS and Warnings switch on or off separately. Hide buttons gives you more map space. Menu → How to use this opens this guide again.'}
+];
+export function createGuide({$,prepare,canAdvance=()=>true,storage=globalThis.localStorage}){let index=0,active=false;
+function preference(){try{storage.setItem(KEY,$('tourDismiss').checked?'hidden':'show');}catch{}}
+function position(){if(!active)return;const target=$(GUIDE_STEPS[index].target),r=target.getBoundingClientRect(),spot=$('tourSpotlight'),card=$('tourCard');spot.style.cssText=`left:${Math.max(0,r.left-5)}px;top:${Math.max(0,r.top-5)}px;width:${r.width+10}px;height:${r.height+10}px`;const width=Math.min(370,innerWidth-24);card.style.width=width+'px';let left=Math.max(12,Math.min(innerWidth-width-12,r.left));const h=card.getBoundingClientRect().height,below=r.bottom+18;let top=below+h<innerHeight-12?below:Math.max(12,Math.min(innerHeight-h-12,r.top-h-18)),arrow=below+h<innerHeight-12?'up':'down';const beside=index===1&&r.right+width+24<innerWidth;if(beside){left=r.right+18;top=Math.max(12,Math.min(innerHeight-h-12,r.top));arrow='left';}const compact=index===1&&!beside&&innerWidth<700;if(compact){left=12;top=innerHeight-h-12;arrow='up';}globalThis.document?.body?.classList.toggle('guideForm',compact);globalThis.document?.documentElement?.style.setProperty('--guide-card-height',(h+24)+'px');card.style.left=left+'px';card.style.top=top+'px';card.dataset.arrow=arrow;}
+function show(){prepare(index);const step=GUIDE_STEPS[index];$('tourCount').textContent=`Step ${index+1} of ${GUIDE_STEPS.length}`;$('tourTitle').textContent=step.title;$('tourText').textContent=step.text;$('tourNext').textContent=index===GUIDE_STEPS.length-1?'Finish':'Next';$('tourCard').hidden=$('tourSpotlight').hidden=false;requestAnimationFrame(position);}
+function close(){preference();active=false;globalThis.document?.body?.classList.remove?.('guideForm');$('tourCard').hidden=$('tourSpotlight').hidden=true;}
+function open(){index=0;active=true;try{$('tourDismiss').checked=storage.getItem(KEY)==='hidden';}catch{}show();}
+$('tourNext').onclick=()=>{if(!canAdvance(index))return;if(index===GUIDE_STEPS.length-1){close();return;}index++;show();};$('tourClose').onclick=close;$('tourDismiss').onchange=preference;addEventListener('resize',position);addEventListener('keydown',e=>{if(e.key==='Escape'&&active)close();});
+return {open,close,firstVisit(){let hidden=false;try{hidden=storage.getItem(KEY)==='hidden';}catch{}if(!hidden)open();}};
+}

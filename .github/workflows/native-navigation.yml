@@ -20,4 +20,4 @@ jobs:
       - name: Compile C++ comfort and Rust interpolation modules
         run: bash native/build.sh
       - name: Check personal limits, 72-hour coverage, missing data and offline isolation
-        run: node --test native/tests/weather.test.mjs
+        run: node --test native/tests/*.test.mjs
