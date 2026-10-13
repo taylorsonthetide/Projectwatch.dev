@@ -1,16 +1,18 @@
-# Helmlore Boating Weather 2.0
+# Helmlore Boating Weather 2.1
 
 The separate `/native/` page now focuses on boat comfort limits and a 72-hour weather comparison. It loads no historical/navigation chart archive, depths, marks, own-vessel instruments, routes, passage planning or marina navigation libraries. The previous navigation page remains a separate build.
 
 ## Flow
 
-Choose a point at sea, save boat name, maximum significant wave height, minimum mean wave period and maximum Beaufort wind force, then download a forecast. The immediate result compares every available hourly sample at the chosen point across the next 72 hours. It considers gusts as well as mean wind, uses the established appreciable-wave period rule, and lists within/near/above/missing windows. It never declares a trip safe.
+Zoom/pan to the desired visible map area, save boat name, maximum significant wave height, minimum mean wave period and maximum Beaufort wind force, then download a forecast. The immediate result compares every available hourly sample across the downloaded sea-area samples for the next 72 hours. It considers gusts as well as mean wind, uses the established appreciable-wave period rule, and lists within/near/above/missing windows. It never declares a trip safe.
 
 - C++ WebAssembly: comfort classification, including combined wave-height and short-period warnings.
 - Rust WebAssembly: wind and circular wave interpolation for overlays and point sampling.
 - JavaScript/Leaflet: user interface, online orientation map and existing AIS relay.
-- 25 nearby sampling locations, instead of the retired 525-location weather grid. Provider responses request 78 hours to cover the next 72 hours from the current time, including hourly boundaries and a small cache margin.
+- 25 regularly spaced sampling locations across the visible map bounds, instead of the retired 525-location weather grid. Provider responses request 78 hours to cover the next 72 hours from the current time, including hourly boundaries and a small cache margin.
 - Forecast packages are validated before replacement and saved atomically in IndexedDB. Settings persist separately. A failed refresh retains the previous forecast. Missing, stale or shortened coverage cannot produce an overall green result.
+- Playback, colour-coded hourly area comfort, Beaufort/wind/gusts, wave height, mean period and direction share one bottom forecast console. Tapping the map changes the inspected sample, never the download size.
+- A compressed Natural Earth public-domain land mask excludes land samples from the area comfort judgement. Missing marine samples remain unknown.
 - Basemap tiles and AIS are online only. No OSM tile prefetching or chart download remains. Activation removes retired native chart/viewer caches, preserving older navigation builds and their stored data.
 
 ## Data and licensing notes, checked 13 October 2026

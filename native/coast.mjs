@@ -1,0 +1,4 @@
+let polygons;
+export async function loadCoast(){if(polygons)return;const r=await fetch(new URL('./coast.json.gz',import.meta.url));if(!r.ok)throw Error('Sea-area mask unavailable');const bytes=new Uint8Array(await r.arrayBuffer());const text=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);const data=JSON.parse(text);if(!Array.isArray(data.polygons))throw Error('Invalid sea-area mask');polygons=data.polygons;}
+function inRing(x,y,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
+export function isSea(p){if(!polygons)throw Error('Sea-area mask not loaded');return !polygons.some(g=>p.lon>=g.b[0]&&p.lon<=g.b[2]&&p.lat>=g.b[1]&&p.lat<=g.b[3]&&inRing(p.lon,p.lat,g.r[0])&&!g.r.slice(1).some(r=>inRing(p.lon,p.lat,r)));}
