@@ -18,3 +18,5 @@ header{display:grid;grid-template-columns:180px 1fr 240px;background:#0c2231;col
 body.night #map{filter:none}body.night .leaflet-tile-pane{filter:brightness(.65)}
 
 .menuTiles #layersToggle{background:#1b3647;color:#dae6ee;border-color:#2d4a5d}.menuTiles #layersToggle:hover{background:#274a5c;border-color:#65c7c9}
+
+.menuTiles #ukMenu[aria-pressed=true]{background:#255467;border-color:#74cfcb;color:#e5ffff}.ais-vessel-symbol{filter:drop-shadow(0 1px 2px #0c273a66)}

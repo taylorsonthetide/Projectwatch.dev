@@ -1,0 +1,2 @@
+// Preserve the user's exact local view while showing a temporary overview.
+export function createAreaToggle(map,bounds,onChange=()=>{}){let previous=null;return {get active(){return previous!==null;},toggle(){if(previous){const saved=previous;previous=null;onChange(false);map.setView(saved.center,saved.zoom,{animate:false});return false;}const c=map.getCenter();previous={center:[c.lat,c.lng],zoom:map.getZoom()};onChange(true);map.fitBounds(bounds,{padding:[40,60],animate:false});return true;}};}
