@@ -25,3 +25,9 @@ Zoom/pan to the desired visible map area, save boat name, maximum significant wa
 ## Build and verification
 
 Install clang/lld, Rust and the `wasm32-unknown-unknown` target; run `bash native/build.sh`, then `node --test native/tests/weather.test.mjs`. Compiled modules are committed for static hosting. CI rebuilds both from source and tests the actual exports. iPad visual and interaction testing remains the final device check; no render-speed claim is made before comparison.
+
+## Play warnings (2.2)
+
+Pressing Play shows the restored comfort overview when the 72-hour comparison is above/near limits or incomplete. It includes forecast extremes, settings, hourly warning windows and affected sample coordinates. Close pauses; Play forecast continues from the shown hour. During playback, entry into each unacknowledged above-limit period pauses at that forecast step and opens a smaller alert. Continuing acknowledges that window; the same sustained breach is not repeated every hour. A later separate above-limit window raises a new alert. Restarting or changing forecast/limits resets the acknowledgement state.
+
+Reasons and locations remain in the integrated forecast bar and outlook after dialogs close. Red circles show currently above-limit sea samples; Show warning hour & point previews a future breach. Warning times are hourly forecast boundaries, not claims of the exact real-world minute conditions will change.
