@@ -1,4 +1,4 @@
-name: New navigation compiled-engine validation
+name: Boating weather compiled-engine validation
 on:
   push:
     paths:
@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
 jobs:
-  compiled-engines:
+  weather-engines:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,9 +17,7 @@ jobs:
           node-version: '24'
       - name: Prepare Rust browser target
         run: rustup target add wasm32-unknown-unknown
-      - name: Compile C++ and Rust modules from source
+      - name: Compile C++ comfort and Rust interpolation modules
         run: bash native/build.sh
-      - name: Bundle weather controls
-        run: npm exec --yes --package=esbuild -- esbuild native/weather/mount.mjs --bundle --minify --outfile=native/weather.js --format=iife --target=safari16
-      - name: Check compiled calculations, chart decoding and isolation
-        run: node --test native/tests/engine.test.mjs
+      - name: Check personal limits, 72-hour coverage, missing data and offline isolation
+        run: node --test native/tests/weather.test.mjs

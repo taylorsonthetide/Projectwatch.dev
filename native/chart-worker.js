@@ -1,9 +1,0 @@
-let wasm;
-const ready=fetch('chart.wasm').then(r=>{if(!r.ok)throw Error('C++ module unavailable');return r.arrayBuffer();}).then(b=>WebAssembly.instantiate(b)).then(r=>wasm=r.instance.exports);
-function flatten(a,out){if(typeof a[0]==='number'){out.push(a[0],a[1]);}else for(const v of a)flatten(v,out);}
-function bounds(g){const a=[];flatten(g.coordinates,a);if(a.length>400000)throw Error('Geometry exceeds native limit');new Float64Array(wasm.memory.buffer,wasm.points_ptr(),a.length).set(a);if(!wasm.bounds(a.length/2))throw Error('Empty geometry');return Array.from(new Float64Array(wasm.memory.buffer,wasm.boxes_ptr(),4));}
-self.onmessage=async({data:m})=>{try{await ready;let result;
- if(m.type==='decode'){const bytes=Uint8Array.from(atob(m.payload.gzip),x=>x.charCodeAt(0));let rows=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());if(m.patch){const removed=new Set(m.patch.removed_ids);rows=rows.filter(r=>!(r[0]===4&&removed.has(r[4].record_id)));}if(rows.length!==m.cell.records)throw Error('Incomplete chart tile '+m.cell.id);result=rows.map(([layer,cls,type,coordinates,a])=>{const geometry={type,coordinates};return {type:'Feature',geometry,bbox:bounds(geometry),properties:{layer,class:cls,scale:m.cell.scale,cell:m.cell.cell,source_year:2011,...a}};});}
- else if(m.type==='filter'){if(m.count>60000)throw Error('View exceeds native feature limit');new Float64Array(wasm.memory.buffer,wasm.boxes_ptr(),m.boxes.length).set(m.boxes);const count=wasm.filter_bounds(m.count,...m.view,m.mask);if(count<0)throw Error('Native filter rejected input');result=Array.from(new Int32Array(wasm.memory.buffer,wasm.selected_ptr(),count));}
- else throw Error('Unknown chart operation');self.postMessage({id:m.id,result});
- }catch(e){self.postMessage({id:m.id,error:e.message});}};

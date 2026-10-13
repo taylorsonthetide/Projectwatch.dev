@@ -1,30 +1,25 @@
-# Helmlore new navigation 1.0
+# Helmlore Boating Weather 2.0
 
-Separate test page: `/native/`. Original `/navigation.html` is untouched.
+The separate `/native/` page now focuses on boat comfort limits and a 72-hour weather comparison. It loads no historical/navigation chart archive, depths, marks, own-vessel instruments, routes, passage planning or marina navigation libraries. The previous navigation page remains a separate build.
 
-This is a browser application using **C++ and Rust compiled to WebAssembly**, plus the existing JavaScript/Leaflet user interface. It is not a native iPad executable or an all-C++/Rust rewrite.
+## Flow
 
-- C++: chart geometry bounds, batched viewport/layer filtering, depth-label decluttering.
-- Rust: validated-frame wind interpolation and circular wave interpolation, preserving missing sea cells and the original data.
-- Background worker: gzip decompression, chart JSON decoding and C++ bounds calculations.
-- Canvas: sounding labels replace hundreds of permanent DOM tooltips. Other chart geometries and menus remain Leaflet/JavaScript.
-- Local caching: visited historical tiles saved after record-count verification; visible-area download caches every intersecting scale, up to 1,500 tiles per request. Existing verified full-chart package remains usable.
-- The native viewer has its own `/native/` service worker and cache. It does not delete the old viewer cache. Existing chart package metadata and vessel/routes are intentionally shared so a user does not lose saved work.
+Choose a point at sea, save boat name, maximum significant wave height, minimum mean wave period and maximum Beaufort wind force, then download a forecast. The immediate result compares every available hourly sample at the chosen point across the next 72 hours. It considers gusts as well as mean wind, uses the established appreciable-wave period rule, and lists within/near/above/missing windows. It never declares a trip safe.
 
-The underlying chart sources retain their original dates (historical depth archive: 2011). Weather uses the same ECMWF/Open-Meteo feeds and IndexedDB forecast storage as the previous build. API availability, offline browser storage retention, and Leaflet rendering still affect performance. No speedup claim is made before an iPad comparison.
+- C++ WebAssembly: comfort classification, including combined wave-height and short-period warnings.
+- Rust WebAssembly: wind and circular wave interpolation for overlays and point sampling.
+- JavaScript/Leaflet: user interface, online orientation map and existing AIS relay.
+- 25 nearby sampling locations, instead of the retired 525-location weather grid. Provider responses request 78 hours to cover the next 72 hours from the current time, including hourly boundaries and a small cache margin.
+- Forecast packages are validated before replacement and saved atomically in IndexedDB. Settings persist separately. A failed refresh retains the previous forecast. Missing, stale or shortened coverage cannot produce an overall green result.
+- Basemap tiles and AIS are online only. No OSM tile prefetching or chart download remains. Activation removes retired native chart/viewer caches, preserving older navigation builds and their stored data.
 
-## Rebuild
+## Data and licensing notes, checked 13 October 2026
 
-Install clang/lld and Rust with the `wasm32-unknown-unknown` target, then run:
+- OpenStreetMap orientation map: attribution displayed; comply with https://operations.osmfoundation.org/policies/tiles/. No offline map downloads or bulk fetching.
+- Open-Meteo and ECMWF weather: CC BY 4.0 data attribution displayed. Free hosted Open-Meteo API is for non-commercial use only: https://open-meteo.com/en/terms. This unlinked development weather page has no advertising or paid features. A commercial/promotional launch needs an appropriate API plan or permitted self-hosted source; free data licensing does not remove hosted API restrictions.
+- AIS uses the existing AISStream relay, with its attribution, source timing and stale-position rules retained. The public AISStream page does not establish a general commercial redistribution licence; confirm account/provider permission before commercial redistribution. No new subscription or commercial rights were purchased or claimed.
+- Provider coordinates are sent only when downloading the chosen forecast area or enabling AIS for the visible bounds. No GPS tracking exists in this version.
 
-```sh
-bash native/build.sh
-npm exec --yes --package=esbuild -- esbuild native/weather/mount.mjs --bundle --minify --outfile=native/weather.js --format=iife --target=safari16
-node --test native/tests/engine.test.mjs
-```
+## Build and verification
 
-WebAssembly modules are committed alongside their source for static GitHub Pages hosting. Compilers require no deployment server.
-
-## Validation
-
-Compiled-module tests compare actual C++/Rust exports with original calculations, real ECMWF seed data, missing cells, direction wraparound, grid boundaries, layer masks and depth-label selection. Browser/iPad rendering requires device testing. WebAssembly failures show a startup error and a link to the original page; there is no silent JavaScript fallback.
+Install clang/lld, Rust and the `wasm32-unknown-unknown` target; run `bash native/build.sh`, then `node --test native/tests/weather.test.mjs`. Compiled modules are committed for static hosting. CI rebuilds both from source and tests the actual exports. iPad visual and interaction testing remains the final device check; no render-speed claim is made before comparison.
