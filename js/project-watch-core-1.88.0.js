@@ -644,8 +644,8 @@ function buoySVG(item){
  if(item.top==='coneGreen') top=coneUp(42,'#16a34a');
  if(item.top==='conesUp') top=coneUp(24)+coneUp(47);
  if(item.top==='conesDown') top=coneDown(24)+coneDown(47);
- if(item.top==='conesBase') top=coneDown(24)+coneUp(47);
- if(item.top==='conesPoint') top=coneUp(24)+coneDown(47);
+ if(item.top==='conesBase') top=coneUp(24)+coneDown(47);
+ if(item.top==='conesPoint') top=coneDown(24)+coneUp(47);
  if(item.top==='twoBalls') top=`<circle cx="65" cy="25" r="9" fill="#111"/><circle cx="65" cy="48" r="9" fill="#111"/>`;
  if(item.top==='redBall') top=`<circle cx="65" cy="39" r="10" fill="#d52b2b"/>`;
  if(item.top==='xYellow') top=`<g stroke="#f4cf27" stroke-width="7"><line x1="55" y1="29" x2="75" y2="49"/><line x1="75" y1="29" x2="55" y2="49"/></g>`;
