@@ -1,0 +1,218 @@
+[
+  {
+    "path": "assets/safety/departure.svg",
+    "title": "GO / CHANGE / WAIT",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "2c9b9f842a13e25816ff44a9069a7d1c3dcea937031f6da927982dc47bccd4a5",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/safety/risk-cycle.svg",
+    "title": "CONTROL THE RISK",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "33a468464dbfbdf780825b8486a1c14af3cc0896a78f61ee7431c06e9e304ac2",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/safety/deck-zones.svg",
+    "title": "WORKING DECK",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "0dd5d24f2e35d51ff165c001d534f1cb54b69eb3048cd07a321825ab460de5cd",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/safety/kit-check.svg",
+    "title": "CHECK THE KIT",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "218fe4df07d5feabf7eec0819930df5f8e6fba14e377369ef82bd4fd8cacec65",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/safety/decision.svg",
+    "title": "PAUSE AND REASSESS",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "a0b0047163ccf1743b01a0ffc1c03e6afe4226b903553df80d99e0914e2bf12a",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/safety/emergency.svg",
+    "title": "REHEARSED RESPONSE",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "c700e3f1d38abfc5e4bcba2264935c710e29fd473f09dbf5ddb20c69269a80a8",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/hull-appendages.svg",
+    "title": "Know the hull and its appendages",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "3de7da97ebec874ad2b6d9b13b98f4c6cb44b20eadb286283cd1a84104fbd484",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/stability.svg",
+    "title": "Buoyancy and righting",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "ebad9f24398d36610c080da394322988f4404289f11c13200a0bacced44ef64a",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/loading.svg",
+    "title": "Weight has a position",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "3bcbdcf4696bb604307b9fb63d64370ebe497dcfebc74a78a0349c8fc0df8858",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/watertight.svg",
+    "title": "Keep the water outside",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "2f2c730170bdcd61f295383593440c43f1c2f4c6dec1c83ceb7ac2e462e89898",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/engine.svg",
+    "title": "Propulsion and cooling",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "61c44b09d9dde33590866a1fd5b0b3f00c7ddbe678584d84228d6243fde9dd42",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/fuel.svg",
+    "title": "Follow the fuel path",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "d83e9721990aab13319dac605dff78ed8f27fe2e36ce093a8da3187c194be45c",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/electrical.svg",
+    "title": "Know the supply and isolation",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "3e5b7bf93b0309f24dead42bece429dcb9da5ad2d4b9ce77b0d3ef6ca1b4ea73",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/steering.svg",
+    "title": "Trace steering to the rudder",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "8fd3c1faf4a4fa00cabf1d12db5b52f385d15a1ae761c349cd5ce3fcf3e5c477",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/boat-systems/response.svg",
+    "title": "Notice \u2022 stabilise \u2022 decide",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "8eb2bfedc90a514a78086a468e988e26ccc9ebc60404a4ebdb59bddccc12f378",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/overview.svg",
+    "title": "Six systems. One reliable engine.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "c2ecb38493049698b1b2e4a0cf1c4dbccce7f630002f0ca1d7586592c5caa76a",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/four-stroke.svg",
+    "title": "A diesel\u2019s four strokes",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "71f65d8747a9d676e3db2ce58d26f9b57daf7fc0ce144aa63067a82f1b7f4dc7",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/checks.svg",
+    "title": "A simple before-start routine",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "cba288a272e9f05a6b4d6181f33c9958864ca37f573a297d716a4b400ce5d41a",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/fuel.svg",
+    "title": "Follow the fuel. Protect the injection side.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "9d5aa998431591ec8ff1ab0407edba595c1ab87131449d8c3a501fe255009c73",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/filters.svg",
+    "title": "Two filters. Two important jobs.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "1c4c2aa8c2b7b962f4e97136f67385d943084954c61ea1a189b7a9366718efda",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/diesel-bug.svg",
+    "title": "Water changes the picture.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "3f2f07d72f29872337811b0013ffed8ca38ed499775491b4c34c60293f1e659f",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/cooling.svg",
+    "title": "Two circuits. Heat transfer, not mixing.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "bb5bedae3f3f0f1d07cfa2495d24ed94534e380e057de3cc025cd5625738b79b",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/impeller.svg",
+    "title": "A small part with a big cooling job.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "f7a9e6b9c291523793d173592a37005e71207d2836a0f4b19a26387b36a69845",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/lubrication.svg",
+    "title": "Level is not the same as pressure.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "fdb7a85f43b77467a6d6312da928a5c12d2b134bbc20057302785b26e7ff0a5b",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/electrics.svg",
+    "title": "Starting uses power. Running can restore it.",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "f44486ada05845ee2bdbdb56ba2bcc657e62c86b36ba1b0a43af7393afd678ff",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/exhaust.svg",
+    "title": "Interpret smoke with the whole picture",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "909fe18c64a6bc90f7dc8dbcfe3d65fc1bb2c2604b102e97283e7dcb2e0ac149",
+    "width": 1600,
+    "height": 1014
+  },
+  {
+    "path": "assets/diesel/service.svg",
+    "title": "Build a schedule for your engine",
+    "source": "Helmlore-Skippers-Handbook.html, final 14 October 2026 edition",
+    "source_png_sha256": "0349f9ee7ea866c7358d92bed1de3506d2d6a763c6d156c75bb2e451ea4e9bfd",
+    "width": 1600,
+    "height": 1014
+  }
+]
