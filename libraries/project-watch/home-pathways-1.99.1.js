@@ -154,8 +154,8 @@ window.PW_HOME_PATHWAYS = Object.freeze([
     "title": "Diesel Engine Basics",
     "description": "Learn the engine cycle, checks, filters, diesel bug, cooling, servicing and sensible fault finding through visual lessons.",
     "group": "Boat knowledge",
-    "image": "assets/home/photographic-1.99.1/diesel.webp",
-    "alt": "AI-generated photographic close-up of a generic marine diesel engine",
+    "image": "assets/diesel/handbook-20261018/engine-cutaway.webp",
+    "alt": "Illustrative marine diesel engine cutaway",
     "action": "pwDieselOpen",
     "topics": [
       "Four-stroke cycle",
