@@ -14,11 +14,11 @@
    const {data,error} = await service.client.rpc('helmlore_handbook_summary',{range_days:Number($('handbookRange').value)});
    if (current !== request) return;
    service.check(error);
-   for (const [id,value] of [['handbookToday',data.today],['handbookTotal',data.total],['handbookAll',data.all_time]]) $(id).textContent = Number(value).toLocaleString();
+   for (const [id,value] of [['handbookToday',data.today],['handbookTotal',data.total],['handbookAll',data.all_time],['handbookHome',data.homepage],['handbookSales',data.sales_page]]) $(id).textContent = Number(value).toLocaleString();
    $('handbookStatus').textContent = 'Updated '+new Date().toLocaleTimeString()+'.';
   } catch (error) {
    if (current !== request) return;
-   for (const id of ['handbookToday','handbookTotal','handbookAll']) $(id).textContent='—';
+   for (const id of ['handbookToday','handbookTotal','handbookAll','handbookHome','handbookSales']) $(id).textContent='—';
    $('handbookStatus').textContent='Could not load handbook clicks. '+error.message+' Try Refresh.';
   } finally { if (current === request) $('handbookRefresh').disabled=false; }
  }
