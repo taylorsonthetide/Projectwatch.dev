@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bands",
+    "prompt": "Which colour order identifies a west cardinal, from top to bottom?",
+    "options": [
+      "Black\u2013yellow\u2013black",
+      "Yellow\u2013black\u2013yellow",
+      "Black above yellow"
+    ],
+    "correct": 1,
+    "why": "West has yellow above and below a broad black middle band. Black\u2013yellow\u2013black is east; black above yellow is north.",
+    "review": "explore"
+  },
+  {
+    "id": "cones",
+    "prompt": "Which topmark belongs to a west cardinal?",
+    "options": [
+      "Two black cones with their points facing together",
+      "Two black cones with their bases together",
+      "Two black cones both pointing down"
+    ],
+    "correct": 0,
+    "why": "West has two cones point-to-point. Base-to-base is east; both points down is south.",
+    "review": "explore"
+  },
+  {
+    "id": "side",
+    "prompt": "Your boat changes heading. What does the west cardinal still indicate?",
+    "options": [
+      "Water to the boat\u2019s port side",
+      "Water to the boat\u2019s starboard side",
+      "The deepest water in the mark\u2019s area lies to its west"
+    ],
+    "correct": 2,
+    "why": "Cardinal directions are geographic. West remains west regardless of your heading. Use the chart to determine the actual track, depth and clearance.",
+    "review": "meaning"
+  },
+  {
+    "id": "light",
+    "prompt": "Which white light characteristic is used by a west cardinal?",
+    "options": [
+      "A group of three flashes",
+      "A group of nine very quick flashes every 10 seconds, or nine quick flashes every 15 seconds",
+      "Six quick flashes followed by one long flash"
+    ],
+    "correct": 1,
+    "why": "West is nine on the clock face: VQ(9) 10s or Q(9) 15s. Three identifies east; six plus a long flash identifies south.",
+    "review": "explore"
+  }
+]
