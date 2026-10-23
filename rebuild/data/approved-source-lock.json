@@ -1,0 +1,257 @@
+{
+  "baseline": "0d340a9ce339c17c5fac46c281107bb4bcc5cca1",
+  "sources": [
+    {
+      "path": "libraries/project-watch/home-pathways-1.99.1.js",
+      "sha256": "1b14a5f0909c07bd9abea310cbee06f25757ee2b2fb2fd2d364e21076cb8c5e7"
+    },
+    {
+      "path": "libraries/project-watch/safety-awareness-1.90.0.js",
+      "sha256": "36b11e604b8fb65f5006e537c762989808091ae3f97b9140fde0b303d1e3bf20"
+    },
+    {
+      "path": "libraries/project-watch/tides-1.93.3.js",
+      "sha256": "394e4bc6ebbe19d31c12cb0f6106edfb04b4438828cc77bbe1024a631e03dc60"
+    },
+    {
+      "path": "libraries/project-watch/machinery-artwork-20261018.js",
+      "sha256": "81e067f0f5483c0d7e983fd40aca999735a60cff3abde34acd4b82c14b775347"
+    },
+    {
+      "path": "libraries/project-watch/boat-systems-1.94.0.js",
+      "sha256": "c92b32aab5caf4f96f0ffc5b117d80f95aea314958bf26368064fe7ff32aa6e3"
+    },
+    {
+      "path": "libraries/project-watch/compass-1.95.4.js",
+      "sha256": "72fa9a22757c461ef9cb049a6d320ca2226da8a153eaef86ebc1d07211d8ff6b"
+    },
+    {
+      "path": "libraries/project-watch/chartwork-1.96.0.js",
+      "sha256": "647299c50220cdc948514f6e78886bf3bb2b46c24ca6b356fed829d2565479e7"
+    },
+    {
+      "path": "libraries/project-watch/passage-1.97.0.js",
+      "sha256": "ad3d295bd32c64c38d7b36eb657866d0488624b960f3e166f06b8ff94e6b8e4d"
+    },
+    {
+      "path": "libraries/project-watch/diesel-1.98.0.js",
+      "sha256": "5082a55c7dc883c5151081c4c9356eb1ebf8a5ac1686011dcfcd2cb0f51190ad"
+    },
+    {
+      "path": "libraries/project-watch/foundations-1.88.0.js",
+      "sha256": "e477d39d35c49428368a84b1fe6eb7631787b9dfc71a798e6f7ab5c8db401ef4"
+    },
+    {
+      "path": "libraries/project-watch/course-content-1.88.0.js",
+      "sha256": "c4603de5273f13818dada4d2bae64230ee285bb40b98d737023190579f86a488"
+    },
+    {
+      "path": "libraries/project-watch/buoyage-reference-1.88.0.js",
+      "sha256": "db56bd36e4c291fc2b2a76561a58176b5bc0c10aa883b009df794be1ad28a471"
+    },
+    {
+      "path": "libraries/project-watch/buoyage-1.88.0.js",
+      "sha256": "33659f146128da2536830b600d23ac041eb45b2a2c3ab6b0c6a1db8ae9aec176"
+    },
+    {
+      "path": "libraries/project-watch/lights-recognition-1.88.0.js",
+      "sha256": "81f4717c073b47f215fabf16c5c4171f3a69ed81009d44ccd15ca0741838b4be"
+    },
+    {
+      "path": "libraries/project-watch/sound-reference-1.88.0.js",
+      "sha256": "7de6d9c0aeb805f9b85e658d1e58802c0420cce04266d25712466ea6ed2da23b"
+    },
+    {
+      "path": "libraries/project-watch/colregs-reference-1.88.0.js",
+      "sha256": "915b79ca765b7b7dfd3d8b41af606d39f2663b8fb8b4e11ee06751295f4adfe4"
+    },
+    {
+      "path": "libraries/project-watch/course-directory-1.88.0.js",
+      "sha256": "5cfa9bd1207cbe27f91c592d0560aa9ad40c1480540d4c6497d520b1d6302a6e"
+    },
+    {
+      "path": "libraries/project-watch/ais-content-1.88.0.js",
+      "sha256": "1fa3a180172b619ec19331201cb0b2310d1ad2555b3268fc425ca6201afcd8c7"
+    },
+    {
+      "path": "libraries/project-watch/simulator-data-1.88.0.js",
+      "sha256": "16ea2b3abe1cd974d1a85d7784e4b628e08451272821b99b4afdfa9f48fff933"
+    },
+    {
+      "path": "libraries/project-watch/sound-data-1.88.0.js",
+      "sha256": "dde0d535cb5477d289bd05d3ea525d51c9d0a39ef37d372dba628b2f5e4e765b"
+    },
+    {
+      "path": "libraries/project-watch/tss-content-1.88.0.js",
+      "sha256": "0b24973adda733397284699c89acc569141f5bc1feccd545a464f28252c1feee"
+    },
+    {
+      "path": "libraries/project-watch/reference-data-1.88.0.js",
+      "sha256": "6193f830ec7adc6bb550aa4133b7ce78d98c6e9096a93bee1c1731ec5798b2c5"
+    },
+    {
+      "path": "libraries/project-watch/visual-map-1.88.0.js",
+      "sha256": "9e638c72fcc3632d304b70a657efb5e30f82ff35e320ac4e7ab6bc1132a4bf0b"
+    },
+    {
+      "path": "libraries/project-watch/lights-master-visuals-1.88.0.js",
+      "sha256": "f6809e3f1eb8892d1228a6248a7bb564446d236c56115e8e66a6773967e5db8f"
+    },
+    {
+      "path": "libraries/project-watch/collision-1.88.0.js",
+      "sha256": "cebb932000fac83d8eaa40a272ccfede5dc8294bb5f61fc01ab771c7a446ee90"
+    },
+    {
+      "path": "libraries/project-watch/lights-shapes-1.88.0.js",
+      "sha256": "bc46b901131975fa841e0e39cab02cebfb3c4d95a06c593479bf165d15e335fd"
+    },
+    {
+      "path": "libraries/project-watch/tss-1.88.0.js",
+      "sha256": "68e8fbbcae928ffb2b89b91b00d8ff46e55a9a809559a77c02a0ecdda85ed798"
+    },
+    {
+      "path": "libraries/project-watch/sound-1.88.0.js",
+      "sha256": "bf6e4c04e961a08be71150161123437ccf98bf87280dd48bc0ca8ccb9a5a52fe"
+    },
+    {
+      "path": "libraries/project-watch/course-finals-1.88.0.js",
+      "sha256": "47f78d29e23ac50eda0d89950d49f45669c76d4c96bcda69a1d6aecb0403d88e"
+    },
+    {
+      "path": "libraries/project-watch/encounter-art-20261007.js",
+      "sha256": "ae97b8022be053d9c24d61373b2aebb444e929bf41264db41fce85f8e3adbf46"
+    },
+    {
+      "path": "libraries/cevni/live-question-bundle-1.70.0.js",
+      "sha256": "5a70476eb2e4129b620502542ae1eaef0f3b31be0c68f7d2cebb40e03e07419c"
+    },
+    {
+      "path": "libraries/cevni/base-briefings-1.70.0.js",
+      "sha256": "38788272cb81b7628784197e985b2cc12a36a815b51087e75d655c52ac37a82a"
+    },
+    {
+      "path": "libraries/cevni/annex7-signs-1.70.0.js",
+      "sha256": "08a2347d21a7148b49c8047885984e2ddc54d33a65986b18b52bceed883deba7"
+    },
+    {
+      "path": "libraries/cevni/early-teaching-1.70.0.js",
+      "sha256": "5053dfabf24a75aaccc04c35fbbb37bccd351109cc8ec343e69c3a5ad8ede912"
+    },
+    {
+      "path": "libraries/cevni/deep-practice-1.70.3.js",
+      "sha256": "5a66b19688afa557982747fc23a14acb4ec900a37dd79993dad43bc89265c7c9"
+    },
+    {
+      "path": "libraries/cevni/annex7-official-plates-1.84.0.js",
+      "sha256": "1997f9784c288147d7e88c711c23e0eefa8a8cb5f38e7cbd386cf918a980be4d"
+    },
+    {
+      "path": "libraries/cevni/visual-catalogues-1.71.2.js",
+      "sha256": "e92afc7e5eae9394f8cb598b94d853ead48b7347e4dd010a594a517d6889f1ab"
+    },
+    {
+      "path": "libraries/cevni/annex7-A-register-1.80.0.js",
+      "sha256": "cd3b47a7b9c42df06c7141f4505a60445418f6b869283e353858135b9397c9f0"
+    },
+    {
+      "path": "libraries/cevni/annex7-B-register-1.81.0.js",
+      "sha256": "222547fbe67f40bdba46d3ddbb0d1e4f2e56121e9dc4b8d473cab02590320ff7"
+    },
+    {
+      "path": "libraries/cevni/annex7-C-register-1.82.0.js",
+      "sha256": "abc1c35782cf310f5ea159e3c54f3c1823ee6cea546531ace9cf4cbdbf003dce"
+    },
+    {
+      "path": "libraries/cevni/annex7-E-register-1.83.0.js",
+      "sha256": "0fa5c012636e0b82800b6991efbc9a15725078e18fcc0fc74228f09ea874ccaf"
+    },
+    {
+      "path": "libraries/cevni/visual-evidence-1.71.1.js",
+      "sha256": "e8dd4205a18e91334fd0886a187fa9b617f5ea660816ac8f66624fdacd13c200"
+    },
+    {
+      "path": "libraries/cevni/legacy-module01-02-visuals-1.71.4.js",
+      "sha256": "8d84c0e6afffc8398f516f61ebd48c39ee8d65862e4db713c424b7688e3e332b"
+    },
+    {
+      "path": "libraries/cevni/annex8-marks-1.70.0.js",
+      "sha256": "df6fb0373e03d1ed3fe4839edae31d7b32500d0d7d3f174b4d9ed5e6d3207f27"
+    },
+    {
+      "path": "libraries/cevni/annex8-official-plates-1.85.0.js",
+      "sha256": "6f79090fdd07a5efc51e749d6e6c09e6018b56a220599978a4c5b07410d0c85e"
+    },
+    {
+      "path": "libraries/cevni/module03-memory-1.71.1.js",
+      "sha256": "73e4118b7a9eb6a7151c0e039fa26afb43448c2cb6cc774238e99da74df23c65"
+    },
+    {
+      "path": "libraries/cevni/module05-briefings-1.72.0.js",
+      "sha256": "4ace2fef76967c49af1730b6a2eb881781273a4c7f37e46db31cfee52e1d6cd9"
+    },
+    {
+      "path": "libraries/cevni/module05-question-bank-1.72.0.js",
+      "sha256": "23d0d2c5aabc0f2e6591e87487510ef833e075492415a438549bf63389166f95"
+    },
+    {
+      "path": "libraries/cevni/module05-visuals-1.72.0.js",
+      "sha256": "72cf4c80eb985e8eb160ce7bfc36f126e2ea0468c82501ad098cc85a11e01a5a"
+    },
+    {
+      "path": "libraries/cevni/module06-briefings-1.73.2.js",
+      "sha256": "d3b8419980765be726b8a30205a1990f41269f4de00059d3a9810d83a172aeea"
+    },
+    {
+      "path": "libraries/cevni/module06-question-bank-1.73.2.js",
+      "sha256": "c61fdaf296ed0622977f28738cc02caea3036411dd704d3b53d04b83f878a3a0"
+    },
+    {
+      "path": "libraries/cevni/module06-visuals-1.73.2.js",
+      "sha256": "0cf81abfc491b854b62c2120b86ab095110d953c9ca8e7e76158f8493e1c836b"
+    },
+    {
+      "path": "libraries/cevni/module07-briefings-1.74.1.js",
+      "sha256": "82182a5d1046d1aeb5da3aa2e9ca0d62e605472853e7f2462cce37bf2bc029aa"
+    },
+    {
+      "path": "libraries/cevni/module07-question-bank-1.74.1.js",
+      "sha256": "79f3d427609388114ba91fcdfd9f24fb4420e1f7d2116033302d41f282e2ef58"
+    },
+    {
+      "path": "libraries/cevni/module07-visuals-1.74.2.js",
+      "sha256": "9850837b4fed25ec07fc9266d371e29bf808c5a0f8220539200eb8c1c6d73ebe"
+    },
+    {
+      "path": "libraries/cevni/module08-briefings-1.75.0.js",
+      "sha256": "6d6c357f92b569afb94d147385d0eeabbd35bb8c940ad2453b1d29cf2931b7b7"
+    },
+    {
+      "path": "libraries/cevni/module08-question-bank-1.75.0.js",
+      "sha256": "68e96df7b4a14375fb337f034d39eeba27512ee265906679b534b185435eccb3"
+    },
+    {
+      "path": "libraries/cevni/module08-visuals-1.75.0.js",
+      "sha256": "0c437908a5e0801f7074cbec459dbbbf10239838586eda299f66f7e3fe5318dc"
+    },
+    {
+      "path": "libraries/cevni/module09-briefings-1.76.0.js",
+      "sha256": "a33b0e3d771e56def61f310fea2a3d3a159ee22b0e43a993fcfeda88070803fc"
+    },
+    {
+      "path": "libraries/cevni/module09-question-bank-1.76.0.js",
+      "sha256": "594315599359eae36653c5196aa45296631b7504656e93a1a2cf3a6f2a65a594"
+    },
+    {
+      "path": "libraries/cevni/module09-visuals-1.76.0.js",
+      "sha256": "6787941169c311188c8af6773407df661092e8232ce17b94ac0f7cc821cdd961"
+    },
+    {
+      "path": "libraries/cevni/mock-exam-bank-1.77.1.json",
+      "sha256": "c45f7ae2330cc1e83f1fa37789db980282eb10a947e2686002890aa71b710bf9"
+    },
+    {
+      "path": "banks/public/west-cardinal.json",
+      "sha256": "45ca65e9637e8d7268e15bfb35e4de984417e6953f690572aa32aff7add3e335"
+    }
+  ]
+}

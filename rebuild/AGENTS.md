@@ -1,0 +1,2 @@
+# Rebuild-only instructions
+Read PROJECT_BRIEF.md before work. Work only on helmlore-rebuild-v2 (or a descendant explicitly created for the rebuild). Never write to main or deploy. No emails or Nathan updates. Preserve approved question strings/answers/indexes; run the source-parity validator after changing any adapter. Scope new files under rebuild/. Keep production source files untouched. Do not infer that a course is complete merely because its text is renderable. Before cutover complete every gate in PROJECT_BRIEF.md and get Cliff's explicit deployment approval.
